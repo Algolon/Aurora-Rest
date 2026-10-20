@@ -70,9 +70,10 @@ function tick(){
   if(visible){const g=family.getGeometry(i as BirchVariant,chosen);triangles+=(g.index?.count??g.attributes.position.count)/3;}
  });
  renderer.render(scene,camera);
- if(frame++%20===0)e<HTMLElement>('readout').textContent=`Camera: ${distance.toFixed(1)} m | LOD: ${lod}\nGeometry triangles: ${triangles}\nDraw calls: ${renderer.info.render.calls}\nRendered triangles: ${renderer.info.render.triangles}`;
+ frame++;
+ e<HTMLElement>('readout').textContent=`Camera: ${distance.toFixed(1)} m | LOD: ${lod}\nGeometry triangles: ${triangles}\nDraw calls: ${renderer.info.render.calls}\nRendered triangles: ${renderer.info.render.triangles}`;
 }
 tick();
 // Diagnostic read for automated browser-based checks; not available on the production island.
-Object.assign(window,{__auroraBirchLab:{family,roots,renderer,scene,camera}});
+Object.assign(window,{__auroraBirchLab:{family,roots,renderer,scene,camera,get frame(){return frame},get variant(){return variant},get lod(){return lod}}});
 addEventListener('pagehide',()=>{family.dispose();ground.geometry.dispose();(ground.material as THREE.Material).dispose();renderer.dispose()});

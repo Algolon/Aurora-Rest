@@ -19,12 +19,13 @@ try {
  await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'});
  await page.waitForFunction(()=>Boolean(window.__auroraBirchLab),{timeout:20000});
  await page.waitForTimeout(1500);
- const set=async(id,value)=>{
-  await page.locator('#'+id).selectOption(value);
-  await page.waitForTimeout(350);
+ const waitRendered=async()=>{
+  const n=await page.evaluate(()=>window.__auroraBirchLab.frame);
+  await page.waitForFunction(prev=>window.__auroraBirchLab.frame>=prev+2,n,{timeout:90000});
  };
- const view=async(name)=>{await page.locator('[data-view="'+name+'"]').click();await page.waitForTimeout(350)};
- const capture=async(name)=>{await page.screenshot({path:path.join(out,name+'.png')});};
+ const set=async(id,value)=>{await page.locator('#'+id).selectOption(value);await waitRendered();};
+ const view=async(name)=>{await page.locator('[data-view="'+name+'"]').click();await waitRendered();};
+ const capture=async(name)=>{await waitRendered();await page.screenshot({path:path.join(out,name+'.png')});};
  await set('light','day');
  await set('variant','all');await view('threequarter');await capture('00-all-variants-daylight');
  await set('light','neutral');await capture('01-all-neutral');
