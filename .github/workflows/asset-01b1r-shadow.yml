@@ -35,6 +35,17 @@ jobs:
           CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           test -n "$CHROME_PATH"
           CHROME_PATH="$CHROME_PATH" SHADOW_PHASE=after npm run capture:shadow
+      - name: Recheck original ASSET-01B1 daylight showroom in browser
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" npm run capture
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01b1r-daylight-regression
+          path: asset-lab/birch/screenshots/
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
         if: always()
         with:
