@@ -19,4 +19,4 @@
 Feh Lu We source production implementation: baseline. Aurora visually accepted: **not yet**. New spruce/rock/grass visual experiments: **not included**.
 
 ## Missing evidence gate
-Exact byte-level geometry parity against the Feh Lu We production module, matched reference screenshots, Android performance and shader pixel-level comparisons are not established by local determinism tests alone.
+Exact raw geometry parity against the pinned original module was independently verified by CI run 39500076428 (3 variants × 3 unique LODs × both source parts). Matched reference screenshots, Android performance and shader pixel-level comparisons remain unverified.
