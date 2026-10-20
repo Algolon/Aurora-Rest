@@ -1,0 +1,34 @@
+name: ASSET-01B1 Birch Lab Verification
+on:
+  push:
+    branches:
+      - feature/asset-01b1-birch-lab
+  workflow_dispatch:
+jobs:
+  birch-fidelity:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - name: Capture real Three.js browser images
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME_PATH" ]; then
+            echo 'Browser executable missing; browser validation blocked'
+            exit 1
+          fi
+          CHROME_PATH="$CHROME_PATH" npm run capture
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01b1-birch-screenshots
+          path: asset-lab/birch/screenshots/
+          if-no-files-found: warn
