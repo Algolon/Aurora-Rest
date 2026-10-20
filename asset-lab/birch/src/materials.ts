@@ -304,3 +304,12 @@ export function disposeBirchMaterials():void {
  wm.tree.dispose();wm.rock.dispose();wm.flat.dispose();
  wm=null;
 }
+
+// Reference-count the shared source material atlas when multiple lab families exist.
+let birchMaterialOwners=0;
+export function acquireBirchMaterials():WoodMats {birchMaterialOwners++;return woodMats();}
+export function releaseBirchMaterials():void {
+ if(birchMaterialOwners<=0)throw new Error('Birch material refcount underflow');
+ birchMaterialOwners--;
+ if(birchMaterialOwners===0)disposeBirchMaterials();
+}
