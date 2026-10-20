@@ -1,0 +1,21 @@
+name: Source validation (no deployment)
+on:
+  push:
+    branches: ['**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install packages (no lockfile yet)
+        run: npm install --no-audit --no-fund
+      - name: Test geography
+        run: npm run test:geo
+      - name: Typecheck and build
+        run: npm run build

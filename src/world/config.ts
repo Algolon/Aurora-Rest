@@ -1,0 +1,46 @@
+export const WORLD = {
+  seed: 26092026,
+  halfWidth: 3000,
+  halfLength: 4000,
+  seaLevel: 0,
+  tarnLevel: 300,
+  tileSize: 500,
+  tileNearSegments: 28,
+  tileFarSegments: 8,
+  nearRadius: 1000,
+  farRadius: 1520,
+  water: {
+    tarn: { x: 710, z: 2590, rx: 320, rz: 255 },
+    river: [
+      { x: 1015, z: 2490, level: 300, width: 13 },
+      { x: 1090, z: 2280, level: 233, width: 12 },
+      { x: 1155, z: 2050, level: 170, width: 11 },
+      { x: 1055, z: 1830, level: 146, width: 13 },
+      { x: 970, z: 1550, level: 120, width: 15 },
+      { x: 1005, z: 1200, level: 97, width: 16 },
+      { x: 850, z: 850, level: 76, width: 18 },
+      { x: 790, z: 480, level: 60, width: 20 },
+      { x: 900, z: 150, level: 45, width: 22 },
+      { x: 975, z: -250, level: 30, width: 27 },
+      { x: 1090, z: -520, level: 22, width: 32 },
+      { x: 1110, z: -900, level: 14, width: 39 },
+      { x: 1230, z: -1220, level: 10, width: 42 },
+      { x: 1330, z: -1650, level: 6, width: 43 },
+      { x: 1550, z: -2050, level: 3, width: 47 },
+      { x: 1780, z: -2270, level: 1.5, width: 57 },
+      { x: 2010, z: -2600, level: 0, width: 65 }
+    ],
+  },
+  viewpoints: [
+    { name: 'Home Cove', x: 1730, z: -2670 },
+    { name: 'Birchwood Forest', x: 1050, z: -1760 },
+    { name: 'Central Valley', x: 450, z: -310 },
+    { name: 'Cairn Saddle', x: 0, z: 910 },
+    { name: 'High Tarn', x: 400, z: 2320 },
+    { name: 'Windward Coast', x: -2460, z: 180 },
+    { name: 'South Shoulder', x: -950, z: -2510 },
+    { name: 'Hidden Fold', x: -1280, z: 380 },
+    { name: 'Dune Fields', x: 900, z: -3100 },
+  ]
+} as const;
+export type WaterPoint = { x: number; z: number; level: number; width: number };
