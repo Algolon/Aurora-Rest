@@ -235,6 +235,7 @@ function flaredTrunk(path: P3[], radius: (t: number) => number, lobes: { a: numb
   g.setIndex(idx);
   g.computeVertexNormals();
   return g;
+}
 interface Broadleaf {
   seed: number; H: number; leader: number; lean: [number, number]; trunk: [number, number]; flare: number; buttress: number;
   limbs: number; tiered: boolean; limbEl: [number, number]; limbLen: [number, number]; limbR: number; limbArch: number;
