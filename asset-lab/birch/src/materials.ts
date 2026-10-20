@@ -91,7 +91,6 @@ function auroraTreeSurface<T extends THREE.MeshLambertMaterial>(material:T):T {
  material.userData.surface='tree';
  return material;
 }
-}
 
 // ------------------------------------------------------------------------------------------------ materials
 function canvasTex(w: number, h: number, draw: (x: CanvasRenderingContext2D, r: Rng) => void, seed: number) {
