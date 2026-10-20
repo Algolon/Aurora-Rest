@@ -10,7 +10,8 @@
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "capture": "node scripts/capture.mjs",
-    "test:parity": "node --experimental-strip-types scripts/compare-source.mjs"
+    "test:parity": "node --experimental-strip-types scripts/compare-source.mjs",
+    "capture:shadow": "node scripts/capture-shadow.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
