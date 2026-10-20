@@ -32,6 +32,14 @@ export function createBirchFamily():BirchFamily {
    const m=new THREE.Mesh(getGeometry(variant,lod),material);
    m.name=`birch.${variant}.${lod}`;
    m.castShadow=true;m.receiveShadow=true;
+   // The combined geometry contains opaque bark and atlas-masked leaf sprays.
+   // Standard depth rendering makes the sprays cast solid quad shadows.
+   // Feh Lu We vegbatch.ts likewise attaches this shared alpha-cutout depth pass.
+   const depth: unknown = material.userData.vegetationDepth;
+   if (!(depth instanceof THREE.MeshDepthMaterial)) {
+    throw new Error('Birch alpha-aware depth material is missing');
+   }
+   m.customDepthMaterial = depth;
    return m;
   },
   dispose(){if(disposed)return;disposed=true;for(const g of geos.values())g.dispose();geos.clear();releaseBirchMaterials();}

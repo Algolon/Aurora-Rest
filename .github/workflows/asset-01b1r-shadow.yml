@@ -30,14 +30,14 @@ jobs:
           npm install --no-audit --no-fund
       - name: Original geometry parity
         run: FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
-      - name: Capture real shadow baseline and alpha-depth control
+      - name: Validate corrected/negative-control WebGL shadow rendering
         run: |
           CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           test -n "$CHROME_PATH"
-          CHROME_PATH="$CHROME_PATH" SHADOW_PHASE=before npm run capture:shadow
+          CHROME_PATH="$CHROME_PATH" SHADOW_PHASE=after npm run capture:shadow
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: asset-01b1r-shadow-baseline
+          name: asset-01b1r-shadow-corrected
           path: asset-lab/birch/shadow-evidence/
           if-no-files-found: warn
