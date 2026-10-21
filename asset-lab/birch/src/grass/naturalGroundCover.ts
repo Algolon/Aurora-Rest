@@ -41,9 +41,9 @@ export function naturalSpeciesWeights(x:number,z:number,seed:number):readonly [n
  // Source seed-head geometry (720 tris) is only a sparse meadow accent.
  const short=.78+.25*mound(-9,9);
  const tall=.12+1.9*mound(-4.2,3.9);
- const seed=.03+.46*mound(3.4,3.8);
+ const seedHeads=.03+.46*mound(3.4,3.8);
  const sedge=.07+2.1*mound(10.8,3.2)*( .5+.5*fieldNoise(x*.22,z*.22,seed+31));
- return [short,tall,seed,sedge];
+ return [short,tall,seedHeads,sedge];
 }
 function chooseSpecies(x:number,z:number,seed:number,u:number):GrassVariant {
  const weights=naturalSpeciesWeights(x,z,seed);
