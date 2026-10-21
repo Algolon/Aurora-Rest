@@ -175,7 +175,7 @@ export class GrassBatch {
  setShadows(value:boolean){this.live();this.shadows=value;this.backend.shadow(value)}
  update(camera:THREE.Camera):GrassBatchStats{
   this.live();const t0=performance.now();
-  camera.updateMatrixWorld();camera.updateProjectionMatrix?.();
+  camera.updateMatrixWorld();
   P.setFromMatrixPosition(camera.matrixWorld);
   if(this.culling)F.setFromProjectionMatrix(M.multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse));
   const records:RecordItem[]=[],stats=this.empty();
