@@ -71,14 +71,26 @@ try{
  const pageSource=await browser.newPage({viewport:{width:960,height:600}}),pageAurora=await browser.newPage({viewport:{width:960,height:600}});
  for(const page of [pageSource,pageAurora]){
   page.on('pageerror',e=>errors.push('pageerror '+e));
+  page.on('response',r=>{if(r.status()>=400)errors.push('HTTP '+r.status()+' '+r.url())});
+  page.on('requestfailed',r=>errors.push('requestfail '+r.url()+' '+r.failure()?.errorText));
   page.on('console',m=>{if(m.type()==='error')errors.push('console '+m.text())});
  }
  await Promise.all([
   pageSource.goto('http://127.0.0.1:4195/grass-parity.html'+flags,{waitUntil:'networkidle',timeout:75000}),
   pageAurora.goto('http://127.0.0.1:4196/grass-parity.html'+flags,{waitUntil:'networkidle',timeout:75000})
  ]);
- await Promise.all([pageSource.waitForFunction(()=>!!window.__grassReference,{timeout:90000}),
-  pageAurora.waitForFunction(()=>!!window.__grassReference,{timeout:90000})]);
+ // A first reference import may compile the full Feh Lu We woodland bundle.
+// Use the actual waitForFunction(options) position and surface HTTP/JS errors.
+ const awaitReady=async(page,name)=>{
+  try{await page.waitForFunction(()=>!!window.__grassReference,null,{timeout:110000});}
+  catch(e){const diag=await page.evaluate(()=>({
+   title:document.title,url:location.href,body:document.body.textContent?.slice(0,300),
+   scripts:[...document.scripts].map(x=>x.src),refReady:!!window.__grassReference,
+   entries:performance.getEntriesByType('resource').slice(-8).map(x=>x.name)}));
+   throw Error(name+' reference failed: '+String(e)+'; '+JSON.stringify({diag,errors}));
+  }
+ };
+ await Promise.all([awaitReady(pageSource,'Original FLW'),awaitReady(pageAurora,'Aurora')]);
  const sourceInfo=await pageSource.evaluate(()=>window.__grassReference.inspect()),
   auroraInfo=await pageAurora.evaluate(()=>window.__grassReference.inspect());
  for(const k of ['surface','color','vertexColors','mapWidth']){
