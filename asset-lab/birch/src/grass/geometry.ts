@@ -42,9 +42,9 @@ class Tris {
     return twoSided(g);
   }
 }
-const C = (hex: string) => new THREE.Color(hex);
-const V = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
-const mix = (a: THREE.Color, b: THREE.Color, t: number) => a.clone().lerp(b, t);
+const C=(hex:string)=>new THREE.Color(hex);
+const V=(x:number,y:number,z:number)=>new THREE.Vector3(x,y,z);
+const mix=(a:THREE.Color,b:THREE.Color,t:number)=>a.clone().lerp(b,t);
 /** A flat pointed leaf lying along `dir` (unit, horizontal) from `base`, bending up by `lift` then down at the tip. */
 function leafShape(t: Tris, base: THREE.Vector3, dir: THREE.Vector3, L: number, W: number, lift: number, c0: THREE.Color, c1: THREE.Color, segs = 4, upright = 0) {
   const side = V(-dir.z, 0, dir.x);
@@ -59,49 +59,12 @@ function leafShape(t: Tris, base: THREE.Vector3, dir: THREE.Vector3, L: number, 
     t.quad(at(u0, -1), at(u1, -1), at(u1, 0), at(u0, 0), k0, k1);
   }
 }
-/** A small open bell (cone of `n` sides) hanging from `p` along `dir`. */
-function bell(t: Tris, p: THREE.Vector3, dir: THREE.Vector3, len: number, rad: number, c0: THREE.Color, c1: THREE.Color, n = 5) {
-  const a = dir.clone().normalize(), u = Math.abs(a.y) > 0.9 ? V(1, 0, 0) : V(0, 1, 0), s1 = u.clone().cross(a).normalize(), s2 = a.clone().cross(s1);
-  const tip = p.clone().addScaledVector(a, len);
-  for (let i = 0; i < n; i++) {
-    const q0 = (i / n) * Math.PI * 2, q1 = ((i + 1) / n) * Math.PI * 2;
-    const e0 = tip.clone().addScaledVector(s1, Math.cos(q0) * rad).addScaledVector(s2, Math.sin(q0) * rad);
-    const e1 = tip.clone().addScaledVector(s1, Math.cos(q1) * rad).addScaledVector(s2, Math.sin(q1) * rad);
-    t.tri(p, e0, e1, c0, c1, c1);
-  }
-}
 /** A thin stem (flat ribbon facing the camera from most sides: two crossed strips). */
 function stem(t: Tris, pts: THREE.Vector3[], w: number, c0: THREE.Color, c1 = c0) {
   for (let i = 1; i < pts.length; i++) {
     const a = pts[i - 1], b = pts[i], k0 = mix(c0, c1, (i - 1) / (pts.length - 1)), k1 = mix(c0, c1, i / (pts.length - 1));
     const w0 = w * (1 - (i - 1) / pts.length), w1 = w * (1 - i / pts.length);
     for (const d of [V(1, 0, 0), V(0, 0, 1)]) t.quad(a.clone().addScaledVector(d, -w0), b.clone().addScaledVector(d, -w1), b.clone().addScaledVector(d, w1), a.clone().addScaledVector(d, w0), k0, k1);
-  }
-}
-
-
-/** A thin stem (flat ribbon facing the camera from most sides: two crossed strips). */
-function stem(t: Tris, pts: THREE.Vector3[], w: number, c0: THREE.Color, c1 = c0) {
-  for (let i = 1; i < pts.length; i++) {
-    const a = pts[i - 1], b = pts[i], k0 = mix(c0, c1, (i - 1) / (pts.length - 1)), k1 = mix(c0, c1, i / (pts.length - 1));
-    const w0 = w * (1 - (i - 1) / pts.length), w1 = w * (1 - i / pts.length);
-    for (const d of [V(1, 0, 0), V(0, 0, 1)]) t.quad(a.clone().addScaledVector(d, -w0), b.clone().addScaledVector(d, -w1), b.clone().addScaledVector(d, w1), a.clone().addScaledVector(d, w0), k0, k1);
-  }
-}
-
-
-/** A flat pointed leaf lying along `dir` (unit, horizontal) from `base`, bending up by `lift` then down at the tip. */
-function leafShape(t: Tris, base: THREE.Vector3, dir: THREE.Vector3, L: number, W: number, lift: number, c0: THREE.Color, c1: THREE.Color, segs = 4, upright = 0) {
-  const side = V(-dir.z, 0, dir.x);
-  const at = (u: number, s: number) => {
-    const w = W * Math.sin(Math.PI * Math.min(1, u * 1.05)) * (1 - u * 0.3);
-    const h = Math.sin(u * Math.PI * 0.8) * lift + u * upright * L;
-    return base.clone().addScaledVector(dir, u * L * (1 - upright * 0.6)).addScaledVector(side, s * w).add(V(0, h - Math.abs(s) * w * 0.2, 0));
-  };
-  for (let i = 0; i < segs; i++) {
-    const u0 = i / segs, u1 = (i + 1) / segs, k0 = mix(c0, c1, u0), k1 = mix(c0, c1, u1);
-    t.quad(at(u0, 0), at(u1, 0), at(u1, 1), at(u0, 1), k0, k1);
-    t.quad(at(u0, -1), at(u1, -1), at(u1, 0), at(u0, 0), k0, k1);
   }
 }
 
@@ -152,9 +115,6 @@ export function whitePlantUV(g:THREE.BufferGeometry) {
 
 export type GrassVariant=0|1|2|3;
 export type GrassPreset='flw-production-reference'|'refined-ground-r05'|'basic-grass-model';
-const C=(hex:string)=>new THREE.Color(hex);
-const V=(x:number,y:number,z:number)=>new THREE.Vector3(x,y,z);
-const mix=(a:THREE.Color,b:THREE.Color,t:number)=>a.clone().lerp(b,t);
 export function grassModel(variant = 0): THREE.BufferGeometry {
   const v = variant % 4, r = mulberry32(63 + v * 17), t = new Tris();
   const spec = [
