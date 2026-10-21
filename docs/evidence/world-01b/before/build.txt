@@ -1,0 +1,16 @@
+
+> aurora-rest@0.1.0 build
+> tsc --noEmit && vite build
+
+src/render/landmarks.ts(18,33): error TS2345: Argument of type '711' is not assignable to parameter of type '26092026'.
+src/render/terrain.ts(14,32): error TS2345: Argument of type '77' is not assignable to parameter of type '26092026'.
+src/render/terrain.ts(14,57): error TS2345: Argument of type '19' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(9,101): error TS2345: Argument of type 'number' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(9,127): error TS2345: Argument of type 'number' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(9,154): error TS2345: Argument of type 'number' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(37,67): error TS2345: Argument of type 'number' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(54,32): error TS2345: Argument of type '13' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(54,57): error TS2345: Argument of type '29' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(55,46): error TS2345: Argument of type '41' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(56,98): error TS2345: Argument of type '9' is not assignable to parameter of type '26092026'.
+src/world/geography.ts(106,36): error TS2345: Argument of type '105' is not assignable to parameter of type '26092026'.

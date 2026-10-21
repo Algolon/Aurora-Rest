@@ -1,6 +1,26 @@
 {
-  "name": "aurora-rest", "private": true, "version": "0.1.0",
-  "type": "module", "scripts": {"dev":"vite --host 0.0.0.0", "build":"tsc --noEmit && vite build", "preview":"vite preview --host 0.0.0.0", "test:geo":"node --experimental-strip-types --test tests/world.test.ts"},
-  "dependencies": {"three":"^0.186.1"},
-  "devDependencies": {"typescript":"^7.0.2","vite":"^8.3.2","@types/three":"^0.186.0"}
+  "name": "aurora-rest",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:geo": "node --experimental-strip-types --test tests/world.test.ts",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "test:browser": "node tools/check-browser.mjs",
+    "capture:world": "node tools/capture-world.mjs",
+    "routes:align": "node tools/route-trails.ts",
+    "routes:profile": "node tools/profile-routes.ts"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
 }

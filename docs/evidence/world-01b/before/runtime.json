@@ -1,0 +1,234 @@
+{
+  "phase": "before",
+  "commit": "01d466bdca038f61ed7d5c43dbbe8eba05ed13fb",
+  "sourceNote": "Dev module instrumented only for repeatable camera placement and measurement. Ground views use local terrain eye height. Working tree may include uncommitted changes.",
+  "browser": "151.0.7922.34",
+  "platform": "darwin",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "measurements": [
+    {
+      "view": {
+        "name": "overview",
+        "x": 0,
+        "z": 0,
+        "yaw": 0,
+        "overview": true
+      },
+      "position": [
+        0,
+        6800,
+        0
+      ],
+      "mode": "overview",
+      "yaw": 0,
+      "pitch": -0.035,
+      "calls": 228,
+      "triangles": 75070,
+      "geometries": 222,
+      "nearTiles": 12,
+      "camera": [
+        0,
+        6800,
+        0
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.699999999999818,
+        "p95": 17.699999999999818,
+        "max": 17.699999999999818
+      }
+    },
+    {
+      "view": {
+        "name": "home-cove",
+        "x": 1730,
+        "z": -2646,
+        "yaw": 2.55
+      },
+      "position": [
+        1730,
+        29.542504796746915,
+        -2646
+      ],
+      "mode": "walk",
+      "yaw": 2.55,
+      "pitch": -0.035,
+      "calls": 187,
+      "triangles": 61534,
+      "geometries": 217,
+      "nearTiles": 11,
+      "camera": [
+        1730,
+        29.542504796746915,
+        -2646
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999891,
+        "p95": 17.600000000000364,
+        "max": 17.799999999999272
+      }
+    },
+    {
+      "view": {
+        "name": "birchwood",
+        "x": 1050,
+        "z": -1742,
+        "yaw": 2.8
+      },
+      "position": [
+        1050,
+        73.43478034124831,
+        -1742
+      ],
+      "mode": "walk",
+      "yaw": 2.8,
+      "pitch": -0.035,
+      "calls": 155,
+      "triangles": 57438,
+      "geometries": 214,
+      "nearTiles": 16,
+      "camera": [
+        1050,
+        73.43478034124831,
+        -1742
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999891,
+        "p95": 17.600000000000364,
+        "max": 17.80000000000109
+      }
+    },
+    {
+      "view": {
+        "name": "central-valley",
+        "x": 450,
+        "z": -292,
+        "yaw": 3
+      },
+      "position": [
+        450,
+        32.08377087640757,
+        -292
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 108,
+      "triangles": 52054,
+      "geometries": 201,
+      "nearTiles": 17,
+      "camera": [
+        450,
+        32.08377087640757,
+        -292
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.600000000002183,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "cairn-saddle",
+        "x": 0,
+        "z": 928,
+        "yaw": 3
+      },
+      "position": [
+        0,
+        142.2160074338553,
+        928
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 71,
+      "triangles": 48438,
+      "geometries": 193,
+      "nearTiles": 17,
+      "camera": [
+        0,
+        142.2160074338553,
+        928
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.600000000002183,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "high-tarn",
+        "x": 400,
+        "z": 2338,
+        "yaw": -2.3
+      },
+      "position": [
+        400,
+        235.78457312794987,
+        2338
+      ],
+      "mode": "walk",
+      "yaw": -2.3,
+      "pitch": -0.035,
+      "calls": 33,
+      "triangles": 44234,
+      "geometries": 181,
+      "nearTiles": 16,
+      "camera": [
+        400,
+        235.78457312794987,
+        2338
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.600000000002183,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "windward-coast",
+        "x": -2460,
+        "z": 198,
+        "yaw": 2.8
+      },
+      "position": [
+        -2460,
+        80.51056524573592,
+        198
+      ],
+      "mode": "walk",
+      "yaw": 2.8,
+      "pitch": -0.035,
+      "calls": 37,
+      "triangles": 39074,
+      "geometries": 162,
+      "nearTiles": 11,
+      "camera": [
+        -2460,
+        80.51056524573592,
+        198
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.599999999998545,
+        "max": 17.700000000000728
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

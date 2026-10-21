@@ -1,0 +1,31 @@
+
+> aurora-rest@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ walking height matches real Three.js terrain triangles, including tile edges and diagonals (157.312208ms)
+✔ all route segments are dry and remain under 36% grade on rendered ground at 1 m samples (483.67375ms)
+✔ the actual walking collision function traverses every authored route (907.219959ms)
+✔ lake entry, cliff descent and cabin entry are blocked, while the bridge is walkable (66.497333ms)
+✔ reference region relationships and named spawn surfaces remain coherent (0.356792ms)
+✔ authored coastline has finite inlets and detached offshore land (0.302666ms)
+✔ all catchments descend, with their channel beds below water at interior controls (0.242542ms)
+✔ seeded noise is deterministic (0.940875ms)
+✔ ocean is below sea level at distant positions (0.145709ms)
+✔ north mountain is above southern lowlands (0.132583ms)
+✔ macro world contains coast and inland (0.065375ms)
+✔ river authored levels strictly descend from alpine source to sea (0.073625ms)
+✔ river nearest segment distance zero at interior controls (0.140541ms)
+✔ landmark elevations and classifications are finite (2.017584ms)
+✔ macro terrain range is finite over a coarse sampling grid (8.685958ms)
+✔ ocean surrounds all four boundaries of the world mesh (1.450333ms)
+✔ walk trail macro anchors lie on dry land (3.535ms)
+✔ river bed is below surface water inland (0.8455ms)
+✔ hiking route segments remain on land at 20 m intervals (14.101625ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1952.260792

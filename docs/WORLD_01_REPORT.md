@@ -2,6 +2,8 @@
 
 Status: **Candidate source checkpoint, not visual acceptance**.
 
+Historical baseline at `01d466bdca038f61ed7d5c43dbbe8eba05ed13fb`. Runtime validation and the reference-aligned follow-up are documented in [WORLD-01B](WORLD_01B_REPORT.md); the observations below describe WORLD-01 before that work.
+
 ## Source deliverables
 
 - Authored irregular island boundary inside 6 × 8 km terrain tiles.

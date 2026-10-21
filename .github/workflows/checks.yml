@@ -13,9 +13,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install packages (no lockfile yet)
-        run: npm install --no-audit --no-fund
-      - name: Test geography
-        run: npm run test:geo
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Test geography and traversal
+        run: npm test
       - name: Typecheck and build
         run: npm run build

@@ -1,0 +1,24 @@
+
+> aurora-rest@0.1.0 test:geo
+> node --experimental-strip-types --test tests/world.test.ts
+
+✔ seeded noise is deterministic (0.576833ms)
+✔ ocean is below sea level at distant positions (0.196875ms)
+✔ north mountain is above southern lowlands (0.107208ms)
+✔ macro world contains coast and inland (0.058125ms)
+✔ river authored levels strictly descend from alpine source to sea (0.068916ms)
+✔ river nearest segment distance zero at interior controls (0.146209ms)
+✔ landmark elevations and classifications are finite (1.0305ms)
+✔ macro terrain range is finite over a coarse sampling grid (5.29875ms)
+✔ ocean surrounds all four boundaries of the world mesh (0.935208ms)
+✔ walk trail macro anchors lie on dry land (0.441875ms)
+✔ river bed is below surface water inland (0.229667ms)
+✔ hiking route segments remain on land at 20 m intervals (6.134584ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.5555

@@ -1,0 +1,56 @@
+{
+  "note": "CPU-only Node timing of terrain generation and mesh replacement; not browser/GPU frame times.",
+  "constructionMs": 712.0192079999999,
+  "teleports": [
+    {
+      "name": "Home Cove",
+      "refreshMs": 153.81912499999999,
+      "nearTiles": 14
+    },
+    {
+      "name": "Birchwood Forest",
+      "refreshMs": 188.64133399999992,
+      "nearTiles": 10
+    },
+    {
+      "name": "Central Valley",
+      "refreshMs": 137.98891600000002,
+      "nearTiles": 17
+    },
+    {
+      "name": "Cairn Saddle",
+      "refreshMs": 126.9665,
+      "nearTiles": 17
+    },
+    {
+      "name": "High Tarn",
+      "refreshMs": 176.43895899999984,
+      "nearTiles": 14
+    },
+    {
+      "name": "Windward Coast",
+      "refreshMs": 154.2276670000001,
+      "nearTiles": 10
+    },
+    {
+      "name": "South Shoulder",
+      "refreshMs": 237.9781250000001,
+      "nearTiles": 13
+    },
+    {
+      "name": "Hidden Fold",
+      "refreshMs": 223.64591699999983,
+      "nearTiles": 13
+    },
+    {
+      "name": "Dune Fields",
+      "refreshMs": 164.35120800000004,
+      "nearTiles": 13
+    }
+  ],
+  "movementMs": {
+    "median": 0.024875000000065484,
+    "p95": 15.875040999999783,
+    "max": 24.336583000000246
+  }
+}
