@@ -12,9 +12,9 @@ export function sampleMeadowWalk(frame:number,framesPerPhase=12):WalkSample{
  if(phase==='approach'){z=lerp(18,9,t);yaw=Math.PI}
  if(phase==='enter'){z=lerp(9,4,t);yaw=Math.PI}
  if(phase==='dense'){z=lerp(4,-3,t);yaw=Math.PI}
- if(phase==='turn'){z=-3;yaw=lerp(Math.PI,Math.PI/2,t)}
+ if(phase==='turn'){z=-3;yaw=lerp(Math.PI,2*Math.PI,t)}
  if(phase==='reverse'){z=lerp(-3,4,t);yaw=0}
- if(phase==='lateral'){z=4;x=lerp(0,6,t);yaw=Math.PI/2}
+ if(phase==='lateral'){z=4;x=lerp(0,6,t);yaw=lerp(0,Math.PI/2,Math.min(1,t*3))}
  if(phase==='stop-start'){z=4;x=6+2*t*t*(3-2*t);yaw=Math.PI/2}
  return {frame,phase,position:[x,1.68,z],
   target:[x+Math.sin(yaw)*8,.45,z+Math.cos(yaw)*8]};
