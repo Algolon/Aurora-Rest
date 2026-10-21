@@ -59,7 +59,7 @@ function plugin(original){
   load(id){if(id==='\0e1-rock-parity-studio')return sourceScript(original);}
  };
 }
-const servers=[await createServer({root:flw,plugins:[plugin(true)],logLevel:'error',server:{port:4194,host:'127.0.0.1',strictPort:true}}),
+const servers=[await createServer({root:flw,configFile:false,base:'/',optimizeDeps:{noDiscovery:true,include:[]},plugins:[plugin(true)],logLevel:'error',server:{port:4194,host:'127.0.0.1',strictPort:true}}),
  await createServer({root,plugins:[plugin(false)],logLevel:'error',server:{port:4195,host:'127.0.0.1',strictPort:true}})];
 let browser;const errors=[];
 try{
@@ -72,7 +72,7 @@ try{
   page.on('pageerror',e=>errors.push(label+': '+String(e)));
   page.on('console',e=>{if(e.type()==='error')errors.push(label+': '+e.text())});
   await page.goto('http://127.0.0.1:'+port+'/__rock_e1_studio.html',{waitUntil:'networkidle'});
-  await page.waitForFunction(()=>!!window.__rockParity?.capture,{timeout:45000});
+  await page.waitForFunction(()=>!!window.__rockParity?.capture,{timeout:45000}).catch(e=>{throw Error(label+' studio timeout: '+String(e)+'; browser errors '+JSON.stringify(errors));});
   const data=await page.evaluate(()=>({details:window.__rockParity,capture:window.__rockParity.capture()}));
   const bytes=Buffer.from(data.capture.split(',')[1],'base64');
   await writeFile(resolve(out,label+'.png'),bytes);
