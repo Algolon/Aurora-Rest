@@ -75,7 +75,7 @@ let frame=0,problem:string|null=null;
 const input=(id:string)=>document.getElementById(id) as HTMLInputElement|HTMLSelectElement;
 function cameraPose(){
  const multiple=cfg.choice==='overview'||cfg.choice==='nature';
- const center=multiple?0:basePositions[cfg.choice];
+ const center=0; // Selected candidate is re-centered; overview models stay in their assigned slots.
  const targetY=multiple?1.28:cfg.choice==='C'?1.78:1.24;
  const dist=(multiple?23:8.1)*(100/cfg.zoom);
  const a=cfg.orbit*Math.PI/180;
