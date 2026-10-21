@@ -27,7 +27,14 @@ try {
   const n=x.frames;await page.waitForFunction(prev=>window.__birchB2.frames>prev+2,n,{timeout:120000});
   return check();
  };
- const capture=async name=>{await page.locator('canvas').screenshot({path:resolve(out,name+'.png')})};
+ const capture=async name=>{
+  // preserveDrawingBuffer:true — capture the actual WebGL framebuffer directly;
+  // Playwright's element screenshot waits for DOM stability and can time out
+  // while heavy SwiftShader frame rendering is in flight.
+  const uri=await page.evaluate(()=>window.__birchB2.renderer.domElement.toDataURL('image/png'));
+  if(!uri.startsWith('data:image/png;base64,'))throw Error('Invalid WebGL capture');
+  await writeFile(resolve(out,name+'.png'),Buffer.from(uri.split(',')[1],'base64'));
+ };
  const samples=async(count=10)=>{
   return page.evaluate(async count=>{
    const lab=window.__birchB2,ms=[],cpu=[],calls=[],tris=[];
@@ -75,12 +82,39 @@ try {
  if(changed>25000)throw Error('Instanced single-tree visual mismatch: '+changed+' pixels');
  const depth=await page.evaluate(()=>window.__birchB2.getObjects().every(o=>o.customDepthMaterial===window.__birchB2.family.material.userData.vegetationDepth));
  if(!depth)throw Error('Instanced alpha-aware depth material not preserved');
+ if(meta.multiDraw){
+  await config({mode:'multidraw',population:1,view:'overview',shadows:true,culling:false,lod:'near',angle:25});
+  await page.evaluate(()=>window.__birchB2.moveCamera([Math.sin(25*Math.PI/180)*17,11,Math.cos(25*Math.PI/180)*17]));
+  await capture('multidraw-single-tree');
+  const multi=PNG.sync.read(await readFile(resolve(out,'multidraw-single-tree.png')));
+  let changedMulti=0;
+  for(let k=0;k<reference.data.length;k+=4){
+   if(Math.max(Math.abs(reference.data[k]-multi.data[k]),Math.abs(reference.data[k+1]-multi.data[k+1]),Math.abs(reference.data[k+2]-multi.data[k+2]))>12)changedMulti++;
+  }
+  stats.referenceComparison.multiDrawChangedPixelsAbove12=changedMulti;
+  if(changedMulti>25000)throw Error('Multi-draw single-tree visual mismatch: '+changedMulti+' pixels');
+  const depthOK=await page.evaluate(()=>window.__birchB2.getObjects().every(o=>o.customDepthMaterial===window.__birchB2.family.material.userData.vegetationDepth));
+  if(!depthOK)throw Error('Multi-draw alpha-aware depth not assigned');
+ }
  const instances=[100,500,1000];
  for(const mode of (meta.multiDraw?['instanced','multidraw']:['instanced'])){
   for(const population of instances){
    const x=await config({mode,population,view:'overview',lod:'auto',shadows:true,culling:true,angle:25});
    const measured=await samples(population===1000?7:10);
-   const row={mode,population,stats:x.stats,drawMetrics:measured};
+   // Separate actual renderer-counter submissions for shadow enabled/disabled
+   // under identical instance lists. This is not a GPU-timing measurement.
+   const passCalls=await page.evaluate(()=>{
+    const lab=window.__birchB2,r=lab.renderer,s=lab.sun;
+    const oldShadow=r.shadowMap.enabled,oldCast=s.castShadow,oldReset=r.info.autoReset;
+    r.info.autoReset=false;r.info.reset();r.render(lab.scene,lab.camera);
+    const both=r.info.render.calls;
+    s.castShadow=false;r.shadowMap.enabled=false;
+    r.info.reset();r.render(lab.scene,lab.camera);
+    const cameraOnly=r.info.render.calls;
+    s.castShadow=oldCast;r.shadowMap.enabled=oldShadow;r.info.autoReset=oldReset;
+    return {combinedCalls:both,cameraPassCalls:cameraOnly,shadowPassCalls:both-cameraOnly};
+   });
+   const row={mode,population,stats:x.stats,drawMetrics:measured,passCalls};
    if(x.stats.registered!==population)throw Error('Instance registration mismatch');
    if(mode==='instanced'&&x.stats.renderGroups>9)throw Error('Instanced group count exceeds nine');
    stats.benchmarks.push(row);
