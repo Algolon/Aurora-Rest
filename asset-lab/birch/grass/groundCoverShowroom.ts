@@ -116,6 +116,6 @@ const lab={
  disposeBatch(){batch?.dispose();batch=null},
  rebuild(){rebuild();aim(view,orbit);render()}
 };
-Object.assign(window,{__groundCoverLab:lab});
+Object.assign(window,{__groundCoverLab:lab,__groundCoverThree:THREE,__groundCoverMakeBatch:createGrassBatch});
 try{apply()}catch(e){error=String(e);console.error(e)}
 addEventListener('pagehide',()=>{batch?.dispose();family.dispose();floor.geometry.dispose();(floor.material as THREE.Material).dispose();renderer.dispose()});
