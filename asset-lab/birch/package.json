@@ -12,7 +12,9 @@
     "capture": "node scripts/capture.mjs",
     "test:parity": "node --experimental-strip-types scripts/compare-source.mjs",
     "capture:shadow": "node scripts/capture-shadow.mjs",
-    "capture:batch": "node scripts/capture-batch.mjs"
+    "capture:batch": "node scripts/capture-batch.mjs",
+    "test:pine-parity": "node --experimental-strip-types scripts/compare-pine-source.mjs",
+    "capture:pine": "node scripts/capture-pine.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
