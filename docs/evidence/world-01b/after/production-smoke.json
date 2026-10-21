@@ -1,0 +1,20 @@
+{
+  "production": true,
+  "browser": "151.0.7922.34",
+  "deviceNote": "Desktop Chromium; mobile-sized touch emulation is not a physical Android test.",
+  "results": [
+    {
+      "name": "WebGL boots and records rendered geometry",
+      "passed": true
+    },
+    {
+      "name": "all nine landmark teleports leave overview at ground height",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript or WebGL console errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

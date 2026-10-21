@@ -1,0 +1,50 @@
+{
+  "sampleSpacingM": 5,
+  "profiles": [
+    {
+      "name": "Forest → Saddle",
+      "lengthM": 5803,
+      "ascentM": 145,
+      "maxGrade": 0.31329543518742325,
+      "steepSamples": 0,
+      "submerged": 0,
+      "walkingMinutes": 69
+    },
+    {
+      "name": "Dune Coast",
+      "lengthM": 2568,
+      "ascentM": 52,
+      "maxGrade": 0.15723916855323816,
+      "steepSamples": 0,
+      "submerged": 0,
+      "walkingMinutes": 31
+    },
+    {
+      "name": "Alpine Ascent",
+      "lengthM": 2077,
+      "ascentM": 321,
+      "maxGrade": 0.3129351534828288,
+      "steepSamples": 0,
+      "submerged": 0,
+      "walkingMinutes": 25
+    },
+    {
+      "name": "Hidden Fold",
+      "lengthM": 6490,
+      "ascentM": 242,
+      "maxGrade": 0.30909019817497096,
+      "steepSamples": 0,
+      "submerged": 0,
+      "walkingMinutes": 77
+    },
+    {
+      "name": "Windward Rim",
+      "lengthM": 4289,
+      "ascentM": 145,
+      "maxGrade": 0.3196140762731375,
+      "steepSamples": 0,
+      "submerged": 0,
+      "walkingMinutes": 51
+    }
+  ]
+}

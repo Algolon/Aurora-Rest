@@ -1,0 +1,360 @@
+{
+  "phase": "after",
+  "commit": "01d466bdca038f61ed7d5c43dbbe8eba05ed13fb",
+  "sourceNote": "Dev module instrumented only for repeatable camera placement and measurement. Ground views use local terrain eye height. Working tree may include uncommitted changes.",
+  "browser": "151.0.7922.34",
+  "platform": "darwin",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "measurements": [
+    {
+      "view": {
+        "name": "overview",
+        "x": 0,
+        "z": 0,
+        "yaw": 0,
+        "overview": true
+      },
+      "position": [
+        0,
+        6800,
+        0
+      ],
+      "mode": "overview",
+      "yaw": 0,
+      "pitch": -0.035,
+      "calls": 245,
+      "triangles": 288334,
+      "geometries": 240,
+      "nearTiles": 12,
+      "camera": [
+        0,
+        6800,
+        0
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.699999999999818,
+        "p95": 17.699999999999818,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "island-oblique",
+        "x": 0,
+        "y": 5200,
+        "z": -6200,
+        "yaw": 3.141592653589793,
+        "survey": true
+      },
+      "position": [
+        0,
+        -33.96456536714514,
+        -4750
+      ],
+      "mode": "fly",
+      "yaw": 3.141592653589793,
+      "pitch": -0.035,
+      "calls": 245,
+      "triangles": 191566,
+      "geometries": 240,
+      "nearTiles": 0,
+      "camera": [
+        0,
+        5200,
+        -6200
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999891,
+        "p95": 17.700000000000728,
+        "max": 17.799999999999272
+      }
+    },
+    {
+      "view": {
+        "name": "home-cove",
+        "x": 1810,
+        "z": -2982,
+        "yaw": 2.55
+      },
+      "position": [
+        1810,
+        40.40252075079721,
+        -2982
+      ],
+      "mode": "walk",
+      "yaw": 2.55,
+      "pitch": -0.035,
+      "calls": 212,
+      "triangles": 228782,
+      "geometries": 233,
+      "nearTiles": 14,
+      "camera": [
+        -1810,
+        40.40252075079721,
+        -2982
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999891,
+        "p95": 17.600000000000364,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "birchwood",
+        "x": -750,
+        "z": -632,
+        "yaw": 3
+      },
+      "position": [
+        -750,
+        113.46553144145761,
+        -632
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 106,
+      "triangles": 142510,
+      "geometries": 221,
+      "nearTiles": 10,
+      "camera": [
+        750,
+        113.46553144145761,
+        -632
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.700000000000728,
+        "p95": 17.600000000002183,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "central-valley",
+        "x": 50,
+        "z": -292,
+        "yaw": 3
+      },
+      "position": [
+        50,
+        39.838639092935004,
+        -292
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 105,
+      "triangles": 150534,
+      "geometries": 217,
+      "nearTiles": 17,
+      "camera": [
+        -50,
+        39.838639092935004,
+        -292
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.599999999998545,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "cairn-saddle",
+        "x": 100,
+        "z": 668,
+        "yaw": 3
+      },
+      "position": [
+        100,
+        49.40181034344006,
+        668
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 73,
+      "triangles": 118230,
+      "geometries": 213,
+      "nearTiles": 17,
+      "camera": [
+        -100,
+        49.40181034344006,
+        668
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.700000000000728,
+        "p95": 17.600000000002183,
+        "max": 17.700000000000728
+      }
+    },
+    {
+      "view": {
+        "name": "high-tarn",
+        "x": 820,
+        "z": 2198,
+        "yaw": -2.3
+      },
+      "position": [
+        820,
+        369.5765597609102,
+        2198
+      ],
+      "mode": "walk",
+      "yaw": -2.3,
+      "pitch": -0.035,
+      "calls": 31,
+      "triangles": 84390,
+      "geometries": 199,
+      "nearTiles": 14,
+      "camera": [
+        -820,
+        369.5765597609102,
+        2198
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.599999999998545,
+        "max": 17.60000000000582
+      }
+    },
+    {
+      "view": {
+        "name": "windward-coast",
+        "x": -2350,
+        "z": 198,
+        "yaw": 1.8
+      },
+      "position": [
+        -2350,
+        149.30630886248835,
+        198
+      ],
+      "mode": "walk",
+      "yaw": 1.8,
+      "pitch": -0.035,
+      "calls": 13,
+      "triangles": 77286,
+      "geometries": 186,
+      "nearTiles": 10,
+      "camera": [
+        2350,
+        149.30630886248835,
+        198
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.69999999999709,
+        "max": 17.80000000000291
+      }
+    },
+    {
+      "view": {
+        "name": "south-shoulder",
+        "x": -1050,
+        "z": -2532,
+        "yaw": 3
+      },
+      "position": [
+        -1050,
+        210.08918389555683,
+        -2532
+      ],
+      "mode": "walk",
+      "yaw": 3,
+      "pitch": -0.035,
+      "calls": 159,
+      "triangles": 190930,
+      "geometries": 220,
+      "nearTiles": 12,
+      "camera": [
+        1050,
+        210.08918389555683,
+        -2532
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.69999999999709,
+        "max": 17.700000000004366
+      }
+    },
+    {
+      "view": {
+        "name": "hidden-fold",
+        "x": 1050,
+        "z": 168,
+        "yaw": -1.57
+      },
+      "position": [
+        1050,
+        111.24062016921698,
+        168
+      ],
+      "mode": "walk",
+      "yaw": -1.57,
+      "pitch": -0.035,
+      "calls": 37,
+      "triangles": 127098,
+      "geometries": 207,
+      "nearTiles": 14,
+      "camera": [
+        -1050,
+        111.24062016921698,
+        168
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.599999999998545,
+        "max": 17.700000000004366
+      }
+    },
+    {
+      "view": {
+        "name": "dune-fields",
+        "x": 2150,
+        "z": -1682,
+        "yaw": 1.5
+      },
+      "position": [
+        2150,
+        55.734466275923744,
+        -1682
+      ],
+      "mode": "walk",
+      "yaw": 1.5,
+      "pitch": -0.035,
+      "calls": 134,
+      "triangles": 186158,
+      "geometries": 218,
+      "nearTiles": 14,
+      "camera": [
+        -2150,
+        55.734466275923744,
+        -1682
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+      "frameMs": {
+        "median": 16.69999999999709,
+        "p95": 17.60000000000582,
+        "max": 17.700000000004366
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

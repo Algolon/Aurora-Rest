@@ -1,9 +1,8 @@
 import * as THREE from 'three';
-import {WORLD} from '../world/config.ts';
-import {heightAt} from '../world/geography.ts';
+import {WORLD,LAKES,WATERCOURSES,type WaterPoint} from '../world/config.ts';
 const swatch=new THREE.Color();
-function flowingRiver(){
- const source=WORLD.water.river,pts:number[]=[],colors:number[]=[],indices:number[]=[],side=new THREE.Vector2();
+function flowingRiver(source:readonly WaterPoint[]){
+ const pts:number[]=[],colors:number[]=[],indices:number[]=[],side=new THREE.Vector2();
  const samples=10*(source.length-1);
  for(let i=0;i<=samples;i++){
   const f=i/10,j=Math.min(source.length-2,Math.floor(f)),t=Math.min(1,f-j),a=source[j],b=source[j+1];
@@ -19,17 +18,14 @@ function flowingRiver(){
  const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));geo.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));geo.setIndex(indices);geo.computeVertexNormals();return geo;
 }
 export function addWater(scene:THREE.Scene){
- const ocean=new THREE.Mesh(new THREE.PlaneGeometry(20000,20000),new THREE.MeshPhongMaterial({color:0x467e89,shininess:66,specular:0x778b88,flatShading:false,transparent:true,opacity:.96,depthWrite:true}));
+ const ocean=new THREE.Mesh(new THREE.PlaneGeometry(40000,40000),new THREE.MeshPhongMaterial({color:0x376575,shininess:24,specular:0x354951,flatShading:false}));
  ocean.rotation.x=-Math.PI/2; ocean.position.y=WORLD.seaLevel-.45;scene.add(ocean);
- const tarn=WORLD.water.tarn;const circle=new THREE.Mesh(new THREE.CircleGeometry(1,96),new THREE.MeshPhongMaterial({color:0x4e8585,shininess:105,specular:0x879a9a,side:THREE.DoubleSide}));
- circle.rotation.x=-Math.PI/2;circle.position.set(tarn.x,WORLD.tarnLevel+.25,tarn.z);circle.scale.set(tarn.rx,tarn.rz,1);scene.add(circle);
- const river=new THREE.Mesh(flowingRiver(),new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide}));river.position.y=.1;scene.add(river);
- // Shallow wetland pools: restricted to lowland elevation to avoid floating water discs.
- for(const [cx,cz,rad] of [[850,-1000,83],[1480,-1380,55],[1090,-780,43]] as const){
-  const y=heightAt(cx,cz)+.38;
-  if(y>18)continue;
-  const pool=new THREE.Mesh(new THREE.CircleGeometry(rad,42),new THREE.MeshPhongMaterial({color:0x557f75,transparent:true,opacity:.8,side:THREE.DoubleSide}));
-  pool.rotation.x=-Math.PI/2;pool.position.set(cx,y,cz);scene.add(pool);
- }
- return {ocean,tarn:circle,river};
+ const lakes=LAKES.map(lake=>{
+  const mesh=new THREE.Mesh(new THREE.CircleGeometry(1,96),new THREE.MeshPhongMaterial({color:0x3f7885,shininess:65,specular:0x7b969b,side:THREE.DoubleSide}));
+  mesh.rotation.x=-Math.PI/2;mesh.position.set(lake.x,lake.level+.25,lake.z);mesh.scale.set(lake.rx,lake.rz,1);scene.add(mesh);return mesh;
+ });
+ const rivers=WATERCOURSES.map(points=>{
+  const mesh=new THREE.Mesh(flowingRiver(points),new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide}));mesh.position.y=.1;scene.add(mesh);return mesh;
+ });
+ return {ocean,lakes,rivers};
 }

@@ -1,49 +1,63 @@
-# Aurora Rest — WORLD-01 (experimental terrain foundation)
+# Aurora Rest — WORLD-01B
 
-A standalone, deterministic, Kungsleden-inspired Nordic wilderness terrain prototype, authored for **Three.js + TypeScript + Vite**, with an 8 × 6 km design envelope.
+A standalone, deterministic Nordic hiking-world prototype in Three.js, TypeScript and Vite. Canonical repository: **Algolon/Aurora-Rest**. Development remains on a feature branch for review, without merge or deployment.
 
-**Status:** Source files and geography tests are written and run locally. The actual Three.js scene has NOT yet been bundled, browser-rendered, performance profiled or visually accepted. Treat this as a candidate implementation, not a verified playable release. The canonical repository is `https://github.com/Algolon/Aurora-Rest`. Work is kept on a dedicated feature branch pending review; no merge or deployment is authorized.
+WORLD-01B runs in WebGL and aligns the macro geography with the supplied island illustration: northern mountain ridges, northeastern High Tarn, western woodland, eastern Hidden Fold, a central drainage corridor, eastern coastal dunes and southeastern Home Cove. The [geographic blueprint](docs/evidence/world-01b/geographic-blueprint.svg) translates the oblique painting into an editable top-down plan.
 
-## Quick start (requires an internet-enabled dev environment to obtain dependencies)
+**Verified:** TypeScript/Vite production build; 19 geography, mesh-contact and traversal tests; desktop Chromium rendering and controls; touch controls under mobile-size browser emulation. Actual before/after renders, measurements and remaining limitations are in the [WORLD-01B report](docs/WORLD_01B_REPORT.md). **Art acceptance and physical Android performance remain unverified.** Trees, rocks, water and trail materials remain placeholders.
 
-```bash
-npm install
+## Run locally
+
+Node.js 22.18+ or 24 is required for native TypeScript stripping in the test tools.
+
+```sh
+npm ci
+npm test
+npm run build
 npm run dev
 ```
 
-Open the local address reported by Vite. For a production bundle: `npm run build` and `npm run preview`. Geography-only checks use `npm run test:geo` (Node.js 22+ with TypeScript stripping). **Build and preview are pending real execution.**
+Vite serves localhost by default. `npm run preview` serves the built bundle locally. There is no deployment workflow.
 
 ## Controls
 
-| Control | Behavior |
+| Control | Behaviour |
 |---|---|
-| WASD / arrows | Walk |
-| Mouse | Look around after clicking the view |
-| Shift | Faster movement |
-| F | Toggle fly/walk; fly uses Q/E to descend/ascend |
-| O | Overhead island inspection, with WASD pan and Q/E elevation |
-| 1–9 | Teleport to named viewpoints |
-| Mobile | Drag left half to walk, right half to look |
+| WASD / arrows | Walk at 5 m/s; Shift at 10 m/s |
+| Click scene, then mouse | Look; Escape releases pointer lock |
+| F | Fly / walk; Q/E changes flight height |
+| O | North-up overview; restores the prior walk/fly view on return |
+| 1–9 or landmark menu | Teleport to a dry landmark and resume walking |
+| Touch | Drag left half to move, right half to look |
 
-The camera is eye-level in walk mode (eye height 1.75 m). The controller currently snaps/smoothly follows the ground surface; **it is not a complete physics implementation**. It does not yet handle slope limits, step-up, acceleration, obstacles, swimming or meaningful jumping.
+Walking follows the rendered terrain triangles and the authored bridge deck. Swept steps block open water, excessive grades and the cabin footprint. This remains a simple controller: other placeholder props have no collision, and jumping, sliding and full character physics are outside this milestone.
 
-## What is authored
+## Editable geography
 
-- `src/world/config.ts` — island scale, seeded parameters, landmark anchors, main river profile.
-- `src/world/geography.ts` — editable coastline, authored mountain ridges, glacial valley and saddle, alpine lake depression, drainage grading, surface-height queries and biomes. Independent of WebGL.
-- `src/world/routes.ts` — main hiking routes, authored as macro polyline anchors.
-- `src/render/terrain.ts` — chunked high/low mesh resolution, vertex colors, per-tile geometry replacement based on camera distance.
-- `src/render/water.ts` — ocean, alpine lake and stream ribbon (simple placeholders).
-- `src/render/landmarks.ts` — tiny cabin, cairns, a sparse set of low-detail instanced trees and boulders. **These are new placeholders, NOT Feh Lu We asset exports.**
-- `src/render/trails.ts` — terrain-following route ribbons to aid navigation; not finished paths.
-- `src/main.ts` — rendering scene, atmospheric daylight, first-person look, touch controls, inspection modes, diagnostics.
-- `tests/world.test.ts` — 12 executed geographic/data quality tests.
-- `docs/world01-terrain-diagnostic.png` — a heightfield interpretation of the executed terrain function; **not a screenshot from Three.js**.
+- `src/world/layout.ts`: reference-derived coastline and detached island controls.
+- `src/world/config.ts`: scale, lake basins, watercourses, viewpoints and bridge.
+- `src/world/geography.ts`: ridges, valley floors, shelf, drainage carving, regional masks and seeded detail.
+- `src/world/routes.ts`: committed grade-aware route alignments. Recompute after geographic changes with `npm run routes:align`, then run tests and inspect the renders.
+- `src/world/surface.ts`: triangle interpolation, water masks and walking checks.
+- `src/render/`: chunked terrain, simple water, trail ribbons and independent placeholder landmarks. These are not Feh Lu We asset exports.
 
-## Coordinates
+Coordinates use metres: X east, Z north, Y elevation. A shared world/camera reflection makes the geographic east/north convention appear correctly in a Y-up renderer. The design envelope remains approximately 6 × 8 km.
 
-The world uses metres. X increases to the east, Z increases to the north, Y is elevation. Sea level is 0. The terrain domain is 6,000 m east/west by 8,000 m north/south, with the irregular island coastline contained within these bounds.
+## Reproduce evidence
 
-## Quality gate
+```sh
+npx playwright install chromium
+npm run dev -- --port 4192
+# In another terminal:
+npm run test:browser
+npm run capture:world -- after
+npm run routes:profile
+node tools/profile-terrain.ts
+node tools/draw-blueprint.mjs
+```
 
-The first model data are coherent enough for a **first WebGL macro-terrain render/review**, but WORLD-01 is not visually accepted. Priorities: browser boot and bugfixes; coastal morphology; alpine-lake shoreline and river transitions; trail grade/collision; human-scale quality; actual FLW asset port; mobile GPU and draw-call validation. See `docs/WORLD_00_AUDIT.md` and `docs/WORLD_01_REPORT.md`. See `AGENTS.md` and `docs/PROJECT_INSTRUCTIONS.md` for mandatory repository boundaries.
+`CHROME` can select an existing Chromium executable. `WORLD_URL` selects a local server, defaulting to port 4192 for the browser tools. Capture and deep control checks instrument the served development module only; no test API is shipped in the production bundle. For a production smoke test, start preview on port 4193 and run `WORLD_URL=http://127.0.0.1:4193 npm run test:browser -- --production`.
+
+The committed `before/` evidence belongs to WORLD-01 commit `01d466bdca038f61ed7d5c43dbbe8eba05ed13fb`. Re-running a tool against the current branch does not recreate that baseline. Named viewpoints moved during geographic alignment; their coordinates are recorded in each runtime measurement file.
+
+See [AGENTS.md](AGENTS.md) and [project instructions](docs/PROJECT_INSTRUCTIONS.md) for repository and release boundaries. [WORLD-00](docs/WORLD_00_AUDIT.md) and [WORLD-01](docs/WORLD_01_REPORT.md) remain historical foundation reports.

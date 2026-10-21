@@ -12,6 +12,12 @@
 `Algolon/Feh-Lu-We` may be *read/inspected only* as a source of existing procedural trees, grass, rocks, vegetation batching, LOD, vertex-color style and deterministic placement patterns. Never write, commit, merge or deploy in Feh Lu We. Other projects are also out of scope. Do not couple Aurora Rest at runtime to Feh Lu We's application modules; copy/adapt only reusable components with documented provenance and independent testing. Never silently incorporate unaccepted experimental art assets.
 
 ## Experience and world design
+
+### Authoritative WORLD-01B geographic reference
+
+The illustrated island supplied by the user on 2026-10-20 is the primary macro-composition input: `docs/evidence/world-01b/reference-island.png`. Its top-down interpretation and rationale are recorded in `docs/WORLD_01B_GEOGRAPHIC_PLAN.md` and `docs/evidence/world-01b/geographic-blueprint.svg`. Treat the illustration as oblique art with vertical exaggeration, not a heightmap or surveyed scale.
+
+Preserve the asymmetric relationships: northwestern mountain massif; northeastern High Tarn shelf; west-central Birchwood; eastern Hidden Fold; central Cairn Saddle and river valley; south-central Mirelands; eastern coastal dunes; southwestern South Shoulder; rugged western coast; sheltered southeastern Home Cove. Macro-geographic alignment precedes vegetation detail. Editable coastline and offshore-island controls live in `src/world/layout.ts`; region, lake and drainage controls remain independently testable.
 Create a beautiful island whose landscape is rewarding to hike without quests, survival mechanics or combat. Prioritize wonder, serenity, scale, natural authenticity, exploration and belonging. Begin with an approximately 6 km east–west × 8 km north–south irregular island (editable parameters; sea level 0). The geography should comprise:
 - North Peak: authored sculptural alpine massif, glacial valleys, high passes and snow pockets.
 - High Tarn: elevated lake basin with credible catchment and downstream outlet.
@@ -43,6 +49,6 @@ For each milestone, capture a full overview, geographic/biome diagnostics, actua
 ## Immediate next work
 1. Verify Aurora Rest worktree and repository remote; install dependencies if available.
 2. Run geography tests and complete TypeScript/Vite build, then run the real browser scene.
-3. Inspect island topography and composition against supplied island concept art (the original reference must be provided as an actual source file for rigorous image comparison).
+3. Inspect island topography and composition against the now-supplied original island concept art and its geographic blueprint; retain before/after actual engine evidence.
 4. Fix camera, lake/river placement, slope safety, shoreline, scenic reveals and mobile controls before promoting any visual quality gate.
 5. Extract independent, documented, tested Feh Lu We vegetation modules **only into Aurora Rest** after WORLD-01 acceptance.

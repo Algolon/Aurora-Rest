@@ -1,6 +1,7 @@
 import * as THREE from 'three';
-import {WORLD} from '../world/config.ts';
+import {WORLD,BRIDGE} from '../world/config.ts';
 import {heightAt, noise, slopeAt, biomeAt, coastField} from '../world/geography.ts';
+import {bridgeHeightAt,waterLevelAt} from '../world/surface.ts';
 function seed(i:number){let n=i|0;n=Math.imul(n^(n>>>15),2246822519);n=Math.imul(n^(n>>>13),3266489917);return((n^(n>>>16))>>>0)/4294967296;}
 export function addLandmarks(scene:THREE.Scene){
  // WORLD-01 only: readable placeholders, not adapted Feh Lu We asset geometry.
@@ -12,7 +13,7 @@ export function addLandmarks(scene:THREE.Scene){
  const mat=new THREE.Matrix4(),p=new THREE.Vector3(),rot=new THREE.Quaternion(),s=new THREE.Vector3(),q=new THREE.Color();let nt=0,nr=0;
  for(let i=0;i<6200&&nt<700;i++){
   const x=(seed(i*29+19)-.5)*5500,z=(seed(i*41+31)-.5)*7450,y=heightAt(x,z);
-  if(y<3||y>215||coastField(x,z)<.06||slopeAt(x,z)>.35)continue;
+  if(y<Math.max(3,waterLevelAt(x,z)+.5)||y>215||coastField(x,z)<.06||slopeAt(x,z)>.35)continue;
   const b=biomeAt(x,z,y);if(!['forest','meadow'].includes(b))continue;
   // Clustered stands: clearings and meadows remain readable at macro scale.
   const stand=noise(x/490,z/490,711);if(stand<-.05||seed(i*13+3)<.61)continue;
@@ -23,7 +24,7 @@ export function addLandmarks(scene:THREE.Scene){
  }
  for(let i=0;i<1200&&nr<240;i++){
   const x=(seed(i*83+2)-.5)*5650,z=(seed(i*37+5)-.5)*7550,y=heightAt(x,z);
-  if(y<8||coastField(x,z)<0||seed(i*23)<.5)continue;
+  if(y<Math.max(8,waterLevelAt(x,z)+.5)||coastField(x,z)<0||seed(i*23)<.5)continue;
   const rad=2+seed(i*7+13)*9;
   p.set(x,y+rad*.12,z);rot.setFromAxisAngle(new THREE.Vector3(0,1,0),seed(i*9)*6.28);s.set(rad,rad*.6,rad*.7);mat.compose(p,rot,s);boulders.setMatrixAt(nr,mat);nr++;
  }
@@ -40,11 +41,21 @@ export function addLandmarks(scene:THREE.Scene){
  cabin.rotation.y=-.28;scene.add(cabin);
  // Authored cairns for navigation; not arbitrary structures in distant scenery.
  const cairnMat=new THREE.MeshLambertMaterial({color:0x9a998a,flatShading:true});
- for(const [x,z] of [[0,910],[400,2320],[-1230,420]]){
+ for(const [x,z] of [[100,650],[820,2180],[1050,150]]){
   const y=heightAt(x,z);for(let j=0;j<5;j++){
     const a=new THREE.Mesh(new THREE.DodecahedronGeometry(1,0),cairnMat);
     a.position.set(x+(seed(j+x)-.5)*.3,y+.15+j*.55,z);a.scale.set(1.6-j*.2,.33,.9-j*.1);scene.add(a);
   }
+ }
+ // The only river crossing on the hero route has a physical deck shared with walking queries.
+ const bridgeMat=new THREE.MeshLambertMaterial({color:0x806d4e,side:THREE.DoubleSide});
+ const length=BRIDGE.x1-BRIDGE.x0,y0=bridgeHeightAt(BRIDGE.x0,BRIDGE.z),y1=bridgeHeightAt(BRIDGE.x1,BRIDGE.z);
+ const deck=new THREE.Mesh(new THREE.BoxGeometry(Math.hypot(length,y1-y0),.35,BRIDGE.halfWidth*2),bridgeMat);
+ deck.position.set((BRIDGE.x0+BRIDGE.x1)/2,(y0+y1)/2-.175,BRIDGE.z);deck.rotation.z=Math.atan2(y1-y0,length);scene.add(deck);
+ for(let x=BRIDGE.x0+15;x<BRIDGE.x1;x+=22){
+  const top=bridgeHeightAt(x,BRIDGE.z),base=heightAt(x,BRIDGE.z);
+  if(top<=base)continue;
+  for(const side of [-1,1]){const post=new THREE.Mesh(new THREE.CylinderGeometry(.35,.45,top-base,6),wood);post.position.set(x,(top+base)/2,BRIDGE.z+side*2.4);scene.add(post);}
  }
  return {trees:nt,rocks:nr};
 }
