@@ -41,7 +41,7 @@ try{
   return {mapWidth:m.map?.image?.width,mapHeight:m.map?.image?.height,vertexColors:m.vertexColors,
    surface:m.userData.surface,stoneDefine:m.defines.FLW_SURFACE,wrapS:m.map?.wrapS,wrapT:m.map?.wrapT,
    anisotropy:m.map?.anisotropy,shadowDepth:l.hero.customDepthMaterial!==undefined,
-   geometryAccepted:l.hero.geometry.userData.rockR04?.artApproved}};
+   geometryAccepted:l.hero.geometry.userData.rockR04?.artApproved};
  });
  assert(parity.mapWidth===128&&parity.mapHeight===128&&parity.surface==='stone'&&parity.stoneDefine===3,
    'Production material did not recreate source stone shader and strata dimensions');
