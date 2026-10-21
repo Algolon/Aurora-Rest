@@ -1,0 +1,84 @@
+name: ASSET-01C2 mixed birch/pine forest validation
+on:
+  push:
+    branches:
+      - feature/asset-01c2-mixed-forest-batching
+  workflow_dispatch:
+jobs:
+  source-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - name: Clone pinned production Feh Lu We source read-only
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          git -C "$RUNNER_TEMP/flw-source" rev-parse HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Independent birch raw geometry parity
+        run: FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+      - name: Independent Scots pine split and combined parity
+        run: FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+  browser-fidelity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Exact source-vs-batch, mixed forest and shadow WebGL captures
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" FIDELITY=1 npm run capture:mixed
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01c2-fidelity
+          path: asset-lab/birch/mixed-evidence/fidelity
+          if-no-files-found: warn
+  browser-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        render_mode: [instanced, multidraw]
+        composition: [birch, pine, balanced, pine70]
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Genuine WebGL mixed-forest deterministic benchmark
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" BENCH_MODE="${{ matrix.render_mode }}" BENCH_MIX="${{ matrix.composition }}" npm run capture:mixed
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01c2-${{ matrix.render_mode }}-${{ matrix.composition }}
+          path: asset-lab/birch/mixed-evidence/${{ matrix.render_mode }}-${{ matrix.composition }}
+          if-no-files-found: warn
