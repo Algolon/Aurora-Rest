@@ -53,7 +53,7 @@ function plugin(original){
   configureServer(server){server.middlewares.use((req,res,next)=>{
    if(req.url?.split('?')[0]!=='/__rock_e1_studio.html')return next();
    res.setHeader('Content-Type','text/html; charset=utf-8');
-   res.end('<!doctype html><html><body><script type="module" src="/__rock_e1_studio.js"></script></body></html>');
+   res.end('<!doctype html><html><head><link rel="icon" href="data:,"></head><body><script type="module" src="/__rock_e1_studio.js"></script></body></html>');
   });},
   resolveId(id){if(id==='/__rock_e1_studio.js')return '\0e1-rock-parity-studio';},
   load(id){if(id==='\0e1-rock-parity-studio')return sourceScript(original);}
