@@ -20,7 +20,9 @@
     "capture:grass": "node scripts/capture-grass.mjs",
     "capture:grass-source": "node scripts/compare-grass-material.mjs",
     "capture:ground-cover": "node scripts/capture-ground-cover.mjs",
-    "capture:ground-cover:visual": "node scripts/capture-ground-cover-visual.mjs"
+    "capture:ground-cover:visual": "node scripts/capture-ground-cover-visual.mjs",
+    "test:rock-parity": "node --experimental-strip-types scripts/compare-rock-source.mjs",
+    "capture:rocks": "node scripts/capture-rocks.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
