@@ -4,19 +4,21 @@ import {createGrassBatch,type GrassBatch} from '../src/grass/rendering/grassBatc
 import {generateGrassPlacement} from '../src/grass/groundCoverPlacement.ts';
 import {generateNaturalGrassPlacement} from '../src/grass/naturalGroundCover.ts';
 import {sampleMeadowWalk,WALK_PHASES} from '../src/grass/meadowWalk.ts';
+import {createMeadowGroundTexture} from '../src/grass/meadowGround.ts';
 import {getBatchCapabilities,type RenderMode} from '../src/rendering/capabilities.ts';
 import type {FadePreset} from '../src/grass/rendering/grassFade.ts';
 
 type View='top'|'walk'|'short'|'tall'|'seed'|'sedge'|'transition'|'approach';
-type Version='v0'|'v1'|'v2';
+type Version='v0'|'v1'|'v2'|'v3';
 const panel=document.createElement('aside');
 panel.innerHTML=`<b>AURORA REST · ASSET-01D2R</b><small>V0 original / V1 placement / V2 placement + fade</small>
-<label>Version <select id="version"><option value="v0">V0 — original D2</option><option value="v1">V1 — natural placement</option><option value="v2" selected>V2 — refined fade</option></select></label>
+<label>Version <select id="version"><option value="v0">V0 — original D2</option><option value="v1">V1 — natural placement</option><option value="v2" selected>V2 — refined fade</option><option value="v3">V3 — subtle ground</option></select></label>
 <label>Instances <select id="population"><option>100</option><option>500</option><option selected>2000</option><option>5000</option></select></label>
 <label>Backend <select id="mode"><option value="auto">Auto</option><option value="instanced">Instanced fallback</option><option value="multidraw">Multi-draw</option></select></label>
 <label>Camera <select id="view"><option>top</option><option selected>walk</option><option>short</option><option>tall</option><option>seed</option><option>sedge</option><option>transition</option><option>approach</option></select></label>
 <label>Distance <select id="fade"><option value="source">13m / 4m / 12</option><option value="extended">19m / 6m / 18</option><option value="close">10m / 3m / 12</option><option value="refined" selected>19m / 7m / 48 staggered</option></select></label>
 <label>Distance fade <input id="distance" type="checkbox" checked></label>
+<label>Ground <select id="ground"><option value="flat" selected>Original neutral</option><option value="soft">Subtle albedo test</option></select></label>
 <label>Frustum culling <input id="culling" type="checkbox" checked></label>
 <label>Grass shadows <input id="shadows" type="checkbox"></label>
 <label>Orbit <input id="orbit" type="range" min="-180" max="180" value="0"></label>
@@ -43,11 +45,13 @@ scene.add(sun,sun.target);
 const floor=new THREE.Mesh(new THREE.PlaneGeometry(44,31),new THREE.MeshLambertMaterial({color:'#b3b69d'}));
 floor.rotation.x=-Math.PI/2;floor.position.y=-.018;floor.receiveShadow=true;scene.add(floor);
 const family=createGrassFamily();
+let groundTexture:THREE.CanvasTexture|null=null;
 const caps=getBatchCapabilities(renderer);
 if(!caps.multiDraw)(el<HTMLSelectElement>('mode').querySelector('[value=multidraw]') as HTMLOptionElement).disabled=true;
 let batch:GrassBatch|null=null;
 let count=0,mode:RenderMode='auto',view:View='walk',fade:FadePreset='refined',version:Version='v2';
 let culling=true,distance=true,shadows=false,orbit=0,frames=0,error:string|null=null;
+let groundMode:'flat'|'soft'='flat',groundApplied:'flat'|'soft'='flat';
 let lastRenderMs=0,playback=false,walkFrameNumber=0;
 const point=(x:number,y:number,z:number)=>new THREE.Vector3(x,y,z);
 function aim(v:View,angle=0){
@@ -76,11 +80,18 @@ function rebuild(){
  }
  batch=newBatch;
 }
+function applyGround(){
+ if(groundApplied===groundMode)return;
+ if(groundMode==='soft'&&!groundTexture)groundTexture=createMeadowGroundTexture(120626);
+ floor.material.map=groundMode==='soft'?groundTexture:null;
+ floor.material.color.set(groundMode==='soft'?'#ffffff':'#b3b69d');
+ floor.material.needsUpdate=true;groundApplied=groundMode;
+}
 function render(){
  if(!batch)return;
  batch.setDistanceCulling(distance&&view!=='top');batch.update(camera);
  const t=performance.now();renderer.render(scene,camera);lastRenderMs=performance.now()-t;frames++;
- el('metrics').textContent=JSON.stringify({config:{version,count,mode,view,fade,shadows,culling,distance},walkFrame:walkFrameNumber,
+ el('metrics').textContent=JSON.stringify({config:{version,count,mode,view,fade,shadows,culling,distance,groundMode},walkFrame:walkFrameNumber,
   capabilities:caps,stats:batch.getStats(),drawcalls:renderer.info.render.calls,
   triangles:renderer.info.render.triangles,renderMs:Math.round(lastRenderMs*100)/100,error},null,2);
 }
@@ -91,17 +102,19 @@ function apply(){
  view=el<HTMLSelectElement>('view').value as View;fade=el<HTMLSelectElement>('fade').value as FadePreset;
  shadows=el<HTMLInputElement>('shadows').checked;culling=el<HTMLInputElement>('culling').checked;
  distance=el<HTMLInputElement>('distance').checked;orbit=Number(el<HTMLInputElement>('orbit').value);
+ groundMode=el<HTMLSelectElement>('ground').value as 'flat'|'soft';applyGround();
  if(!batch||count!==oldCount||mode!==oldMode||version!==oldVersion)rebuild();
  batch!.setFade(fade);batch!.setCulling(culling);batch!.setShadows(shadows);
  renderer.shadowMap.enabled=shadows;sun.castShadow=shadows;
  aim(view,orbit);render();
 }
-for(const key of ['version','population','mode','view','fade','distance','culling','shadows','orbit']){
+for(const key of ['version','population','mode','view','fade','distance','culling','shadows','ground','orbit']){
  el<HTMLElement>(key).addEventListener(key==='orbit'?'input':'change',()=>{
   try{
    if(key==='version'){
     const v=el<HTMLSelectElement>('version').value;
-    el<HTMLSelectElement>('fade').value=v==='v2'?'refined':'source';
+    el<HTMLSelectElement>('fade').value=(v==='v2'||v==='v3')?'refined':'source';
+    el<HTMLSelectElement>('ground').value=v==='v3'?'soft':'flat';
    }
    apply();error=null;
   }catch(e){error=String(e);console.error(e);el('metrics').textContent=error}
@@ -130,7 +143,7 @@ el<HTMLButtonElement>('play-walk').addEventListener('click',()=>{
 const lab={
  renderer,scene,camera,sun,floor,family,capabilities:caps,
  get batch(){return batch},get frames(){return frames},get error(){return error},
- get config(){return {version,count,mode,view,fade,culling,distance,shadows,orbit}},
+ get config(){return {version,count,mode,view,fade,culling,distance,shadows,ground:groundMode,orbit}},
  configure(o:Record<string,string|number|boolean>){
   for(const [key,value] of Object.entries(o)){
    const node=el<HTMLInputElement|HTMLSelectElement>(key);
@@ -152,4 +165,4 @@ const lab={
 };
 Object.assign(window,{__groundCoverLab:lab,__groundCoverThree:THREE,__groundCoverMakeBatch:createGrassBatch});
 try{apply()}catch(e){error=String(e);console.error(e)}
-addEventListener('pagehide',()=>{batch?.dispose();family.dispose();floor.geometry.dispose();(floor.material as THREE.Material).dispose();renderer.dispose()});
+addEventListener('pagehide',()=>{batch?.dispose();family.dispose();floor.geometry.dispose();floor.material.dispose();groundTexture?.dispose();renderer.dispose()});
