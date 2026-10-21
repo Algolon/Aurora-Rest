@@ -1,0 +1,46 @@
+name: ASSET-01C1 Scots Pine Fidelity Verification
+on:
+  push:
+    branches:
+      - feature/asset-01c1-scots-pine-fidelity
+  workflow_dispatch:
+jobs:
+  pine-fidelity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - name: Fetch exact pinned Feh Lu We runtime for independent geometry comparison
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Existing birch source parity regression
+        run: FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+      - name: Scots pine source split/combined geometry parity
+        run: FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+      - name: Capture actual Scots pine Three.js / Chromium images
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" npm run capture:pine
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01c1-scots-pine-review
+          path: asset-lab/birch/pine-evidence/
+          if-no-files-found: warn
