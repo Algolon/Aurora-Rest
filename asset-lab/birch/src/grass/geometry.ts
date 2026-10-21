@@ -211,7 +211,6 @@ export function referenceGrassModel(variant:GrassVariant,detail=true,garden=true
   };
 
  if(kind==='grass') {
-} else if(kind==='grass') {
     const n=[9,11,8,7][v], H=[.34,.65,.44,.46][v], width=[.022,.016,.024,.045][v];
     for(let i=0;i<n;i++){
       const a=i*2.39996+r()*.5,d=V(Math.cos(a),0,Math.sin(a)),s=V(-d.z,0,d.x), h=H*(.65+r()*.55),lean=(v===3?.38:.22)*(.6+r());
@@ -236,7 +235,9 @@ export function referenceGrassModel(variant:GrassVariant,detail=true,garden=true
       const a=i*2.2,d=V(Math.cos(a),0,Math.sin(a)),top=d.clone().multiplyScalar(.12).add(V(0,.65+i*.06,0));
       stem(t,[V(0,0,0),top.clone().multiplyScalar(.5),top],.004,green,C('#a6a270'));
       for(let k=0;k<4;k++)blade(top.clone().add(V(0,-k*.04,0)),d.clone().applyAxisAngle(UP,k*1.8),.06,.013,-.02,C('#9c9560'),C('#c6b97a'));
-    
+    }
+  
+ }
  const base=t.build(.6);
  if(!garden)return base;
  gardenSmoothNormals(base);

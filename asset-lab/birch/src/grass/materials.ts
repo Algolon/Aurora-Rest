@@ -3,7 +3,7 @@
 import * as THREE from 'three';
 import {mulberry32} from '../rng.ts';
 const INDOOR_FAMILIES=['ficus','snake','alocasia','pothos','cactus','succulent','zz'] as const;
-const COMMON = /* glsl */ `
+// Source SURFACE_PARAMS.foliage [8.0,.15,0,0,.09,.84];\n// Source GLSL emits exactly these constants when FLW_SURFACE == 7.\nconst profileGlsl=()=>`#if FLW_SURFACE == 7\n  const vec4 FLW_A = vec4(0.1250, 0.1500, 0.0000, 0.0000);\n  const vec2 FLW_B = vec2(0.0900, 0.8400);\n#endif`;\nconst COMMON = /* glsl */ `
 #ifdef FLW_SURFACE
 varying vec3 vFlwP;
 ${profileGlsl()}
