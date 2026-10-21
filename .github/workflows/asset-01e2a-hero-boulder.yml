@@ -1,0 +1,77 @@
+name: ASSET-01E2A hero boulder silhouettes and source regressions
+on:
+  push:
+    branches:
+      - art/asset-01e2-hero-boulder-calibration
+  workflow_dispatch:
+jobs:
+  deterministic-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: E2 geometric invariants, all E1 nature regressions, TypeScript and Vite production build
+        run: |
+          npm test
+          npm run build
+      - name: Checkout pinned original FLW source read-only
+        run: |
+          git init "$RUNNER_TEMP/flw-e2"
+          git -C "$RUNNER_TEMP/flw-e2" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-e2" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-e2" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-e2" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-e2" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-e2"
+          npm install --no-audit --no-fund
+      - name: Independent existing birch pine grass rock geometry parity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-e2" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-e2" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-e2" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-e2" npm run test:rock-parity
+  genuine-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Capture E2A three candidates 7 views and R04/vegetation comparisons
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" npm run capture:rock-e2
+      - name: Retest unchanged E1 Three.js/WebGL source rock baseline
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          CHROME_PATH="$CHROME_PATH" npm run capture:rocks
+      - name: Original source for independent browser stone material comparison
+        run: |
+          git init "$RUNNER_TEMP/flw-material-e2"
+          git -C "$RUNNER_TEMP/flw-material-e2" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-material-e2" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-material-e2" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-material-e2" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-material-e2" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-material-e2"
+          npm install --no-audit --no-fund
+      - name: Original FLW versus Aurora E1 stone material matched WebGL pixels
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          FLW_ROOT="$RUNNER_TEMP/flw-material-e2" CHROME_PATH="$CHROME_PATH" npm run capture:rocks:source-material
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: asset-01e2a-silhouette-browser-evidence, path: 'asset-lab/birch/rock-e2-evidence/', if-no-files-found: warn}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: asset-01e2a-e1-existing-rock-webgl-regression, path: 'asset-lab/birch/rock-evidence/', if-no-files-found: warn}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: asset-01e2a-original-stone-pixel-parity, path: 'asset-lab/birch/rock-material-parity/', if-no-files-found: warn}
