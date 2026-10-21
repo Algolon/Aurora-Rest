@@ -18,6 +18,9 @@ try {
  page.on('console',m=>{if(m.type()==='error')failures.push('console: '+m.text())});
  await page.goto('http://127.0.0.1:4175/benchmark.html',{waitUntil:'networkidle'});
  await page.waitForFunction(()=>Boolean(window.__birchB2?.frames>3),{timeout:60000});
+ // The diagnostic controls overlay the canvas. Exclude their changing text
+ // from pixel-regression captures; the actual 3D view is unchanged.
+ await page.locator('#controls').evaluate(el=>{el.style.visibility='hidden'});
  const check=async()=>{const x=await page.evaluate(()=>window.__birchB2.inspect());if(x.error)throw Error('Browser runtime error: '+x.error);return x};
  const config=async o=>{
   const x=await page.evaluate(o=>window.__birchB2.configure(o),o);
