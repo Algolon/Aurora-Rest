@@ -51,13 +51,23 @@ renderer.render(scene,camera);
 `;
 }
 function plugin(source){
- const code=sceneCode(source);
- return {name:'grass-parity-virtual-page',
-  enforce:'pre',
-  resolveId(id){if(id==='virtual:grass-parity-entry'||id==='\0virtual:grass-parity-entry')return '\0virtual:grass-parity-entry'},
-  load(id){if(id==='\0virtual:grass-parity-entry')return code},
-  configureServer(s){s.middlewares.use('/grass-parity.html',(req,res)=>{res.setHeader('Content-Type','text/html;charset=UTF-8');
-   res.end('<!doctype html><html><head><meta charset="utf-8"/></head><body><script type="module" src="/@id/__x00__virtual:grass-parity-entry"></script></body></html>')})}
+ // Do not depend on direct Vite virtual-module URLs: those require an existing
+ // import edge in Vite's module graph and otherwise return a 404. Serve only
+ // this short test entry from in-memory middleware; source code stays read-only.
+ // Browser-native ES imports are absolute; Vite processes original TS modules.
+ const code=sceneCode(source).replace("from 'three'","from '/node_modules/three/build/three.module.js'");
+ return {name:'grass-material-parity-ephemeral-entry',
+  configureServer(s){
+   s.middlewares.use('/grass-parity-entry.mjs',(req,res)=>{
+    res.setHeader('Content-Type','text/javascript; charset=utf-8');
+    res.setHeader('Cache-Control','no-store');
+    res.end(code);
+   });
+   s.middlewares.use('/grass-parity.html',(req,res)=>{
+    res.setHeader('Content-Type','text/html; charset=utf-8');
+    res.end('<!doctype html><html><head><meta charset="utf-8"></head><body><script type="module" src="/grass-parity-entry.mjs"></script></body></html>');
+   });
+  }
  };
 }
 const originalServer=await createServer({root:flw,plugins:[plugin(true)],server:{port:4195,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
