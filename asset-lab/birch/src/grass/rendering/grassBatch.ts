@@ -9,7 +9,7 @@ export interface GrassInstance {
 }
 interface Stored {
  id:number;variant:GrassVariant;position:THREE.Vector3;rotationY:number;scale:number;
- color:THREE.Color;visible:boolean;dirty:boolean;lastFade:number;matrix:THREE.Matrix4;
+ color:THREE.Color;visible:boolean;dirty:boolean;lastFade:number;fadeOffset:number;matrix:THREE.Matrix4;
 }
 interface RecordItem {id:number;variant:GrassVariant;matrix:THREE.Matrix4;color:THREE.Color;active:boolean;dirty:boolean}
 interface Backend {
@@ -127,6 +127,8 @@ export class GrassBatch {
  private readonly backend:Backend;
  private readonly capacity:number;
  private nextId=0;private disposed=false;
+ private hasPreviousCamera=false;private needsUpdate=true;
+ private readonly previousView=new THREE.Matrix4(),previousProjection=new THREE.Matrix4();
  private config:GrassFadeConfig;private culling:boolean;private distanceCulling:boolean;private shadows:boolean;
  private stats:GrassBatchStats;
  constructor(opts:GrassBatchOptions){
@@ -152,13 +154,15 @@ export class GrassBatch {
   if(![...value.position,scale,rotationY,brightness].every(Number.isFinite)||scale<=0||brightness<=0||brightness>2)throw RangeError('Invalid grass transform/brightness');
   if(![0,1,2,3].includes(value.variant))throw RangeError('Invalid grass variant');
   e.variant=value.variant;e.position.set(...value.position);e.scale=scale;e.rotationY=rotationY;
-  e.color.set(value.tint??0xffffff).multiplyScalar(brightness);e.visible=value.visible!==false;e.dirty=true;
+  e.color.set(value.tint??0xffffff).multiplyScalar(brightness);e.visible=value.visible!==false;e.dirty=true;this.needsUpdate=true;
  }
  add(value:GrassInstance):number{
   this.live();if(this.entries.length>=this.capacity)throw RangeError('GrassBatch capacity exceeded');
   const id=this.nextId++;
   const e:Stored={id,variant:0,position:new THREE.Vector3(),scale:1,rotationY:0,color:new THREE.Color(),
-   visible:true,dirty:true,lastFade:-1,matrix:new THREE.Matrix4()};
+   visible:true,dirty:true,lastFade:-1,fadeOffset:0,matrix:new THREE.Matrix4()};
+  const pseudo=Math.sin((id+1)*78.233+13.41)*43758.5453;
+  e.fadeOffset=2*(pseudo-Math.floor(pseudo)) - 1;
   this.configure(e,value);this.entries.push(e);return id;
  }
  setTransform(id:number,patch:Pick<GrassInstance,'position'|'scale'|'rotationY'>){
@@ -166,22 +170,31 @@ export class GrassBatch {
   this.configure(e,{variant:e.variant,position:patch.position,scale:patch.scale??e.scale,
    rotationY:patch.rotationY??e.rotationY,tint:e.color,visible:e.visible});
  }
- setVisible(id:number,visible:boolean){const e=this.get(id);if(e.visible!==visible){e.visible=visible;e.dirty=true}}
- setVariant(id:number,variant:GrassVariant){const e=this.get(id);if(![0,1,2,3].includes(variant))throw RangeError('Invalid grass variant');if(e.variant!==variant){e.variant=variant;e.dirty=true}}
- setBrightness(id:number,brightness:number){const e=this.get(id);if(!(brightness>0&&brightness<=2))throw RangeError('Invalid brightness');e.color.setRGB(brightness,brightness,brightness);e.dirty=true}
- setFade(fade:GrassFadeConfig|FadePreset){this.live();this.config=typeof fade==='string'?{...GRASS_FADE_PRESETS[fade]}:{...fade};this.entries.forEach(e=>e.dirty=true)}
- setCulling(value:boolean){this.live();this.culling=value}
- setDistanceCulling(value:boolean){this.live();this.distanceCulling=value}
- setShadows(value:boolean){this.live();this.shadows=value;this.backend.shadow(value)}
+ setVisible(id:number,visible:boolean){const e=this.get(id);if(e.visible!==visible){e.visible=visible;e.dirty=true;this.needsUpdate=true}}
+ setVariant(id:number,variant:GrassVariant){const e=this.get(id);if(![0,1,2,3].includes(variant))throw RangeError('Invalid grass variant');if(e.variant!==variant){e.variant=variant;e.dirty=true;this.needsUpdate=true}}
+ setBrightness(id:number,brightness:number){const e=this.get(id);if(!(brightness>0&&brightness<=2))throw RangeError('Invalid brightness');e.color.setRGB(brightness,brightness,brightness);e.dirty=true;this.needsUpdate=true}
+ setFade(fade:GrassFadeConfig|FadePreset){this.live();
+  const next=typeof fade==='string'?{...GRASS_FADE_PRESETS[fade]}:{...fade};
+  if(JSON.stringify(next)===JSON.stringify(this.config))return;
+  this.config=next;this.entries.forEach(e=>e.dirty=true);this.needsUpdate=true;
+ }
+ setCulling(value:boolean){this.live();if(this.culling!==value){this.culling=value;this.needsUpdate=true}}
+ setDistanceCulling(value:boolean){this.live();if(this.distanceCulling!==value){this.distanceCulling=value;this.needsUpdate=true}}
+ setShadows(value:boolean){this.live();if(this.shadows!==value){this.shadows=value;this.backend.shadow(value);this.needsUpdate=true}}
  update(camera:THREE.Camera):GrassBatchStats{
   this.live();const t0=performance.now();
   camera.updateMatrixWorld();
+  if(this.hasPreviousCamera&&!this.needsUpdate
+    &&this.previousView.equals(camera.matrixWorldInverse)
+    &&this.previousProjection.equals(camera.projectionMatrix))return {...this.stats,lastUpdateMs:0};
+  this.previousView.copy(camera.matrixWorldInverse);this.previousProjection.copy(camera.projectionMatrix);
+  this.hasPreviousCamera=true;this.needsUpdate=false;
   P.setFromMatrixPosition(camera.matrixWorld);
   if(this.culling)F.setFromProjectionMatrix(M.multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse));
   const records:RecordItem[]=[],stats=this.empty();
   for(const e of this.entries){
    const distance=P.distanceTo(e.position);
-   const k=this.distanceCulling?grassScaleFade(distance,this.config):1;
+   const k=this.distanceCulling?grassScaleFade(distance,this.config,e.fadeOffset):1;
    const activeScale=e.scale*k;
    const geo=this.geometry[e.variant];const bound=geo.boundingSphere!;
    Q.setFromAxisAngle(Y,e.rotationY);
