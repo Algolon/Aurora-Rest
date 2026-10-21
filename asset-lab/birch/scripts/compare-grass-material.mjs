@@ -70,8 +70,8 @@ function plugin(source){
   }
  };
 }
-const originalServer=await createServer({root:flw,plugins:[plugin(true)],server:{port:4195,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
-const auroraServer=await createServer({root:aurora,plugins:[plugin(false)],server:{port:4196,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
+const originalServer=await createServer({root:flw,configFile:false,base:'/',plugins:[plugin(true)],server:{port:4195,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
+const auroraServer=await createServer({root:aurora,configFile:false,base:'/',plugins:[plugin(false)],server:{port:4196,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
 let browser;
 try{
  await originalServer.listen();await auroraServer.listen();
@@ -92,7 +92,7 @@ try{
  // A first reference import may compile the full Feh Lu We woodland bundle.
 // Use the actual waitForFunction(options) position and surface HTTP/JS errors.
  const awaitReady=async(page,name)=>{
-  try{await page.waitForFunction(()=>!!window.__grassReference,null,{timeout:110000});}
+  try{await page.waitForFunction(()=>!!window.__grassReference,null,{timeout:35000});}
   catch(e){const diag=await page.evaluate(()=>({
    title:document.title,url:location.href,body:document.body.textContent?.slice(0,300),
    scripts:[...document.scripts].map(x=>x.src),refReady:!!window.__grassReference,
