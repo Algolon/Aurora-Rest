@@ -1,0 +1,275 @@
+[
+  {
+    "areaM2": 127200,
+    "maximumFillDepthM": 58.625,
+    "deepestXZ": [
+      800,
+      1040
+    ],
+    "stageHeightM": {
+      "coast": 55.487,
+      "supports": 55.487,
+      "detail": 55.487,
+      "basins": 54.048,
+      "saddle": 54.048,
+      "lakes": 54.048,
+      "valleys": 54.048,
+      "ridges": 54.048,
+      "channels": 55.487
+    },
+    "nearestChannels": [
+      {
+        "id": "main-upper",
+        "distanceM": 266.39,
+        "waterM": 191.23,
+        "nearestXZ": [
+          562.5909,
+          1160.8346
+        ]
+      },
+      {
+        "id": "fold-inlet",
+        "distanceM": 848.76,
+        "waterM": 310.0,
+        "nearestXZ": [
+          1500.0,
+          560.0
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 48400,
+    "maximumFillDepthM": 42.004,
+    "deepestXZ": [
+      340,
+      1120
+    ],
+    "stageHeightM": {
+      "coast": 96.557,
+      "supports": 96.557,
+      "detail": 95.896,
+      "basins": 82.343,
+      "saddle": 96.15,
+      "lakes": 96.15,
+      "valleys": 96.054,
+      "ridges": 82.343,
+      "channels": 96.557
+    },
+    "nearestChannels": [
+      {
+        "id": "main-upper",
+        "distanceM": 196.25,
+        "waterM": 171.06,
+        "nearestXZ": [
+          531.697,
+          1077.9812
+        ]
+      },
+      {
+        "id": "birch-upper-in",
+        "distanceM": 898.22,
+        "waterM": 160.0,
+        "nearestXZ": [
+          -540.0,
+          940.0
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 5600,
+    "maximumFillDepthM": 7.525,
+    "deepestXZ": [
+      -400,
+      820
+    ],
+    "stageHeightM": {
+      "coast": 87.308,
+      "supports": 87.308,
+      "detail": 83.321,
+      "basins": 81.335,
+      "saddle": 81.335,
+      "lakes": 84.534,
+      "valleys": 81.335,
+      "ridges": 81.335,
+      "channels": 87.308
+    },
+    "nearestChannels": [
+      {
+        "id": "birch-upper-in",
+        "distanceM": 184.14,
+        "waterM": 156.89,
+        "nearestXZ": [
+          -545.4293,
+          932.9502
+        ]
+      },
+      {
+        "id": "birch-upper-outlet",
+        "distanceM": 542.03,
+        "waterM": 86.0,
+        "nearestXZ": [
+          -870.0,
+          550.0
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 72000,
+    "maximumFillDepthM": 3.985,
+    "deepestXZ": [
+      160,
+      -1220
+    ],
+    "stageHeightM": {
+      "coast": 10.53,
+      "supports": 10.53,
+      "detail": 10.53,
+      "basins": 88.751,
+      "saddle": 10.53,
+      "lakes": 10.53,
+      "valleys": 10.53,
+      "ridges": 88.751,
+      "channels": 10.53
+    },
+    "nearestChannels": [
+      {
+        "id": "south-fen-tributary",
+        "distanceM": 208.25,
+        "waterM": 11.83,
+        "nearestXZ": [
+          203.7912,
+          -1423.5974
+        ]
+      },
+      {
+        "id": "main-mire-upper",
+        "distanceM": 222.03,
+        "waterM": 9.49,
+        "nearestXZ": [
+          380.15,
+          -1191.1961
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 7200,
+    "maximumFillDepthM": 3.806,
+    "deepestXZ": [
+      1160,
+      -900
+    ],
+    "stageHeightM": {
+      "coast": 61.114,
+      "supports": 61.114,
+      "detail": 61.114,
+      "basins": 61.795,
+      "saddle": 61.795,
+      "lakes": 61.795,
+      "valleys": 61.795,
+      "ridges": 61.795,
+      "channels": 61.114
+    },
+    "nearestChannels": [
+      {
+        "id": "fold-outlet",
+        "distanceM": 367.05,
+        "waterM": 48.43,
+        "nearestXZ": [
+          976.5358,
+          -582.0947
+        ]
+      },
+      {
+        "id": "main-upper",
+        "distanceM": 584.64,
+        "waterM": 14.0,
+        "nearestXZ": [
+          590.0,
+          -770.0
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 21600,
+    "maximumFillDepthM": 2.963,
+    "deepestXZ": [
+      580,
+      -1880
+    ],
+    "stageHeightM": {
+      "coast": 4.9,
+      "supports": 4.9,
+      "detail": 4.899,
+      "basins": 56.294,
+      "saddle": 4.899,
+      "lakes": 4.899,
+      "valleys": 4.899,
+      "ridges": 56.294,
+      "channels": 4.9
+    },
+    "nearestChannels": [
+      {
+        "id": "main-mire-out",
+        "distanceM": 218.02,
+        "waterM": 3.29,
+        "nearestXZ": [
+          798.0148,
+          -1878.819
+        ]
+      },
+      {
+        "id": "south-fen-tributary",
+        "distanceM": 399.67,
+        "waterM": 7.36,
+        "nearestXZ": [
+          566.4887,
+          -1480.563
+        ]
+      }
+    ]
+  },
+  {
+    "areaM2": 8000,
+    "maximumFillDepthM": 2.483,
+    "deepestXZ": [
+      1160,
+      -1920
+    ],
+    "stageHeightM": {
+      "coast": 4.03,
+      "supports": 4.03,
+      "detail": 4.004,
+      "basins": 32.451,
+      "saddle": 4.004,
+      "lakes": 4.004,
+      "valleys": 4.004,
+      "ridges": 32.451,
+      "channels": 4.03
+    },
+    "nearestChannels": [
+      {
+        "id": "main-mire-out",
+        "distanceM": 215.51,
+        "waterM": 1.78,
+        "nearestXZ": [
+          1027.0578,
+          -2089.6165
+        ]
+      },
+      {
+        "id": "main-mire-upper",
+        "distanceM": 601.08,
+        "waterM": 6.5,
+        "nearestXZ": [
+          730.0,
+          -1500.0
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "7438e6ae89a64f7ddeecd4b738e9480d9c713e7c",
+  "implementationCommit": "7e6ca22",
+  "branch": "codex/geo-r02b-a-r1-terrain-skeleton",
+  "remote": "https://github.com/Algolon/Aurora-Rest.git",
+  "cleanAtStart": true,
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "instrumentedBaselineMatchesBinary": true,
+  "baselineTerrainSha256": "0e2788a52066463881d346dda4c7018b2155208c82916c5552e1824215fec462",
+  "preservation": "Original docs/geo-r02b maps, screenshots, JSON and generator retained. Baseline public binary reproducible from 7438e6a. WORLD-01B and original design source unchanged.",
+  "eightBrowserViewsInspected": true
+}
