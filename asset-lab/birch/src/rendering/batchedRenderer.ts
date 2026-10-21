@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import type {BatchBackend,RenderRecord} from './instancedRenderer.ts';
-export class BatchedBirchRenderer implements BatchBackend {
+export class BatchedNatureRenderer implements BatchBackend {
  readonly objects:THREE.Mesh[];
  private mesh:THREE.BatchedMesh;
  private geometries:number[]=[];
@@ -13,7 +13,7 @@ export class BatchedBirchRenderer implements BatchBackend {
   const vertices=geos.reduce((n,g)=>n+g.attributes.position.count,0);
   const indices=geos.reduce((n,g)=>n+(g.index?.count??0),0);
   this.mesh=new THREE.BatchedMesh(capacity,vertices,indices,material);
-  this.mesh.name='birch-multidraw';this.mesh.customDepthMaterial=depth;
+  this.mesh.name='nature-multidraw';this.mesh.customDepthMaterial=depth;
   this.mesh.castShadow=shadows;this.mesh.receiveShadow=true;
   this.mesh.frustumCulled=false;this.mesh.sortObjects=false;
   this.geometries=geos.map(g=>this.mesh.addGeometry(g));
@@ -35,3 +35,6 @@ export class BatchedBirchRenderer implements BatchBackend {
  getReallocations(){return this.reallocations}
  dispose(){this.mesh.removeFromParent();this.mesh.dispose();this.handles.clear();this.last.clear();}
 }
+
+// Backwards-compatible symbol for earlier ASSET-01B2 imports.
+export {BatchedNatureRenderer as BatchedBirchRenderer};

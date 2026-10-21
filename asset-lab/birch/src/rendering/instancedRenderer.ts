@@ -8,7 +8,7 @@ export interface BatchBackend {
  getReallocations():number;
 }
 interface Group {mesh:THREE.InstancedMesh;ids:number[];cap:number;geometry:THREE.BufferGeometry}
-export class InstancedBirchRenderer implements BatchBackend {
+export class InstancedNatureRenderer implements BatchBackend {
  readonly objects:THREE.Mesh[]=[];
  private groups:Group[]=[];
  private updates=0;
@@ -19,7 +19,7 @@ export class InstancedBirchRenderer implements BatchBackend {
  }
  private makeMesh(g:Group,cap:number){
   const mesh=new THREE.InstancedMesh(g.geometry,this.material,cap);
-  mesh.name='birch-instanced-group';
+  mesh.name='nature-instanced-group';
   mesh.customDepthMaterial=this.depth;
   mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
   mesh.instanceColor=new THREE.InstancedBufferAttribute(new Float32Array(cap*3),3).setUsage(THREE.DynamicDrawUsage);
@@ -55,3 +55,6 @@ export class InstancedBirchRenderer implements BatchBackend {
  getReallocations(){return this.reallocations}
  dispose(){for(const g of this.groups){g.mesh.removeFromParent();g.mesh.dispose();}this.groups=[];this.objects.length=0;}
 }
+
+// Backwards-compatible symbol for earlier ASSET-01B2 imports.
+export {InstancedNatureRenderer as InstancedBirchRenderer};
