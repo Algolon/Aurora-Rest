@@ -52,6 +52,27 @@ jobs:
           CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           test -n "$CHROME_PATH"
           CHROME_PATH="$CHROME_PATH" npm run capture:rocks
+      - name: Fetch pinned original Feh Lu We for material browser comparison
+        run: |
+          git init "$RUNNER_TEMP/flw-material"
+          git -C "$RUNNER_TEMP/flw-material" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-material" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-material" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-material" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-material" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-material"
+          npm install --no-audit --no-fund
+      - name: Real WebGL matched original source-versus-Aurora stone material pixel study
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" FLW_ROOT="$RUNNER_TEMP/flw-material" npm run capture:rocks:source-material
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01e1-original-vs-aurora-webgl-material-parity
+          path: asset-lab/birch/rock-material-parity/
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
         if: always()
         with:
