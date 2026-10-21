@@ -91,8 +91,8 @@ function updateCamera(){
 }
 function apply(){
  cfg={choice:byId('choice').value as Choice,view:byId('view').value as View,
- light:byId('light').value as Light,wireframe:byId('wireframe').checked,
- shadows:byId('shadows').checked,orbit:Number(byId('orbit').value),zoom:Number(byId('zoom').value)};
+ light:byId('light').value as Light,wireframe:(byId('wireframe') as HTMLInputElement).checked,
+ shadows:(byId('shadows') as HTMLInputElement).checked,orbit:Number(byId('orbit').value),zoom:Number(byId('zoom').value)};
  const source=selectedSource();
  originalMeshes.forEach((m,i)=>{m.visible=cfg.choice==='comparison'||cfg.choice==='production-all'||PRODUCTION_ROCK_SEEDS[i]===source;});
  hero.visible=cfg.choice==='comparison'||cfg.choice==='experimental-rock-r04';
@@ -130,7 +130,7 @@ apply();animate();
 Object.assign(window,{__rockLab:{renderer,scene,camera,family,hero,frame:()=>frames,
  get error(){return lastError},
  configure(o:Partial<Config>){for(const [k,v] of Object.entries(o)){const el=byId(k);if(!el)throw Error('Unknown control '+k);
-  if(typeof v==='boolean')el.checked=v;else el.value=String(v)}
+  if(typeof v==='boolean')(el as HTMLInputElement).checked=v;else el.value=String(v)}
   apply();draw();return metrics();},
  inspect:metrics,capture(){draw();return renderer.domElement.toDataURL('image/png')}}});
 addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()});
