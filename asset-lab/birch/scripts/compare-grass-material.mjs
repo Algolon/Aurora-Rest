@@ -54,10 +54,10 @@ function plugin(source){
  const code=sceneCode(source);
  return {name:'grass-parity-virtual-page',
   enforce:'pre',
-  resolveId(id){if(id==='/grass-parity-entry.ts'||id==='grass-parity-entry.ts')return '\0grass-parity-entry'},
-  load(id){if(id==='\0grass-parity-entry')return code},
+  resolveId(id){if(id==='virtual:grass-parity-entry'||id==='\0virtual:grass-parity-entry')return '\0virtual:grass-parity-entry'},
+  load(id){if(id==='\0virtual:grass-parity-entry')return code},
   configureServer(s){s.middlewares.use('/grass-parity.html',(req,res)=>{res.setHeader('Content-Type','text/html;charset=UTF-8');
-   res.end('<!doctype html><html><head><meta charset="utf-8"/></head><body><script type="module" src="/grass-parity-entry.ts"></script></body></html>')})}
+   res.end('<!doctype html><html><head><meta charset="utf-8"/></head><body><script type="module" src="/@id/__x00__virtual:grass-parity-entry"></script></body></html>')})}
  };
 }
 const originalServer=await createServer({root:flw,plugins:[plugin(true)],server:{port:4195,strictPort:true,host:'127.0.0.1'},logLevel:'error',optimizeDeps:{noDiscovery:true}});
