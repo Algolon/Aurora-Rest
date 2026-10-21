@@ -1,95 +1,74 @@
-/** E2A authored geology studies: all planes oriented outward, n·p <= d.
- * The independent silhouette parameters are deliberate, not random seeds.
- * Large plane sets are first-pass art candidates, NOT production-approved.
+/** E2A second silhouette pass: editable hand-authored cross-section control cages.
+ * Each ring is one contiguous geological mass cross-section (12 ordered sectors).
+ * Radial offsets and crown lifts are deliberately composed; no seeded/random noise.
  */
 import type {RockSpec,RockId} from './heroRockStudies.ts';
+const flat=[0,0,0,0,0,0,0,0,0,0,0,0] as const;
+const ring=(y:number,width:number,depth:number,x:number,z:number,radial:number[],rise:number[]=flat as unknown as number[])=>({
+ y,width,depth,x,z,radial,rise
+});
 export const STUDIES:Record<RockId,RockSpec>={
  A:{
   id:'A',name:'Fractured Granite Mass',
-  intent:'Grounded wide granite with raked northwest crown and one coherent diagonal fracture plane; front mass grows from same closed solid.',
-  box:{x:[-2.26,2.16],y:[-.21,2.68],z:[-1.63,1.73]},
-  fractureAxis:[-.58,.62,.53],defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:0},
-  planes:[
-   [.08,1,.13,2.48],          // principal tilted crown
-   [-.56,.83,-.15,2.39],      // left shoulder plunges
-   [.78,.58,.04,2.18],        // longer asymmetric right shoulder
-   [-.95,.05,.22,2.09],       // west main wall
-   [.86,.06,.25,1.91],        // east main wall
-   [-.07,.17,1,1.60],        // front surface
-   [.12,.16,-1,1.55],        // back broad face
-   [-.65,.08,.79,2.10],      // front west bevel
-   [.75,.05,.69,1.89],       // front eastern compression
-   [-.79,.14,-.66,2.04],     // rear west shoulder
-   [.73,.19,-.72,1.97],      // rear east
-   [-.60,.67,.28,2.36],      // coherent diagonal fracture / plane direction
-   [.31,.72,.59,2.28],       // sloping front crown
-   [-.15,.65,-.83,2.21],     // rear transition
-   [.61,-.53,.22,1.53],      // right low bevel / grounding
-   [-.72,-.58,.15,1.62],     // left lower buttress
-   [.10,-.64,.70,1.48],      // front base taper
-   [-.26,-.69,-.53,1.35],    // rear base bevel
-   [-.19,.34,1,1.89],       // restrained directional frontal facet
-   [.48,.35,-.78,1.78],     // articulated rear
-   [-.43,.23,-.88,1.83]
-  ]
+  intent:'Low and grounded with stepped asymmetric crown, deep diagonal front shoulder and coherent west-east supporting body; one closed volume.',
+  fractureAxis:[-.56,.72,.42],
+  defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:0},
+  rings:[
+   ring(-.26,1.74,1.39,-.03,-.05,[.90,1.02,.92,.91,1.08,1.01,.94,1.03,1.07,.97,.91,1.03]),
+   ring(.18,2.07,1.59,-.08,.03,[1.02,1.08,.94,.96,1.10,1.04,.94,.89,1.13,1.02,.90,1.03],
+    [-.04,.03,.02,-.03,.06,-.02,.04,.01,-.03,.02,.05,-.04]),
+   ring(.83,2.22,1.64,-.12,.05,[.94,1.12,1.13,.80,1.14,1.04,1.00,.96,1.07,.99,.91,1.09],
+    [-.02,.10,.04,-.10,.04,.12,-.02,.02,.04,-.03,.06,-.04]),
+   ring(1.54,2.05,1.51,-.19,.09,[.94,1.10,1.16,.76,1.08,1.06,.92,1.02,.94,1.13,1.03,.94],
+    [.06,.08,.15,-.14,.08,.03,-.06,.02,.10,-.05,.02,.05]),
+   ring(2.13,1.53,1.14,-.22,.0,[1.03,1.11,1.09,.71,.91,1.08,1.04,.96,1.16,.86,.94,1.10],
+    [.05,.05,.12,-.07,-.12,.08,-.03,.12,.02,-.05,.06,-.08]),
+   ring(2.37,1.12,.75,-.18,-.12,[.95,1.13,.96,.79,.93,.92,1.05,1.17,.91,.90,1.02,1.01],
+    [.10,.07,.16,-.08,.03,-.03,.03,.13,.09,-.01,.07,-.04])
+  ],
+  top:[-.19,2.54,-.17],bottom:[-.03,-.29,-.05]
  },
  B:{
   id:'B',name:'Glacial Erratic',
-  intent:'Broad squat off-centre erratic, one abraded calming windward side and a broken opposing edge; flat stable contact.',
-  box:{x:[-2.6,2.33],y:[-.22,2.12],z:[-1.65,1.46]},
-  fractureAxis:[.75,.25,-.61],defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:-.035},
-  planes:[
-   [.26,1,-.10,1.96],        // long sloping rubbed crown
-   [-.28,.81,.28,2.06],      // flattened western top
-   [.77,.65,-.13,1.96],      // broken right shoulder
-   [-.87,.16,.18,2.23],      // calm left face
-   [.95,.09,.22,2.01],       // right face
-   [.05,.11,1,1.35],         // forward ice-smoothed surface
-   [-.20,.08,-1,1.60],       // broken back
-   [-.74,.02,.67,2.22],      // front west rounding by plane
-   [.79,.12,.63,1.95],       // front east fracture direction
-   [-.74,.18,-.65,2.16],     // calm rear west
-   [.62,.10,-.88,1.93],      // back east fracture
-   [-.51,.55,.36,2.07],      // softened western crown
-   [.59,.36,.62,1.99],       // fracture-connected eastern edge
-   [.33,.71,-.67,1.98],      // broken rear crown
-   [-.45,.57,-.72,2.19],     // rear counterplane
-   [-.55,-.55,.12,1.60],     // buried west foot
-   [.64,-.52,.20,1.39],      // right foot fractured
-   [.11,-.61,.64,1.25],      // calm front contact
-   [-.09,-.58,-.72,1.44],    // rear contact
-   [.92,-.18,-.35,2.01]     // chipped opposing edge
-  ]
+  intent:'Wide, low, off-centre glacial erratic with calm southern abraded face and a more broken northern margin; unequal shoulders.',
+  fractureAxis:[.84,.19,-.50],
+  defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:-.02},
+  rings:[
+   ring(-.24,2.09,1.40,-.23,-.06,[.91,.88,.98,1.07,1.03,.94,1.09,.92,1.04,.88,1.06,.98]),
+   ring(.18,2.41,1.62,-.28,-.07,[.92,1.04,1.12,1.08,1.07,.91,1.13,.94,1.17,.88,.96,.94],
+    [.00,.04,-.02,.06,-.04,.05,-.05,.03,.11,-.09,.07,.03]),
+   ring(.79,2.55,1.59,-.35,-.08,[.99,.96,1.07,1.08,1.03,.93,1.08,.94,1.11,.78,1.18,.98],
+    [-.02,.05,-.02,.00,.06,.03,-.02,.04,.15,-.12,.14,-.05]),
+   ring(1.37,2.26,1.40,-.36,-.17,[.88,1.05,.99,1.05,1.11,1.08,.96,1.03,1.09,.67,1.10,.95],
+    [.10,.02,-.07,.06,.05,-.01,.06,-.03,.13,-.13,.10,-.05]),
+   ring(1.73,1.67,1.06,-.48,-.25,[1.01,.94,.90,1.07,1.14,1.12,1.11,.99,.85,.66,1.03,.95],
+    [.07,-.07,-.04,.12,.10,.02,.07,-.03,-.03,-.08,.04,.08]),
+   ring(1.80,1.16,.71,-.56,-.30,[.97,.94,1.04,.92,1.13,1.15,.98,.91,.79,.79,1.04,1.08],
+    [.12,.02,.04,.12,.07,-.06,.09,.11,-.02,-.08,.02,-.03])
+  ],
+  top:[-.58,2.01,-.27],bottom:[-.19,-.28,-.05]
  },
  C:{
   id:'C',name:'Angular Nordic Outcrop',
-  intent:'Tall windward outcrop with steep raked side planes, leaning summit and terraced but cohesive rock shoulders.',
-  box:{x:[-1.68,1.72],y:[-.24,3.72],z:[-1.55,1.43]},
-  fractureAxis:[.19,.91,-.37],defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:.11},
-  planes:[
-   [.34,1,.04,3.43],         // raked high crown
-   [-.67,.72,-.03,3.30],     // asymmetric summit spur
-   [.91,.55,.06,2.85],       // long eastern fall
-   [-.93,.15,-.12,1.48],     // west vertical face
-   [.91,.07,.16,1.49],       // east wall
-   [.09,.13,1,1.36],         // front
-   [-.13,.18,-1,1.36],       // rear
-   [-.74,.20,.64,1.72],      // western bevel
-   [.71,.23,.69,1.69],       // facing step
-   [-.60,.31,-.77,1.69],     // rear-west ridge
-   [.63,.27,-.72,1.74],      // rear-east ridge
-   [.65,.75,.12,3.07],       // upper east fracture orientation
-   [-.32,.72,.64,3.04],      // upper front
-   [-.56,.62,-.62,2.90],     // rear crown
-   [.38,.68,-.70,3.00],      // stepped rear directional plane
-   [-.79,-.50,.10,1.30],    // anchored base
-   [.71,-.61,.12,1.25],
-   [.08,-.67,.59,1.29],
-   [-.08,-.59,-.70,1.20],
-   [.29,.28,1,1.63],         // strategic front plane
-   [.72,.25,-.44,1.63],      // rear-east articulation
-   [-.29,.35,-.83,1.66]
-  ]
+  intent:'Tall directional outcrop: strongly raked summit, tapering west wall, broad embedded lower feet and irregular rear step from single mass.',
+  fractureAxis:[.24,.92,-.30],
+  defaultControls:{widthScale:1,heightScale:1,depthScale:1,lean:.08},
+  rings:[
+   ring(-.27,1.50,1.36,-.20,.02,[1.08,1.02,.99,1.06,.99,.91,.93,1.03,1.09,.94,.97,.92]),
+   ring(.30,1.66,1.45,-.12,.07,[1.04,1.08,1.02,.92,1.05,1.03,1.13,.96,1.05,.93,1.10,.98],
+    [.00,.04,-.07,.06,-.02,.08,.00,-.03,.12,-.07,.05,.02]),
+   ring(1.15,1.49,1.26,-.03,.03,[.92,1.05,.90,.87,1.12,.97,1.08,.96,1.03,1.08,.90,.98],
+    [-.02,.05,.13,-.03,.05,-.04,.10,.13,-.05,.08,-.08,.02]),
+   ring(2.02,1.41,1.08,.13,-.02,[1.04,.93,.87,.88,1.12,.94,.99,1.17,.96,1.14,.85,1.10],
+    [.02,.16,.08,-.12,.06,.10,-.03,.14,.02,-.06,.07,-.04]),
+   ring(2.84,1.13,.96,.29,-.09,[1.04,.91,.78,1.04,1.11,1.00,1.03,.88,1.08,.85,1.08,.94],
+    [.13,.18,-.01,.12,.17,-.02,-.06,.08,.03,-.07,.19,-.04]),
+   ring(3.38,.76,.70,.43,-.15,[.94,1.07,.88,.98,.96,1.14,1.02,.88,1.06,.79,1.12,.93],
+    [.10,.10,-.06,.16,.05,-.02,.11,.14,.05,-.14,.09,-.07]),
+   ring(3.61,.38,.40,.55,-.20,[1.08,.95,.86,.94,.98,1.09,.94,.91,1.08,.93,1.00,1.12],
+    [.11,.14,-.01,.10,-.04,.02,.07,.12,-.03,-.08,.14,-.04])
+  ],
+  top:[.61,3.79,-.24],bottom:[-.19,-.30,.01]
  }
 };
 export const STUDY_IDS=['A','B','C'] as const;
