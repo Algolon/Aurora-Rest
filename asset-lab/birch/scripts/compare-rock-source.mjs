@@ -28,7 +28,7 @@ try{
   assert.deepEqual(bounds(a),bounds(b),seed+'/bounds');
   const verts=a.getAttribute('position').count;
   const report={seed,triangles:(a.index?.count??verts)/3,vertices:verts,indexed:!!a.index,
-   dimensions:a.boundingBox.getSize({x:0,y:0,z:0,toArray(){return [this.x,this.y,this.z]}}).toArray(),
+   dimensions:[0,1,2].map(i=>a.boundingBox.max.toArray()[i]-a.boundingBox.min.toArray()[i]),
    checksums:Object.fromEntries(['position','normal','uv','color'].map(k=>[k,checksum(a.getAttribute(k)).hash]))};
   results.push(report);a.dispose();b.dispose();
  }
