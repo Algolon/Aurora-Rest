@@ -8,8 +8,8 @@ await mkdir(out,{recursive:true});
 let browser;const errors=[],images=[],views=[],motion=[],benchmarks=[],raf=[];
 const assert=(p,m)=>{if(!p)throw Error(m)};
 const server=await createServer({root,server:{host:'127.0.0.1',port:4193,strictPort:true},logLevel:'error'});
-const schemes={v0:'source',v1:'source',v2:'refined'};
-const variants=['v0','v1','v2'],cameras=['top','walk','short','tall','seed','sedge','transition','approach'];
+const schemes={v0:'source',v1:'source',v2:'refined',v3:'refined'};
+const variants=['v0','v1','v2','v3'],cameras=['top','walk','short','tall','seed','sedge','transition','approach'];
 try{
  await server.listen();
  browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',
@@ -42,7 +42,7 @@ try{
  // V0 and V1: same source fade and ground. V2: only fade changes vs V1.
  for(const version of variants)for(const view of cameras){
   const result=await config({version,fade:schemes[version],view,mode:'instanced',
-    population:2000,culling:true,distance:true,shadows:false,orbit:0});
+    population:2000,culling:true,distance:true,shadows:false,orbit:0,ground:version==='v3'?'soft':'flat'});
   const name=version+'-2000-'+view;
   imagePairs.set(name,await screenshot(name));
   views.push({version,view,config:result.config,stats:result.stats,calls:result.calls,
@@ -57,13 +57,13 @@ try{
   return {changedPixelsOver12:diff,totalPixels:x.width*x.height,maxRgbDelta:max};
  };
  const comparisons=[];
- for(const view of cameras)for(const [a,b] of [['v0','v1'],['v1','v2'],['v0','v2']]){
+ for(const view of cameras)for(const [a,b] of [['v0','v1'],['v1','v2'],['v2','v3'],['v0','v3']]){
   comparisons.push({view,from:a,to:b,...changed(imagePairs.get(a+'-2000-'+view),imagePairs.get(b+'-2000-'+view))});
  }
  // Genuine sequential camera movement, not just eight unrelated static viewpoints.
- for(const version of ['v0','v2']){
+ for(const version of ['v0','v3']){
   await config({version,fade:schemes[version],view:'walk',mode:'instanced',population:2000,
-    shadows:false,culling:true,distance:true});
+    shadows:false,culling:true,distance:true,ground:version==='v3'?'soft':'flat'});
   for(let phase=0;phase<7;phase++)for(const f of [0,3,7,11]){
    const ix=phase*12+f;
    const response=await page.evaluate(frame=>window.__groundCoverLab.walkFrame(frame,12),ix);
@@ -83,10 +83,10 @@ try{
   }));
   raf.push({version,frameIntervalsMs:series,kind:'rAF scheduling sample, not hardware FPS'});
  }
- for(const version of ['v0','v2'])for(const population of [100,500,2000,5000]){
+ for(const version of ['v0','v2','v3'])for(const population of [100,500,2000,5000]){
   for(const mode of ['instanced',...(meta.multiDraw?['multidraw']:[])]){
    const standing=await config({version,fade:schemes[version],view:'walk',mode,population,
-    culling:true,distance:true,shadows:false});
+    culling:true,distance:true,shadows:false,ground:version==='v3'?'soft':'flat'});
    const movement=await page.evaluate(()=>{
     const l=window.__groundCoverLab;
     const before=l.inspect();
@@ -106,7 +106,7 @@ try{
  for(const frame of [0,15,27,39,51,63,83]){
   const name=id=>id+'-walkframe-'+String(frame).padStart(3,'0');
   // Only these indices are captured in sequence; skip others.
-  if(!images.includes(name('v0')+'.png')||!images.includes(name('v2')+'.png'))continue;
+  if(!images.includes(name('v0')+'.png')||!images.includes(name('v3')+'.png'))continue;
   // Matched PNGs are already present; static comparisons above provide image-change deltas.
   motionDelta.push(frame);
  }
