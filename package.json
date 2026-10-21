@@ -12,7 +12,12 @@
     "test:browser": "node tools/check-browser.mjs",
     "capture:world": "node tools/capture-world.mjs",
     "routes:align": "node tools/route-trails.ts",
-    "routes:profile": "node tools/profile-routes.ts"
+    "routes:profile": "node tools/profile-routes.ts",
+    "geo:generate": "python3 tools/geo-r02b/generate.py",
+    "geo:validate": "python3 tools/geo-r02b/validate.py",
+    "geo:capture": "node tools/geo-r02b/capture.mjs",
+    "geo:preflight": "python3 tools/geo-r02b/preflight.py",
+    "geo:report": "python3 tools/geo-r02b/report.py"
   },
   "dependencies": {
     "three": "^0.186.1"

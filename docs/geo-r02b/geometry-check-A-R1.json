@@ -1,0 +1,78 @@
+{
+  "scope": "authored plan geometry and proposed elevation graph only; no heightfield or hydrologic simulation",
+  "coordinateGrid": [
+    600,
+    800
+  ],
+  "envelopeKm": [
+    6,
+    8
+  ],
+  "metresPerMapUnit": 10,
+  "allCoastAndIslandRingsValid": true,
+  "offshoreIslandsNonOverlapping": true,
+  "isletCount": 10,
+  "mainlandIoUAgainstOriginalA": 0.991502,
+  "coastHausdorffDistanceM": 161.47,
+  "originalTotalLandEnvelopeKm2IncludingLakes": 25.8262,
+  "revisedTotalLandEnvelopeKm2IncludingLakes": 25.9511,
+  "originalMireEnvelopeKm2": 0.9061,
+  "revisedMireEnvelopeKm2": 1.3475,
+  "mireEnvelopeAreaRatio": 1.487,
+  "catchmentCount": 8,
+  "catchmentCoverageGapM2": 0.0,
+  "catchmentOverlapM2": 0.0,
+  "catchmentAreaKm2": {
+    "01": 1.5191,
+    "02": 8.5765,
+    "03": 1.1433,
+    "04": 2.5462,
+    "05": 2.421,
+    "06": 3.2432,
+    "07": 2.2089,
+    "08": 3.5647
+  },
+  "directedDrainageGraphAcyclic": true,
+  "allSourceAndLakeNodesReachAnOutlet": true,
+  "allProposedChannelControlLevelsStrictlyDescend": true,
+  "allLakeInletsAndSpillsOnExactBoundary": true,
+  "allChannelsInsideOwnCatchmentAndMainland": true,
+  "channelCrossesClosedRidgeCount": 0,
+  "reservedCorridorCentrelinesOnLandAndOutsideLakes": true,
+  "allChannelCrossingsDeclared": true,
+  "actualPlanCrossings": [
+    {
+      "corridor": "hero",
+      "channel": "main-mire-upper",
+      "uv": [
+        339.2683,
+        512.0695
+      ]
+    },
+    {
+      "corridor": "hidden-loop",
+      "channel": "fold-inlet",
+      "uv": [
+        429.9133,
+        372.2922
+      ]
+    },
+    {
+      "corridor": "hidden-loop",
+      "channel": "fold-outlet",
+      "uv": [
+        398.0,
+        458.0
+      ]
+    }
+  ],
+  "notValidated": [
+    "heightfield-derived watersheds",
+    "water budget or discharge",
+    "erosion or flood/tidal behaviour",
+    "rendered-triangle walking grades",
+    "full corridor widths and all dry approaches",
+    "geological field evidence or actual sediment transport",
+    "desktop or Android runtime performance"
+  ]
+}
