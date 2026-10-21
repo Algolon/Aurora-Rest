@@ -57,3 +57,35 @@ jobs:
           name: asset-01d1-production-grass-browser
           path: asset-lab/birch/grass-evidence/
           if-no-files-found: warn
+  source-material-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Read exact Feh Lu We source for independent side-by-side browser material comparison
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Browser render original pinned source and Aurora material with identical conditions
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          FLW_ROOT="$RUNNER_TEMP/flw-source" CHROME_PATH="$CHROME_PATH" npm run capture:grass-source
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01d1-source-vs-aurora-material
+          path: asset-lab/birch/grass-material-parity/
+          if-no-files-found: warn

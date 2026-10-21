@@ -17,7 +17,8 @@
     "capture:pine": "node scripts/capture-pine.mjs",
     "capture:mixed": "node scripts/capture-mixed.mjs",
     "test:grass-parity": "node scripts/compare-grass-source.mjs",
-    "capture:grass": "node scripts/capture-grass.mjs"
+    "capture:grass": "node scripts/capture-grass.mjs",
+    "capture:grass-source": "node scripts/compare-grass-material.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
