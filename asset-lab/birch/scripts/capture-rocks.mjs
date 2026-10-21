@@ -36,6 +36,8 @@ try{
  await shot('r04-threequarter-nordic',{wireframe:false,light:'nordic'});
  await shot('comparison-same-neutral',{choice:'comparison',view:'threequarter',light:'neutral'});
  await shot('comparison-same-nordic',{light:'nordic'});
+ await shot('r04-approved-aurora-nature-neutral',{choice:'nature-context',view:'threequarter',light:'neutral',zoom:90});
+ await shot('r04-approved-aurora-nature-nordic',{light:'nordic'});
  const parity=await page.evaluate(()=>{
   const l=window.__rockLab,f=l.family,m=f.material;
   return {mapWidth:m.map?.image?.width,mapHeight:m.map?.image?.height,vertexColors:m.vertexColors,
