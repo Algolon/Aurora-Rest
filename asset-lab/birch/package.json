@@ -15,7 +15,9 @@
     "capture:batch": "node scripts/capture-batch.mjs",
     "test:pine-parity": "node --experimental-strip-types scripts/compare-pine-source.mjs",
     "capture:pine": "node scripts/capture-pine.mjs",
-    "capture:mixed": "node scripts/capture-mixed.mjs"
+    "capture:mixed": "node scripts/capture-mixed.mjs",
+    "test:grass-parity": "node scripts/compare-grass-source.mjs",
+    "capture:grass": "node scripts/capture-grass.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
