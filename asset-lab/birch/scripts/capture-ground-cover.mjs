@@ -49,9 +49,12 @@ try{
  for(const fade of ['extended','close']){
   await configure({view:'approach',fade});await snap('approach-'+fade);
  }
- await configure({view:'walk',population:500,fade:'source',shadows:true});
+ const shadowOn=await configure({view:'walk',population:500,fade:'source',shadows:true});
  await snap('500-shadows-on');
- await configure({shadows:false});await snap('500-shadows-off');
+ const shadowOff=await configure({shadows:false});await snap('500-shadows-off');
+ const shadowComparison={onCalls:shadowOn.calls,offCalls:shadowOff.calls,
+   onTriangles:shadowOn.triangles,offTriangles:shadowOff.triangles,
+   shadowOnlyCalls:shadowOn.calls-shadowOff.calls};
  // Deterministic population matrix. At 5,000 use shadow-free walking view only.
  for(const population of [100,500,2000,5000]){
   for(const candidate of [...new Set(['instanced',mode])]){
@@ -62,7 +65,14 @@ try{
       turn:l.moveCamera([0,1.68,5],[6,.3,4]),
       return:l.moveCamera([0,1.68,7.2],[0,.42,-1.5])};
    });
-   const row={population,mode:candidate,standing:p,paths:turn};
+   const renderSamples=await page.evaluate(()=>{
+    const l=window.__groundCoverLab,values=[];
+    for(let i=0;i<5;i++){l.capture();values.push(l.inspect().renderMs)}
+    return values;
+   });
+   const sorted=[...renderSamples].sort((a,b)=>a-b);
+   const row={population,mode:candidate,standing:p,paths:turn,renderSubmissionMs:renderSamples,
+    medianSubmissionMs:sorted[2],p95SubmissionMs:sorted[4]};
    benchmarks.push(row);
    assert(turn.return.stats.registered===population,'Lost instances');
    assert(turn.return.stats.renderGroups<=(candidate==='instanced'?4:1),'Unbounded grass groups');
@@ -114,7 +124,60 @@ try{
   await writeFile(resolve(out,slug+'-batched.png'),Buffer.from(entry.render.split(',')[1],'base64'));
   assert(changed<=20,slug+' material/geometry mismatch '+changed+' pixels');
  }
+ const lifecycle=await page.evaluate(async()=>{
+  const l=window.__groundCoverLab,T=window.__groundCoverThree,make=window.__groundCoverMakeBatch;
+  const {createGrassFamily}=await import('/src/grass/index.ts');
+  const first=l.family,sourceMaterial=first.material,atlas=sourceMaterial.map;
+  let disposeMaterial=0,disposeAtlas=0;
+  sourceMaterial.addEventListener('dispose',()=>disposeMaterial++);
+  atlas.addEventListener('dispose',()=>disposeAtlas++);
+  const extraA=createGrassFamily(),extraB=createGrassFamily();
+  if(extraA.material!==sourceMaterial||extraB.material!==sourceMaterial)throw Error('Shared family ownership broken');
+  const scene=new T.Scene(),camera=new T.PerspectiveCamera(52,1,.1,50);
+  camera.position.set(0,2,5);camera.lookAt(0,0,0);
+  const baseline=scene.children.length;
+  let reallocationObserved=false;
+  for(let n=0;n<6;n++){
+   const batch=make({scene,renderer:l.renderer,family:first,
+    mode:n%2===0?'instanced':l.capabilities.multiDraw?'multidraw':'instanced',
+    capacity:64,culling:false,distanceCulling:false});
+   for(let i=0;i<64;i++)batch.add({variant:i%4,position:[i*.22,0,0]});
+   const stats=batch.update(camera);
+   if(stats.reallocations>0)reallocationObserved=true;
+   batch.dispose();batch.dispose();
+   if(scene.children.length!==baseline)throw Error('Leaked grass scene object cycle '+n);
+  }
+  if(!reallocationObserved)throw Error('Instanced buffer growth not exercised');
+  extraA.dispose();
+  if(disposeMaterial||disposeAtlas)throw Error('Disposed material before last owner');
+  extraB.dispose();
+  if(disposeMaterial||disposeAtlas)throw Error('Disposed atlas while showroom owner remains');
+  l.disposeBatch();first.dispose();
+  if(disposeMaterial!==1||disposeAtlas!==1)throw Error('Final owner did not dispose exactly once');
+  const fresh=createGrassFamily();
+  if(fresh.material===sourceMaterial||fresh.material.map===atlas)throw Error('Reused dead grass resource');
+  const batch=make({scene,renderer:l.renderer,family:fresh,mode:'instanced',capacity:4,culling:false,distanceCulling:false});
+  batch.add({variant:2,position:[0,0,0]});batch.update(camera);
+  scene.add(new T.HemisphereLight('#ffffff','#777777',1));
+  l.renderer.render(scene,camera);
+  batch.dispose();fresh.dispose();
+  return {cycles:6,sceneObjectsReturnToBaseline:true,sharedOwners:true,
+   prematureDispose:false,finalOwnerDisposals:{material:disposeMaterial,atlas:disposeAtlas},
+   reallocationObserved,recreateAndRender:true};
+ });
  assert(errors.length===0,errors.join('\n'));
- await writeFile(resolve(out,'ground-cover-metrics.json'),JSON.stringify({meta,benchmarks,parity:pairs,shots,errors},null,2));
- console.log('ASSET-01D2 WEBGL PASS',JSON.stringify({meta,benchmarks:benchmarks.length,parity:pairs,shots:shots.length}));
+ await writeFile(resolve(out,'ground-cover-metrics.json'),JSON.stringify({meta,benchmarks,
+   shadowComparison,parity:pairs,lifecycle,shots,errors},null,2));
+ console.log('ASSET-01D2 WEBGL PASS',JSON.stringify({meta,benchmarks:benchmarks.length,
+   parity:pairs,shots:shots.length,shadowComparison,lifecycle}));
+ console.log('GROUND COVER BENCHMARK SUMMARY',JSON.stringify(benchmarks.map(b=>({
+  population:b.population,mode:b.mode,visible:b.paths.return.stats.visible,
+  culled:b.paths.return.stats.culled,fadeZone:b.paths.return.stats.fadeZone,
+  triangles:b.paths.return.stats.visibleTriangles,renderGroups:b.paths.return.stats.renderGroups,
+  drawcalls:b.paths.return.calls,bufferUpdates:b.paths.return.stats.bufferUpdates,
+  reallocations:b.paths.return.stats.reallocations,
+  cpuVisibilityUpdateMs:b.paths.return.stats.lastUpdateMs,
+  renderSubmissionMedianMs:b.medianSubmissionMs,renderSubmissionP95Ms:b.p95SubmissionMs,
+  geometryMemory:b.paths.return.memory.geometries,textureMemory:b.paths.return.memory.textures
+ }))));
 }finally{await browser?.close();await server.close()}
