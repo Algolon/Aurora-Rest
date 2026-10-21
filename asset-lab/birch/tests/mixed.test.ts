@@ -13,7 +13,7 @@ function family(hex:string){
  geo.setIndex([0,1,2]);geo.computeBoundingSphere();
  const mat=new THREE.MeshLambertMaterial({vertexColors:true,color:hex});
  mat.userData.vegetationDepth=new THREE.MeshDepthMaterial();
- return {material:mat,getGeometry:()=>geo,dispose(){geo.dispose();mat.userData.vegetationDepth.dispose();mat.dispose()}};
+ return {material:mat,getGeometry:()=>geo,createMesh:()=>new THREE.Mesh(geo,mat),dispose(){geo.dispose();mat.userData.vegetationDepth.dispose();mat.dispose()}};
 }
 const fallback={getContext:()=>({getExtension:()=>null,getParameter:()=> 'test'})} as unknown as THREE.WebGLRenderer;
 test('relative instance tints are linear, independent and identity for original colors',()=>{
@@ -43,7 +43,7 @@ test('mixed controller provides stable global IDs, isolated materials and 18 fal
  assert.equal(st.species.birch.renderGroups,2);assert.equal(st.species.pine.renderGroups,0);
  assert.equal(forest.getObjects('birch')[0].material,birch.material);
  assert.equal(forest.getObjects('pine')[0].material,pine.material);
- assert.ok(forest.objects.every(x=>x.customDepthMaterial===x.material.userData.vegetationDepth));
+ assert.ok(forest.objects.every(x=>x.customDepthMaterial===(x.material as THREE.Material).userData.vegetationDepth));
  const updates=forest.getStats().bufferUpdates;
  const again=forest.update(camera);assert.equal(again.bufferUpdates,updates);
  camera.lookAt(12,3,0);forest.update(camera);
