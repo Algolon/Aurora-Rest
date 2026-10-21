@@ -58,6 +58,7 @@ function plugin(source){
  const code=sceneCode(source).replace("from 'three'","from '/node_modules/three/build/three.module.js'");
  return {name:'grass-material-parity-ephemeral-entry',
   configureServer(s){
+   s.middlewares.use('/favicon.ico',(req,res)=>{res.statusCode=204;res.end()});
    s.middlewares.use('/grass-parity-entry.mjs',(req,res)=>{
     res.setHeader('Content-Type','text/javascript; charset=utf-8');
     res.setHeader('Cache-Control','no-store');
@@ -65,7 +66,7 @@ function plugin(source){
    });
    s.middlewares.use('/grass-parity.html',(req,res)=>{
     res.setHeader('Content-Type','text/html; charset=utf-8');
-    res.end('<!doctype html><html><head><meta charset="utf-8"></head><body><script type="module" src="/grass-parity-entry.mjs"></script></body></html>');
+    res.end('<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"></head><body><script type="module" src="/grass-parity-entry.mjs"></script></body></html>');
    });
   }
  };
