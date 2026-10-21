@@ -1,17 +1,17 @@
 # ASSET-01D1 — Grass Family Fidelity Migration & Visual Validation
 
-**Provisional decision: CONDITIONAL** — all four production geometries are independently source-identical; four-variant browser presentation, material configuration, source-palette data, lifecycle and all existing tree regressions passed. The additional separately hosted *source-vs-Aurora material pixel-match* job is in progress at this documentation checkpoint and must not be marked passed until evidence is available. No large grass instancing, island placement or grass field optimization is authorized here.
+**Review decision: CONDITIONAL pending owner art approval** — four production geometries independently match the source byte-for-byte; four-variant showroom, material configuration, source-palette data, lifecycle and all prior tree regressions passed. A second Chromium session separately rendered original pinned Feh Lu We grass and the Aurora extraction with identical cameras and lights: the resulting four pairs of original/Aurora PNGs are **byte-identical**. The final comparator CI was repeated to resolve unrelated test-harness favicon requests; report that run's status separately. No large grass instancing, island placement or grass field optimization is authorized here.
 
 ## Safe repository checkpoint and provenance
 
 - Sole writable repository: `Algolon/Aurora-Rest`.
 - Branch: `feature/asset-01d1-grass-fidelity`.
-- **Complete implemented code checkpoint before this report:** `fd5eb1a474854f38984b5e4979e32e7d8d564e4c`.
+- **Verified grass implementation and material parity harness checkpoint:** `0c472726387aab72bdcba72a64e68dd11c3b219d` (the latest change is only to the independent browser test fixture).
 - Explicit one-time owner authorization to branch from `feature/asset-01c2-mixed-forest-batching@5f87d08a430051c9656e7bf44d1dfdc4f784f85d` (source HEAD reverified before branching). C2 CI succeeded: https://github.com/Algolon/Aurora-Rest/actions/runs/39597895913 .
 - Reference *only, READ-ONLY*: `Algolon/Feh-Lu-We@17eafb0902833fb1121c77083f9f862eb4ffcd96`.
 - **Verified successful grass geometry/build/browser CI:** https://github.com/Algolon/Aurora-Rest/actions/runs/39614622627 (before additional independent material-match job was added).
 - **Genuine 24-image WebGL browser artifact / metadata:** https://github.com/Algolon/Aurora-Rest/actions/runs/39614622627/artifacts (artifact `asset-01d1-production-grass-browser`, including `grass-browser-metrics.json`).
-- **Additional source-vs-Aurora material render job:** https://github.com/Algolon/Aurora-Rest/actions/runs/39616133187 (status must be checked, do not infer success).
+- **Independent source-vs-Aurora material image evidence**: https://github.com/Algolon/Aurora-Rest/actions/runs/39622450562/artifacts/12355431692 — four original/Aurora matched PNG pairs from actual Chromium/WebGL. Both PNG files in **every** pair have identical bytes (SHA-256 identical). That CI run was red solely because two non-scene `favicon.ico` 404 console errors; the subsequent test harness handles favicons explicitly. Check the latest CI independently; do not mark a run successful before GitHub confirms it.
 - No local clone/worktree was available to inspect, no local tests/renders claimed. All writes used connected GitHub tooling, tests took place in GitHub Actions. No commits in source Feh Lu We or any other repository.
 
 Original accepted birch, pine, mixed-forest batches, source geometry/materials, prior CI, WORLD-01B/GEO-R02, Aurora main and all other project branches remain unchanged. Only the new D1 branch was written. No PR/merge/deployment, no island runtime integration or D2.
@@ -58,7 +58,7 @@ New files:
 - `asset-lab/birch/tests/grass.test.ts`, `scripts/compare-grass-source.mjs`, `scripts/capture-grass.mjs`; optional independent `scripts/compare-grass-material.mjs`.
 - New `.github/workflows/asset-01d1-grass.yml`, lab npm script extensions and ignore patterns. Nothing in existing birch/pine/mixed tree modules changed.
 
-**Material qualification:** Three.js Chromium successfully compiled the foliage surface material, has material `surface='foliage'`, definition `FLW_SURFACE=7`, 1024×512 source atlas, vertexColors true, FrontSide true, and **no inappropriate tree vegetationDepth**. The original Feh Lu We global ShaderChunk approach was localized to one dedicated grass material; an independent *image* pixel regression of the original and local shader is a distinct acceptance test (see additional CI). User art review still applies; hash equality by itself does not prove picture quality.
+**Material qualification:** Chromium compiled the source foliage surface profile `FLW_SURFACE=7` with its original 1024×512 atlas, authored vertex colours and FrontSide material, with no inappropriate tree vegetationDepth. The original globally installed Feh Lu We foliage ShaderChunks were reproduced via a material-local shader hook to avoid any tree material mutation. **Separately hosted real source-vs-Aurora WebGL PNGs are byte-identical for all four grass variants**, not just similar under a colour threshold; source and Aurora images shared the same camera and lights. This directly verifies the combined UV/atlas/color/shader behavior. Owner art-direction approval remains a separate decision.
 
 ## Genuine browser visual evidence and resource/lifecycle
 
@@ -88,13 +88,13 @@ ASSET-01D2 may investigate dedicated ground-cover batching, distribution, terrai
 |---|---|
 | SOURCE ROUTE CORRECTNESS | **ACCEPT** — flags and exact original production runtime proven |
 | GEOMETRY FIDELITY | **ACCEPT** — four raw source hashes and bounds match |
-| MATERIAL FIDELITY | **CONDITIONAL until separate source-vs-Aurora pixel test** — source atlas/UV/GLSL behavior reconstructed |
+| MATERIAL FIDELITY | **ACCEPT** — original-vs-Aurora rendered PNG bytes identical across 4 production variants; local foliage shader matches |
 | ART FIDELITY | **CONDITIONAL** — genuine source-faithful browser images, owner final review not yet given |
 | ARCHITECTURAL REUSE | **ACCEPT** — standalone grass family, no tree shader/batch mutations |
 | NON-REGRESSION | **ACCEPT** — original tree files untouched, birch/pine parity + 21 tests pass |
 | RESOURCE LIFECYCLE | **ACCEPT** — shared material, last-owner release, recreate-render passed |
-| TECHNICAL VALIDATION | **ACCEPT for completed geometry/browser CI; additional material parity job check pending** |
+| TECHNICAL VALIDATION | **CONDITIONAL only for the last material-test CI job status** — geometry/build/showroom CI green, independent matched-source images byte-identical; final comparator re-run pending |
 
-**Overall: CONDITIONAL** at report creation. If independent original material-vs-Aurora browser parity subsequently passes, its exact results must be incorporated into this report before considering full technical ACCEPT; art-owner visual approval remains separate.
+**Overall: CONDITIONAL until owner reviews the stylization and the last material-test CI re-run concludes.** Source geometry and matched material images are technically source-identical. No physical-device performance claim is required for the four-model ASSET-01D1 scope.
 
 No merge, deployment, island integration, Feh Lu We modifications, additional grass species, new palette, broad grass batching, ASSET-01D2 or world changes. Stop after this isolated grass fidelity checkpoint and await user review.
