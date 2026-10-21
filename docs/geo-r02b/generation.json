@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "milestone": "GEO-R02B",
+  "masterId": "aurora-rest-concept-a-r1",
+  "masterRevision": "GEO-R02A-R1.1",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "generatorVersion": "terrain-skeleton-4",
+  "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4.0,
+    "west": -3000,
+    "north": 4000,
+    "rowDirection": "south",
+    "dataType": "float32-le"
+  },
+  "heightRangeM": [
+    -141.77650451660156,
+    899.1156616210938
+  ],
+  "terrainSha256": "0e2788a52066463881d346dda4c7018b2155208c82916c5552e1824215fec462",
+  "runtimeNote": "Greybox only; regenerated from explicit A-R1 constraints. Not an erosion or water-flow simulation.",
+  "resolutionDepartures": [
+    {
+      "id": "tarn-inlet-w",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "tarn-inlet-n",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "main-upper",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 5.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "fold-inlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "fold-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 4.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-upper-in",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.5,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-upper-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 3.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-lower-in",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.5,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-lower-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 3.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "windward-gully",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "south-fen-tributary",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    }
+  ],
+  "junctionCorrections": [],
+  "ridgeInterpolation": "Shape-preserving cubic crest heights through authored knots, closest-segment projection; no nearest-vertex height steps.",
+  "shoreInterpretation": "Lake margins transition to the authored water level over 55\u2013300 m outside the exact irregular shore. No new lake geometry.",
+  "depthAllowance": "Carving adds max(0.25 m, local water grade \u00d7 4 m \u00d7 0.7) to indicative depth for raster interpolation safety. Authored and resolved depths exported separately.",
+  "generationSeconds": 65.891,
+  "numpy": "2.3.5",
+  "channelsCarved": 13,
+  "lakeBasins": 4,
+  "ridgeBranches": 16
+}

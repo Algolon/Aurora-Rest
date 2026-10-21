@@ -1,0 +1,21 @@
+{
+  "checkpoint": "GEO-R02B first real 3D terrain validation",
+  "technicalAcceptance": false,
+  "artisticAcceptance": "not recommended; user approval open",
+  "sourcePreflightPassed": true,
+  "sampledStreamCentrelineExposureCount": 0,
+  "lakeProbeFailures": 0,
+  "residualBankProbeFailures": 81,
+  "unintendedClosedDepressions20m": 7,
+  "acceptedFullHikingCentrelines": 0,
+  "actualBrowserCaptures": 8,
+  "cameraChecksPassed": true,
+  "notValidated": [
+    "full wetted-section containment at every LOD",
+    "physical fluid/flood/tidal behavior",
+    "actual watershed boundaries",
+    "end-to-end A-R1 hiking traversal",
+    "physical Android or desktop GPU performance"
+  ],
+  "stop": "Await visual review; no population, merge or deployment."
+}

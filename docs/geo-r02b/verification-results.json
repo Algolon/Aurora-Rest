@@ -1,0 +1,54 @@
+{
+  "implementationCommit": "7e6ca22837080becd5ec0a2f8394f5128c7efcf3",
+  "commands": [
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "tests": 21,
+      "passes": 21,
+      "newTriangleContactTests": 2,
+      "unchangedWORLD01BTests": 19
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "outputs": [
+        "index.html",
+        "geo-r02b.html"
+      ],
+      "warnings": [
+        "Shared Three.js chunk exceeds 500 kB; no optimization acceptance claimed"
+      ]
+    },
+    {
+      "command": "Python preflight.py",
+      "exitCode": 0,
+      "note": "0.5 m independent curve tessellation tolerance documented"
+    },
+    {
+      "command": "Independent repeat Python generate.py",
+      "exitCode": 0,
+      "repeatGenerationSeconds": 65.89
+    }
+  ],
+  "reproducibility": [
+    {
+      "path": "public/geo-r02b/terrain.f32",
+      "sha256": "0e2788a52066463881d346dda4c7018b2155208c82916c5552e1824215fec462",
+      "identicalToIndependentFirstGeneration": true
+    },
+    {
+      "path": "public/geo-r02b/features.json",
+      "sha256": "0d72ecc75f2c065d6f020647a69f2d354b33856de140cd13dc10b111a39d11ed",
+      "identicalToIndependentFirstGeneration": true
+    }
+  ],
+  "preservation": {
+    "primaryCheckoutClean": true,
+    "primaryHead": "c3621ea7d73334d6cd16b5af096d3f933a249845",
+    "productionSourceDiffEmpty": true,
+    "originalMasterByteIdentical": true,
+    "originalA_B_C_R1ArtifactsEdited": false
+  },
+  "acceptanceNote": "Automated software tests are green. Terrain/hydrology/hiking acceptance fails separately; see acceptance.json."
+}

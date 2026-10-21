@@ -1,0 +1,35 @@
+{
+  "scope": "Source plan geometry and proposed elevation graph; independent of 3D terrain validity. Recheck of mandatory preflight inspected before implementation.",
+  "sourceSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "schemaVersion": "2.0.0",
+  "revision": "GEO-R02A-R1.1",
+  "counts": {
+    "ridges": 16,
+    "catchments": 8,
+    "channels": 13,
+    "lakes": 4,
+    "islands": 10,
+    "corridors": 6,
+    "crossings": 3
+  },
+  "allChecksPassed": true,
+  "errors": [],
+  "catchmentCoverageDifferenceM2": 452.7343849256057,
+  "curveTessellationToleranceM": 0.5,
+  "catchmentBoundaryHausdorffM": 0.18544668985664745,
+  "branchBase": "c3621ea7d73334d6cd16b5af096d3f933a249845",
+  "defaultBranchObserved": "d543f66a85f120a182eebe56e2d24f5770f250fb",
+  "ancestryException": "User explicitly approved c3621ea instead of main for codex/geo-r02b-a-r1-terrain-skeleton. Main contained only README; runtime checkpoint preserved.",
+  "coordinateTransform": {
+    "x": "10*u - 3000",
+    "z": "4000 - 10*v",
+    "grid": [
+      600,
+      800
+    ],
+    "planningEnvelopeM": [
+      6000,
+      8000
+    ]
+  }
+}

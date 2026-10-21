@@ -79,13 +79,13 @@ report+='''
 
 Cairn Saddle is a real local low point between its two tested high flanks. However, its south flank and east/west approaches miss the proposed elevations: south 285 m proposed; west approach 170 m; east approach 155 m. The prototype measures different values above. A pass existing in 3D does not yet mean the complete approach route is feasible.
 
-The following grades are sampled on the actual 4 m raster triangles along the original drawn centrelines, with diagnostic deck contact where they intersect. Very large maxima can reflect an unaligned channel/deck approach or a cut bank; they are **not** recommended hiking gradients. None of the six complete centrelines is accepted. [hiking-profiles.csv](hiking-profiles.csv) and the JSON contain positions and conflict examples.
+The following grades are sampled on the actual 4 m raster triangles along the original drawn centrelines, with diagnostic deck contact where they intersect. Very large maxima can reflect an unaligned channel/deck approach or a cut bank; they are **not** recommended hiking gradients. None of the six complete centrelines is accepted. The wet-crossing conflicts partly result from the prototype's widened streams and provisional deck orientation. These failures describe this terrain interpretation; they do not automatically invalidate or authorize edits to the approved A-R1 plan. [hiking-profiles.csv](hiking-profiles.csv) and the JSON contain positions and conflict examples.
 
 '''
 report+=table(['Reservation','Length km','Target grade','P95 grade','Over target samples','Wet samples','P10 dry width through centreline m'],[[x['id'],f"{x['planLengthM']/1000:.2f}",pct(x['targetMaxGrade']),pct(x['p95Grade']),pct(x['fractionOverTarget']),x['submergedSamples'],f"{x['p10DryLowSlopeWidthM']:.0f}"] for x in v['routes']])
 report+='''
 
-Width is a sampled contiguous dry cross-section through the proposed centreline with at most 35% transverse slope, not the sum of disconnected dry patches. The separate widest contiguous span is also recorded in JSON. It is not a final construction width or a guarantee of an entire 3D route. Local browser walking/contact was checked only at Central Valley; no claim of end-to-end traversal is made.
+Width is a sampled contiguous dry cross-section through the proposed centreline with at most 35% transverse slope, not the sum of disconnected dry patches. The separate widest contiguous span is also recorded in JSON. It is not a final construction width or a guarantee of an entire 3D route. The inspection controller blocks terrain steps above 70% grade; that permissive limit is not the 25–30% hiking target. Local browser walking/contact was checked only at Central Valley; no claim of end-to-end traversal is made.
 
 '''
 report+=table(['Crossing','Deck level m','Water m','Length m','Bank steps m'],[[x['id'],f"{x['levelM']:.2f}",f"{x['waterLevelM']:.2f}",f"{x['lengthM']:.1f}",'/'.join(f'{z:.2f}' for z in x['bankStepsM'])] for x in v['crossings']])
@@ -102,7 +102,7 @@ Proposed localized corrections, without flattening mountains:
 
 The outline, western bays/capes, four island groups, southeastern Home Cove, northern massif/tarn, western woodland lakes, eastern enclosed basin, broad central lowland, southwestern shoulder and eastern sandy coastal setting retain their approved geographic relationships. The orthographic survey is the strongest result; it does not establish scenic quality.
 
-Compared with the original illustration, the prototype lacks the intended interlocking rock buttresses, asymmetric subsidiary gullies, varied glacial valley sides and readable landscape reveals. Some northern forms still look like extruded crest profiles or pyramidal faces. The Central Valley is broad but parts of its flanks read as uniform walls. High Tarn has a supported elevated basin but overly engineered gullies/shore transitions. Hidden Fold's enclosure is legible; the transitions need sculpting. South Shoulder is connected as a lower branch system but too smooth. The sandy east coast and Home Cove remain too flat to convey their intended coastal composition. Mirelands has low relief and a connected authored channel, while its surrounding drainage is not fully correct.
+Compared with the original illustration, the prototype lacks the intended interlocking rock buttresses, asymmetric subsidiary gullies, varied glacial valley sides and readable landscape reveals. Some northern forms still look like extruded crest profiles or pyramidal faces. The Central Valley is broad but parts of its flanks read as uniform walls. High Tarn has a supported elevated basin but overly engineered gullies/shore transitions. Its inlet visibly follows a raised spine in places rather than a convincing valley; centreline bed clearance does not resolve that landform failure. Hidden Fold's enclosure is legible; the transitions need sculpting. South Shoulder is connected as a lower branch system but too smooth. The sandy east coast and Home Cove remain too flat to convey their intended coastal composition. Mirelands has low relief and a connected authored channel, while its surrounding drainage is not fully correct.
 
 These are terrain-form issues visible with neutral material. Adding plants or rock assets would not resolve them. No production vegetation, weather, style lighting or population pass was started. Art fidelity is **not accepted**.
 
@@ -116,7 +116,7 @@ report+='''## Verification, reproducibility and stop
 - Source preflight passes the documented 0.5 m tessellation tolerance. All generated heights are finite.
 - Browser camera checks: real WASD fly movement, drag look, survey/ground switching, all three overlays and local ground contact. Eight actual captures are tied to the source/terrain hashes in [runtime.json](evidence/runtime.json).
 - Renderer is **SwiftShader software WebGL** in headless Chromium. Triangle/draw counts and the short settled-frame samples are diagnostic only, not desktop GPU or physical Android performance validation. Neither 60 FPS desktop nor 30 FPS Android is certified.
-- Terrain SHA-256: `'''+g['terrainSha256']+'''`. A second deterministic generation must reproduce this binary hash on the pinned environment. Generation time is informational and is excluded from terrain identity.
+- Terrain SHA-256: `'''+g['terrainSha256']+'''`. An independent repeat generation reproduced the identical terrain and exported features against the implementation commit; see [verification-results.json](verification-results.json). Generation time is informational and is excluded from terrain identity.
 
 Reproduce from this branch using Node 24 or newer and Python 3.11+:
 
