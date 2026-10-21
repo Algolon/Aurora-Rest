@@ -41,7 +41,7 @@ export class BirchBatch {
  private readonly instances:InternalInstance[]=[];
  private readonly baselineMaterial:THREE.MeshLambertMaterial;
  private nextId=0;private dirty=true;private disposed=false;
- private lastView=new THREE.Matrix4(),lastProjection=new THREE.Matrix4();
+ private lastView=new THREE.Matrix4();private lastProjection=new THREE.Matrix4();
  private lastSun=new THREE.Vector3(Number.POSITIVE_INFINITY,0,0);
  private lastShadow=false;private lastCulling=false;private lastDistance=-1;private lastForced:BirchLod|null=null;
  private visibilityDistance:number;private culling:boolean;private shadows:boolean;private forcedLod:BirchLod|null;
