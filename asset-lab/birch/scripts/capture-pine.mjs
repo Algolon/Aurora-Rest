@@ -53,7 +53,7 @@ try{
   pineA.dispose();pineB.dispose();birch.dispose();
   if(!lab.family.material.map||!lab.family.material.userData.vegetationDepth)throw Error('Premature resource release');
   if(!lab.family.material.color.equals(originalPine))throw Error('Pine shared colour changed');
-  if(!originalBirchColor.equals(new (await import('three')).Color('#97a94c')))throw Error('Birch tint changed');
+  if(originalBirchColor.getHexString()!=='97a94c')throw Error('Birch tint changed');
   const gl=lab.renderer.getContext();
   return {gl:String(gl.getParameter(gl.VERSION)),renderer:String(gl.getParameter(gl.RENDERER)),
    pineColor:originalPine.getHexString(),birchColor:originalBirchColor.getHexString(),
