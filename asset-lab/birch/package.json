@@ -23,7 +23,8 @@
     "capture:ground-cover:visual": "node scripts/capture-ground-cover-visual.mjs",
     "test:rock-parity": "node --experimental-strip-types scripts/compare-rock-source.mjs",
     "capture:rocks": "node scripts/capture-rocks.mjs",
-    "capture:rocks:source-material": "node scripts/capture-rock-material-parity.mjs"
+    "capture:rocks:source-material": "node scripts/capture-rock-material-parity.mjs",
+    "capture:rock-e2": "node scripts/capture-rock-e2.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
