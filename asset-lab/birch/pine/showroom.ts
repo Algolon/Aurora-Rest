@@ -60,7 +60,7 @@ let frame=0;
 function tick(){
  requestAnimationFrame(tick);
  const idx=variant==='all'?-1:Number(variant);
- target.set(idx<0?0:roots[idx].root.position.x,variant==='all'?5:0,0);
+ target.set(idx<0?0:roots[idx].root.position.x,variant==='all'?6:6.5,0);
  if(viewMode==='needles')target.y=9;
  if(viewMode==='close')target.y=1.6;
  camera.position.set(target.x+Math.sin(yaw)*distance, target.y+Math.sin(pitch)*distance,Math.cos(yaw)*distance);
