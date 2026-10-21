@@ -9,14 +9,14 @@ test('production grass has exactly four deterministic distinct original geometri
  const heights=[];
  for(const variant of [0,1,2,3] as const){
   const a=makeGrassGeometry(variant),b=makeGrassGeometry(variant);
-  const hash=g=>{const h=createHash('sha256');for(const key of ['position','normal','color','uv']){
+  const hash=(g:THREE.BufferGeometry)=>{const h=createHash('sha256');for(const key of ['position','normal','color','uv']){
    const v=g.getAttribute(key);assert.ok(v,variant+'/'+key);
    h.update(Buffer.from(v.array.buffer,v.array.byteOffset,v.array.byteLength));
    for(const x of v.array)assert.ok(Number.isFinite(x));
   }return h.digest('hex')};
   assert.equal(hash(a),hash(b),'seeded deterministic '+variant);
   assert.equal(a.index,null,'original strips are deliberately non-indexed');
-  assert.ok(a.boundingSphere?.radius>0);
+  assert.ok(a.boundingSphere && a.boundingSphere.radius>0);
   a.computeBoundingBox();heights.push(a.boundingBox!.max.y);
   assert.ok(a.boundingBox!.min.y>=-0.1&&a.boundingBox!.max.y<1);
   hashes.add(hash(a));a.dispose();b.dispose();

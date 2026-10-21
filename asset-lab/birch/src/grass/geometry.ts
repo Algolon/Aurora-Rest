@@ -153,7 +153,7 @@ export function referenceGrassModel(variant:GrassVariant,detail=true,garden=true
   const [green,light,dark] = palette.map(C);
 
   const blade = (p: THREE.Vector3, d: THREE.Vector3, L: number, W: number, rise: number, a = green, b = light) => {
-    if(garden){rounded.push(gardenLeaf(p,d,L,W,rise,a,b,0,kind==='fern'?3:6,2,INTERIOR_GREEN?(kind==='grass'?1:0):undefined));return;}
+    if(garden){rounded.push(gardenLeaf(p,d,L,W,rise,a,b,0,6,2,INTERIOR_GREEN?(kind==='grass'?1:0):undefined));return;}
     const s=V(-d.z,0,d.x), mid=p.clone().addScaledVector(d,L*.48).add(V(0,rise,0)), tip=p.clone().addScaledVector(d,L).add(V(0,rise*.48,0));
     if (detail) {
       // Six-point outline rounds the shoulders around a raised midrib.
