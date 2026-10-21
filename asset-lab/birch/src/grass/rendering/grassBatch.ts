@@ -128,7 +128,8 @@ export class GrassBatch {
  private readonly capacity:number;
  private nextId=0;private disposed=false;
  private hasPreviousCamera=false;private needsUpdate=true;
- private readonly previousView=new THREE.Matrix4(),previousProjection=new THREE.Matrix4();
+ private readonly previousView=new THREE.Matrix4();
+ private readonly previousProjection=new THREE.Matrix4();
  private config:GrassFadeConfig;private culling:boolean;private distanceCulling:boolean;private shadows:boolean;
  private stats:GrassBatchStats;
  constructor(opts:GrassBatchOptions){
