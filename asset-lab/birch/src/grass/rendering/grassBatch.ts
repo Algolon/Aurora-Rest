@@ -187,7 +187,9 @@ export class GrassBatch {
   camera.updateMatrixWorld();
   if(this.hasPreviousCamera&&!this.needsUpdate
     &&this.previousView.equals(camera.matrixWorldInverse)
-    &&this.previousProjection.equals(camera.projectionMatrix))return {...this.stats,lastUpdateMs:0};
+    &&this.previousProjection.equals(camera.projectionMatrix)){
+    this.stats={...this.stats,lastUpdateMs:0};return {...this.stats};
+  }
   this.previousView.copy(camera.matrixWorldInverse);this.previousProjection.copy(camera.projectionMatrix);
   this.hasPreviousCamera=true;this.needsUpdate=false;
   P.setFromMatrixPosition(camera.matrixWorld);
