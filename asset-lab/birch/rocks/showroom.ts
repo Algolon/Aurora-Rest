@@ -4,9 +4,12 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {createRockFamily,PRODUCTION_ROCK_SEEDS,type RockSeed} from '../src/rocks/index.ts';
+import {createBirchFamily} from '../src/index.ts';
+import {createPineFamily} from '../src/pine/index.ts';
+import {createGrassFamily} from '../src/grass/index.ts';
 import {rockR04Geometry,rockR04Material} from '../src/rocks/experimental/r04HeroBoulder.ts';
 type View='threequarter'|'front'|'rear'|'left'|'right'|'top'|'human';
-type Choice='comparison'|'production-all'|'source-11'|'source-23'|'source-37'|'source-53'|'experimental-rock-r04';
+type Choice='comparison'|'production-all'|'source-11'|'source-23'|'source-37'|'source-53'|'experimental-rock-r04'|'nature-context';
 type Light='neutral'|'nordic';
 type Config={choice:Choice;view:View;light:Light;wireframe:boolean;shadows:boolean;orbit:number;zoom:number};
 const style=document.createElement('style');
@@ -21,7 +24,7 @@ const panel=document.createElement('aside');
 panel.innerHTML=`<strong>AURORA REST · ASSET-01E1</strong><small>Source-production rocks vs R04 · UNAPPROVED</small>
 <label>Family <select id="choice">
 <option value="comparison">Source ↔ R04 comparison</option>
-<option value="production-all">Production · four source seeds</option>
+<option value="production-all">Production · four source seeds</option><option value="nature-context">R04 with approved birch, pine and grass</option>
 <option value="source-11">Source seed 11</option><option value="source-23">Source seed 23</option>
 <option value="source-37">Source seed 37</option><option value="source-53">Source seed 53</option>
 <option value="experimental-rock-r04">R04 · experimental only</option>
@@ -65,7 +68,15 @@ hero.castShadow=hero.receiveShadow=true;scene.add(hero);
 const heightMarker=new THREE.Group();const pole=new THREE.Mesh(new THREE.CylinderGeometry(.035,.035,1.8),new THREE.MeshBasicMaterial({color:'#1f333e'}));
 pole.position.y=.9-.49;heightMarker.add(pole);
 const head=new THREE.Mesh(new THREE.SphereGeometry(.12,10,8),new THREE.MeshBasicMaterial({color:'#1f333e'}));
-head.position.y=1.9-.49;heightMarker.add(head);heightMarker.position.x=2.45;scene.add(heightMarker);
+head.position.y=1.9-.49;heightMarker.add(head);heightMarker.position.x=6.6;scene.add(heightMarker);
+// Existing approved Aurora assets, used ONLY for art-direction and scale calibration.
+const birchFamily=createBirchFamily(),pineFamily=createPineFamily(),grassFamily=createGrassFamily();
+const birch=birchFamily.createMesh(0,'near');birch.position.set(-4.2,-.49,-.75);birch.scale.setScalar(.84);scene.add(birch);
+const pine=pineFamily.createMesh(0,'near');pine.position.set(5.0,-.49,-.6);pine.scale.setScalar(.84);scene.add(pine);
+const grasses=[[-2.5,-.25],[1.6,.5],[2.7,-1.2],[-.3,1.4]].map(([x,z],i)=>{
+ const m=grassFamily.createMesh((i%4) as 0|1|2|3);m.position.set(x,-.49,z);m.scale.setScalar(i%2?.8:1.1);scene.add(m);return m;
+});
+const contextObjects:THREE.Object3D[]=[birch,pine,...grasses];contextObjects.forEach(m=>m.visible=false);
 const controls=new OrbitControls(camera,renderer.domElement);
 controls.enableDamping=true;controls.minDistance=1.4;controls.maxDistance=32;
 let cfg:Config={choice:'comparison',view:'threequarter',light:'nordic',wireframe:false,shadows:true,orbit:27,zoom:100};
@@ -74,11 +85,12 @@ const byId=(id:string)=>document.getElementById(id) as HTMLInputElement|HTMLSele
 function selectedSource():number {return cfg.choice.startsWith('source-')?Number(cfg.choice.slice(7)):-1}
 function updateCamera(){
  const sel=selectedSource();
+ const context=cfg.choice==='nature-context';
  const isHero=cfg.choice==='experimental-rock-r04';
- const x=isHero?4.15:sel>0?-4.8+PRODUCTION_ROCK_SEEDS.indexOf(sel as RockSeed)*1.8:
+ const x=context?0:isHero?4.15:sel>0?-4.8+PRODUCTION_ROCK_SEEDS.indexOf(sel as RockSeed)*1.8:
  cfg.choice==='production-all'?-2.1:0;
- const focusY=isHero?0.8:.4;
- const distant=(cfg.choice==='comparison'?13:cfg.choice==='production-all'?8:isHero?6:3.8)*(100/cfg.zoom);
+ const focusY=context?2.15:isHero?0.8:.4;
+ const distant=(context?19:cfg.choice==='comparison'?13:cfg.choice==='production-all'?8:isHero?6:3.8)*(100/cfg.zoom);
  const angle=cfg.orbit*Math.PI/180;
  const preset:Record<View,[number,number,number]>={
   threequarter:[Math.sin(angle)*distant,distant*.45,Math.cos(angle)*distant],
@@ -95,8 +107,12 @@ function apply(){
  shadows:(byId('shadows') as HTMLInputElement).checked,orbit:Number(byId('orbit').value),zoom:Number(byId('zoom').value)};
  const source=selectedSource();
  originalMeshes.forEach((m,i)=>{m.visible=cfg.choice==='comparison'||cfg.choice==='production-all'||PRODUCTION_ROCK_SEEDS[i]===source;});
- hero.visible=cfg.choice==='comparison'||cfg.choice==='experimental-rock-r04';
+ const context=cfg.choice==='nature-context';
+ hero.visible=cfg.choice==='comparison'||cfg.choice==='experimental-rock-r04'||context;
+ hero.position.x=context?0:4.15;
+ heightMarker.position.x=context?2.55:6.6;
  heightMarker.visible=hero.visible;
+ contextObjects.forEach(m=>m.visible=context);
  for(const m of [family.material,heroMaterial])m.wireframe=cfg.wireframe;
  renderer.shadowMap.enabled=cfg.shadows;sun.castShadow=cfg.shadows;
  sun.intensity=cfg.light==='neutral'?2.0:2.5;ambient.intensity=cfg.light==='neutral'?2.2:2.0;
@@ -134,4 +150,4 @@ Object.assign(window,{__rockLab:{renderer,scene,camera,family,hero,frame:()=>fra
   apply();draw();return metrics();},
  inspect:metrics,capture(){draw();return renderer.domElement.toDataURL('image/png')}}});
 addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()});
-addEventListener('pagehide',()=>{family.dispose();heroGeometry.dispose();heroMaterial.dispose();floor.geometry.dispose();floorMat.dispose();renderer.dispose()});
+addEventListener('pagehide',()=>{family.dispose();birchFamily.dispose();pineFamily.dispose();grassFamily.dispose();heroGeometry.dispose();heroMaterial.dispose();floor.geometry.dispose();floorMat.dispose();renderer.dispose()});
