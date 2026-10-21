@@ -1,0 +1,91 @@
+name: ASSET-01D2 scalable ground-cover validation
+on:
+  push:
+    branches:
+      - feature/asset-01d2-scalable-ground-cover
+  workflow_dispatch:
+jobs:
+  source-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Tests and TypeScript/Vite build, including ASSET-01B/C/D1
+        run: |
+          npm test
+          npm run build
+      - name: Fetch pinned reference source read-only
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Independent original birch, pine and grass geometry parity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:grass-parity
+  ground-cover-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Real Chromium WebGL four meadow compositions and deterministic benchmarks
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" npm run capture:ground-cover
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01d2-ground-cover-webgl
+          path: asset-lab/birch/ground-cover-evidence/
+          if-no-files-found: warn
+  independent-material-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Read-only original material reference
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Existing Feh Lu We-vs-Aurora browser material parity
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          FLW_ROOT="$RUNNER_TEMP/flw-source" CHROME_PATH="$CHROME_PATH" npm run capture:grass-source
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01d2-original-source-material-parity
+          path: asset-lab/birch/grass-material-parity/
+          if-no-files-found: warn
