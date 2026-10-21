@@ -34,13 +34,13 @@ try{
   assert.deepEqual(checksum(dest.index),checksum(src.index),variant+'/index');
   src.computeBoundingBox();src.computeBoundingSphere();
   dest.computeBoundingBox();dest.computeBoundingSphere();
-  const fmt=g=>({box:g.boundingBox.toArray(),sphere:[...g.boundingSphere.center.toArray(),g.boundingSphere.radius]});
+  const fmt=g=>({box:[...g.boundingBox.min.toArray(),...g.boundingBox.max.toArray()],sphere:[...g.boundingSphere.center.toArray(),g.boundingSphere.radius]});
   assert.deepEqual(fmt(dest),fmt(src),variant+'/bounds');
   const pos=src.getAttribute('position'),uv=src.getAttribute('uv');
   assert.ok(uv && pos.count>0,'Source production geometry must contain UV');
   data.push({variant,vertices:pos.count,triangles:src.index?src.index.count/3:pos.count/3,indexed:!!src.index,
    bytes:Object.values(src.attributes).reduce((x,a)=>x+a.array.byteLength,0)+(src.index?.array.byteLength??0),
-   boundingBox:src.boundingBox.toArray(),maxHeight:src.boundingBox.max.y,
+   boundingBox:[...src.boundingBox.min.toArray(),...src.boundingBox.max.toArray()],maxHeight:src.boundingBox.max.y,
    uvHash:checksum(uv).hash,positionHash:checksum(pos).hash});
   src.dispose();dest.dispose();
  }
