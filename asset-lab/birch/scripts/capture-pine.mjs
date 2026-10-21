@@ -2,7 +2,8 @@
 // Reuses the validated existing showroom interactions; saves originals, no concept art.
 import {chromium} from 'playwright-core';
 import {createServer} from 'vite';
-import {mkdir,writeFile} from 'node:fs/promises';
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
+import {PNG} from 'pngjs';
 import {resolve} from 'node:path';
 const root=process.cwd(),out=resolve(root,'pine-evidence');
 await mkdir(out,{recursive:true});
@@ -81,6 +82,42 @@ try{
   const lab=window.__auroraPineLab;
   lab.roots[0].meshes[0].customDepthMaterial=lab.family.material.userData.vegetationDepth;
  });
+ // Independent negative control: the alpha-aware foliage atlas must actually
+ // remove depth fragments in the physical Chromium shadow render.
+ const alpha=PNG.sync.read(await readFile(resolve(out,'pine-shadow-alpha-aware.png')));
+ const opaque=PNG.sync.read(await readFile(resolve(out,'pine-shadow-default-opaque-negative-control.png')));
+ let shadowPixelsChanged=0;
+ for(let i=0;i<alpha.data.length;i+=4){
+  const delta=Math.max(Math.abs(alpha.data[i]-opaque.data[i]),
+   Math.abs(alpha.data[i+1]-opaque.data[i+1]),Math.abs(alpha.data[i+2]-opaque.data[i+2]));
+  if(delta>10)shadowPixelsChanged++;
+ }
+ if(shadowPixelsChanged<1000)throw Error('Pine shadow cutout not proven by negative control: '+shadowPixelsChanged);
+ // Last-owner release and recreation are checked AFTER all screenshot captures.
+ const lastOwner=await page.evaluate(async()=>{
+  const lab=window.__auroraPineLab;
+  const {createPineFamily}=await import('/src/pine/index.ts');
+  const old=lab.family,oldMaterial=old.material,oldAtlas=oldMaterial.map;
+  const depth=oldMaterial.userData.vegetationDepth;
+  let atlasDispose=0,depthDispose=0,pineDispose=0;
+  oldAtlas.addEventListener('dispose',()=>atlasDispose++);
+  depth.addEventListener('dispose',()=>depthDispose++);
+  oldMaterial.addEventListener('dispose',()=>pineDispose++);
+  lab.roots.forEach(({root})=>{root.visible=false});
+  old.dispose();
+  if(atlasDispose!==1||depthDispose!==1||pineDispose!==1)
+   throw Error('Pine last-owner disposal count wrong: '+[atlasDispose,depthDispose,pineDispose]);
+  const fresh=createPineFamily();
+  if(fresh.material===oldMaterial||fresh.material.map===oldAtlas||
+    fresh.material.userData.vegetationDepth===depth)throw Error('Reused disposed pine resources');
+  const tree=fresh.createMesh(2,'near');
+  lab.scene.add(tree);lab.renderer.render(lab.scene,lab.camera);
+  lab.scene.remove(tree);fresh.dispose();
+  return {atlasDisposedOnce:true,depthDisposedOnce:true,pineMaterialDisposedOnce:true,
+   recreatedNewMaterial:true,recreatedNewAtlas:true,recreatedNewDepth:true,recreatedBrowserRender:true};
+ });
+ result.alphaShadowChangedPixelsRGB10=shadowPixelsChanged;
+ result.lastOwnerRecreation=lastOwner;
  if(errors.length)throw Error(errors.join('\n'));
  await writeFile(resolve(out,'pine-render-metrics.json'),JSON.stringify({...result,errors},null,2));
  console.log('PINE REAL CHROMIUM WEBGL RENDERS PASS '+JSON.stringify(result));
