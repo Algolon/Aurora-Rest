@@ -31,7 +31,14 @@ try {
   // preserveDrawingBuffer:true — capture the actual WebGL framebuffer directly;
   // Playwright's element screenshot waits for DOM stability and can time out
   // while heavy SwiftShader frame rendering is in flight.
-  const uri=await page.evaluate(()=>window.__birchB2.renderer.domElement.toDataURL('image/png'));
+  const uri=await page.evaluate(()=>{
+   const lab=window.__birchB2;
+   lab.forest.update(lab.camera);
+   // Capture must render AFTER programmatic camera changes; otherwise the
+   // preserved canvas framebuffer belongs to the previous camera preset.
+   lab.renderer.render(lab.scene,lab.camera);
+   return lab.renderer.domElement.toDataURL('image/png');
+  });
   if(!uri.startsWith('data:image/png;base64,'))throw Error('Invalid WebGL capture');
   await writeFile(resolve(out,name+'.png'),Buffer.from(uri.split(',')[1],'base64'));
  };
