@@ -40,7 +40,7 @@ function rebuild(){
  const r=mulberry32(952742);
  for(let i=0;i<population;i++){
   const a=r()*Math.PI*2,rad=i===0?0:3+Math.sqrt(r())*58;
-  forest.add({variant:(i%3) as 0|1|2,position:[rad*Math.cos(a),0,rad*Math.sin(a)],rotationY:r()*Math.PI*2,scale:i===0?1:.75+r()*.45});
+  forest.add({variant:(i%3) as 0|1|2,position:[rad*Math.cos(a),0,rad*Math.sin(a)],rotationY:i===0?0:r()*Math.PI*2,scale:i===0?1:.75+r()*.45});
  }
  forest.setForcedLod(forcedLod);reference.visible=view==='reference'&&population===1;
  if(reference.visible)forest.setVisible(0,false);

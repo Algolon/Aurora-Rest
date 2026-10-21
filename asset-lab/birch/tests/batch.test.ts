@@ -27,6 +27,6 @@ test('camera rotation changes frustum, shadow-swept casters remain eligible',()=
  const back=cameraFrustum(cam);
  assert.equal(classifyVisibility(back,new THREE.Vector3(0,4,20),3,20,100,null),'camera');
  const f=cameraFrustum(cam);
- assert.equal(classifyVisibility(f,new THREE.Vector3(0,4,-20),3,20,100,new THREE.Vector3(0,0,1)),'excluded');
+ assert.equal(classifyVisibility(f,new THREE.Vector3(0,4,-20),3,20,100,new THREE.Vector3(0,0,1)),'shadow');
  assert.equal(classifyVisibility(f,new THREE.Vector3(0,4,20),3,200,100,null),'excluded');
 });
