@@ -55,6 +55,6 @@ export function sculptRock(spec:RockSpec,changes:Partial<RockControls>={}):Study
   triangle(top,highest[next],highest[sector],-2);
  }
  return {id:spec.id,controls,positions,normals,uv,triangleCount:positions.length/9,
-  faceCount:spec.rings.length*12+2,bounds:{min,max},
+  faceCount:(spec.rings.length-1)*12+2,bounds:{min,max},
   facePlaneIds:faceIds,faceAreas:areas,componentCount:1,studyOnly:true};
 }
