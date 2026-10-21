@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "capture": "node scripts/capture.mjs",
     "test:parity": "node --experimental-strip-types scripts/compare-source.mjs",
-    "capture:shadow": "node scripts/capture-shadow.mjs"
+    "capture:shadow": "node scripts/capture-shadow.mjs",
+    "capture:batch": "node scripts/capture-batch.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
