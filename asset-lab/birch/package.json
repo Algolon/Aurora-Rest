@@ -19,7 +19,8 @@
     "test:grass-parity": "node scripts/compare-grass-source.mjs",
     "capture:grass": "node scripts/capture-grass.mjs",
     "capture:grass-source": "node scripts/compare-grass-material.mjs",
-    "capture:ground-cover": "node scripts/capture-ground-cover.mjs"
+    "capture:ground-cover": "node scripts/capture-ground-cover.mjs",
+    "capture:ground-cover:visual": "node scripts/capture-ground-cover-visual.mjs"
   },
   "dependencies": {
     "three": "0.186.1"
