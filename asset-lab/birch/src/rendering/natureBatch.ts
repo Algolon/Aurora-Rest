@@ -52,7 +52,9 @@ export class NatureSpeciesBatch {
  private lastShadow=false;private lastCulling=false;private lastDistance=-1;private lastForced:BirchLod|null=null;
  private visibilityDistance:number;private culling:boolean;private shadows:boolean;private forcedLod:BirchLod|null;
  private lastStats:BirchBatchStats;
- constructor(private readonly opts:SpeciesBatchOptions){
+ private readonly opts:SpeciesBatchOptions;
+ constructor(opts:SpeciesBatchOptions){
+  this.opts=opts;
   const {scene,renderer,family}=opts;
   if(!opts.species||!opts.referenceTint)throw Error('Species and reference tint required');
   this.mode=resolveBatchMode(opts.mode??'auto',getBatchCapabilities(renderer));

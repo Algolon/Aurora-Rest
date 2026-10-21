@@ -13,8 +13,13 @@ export class InstancedNatureRenderer implements BatchBackend {
  private groups:Group[]=[];
  private updates=0;
  private reallocations=0;
- constructor(private scene:THREE.Scene,geos:readonly THREE.BufferGeometry[],private material:THREE.MeshLambertMaterial,
-  private depth:THREE.MeshDepthMaterial,private shadows:boolean){
+ private scene:THREE.Scene;
+ private material:THREE.MeshLambertMaterial;
+ private depth:THREE.MeshDepthMaterial;
+ private shadows:boolean;
+ constructor(scene:THREE.Scene,geos:readonly THREE.BufferGeometry[],material:THREE.MeshLambertMaterial,
+  depth:THREE.MeshDepthMaterial,shadows:boolean){
+  this.scene=scene;this.material=material;this.depth=depth;this.shadows=shadows;
   this.groups=geos.map(g=>{const group:Group={mesh:null as unknown as THREE.InstancedMesh,ids:[],cap:8,geometry:g};group.mesh=this.makeMesh(group,8);return group});
  }
  private makeMesh(g:Group,cap:number){

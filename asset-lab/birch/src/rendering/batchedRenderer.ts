@@ -20,6 +20,8 @@ export class BatchedNatureRenderer implements BatchBackend {
   scene.add(this.mesh);this.objects=[this.mesh];
  }
  sync(records:readonly RenderRecord[]){
+  // Absent species must never count as an active draw submission.
+  this.mesh.visible=records.some(r=>r.active);
   for(const r of records){
    let h=this.handles.get(r.id);
    if(h===undefined){h=this.mesh.addInstance(this.geometries[r.geo]);this.handles.set(r.id,h);this.mesh.setMatrixAt(h,r.matrix);this.mesh.setColorAt(h,r.color);this.mesh.setVisibleAt(h,r.active);this.last.set(r.id,{geo:r.geo,active:r.active});this.updates+=3;continue;}
