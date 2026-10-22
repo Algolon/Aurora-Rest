@@ -38,6 +38,11 @@ try{
  for(const study of ['T1','T2','T3'])
   for(const light of ['neutral','nordic','grazing'])
    await capture(study.toLowerCase()+'-planar-vs-triplanar-'+light,{mode:'mapping',study,view:'threequarter',light,zoom:102,wireframe:false});
+ // Matched evidence: exact same centered G1, camera and light for every study/projection.
+ for(const study of ['T1','T2','T3'])for(const projection of ['planar','triplanar'])
+  for(const light of ['neutral','nordic','grazing'])
+   await capture(study.toLowerCase()+'-'+projection+'-matched-'+light,
+    {mode:'single',study,projection,view:'threequarter',light,zoom:115,wireframe:false});
  for(const study of ['T1','T2','T3']){
   for(const view of ['front','rear','left','right','human'])
    await capture(study.toLowerCase()+'-'+view+'-nordic',{mode:'single',study,projection:'triplanar',view,light:'nordic',zoom:115,wireframe:false});
