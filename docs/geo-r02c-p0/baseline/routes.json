@@ -1,0 +1,313 @@
+{
+ "reproductionOfR1Csv": {
+  "maxAbsDifference": {
+   "height_m": 0.0,
+   "grade": 0.0,
+   "transverse_grade": 8.36136715420821e-15
+  },
+  "pass": true
+ },
+ "classesAndTreadsAreProposals": true,
+ "routes": [
+  {
+   "id": "hero",
+   "proposedClass": "lowland-valley",
+   "samples": 5019,
+   "lengthM": 4926.305145128835,
+   "maxGrade": 0.24440574645996094,
+   "p95Grade": 0.23612607258685275,
+   "targetGrade": 0.25,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.8304741738313419,
+    "widthAndTransverse35PercentPassFraction": 0.872086072922893,
+    "dryBandFraction": 1.0
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.0675008673654105,
+     "p90": 0.37513973775385046,
+     "p99": 0.639169425119505,
+     "max": 0.8746542198792326,
+     "fractionOver35pct": 0.12811316995417413,
+     "dryBandFraction": 1.0
+    },
+    "+-1.0m": {
+     "p50": 0.06754757399665046,
+     "p90": 0.37525179673733217,
+     "p99": 0.6366275917496474,
+     "max": 0.8743351257936283,
+     "fractionOver35pct": 0.127913927077107,
+     "dryBandFraction": 1.0
+    },
+    "+-1.5m": {
+     "p50": 0.06729975640763779,
+     "p90": 0.3749803917254639,
+     "p99": 0.6325667436677531,
+     "max": 0.8466822401557911,
+     "fractionOver35pct": 0.127913927077107,
+     "dryBandFraction": 1.0
+    }
+   },
+   "proposedTreadM": 3.0,
+   "balancedBenchCutM": {
+    "p50": 0.10094963461145667,
+    "p95": 0.6695530982751489,
+    "max": 1.2700233602336866,
+    "fractionOver0_8m": 0.028491731420601712
+   }
+  },
+  {
+   "id": "tarn-ascent",
+   "proposedClass": "alpine",
+   "samples": 1251,
+   "lengthM": 1228.512098135854,
+   "maxGrade": 0.29303639485580013,
+   "p95Grade": 0.29128745932388617,
+   "targetGrade": 0.3,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.41480067101122636,
+    "widthAndTransverse35PercentPassFraction": 0.7577937649880095,
+    "dryBandFraction": 1.0
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.27830900990450874,
+     "p90": 0.3946194257943982,
+     "p99": 0.41369908094571883,
+     "max": 0.4157184127849973,
+     "fractionOver35pct": 0.2422062350119904,
+     "dryBandFraction": 1.0
+    },
+    "+-1.0m": {
+     "p50": 0.27816111332850824,
+     "p90": 0.39461942579436027,
+     "p99": 0.41374732160343086,
+     "max": 0.4153263694806384,
+     "fractionOver35pct": 0.2422062350119904,
+     "dryBandFraction": 1.0
+    },
+    "+-1.5m": {
+     "p50": 0.2780132167526972,
+     "p90": 0.3945918042190897,
+     "p99": 0.4136966925026447,
+     "max": 0.4149343261762321,
+     "fractionOver35pct": 0.2422062350119904,
+     "dryBandFraction": 1.0
+    }
+   },
+   "proposedTreadM": 1.5,
+   "balancedBenchCutM": {
+    "p50": 0.20873175742838157,
+    "p95": 0.3046421907364376,
+    "max": 0.311788809588748,
+    "fractionOver0_8m": 0.0
+   }
+  },
+  {
+   "id": "peak-ascent",
+   "proposedClass": "alpine",
+   "samples": 2999,
+   "lengthM": 2925.4036841213733,
+   "maxGrade": 0.2939297497422694,
+   "p95Grade": 0.29111663966681217,
+   "targetGrade": 0.3,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.8105888905649796,
+    "widthAndTransverse35PercentPassFraction": 0.48882960986995666,
+    "dryBandFraction": 1.0
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.39145723157093926,
+     "p90": 0.6481949043777301,
+     "p99": 0.7562294450605804,
+     "max": 0.8261424733288246,
+     "fractionOver35pct": 0.5111703901300434,
+     "dryBandFraction": 1.0
+    },
+    "+-1.0m": {
+     "p50": 0.39145723157093926,
+     "p90": 0.6478445435514915,
+     "p99": 0.755829406801879,
+     "max": 0.8223772628205097,
+     "fractionOver35pct": 0.5111703901300434,
+     "dryBandFraction": 1.0
+    },
+    "+-1.5m": {
+     "p50": 0.39145723157082557,
+     "p90": 0.6468972289964013,
+     "p99": 0.7551138401180985,
+     "max": 0.8122261098032292,
+     "fractionOver35pct": 0.5111703901300434,
+     "dryBandFraction": 1.0
+    }
+   },
+   "proposedTreadM": 1.5,
+   "balancedBenchCutM": {
+    "p50": 0.29359292367820444,
+    "p95": 0.5254536641408832,
+    "max": 0.6196068549966185,
+    "fractionOver0_8m": 0.0
+   }
+  },
+  {
+   "id": "hidden-loop",
+   "proposedClass": "upland-traverse",
+   "samples": 4019,
+   "lengthM": 3961.227937764324,
+   "maxGrade": 0.27470767218083314,
+   "p95Grade": 0.25953490916927224,
+   "targetGrade": 0.28,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.5561752319335386,
+    "widthAndTransverse35PercentPassFraction": 0.7459567056481712,
+    "dryBandFraction": 1.0
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.23313522338867188,
+     "p90": 0.44426340056054414,
+     "p99": 0.5487969970703125,
+     "max": 0.5561752319335938,
+     "fractionOver35pct": 0.2545409305797462,
+     "dryBandFraction": 1.0
+    },
+    "+-1.0m": {
+     "p50": 0.23313522338867188,
+     "p90": 0.4442506339208535,
+     "p99": 0.5487969970703125,
+     "max": 0.5561752319335938,
+     "fractionOver35pct": 0.25429211246578753,
+     "dryBandFraction": 1.0
+    },
+    "+-1.5m": {
+     "p50": 0.23313140869140625,
+     "p90": 0.44422302709620753,
+     "p99": 0.5491555786132813,
+     "max": 0.5561752319335938,
+     "fractionOver35pct": 0.2537944762378701,
+     "dryBandFraction": 1.0
+    }
+   },
+   "proposedTreadM": 2.0,
+   "balancedBenchCutM": {
+    "p50": 0.23313522338867188,
+    "p95": 0.4904743386728767,
+    "max": 0.5561752319335938,
+    "fractionOver0_8m": 0.0
+   }
+  },
+  {
+   "id": "west-cape-spur",
+   "proposedClass": "lowland-valley",
+   "samples": 1754,
+   "lengthM": 1728.6685666547846,
+   "maxGrade": 0.27863544681879104,
+   "p95Grade": 0.2050474257704593,
+   "targetGrade": 0.3,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.2693871537160257,
+    "widthAndTransverse35PercentPassFraction": 0.9937286202964652,
+    "dryBandFraction": 0.9937286202964652
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.05414787054493313,
+     "p90": 0.19403126968481293,
+     "p99": 0.2609311481927911,
+     "max": 0.2694584330333498,
+     "fractionOver35pct": 0.0,
+     "dryBandFraction": 0.999429874572406
+    },
+    "+-1.0m": {
+     "p50": 0.05414955154460799,
+     "p90": 0.19397744494446983,
+     "p99": 0.26059267663696006,
+     "max": 0.2693166585153861,
+     "fractionOver35pct": 0.0,
+     "dryBandFraction": 0.9977194982896237
+    },
+    "+-1.5m": {
+     "p50": 0.05434244186051866,
+     "p90": 0.193632467215744,
+     "p99": 0.2599425298310242,
+     "max": 0.26931665851534586,
+     "fractionOver35pct": 0.0,
+     "dryBandFraction": 0.9942987457240593
+    }
+   },
+   "proposedTreadM": 3.0,
+   "balancedBenchCutM": {
+    "p50": 0.08151366279077799,
+    "p95": 0.35808254785216886,
+    "max": 0.40397498777301877,
+    "fractionOver0_8m": 0.0
+   }
+  },
+  {
+   "id": "south-shoulder-loop",
+   "proposedClass": "upland-traverse",
+   "samples": 3464,
+   "lengthM": 3387.254152557534,
+   "maxGrade": 0.29087498686946645,
+   "p95Grade": 0.24336765539190866,
+   "targetGrade": 0.3,
+   "overGradeSamples": 0,
+   "wetSamples": 0,
+   "r1TransverseProbe": {
+    "halfWidthM": 1.7,
+    "maxTransverseGrade": 0.4220975501824184,
+    "widthAndTransverse35PercentPassFraction": 0.8406466512702079,
+    "dryBandFraction": 1.0
+   },
+   "treadProbes": {
+    "+-0.75m": {
+     "p50": 0.15938758850097656,
+     "p90": 0.3808276816879149,
+     "p99": 0.42024044500881386,
+     "max": 0.42204986402448225,
+     "fractionOver35pct": 0.15964203233256352,
+     "dryBandFraction": 1.0
+    },
+    "+-1.0m": {
+     "p50": 0.15938758850097656,
+     "p90": 0.38073497564455977,
+     "p99": 0.42021550550767345,
+     "max": 0.4220711973057263,
+     "fractionOver35pct": 0.15964203233256352,
+     "dryBandFraction": 1.0
+    },
+    "+-1.5m": {
+     "p50": 0.15933672587076825,
+     "p90": 0.38062451598966957,
+     "p99": 0.42016789097615587,
+     "max": 0.422092530586923,
+     "fractionOver35pct": 0.15935334872979215,
+     "dryBandFraction": 1.0
+    }
+   },
+   "proposedTreadM": 2.0,
+   "balancedBenchCutM": {
+    "p50": 0.15938758850097656,
+    "p95": 0.4136286472680282,
+    "max": 0.4220711973057263,
+    "fractionOver0_8m": 0.0
+   }
+  }
+ ]
+}

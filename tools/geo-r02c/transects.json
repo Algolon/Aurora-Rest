@@ -1,0 +1,17 @@
+{
+  "schema": "aurora-rest-transects/1",
+  "units": "metres; x east, z north; heights sampled on the rendered 4 m triangles",
+  "transects": [
+    { "id": "north-massif-ns", "type": "line", "a": [-450, 3500], "b": [-450, 1700], "note": "N-S through n-crown and North Peak" },
+    { "id": "north-massif-we", "type": "line", "a": [-1700, 2770], "b": [900, 2770], "note": "W-E through the North Peak summit latitude" },
+    { "id": "cairn-we", "type": "polyline", "points": [[-500, 760], [-320, 810], [40, 920], [260, 830], [450, 760]], "note": "west approach - col - east approach (design-master pass approaches)" },
+    { "id": "cairn-ns", "type": "polyline", "points": [[-160, 520], [-130, 630], [40, 920], [-60, 1190], [-120, 1400]], "note": "south high point - col - north high point" },
+    { "id": "tarn-inlet-n-mid", "type": "channel-normal", "channel": "tarn-inlet-n", "fraction": 0.5, "halfLengthM": 160 },
+    { "id": "tarn-inlet-w-mid", "type": "channel-normal", "channel": "tarn-inlet-w", "fraction": 0.5, "halfLengthM": 160 },
+    { "id": "glen-tarn-outlet-25", "type": "valley-normal", "valley": "glen-tarn-outlet", "fraction": 0.25, "halfLengthM": 400 },
+    { "id": "glen-tarn-outlet-50", "type": "valley-normal", "valley": "glen-tarn-outlet", "fraction": 0.5, "halfLengthM": 400 },
+    { "id": "glen-tarn-outlet-75", "type": "valley-normal", "valley": "glen-tarn-outlet", "fraction": 0.75, "halfLengthM": 400 },
+    { "id": "fold-gorge-50", "type": "valley-normal", "valley": "fold-gorge", "fraction": 0.5, "halfLengthM": 300 },
+    { "id": "central-trough-50", "type": "valley-normal", "valley": "central-trough", "fraction": 0.5, "halfLengthM": 900 }
+  ]
+}

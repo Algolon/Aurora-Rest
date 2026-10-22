@@ -1,0 +1,152 @@
+{
+ "channels": [
+  {
+   "id": "tarn-inlet-w",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 929.4382,
+    "z": 2260.4256
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "tarn-inlet-n",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 1279.8286,
+    "z": 2250.6855
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "main-upper",
+   "maxActualSurfaceRiseM": 0.027027839255325148,
+   "at": {
+    "x": 589.0805,
+    "z": -766.8944
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.027027839255325148,
+   "matchesRecorded": true
+  },
+  {
+   "id": "main-mire-upper",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 717.769,
+    "z": -1494.9616
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "main-mire-out",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 1397.4271,
+    "z": -2410.4594
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "fold-inlet",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 1270.2076,
+    "z": 170.6777
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "fold-outlet",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": 590.5984,
+    "z": -769.6612
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "birch-upper-in",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": -669.64,
+    "z": 740.6186
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "birch-upper-outlet",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": -1367.1586,
+    "z": 512.6236
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "birch-lower-in",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": -490.0,
+    "z": -220.0
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "birch-lower-outlet",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": -1720.6412,
+    "z": -1104.1599
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "windward-gully",
+   "maxActualSurfaceRiseM": 0.0,
+   "at": {
+    "x": -1637.932,
+    "z": 1617.3455
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0,
+   "matchesRecorded": true
+  },
+  {
+   "id": "south-fen-tributary",
+   "maxActualSurfaceRiseM": 0.0011816924571981247,
+   "at": {
+    "x": 699.6496,
+    "z": -1493.573
+   },
+   "nonfinite": 0,
+   "r1RecordedRiseM": 0.0011816924571981247,
+   "matchesRecorded": true
+  }
+ ],
+ "allMatchRecorded": true,
+ "proposedRiseToleranceM": 0.05,
+ "maxRiseM": 0.027027839255325148,
+ "d8DryCellsWithoutLowerNeighbour": 5,
+ "note": "catchment reach is reproduced by re-running R1 validate.py (byte-identical terrain-validation.json); see docs/geo-r02c-p0/README.md"
+}

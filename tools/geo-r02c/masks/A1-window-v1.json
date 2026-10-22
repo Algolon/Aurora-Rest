@@ -1,0 +1,20 @@
+{
+  "id": "A1-window-v1",
+  "status": "provisional diagnostic window approved for P0 tooling only; final A1 boundaries are reassessed during A1-D",
+  "units": "metres; x east, z north",
+  "window": { "xMin": -2000, "xMax": 1700, "zMin": 1500, "zMax": 4000 },
+  "frozenRingM": 8,
+  "featherM": 200,
+  "featherProfile": "C1 smoothstep from 0 at the inner edge of the frozen ring to 1 at the core",
+  "freeze": {
+    "lakes": [{ "id": "high-tarn", "rimM": 32 }],
+    "channelCentreBeds": "all channel centrelines inside the window keep their R1 bed values exactly",
+    "coastBandM": 60
+  },
+  "invariance": {
+    "outsideWindow": "byte-identical to the canonical R1 terrain (guaranteed by compositing, verified by tooling)",
+    "frozenRing": "byte-identical to R1 so D8 receivers of every outside cell are unchanged",
+    "waterSurfaceRaster": "unchanged everywhere while lake and channel definitions are unchanged",
+    "waterMesh": "triangles of cells outside the window unchanged"
+  }
+}

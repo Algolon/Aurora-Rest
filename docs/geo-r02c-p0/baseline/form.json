@@ -1,0 +1,826 @@
+{
+ "convention": "verified: R1 flankWidthLeftM applies to the world-right side of the authored ridge direction",
+ "regions": {
+  "island": {
+   "curvature": {
+    "cells": 1334292,
+    "percent": {
+     "convex": 4.11,
+     "concave": 1.83,
+     "saddle": 71.73,
+     "planar": 14.46,
+     "cylindrical": 7.87
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 15.49,
+    "0.05-0.15": 17.75,
+    "0.15-0.3": 22.59,
+    "0.3-0.45": 20.52,
+    "0.45-0.7": 10.83,
+    "0.7-inf": 12.81
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 7235,
+     "clusters": 205,
+     "maxResidualM": 34.95187532901764
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 3808,
+     "clusters": 76,
+     "maxResidualM": 34.95187532901764
+    }
+   }
+  },
+  "A1-window": {
+   "curvature": {
+    "cells": 376981,
+    "percent": {
+     "convex": 3.33,
+     "concave": 1.6,
+     "saddle": 85.36,
+     "planar": 5.82,
+     "cylindrical": 3.89
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 0.3,
+    "0.05-0.15": 2.86,
+    "0.15-0.3": 13.27,
+    "0.3-0.45": 23.69,
+    "0.45-0.7": 20.03,
+    "0.7-inf": 39.86
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 2305,
+     "clusters": 55,
+     "maxResidualM": 26.577084481716156
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 651,
+     "clusters": 40,
+     "maxResidualM": 26.577084481716156
+    }
+   }
+  },
+  "north-massif": {
+   "curvature": {
+    "cells": 241912,
+    "percent": {
+     "convex": 4.0,
+     "concave": 1.64,
+     "saddle": 91.28,
+     "planar": 0.42,
+     "cylindrical": 2.66
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 0.26,
+    "0.05-0.15": 1.93,
+    "0.15-0.3": 6.01,
+    "0.3-0.45": 11.5,
+    "0.45-0.7": 24.25,
+    "0.7-inf": 56.05
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 1829,
+     "clusters": 41,
+     "maxResidualM": 26.577084481716156
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 604,
+     "clusters": 34,
+     "maxResidualM": 26.577084481716156
+    }
+   }
+  },
+  "central-valley": {
+   "curvature": {
+    "cells": 118851,
+    "percent": {
+     "convex": 2.68,
+     "concave": 4.81,
+     "saddle": 62.71,
+     "planar": 5.12,
+     "cylindrical": 24.68
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 4.99,
+    "0.05-0.15": 31.04,
+    "0.15-0.3": 26.17,
+    "0.3-0.45": 15.7,
+    "0.45-0.7": 13.0,
+    "0.7-inf": 9.1
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 567,
+     "clusters": 13,
+     "maxResidualM": 6.866802215576172
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 85,
+     "clusters": 17,
+     "maxResidualM": 6.866802215576172
+    }
+   }
+  },
+  "hidden-fold": {
+   "curvature": {
+    "cells": 96089,
+    "percent": {
+     "convex": 4.29,
+     "concave": 3.93,
+     "saddle": 83.07,
+     "planar": 1.77,
+     "cylindrical": 6.94
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 0.36,
+    "0.05-0.15": 5.51,
+    "0.15-0.3": 30.63,
+    "0.3-0.45": 28.59,
+    "0.45-0.7": 14.94,
+    "0.7-inf": 19.97
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 714,
+     "clusters": 35,
+     "maxResidualM": 8.180305480957031
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 103,
+     "clusters": 15,
+     "maxResidualM": 8.180305480957031
+    }
+   }
+  },
+  "south-shoulder": {
+   "curvature": {
+    "cells": 257186,
+    "percent": {
+     "convex": 2.63,
+     "concave": 1.04,
+     "saddle": 69.13,
+     "planar": 20.99,
+     "cylindrical": 6.21
+    },
+    "smoothingM": 6.0,
+    "epsilonPerM": 0.0002,
+    "minSlope": 0.05
+   },
+   "slopeBins": {
+    "0-0.05": 2.64,
+    "0.05-0.15": 14.69,
+    "0.15-0.3": 45.28,
+    "0.3-0.45": 34.28,
+    "0.45-0.7": 2.92,
+    "0.7-inf": 0.19
+   },
+   "creases": {
+    "over1m": {
+     "thresholdM": 1.0,
+     "cells": 402,
+     "clusters": 11,
+     "maxResidualM": 25.835013389587402
+    },
+    "over3m": {
+     "thresholdM": 3.0,
+     "cells": 315,
+     "clusters": 3,
+     "maxResidualM": 25.835013389587402
+    }
+   }
+  }
+ },
+ "ridges": [
+  {
+   "id": "n-main",
+   "authoredFlankWidthsLeftRightM": [
+    380,
+    530
+   ],
+   "authoredLeftFallPerM": 0.375,
+   "authoredRightFallPerM": 0.396,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -71.61,
+     -34.04,
+     -15.96,
+     -5.01,
+     -0.73,
+     0.0,
+     -0.54,
+     -4.98,
+     -16.39,
+     -35.05,
+     -74.71
+    ]
+   }
+  },
+  {
+   "id": "n-crown",
+   "authoredFlankWidthsLeftRightM": [
+    320,
+    230
+   ],
+   "authoredLeftFallPerM": 0.435,
+   "authoredRightFallPerM": 1.661,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -90.3,
+     -47.68,
+     -22.93,
+     -7.05,
+     -0.85,
+     0.0,
+     -1.08,
+     -26.54,
+     -90.79,
+     -187.53,
+     -348.04
+    ]
+   }
+  },
+  {
+   "id": "n-west-spur",
+   "authoredFlankWidthsLeftRightM": [
+    240,
+    350
+   ],
+   "authoredLeftFallPerM": 0.673,
+   "authoredRightFallPerM": 0.066,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -155.35,
+     -89.46,
+     -39.55,
+     -11.35,
+     -0.93,
+     0.0,
+     -0.34,
+     -1.05,
+     -2.85,
+     -5.95,
+     -12.65
+    ]
+   }
+  },
+  {
+   "id": "n-nw-cape",
+   "authoredFlankWidthsLeftRightM": [
+    240,
+    310
+   ],
+   "authoredLeftFallPerM": 1.057,
+   "authoredRightFallPerM": 0.024,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -251.61,
+     -152.15,
+     -73.35,
+     -22.44,
+     -2.28,
+     0.0,
+     0.98,
+     2.09,
+     4.25,
+     6.03,
+     2.65
+    ]
+   }
+  },
+  {
+   "id": "n-east-arc",
+   "authoredFlankWidthsLeftRightM": [
+    220,
+    320
+   ],
+   "authoredLeftFallPerM": 0.34,
+   "authoredRightFallPerM": 1.302,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -64.54,
+     -27.57,
+     -11.01,
+     -3.11,
+     -0.61,
+     0.0,
+     -1.56,
+     -16.86,
+     -63.72,
+     -134.42,
+     -261.96
+    ]
+   }
+  },
+  {
+   "id": "pass-north-flank",
+   "authoredFlankWidthsLeftRightM": [
+    290,
+    210
+   ],
+   "authoredLeftFallPerM": 0.016,
+   "authoredRightFallPerM": 0.361,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -4.5,
+     -3.11,
+     -1.8,
+     -0.74,
+     -0.26,
+     0.0,
+     -0.95,
+     -5.7,
+     -17.66,
+     -36.72,
+     -72.36
+    ]
+   }
+  },
+  {
+   "id": "pass-south-flank",
+   "authoredFlankWidthsLeftRightM": [
+    220,
+    320
+   ],
+   "authoredLeftFallPerM": 0.189,
+   "authoredRightFallPerM": 0.344,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -36.77,
+     -17.47,
+     -8.32,
+     -2.93,
+     -0.8,
+     0.0,
+     -0.8,
+     -4.72,
+     -14.63,
+     -31.28,
+     -66.02
+    ]
+   }
+  },
+  {
+   "id": "forest-west-spur",
+   "authoredFlankWidthsLeftRightM": [
+    160,
+    220
+   ],
+   "authoredLeftFallPerM": 0.103,
+   "authoredRightFallPerM": 0.142,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -20.8,
+     -10.64,
+     -5.35,
+     -2.04,
+     -0.68,
+     0.0,
+     -0.89,
+     -3.64,
+     -10.69,
+     -23.27,
+     -34.07
+    ]
+   }
+  },
+  {
+   "id": "forest-lower-spur",
+   "authoredFlankWidthsLeftRightM": [
+    150,
+    200
+   ],
+   "authoredLeftFallPerM": 0.115,
+   "authoredRightFallPerM": -0.046,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -22.43,
+     -10.85,
+     -5.33,
+     -2.11,
+     -0.84,
+     0.0,
+     0.84,
+     2.08,
+     5.15,
+     10.12,
+     14.3
+    ]
+   }
+  },
+  {
+   "id": "e-linked-rim",
+   "authoredFlankWidthsLeftRightM": [
+    210,
+    270
+   ],
+   "authoredLeftFallPerM": 0.254,
+   "authoredRightFallPerM": 0.978,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -45.77,
+     -19.45,
+     -8.81,
+     -3.0,
+     -0.64,
+     0.0,
+     -1.6,
+     -18.0,
+     -62.32,
+     -130.13,
+     -214.35
+    ]
+   }
+  },
+  {
+   "id": "fold-west-rim",
+   "authoredFlankWidthsLeftRightM": [
+    150,
+    220
+   ],
+   "authoredLeftFallPerM": 0.659,
+   "authoredRightFallPerM": 0.243,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -159.59,
+     -103.05,
+     -49.54,
+     -14.87,
+     -1.21,
+     0.0,
+     -0.85,
+     -3.89,
+     -11.64,
+     -24.58,
+     -50.63
+    ]
+   }
+  },
+  {
+   "id": "fold-east-coast",
+   "authoredFlankWidthsLeftRightM": [
+    190,
+    150
+   ],
+   "authoredLeftFallPerM": -0.145,
+   "authoredRightFallPerM": 0.718,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     34.17,
+     21.24,
+     10.79,
+     4.31,
+     1.73,
+     0.0,
+     -2.42,
+     -15.76,
+     -51.72,
+     -108.85,
+     -180.35
+    ]
+   }
+  },
+  {
+   "id": "south-connector",
+   "authoredFlankWidthsLeftRightM": [
+    300,
+    400
+   ],
+   "authoredLeftFallPerM": 0.192,
+   "authoredRightFallPerM": 0.254,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -37.52,
+     -18.4,
+     -8.82,
+     -2.89,
+     -0.52,
+     0.0,
+     -0.76,
+     -4.53,
+     -14.32,
+     -30.56,
+     -53.33
+    ]
+   }
+  },
+  {
+   "id": "south-west-cape",
+   "authoredFlankWidthsLeftRightM": [
+    250,
+    230
+   ],
+   "authoredLeftFallPerM": 0.331,
+   "authoredRightFallPerM": 0.243,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -65.48,
+     -32.61,
+     -15.57,
+     -5.04,
+     -0.89,
+     0.0,
+     -0.89,
+     -3.95,
+     -11.59,
+     -23.96,
+     -48.05
+    ]
+   }
+  },
+  {
+   "id": "south-north-spur",
+   "authoredFlankWidthsLeftRightM": [
+    210,
+    180
+   ],
+   "authoredLeftFallPerM": 0.224,
+   "authoredRightFallPerM": -0.14,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -48.1,
+     -26.44,
+     -13.47,
+     -4.8,
+     -1.15,
+     0.0,
+     0.69,
+     1.77,
+     4.73,
+     10.51,
+     24.96
+    ]
+   }
+  },
+  {
+   "id": "south-low-tail",
+   "authoredFlankWidthsLeftRightM": [
+    230,
+    300
+   ],
+   "authoredLeftFallPerM": 0.186,
+   "authoredRightFallPerM": 0.079,
+   "profile": {
+    "offsetsM": [
+     -200,
+     -100,
+     -50,
+     -20,
+     -8,
+     0,
+     8,
+     20,
+     50,
+     100,
+     200
+    ],
+    "meanRelativeHeightM": [
+     -38.04,
+     -19.41,
+     -9.45,
+     -3.31,
+     -0.86,
+     0.0,
+     -0.6,
+     -1.92,
+     -5.02,
+     -9.58,
+     -17.17
+    ]
+   }
+  }
+ ],
+ "authoredAsymmetryAgreement": {
+  "ridgesWithAuthoredAsymmetryOver15pct": 14,
+  "narrowerAuthoredSideIsSteeper": 8,
+  "note": "indicator only; measured 40-240 m from the crest along the authored polyline, R1 left/right convention"
+ }
+}

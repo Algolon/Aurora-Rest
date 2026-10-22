@@ -1,0 +1,47 @@
+{
+ "baseSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "candidate": "/tmp/claude-0/-home-user-Aurora-Rest/24dda332-8c5a-5f81-8f85-24d722ffdc3a/scratchpad/tmp-regen/run2/terrain.f32",
+ "candidateSha256": "19c5f839104b7a9cd458f52134933b8e9a9cb5f6113c1f5b77f93d552b722b32",
+ "mask": "A1-window-v1",
+ "outsideWindow": {
+  "cells": 2423825,
+  "cellsChanged": 21372,
+  "p50": 0.0,
+  "p90": 0.0,
+  "p99": 0.0,
+  "p999": 7.62939453125e-05,
+  "max": 1.4141159057617188
+ },
+ "frozenRing": {
+  "cells": 6192,
+  "cellsChanged": 73,
+  "p50": 0.0,
+  "p90": 0.0,
+  "p99": 1.52587890625e-05,
+  "p999": 3.0517578125e-05,
+  "max": 3.0517578125e-05
+ },
+ "feather": {
+  "cells": 144400,
+  "cellsChanged": 1158,
+  "p50": 0.0,
+  "p90": 0.0,
+  "p99": 0.0,
+  "p999": 3.0517578125e-05,
+  "max": 3.0517578125e-05
+ },
+ "core": {
+  "cells": 429084,
+  "cellsChanged": 766,
+  "p50": 0.0,
+  "p90": 0.0,
+  "p99": 0.0,
+  "p999": 3.0517578125e-05,
+  "max": 0.30000001192098863
+ },
+ "outsideByteIdentical": false,
+ "ringByteIdentical": false,
+ "d8ReceiversChangedOutsideWindow": 50,
+ "d8ReceiversChangedInsideWindow": 5,
+ "pass": false
+}

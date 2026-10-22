@@ -1,0 +1,95 @@
+{
+ "r1Convention": [
+  {
+   "cellM": 20,
+   "material": 0,
+   "smaller": 0,
+   "maxDryDepthM": 0.0
+  },
+  {
+   "cellM": 8,
+   "material": 0,
+   "smaller": 0,
+   "maxDryDepthM": 0.06658172607421875
+  },
+  {
+   "cellM": 4,
+   "material": 0,
+   "smaller": 0,
+   "maxDryDepthM": 0.02867889404296875
+  }
+ ],
+ "r1Recorded": [
+  {
+   "cellM": 20,
+   "material": 0,
+   "smaller": 0
+  },
+  {
+   "cellM": 8,
+   "material": 0,
+   "smaller": 0
+  },
+  {
+   "cellM": 4,
+   "material": 0,
+   "smaller": 0
+  }
+ ],
+ "strictConvention": {
+  "convention": "8-connected priority flood; ocean (H<=0), all wet cells (H<W) and grid border are outlets",
+  "maxFillDepthM": 0.03328704833984375,
+  "cellsAbove1cm": 5,
+  "checks": [
+   {
+    "thresholdM": 0.1,
+    "minAreaM2": 64,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "minAreaM2": 0,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "minAreaM2": 800,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.01,
+    "minAreaM2": 0,
+    "count": 4,
+    "components": [
+     {
+      "x": -904.0,
+      "z": 564.0,
+      "areaM2": 16.0,
+      "maxDepthM": 0.0333
+     },
+     {
+      "x": -912.0,
+      "z": 568.0,
+      "areaM2": 16.0,
+      "maxDepthM": 0.0287
+     },
+     {
+      "x": -464.0,
+      "z": 766.0,
+      "areaM2": 32.0,
+      "maxDepthM": 0.0133
+     },
+     {
+      "x": 260.0,
+      "z": 828.0,
+      "areaM2": 16.0,
+      "maxDepthM": 0.0112
+     }
+    ]
+   }
+  ]
+ }
+}
