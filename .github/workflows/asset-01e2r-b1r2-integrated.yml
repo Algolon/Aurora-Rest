@@ -1,0 +1,47 @@
+name: ASSET-01E2R-B1R2 integrated A shoulder
+on:
+  push:
+    branches: [fix/asset-01e2r-b1r2-integrated-shoulder]
+  workflow_dispatch:
+jobs:
+  geometry-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Ensure all original B1/B1R/G1/A2, trees and grass are byte-identical
+        run: |
+          git diff --exit-code 5e1d412e24d054ff8b659236b39feb0f99c1cced HEAD -- \
+            src/rocks/experimental/b1 src/rocks/experimental/b1r \
+            src/rocks/experimental/a2 \
+            src/rocks/experimental/rockSculptR04Core.ts \
+            src/rocks/experimental/r04RefinementCore.ts \
+            src/rocks/experimental/r04HeroBoulder.ts \
+            src/rocks/experimental/r04MaterialStudies.ts \
+            src/rocks/index.ts src/rocks/rockMaterials.ts \
+            src/pine src/grass src/woodkit.ts src/index.ts
+      - run: npm install --no-audit --no-fund
+      - name: Unit tests including strict unified surface topology, TypeScript and Vite build
+        run: |
+          npm test
+          npm run build
+      - name: Fetch production Feh Lu We pin, read only
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Independent original birch Scots pine grass and rock parity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:rock-parity
