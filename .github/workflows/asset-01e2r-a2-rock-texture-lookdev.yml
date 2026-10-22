@@ -1,0 +1,72 @@
+name: ASSET-01E2R-A2 rock texture lookdev and source parity
+on:
+  push:
+    branches:
+      - art/asset-01e2r-a2-rock-texture-lookdev
+  workflow_dispatch:
+jobs:
+  a2-build-and-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Assert approved source geometry and nature assets unchanged
+        run: |
+          git diff --exit-code 1ac9b9342bd888fcfdb5f1b31a11562ffe1df353 HEAD -- \
+            src/rocks/experimental/rockSculptR04Core.ts \
+            src/rocks/experimental/r04RefinementCore.ts \
+            src/rocks/experimental/r04HeroBoulder.ts \
+            src/rocks/experimental/r04MaterialStudies.ts \
+            src/rocks/productionRock.ts \
+            src/rocks/index.ts \
+            src/rocks/rockMaterials.ts \
+            src/grass src/pine src/woodkit.ts src/index.ts
+      - run: npm install --no-audit --no-fund
+      - name: All earlier tree/grass/rock tests plus A2 texture integrity, TypeScript and Vite
+        run: |
+          npm test
+          npm run build
+      - name: Checkout pinned protected Feh Lu We production source (read only)
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Independently recheck original birch / pine / grass / production rock fidelity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:rock-parity
+  a2-real-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Real Three.js / Chromium WebGL material and planar-triplanar visual evidence
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-a2.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01e2r-a2-real-webgl-texture-review
+          path: asset-lab/birch/rock-a2-evidence/
+          if-no-files-found: warn
