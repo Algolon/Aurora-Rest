@@ -7,6 +7,7 @@
  * G1 and all production rock implementations remain unmodified/read-only.
  */
 import * as THREE from 'three';
+import {buildSculptRock} from './rockSculpturalRefinement.ts';
 
 export type RockArchetype='A'|'B'|'C'|'D'|'E';
 type XZ=readonly [number,number];
@@ -108,6 +109,7 @@ function bandVertices(d:RockDefinition,ring:Band):V3[]{
 }
 /** Independent sampled solidity volume; does not imply watertight Boolean union. */
 export function buildRockArchetype(id:RockArchetype,detail:'primary'|'refined'='refined'):THREE.BufferGeometry{
+ if(detail==='refined')return buildSculptRock(id);
  const d=ROCK_DEFINITIONS[id];
  if(!d)throw RangeError('Invalid B1 rock '+String(id));
  const rings=d.bands.map(b=>bandVertices(d,b));
