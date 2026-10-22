@@ -131,7 +131,9 @@ function mapPreview(study:RockLookdevStudy,kind:'albedo'|'normal'|'roughness'){
  const tex=lookdev.textures[study][kind],img=tex.image;
  const canvas=document.createElement('canvas');canvas.width=img.width;canvas.height=img.height;
  const c=canvas.getContext('2d');if(!c)throw Error('No 2D canvas for map preview');
- const pixels=c.createImageData(img.width,img.height);pixels.data.set(img.data);c.putImageData(pixels,0,0);
+ const source=img.data;
+ if(!source)throw Error('Missing authored texture pixel data');
+ const pixels=c.createImageData(img.width,img.height);pixels.data.set(source);c.putImageData(pixels,0,0);
  return canvas.toDataURL('image/png');
 }
 for(const k of ['mode','study','projection','view','light','wireframe','orbit','zoom'])
