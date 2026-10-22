@@ -1,0 +1,296 @@
+{
+ "canonicalSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "linuxReplaySha256": "19c5f839104b7a9cd458f52134933b8e9a9cb5f6113c1f5b77f93d552b722b32",
+ "note": "Masks and targets come from the Linux replay. Cells whose canonical value differs from the Linux equality target are listed separately (platform classification differences).",
+ "equalityCellsDifferingCanonicalVsLinux": 97,
+ "residualCanonical": {
+  "freeCells": 1390839,
+  "absResidual": {
+   "n": 1390839,
+   "p50": 3.4332275390625e-05,
+   "p90": 0.0015516281127929688,
+   "p99": 0.0872780990600579,
+   "p999": 0.6832711791993304,
+   "max": 19.2034912109375
+  }
+ },
+ "residualLinuxReplay": {
+  "freeCells": 1374183,
+  "absResidual": {
+   "n": 1374183,
+   "p50": 3.184212182816282e-05,
+   "p90": 0.001360413173502906,
+   "p99": 0.009292236560917762,
+   "p999": 0.0321907063204047,
+   "max": 0.0634785870304313
+  }
+ },
+ "jacobiContinuation": [
+  {
+   "extraIterations": 1000,
+   "p50": 0.0402,
+   "p90": 0.6684,
+   "p99": 3.8507,
+   "p999": 9.8372,
+   "max": 18.5099,
+   "meanSignedM": 0.0995,
+   "cellsMovedOver1m": 107378,
+   "secondsCumulative": 52.3
+  },
+  {
+   "extraIterations": 3000,
+   "p50": 0.1047,
+   "p90": 1.3226,
+   "p99": 6.1775,
+   "p999": 14.3262,
+   "max": 23.1281,
+   "meanSignedM": 0.1824,
+   "cellsMovedOver1m": 202398,
+   "secondsCumulative": 160.8
+  },
+  {
+   "extraIterations": 10000,
+   "p50": 0.2091,
+   "p90": 2.2704,
+   "p99": 8.0949,
+   "p999": 16.4996,
+   "max": 24.3474,
+   "meanSignedM": 0.2936,
+   "cellsMovedOver1m": 307221,
+   "secondsCumulative": 507.0
+  }
+ ],
+ "converged": {
+  "outerIterations": [
+   {
+    "outer": 0,
+    "freeCells": 1374183,
+    "cgIterations": 1267,
+    "cgInfo": 0,
+    "maxResidual": 1.653626639175343e-06,
+    "seconds": 38.7,
+    "released": 132,
+    "added": 7
+   },
+   {
+    "outer": 1,
+    "freeCells": 1374308,
+    "cgIterations": 422,
+    "cgInfo": 0,
+    "maxResidual": 2.5914954449035577e-06,
+    "seconds": 11.7,
+    "released": 9,
+    "added": 0
+   },
+   {
+    "outer": 2,
+    "freeCells": 1374317,
+    "cgIterations": 240,
+    "cgInfo": 0,
+    "maxResidual": 8.149971790771815e-06,
+    "seconds": 6.5,
+    "released": 0,
+    "added": 0
+   }
+  ],
+  "seconds": 63.5,
+  "differenceFromLinuxR1": {
+   "n": 1576476,
+   "p50": 0.30253714804220705,
+   "p90": 2.8307334916466367,
+   "p99": 8.859781750409276,
+   "p999": 17.14436270851225,
+   "max": 24.5578626907822,
+   "meanSignedM": 0.36128510342626635,
+   "fractionLowered": 0.4071137143857566,
+   "fractionRaised": 0.44572261169849714,
+   "cellsOver1m": 352285,
+   "cellsOver5m": 60112
+  },
+  "residualAfter": {
+   "freeCells": 1374317,
+   "absResidual": {
+    "n": 1374317,
+    "p50": 4.980371670626482e-11,
+    "p90": 1.9348362911841832e-09,
+    "p99": 7.13456347511965e-08,
+    "p999": 3.707022742674188e-07,
+    "max": 2.037492890849535e-06
+   }
+  },
+  "curvatureLinuxR1": {
+   "cells": 1324058,
+   "percent": {
+    "convex": 2.59,
+    "concave": 2.25,
+    "saddle": 71.74,
+    "planar": 14.6,
+    "cylindrical": 8.82
+   },
+   "smoothingM": 6.0,
+   "epsilonPerM": 0.0002,
+   "minSlope": 0.05
+  },
+  "curvatureM0c": {
+   "cells": 1314243,
+   "percent": {
+    "convex": 2.38,
+    "concave": 2.17,
+    "saddle": 73.1,
+    "planar": 15.48,
+    "cylindrical": 6.87
+   },
+   "smoothingM": 6.0,
+   "epsilonPerM": 0.0002,
+   "minSlope": 0.05
+  },
+  "sinksM0c": {
+   "maxFillDepthM": 0.033289588782551505,
+   "cellsAbove1cm": 5,
+   "checks": [
+    {
+     "thresholdM": 0.1,
+     "minAreaM2": 64,
+     "count": 0
+    },
+    {
+     "thresholdM": 0.5,
+     "minAreaM2": 0,
+     "count": 0
+    },
+    {
+     "thresholdM": 2.0,
+     "minAreaM2": 800,
+     "count": 0
+    },
+    {
+     "thresholdM": 0.01,
+     "minAreaM2": 0,
+     "count": 4
+    }
+   ]
+  }
+ },
+ "windowNullResolve": {
+  "outerIterations": [
+   {
+    "outer": 0,
+    "freeCells": 350696,
+    "cgIterations": 909,
+    "cgInfo": 0,
+    "maxResidual": 1.0323544188395317e-06,
+    "seconds": 5.7,
+    "released": 2,
+    "added": 3857
+   },
+   {
+    "outer": 1,
+    "freeCells": 346841,
+    "cgIterations": 840,
+    "cgInfo": 0,
+    "maxResidual": 1.234301173269614e-06,
+    "seconds": 5.1,
+    "released": 401,
+    "added": 0
+   },
+   {
+    "outer": 2,
+    "freeCells": 347242,
+    "cgIterations": 577,
+    "cgInfo": 0,
+    "maxResidual": 2.342938245192272e-06,
+    "seconds": 3.6,
+    "released": 142,
+    "added": 0
+   },
+   {
+    "outer": 3,
+    "freeCells": 347384,
+    "cgIterations": 503,
+    "cgInfo": 0,
+    "maxResidual": 1.9381102305260356e-06,
+    "seconds": 3.1,
+    "released": 39,
+    "added": 0
+   },
+   {
+    "outer": 4,
+    "freeCells": 347423,
+    "cgIterations": 365,
+    "cgInfo": 0,
+    "maxResidual": 2.5337851070617035e-06,
+    "seconds": 2.6,
+    "released": 9,
+    "added": 0
+   },
+   {
+    "outer": 5,
+    "freeCells": 347432,
+    "cgIterations": 281,
+    "cgInfo": 0,
+    "maxResidual": 3.0659799676868715e-06,
+    "seconds": 1.8,
+    "released": 0,
+    "added": 0
+   }
+  ],
+  "seconds": 23.1,
+  "outsideWindowMaxAbsDiff": 0.0,
+  "ringMaxAbsDiff": 0.0,
+  "insideWindow": {
+   "n": 387110,
+   "p50": 0.33367224821910213,
+   "p90": 5.979817467007348,
+   "p99": 12.901136063843518,
+   "p999": 21.809803712646577,
+   "max": 24.557861415617538,
+   "meanSignedM": 1.578173146210713,
+   "cellsOver1m": 131919
+  },
+  "featherBand": {
+   "n": 65447,
+   "p50": 0.08680152576187083,
+   "p90": 1.0353712628067002,
+   "p99": 6.634028583405561,
+   "p999": 7.654720463811622,
+   "max": 7.715389344370891
+  },
+  "core": {
+   "n": 321663,
+   "p50": 0.45890838292950775,
+   "p90": 6.475847928086988,
+   "p99": 13.411087064624915,
+   "p999": 22.134858768579534,
+   "max": 24.557861415617538
+  },
+  "sinks": {
+   "maxFillDepthM": 0.03328704833984375,
+   "checks": [
+    {
+     "thresholdM": 0.1,
+     "minAreaM2": 64,
+     "count": 0
+    },
+    {
+     "thresholdM": 0.5,
+     "minAreaM2": 0,
+     "count": 0
+    },
+    {
+     "thresholdM": 2.0,
+     "minAreaM2": 800,
+     "count": 0
+    },
+    {
+     "thresholdM": 0.01,
+     "minAreaM2": 0,
+     "count": 4
+    }
+   ]
+  }
+ },
+ "maps": {
+  "diffLimitM": 5.0,
+  "colour": "red = converged higher than R1, blue = lower; diagnostic heightfield maps, not browser renders"
+ }
+}
