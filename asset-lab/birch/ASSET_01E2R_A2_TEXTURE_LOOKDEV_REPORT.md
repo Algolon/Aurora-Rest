@@ -56,25 +56,42 @@ The above renderer counts include diagnostic floor, shadows and markers, not per
 ## 6. Reproducible browser evidence and QA
 
 - \`rock-a2.html\` + \`rocks/a2-showroom.ts\`: standalone G1-only Three.js comparison, material switches, planar/triplanar, fixed front/rear/side/human views, zoom/orbit, neutral/Nordic/grazing light, original M1 reference and vegetation context.
-- \`scripts/capture-rock-a2.mjs\`: captures **35 genuine 1440x900 WebGL PNGs** (material trio, lighting, mapping, closeups and context) plus **nine RGBA texture-map PNGs** and detailed \`metrics.json\`.
+- \`scripts/capture-rock-a2.mjs\`: captures **53 genuine 1440x900 WebGL PNGs** (material trio, lighting, mapping, closeups and context) plus **nine RGBA texture-map PNGs** and detailed \`metrics.json\`.
 - \`tests/rock-a2-textures.test.ts\`: map determinism, alpha/finite channels, seams near 512px tile borders, materially distinct designs, sparsity of cracks, unchanged G1 invariants.
 - \`.github/workflows/asset-01e2r-a2-rock-texture-lookdev.yml\`: original-source diff guard, existing tests, strict TS/Vite, independent birch/pine/grass/rock parity, actual browser shader compilation and WebGL artifacts.
 - First evidence run before contrast calibration: [39827063939](https://github.com/Algolon/Aurora-Rest/actions/runs/39827063939) — 35 genuine WebGL views captured but regression job failed on nullable texture-preview buffer TS type (later corrected). The corrected second run [39827210350](https://github.com/Algolon/Aurora-Rest/actions/runs/39827210350) passed both CI jobs (39/39 tests, build, source parity and WebGL captures).
 
-**Latest post-art-calibration CI and screenshots:** inspect branch's current GitHub Actions record and append the actual run/artifact links from the successful final checkpoint; do not mistake the earlier pass's screenshots for the revised materials.
+**Final post-art-calibration and matched-camera verification:** [GitHub Actions run 39828498701 — SUCCESS](https://github.com/Algolon/Aurora-Rest/actions/runs/39828498701), at implementation commit `ab18e304d5d11b31c7072c2fa9aedd29cedd3d33`. Both jobs PASS: 39/39 automated tests, TypeScript, Vite, G1 and protected-sources diff guard, original FLW birch/pine/grass/rock independent parity, Chromium/SwiftShader WebGL and 53 rendered 3D screenshots plus 9 generated texture PNGs. [Original full-resolution artifact 12448071571](https://github.com/Algolon/Aurora-Rest/actions/runs/39828498701/artifacts/12448071571). `metrics.json` reports `errors: []` and unchanged G1 geometry fingerprint `3175a6b2759321ee6a0e8ee024f5f74d2145922cc71590c509d4374520c9ec8e`.
 
 ## 7. Art-direction assessment — OWNER DECISION REQUIRED
 
-The study is a **texture lookdev**, not a geometry review. Existing R04/G1 coarse planar mass is intentionally retained.
+The study is a **texture lookdev**, not a geometry review. Existing R04/G1 coarse planar mass is intentionally retained. **Matched-camera evidence:** 18 additional single-rock screenshots were captured at identical central positions, identical 3/4 camera, and matched lighting across all three materials and both projection methods. The three-rock perspective views are overview-only and are **not** used to compare form/silhouette because differing off-axis perspectives would confound art critique.
 
 - **T1** is the safest common stone-language candidate. Its restrained weathering leaves the silhouette legible across face normals, and it should serve as the default against which the other variants are judged.
-- **T2** contains the most intentional geological information, but individual linework must read as embedded in stone rather than repeating printed decals. Under grazing light inspect the relative visibility of cut lines and texture vs G1 structural faults.
-- **T3** offers environmental storytelling suited to shoreline/wetland placements but should not become the universal rock palette by default. The localized moss must remain sparse and geographically plausible; do not overfit to a single studio camera.
+- **T2** contains visible geological information but the matched closeups expose the central failure: its long crossing line segments read more as embossed/engraved strokes laid over unrelated major rock faces than as naturally branching structural fractures. That is **not yet premium geological realism within the stylized target**. Recommend revision of the material's fracture placement/intensity in a separate approved pass rather than broad adoption.
+- **T3** has the intended cooler shoreline-blue read, but weathering and localized moss barely show at normal walk distance. It is an interesting restricted coastal palette, not yet convincing as a distinct weathered surface-treatment asset.
 
-**Provisional technical/art-direction recommendation:** use T1 as *baseline material language*, evaluate T2 as a restricted fractured hero variant, and reserve T3 for coastal exposure. **This is not final art approval**: comparison screenshots must still be reviewed and the owner selects whether any T merits promotion. If post-calibration textures are still visibly too subtle, do not compensate by sculpting new faces, and do not ship them as premium merely because CI passes.
+**Post-review art-direction recommendation:** preserve **T1 as the provisional palette and material baseline**, not as a finished premium hero stone. T2's present fractures are too prominent and visually disconnected from the major planes to recommend promoting, despite passing geometry and material shader QA. T3 is a conditional optional coastal palette, but its moss/weathering effect needs improved location-coherent visibility before owner acceptance. The three materials are genuinely different and technically validated; *none is automatically art approved*. The owner must explicitly approve or request a separate texture-only refinement. Do not change G1 or proceed to the 10–15-family stage.
 
 ## 8. Protected scope and stop
 
 This branch contains additive A2-specific material, showroom, map/tests, capture, report and CI files only; no changes to E2R-A1 G1 source, Feh Lu We, production rocks, approved nature assets, GEO-R02, WORLD, Aurora main, deployment, merging or island integration.
 
 **STOP AFTER A2 — ART REVIEW PENDING.** Do not generate rock-family variants, alter G1 geometry or select a winner on behalf of the owner.
+
+## 9. Final matched-camera metrics and mapping decision
+
+| Measured review case | Renderer calls (whole scene) | Rendered triangles (whole scene) | Shader / note |
+|---|---:|---:|---|
+| One G1 + T1 triplanar | 4 | 402 | 9 custom texture2D statements; 5,276-char assembled fragment shader |
+| One G1 + T2 triplanar | 4 | 402 | 9 custom texture2D statements; 5,276-char assembled fragment shader |
+| One G1 + T3 triplanar | 4 | 402 | 9 custom texture2D statements; 5,807-char assembled fragment shader, local moss noise |
+| One G1 + T2 planar | 4 | 402 | Unmodified native Three.js PBR map sampling |
+| T1/T2/T3 three-object scene | 7 | 818 | Different positions in perspective; use matched single shots for form-constant art comparison |
+| G1 + original nature context | 19 | 11,166 | Actual birch, Scots pine, grass and source production rock |
+
+The object itself stays **136 triangles / 408 vertices**. All renderer values include ground, shadow passes and markers and do not imply physical mobile performance. Three studies have mean encoded roughness ~0.908, ~0.908 and ~0.919, respectively. T2 fracture-coverage mask occupies ~**1.37%** of the 512px texels; T3 ~**0.43%**. The UV texture-edge tests pass, but geometric per-face planar mapping can still visibly rotate a pattern across face junctions. Triplanar results yield smoother placement at a ~3× nominal texture-sampling cost, with **only modest image improvement on this particular already-authorial low-poly G1**. For future repeated low-cost stones, prefer planar or a dedicated UV bake; reserve triplanar for a limited number of significant rock assets only if accepted by the owner.
+
+The actual original artifact is [Run 39828498701 — 53 WebGL screenshots, 9 PBR PNG maps, metrics](https://github.com/Algolon/Aurora-Rest/actions/runs/39828498701/artifacts/12448071571). Contact sheets with matched camera/light are delivered separately in the user handoff as crops of the **same real WebGL pixels**, not synthetic 3D art.
+
+**Art status: ART REVIEW PENDING. All protected code untouched. No merge, deploy, island integration or E2R-B.**
