@@ -152,16 +152,8 @@ export function buildRockArchetype(id:RockArchetype,detail:'primary'|'refined'='
  };
  for(const [idx,f] of faces.entries()){
   const [a,b,c]=f.vertices;
-  if(detail==='refined'&&d.chipFaces.includes(idx)){
-   const n=normal(a,b,c),t=.22;
-   const mid:V3=[
-    a[0]*t+b[0]*(.38)+c[0]*(.4)-n[0]*.045,
-    a[1]*t+b[1]*(.38)+c[1]*(.4)-n[1]*.045,
-    a[2]*t+b[2]*(.38)+c[2]*(.4)-n[2]*.045
-   ];
-   // Triangle patch fan without changing border vertices, outward winding.
-   put(a,b,mid);put(b,c,mid);put(c,a,mid);chiseled++;
-  }else put(a,b,c);
+  put(a,b,c);
+
  }
  const geo=new THREE.BufferGeometry();
  geo.setAttribute('position',new THREE.Float32BufferAttribute(output,3));
