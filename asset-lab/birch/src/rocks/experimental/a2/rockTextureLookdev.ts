@@ -76,7 +76,7 @@ const mossFunction=[
 const mossColor=[
  'float a2Ground=1.0-smoothstep(-0.18,0.78,vA2LocalP.y);',
  'float a2Patch=smoothstep(0.48,0.69,a2SoftNoise(vA2LocalP.xz*2.0+vec2(17.0,3.0)));',
- 'float a2Moss=a2Ground*a2Patch*0.14;',
+ 'float a2Moss=a2Ground*a2Patch*0.24;',
  'diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.66,.84,.65),a2Moss);'
 ].join('\n');
 function installLocalShader(mat:THREE.MeshStandardMaterial,study:RockLookdevStudy,projection:RockProjection):void{
@@ -145,7 +145,7 @@ export function createRockLookdevFactory():RockLookdevFactory{
    const mat=new THREE.MeshStandardMaterial({
     name:'A2-'+study+'-'+projection+'-ART-REVIEW',
     color:0xffffff,vertexColors:true,map:maps.albedo,normalMap:maps.normal,roughnessMap:maps.roughness,
-    normalScale:new THREE.Vector2(study==='T2'?.34:.24,study==='T2'?.34:.24),
+    normalScale:new THREE.Vector2(study==='T2'?.54:.36,study==='T2'?.54:.36),
     roughness:study==='T3'?.96:.94,metalness:0,side:THREE.FrontSide
    });
    if(projection==='triplanar'||study==='T3')installLocalShader(mat,study,projection);
