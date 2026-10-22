@@ -24,7 +24,7 @@ function hash(i:number,j:number,seed:number):number {
 }
 function fade(v:number):number{return v*v*(3-2*v)}
 function noise(x:number,y:number,seed:number):number {
- const ix=Math.floor(x),iy=Math.floor(y),fx=fade(x-ix),fy=fade(y-iy),period=32;
+ const ix=Math.floor(x),iy=Math.floor(y),fx=fade(x-ix),fy=fade(y-iy),period=8;
  const h=(a:number,b:number)=>hash(((a%period)+period)%period,((b%period)+period)%period,seed);
  return (h(ix,iy)*(1-fx)+h(ix+1,iy)*fx)*(1-fy)
   +(h(ix,iy+1)*(1-fx)+h(ix+1,iy+1)*fx)*fy;
@@ -40,14 +40,14 @@ function maps(study:R04MaterialStudy):{albedo:THREE.CanvasTexture;normal:THREE.C
   const low=noise(x/32,y/32,11)-.5;
   const mid=noise(x/8,y/8,23)-.5;
   const fine=noise(x/2,y/2,37)-.5;
-  const mineral=study==='M1'?0:Math.sin((x+y*.42)*Math.PI/32)*.012;
+  const mineral=study==='M1'?0:Math.sin((x+y*.50)*Math.PI/32)*.012;
   return low*.50+mid*.24+fine*.09+mineral;
  };
  for(let y=0;y<dim;y++)for(let x=0;x<dim;x++){
    const i=(y*dim+x)*4;
    const height=h(x,y),lower=h((x+dim-1)%dim,y),upper=h((x+1)%dim,y);
    const hDown=h(x,(y+dim-1)%dim),hUp=h(x,(y+1)%dim);
-   const vein=study==='M1'?0:Math.pow(Math.max(0,Math.sin((x*.42+y*.28)*Math.PI/16)),38)*(study==='M2'?12:9);
+   const vein=study==='M1'?0:Math.pow(Math.max(0,Math.sin((x*.50+y*.25)*Math.PI/16)),38)*(study==='M2'?12:9);
    const grain=height*20-vein;
    const tint=study==='M3'?[0,1,1]:study==='M2'?[0,0,2]:[2,1,0];
    for(let k=0;k<3;k++)ia.data[i+k]=Math.max(0,Math.min(255,236+grain+tint[k]));
