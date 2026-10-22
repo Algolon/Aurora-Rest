@@ -76,7 +76,7 @@ export function buildRefinedR04(study:R04GeometryStudy='G1'):R04RefinedMesh {
    let n=normal(a,b,c);
    if(dot(n,sourceN)<0){const t=b;b=c;c=t;n=normal(a,b,c);}
    for(const p of [a,b,c]){
-     positions.push(...p);normals.push(...n);colors.push(...color);uv.push(...uvFor(p,n));
+     positions.push(...p);normals.push(...n);colors.push(...color);uv.push(...uvFor(p,sourceN));
    }
  }
  for(const [i,f] of faces.entries()){
