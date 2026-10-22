@@ -1,0 +1,1493 @@
+{
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "scope": "Actual canonical triangle field; thresholded depressions and geometric water connectivity, not hydraulic simulation.",
+  "depressions": [
+    {
+      "cellM": 20,
+      "thresholdM": 2,
+      "minimumAreaM2": 800,
+      "count": 0,
+      "sinks": [],
+      "smallerDepressionsAbove0_1mAnd64m2": {
+        "count": 0,
+        "maximumDepthM": 0.0,
+        "totalAreaM2": 0,
+        "locations": []
+      }
+    },
+    {
+      "cellM": 8,
+      "thresholdM": 2,
+      "minimumAreaM2": 800,
+      "count": 0,
+      "sinks": [],
+      "smallerDepressionsAbove0_1mAnd64m2": {
+        "count": 0,
+        "maximumDepthM": 0.0,
+        "totalAreaM2": 0,
+        "locations": []
+      }
+    },
+    {
+      "cellM": 4,
+      "thresholdM": 2,
+      "minimumAreaM2": 800,
+      "count": 0,
+      "sinks": [],
+      "smallerDepressionsAbove0_1mAnd64m2": {
+        "count": 0,
+        "maximumDepthM": 0.0,
+        "totalAreaM2": 0,
+        "locations": []
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "hero",
+      "lengthM": 4926.305145128835,
+      "maxGrade": 0.24440574645996094,
+      "p95Grade": 0.23612607258685275,
+      "targetGrade": 0.25,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 1.0,
+      "widthAndTransverse35PercentPassFraction": 0.872086072922893,
+      "maxTransverseGrade": 0.8304741738313419,
+      "widthConflicts": [
+        {
+          "xz": [
+            683.0769,
+            -1163.6923
+          ],
+          "crossGrade": 0.3740468890503662,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -155.8621,
+            -125.7931
+          ],
+          "crossGrade": 0.36296929064595296,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -112.8889,
+            -86.2222
+          ],
+          "crossGrade": 0.37859259123052463,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -69.2414,
+            -51.8621
+          ],
+          "crossGrade": 0.4191912209859752,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -25.1034,
+            14.3448
+          ],
+          "crossGrade": 0.5056987794844424,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            11.3103,
+            52.9655
+          ],
+          "crossGrade": 0.602523020890937,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            182.2222,
+            300.4444
+          ],
+          "crossGrade": 0.46051761615376857,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            207.3846,
+            374.1538
+          ],
+          "crossGrade": 0.4186921566616399,
+          "dryBand": true
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    },
+    {
+      "id": "tarn-ascent",
+      "lengthM": 1228.512098135854,
+      "maxGrade": 0.29303639485580013,
+      "p95Grade": 0.29128745932388617,
+      "targetGrade": 0.3,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 1.0,
+      "widthAndTransverse35PercentPassFraction": 0.7577937649880095,
+      "maxTransverseGrade": 0.41480067101122636,
+      "widthConflicts": [
+        {
+          "xz": [
+            373.7931,
+            988.6897
+          ],
+          "crossGrade": 0.3500410078885101,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            400.4444,
+            1040.8889
+          ],
+          "crossGrade": 0.36755133646315297,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            416.8889,
+            1073.7778
+          ],
+          "crossGrade": 0.38810608589901613,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            432.9231,
+            1106.7692
+          ],
+          "crossGrade": 0.3882975213035757,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            444.3077,
+            1140.9231
+          ],
+          "crossGrade": 0.409978154291667,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            455.6923,
+            1175.0769
+          ],
+          "crossGrade": 0.4114174444860573,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            467.0769,
+            1209.2308
+          ],
+          "crossGrade": 0.39506343247661097,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            478.4615,
+            1243.3846
+          ],
+          "crossGrade": 0.3737336983621062,
+          "dryBand": true
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    },
+    {
+      "id": "peak-ascent",
+      "lengthM": 2925.4036841213733,
+      "maxGrade": 0.2939297497422694,
+      "p95Grade": 0.29111663966681217,
+      "targetGrade": 0.3,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 1.0,
+      "widthAndTransverse35PercentPassFraction": 0.48882960986995666,
+      "maxTransverseGrade": 0.8105888905649796,
+      "widthConflicts": [
+        {
+          "xz": [
+            -568.0,
+            2104.0
+          ],
+          "crossGrade": 0.3577530903034438,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -676.9231,
+            2227.6923
+          ],
+          "crossGrade": 0.40557787590260247,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -586.7692,
+            2311.0769
+          ],
+          "crossGrade": 0.4422276854618905,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -668.6667,
+            2428.6667
+          ],
+          "crossGrade": 0.48775326236372674,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -701.0,
+            2520.0
+          ],
+          "crossGrade": 0.5750113094553493,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -564.3077,
+            2545.2308
+          ],
+          "crossGrade": 0.577580224357348,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -543.6923,
+            2618.7692
+          ],
+          "crossGrade": 0.6500744602111715,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -557.5385,
+            2686.1538
+          ],
+          "crossGrade": 0.7104086664149049,
+          "dryBand": true
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    },
+    {
+      "id": "hidden-loop",
+      "lengthM": 3961.227937764324,
+      "maxGrade": 0.27470767218083314,
+      "p95Grade": 0.25953490916927224,
+      "targetGrade": 0.28,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 1.0,
+      "widthAndTransverse35PercentPassFraction": 0.7459567056481712,
+      "maxTransverseGrade": 0.5561752319335386,
+      "widthConflicts": [
+        {
+          "xz": [
+            1444.0,
+            -564.0
+          ],
+          "crossGrade": 0.35034281226121694,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            1461.3333,
+            53.3333
+          ],
+          "crossGrade": 0.48152777300360833,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            1396.4138,
+            161.3793
+          ],
+          "crossGrade": 0.429730175086166,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            1058.2069,
+            323.3103
+          ],
+          "crossGrade": 0.35147130475003924,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            995.1111,
+            214.2222
+          ],
+          "crossGrade": 0.4325371479858622,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            960.0,
+            96.0
+          ],
+          "crossGrade": 0.49860763549799336,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            960.0,
+            -31.0
+          ],
+          "crossGrade": 0.5099482816807879,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            1006.2222,
+            -387.5556
+          ],
+          "crossGrade": 0.39734666098589305,
+          "dryBand": true
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    },
+    {
+      "id": "west-cape-spur",
+      "lengthM": 1728.6685666547846,
+      "maxGrade": 0.27863544681879104,
+      "p95Grade": 0.2050474257704593,
+      "targetGrade": 0.3,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 0.9937286202964652,
+      "widthAndTransverse35PercentPassFraction": 0.9937286202964652,
+      "maxTransverseGrade": 0.2693871537160257,
+      "widthConflicts": [
+        {
+          "xz": [
+            -478.3448,
+            -209.1034
+          ],
+          "crossGrade": 0.21044257147540227,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -479.1724,
+            -208.5517
+          ],
+          "crossGrade": 0.18892671434017796,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -480.0,
+            -208.0
+          ],
+          "crossGrade": 0.19340268424962367,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -480.8889,
+            -207.5556
+          ],
+          "crossGrade": 0.22005401794843618,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -481.7778,
+            -207.1111
+          ],
+          "crossGrade": 0.20991812272426688,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -482.6667,
+            -206.6667
+          ],
+          "crossGrade": 0.20395009539525855,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -483.5556,
+            -206.2222
+          ],
+          "crossGrade": 0.20187758759660443,
+          "dryBand": false
+        },
+        {
+          "xz": [
+            -484.4444,
+            -205.7778
+          ],
+          "crossGrade": 0.1963371069267966,
+          "dryBand": false
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    },
+    {
+      "id": "south-shoulder-loop",
+      "lengthM": 3387.254152557534,
+      "maxGrade": 0.29087498686946645,
+      "p95Grade": 0.24336765539190866,
+      "targetGrade": 0.3,
+      "overGradeSamples": 0,
+      "wetSamples": 0,
+      "dry3_4mBandFraction": 1.0,
+      "widthAndTransverse35PercentPassFraction": 0.8406466512702079,
+      "maxTransverseGrade": 0.4220975501824184,
+      "widthConflicts": [
+        {
+          "xz": [
+            -1416.0,
+            -2456.0
+          ],
+          "crossGrade": 0.35627559002294035,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1440.0,
+            -2392.0
+          ],
+          "crossGrade": 0.36752319335938505,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1436.0,
+            -2324.0
+          ],
+          "crossGrade": 0.4110506178144516,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1414.7692,
+            -2260.3077
+          ],
+          "crossGrade": 0.4148907298358792,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1390.6667,
+            -2197.3333
+          ],
+          "crossGrade": 0.42108323576782175,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1354.2069,
+            -2139.3103
+          ],
+          "crossGrade": 0.4127175508616014,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1316.1379,
+            -2082.2069
+          ],
+          "crossGrade": 0.39790290282871615,
+          "dryBand": true
+        },
+        {
+          "xz": [
+            -1278.069,
+            -2025.1034
+          ],
+          "crossGrade": 0.3767266470941835,
+          "dryBand": true
+        }
+      ],
+      "centrelinePass": true,
+      "fullCorridorPass": false
+    }
+  ],
+  "crossings": [
+    {
+      "id": "M1",
+      "a": [
+        352.95177948970553,
+        -1108.0089790012921
+      ],
+      "b": [
+        432.4140205102945,
+        -1133.381820998708
+      ],
+      "levelM": 11.33152,
+      "waterLevelM": 10.23152,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        11.126352214866467,
+        11.12574344338381
+      ],
+      "lengthM": 83.4148,
+      "maxRampGrade": 0.011432030923121653
+    },
+    {
+      "id": "H1",
+      "a": [
+        959.4855351820114,
+        -548.013178757002
+      ],
+      "b": [
+        1000.5144648179886,
+        -611.986821242998
+      ],
+      "levelM": 50.22883826069882,
+      "waterLevelM": 49.0,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        50.78861115893315,
+        50.814481258086346
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.03253572207708465
+    },
+    {
+      "id": "H2",
+      "a": [
+        1263.0680846806017,
+        289.06478166998033
+      ],
+      "b": [
+        1335.6313153193983,
+        266.46881833001964
+      ],
+      "levelM": 150.68998,
+      "waterLevelM": 149.58998,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        151.05628911971664,
+        151.0307204485366
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.02035050665092481
+    }
+  ],
+  "crestKnotMeasurements": [
+    {
+      "ridge": "n-main",
+      "xz": [
+        -1120.0,
+        2680.0
+      ],
+      "authoredM": 620,
+      "actualM": 620.0072021484375,
+      "deltaM": 0.0072021484375
+    },
+    {
+      "ridge": "n-main",
+      "xz": [
+        -710.0,
+        2570.0
+      ],
+      "authoredM": 740,
+      "actualM": 740.0850830078125,
+      "deltaM": 0.0850830078125
+    },
+    {
+      "ridge": "n-main",
+      "xz": [
+        -520.0,
+        2770.0
+      ],
+      "authoredM": 900,
+      "actualM": 899.9566955566406,
+      "deltaM": -0.043304443359375
+    },
+    {
+      "ridge": "n-main",
+      "xz": [
+        -230.0,
+        2540.0
+      ],
+      "authoredM": 730,
+      "actualM": 729.9833068847656,
+      "deltaM": -0.016693115234375
+    },
+    {
+      "ridge": "n-main",
+      "xz": [
+        70.0,
+        2290.0
+      ],
+      "authoredM": 600,
+      "actualM": 599.911865234375,
+      "deltaM": -0.088134765625
+    },
+    {
+      "ridge": "n-main",
+      "xz": [
+        240.0,
+        1920.0
+      ],
+      "authoredM": 470,
+      "actualM": 471.3813781738281,
+      "deltaM": 1.381378173828125
+    },
+    {
+      "ridge": "n-crown",
+      "xz": [
+        -520.0,
+        2770.0
+      ],
+      "authoredM": 900,
+      "actualM": 899.9566955566406,
+      "deltaM": -0.043304443359375
+    },
+    {
+      "ridge": "n-crown",
+      "xz": [
+        -370.0,
+        3090.0
+      ],
+      "authoredM": 820,
+      "actualM": 819.9926147460938,
+      "deltaM": -0.00738525390625
+    },
+    {
+      "ridge": "n-crown",
+      "xz": [
+        -100.0,
+        3240.0
+      ],
+      "authoredM": 620,
+      "actualM": 621.567138671875,
+      "deltaM": 1.567138671875
+    },
+    {
+      "ridge": "n-west-spur",
+      "xz": [
+        -710.0,
+        2570.0
+      ],
+      "authoredM": 740,
+      "actualM": 740.0850830078125,
+      "deltaM": 0.0850830078125
+    },
+    {
+      "ridge": "n-west-spur",
+      "xz": [
+        -970.0,
+        2020.0
+      ],
+      "authoredM": 420,
+      "actualM": 419.9607849121094,
+      "deltaM": -0.039215087890625
+    },
+    {
+      "ridge": "n-west-spur",
+      "xz": [
+        -1260.0,
+        1640.0
+      ],
+      "authoredM": 210,
+      "actualM": 210.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "n-west-spur",
+      "xz": [
+        -1540.0,
+        1490.0
+      ],
+      "authoredM": 80,
+      "actualM": 80.42366790771484,
+      "deltaM": 0.42366790771484375
+    },
+    {
+      "ridge": "n-nw-cape",
+      "xz": [
+        -1120.0,
+        2680.0
+      ],
+      "authoredM": 620,
+      "actualM": 620.0072021484375,
+      "deltaM": 0.0072021484375
+    },
+    {
+      "ridge": "n-nw-cape",
+      "xz": [
+        -1350.0,
+        2740.0
+      ],
+      "authoredM": 380,
+      "actualM": 380.28997802734375,
+      "deltaM": 0.28997802734375
+    },
+    {
+      "ridge": "n-nw-cape",
+      "xz": [
+        -1570.0,
+        2570.0
+      ],
+      "authoredM": 210,
+      "actualM": 210.2025909423828,
+      "deltaM": 0.2025909423828125
+    },
+    {
+      "ridge": "n-nw-cape",
+      "xz": [
+        -1880.0,
+        2450.0
+      ],
+      "authoredM": 65,
+      "actualM": 65.35404586791992,
+      "deltaM": 0.3540458679199219
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        -230.0,
+        2540.0
+      ],
+      "authoredM": 730,
+      "actualM": 729.9833068847656,
+      "deltaM": -0.016693115234375
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        90.0,
+        2770.0
+      ],
+      "authoredM": 650,
+      "actualM": 649.9786376953125,
+      "deltaM": -0.0213623046875
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        540.0,
+        2760.0
+      ],
+      "authoredM": 590,
+      "actualM": 590.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        870.0,
+        2880.0
+      ],
+      "authoredM": 620,
+      "actualM": 619.9970092773438,
+      "deltaM": -0.00299072265625
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        1230.0,
+        2740.0
+      ],
+      "authoredM": 570,
+      "actualM": 576.9589233398438,
+      "deltaM": 6.95892333984375
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        1460.0,
+        2530.0
+      ],
+      "authoredM": 515,
+      "actualM": 514.9814453125,
+      "deltaM": -0.0185546875
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        1610.0,
+        2200.0
+      ],
+      "authoredM": 460,
+      "actualM": 459.9488220214844,
+      "deltaM": -0.051177978515625
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        1520.0,
+        1830.0
+      ],
+      "authoredM": 355,
+      "actualM": 354.99317932128906,
+      "deltaM": -0.0068206787109375
+    },
+    {
+      "ridge": "n-east-arc",
+      "xz": [
+        1320.0,
+        1600.0
+      ],
+      "authoredM": 275,
+      "actualM": 279.49639892578125,
+      "deltaM": 4.49639892578125
+    },
+    {
+      "ridge": "pass-north-flank",
+      "xz": [
+        240.0,
+        1920.0
+      ],
+      "authoredM": 470,
+      "actualM": 471.3813781738281,
+      "deltaM": 1.381378173828125
+    },
+    {
+      "ridge": "pass-north-flank",
+      "xz": [
+        110.0,
+        1500.0
+      ],
+      "authoredM": 410,
+      "actualM": 409.9522399902344,
+      "deltaM": -0.047760009765625
+    },
+    {
+      "ridge": "pass-north-flank",
+      "xz": [
+        -60.0,
+        1190.0
+      ],
+      "authoredM": 330,
+      "actualM": 330.22560119628906,
+      "deltaM": 0.2256011962890625
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -130.0,
+        630.0
+      ],
+      "authoredM": 285,
+      "actualM": 284.663818359375,
+      "deltaM": -0.336181640625
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -270.0,
+        330.0
+      ],
+      "authoredM": 225,
+      "actualM": 224.9754638671875,
+      "deltaM": -0.0245361328125
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -290.0,
+        10.0
+      ],
+      "authoredM": 185,
+      "actualM": 184.9383773803711,
+      "deltaM": -0.06162261962890625
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -210.0,
+        -310.0
+      ],
+      "authoredM": 145,
+      "actualM": 144.93385314941406,
+      "deltaM": -0.0661468505859375
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -220.0,
+        -660.0
+      ],
+      "authoredM": 120,
+      "actualM": 120.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -180.0,
+        -1020.0
+      ],
+      "authoredM": 105,
+      "actualM": 105.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "pass-south-flank",
+      "xz": [
+        -300.0,
+        -1420.0
+      ],
+      "authoredM": 115,
+      "actualM": 115.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "forest-west-spur",
+      "xz": [
+        -290.0,
+        10.0
+      ],
+      "authoredM": 185,
+      "actualM": 184.9383773803711,
+      "deltaM": -0.06162261962890625
+    },
+    {
+      "ridge": "forest-west-spur",
+      "xz": [
+        -590.0,
+        -90.0
+      ],
+      "authoredM": 142,
+      "actualM": 141.99061584472656,
+      "deltaM": -0.0093841552734375
+    },
+    {
+      "ridge": "forest-west-spur",
+      "xz": [
+        -810.0,
+        -290.0
+      ],
+      "authoredM": 100,
+      "actualM": 99.99746322631836,
+      "deltaM": -0.002536773681640625
+    },
+    {
+      "ridge": "forest-west-spur",
+      "xz": [
+        -1040.0,
+        -430.0
+      ],
+      "authoredM": 48,
+      "actualM": 48.18083953857422,
+      "deltaM": 0.18083953857421875
+    },
+    {
+      "ridge": "forest-lower-spur",
+      "xz": [
+        -180.0,
+        -1020.0
+      ],
+      "authoredM": 105,
+      "actualM": 105.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "forest-lower-spur",
+      "xz": [
+        -420.0,
+        -1250.0
+      ],
+      "authoredM": 96,
+      "actualM": 104.33562850952148,
+      "deltaM": 8.335628509521484
+    },
+    {
+      "ridge": "forest-lower-spur",
+      "xz": [
+        -690.0,
+        -1310.0
+      ],
+      "authoredM": 80,
+      "actualM": 102.66279220581055,
+      "deltaM": 22.662792205810547
+    },
+    {
+      "ridge": "forest-lower-spur",
+      "xz": [
+        -920.0,
+        -1470.0
+      ],
+      "authoredM": 55,
+      "actualM": 117.12865829467773,
+      "deltaM": 62.128658294677734
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1320.0,
+        1600.0
+      ],
+      "authoredM": 275,
+      "actualM": 279.49639892578125,
+      "deltaM": 4.49639892578125
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1220.0,
+        1250.0
+      ],
+      "authoredM": 245,
+      "actualM": 245.5118179321289,
+      "deltaM": 0.5118179321289062
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1210.0,
+        900.0
+      ],
+      "authoredM": 300,
+      "actualM": 300.25616455078125,
+      "deltaM": 0.25616455078125
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1460.0,
+        730.0
+      ],
+      "authoredM": 340,
+      "actualM": 339.9683074951172,
+      "deltaM": -0.0316925048828125
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1670.0,
+        480.0
+      ],
+      "authoredM": 310,
+      "actualM": 309.95550537109375,
+      "deltaM": -0.04449462890625
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1740.0,
+        150.0
+      ],
+      "authoredM": 245,
+      "actualM": 245.00093841552734,
+      "deltaM": 0.00093841552734375
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1620.0,
+        -210.0
+      ],
+      "authoredM": 190,
+      "actualM": 189.99005889892578,
+      "deltaM": -0.00994110107421875
+    },
+    {
+      "ridge": "e-linked-rim",
+      "xz": [
+        1410.0,
+        -530.0
+      ],
+      "authoredM": 145,
+      "actualM": 145.0842742919922,
+      "deltaM": 0.0842742919921875
+    },
+    {
+      "ridge": "fold-west-rim",
+      "xz": [
+        1210.0,
+        900.0
+      ],
+      "authoredM": 300,
+      "actualM": 300.25616455078125,
+      "deltaM": 0.25616455078125
+    },
+    {
+      "ridge": "fold-west-rim",
+      "xz": [
+        920.0,
+        760.0
+      ],
+      "authoredM": 315,
+      "actualM": 315.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "fold-west-rim",
+      "xz": [
+        760.0,
+        420.0
+      ],
+      "authoredM": 260,
+      "actualM": 260.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "fold-west-rim",
+      "xz": [
+        860.0,
+        -40.0
+      ],
+      "authoredM": 210,
+      "actualM": 210.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "fold-west-rim",
+      "xz": [
+        900.0,
+        -390.0
+      ],
+      "authoredM": 150,
+      "actualM": 150.1643829345703,
+      "deltaM": 0.1643829345703125
+    },
+    {
+      "ridge": "fold-east-coast",
+      "xz": [
+        1670.0,
+        480.0
+      ],
+      "authoredM": 310,
+      "actualM": 309.95550537109375,
+      "deltaM": -0.04449462890625
+    },
+    {
+      "ridge": "fold-east-coast",
+      "xz": [
+        1930.0,
+        350.0
+      ],
+      "authoredM": 150,
+      "actualM": 150.37175750732422,
+      "deltaM": 0.37175750732421875
+    },
+    {
+      "ridge": "fold-east-coast",
+      "xz": [
+        2070.0,
+        220.0
+      ],
+      "authoredM": 55,
+      "actualM": 55.61394119262695,
+      "deltaM": 0.6139411926269531
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -300.0,
+        -1420.0
+      ],
+      "authoredM": 115,
+      "actualM": 115.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -470.0,
+        -1650.0
+      ],
+      "authoredM": 145,
+      "actualM": 145.0000991821289,
+      "deltaM": 9.918212890625e-05
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -600.0,
+        -1840.0
+      ],
+      "authoredM": 195,
+      "actualM": 195.20614624023438,
+      "deltaM": 0.206146240234375
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -610.0,
+        -2180.0
+      ],
+      "authoredM": 285,
+      "actualM": 284.9536590576172,
+      "deltaM": -0.0463409423828125
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -410.0,
+        -2600.0
+      ],
+      "authoredM": 220,
+      "actualM": 219.9689483642578,
+      "deltaM": -0.0310516357421875
+    },
+    {
+      "ridge": "south-connector",
+      "xz": [
+        -50.0,
+        -2910.0
+      ],
+      "authoredM": 130,
+      "actualM": 130.24009704589844,
+      "deltaM": 0.2400970458984375
+    },
+    {
+      "ridge": "south-west-cape",
+      "xz": [
+        -610.0,
+        -2180.0
+      ],
+      "authoredM": 285,
+      "actualM": 284.9536590576172,
+      "deltaM": -0.0463409423828125
+    },
+    {
+      "ridge": "south-west-cape",
+      "xz": [
+        -930.0,
+        -2150.0
+      ],
+      "authoredM": 255,
+      "actualM": 254.96585083007812,
+      "deltaM": -0.034149169921875
+    },
+    {
+      "ridge": "south-west-cape",
+      "xz": [
+        -1240.0,
+        -2330.0
+      ],
+      "authoredM": 205,
+      "actualM": 204.9581298828125,
+      "deltaM": -0.0418701171875
+    },
+    {
+      "ridge": "south-west-cape",
+      "xz": [
+        -1500.0,
+        -2480.0
+      ],
+      "authoredM": 135,
+      "actualM": 135.0,
+      "deltaM": 0.0
+    },
+    {
+      "ridge": "south-west-cape",
+      "xz": [
+        -1850.0,
+        -2550.0
+      ],
+      "authoredM": 55,
+      "actualM": 55.183000564575195,
+      "deltaM": 0.1830005645751953
+    },
+    {
+      "ridge": "south-north-spur",
+      "xz": [
+        -600.0,
+        -1840.0
+      ],
+      "authoredM": 195,
+      "actualM": 195.20614624023438,
+      "deltaM": 0.206146240234375
+    },
+    {
+      "ridge": "south-north-spur",
+      "xz": [
+        -870.0,
+        -1670.0
+      ],
+      "authoredM": 175,
+      "actualM": 174.95833587646484,
+      "deltaM": -0.04166412353515625
+    },
+    {
+      "ridge": "south-north-spur",
+      "xz": [
+        -1140.0,
+        -1680.0
+      ],
+      "authoredM": 130,
+      "actualM": 130.1480255126953,
+      "deltaM": 0.1480255126953125
+    },
+    {
+      "ridge": "south-north-spur",
+      "xz": [
+        -1420.0,
+        -1860.0
+      ],
+      "authoredM": 45,
+      "actualM": 53.459442138671875,
+      "deltaM": 8.459442138671875
+    },
+    {
+      "ridge": "south-low-tail",
+      "xz": [
+        -50.0,
+        -2910.0
+      ],
+      "authoredM": 130,
+      "actualM": 130.24009704589844,
+      "deltaM": 0.2400970458984375
+    },
+    {
+      "ridge": "south-low-tail",
+      "xz": [
+        220.0,
+        -3090.0
+      ],
+      "authoredM": 90,
+      "actualM": 89.97290802001953,
+      "deltaM": -0.02709197998046875
+    },
+    {
+      "ridge": "south-low-tail",
+      "xz": [
+        450.0,
+        -3440.0
+      ],
+      "authoredM": 8,
+      "actualM": -1.5206235647201538,
+      "deltaM": -9.520623564720154
+    }
+  ],
+  "coast": {
+    "sampledNormals": 2906,
+    "zeroCrossingsWithin16m": 2899,
+    "medianAbsoluteDeviationM": 0.5157354841940567,
+    "p95AbsoluteDeviationM": 1.6699818011615561,
+    "maxAbsoluteDeviationM": 14.655005066721955,
+    "exceptionsOver4mOrNoCrossingWithin16m": [
+      {
+        "xz": [
+          1401.0048,
+          -2382.8886
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          1399.5723,
+          -2392.9837
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          1398.4858,
+          -2403.0616
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          1397.7453,
+          -2413.1221
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          1397.3509,
+          -2423.1654
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          -1731.6064,
+          -1111.4351
+        ],
+        "offsetM": -5.3870649512515
+      },
+      {
+        "xz": [
+          -1723.4052,
+          -1105.6718
+        ],
+        "offsetM": -14.655005066721955
+      },
+      {
+        "xz": [
+          -1715.2942,
+          -1099.7603
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          -1707.2735,
+          -1093.7006
+        ],
+        "offsetM": null
+      },
+      {
+        "xz": [
+          -1377.3785,
+          506.5745
+        ],
+        "offsetM": -7.752630366117854
+      },
+      {
+        "xz": [
+          -1368.9182,
+          511.6814
+        ],
+        "offsetM": -13.115924854810777
+      },
+      {
+        "xz": [
+          -1360.4927,
+          517.0426
+        ],
+        "offsetM": -11.532440427277237
+      },
+      {
+        "xz": [
+          -1642.7542,
+          1611.9888
+        ],
+        "offsetM": -11.864297476983639
+      },
+      {
+        "xz": [
+          -1636.3436,
+          1619.6307
+        ],
+        "offsetM": -12.22091095284535
+      }
+    ]
+  },
+  "waterMesh": {
+    "file": "water-mesh.f32",
+    "vertices": 335565,
+    "surfaceFile": "water-surface.f32",
+    "surfaceSha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+    "meshSha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+    "method": "canonical-triangle H=W clipping; ocean-side boundary 0 m; water plane 0.025 m render offset",
+    "maxComputedShoreIntersectionErrorM": 2.842170943040401e-14,
+    "openDomainTriangles": 20,
+    "openDomainAboveSeaTriangles": 0,
+    "openDomainExamples": []
+  }
+}

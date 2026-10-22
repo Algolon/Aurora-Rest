@@ -1,0 +1,870 @@
+{
+  "scope": "Actual raster water surface and connected submerged nodes, plus exact legacy low-bank probes. Connectivity is geometric and does not imply hydraulic simulation.",
+  "channels": [
+    {
+      "id": "tarn-inlet-w",
+      "minActualDepthM": 1.5999755859375,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.215362548828125,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "tarn-inlet-n",
+      "minActualDepthM": 1.5999755859375,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 1.061187744140625,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "main-upper",
+      "minActualDepthM": 1.5999755859375,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.027027839255325148,
+      "maxDifferenceFromAuthoredSurfaceM": 0.180633544921875,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "main-mire-upper",
+      "minActualDepthM": 1.5999994277954102,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.044699668884277344,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "main-mire-out",
+      "minActualDepthM": 1.5987020206340588,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.0031242847442625177,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "fold-inlet",
+      "minActualDepthM": 1.5999792854308907,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.34523773193359375,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "fold-outlet",
+      "minActualDepthM": 1.5999956158637971,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.11113357543945312,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "birch-upper-in",
+      "minActualDepthM": 1.5999908447265625,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.1407318115234375,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "birch-upper-outlet",
+      "minActualDepthM": 1.397551151011135,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.23128128051757812,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "birch-lower-in",
+      "minActualDepthM": 1.5999984741210938,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.07718276977539062,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "birch-lower-outlet",
+      "minActualDepthM": 1.5999984741210938,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.03513526916503906,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "windward-gully",
+      "minActualDepthM": 1.5999914161682227,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0,
+      "maxDifferenceFromAuthoredSurfaceM": 0.163238525390625,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    },
+    {
+      "id": "south-fen-tributary",
+      "minActualDepthM": 1.5999984741210938,
+      "nonfiniteActualSurfaceSamples": 0,
+      "maxActualSurfaceRiseM": 0.0011816924571981247,
+      "maxDifferenceFromAuthoredSurfaceM": 0.3316078186035156,
+      "wetComponentIds": [
+        1
+      ],
+      "sourceComponent": 1,
+      "outletComponent": 1,
+      "sameConnectedWetComponent": true
+    }
+  ],
+  "lakes": [
+    {
+      "id": "high-tarn",
+      "levelM": 360,
+      "maxInteriorSurfaceDeviationM": 0.0,
+      "nonfiniteSamples": 0
+    },
+    {
+      "id": "hidden-lake",
+      "levelM": 118,
+      "maxInteriorSurfaceDeviationM": 0.0,
+      "nonfiniteSamples": 0
+    },
+    {
+      "id": "birch-upper-lake",
+      "levelM": 86,
+      "maxInteriorSurfaceDeviationM": 0.0,
+      "nonfiniteSamples": 0
+    },
+    {
+      "id": "birch-lower-lake",
+      "levelM": 48,
+      "maxInteriorSurfaceDeviationM": 0.0,
+      "nonfiniteSamples": 0
+    }
+  ],
+  "legacyLowBankCount": 59,
+  "legacyLowBankClassifications": {
+    "actual wet cross-section outside original nominal bank probe": 1,
+    "lower actual surface from projection": 1,
+    "outside authored coast / ocean-side normal probe": 51,
+    "overlapping tributary cross-section": 6
+  },
+  "legacyLowBankLocations": [
+    {
+      "channel": "main-mire-upper",
+      "xz": [
+        585.113,
+        -1467.939
+      ],
+      "authoredReferenceM": 7.28168,
+      "terrainM": 6.763363141562565,
+      "actualSurfaceM": 7.230315479220353,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "main-mire-upper",
+      "xz": [
+        657.611,
+        -1497.779
+      ],
+      "authoredReferenceM": 6.86606,
+      "terrainM": 6.421317513022745,
+      "actualSurfaceM": 6.820211934462688,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "main-mire-upper",
+      "xz": [
+        659.776,
+        -1498.63
+      ],
+      "authoredReferenceM": 6.85366,
+      "terrainM": 6.543503424206487,
+      "actualSurfaceM": 6.809822765611906,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1403.769,
+        -2375.566
+      ],
+      "authoredReferenceM": 0.09742,
+      "terrainM": -0.2426487747779985,
+      "actualSurfaceM": 0.006099110318802486,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1404.875,
+        -2376.938
+      ],
+      "authoredReferenceM": 0.09031,
+      "terrainM": -0.3345572634161255,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1405.95,
+        -2378.272
+      ],
+      "authoredReferenceM": 0.08339,
+      "terrainM": -0.3801491161566309,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1406.993,
+        -2379.565
+      ],
+      "authoredReferenceM": 0.07666,
+      "terrainM": -0.45424907922268654,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1408.002,
+        -2380.816
+      ],
+      "authoredReferenceM": 0.07013,
+      "terrainM": -0.525190664323638,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "fold-outlet",
+      "xz": [
+        600.003,
+        -741.178
+      ],
+      "authoredReferenceM": 14.96107,
+      "terrainM": 14.626903024786017,
+      "actualSurfaceM": 14.09111009160701,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "fold-outlet",
+      "xz": [
+        598.64,
+        -741.966
+      ],
+      "authoredReferenceM": 14.89543,
+      "terrainM": 14.265559771332219,
+      "actualSurfaceM": 14.0891858708783,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "fold-outlet",
+      "xz": [
+        597.312,
+        -742.733
+      ],
+      "authoredReferenceM": 14.83146,
+      "terrainM": 13.91381483972081,
+      "actualSurfaceM": 14.088037486124614,
+      "classification": "overlapping tributary cross-section"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1308.722,
+        556.929
+      ],
+      "authoredReferenceM": 7.19855,
+      "terrainM": 4.73590672197985,
+      "actualSurfaceM": 4.247510287915801,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1311.138,
+        555.994
+      ],
+      "authoredReferenceM": 6.93774,
+      "terrainM": 1.5586612359569054,
+      "actualSurfaceM": 1.5681673588775515,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1313.542,
+        555.062
+      ],
+      "authoredReferenceM": 6.67826,
+      "terrainM": -0.3097581585018187,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1315.93,
+        554.134
+      ],
+      "authoredReferenceM": 6.42032,
+      "terrainM": -0.33335739546414206,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1318.301,
+        553.212
+      ],
+      "authoredReferenceM": 6.16413,
+      "terrainM": -0.3336523148836986,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1320.653,
+        552.296
+      ],
+      "authoredReferenceM": 5.9099,
+      "terrainM": -0.3758240807833291,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1322.983,
+        551.387
+      ],
+      "authoredReferenceM": 5.65784,
+      "terrainM": -0.44108000676898057,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1325.291,
+        550.485
+      ],
+      "authoredReferenceM": 5.40816,
+      "terrainM": -0.4994453268298398,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1327.574,
+        549.592
+      ],
+      "authoredReferenceM": 5.16108,
+      "terrainM": -0.5576671421027687,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1329.831,
+        548.709
+      ],
+      "authoredReferenceM": 4.9168,
+      "terrainM": -0.6150322711435577,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1332.058,
+        547.836
+      ],
+      "authoredReferenceM": 4.67553,
+      "terrainM": -0.6711857846134579,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1334.255,
+        546.974
+      ],
+      "authoredReferenceM": 4.43749,
+      "terrainM": -0.7249858127345155,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1336.42,
+        546.124
+      ],
+      "authoredReferenceM": 4.20289,
+      "terrainM": -0.7776752996224209,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1338.55,
+        545.287
+      ],
+      "authoredReferenceM": 3.97193,
+      "terrainM": -0.8282623806361689,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1340.644,
+        544.464
+      ],
+      "authoredReferenceM": 3.74483,
+      "terrainM": -0.8778012986514774,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1342.7,
+        543.655
+      ],
+      "authoredReferenceM": 3.5218,
+      "terrainM": -0.9251451748593638,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1344.715,
+        542.862
+      ],
+      "authoredReferenceM": 3.30305,
+      "terrainM": -0.970757342278568,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1346.689,
+        542.085
+      ],
+      "authoredReferenceM": 3.08879,
+      "terrainM": -1.0146839199063162,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1348.618,
+        541.325
+      ],
+      "authoredReferenceM": 2.87924,
+      "terrainM": -1.0572961362472766,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1350.501,
+        540.583
+      ],
+      "authoredReferenceM": 2.67459,
+      "terrainM": -1.097890661679186,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1352.337,
+        539.861
+      ],
+      "authoredReferenceM": 2.47507,
+      "terrainM": -1.1371637240815282,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1354.122,
+        539.157
+      ],
+      "authoredReferenceM": 2.28088,
+      "terrainM": -1.174111435107975,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1355.855,
+        538.475
+      ],
+      "authoredReferenceM": 2.09223,
+      "terrainM": -1.2100033763647988,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1357.535,
+        537.814
+      ],
+      "authoredReferenceM": 1.90934,
+      "terrainM": -1.2435652206195333,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1695.7,
+        -1083.967
+      ],
+      "authoredReferenceM": 0.47421,
+      "terrainM": -0.17156020893562457,
+      "actualSurfaceM": 0.036188825604887453,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1697.305,
+        -1083.976
+      ],
+      "authoredReferenceM": 0.44468,
+      "terrainM": -0.30000001192092896,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1698.873,
+        -1083.985
+      ],
+      "authoredReferenceM": 0.41583,
+      "terrainM": -0.30000001192092896,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1700.405,
+        -1083.994
+      ],
+      "authoredReferenceM": 0.38765,
+      "terrainM": -0.3155062874363611,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1701.899,
+        -1084.003
+      ],
+      "authoredReferenceM": 0.36018,
+      "terrainM": -0.3713061282335024,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1703.353,
+        -1084.012
+      ],
+      "authoredReferenceM": 0.33343,
+      "terrainM": -0.42568047231742207,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1704.769,
+        -1084.021
+      ],
+      "authoredReferenceM": 0.30739,
+      "terrainM": -0.487259216191298,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1706.147,
+        -1084.03
+      ],
+      "authoredReferenceM": 0.2821,
+      "terrainM": -0.5549079526596944,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1606.227,
+        1660.182
+      ],
+      "authoredReferenceM": 6.20349,
+      "terrainM": 3.1586157472289935,
+      "actualSurfaceM": 2.86081609059232,
+      "classification": "lower actual surface from projection"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1608.245,
+        1658.948
+      ],
+      "authoredReferenceM": 5.91104,
+      "terrainM": 1.046789045921063,
+      "actualSurfaceM": 1.1589664941192392,
+      "classification": "actual wet cross-section outside original nominal bank probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1610.238,
+        1657.729
+      ],
+      "authoredReferenceM": 5.6222,
+      "terrainM": -0.245638181771477,
+      "actualSurfaceM": 0.0467807027460454,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1612.204,
+        1656.527
+      ],
+      "authoredReferenceM": 5.33722,
+      "terrainM": -0.3041083812436205,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1614.141,
+        1655.341
+      ],
+      "authoredReferenceM": 5.05634,
+      "terrainM": -0.32988642499373344,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1616.048,
+        1654.174
+      ],
+      "authoredReferenceM": 4.77981,
+      "terrainM": -0.34595445051426493,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1617.923,
+        1653.026
+      ],
+      "authoredReferenceM": 4.50788,
+      "terrainM": -0.40602942605538933,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1619.764,
+        1651.898
+      ],
+      "authoredReferenceM": 4.24079,
+      "terrainM": -0.4625859404343928,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1621.569,
+        1650.792
+      ],
+      "authoredReferenceM": 3.97879,
+      "terrainM": -0.5286037610273527,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1623.338,
+        1649.709
+      ],
+      "authoredReferenceM": 3.72213,
+      "terrainM": -0.5985104591919121,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1625.068,
+        1648.649
+      ],
+      "authoredReferenceM": 3.47104,
+      "terrainM": -0.6660388493539289,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1626.757,
+        1647.613
+      ],
+      "authoredReferenceM": 3.22578,
+      "terrainM": -0.7310288019404118,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1628.404,
+        1646.604
+      ],
+      "authoredReferenceM": 2.98659,
+      "terrainM": -0.7933359178802941,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1630.007,
+        1645.621
+      ],
+      "authoredReferenceM": 2.75372,
+      "terrainM": -0.8530123726946622,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1631.565,
+        1644.667
+      ],
+      "authoredReferenceM": 2.52741,
+      "terrainM": -0.9111244431755299,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1633.076,
+        1643.741
+      ],
+      "authoredReferenceM": 2.30792,
+      "terrainM": -0.9664982350180975,
+      "actualSurfaceM": 0.0,
+      "classification": "outside authored coast / ocean-side normal probe"
+    }
+  ],
+  "waterMesh": {
+    "file": "water-mesh.f32",
+    "vertices": 335565,
+    "surfaceFile": "water-surface.f32",
+    "surfaceSha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+    "meshSha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+    "method": "canonical-triangle H=W clipping; ocean-side boundary 0 m; water plane 0.025 m render offset",
+    "maxComputedShoreIntersectionErrorM": 2.842170943040401e-14,
+    "openDomainTriangles": 20,
+    "openDomainAboveSeaTriangles": 0,
+    "openDomainExamples": []
+  }
+}

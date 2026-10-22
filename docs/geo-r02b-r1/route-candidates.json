@@ -1,0 +1,423 @@
+{
+  "routes": [
+    {
+      "id": "hero",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            1670.0,
+            -1900.0
+          ],
+          "end": [
+            432.4140205102945,
+            -1133.381820998708
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            432.4140205102945,
+            -1133.381820998708
+          ],
+          "end": [
+            352.95177948970553,
+            -1108.0089790012921
+          ],
+          "searchRadiusM": 0,
+          "status": "crossing"
+        },
+        {
+          "start": [
+            352.95177948970553,
+            -1108.0089790012921
+          ],
+          "end": [
+            -340.0,
+            -1050.0
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            -340.0,
+            -1050.0
+          ],
+          "end": [
+            -350.0,
+            -290.0
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            -350.0,
+            -290.0
+          ],
+          "end": [
+            90.0,
+            80.0
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            90.0,
+            80.0
+          ],
+          "end": [
+            260.0,
+            830.0
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            260.0,
+            830.0
+          ],
+          "end": [
+            40.0,
+            920.0
+          ],
+          "searchRadiusM": 65.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 4926.305164252544,
+      "maximumDepartureM": 61.7680233648447,
+      "outsideOriginalReservationFraction": 0.0,
+      "maxGrade": 0.24440574645996094,
+      "p95Grade": 0.23612858463630157,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    },
+    {
+      "id": "tarn-ascent",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            260.0,
+            830.0
+          ],
+          "end": [
+            700.0,
+            1950.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 1228.5120974803256,
+      "maximumDepartureM": 57.04713457253044,
+      "outsideOriginalReservationFraction": 0.006394884092725819,
+      "maxGrade": 0.2930363948555415,
+      "p95Grade": 0.2912815710519317,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    },
+    {
+      "id": "peak-ascent",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            40.0,
+            920.0
+          ],
+          "end": [
+            -520.0,
+            2770.0
+          ],
+          "searchRadiusM": 75.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 2925.403682864884,
+      "maximumDepartureM": 81.21473034615514,
+      "outsideOriginalReservationFraction": 0.011003667889296432,
+      "maxGrade": 0.29391097192158927,
+      "p95Grade": 0.29111158932078435,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    },
+    {
+      "id": "hidden-loop",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            1140.0,
+            -1520.0
+          ],
+          "end": [
+            1450.0,
+            -520.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            1450.0,
+            -520.0
+          ],
+          "end": [
+            1480.0,
+            20.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            1480.0,
+            20.0
+          ],
+          "end": [
+            1335.6313153193983,
+            266.46881833001964
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            1335.6313153193983,
+            266.46881833001964
+          ],
+          "end": [
+            1263.0680846806017,
+            289.06478166998033
+          ],
+          "searchRadiusM": 0,
+          "status": "crossing"
+        },
+        {
+          "start": [
+            1263.0680846806017,
+            289.06478166998033
+          ],
+          "end": [
+            1100.0,
+            380.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            1100.0,
+            380.0
+          ],
+          "end": [
+            990.0,
+            -220.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            990.0,
+            -220.0
+          ],
+          "end": [
+            959.4855351820114,
+            -548.013178757002
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            959.4855351820114,
+            -548.013178757002
+          ],
+          "end": [
+            1000.5144648179886,
+            -611.986821242998
+          ],
+          "searchRadiusM": 0,
+          "status": "crossing"
+        },
+        {
+          "start": [
+            1000.5144648179886,
+            -611.986821242998
+          ],
+          "end": [
+            750.0,
+            -1170.0
+          ],
+          "searchRadiusM": 55.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 3961.2279089892863,
+      "maximumDepartureM": 32.02498978298046,
+      "outsideOriginalReservationFraction": 0.0,
+      "maxGrade": 0.27470767218079967,
+      "p95Grade": 0.2595396139832111,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    },
+    {
+      "id": "west-cape-spur",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            -350.0,
+            -290.0
+          ],
+          "end": [
+            -1970.0,
+            220.0
+          ],
+          "searchRadiusM": 80.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 1728.6685659338277,
+      "maximumDepartureM": 51.854603630155424,
+      "outsideOriginalReservationFraction": 0.0,
+      "maxGrade": 0.2786321376840157,
+      "p95Grade": 0.2050391351701885,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    },
+    {
+      "id": "south-shoulder-loop",
+      "status": "pass grade and dry centreline; width review separate",
+      "legs": [
+        {
+          "start": [
+            -340.0,
+            -1050.0
+          ],
+          "end": [
+            -930.0,
+            -2150.0
+          ],
+          "searchRadiusM": 85.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            -930.0,
+            -2150.0
+          ],
+          "end": [
+            -1440.0,
+            -2460.0
+          ],
+          "searchRadiusM": 85.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            -1440.0,
+            -2460.0
+          ],
+          "end": [
+            -870.0,
+            -1670.0
+          ],
+          "searchRadiusM": 85.0,
+          "status": "candidate"
+        },
+        {
+          "start": [
+            -870.0,
+            -1670.0
+          ],
+          "end": [
+            -450.0,
+            -1510.0
+          ],
+          "searchRadiusM": 85.0,
+          "status": "candidate"
+        }
+      ],
+      "lengthM": 3387.2541509398916,
+      "maximumDepartureM": 81.73959564048559,
+      "outsideOriginalReservationFraction": 0.0,
+      "maxGrade": 0.2908714232388793,
+      "p95Grade": 0.24336765539202115,
+      "wetSamples": 0,
+      "endpointsPreserved": true
+    }
+  ],
+  "crossings": [
+    {
+      "id": "M1",
+      "a": [
+        352.95177948970553,
+        -1108.0089790012921
+      ],
+      "b": [
+        432.4140205102945,
+        -1133.381820998708
+      ],
+      "levelM": 11.33152,
+      "waterLevelM": 10.23152,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        11.126352214866467,
+        11.12574344338381
+      ],
+      "lengthM": 83.4148,
+      "maxRampGrade": 0.011432030923121653
+    },
+    {
+      "id": "H1",
+      "a": [
+        959.4855351820114,
+        -548.013178757002
+      ],
+      "b": [
+        1000.5144648179886,
+        -611.986821242998
+      ],
+      "levelM": 50.22883826069882,
+      "waterLevelM": 49.0,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        50.78861115893315,
+        50.814481258086346
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.03253572207708465
+    },
+    {
+      "id": "H2",
+      "a": [
+        1263.0680846806017,
+        289.06478166998033
+      ],
+      "b": [
+        1335.6313153193983,
+        266.46881833001964
+      ],
+      "levelM": 150.68998,
+      "waterLevelM": 149.58998,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        151.05628911971664,
+        151.0307204485366
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.02035050665092481
+    }
+  ]
+}

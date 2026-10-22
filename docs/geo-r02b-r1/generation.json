@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "milestone": "GEO-R02B-R1",
+  "masterId": "aurora-rest-concept-a-r1",
+  "masterRevision": "GEO-R02A-R1.1",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "generatorVersion": "joint-obstacle-5",
+  "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4.0,
+    "west": -3000,
+    "north": 4000,
+    "rowDirection": "south",
+    "dataType": "float32-le"
+  },
+  "heightRangeM": [
+    -141.90063730551742,
+    899.9600319339011
+  ],
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "runtimeNote": "Joint authored landform interpolation; not erosion or fluid simulation.",
+  "resolutionDepartures": [
+    {
+      "id": "tarn-inlet-w",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "tarn-inlet-n",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "main-upper",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 5.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "fold-inlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "fold-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 4.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-upper-in",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.5,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-upper-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 3.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-lower-in",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.5,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "birch-lower-outlet",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 3.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "windward-gully",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 1.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    },
+    {
+      "id": "south-fen-tributary",
+      "kind": "greybox minimum resolved wetted width",
+      "authoredMinM": 2.0,
+      "prototypeMinM": 16,
+      "reason": "4 m canonical cells; refine conforming banks before final small streams"
+    }
+  ],
+  "junctionCorrections": [],
+  "ridgeInterpolation": "Original A-R1 PCHIP crest elevations, connected Dirichlet crest constraints with finite cap.",
+  "shoreInterpretation": "Signed continuous lake margin and coast boundary solve before river sections; no post-carve attenuation.",
+  "depthAllowance": "Uniform 1.6 m greybox channel bed depth, continuous at graph junctions; original indicative depths retained separately.",
+  "ridgeTailInterpretation": "All 16 complete ridge curves impose authored lower bounds. Low spur endpoints may rise to meet surrounding terrain, rather than forcing a sink; no crown or terminal crest is released below its authored level. Actual knot deviations are exported.",
+  "jointSolve": {
+    "coarseCellM": 16,
+    "fineCellM": 4,
+    "unknowns": 83553,
+    "maxResidualM": 2.1600499167107046e-12,
+    "fineRelaxationIterations": 240,
+    "ridgeActiveSetIterations": 6,
+    "westPassApproachContinuationM": 150,
+    "noSinkFilling": true,
+    "noHikingTerrainEdits": true,
+    "noProceduralNoise": true
+  },
+  "generationSeconds": 105.235
+}

@@ -1,0 +1,12 @@
+{
+  "file": "water-mesh.f32",
+  "vertices": 335565,
+  "surfaceFile": "water-surface.f32",
+  "surfaceSha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+  "meshSha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+  "method": "canonical-triangle H=W clipping; ocean-side boundary 0 m; water plane 0.025 m render offset",
+  "maxComputedShoreIntersectionErrorM": 2.842170943040401e-14,
+  "openDomainTriangles": 20,
+  "openDomainAboveSeaTriangles": 0,
+  "openDomainExamples": []
+}

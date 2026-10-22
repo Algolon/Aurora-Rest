@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 export type V3=[number,number,number];
 export interface Data {
+ waterSurface?:HeightGrid; waterMesh?:{file:string;surfaceFile:string};
+ decks?:{id:string;a:number[];b:number[];levelM:number;halfWidthM:number;rampM:number;endLevelsM:number[]}[];
  meta:{masterId:string;masterRevision:string;masterSha256:string;terrainSha256:string;grid:{width:number;height:number;cellM:number;west:number;north:number}};
  coast:number[][];islands:{id:string;boundary:number[][]}[];
  ridges:{id:string;points:V3[]}[];valleys:{id:string;axis:V3[];boundary:number[][];widthsM:number[]}[];
@@ -29,21 +31,20 @@ export function terrainGeometry(grid:HeightGrid,x0:number,north:number,span:numb
   const dx=(grid.node(x+4,z)-grid.node(x-4,z))/8,dz=(grid.node(x,z+4)-grid.node(x,z-4))/8,l=Math.hypot(dx,1,dz);norm[k]=-dx/l;norm[k+1]=1/l;norm[k+2]=-dz/l;
  }
  for(let j=0;j<n;j++)for(let i=0;i<n;i++){const a=j*(n+1)+i,b=a+n+1;indices.push(a,a+1,b,a+1,b+1,b);}
- // Downward skirts preserve the contact surface while hiding mixed-resolution T junctions.
- const pp=Array.from(pos),nn=Array.from(norm);const edges=[Array.from({length:n+1},(_,i)=>i),Array.from({length:n+1},(_,j)=>j*(n+1)+n),Array.from({length:n+1},(_,i)=>n*(n+1)+n-i),Array.from({length:n+1},(_,j)=>(n-j)*(n+1))];
- for(const edge of edges){const first=pp.length/3;for(const a of edge)for(const drop of [0,32]){pp.push(pos[a*3],pos[a*3+1]-drop,pos[a*3+2]);nn.push(norm[a*3],norm[a*3+1],norm[a*3+2]);}for(let i=0;i<n;i++){const a=first+2*i;indices.push(a,a+1,a+2,a+2,a+1,a+3);}}
+ const pp=pos,nn=norm;
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pp,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(nn,3));g.setIndex(indices);g.computeBoundingSphere();return g;
 }
 interface Tile {mesh:THREE.Mesh; x:number;z:number;step:number;}
 export class Terrain {
  readonly tiles:Tile[]=[];readonly group=new THREE.Group();readonly material=new THREE.MeshLambertMaterial({color:0xb4b6b0,side:THREE.DoubleSide});
  readonly grid:HeightGrid;
- constructor(grid:HeightGrid,scene:THREE.Scene){this.grid=grid;for(let j=0;j<20;j++)for(let i=0;i<15;i++){const x=-3000+i*400,z=4000-j*400,mesh=new THREE.Mesh(terrainGeometry(grid,x,z,400,16),this.material);this.group.add(mesh);this.tiles.push({mesh,x,z,step:16});}scene.add(this.group);}
- update(x:number,z:number,survey=false,force=false){let changed=0;for(const t of this.tiles){const desired=survey?8:Math.hypot(t.x+200-x,t.z-200-z)<700?4:16;if(t.step===desired)continue;if(!force&&changed>=1)break;t.mesh.geometry.dispose();t.mesh.geometry=terrainGeometry(this.grid,t.x,t.z,400,desired);t.step=desired;changed++;}}
+ constructor(grid:HeightGrid,scene:THREE.Scene){this.grid=grid;for(let j=0;j<20;j++)for(let i=0;i<15;i++){const x=-3000+i*400,z=4000-j*400,mesh=new THREE.Mesh(terrainGeometry(grid,x,z,400,4),this.material);this.group.add(mesh);this.tiles.push({mesh,x,z,step:4});}scene.add(this.group);}
+ update(_x:number,_z:number,_survey=false,_force=false){ /* Canonical mesh: no mixed LOD interfaces in the integrity checkpoint. */ }
  surface(x:number,z:number){const i=Math.max(0,Math.min(14,Math.floor((x+3000)/400))),j=Math.max(0,Math.min(19,Math.floor((4000-z)/400)));return this.grid.surface(x,z,this.tiles[j*15+i].step);}
 }
 export function contains(p:number[],ring:number[][]){let hit=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
 export function waterAt(data:Data,x:number,z:number){
+ if(data.waterSurface){const h=data.waterSurface.surface(x,z);return Number.isFinite(h)?Math.max(0,h):0;}
  for(const l of data.lakes)if(contains([x,z],l.boundary))return l.level;
  let answer=-Infinity;
  for(const s of data.channels)for(let i=1;i<s.points.length;i++){

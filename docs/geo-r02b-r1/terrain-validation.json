@@ -1,0 +1,651 @@
+{
+  "scope": "Actual generated continuous field and matching raster-triangle sampling. Authored water levels are not a full fluid simulation.",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "finite": true,
+  "heightRangeM": [
+    -141.900634765625,
+    899.9600219726562
+  ],
+  "channels": [
+    {
+      "id": "tarn-inlet-w",
+      "samples": 296,
+      "minInteriorWaterDepthM": 1.45843505859375,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.6488547015130611,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 594.4129366977218
+    },
+    {
+      "id": "tarn-inlet-n",
+      "samples": 216,
+      "minInteriorWaterDepthM": 1.30413818359375,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.8095485901496552,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 434.19102194174644
+    },
+    {
+      "id": "main-upper",
+      "samples": 1469,
+      "minInteriorWaterDepthM": 1.5670185089111328,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.28651052785071235,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 2955.8452287153473
+    },
+    {
+      "id": "main-mire-upper",
+      "samples": 480,
+      "minInteriorWaterDepthM": 1.5965778827667236,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0033805207729349362,
+      "maxDownhillBedGrade": 0.018707999589832918,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 967.3686252722545
+    },
+    {
+      "id": "main-mire-out",
+      "samples": 625,
+      "minInteriorWaterDepthM": 1.5968757390975954,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.008180153746395375,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 1259.722705873034
+    },
+    {
+      "id": "fold-inlet",
+      "samples": 233,
+      "minInteriorWaterDepthM": 1.4773941040039062,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.5256958720867765,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 468.1568701011653
+    },
+    {
+      "id": "fold-outlet",
+      "samples": 449,
+      "minInteriorWaterDepthM": 1.598400408477751,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.16332046056635574,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 903.4653036538876
+    },
+    {
+      "id": "birch-upper-in",
+      "samples": 120,
+      "minInteriorWaterDepthM": 1.5981332150650474,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.3510127671167471,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 238.95278520040313
+    },
+    {
+      "id": "birch-upper-outlet",
+      "samples": 284,
+      "minInteriorWaterDepthM": 1.512941837310791,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.19267249060140845,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 574.3476382266782
+    },
+    {
+      "id": "birch-lower-in",
+      "samples": 207,
+      "minInteriorWaterDepthM": 1.5559501647949219,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.17893065796931285,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 416.4095499398577
+    },
+    {
+      "id": "birch-lower-outlet",
+      "samples": 510,
+      "minInteriorWaterDepthM": 1.5728988647460938,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.08593214552309332,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 1026.4854988899951
+    },
+    {
+      "id": "windward-gully",
+      "samples": 340,
+      "minInteriorWaterDepthM": 1.5884654544066805,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.3375579940388331,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 682.920744091433
+    },
+    {
+      "id": "south-fen-tributary",
+      "samples": 607,
+      "minInteriorWaterDepthM": 1.525411605834961,
+      "samplesWithBedAboveWater": 0,
+      "maxBedRiseBetweenSamplesM": 0.0,
+      "maxDownhillBedGrade": 0.2416035763912303,
+      "resolvedWaterSurfaceNonIncreasing": true,
+      "lengthM": 1218.9825297147959
+    }
+  ],
+  "bankChecks": [
+    {
+      "id": "tarn-inlet-w",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 532,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "tarn-inlet-n",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 372,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "main-upper",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 2878,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "main-mire-upper",
+      "bankSamplesBelowWater": 3,
+      "eligibleSamples": 870,
+      "excludedLakeJunctionAndEndSamples": 90,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "main-mire-out",
+      "bankSamplesBelowWater": 5,
+      "eligibleSamples": 1190,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "fold-inlet",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 406,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "fold-outlet",
+      "bankSamplesBelowWater": 3,
+      "eligibleSamples": 835,
+      "excludedLakeJunctionAndEndSamples": 63,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "birch-upper-in",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 180,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "birch-upper-outlet",
+      "bankSamplesBelowWater": 24,
+      "eligibleSamples": 508,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "birch-lower-in",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 354,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "birch-lower-outlet",
+      "bankSamplesBelowWater": 8,
+      "eligibleSamples": 960,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "windward-gully",
+      "bankSamplesBelowWater": 16,
+      "eligibleSamples": 620,
+      "excludedLakeJunctionAndEndSamples": 60,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    },
+    {
+      "id": "south-fen-tributary",
+      "bankSamplesBelowWater": 0,
+      "eligibleSamples": 1092,
+      "excludedLakeJunctionAndEndSamples": 122,
+      "note": "Lakes, other wet channels and 30 m source/outlet caps excluded; neither flood extent nor bankfull prediction."
+    }
+  ],
+  "lakes": [
+    {
+      "id": "high-tarn",
+      "levelM": 360,
+      "innerShoreSamples": 930,
+      "innerShoreBedAboveWaterCount": 0,
+      "minInteriorDepthM": 0.9996655855783274,
+      "unintendedLowRimSamples25m": 0,
+      "rimSampleCount": 1028,
+      "maxLowRimDeficitM": 0.0
+    },
+    {
+      "id": "hidden-lake",
+      "levelM": 118,
+      "innerShoreSamples": 484,
+      "innerShoreBedAboveWaterCount": 0,
+      "minInteriorDepthM": 0.8354808862109309,
+      "unintendedLowRimSamples25m": 0,
+      "rimSampleCount": 593,
+      "maxLowRimDeficitM": 0.0
+    },
+    {
+      "id": "birch-upper-lake",
+      "levelM": 86,
+      "innerShoreSamples": 371,
+      "innerShoreBedAboveWaterCount": 0,
+      "minInteriorDepthM": 0.7287555044578937,
+      "unintendedLowRimSamples25m": 0,
+      "rimSampleCount": 503,
+      "maxLowRimDeficitM": 0.0
+    },
+    {
+      "id": "birch-lower-lake",
+      "levelM": 48,
+      "innerShoreSamples": 378,
+      "innerShoreBedAboveWaterCount": 0,
+      "minInteriorDepthM": 0.7588648205894728,
+      "unintendedLowRimSamples25m": 0,
+      "rimSampleCount": 469,
+      "maxLowRimDeficitM": 0.0
+    }
+  ],
+  "crossings": [
+    {
+      "id": "M1",
+      "a": [
+        352.95177948970553,
+        -1108.0089790012921
+      ],
+      "b": [
+        432.4140205102945,
+        -1133.381820998708
+      ],
+      "levelM": 11.33152,
+      "waterLevelM": 10.23152,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        11.126352214866467,
+        11.12574344338381
+      ],
+      "lengthM": 83.4148,
+      "maxRampGrade": 0.011432030923121653
+    },
+    {
+      "id": "H1",
+      "a": [
+        959.4855351820114,
+        -548.013178757002
+      ],
+      "b": [
+        1000.5144648179886,
+        -611.986821242998
+      ],
+      "levelM": 50.22883826069882,
+      "waterLevelM": 49.0,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        50.78861115893315,
+        50.814481258086346
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.03253572207708465
+    },
+    {
+      "id": "H2",
+      "a": [
+        1263.0680846806017,
+        289.06478166998033
+      ],
+      "b": [
+        1335.6313153193983,
+        266.46881833001964
+      ],
+      "levelM": 150.68998,
+      "waterLevelM": 149.58998,
+      "halfWidthM": 1.75,
+      "rampM": 18,
+      "endLevelsM": [
+        151.05628911971664,
+        151.0307204485366
+      ],
+      "lengthM": 76.0,
+      "maxRampGrade": 0.02035050665092481
+    }
+  ],
+  "routes": [
+    {
+      "id": "hero",
+      "planLengthM": 4926.305145128751,
+      "targetMaxGrade": 0.25,
+      "maxMeasuredTriangleGrade": 0.24440574645996094,
+      "p95Grade": 0.23612607258685275,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 85,
+      "sampleCount": 5019,
+      "reservedWidthM": 130,
+      "p10DryLowSlopeWidthM": 0.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 44.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    },
+    {
+      "id": "tarn-ascent",
+      "planLengthM": 1228.5120981358502,
+      "targetMaxGrade": 0.3,
+      "maxMeasuredTriangleGrade": 0.29303639485580013,
+      "p95Grade": 0.29128745932388617,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 0,
+      "sampleCount": 1251,
+      "reservedWidthM": 110,
+      "p10DryLowSlopeWidthM": 0.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 16.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    },
+    {
+      "id": "peak-ascent",
+      "planLengthM": 2925.4036841213715,
+      "targetMaxGrade": 0.3,
+      "maxMeasuredTriangleGrade": 0.2939297497422694,
+      "p95Grade": 0.29111663966681217,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 0,
+      "sampleCount": 2999,
+      "reservedWidthM": 150,
+      "p10DryLowSlopeWidthM": 0.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 0.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    },
+    {
+      "id": "hidden-loop",
+      "planLengthM": 3961.2279377643063,
+      "targetMaxGrade": 0.28,
+      "maxMeasuredTriangleGrade": 0.27470767218083314,
+      "p95Grade": 0.25953490916927224,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 153,
+      "sampleCount": 4019,
+      "reservedWidthM": 110,
+      "p10DryLowSlopeWidthM": 0.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 0.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    },
+    {
+      "id": "west-cape-spur",
+      "planLengthM": 1728.6685666547767,
+      "targetMaxGrade": 0.3,
+      "maxMeasuredTriangleGrade": 0.27863544681879104,
+      "p95Grade": 0.2050474257704593,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 0,
+      "sampleCount": 1754,
+      "reservedWidthM": 160,
+      "p10DryLowSlopeWidthM": 160.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 160.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    },
+    {
+      "id": "south-shoulder-loop",
+      "planLengthM": 3387.2541525574647,
+      "targetMaxGrade": 0.3,
+      "maxMeasuredTriangleGrade": 0.29087498686946645,
+      "p95Grade": 0.24336765539190866,
+      "fractionOverTarget": 0.0,
+      "submergedSamples": 0,
+      "deckSamples": 0,
+      "sampleCount": 3464,
+      "reservedWidthM": 170,
+      "p10DryLowSlopeWidthM": 0.0,
+      "p10WidestContiguousDryLowSlopeSpanM": 0.0,
+      "widthMethod": "4 m cross-section samples; <=35% transverse grade; contiguous span through centreline plus widest contiguous span. Water crossings need their 3.5 m decks and separate approaches.",
+      "conflictExamples": [],
+      "status": "pass on proposed centreline"
+    }
+  ],
+  "pass": {
+    "saddle": 215.0,
+    "north-flank": 330.22560119628906,
+    "south-flank": 284.663818359375,
+    "approach-0": 170.0025634765625,
+    "approach-1": 155.09817504882812
+  },
+  "passLowerThanBothFlanks": true,
+  "closedDepressions20m": {
+    "thresholdDepthM": 2,
+    "minimumAreaM2": 800,
+    "count": 0,
+    "largestProblems": []
+  },
+  "downhillCatchmentChecks20m": [
+    {
+      "id": "01",
+      "samples": 3801,
+      "acceptedTerminalClasses": [
+        1
+      ],
+      "fractionReachingExpectedSystem": 0.8431991581162852,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "02",
+      "samples": 21435,
+      "acceptedTerminalClasses": [
+        1
+      ],
+      "fractionReachingExpectedSystem": 0.6195008164217402,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "03",
+      "samples": 2857,
+      "acceptedTerminalClasses": [
+        1
+      ],
+      "fractionReachingExpectedSystem": 0.992299614980749,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "04",
+      "samples": 6368,
+      "acceptedTerminalClasses": [
+        2
+      ],
+      "fractionReachingExpectedSystem": 0.249214824120603,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "05",
+      "samples": 6051,
+      "acceptedTerminalClasses": [
+        3
+      ],
+      "fractionReachingExpectedSystem": 0.5182614443893572,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "06",
+      "samples": 8111,
+      "acceptedTerminalClasses": [
+        4,
+        5
+      ],
+      "fractionReachingExpectedSystem": 0.9554925409937123,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "07",
+      "samples": 5520,
+      "acceptedTerminalClasses": [
+        5
+      ],
+      "fractionReachingExpectedSystem": 0.8947463768115942,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    },
+    {
+      "id": "08",
+      "samples": 8902,
+      "acceptedTerminalClasses": [
+        5
+      ],
+      "fractionReachingExpectedSystem": 0.9989889912379241,
+      "fractionUnresolvedClosed": 0.0,
+      "note": "20 m D8 downhill diagnostic; reaching a designed lake/channel uses its separately checked downstream graph, not a hydrologic simulation"
+    }
+  ],
+  "anchorMeasurements": [
+    {
+      "id": "north-peak",
+      "xzM": [
+        -520,
+        2770
+      ],
+      "terrainM": 899.9566955566406,
+      "proposalM": 900
+    },
+    {
+      "id": "cairn",
+      "xzM": [
+        40,
+        920
+      ],
+      "terrainM": 215.0,
+      "proposalM": 215
+    },
+    {
+      "id": "tarn",
+      "xzM": [
+        1050,
+        2100
+      ],
+      "terrainM": 341.3500061035156,
+      "proposalM": 360
+    },
+    {
+      "id": "forest",
+      "xzM": [
+        -740,
+        -50
+      ],
+      "terrainM": 113.3523178100586,
+      "proposalM": [
+        65,
+        160
+      ]
+    },
+    {
+      "id": "fold",
+      "xzM": [
+        1210,
+        -40
+      ],
+      "terrainM": 111.91585159301758,
+      "proposalM": 118
+    },
+    {
+      "id": "valley",
+      "xzM": [
+        200,
+        10
+      ],
+      "terrainM": 29.338871002197266,
+      "proposalM": [
+        27,
+        70
+      ]
+    },
+    {
+      "id": "mire",
+      "xzM": [
+        560,
+        -1330
+      ],
+      "terrainM": 9.234217643737793,
+      "proposalM": [
+        3,
+        14
+      ]
+    },
+    {
+      "id": "south",
+      "xzM": [
+        -610,
+        -2180
+      ],
+      "terrainM": 284.9536590576172,
+      "proposalM": 285
+    },
+    {
+      "id": "dunes",
+      "xzM": [
+        2190,
+        -1250
+      ],
+      "terrainM": 9.390963077545166,
+      "proposalM": [
+        8,
+        35
+      ]
+    },
+    {
+      "id": "home",
+      "xzM": [
+        1670,
+        -1900
+      ],
+      "terrainM": 4.551720857620239,
+      "proposalM": [
+        12,
+        22
+      ]
+    }
+  ],
+  "renderedContactNote": "Node tests raycast actual Three.js geometry at 4/8/16 m; these diagnostics use identical cell diagonals."
+}
