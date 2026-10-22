@@ -1,0 +1,131 @@
+{
+ "platform": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "numpy": "2.3.5",
+ "scipy": "1.18.1",
+ "shapely": "2.2.0",
+ "geos": "3.14.1",
+ "rings": {
+  "high-tarn": {
+   "vertices": 893,
+   "sha256": "5bd85668baea7932f120bd7f873f46b75389ae7385ddd46a05e6786a68f2c6b7"
+  },
+  "hidden-lake": {
+   "vertices": 530,
+   "sha256": "0070c43bab7a40dc0f5bfa0789567fc2cee40bbe4d1cd2b63f55961d07fbe37b"
+  },
+  "birch-upper-lake": {
+   "vertices": 451,
+   "sha256": "526c9821f20aa3018ffc950b354f797c9d2a5f1e3d58c93d419a0c837b45e75b"
+  },
+  "birch-lower-lake": {
+   "vertices": 413,
+   "sha256": "c378162fa3eb455fdd60a90488fa006a7baa038f69b363da8ddfbda4af3adec1"
+  }
+ },
+ "coastVerticesSha256": "f3299c0bfe121d5c43eb14d85bc0bf6b549e67a0403dbaac88e6a96e0306ffae",
+ "birchUpperSeam": [
+  {
+   "x": -956.0,
+   "z": 708.0,
+   "nearestVertexIndices": [
+    0,
+    451,
+    1
+   ],
+   "nearestVertexDistancesUV": [
+    3.118493225902501,
+    3.118493225902501,
+    3.1346151869718484
+   ],
+   "r1ProjectionDistanceM": 31.18493225902501,
+   "segment": 0
+  },
+  {
+   "x": -956.0,
+   "z": 704.0,
+   "nearestVertexIndices": [
+    0,
+    451,
+    1
+   ],
+   "nearestVertexDistancesUV": [
+    2.8714108030722283,
+    2.8714108030722283,
+    2.9032393083426222
+   ],
+   "r1ProjectionDistanceM": 28.714108030722283,
+   "segment": 0
+  },
+  {
+   "x": -952.0,
+   "z": 704.0,
+   "nearestVertexIndices": [
+    0,
+    451,
+    1
+   ],
+   "nearestVertexDistancesUV": [
+    2.554407954888937,
+    2.554407954888937,
+    2.573525712445247
+   ],
+   "r1ProjectionDistanceM": 25.54407954888937,
+   "segment": 0
+  },
+  {
+   "x": -960.0,
+   "z": 700.0,
+   "nearestVertexIndices": [
+    0,
+    451,
+    1
+   ],
+   "nearestVertexDistancesUV": [
+    3.020761493398643,
+    3.020761493398643,
+    3.078562729831219
+   ],
+   "r1ProjectionDistanceM": 30.20761493398643,
+   "segment": 0
+  },
+  {
+   "x": -956.0,
+   "z": 700.0,
+   "nearestVertexIndices": [
+    0,
+    451,
+    1
+   ],
+   "nearestVertexDistancesUV": [
+    2.661766330841228,
+    2.661766330841228,
+    2.711417450821047
+   ],
+   "r1ProjectionDistanceM": 26.61766330841228,
+   "segment": 0
+  }
+ ],
+ "coastNodes": [
+  {
+   "x": -1684.0,
+   "z": 2808.0,
+   "containsXY": false
+  },
+  {
+   "x": -1756.0,
+   "z": 2712.0,
+   "containsXY": false
+  },
+  {
+   "x": -1768.0,
+   "z": 2696.0,
+   "containsXY": true
+  },
+  {
+   "x": -1792.0,
+   "z": 2664.0,
+   "containsXY": true
+  }
+ ]
+}
