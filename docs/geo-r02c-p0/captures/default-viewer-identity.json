@@ -1,0 +1,94 @@
+{
+ "method": "same machine, same Chromium/SwiftShader, default URL (no review parameters), UI visible in both builds; the top-right status panel (live FPS text) and crosshair are excluded from the pixel comparison",
+ "summary": "8 of 8 R1 views are pixel-identical outside the UI panel, with identical cameras, between the untouched R1 build and the P0 build",
+ "views": [
+  {
+   "view": "overview",
+   "sha256R1Build": "a5936be45b4515e25fba8e5fc95866d9567b0f940df9676a4a7665415db890a2",
+   "sha256P0Build": "9eff3699dcfcf6cf1baa2895268e81dba59090ef65040e7285fb95cbf967c98b",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 53,
+   "cameraIdentical": true
+  },
+  {
+   "view": "island-oblique",
+   "sha256R1Build": "8069a879b4a3fdc4ad3d7f1250be667f8af4b4f0eaab56cfb9fbab4c4102caf6",
+   "sha256P0Build": "8069a879b4a3fdc4ad3d7f1250be667f8af4b4f0eaab56cfb9fbab4c4102caf6",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "home-cove",
+   "sha256R1Build": "57d7766af57c1a954d1039fbeaf41f6ec8d8be349533ba3f6e85f956352f04cc",
+   "sha256P0Build": "57d7766af57c1a954d1039fbeaf41f6ec8d8be349533ba3f6e85f956352f04cc",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "central-valley",
+   "sha256R1Build": "b6e3320db7cf827d67593151dd2351099d61b49075d0a1c0e1fc215fd109d208",
+   "sha256P0Build": "b6e3320db7cf827d67593151dd2351099d61b49075d0a1c0e1fc215fd109d208",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "cairn-saddle",
+   "sha256R1Build": "dc6c42b402733dc939bec80fbb1d7b1cc2a0f390a9177b2ef6c08c90e140f212",
+   "sha256P0Build": "dc6c42b402733dc939bec80fbb1d7b1cc2a0f390a9177b2ef6c08c90e140f212",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "high-tarn",
+   "sha256R1Build": "e3c1cf654a094893136124f848b7b88aaaf12ac29cdddebe5d7865d335a6d994",
+   "sha256P0Build": "e3c1cf654a094893136124f848b7b88aaaf12ac29cdddebe5d7865d335a6d994",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "hidden-fold",
+   "sha256R1Build": "1089bf3e3a214545085a63d65c71a84a3880c86cb9992e24bcd70dcf925473ad",
+   "sha256P0Build": "1089bf3e3a214545085a63d65c71a84a3880c86cb9992e24bcd70dcf925473ad",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "mirelands",
+   "sha256R1Build": "477d9ea9056210c066f8eafdaaf17bc91e78cc10f8e72e4aefa6af64abf30e40",
+   "sha256P0Build": "477d9ea9056210c066f8eafdaaf17bc91e78cc10f8e72e4aefa6af64abf30e40",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  }
+ ]
+}
