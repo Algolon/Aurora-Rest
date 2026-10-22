@@ -1,0 +1,317 @@
+{
+ "schema": "aurora-rest-review-cameras/1",
+ "note": "GEO-R02C-A1a fixed cameras; identical for M0, V1, V2, V3",
+ "yawConvention": "0 = north (+z), pi/2 = east (+x)",
+ "eyeHeightM": 1.75,
+ "fovDeg": 60,
+ "cameras": [
+  {
+   "id": "a1a-birchwood",
+   "name": "North Peak from Birchwood",
+   "group": "approach",
+   "kind": "walk",
+   "xz": [
+    -700.0,
+    300.0
+   ],
+   "yaw": 0.0727,
+   "pitch": 0.06,
+   "source": "copied from P0 np-from-birchwood",
+   "uv": [
+    230.0,
+    370.0
+   ]
+  },
+  {
+   "id": "a1a-valley-shoulder",
+   "name": "North Peak from the Central Valley shoulder",
+   "group": "approach",
+   "kind": "walk",
+   "xz": [
+    -175.97,
+    -155.95
+   ],
+   "yaw": -0.117,
+   "pitch": 0.06,
+   "source": "copied from P0 np-from-valley-shoulder",
+   "uv": [
+    282.403,
+    415.595
+   ]
+  },
+  {
+   "id": "a1a-tarn-overlook",
+   "name": "High Tarn overlook",
+   "group": "approach",
+   "kind": "walk",
+   "xz": [
+    700.0,
+    1950.0
+   ],
+   "yaw": -0.979,
+   "pitch": 0.06,
+   "source": "copied from P0 np-from-tarn-overlook",
+   "uv": [
+    370.0,
+    205.0
+   ]
+  },
+  {
+   "id": "a1a-tarn-shore",
+   "name": "High Tarn north shore (K1)",
+   "group": "high-tarn",
+   "kind": "walk",
+   "xz": [
+    1080,
+    2420
+   ],
+   "yaw": -1.3554,
+   "pitch": 0.05,
+   "source": "A1-D K1, facing the summit",
+   "uv": [
+    408.0,
+    158.0
+   ]
+  },
+  {
+   "id": "a1a-approach-mid",
+   "name": "Alpine approach \u00b7 peak-ascent mid",
+   "group": "approach",
+   "kind": "walk",
+   "xz": [
+    -581,
+    2341
+   ],
+   "yaw": 0.1412,
+   "pitch": 0.12,
+   "source": "peak-ascent s = 1825 m",
+   "uv": [
+    241.9,
+    165.9
+   ]
+  },
+  {
+   "id": "a1a-approach-upper",
+   "name": "Alpine approach \u00b7 below the final climb",
+   "group": "approach",
+   "kind": "walk",
+   "xz": [
+    -542,
+    2579
+   ],
+   "yaw": 0.1147,
+   "pitch": 0.2,
+   "source": "peak-ascent s = 2425 m",
+   "uv": [
+    245.8,
+    142.1
+   ]
+  },
+  {
+   "id": "a1a-summit-into-c1",
+   "name": "A1 crest by the summit \u00b7 looking down into Nordbotn",
+   "group": "summit",
+   "kind": "walk",
+   "xz": [
+    -475,
+    2881
+   ],
+   "yaw": 1.3609,
+   "pitch": -0.28,
+   "source": "n-crown crest 120 m from the summit (A1-D K4 moved: from the summit dome itself C1 is hidden by the brow)",
+   "uv": [
+    252.5,
+    111.9
+   ]
+  },
+  {
+   "id": "a1a-ncrown-ridge",
+   "name": "n-crown arete \u00b7 looking back to the summit",
+   "group": "summit",
+   "kind": "walk",
+   "xz": [
+    -266,
+    3159
+   ],
+   "yaw": -2.5631,
+   "pitch": 0.06,
+   "source": "on the A1 crest, n-crown s = 480 m (K2 moved: the A1-D position faced its own shaded slope)",
+   "uv": [
+    273.4,
+    84.1
+   ]
+  },
+  {
+   "id": "a1a-west-arm",
+   "name": "W arete \u00b7 looking up to the summit",
+   "group": "summit",
+   "kind": "walk",
+   "xz": [
+    -620,
+    2665
+   ],
+   "yaw": 0.761,
+   "pitch": 0.1,
+   "source": "on the A3 crest",
+   "uv": [
+    238.0,
+    133.5
+   ]
+  },
+  {
+   "id": "a1a-c1-floor",
+   "name": "C1 floor \u00b7 looking west at the headwall",
+   "group": "c1",
+   "kind": "walk",
+   "xz": [
+    -215,
+    2930
+   ],
+   "yaw": -1.5708,
+   "pitch": 0.22,
+   "source": "inside the C1 footprint",
+   "uv": [
+    278.5,
+    107.0
+   ]
+  },
+  {
+   "id": "a1a-c1-lip",
+   "name": "C1 lip \u00b7 looking west into Nordbotn",
+   "group": "c1",
+   "kind": "walk",
+   "xz": [
+    -120,
+    2960
+   ],
+   "yaw": -1.65,
+   "pitch": 0.12,
+   "source": "east of the C1 lip",
+   "uv": [
+    288.0,
+    104.0
+   ]
+  },
+  {
+   "id": "a1a-g1-upstream",
+   "name": "G1 \u00b7 from upstream, looking down the gully",
+   "group": "g1",
+   "kind": "walk",
+   "xz": [
+    585.09,
+    2436.92
+   ],
+   "yaw": 2.4899,
+   "pitch": -0.1,
+   "source": "tarn-inlet-w s = 205 m (reach start), 26 m right bank",
+   "uv": [
+    358.509,
+    156.308
+   ]
+  },
+  {
+   "id": "a1a-g1-downstream",
+   "name": "G1 \u00b7 from downstream, looking up the gully",
+   "group": "g1",
+   "kind": "walk",
+   "xz": [
+    706.33,
+    2402.12
+   ],
+   "yaw": -1.3396,
+   "pitch": 0.04,
+   "source": "tarn-inlet-w s = 330 m, 26 m left (north) bank",
+   "uv": [
+    370.633,
+    159.788
+   ]
+  },
+  {
+   "id": "a1a-oblique-se",
+   "name": "Elevated oblique \u00b7 from the south-east",
+   "group": "oblique",
+   "kind": "aerial",
+   "xz": [
+    700.0,
+    1650.0
+   ],
+   "yaw": -0.7722,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     700.0,
+     1450.0,
+     1650.0
+    ],
+    "target": [
+     -420.0,
+     700.0,
+     2800.0
+    ]
+   },
+   "source": "fixed world position and target",
+   "uv": [
+    370.0,
+    235.0
+   ]
+  },
+  {
+   "id": "a1a-oblique-n",
+   "name": "Elevated oblique \u00b7 from the north over the sea",
+   "group": "oblique",
+   "kind": "aerial",
+   "xz": [
+    -250.0,
+    4300.0
+   ],
+   "yaw": -3.0045,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -250.0,
+     1300.0,
+     4300.0
+    ],
+    "target": [
+     -450.0,
+     650.0,
+     2850.0
+    ]
+   },
+   "source": "fixed world position and target",
+   "uv": [
+    275.0,
+    -30.0
+   ]
+  },
+  {
+   "id": "a1a-oblique-c1",
+   "name": "Elevated oblique \u00b7 into Nordbotn from the east",
+   "group": "oblique",
+   "kind": "aerial",
+   "xz": [
+    300.0,
+    3150.0
+   ],
+   "yaw": -1.9656,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     300.0,
+     1150.0,
+     3150.0
+    ],
+    "target": [
+     -300.0,
+     720.0,
+     2900.0
+    ]
+   },
+   "source": "fixed world position and target",
+   "uv": [
+    330.0,
+    85.0
+   ]
+  }
+ ]
+}
