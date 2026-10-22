@@ -68,7 +68,7 @@ const RECIPES:Readonly<Record<MultiMassArchetype,RecipeSet>>={
   V2:{
    name:'Interlocking glacial fracture shoulder',
    purpose:'A deliberately oblique wedge runs into the main body and its exposed face follows the dominant glacial rake',
-   center:[1.91,-.045,.48],extents:[.86,.62,.69],
+   center:[1.91,-.025,.48],extents:[.86,.55,.69],
    cuts:[
     [.10,1,.22,.494],[-.60,.78,.24,.70],[.76,.45,.24,.69],
     [-.91,.10,.32,.71],[.81,.24,-.47,.70],
