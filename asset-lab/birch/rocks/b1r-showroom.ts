@@ -126,7 +126,8 @@ function apply(){
    mesh.material=current.surface==='silhouette'?silhouette:
     current.surface==='diagnostic'||current.mode==='component'?(i===0?primaryColor:secondaryColor):
     current.surface==='T1'?lookdev.materials.T1.triplanar:neutral;
-   mesh.material.wireframe=current.wireframe;
+   if(mesh.material instanceof THREE.MeshStandardMaterial||mesh.material instanceof THREE.MeshBasicMaterial)
+    mesh.material.wireframe=current.wireframe;
   }
  }
  const context=current.mode==='context';for(const o of scenery)o.visible=context;
