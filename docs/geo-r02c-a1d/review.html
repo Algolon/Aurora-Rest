@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>North Peak Design Checkpoint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ef;--surface:#fffdf9;--surface-2:#efebe3;--ink:#1f1d1a;--ink-2:#55504a;--line:#ddd6ca;--accent:#c2410c;--accent-ink:#9a3412;--frozen:#2f6fb0;--ok:#3f6212;--warn:#a16207;--bad:#b91c1c;--chip:#f1e6da;--code:#ece6dc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--surface:#201e1b;--surface-2:#2a2723;--ink:#ece8e1;--ink-2:#b2aba0;--line:#3a3631;--accent:#fb923c;--accent-ink:#fdba74;--frozen:#7fb2e5;--ok:#a3c46a;--warn:#e0b04f;--bad:#f87171;--chip:#3a2d22;--code:#2c2925}}
+:root[data-theme="dark"]{--bg:#171614;--surface:#201e1b;--surface-2:#2a2723;--ink:#ece8e1;--ink-2:#b2aba0;--line:#3a3631;--accent:#fb923c;--accent-ink:#fdba74;--frozen:#7fb2e5;--ok:#a3c46a;--warn:#e0b04f;--bad:#f87171;--chip:#3a2d22;--code:#2c2925}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:32px max(16px,env(safe-area-inset-right)) 80px max(16px,env(safe-area-inset-left))}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:650;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(28px,4.4vw,42px);margin:8px 0 12px}
+h2{font-size:25px;margin:56px 0 10px;padding-top:12px;border-top:1px solid var(--line)}
+h2 .n{color:var(--accent);margin-right:.35em}h3{font-size:18px;margin:24px 0 8px}
+p{margin:0 0 12px}.lede{font-size:17px;color:var(--ink-2);max-width:66ch}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+.chip{background:var(--chip);color:var(--accent-ink);border-radius:999px;padding:3px 10px;font-size:12.5px;font-weight:600}
+.chip.blue{background:color-mix(in srgb,var(--frozen) 16%,transparent);color:var(--frozen)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em;background:var(--code);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+a{color:var(--accent-ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.tbl{width:100%;overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:7px 9px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--ink-2);font-size:12.5px;background:var(--surface-2)}
+figure{margin:12px 0}
+figure img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);background:#fffdf9}
+figcaption{font-size:13px;color:var(--ink-2);margin-top:6px}figcaption b{color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);margin:6px 0 10px;gap:2px;flex-wrap:wrap}
+.seg button{font:inherit;font-size:13px;border:0;background:transparent;color:var(--ink-2);padding:5px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.note{border-left:3px solid var(--accent);padding:4px 0 4px 14px;color:var(--ink-2);margin:12px 0}
+.note.blue{border-color:var(--frozen)}.note.bad{border-color:var(--bad)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-right:4px;vertical-align:1px}
+.t-mea{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok)}
+.t-des{background:var(--chip);color:var(--accent-ink)}
+.t-inf{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.st{font-size:11.5px;font-weight:700;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.s-pro{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok)}
+.s-con{background:color-mix(in srgb,var(--warn) 20%,transparent);color:var(--warn)}
+.s-opt{background:var(--surface-2);color:var(--ink-2)}
+.s-def{background:var(--surface-2);color:var(--ink-2);text-decoration:underline dotted}
+.s-no{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.s-fix{background:color-mix(in srgb,var(--frozen) 16%,transparent);color:var(--frozen)}
+ul,ol{padding-left:22px;margin:6px 0 12px}li{margin:3px 0}
+.toc{columns:2 240px;font-size:14px;margin:18px 0 0;padding-left:20px}
+.links{font-size:12.5px;color:var(--ink-2)}
+.stop{background:var(--ink);color:var(--bg);border-radius:12px;padding:18px 20px;margin-top:40px}
+.stop h3{margin-top:0;color:var(--bg)}.stop a,.stop code{color:var(--bg)}.stop code{background:transparent;border:1px solid color-mix(in srgb,var(--bg) 40%,transparent)}
+.big{font-size:22px;font-weight:700;font-family:"Source Serif 4",serif;color:var(--accent-ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="eyebrow">Aurora Rest · GEO-R02C-A1-D · design checkpoint · concept v1 · 22 Oct 2026</div>
+<h1>North Peak: an irregular horn, two honest cirques, and a source that needs fixing</h1>
+<p class="lede">This checkpoint answers your preliminary decisions D1–D10 with measurements on the committed R1 terrain. Several v0 claims did not survive those measurements and are corrected here. The concept that remains is smaller, and more believable as nature: a three-arm horn on the authored crests, Nordbotn as the primary cirque, and Västra tarnbotn as a hydrologically motivated corrie bench.</p>
+<div class="chips"><span class="chip">Design targets only</span><span class="chip">No terrain generated</span><span class="chip blue">R1, design master, P0 code and tests unchanged</span><span class="chip">Awaiting final art review</span></div>
+<div class="card" style="margin-top:18px"><b>Checkpoint:</b> branch <code>feature/geo-r02c-a1d-landform-design</code>, based on P0 <code>90d0cb745e8e51a3dc737bd4dc11d6f8c322758b</code>. Files: <a href="README.md">README.md</a> (dossier) · <a href="image-inventory.md">image-inventory.md</a> · <a href="data/a1d-concept-v1.json">concept v1 JSON</a> · <a href="v0/a1d-proposal-v0.html">v0 as reviewed</a>.
+<br><span class="links">Labels: <span class="tag t-mea">measured</span> computed from R1/A-R1 · <span class="tag t-des">design target</span> hand-specified intent · <span class="tag t-inf">inferred</span>. Sections are at true scale unless a vertical factor is stated.</span></div>
+
+<ol class="toc">
+<li><a href="#corrections">Corrections to v0</a></li><li><a href="#maps">Concept v1 maps</a></li><li><a href="#decisions">D1–D10 decision sheet</a></li><li><a href="#source">Northern source conflict</a></li><li><a href="#silhouettes">Approach silhouettes</a></li><li><a href="#catalogue">Feature catalogue</a></li><li><a href="#sections">Five cross-section studies</a></li><li><a href="#window">Coast, C1 and window v2</a></li><li><a href="#protected">Protected features</a></li><li><a href="#evidence">P0 clay evidence</a></li><li><a href="#prereq">Prerequisites before A1</a></li><li><a href="#uncertain">Assumptions and uncertainties</a></li>
+</ol>
+
+<h2 id="corrections"><span class="n">1</span>What measurement changed since v0</h2>
+<div class="tbl"><table>
+<tr><th>v0 said</th><th>Measured on R1 <span class="tag t-mea">measured</span></th><th>v1 does</th></tr>
+<tr><td>C1 sits on a 700–760 m plateau</td><td>v0's T1 ran parallel to the contours. The ground is a uniform ~33° east-facing slope between the n-crown and SE arms.</td><td>C1 re-oriented E/ENE under the n-crown arête</td></tr>
+<tr><td>C1 lip ≥ 300 m from the coast</td><td>The lip was 213–285 m out, inside the taper.</td><td>Lip 400 m, whole cirque ≥ 366 m out</td></tr>
+<tr><td>C2 has a 40–110 m north headwall</td><td>The crest north of v0 C2 is 591–614 m, below the 617–624 m floor. 37% of the floor drains to the sea.</td><td>C2 moved under the A2 junction, headwall W/NW</td></tr>
+<tr><td>C3 via a +44–50 m divide raise</td><td>The floor centre was 21.5 m from the fixed crest, and 45% of the floor drains to the sea.</td><td>C3 not recommended</td></tr>
+<tr><td>B1 ≥ 75 m from the route</td><td>Its upper end was 35 m from the centreline, inside the frozen corridor.</td><td>B1 shortened and offset to ≥ 114 m (conditional)</td></tr>
+<tr><td>S1 on the trail</td><td>It was about 100 m off the trail.</td><td>S1 = the route's real traverse shoulder (protected)</td></tr>
+<tr><td>A cirque staircase seen from High Tarn</td><td>C2 is 0% visible from K1 and the tarn overlook. C1 is 10–16%.</td><td>Claim withdrawn</td></tr>
+<tr><td>Profiles</td><td>Vertical scale was compressed ×0.3–0.5.</td><td>Redrawn at true scale</td></tr>
+</table></div>
+
+<h2 id="maps"><span class="n">2</span>Concept v1 on the map</h2>
+<p>Line style encodes status: solid = proposed, dashed = conditional, dotted = option, grey = deferred or not recommended. Each image includes its own legend.</p>
+<div class="seg" role="group" aria-label="Base map"><button type="button" aria-pressed="true" data-src="images/overlay-v1-on-ar1.jpg" data-full="images/overlay-v1-on-ar1.png">On approved A-R1 map</button><button type="button" aria-pressed="false" data-src="images/overlay-v1-on-r1-clay.jpg" data-full="images/overlay-v1-on-r1-clay.png">On R1 clay hillshade</button></div>
+<figure><a id="maplink" href="images/overlay-v1-on-ar1.png" target="_blank" rel="noopener"><img id="mapimg" src="images/overlay-v1-on-ar1.jpg" alt="Annotated A1-D concept v1 on the approved A-R1 map" width="1950" height="1700"></a>
+<figcaption><b>Design targets over existing geography</b> <span class="tag t-des">design target</span> Click for the lossless PNG. Vector versions: <a href="images/overlay-v1-on-ar1.svg">A-R1 SVG</a> · <a href="images/overlay-v1-on-r1-clay.svg">R1 clay SVG</a>. The A-R1 map's own "North Peak" lettering sits north of the summit triangle.</figcaption></figure>
+
+<h2 id="decisions"><span class="n">3</span>D1–D10 decision sheet</h2>
+<div class="tbl"><table>
+<tr><th>#</th><th>Your preliminary decision</th><th>v1 answer</th><th>Asks you</th></tr>
+<tr><td><b>D1</b></td><td>Three arms, irregular and believable</td><td>The arms are the authored crests, held within 1.2 m of their authored levels, so there is <b>no headroom to cut notches</b>. Irregularity comes from different cross-sections per arm (A1 sharp, A2 asymmetric, A3 broad), flank asymmetry, uneven rib and gully rhythm, and two cirques of different aspect and size.</td><td>Approve the per-arm character. Optional raised towers (≤ 15 m): yes or no?</td></tr>
+<tr><td><b>D2</b></td><td>C1, C2 first; investigate C3; defer C4</td><td>C1 primary, C2 secondary, C3 not recommended, C4 deferred. <b>C4 is the only cirque strongly visible from a main approach</b> (Birchwood 30%, windward coast 89%).</td><td>Is that compelling enough for an A1b follow-up?</td></tr>
+<tr><td><b>D3</b></td><td>No automatic raise; analyse first</td><td>Analysed in §4. <b>Do not raise.</b> Freeze the inlet-n head in A1; correct the source in a forward-only master errata.</td><td>Approve that route</td></tr>
+<tr><td><b>D4</b></td><td>Asymmetric rock; no global slope target</td><td>Global envelope removed; each landform has its own asymmetric section. The 4 m grid limit is stated as a fact, not a target.</td><td>Rock meshes after the A1 clay review?</td></tr>
+<tr><td><b>D5</b></td><td>B1 only if it suits the route</td><td>B1 branches from the A2 arête, ≥ 114 m from the route centreline (needs ≥ 100). 2 of 24 R1 flow seeds reach the corridor.</td><td>Judge in clay from the route</td></tr>
+<tr><td><b>D6</b></td><td>Keep the coastal freeze; check C1</td><td>C1 v1 lies entirely beyond 366 m from the coast (taper weight 1.0). The n-crown sharpening fades out in the taper.</td><td>—</td></tr>
+<tr><td><b>D7</b></td><td>Window v2 provisional; validate it</td><td>Valid polygon, 820 ha. Spill 100 m and glen 86 m outside. All features in the core. Euclidean feather, rounded at the reflex corner.</td><td>— (polygon mask is a prerequisite)</td></tr>
+<tr><td><b>D8</b></td><td>One gully trial</td><td>G1, tarn-inlet-w mid reach only. Bed fixed, ±5 m bench, ~40° / ~30° walls.</td><td>Review G1 in clay before generalising</td></tr>
+<tr><td><b>D9</b></td><td>No new lakes</td><td>Every floor is graded to its lip; no sinks.</td><td>—</td></tr>
+<tr><td><b>D10</b></td><td>A-R1 and P0 renders as primary references</td><td>The A-R1 map is the base layer and the P0 clay captures are the evidence. External references are secondary.</td><td>—</td></tr>
+</table></div>
+
+<h2 id="source"><span class="n">4</span>Northern source conflict (D3): analysis and recommendation</h2>
+<div class="grid3">
+<div class="card"><div class="big">+87.5 m</div>the authored 640 m source sits above its own adjacent crest (authored 553 m, 37 m away) <span class="tag t-mea">measured</span></div>
+<div class="card"><div class="big">+94.5 m</div>R1 crest lift at the knob: the only crest departure on five northern ridges (all others ≤ 2.4 m) <span class="tag t-mea">measured</span></div>
+<div class="card"><div class="big">0.10 ha</div>contributing area at the source; 12.6 m to the drainage divide; 0.81 ha even at the lake <span class="tag t-mea">measured</span></div>
+</div>
+<figure><a href="images/hydro-north-map.png" target="_blank" rel="noopener"><img src="images/hydro-north-map.png" alt="Hydrology map of the High Tarn north catchment" width="2104" height="1076" loading="lazy"></a><figcaption><b>Measured R1 drainage vs the authored A-R1 High Tarn catchment.</b> Blue = drains to High Tarn; grey = sea; beige = other catchment. The dashed blue line is the authored catchment 01, and the red segment is the crest lifted by the source. On the inflow side, 13.4 of 73.1 authored ha drain elsewhere in R1 (7.5 ha to the sea). <a href="images/hydro-north-map.svg">SVG</a></figcaption></figure>
+<div class="grid2">
+<figure><img src="images/hydro-H1-source-n-ns.png" alt="Section H1" loading="lazy"><figcaption><b>H1</b>: N→S through the source at true scale. The "source" is a summit-like knob on the ridge.</figcaption></figure>
+<figure><img src="images/hydro-H2-inlet-n-long.png" alt="Section H2" loading="lazy"><figcaption><b>H2</b>: the bed falls below the nearest authored crest only after about 120 m. Candidate heads lie at 150–220 m.</figcaption></figure>
+<figure><img src="images/hydro-H3-source-w-we.png" alt="Section H3" loading="lazy"><figcaption><b>H3</b>: source-w also sits on a small (2 m) knob beyond a 615 m saddle. C2 turns that knob into the cirque threshold.</figcaption></figure>
+<figure><img src="images/hydro-H4-c2-ns.png" alt="Section H4" loading="lazy"><figcaption><b>H4</b>: the v0 C2 floor straddled the tarn/sea divide and sat above the crest to its north (superseded).</figcaption></figure>
+</div>
+<div class="tbl"><table>
+<tr><th>Option</th><th>Outcome</th><th>Verdict</th></tr>
+<tr><td>A · raise the divide +44–50 m (v0)</td><td>Codifies the knob into a ~690 m false top on a ridge authored at 553 m. Changes the skyline. The catchment stays ≲ 0.3 ha because the fixed crest is 37 m away.</td><td><span class="st s-no">not recommended</span></td></tr>
+<tr><td>B · leave it, gully only</td><td>The knob and its "source on a summit" stay visible.</td><td><span class="st s-opt">A1 interim only</span></td></tr>
+<tr><td>C · forward-only design-master errata</td><td>Move the head down the existing channel line to a hollow below the crest. Downstream bed levels stay unchanged. The knob disappears in a regenerated R1.x.</td><td><span class="st s-pro">recommended</span></td></tr>
+</table></div>
+<div class="note"><b>Recommendation.</b>
+<ol>
+<li><b>In A1:</b> freeze a 200 m zone around the inlet-n head, with no sculpting and no raise.</li>
+<li><b>Separate, approval-gated errata</b> (alongside the R1.x seam fix): move <code>ht-source-n</code> about 150–180 m down the existing channel to about (1210, 2495–2525). There the authored bed is 503–526 m, which is 23–41 m below the nearest authored crest and 185–205 m from it.</li>
+<li><b>In the same errata,</b> review <code>ht-source-w</code> (620 m) against the 597 m n-east-arc section. Root cause <span class="tag t-inf">inferred</span>: the master's source levels sit above nearby authored crests, and R1 follows the levels rather than the catchment polygon.</li>
+</ol></div>
+
+<h2 id="silhouettes"><span class="n">5</span>Approach silhouettes (A1); the Cairn col belongs to A2</h2>
+<figure><a href="images/silhouettes.png" target="_blank" rel="noopener"><img src="images/silhouettes.png" alt="Skylines from ten approaches" loading="lazy"></a><figcaption><b>Terrain-only skylines from ten approaches</b>, coloured by the A1-D zone that forms each skyline point <span class="tag t-mea">measured</span>. A filled triangle means the summit point is in line of sight. <a href="images/silhouettes.svg">SVG</a> · <a href="data/silhouettes.json">data</a></figcaption></figure>
+<ul>
+<li><b>South and south-west</b> (valley shoulder, Birchwood): within ±12° of the summit, the skyline is 50–62% A2 + A3 + summit. <b>The arête and summit shapes are the main identity levers</b>, more than the cirques.</li>
+<li>The summit point is visible only from those two far approaches. From the other eight, <b>the summit's own rounded brow hides the top</b>, which is why D1's summit sharpening matters.</li>
+<li>Cirque zones visible: C1 81% from the n-east-arc, 10–16% from the tarn side, 9% from the sea. C2 96% from the ridge but 0% from the tarn. C4 30% from Birchwood and 89% from the windward coast.</li>
+<li><b>Cairn col:</b> the summit is hidden and the foreground forms 100% of the skyline. A1 does not reshape for this view; it is A2's job.</li>
+</ul>
+
+<h2 id="catalogue"><span class="n">6</span>Feature catalogue (v1)</h2>
+<div class="tbl"><table>
+<tr><th>Id</th><th>Form</th><th>Status</th><th>Target <span class="tag t-des">design</span></th><th>Constraint <span class="tag t-mea">measured</span></th></tr>
+<tr><td>Summit</td><td>North Peak (−520, 2770), 900 m</td><td><span class="st s-fix">fixed</span></td><td>Sharpen the summit block so the top itself reads</td><td>Brow hides the top from 8 of 10 approaches</td></tr>
+<tr><td>A1</td><td>n-crown arête</td><td><span class="st s-pro">proposed</span></td><td>Sharpest arm: concave east flank (C1 headwall), stepped west flank; fades out in the coastal taper</td><td>Crest within 0.8 m of authored</td></tr>
+<tr><td>A2</td><td>n-main SE arête</td><td><span class="st s-pro">proposed</span></td><td>Steep NE flank, ribbed SW flank</td><td>Within 1.2 m</td></tr>
+<tr><td>A3</td><td>n-main W arête</td><td><span class="st s-pro">proposed</span></td><td>Broad, lower-angle north flank; gullied south flank</td><td>Within 1.2 m</td></tr>
+<tr><td>Towers</td><td>gendarmes on A1/A2</td><td><span class="st s-opt">option</span></td><td>≤ 3, 8–15 m above the crest (raise only)</td><td>Needs approval</td></tr>
+<tr><td>C1</td><td>Nordbotn</td><td><span class="st s-pro">proposed</span></td><td>E/ENE aspect; floor 690–705 m graded to a ~688 m lip; headwall 145–175 m; max lowering 85 m, no raise</td><td>Lip 400 m and floor 388 m from the coast</td></tr>
+<tr><td>C2</td><td>Västra tarnbotn (C2-a)</td><td><span class="st s-pro">proposed</span></td><td>ESE corrie bench; floor 622–632 m graded to the 620 m source threshold; headwall 60–105 m; lowering ≤ 31 m, saddle fill ≤ 9 m</td><td>Floor 92% in the tarn catchment; headwall zone 90% inside authored 01</td></tr>
+<tr><td>C2-b</td><td>enclosed variant</td><td><span class="st s-opt">option</span></td><td>North rim +15–25 m</td><td>Restores 1.03 ha, 100% inside authored 01</td></tr>
+<tr><td>C3</td><td>Norra tarnbotn</td><td><span class="st s-no">not recommended</span></td><td>—</td><td>Sits on the fixed crest; needs the declined raise</td></tr>
+<tr><td>C4</td><td>Vindbotn</td><td><span class="st s-def">deferred</span></td><td>v0 study T4 kept</td><td>Most visible cirque from Birchwood (30%)</td></tr>
+<tr><td>B1</td><td>south pillar</td><td><span class="st s-con">conditional</span></td><td>Rib 15–40 m proud of the SW flank of A2</td><td>≥ 114 m from the route centreline</td></tr>
+<tr><td>B2 / B3</td><td>SE ribs / Tarnryggen rib</td><td><span class="st s-opt">option</span></td><td>10–30 m ribs</td><td>B2 judged from K1 and the valley shoulder only; B3 partly in the taper</td></tr>
+<tr><td>S1</td><td>route shoulder (−620, 2545)</td><td><span class="st s-fix">fixed</span></td><td>Protect; the last rest before the final climb</td><td>Inside the frozen corridor</td></tr>
+<tr><td>G1</td><td>tarn-inlet-w gully trial</td><td><span class="st s-pro">proposed</span></td><td>Bed fixed; ±5 m bench; ~40° outer / ~30° inner walls</td><td>R1 bench ±55 m</td></tr>
+<tr><td>G2 / G3</td><td>inlet-n / windward gully</td><td><span class="st s-def">deferred</span></td><td>—</td><td>D3 / D8</td></tr>
+</table></div>
+
+<h2 id="sections"><span class="n">7</span>Five cross-section studies</h2>
+<p>Grey is the measured R1 surface; dashed orange is the design target <span class="tag t-des">design target</span>. Targets meet R1 exactly at fixed crests and at the edges of the edit. All panels are drawn at true scale. <a href="data/profiles.json">Control points</a></p>
+<figure><img src="images/profile-T1-c1-nordbotn.png" alt="T1 profile" loading="lazy"><figcaption><b>T1 · Nordbotn (C1)</b>, proposed. The headwall is carved into the uniform east slope under the A1 arête, with the floor graded east to a ~688 m lip. Max lowering 85 m; no raise. <a href="images/profile-T1-c1-nordbotn.svg">SVG</a></figcaption></figure>
+<figure><img src="images/profile-T2-c2-vastra-tarnbotn.png" alt="T2 profile" loading="lazy"><figcaption><b>T2 · Västra tarnbotn (C2-a)</b>, proposed. The headwall under the A2 junction drops to a floor graded to the source threshold; the 615 m saddle is filled up to 9 m so the floor drains through the source. Max lowering 31 m. <a href="images/profile-T2-c2-vastra-tarnbotn.svg">SVG</a></figcaption></figure>
+<figure><img src="images/profile-G1-tarn-inlet-w-gully.png" alt="G1 profile" loading="lazy"><figcaption><b>G1 · gully trial</b>, proposed, one reach only. The R1 ±55 m bench becomes an asymmetric V cut into the side-hill; the bed is fixed and the bench edges are filled (max +13 m). <a href="images/profile-G1-tarn-inlet-w-gully.svg">SVG</a></figcaption></figure>
+<figure><img src="images/profile-T4-c4-vindbotn-deferred.png" alt="T4 profile" loading="lazy"><figcaption><b>T4 · Vindbotn (C4)</b>, deferred. Kept as a study (−66 / +42 m). <a href="images/profile-T4-c4-vindbotn-deferred.svg">SVG</a></figcaption></figure>
+<figure><img src="images/profile-T5-inlet-n-option-a-not-recommended.png" alt="T5 profile" loading="lazy"><figcaption><b>T5 · v0 option A</b>, not recommended. The +50 m divide raise rejected under D3. <a href="images/profile-T5-inlet-n-option-a-not-recommended.svg">SVG</a></figcaption></figure>
+
+<h2 id="window"><span class="n">8</span>Coast, C1 and window v2 (D6, D7)</h2>
+<figure><a href="images/window-v2-validation.png" target="_blank" rel="noopener"><img src="images/window-v2-validation.png" alt="Window v2 validation map" loading="lazy"></a><figcaption><b>Window v2 validation</b> <span class="tag t-mea">measured</span>. Red edge = 8 m frozen ring; yellow band = 200 m feather; green = core; blue = coastal band 0–150 m (frozen) and 150–300 m (taper). Orange = A1-D features; blue outlines = protected items and frozen zones.</figcaption></figure>
+<div class="grid2">
+<div class="card"><b>Window v2</b> (−2000, 1700) → (450, 1700) → (450, 1950) → (1700, 1950) → (1700, 4000) → (−2000, 4000):
+<ul>
+<li>Valid polygon, 820 ha.</li>
+<li>Spill 100 m and glen 86 m outside.</li>
+<li>High Tarn 88.5% inside, but frozen.</li>
+<li>226 m of the peak-ascent route in the feather or ring (frozen corridor); the tarn-ascent route entirely outside.</li>
+<li>Every proposed and optional feature in the core.</li>
+<li>P0's mask loader reads boxes only, so a polygon mask is an A1 prerequisite.</li>
+</ul></div>
+<div class="card"><b>Coast and C1</b>:
+<ul>
+<li>Frozen 0–150 m, linear taper 150–300 m.</li>
+<li>C1 v1: lip 400 m, floor 388 m, headwall 366 m from the coast. Taper weight 1.0, so fully compatible.</li>
+<li>The outflow continues down unedited R1 slope to the NE bay.</li>
+<li>The n-crown sharpening fades out in the taper.</li>
+</ul></div>
+</div>
+
+<h2 id="protected"><span class="n">9</span>Protected geographic features</h2>
+<div class="grid2"><div class="card"><ul style="margin:0">
+<li>R1 binaries and source, the A-R1 design master, P0 code and existing tests. A1 output is a new artifact, R1 + Δ.</li>
+<li>Summit (−520, 2770), 900 m.</li>
+<li>Every crest polyline: never lowered; raised only where approved.</li>
+<li>High Tarn level 360 m, wet extent and 32 m rim, plus the seam clearance (r 185 m).</li>
+<li>Spill and glen-tarn-outlet.</li>
+</ul></div><div class="card"><ul style="margin:0">
+<li>All channel beds, levels and sources. Cross-sections change only on the G1 trial reach.</li>
+<li>The inlet-n head zone (r 200 m) pending D3.</li>
+<li>Coast plus the 0–150 m band, tapering to 300 m.</li>
+<li>Peak-ascent and tarn-ascent corridors, including S1. Cairn Saddle (A2).</li>
+<li>No new lakes or sinks. Catchment changes only as declared, and only toward authored catchment 01.</li>
+</ul></div></div>
+
+<h2 id="evidence"><span class="n">10</span>P0 clay evidence (R1 as committed)</h2>
+<div class="grid3">
+<figure><img src="images/evidence/ev-oblique-clayA.jpg" alt="Island oblique clay" loading="lazy"><figcaption><b>Island oblique, sun A</b>: tent ridges, membrane flanks.</figcaption></figure>
+<figure><img src="images/evidence/ev-valley-shoulder-clayB.jpg" alt="Valley shoulder clay" loading="lazy"><figcaption><b>Valley shoulder, sun B</b>: a smooth dome; the A2/A3 flanks form the skyline.</figcaption></figure>
+<figure><img src="images/evidence/ev-birchwood-clayA.jpg" alt="Birchwood clay" loading="lazy"><figcaption><b>Birchwood, sun A</b>: one rounded hump; the C4 side is in view.</figcaption></figure>
+<figure><img src="images/evidence/ev-cairn-col-clayA.jpg" alt="Cairn col clay" loading="lazy"><figcaption><b>Cairn col</b>: the peak is hidden (an A2 question).</figcaption></figure>
+<figure><img src="images/evidence/ev-high-tarn-clayA.jpg" alt="High Tarn clay" loading="lazy"><figcaption><b>High Tarn</b>: inlets as 110 m engineered benches; G1 tests the alternative.</figcaption></figure>
+<figure><img src="images/evidence/ev-tarn-overlook-std.jpg" alt="Tarn overlook" loading="lazy"><figcaption><b>Tarn overlook</b>: only the brow of the peak shows.</figcaption></figure>
+</div>
+
+<h2 id="prereq"><span class="n">11</span>Remaining prerequisites before A1 implementation</h2>
+<ol>
+<li><b>Final art approval</b> of D1–D10 as answered here, including C2-a vs C2-b, B1, towers and the C4 position.</li>
+<li><b>D3:</b> approve freezing inlet-n in A1 and the errata route. The errata itself is not part of A1.</li>
+<li><b>Incremental solver</b> H = R1 + Δ. An empty overlay must reproduce <code>terrain.f32</code> byte for byte.</li>
+<li><b>Declared constraint release</b> (G1 reach; approved raises only). Null = nothing released.</li>
+<li><b>Crest lower bounds kept in Δ</b>, with the active set reported.</li>
+<li><b>Converged windowed solve</b>; cells outside the window byte-identical to R1.</li>
+<li><b>Polygon window mask</b> (v2) with Euclidean feather, coastal taper and frozen zones.</li>
+<li><b>Overlay validator</b>: clearances, graded floors with no sinks, and declared catchment changes checked against catchment 01.</li>
+<li><b>Hydrology and route gates</b>: sink set empty; D8 outlets unchanged except as declared; channel beds within 1 mm; route tests unmodified.</li>
+<li><b>Cameras K1–K4</b> through a reviewed test change. P0 pins 15 cameras; adding is not a weakening.</li>
+<li><b>|Δ| = 0 inside the seam clearance</b>, reported.</li>
+<li><b>Reference environment:</b> Linux, two byte-identical runs. Mac probe recommended, not blocking.</li>
+</ol>
+
+<h2 id="uncertain"><span class="n">12</span>Assumptions and uncertainties</h2>
+<ul>
+<li>Silhouettes and visibility are terrain-only (no trees, haze or curvature; 1.75 m eye). They rank options rather than predict final renders.</li>
+<li>Contributing areas are computed on R1 including its 1.6 m channel cuts, so they are approximate near channels. The whole-polygon catchment shortfall (51.7 ha) includes outlet-glen conventions; quote the inflow-side 13.4 ha instead.</li>
+<li>Design targets are control-point envelopes. A1's solver will smooth between them, so local slopes will differ.</li>
+<li>The relocated inlet-n head is a candidate range. Its catchment after regeneration is unknown until R1.x exists.</li>
+<li>Once carved, the cirques themselves will be more visible than the R1 slopes they replace <span class="tag t-inf">inferred</span>. The visibility numbers are a floor.</li>
+</ul>
+
+<div class="stop">
+<h3>Stopped for final artistic review</h3>
+<p style="margin:0">This is a design checkpoint only. No overlay was implemented, no terrain generated, A1 not started, and nothing was merged or deployed. Please give final decisions on D1–D10 (especially D2 on C4, D3 on the errata route, and C2-a vs C2-b) before any terrain is generated.</p>
+</div>
+</div>
+<script>
+(function(){var bs=document.querySelectorAll('.seg button'),img=document.getElementById('mapimg'),a=document.getElementById('maplink');
+bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});img.src=b.dataset.src;a.href=b.dataset.full;img.alt=b.textContent.indexOf('clay')>-1?'Annotated A1-D concept v1 on the R1 clay hillshade':'Annotated A1-D concept v1 on the approved A-R1 map';});});})();
+</script>
+</body>
+</html>
