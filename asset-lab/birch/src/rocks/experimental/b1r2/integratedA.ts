@@ -71,6 +71,7 @@ export function buildIntegratedA():IntegratedA {
  const b=cloneCSGSource(source.parts[1]);
  const evaluator=new Evaluator();
  evaluator.useGroups=false;
+ evaluator.useCDTClipping=true; // constrained triangulation for clipped intersection polygons
  evaluator.attributes=['position','normal','uv','color'];
  // No texture modification. Both closed brushes share one common material.
  const mat=new THREE.MeshStandardMaterial({vertexColors:true});
@@ -107,7 +108,9 @@ export function buildIntegratedA():IntegratedA {
   for(let j=0;j<3;j++){
    const k=index?index.getX(i+j):i+j;
    const original:P3=[position.getX(k),position.getY(k),position.getZ(k)];
-   const translated=reconstructTransition(original);
+   const shifted=reconstructTransition(original);
+   // Shared polygon boundaries must use the same position bits after CSG clipping.
+   const translated:P3=[shifted[0],shifted[1],shifted[2]].map(x=>Math.round(x*100000)/100000) as [number,number,number];
    const change=norm3(subtract(translated,original));
    if(change>1e-8){moved++;maxShift=Math.max(maxShift,change);}
    pts.push(translated);
