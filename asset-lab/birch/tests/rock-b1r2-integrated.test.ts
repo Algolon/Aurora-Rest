@@ -6,7 +6,7 @@ import {buildIntegratedA,reconstructTransition} from '../src/rocks/experimental/
 import {buildB1R} from '../src/rocks/experimental/b1r/multiMassRocks.ts';
 import {buildRockArchetype} from '../src/rocks/experimental/b1/rockArchetypes.ts';
 import {r04StudyGeometry} from '../src/rocks/experimental/r04MaterialStudies.ts';
-const point=(p:THREE.BufferAttribute,i:number)=>[p.getX(i),p.getY(i),p.getZ(i)] as const;
+const point=(p:THREE.BufferAttribute|THREE.InterleavedBufferAttribute,i:number)=>[p.getX(i),p.getY(i),p.getZ(i)] as const;
 const key=(p:readonly number[],precision=100000)=>p.map(x=>Math.round(x*precision)).join(',');
 function fingerprint(g:THREE.BufferGeometry){
  const h=createHash('sha256');
