@@ -4,7 +4,7 @@
 **Date:** 2026-10-22
 **Authorized branch:** art/asset-01e2r-r04-refinement
 **Source:** feature/asset-01e1-rock-family-calibration@33adfb992d907e386bc272dd73716d734191f2bf
-**Status:** IMPLEMENTATION CHECKPOINT / ART REVIEW PENDING. **No art approval is claimed.**
+**Status:** CI VERIFIED — 35/35 TESTS, TYPECHECK, VITE BUILD, SOURCE PARITY, 37 REAL WEBGL IMAGES; **ART REVIEW PENDING.** No art approval is claimed.
 **Scope:** One R04 benchmark, controlled G1/G2 geometry modifications, M1/M2/M3 material exploration. E2R-B prohibited without owner authorization.
 
 ## 1. Source, safety and preflight
@@ -35,13 +35,13 @@ Inspected the rejected checkpoint report at a4757935cdabbe07fa333ea536ef3d4851f6
 - src/rocks/experimental/r04RefinementCore.ts — pure deterministic geometry studies.
 - src/rocks/experimental/r04MaterialStudies.ts — Three.js BufferGeometry adapter and material experiments.
 
-| Geometry | Design | Predicted isolated triangles |
+| Geometry | Design | CI-verified isolated triangles |
 |---|---|---:|
 | G0 | Exact source R04, untouched | 128 |
 | G1 | Source R04 with two hand-placed local incisions plus a 0.033m maximal subtle inward tuck of the frontal-slab upper seam | 136 |
 | G2 | G1 plus one restrained rear and one left-shoulder incision | 144 |
 
-The numbers for G1/G2 are analytically expected (five triangles replace one per localized incision); automated assertions have been authored but **not verified as passed in this session**.
+The G1/G2 triangle counts are **measured in actual Chromium/WebGL captured renderer metadata** and separately covered by all-passing automated integrity tests (five triangles replace one per localized incision).
 
 Two incisions G1: upper front fault on the main mass and directional bedding within the frontal slab. G2 adds rear joint and left shoulder chip. Triangle perimeters are maintained while interior control points move inward by approximately 0.025–0.050m; no overlay crack meshes are used. Original vertex colors are retained. Planar texture coordinates are chosen per original face dominant axis; cut subtriangles share the original local plane projection.
 
@@ -76,7 +76,7 @@ Controls: front/rear/left/right/top/three-quarter/human view; orbit and zoom; ne
 
 The Playwright capture script is designed to save matching actual WebGL canvas PNGs to r04-e2r-evidence/, together with metrics.json, capture checks and JS/browser errors. Its set covers the original seven views, geometry comparisons, G1/G2 viewpoints, geometry wireframe, material comparisons under three lighting conditions, texture close-ups and approved-vegetation context.
 
-**Evidence integrity:** code and capture specification are in GitHub. This session could not locally clone the repo or run Vite/Chromium using its original dependencies. Therefore this report does **not** claim that the new images or metrics.json have already been generated or that shader compilation has passed. Inspect the E2R Actions workflow and its artifact before art acceptance.
+**Evidence integrity — VERIFIED:** On 2026-10-22, [E2R CI run 39753501673](https://github.com/Algolon/Aurora-Rest/actions/runs/39753501673) completed successfully on code-fix commit `e6824bb96b0c1792bbddb810cad4c985b0a54368`. The **37 actual Chromium/Three.js/WebGL PNGs and `metrics.json`** are in [artifact 12415086035](https://github.com/Algolon/Aurora-Rest/actions/runs/39753501673/artifacts/12415086035). The initial 37-image evidence remains independently preserved at [earlier artifact 12411956655](https://github.com/Algolon/Aurora-Rest/actions/runs/39747354928/artifacts/12411956655); bytewise comparison confirmed that **all 37 PNGs are identical across these two runs**, although their `metrics.json` bytes differ. The browser-report `errors` list is empty and its material lifecycle check records 9 textures created, disposed and successfully recreated. These are actual SwiftShader WebGL captures, **not physical Android GPU testing**.
 
 ## 7. QA and regression strategy
 
@@ -85,19 +85,19 @@ Files added:
 - .github/workflows/asset-01e2r-r04-refinement.yml — isolated CI on E2R branch, npm test, TypeScript/Vite build, protected FLW production-source independent birch/pine/grass/rock parity, Chromium/Three.js WebGL screenshot generation, artifact upload.
 - scripts/capture-r04-refinement.mjs — shader/browser errors, PNG validation, material lifecycle dispose/recreate smoke check.
 
-**Execution status at report creation:** Source inspections and GitHub writes confirmed; E2R unit tests, strict TypeScript, production build, regression parity, Chromium/WebGL evidence and shader link checks are **PENDING VERIFICATION**, not PASS. No Android physical GPU check. Unit manifold-edge incidence cannot prove absence of every possible self-intersection or remove original slab/main overlap.
+**Verified A1 execution status:** 35/35 Node tests PASS (0 failed). `tsc --noEmit && vite build` PASS (`vite v8.3.5`, 14 modules transformed, Vite build completed in 231ms in this CI environment). Independent production-source **birch geometry parity PASS** (3 variants × 3 LODs), **pine parity PASS** (nine source models), **grass parity PASS** (4 source variants), **rock parity PASS** (source seeds 11/23/37/53); pinned FLW production SHA `17eafb0902833fb1121c77083f9f862eb4ffcd96` untouched. The Vite source-checkout dependency scanner emitted a **non-fatal warning** about a missing external FLW game/index.html; parity commands still succeeded and the CI job is green. Real Chromium WebGL capture PASS with 37 PNG images and metrics. No Android physical GPU check. Unit manifold-edge incidence cannot prove absence of every possible self-intersection or remove original slab/main overlap.
 
 CI workflow file:
 [ASSET-01E2R-A R04 refinement workflow](https://github.com/Algolon/Aurora-Rest/actions/workflows/asset-01e2r-r04-refinement.yml).
 
 ## 8. Performance and reuse
 
-- Baseline G0: 128 triangles; estimated G1: 136; G2: 144 (to verify).
+- **Actual browser metrics:** G0 128 triangles / 384 vertices; G1 136 triangles / 408 vertices; G2 144 triangles / 432 vertices. R04 still consists of two overlapping non-Boolean-unioned solids.
 - 3 separate demonstration MeshStandardMaterial instances, 9 maps, 256x256 each.
 - No new asset batching, no island-wide instancing, no LOD or collision implementation.
 - One visible R04 model uses one rock mesh/geometry draw call in its normal forward pass, subject to renderer pipeline and possible shadow passes; **whole-scene drawcalls have not been measured** for this E2R showroom.
 - Preview material is intentionally allocated once for the three simultaneous comparison objects, enabling reuse across variants. Later production integration requires shared ownership across instances.
-- Procedural texture generation cost, real GPU memory, shader variant compile time and physical Android FPS remain unmeasured.
+- Procedural texture generation cost, real GPU memory, shader variant compile time and physical Android FPS remain unmeasured. The 37-image browser metadata reports 256px textures, 9 distinct texture resources and WebGL 2.0 Chromium under SwiftShader.
 
 ## 9. Art critical assessment and decision gate
 
@@ -105,7 +105,7 @@ CI workflow file:
 
 **Risks:** (1) the R04 applied slab may still be obvious, (2) four local face incisions may be too shallow and too short to convey believable geological fractures, (3) dominant-axis mapping can reveal seams, (4) vertex-color multiplication by textures could darken the result excessively, (5) material normal detail can compete with the large planes, (6) lower-zone moss styling may read procedural. These must be judged from real browsers, not from source code.
 
-**Current decision:** ART REVIEW PENDING. Do **not** assign ART APPROVE, ART CONDITIONAL, or ART REJECT until matched actual screenshot review. Owner must approve both geometry and final material. Technical CI success, once established, is not art acceptance.
+**Current decision: ART REVIEW PENDING.** Real matching images exist and have been compiled into separate large review contact sheets for owner inspection. G1 maintains the source's broad mass with minor local treatment; G2's extra planes look more abrupt from the front; the visible M2/M3 fine parallel surface lines may read overly regular rather than authentically geological. These are **review observations**, not approval decisions. The prominent original front slab/seam remains. Do **not** assign ART APPROVE, ART CONDITIONAL or ART REJECT on behalf of the owner. Technical CI PASS does not confer art acceptance.
 
 ## 10. Future 10–15 model strategy — planning only
 
@@ -117,4 +117,38 @@ Share chosen albedo/normal/roughness maps and avoid N unique shader variants. Co
 
 Scope-limited files have been committed/pushed to art/asset-01e2r-r04-refinement through the connected GitHub repository. Final commit SHA is the tip of the branch after this report is created; verify through its history. No merge, deploy, release, production refactor, source repository write or 10–15 rock expansion was performed.
 
-**Stop after E2R-A. Owner visual review and technical verification are required before any E2R-B.**
+**Stop after E2R-A1. Technical CI verified. Owner art review is required before any E2R-B.**
+
+
+## 12. E2R-A1 — Verified CI repair and measured WebGL review (2026-10-22)
+
+### Minimal technical correction
+The previous [run 39747354928](https://github.com/Algolon/Aurora-Rest/actions/runs/39747354928) completed with 37 genuine renders but failed TypeScript diagnostic TS2352 at `rocks/e2r-showroom.ts:47`. The three-mesh tuple had been produced by `.map()` then asserted as a three-element tuple. Commit [e6824bb](https://github.com/Algolon/Aurora-Rest/commit/e6824bb96b0c1792bbddb810cad4c985b0a54368) replaced that assertion with one `makeStudyMesh(): THREE.Mesh` helper and an explicit literal three-element tuple. The three meshes, positions, geometry/material generation, lighting and camera settings are **functionally unchanged**. No `any`/`unknown` cast was used.
+
+### Confirmed CI and artifact links
+- **All-green implementation run:** [39753501673](https://github.com/Algolon/Aurora-Rest/actions/runs/39753501673) on `e6824bb96b0c1792bbddb810cad4c985b0a54368`.
+- **New verified visual artifact (37 PNG + metrics):** [12415086035](https://github.com/Algolon/Aurora-Rest/actions/runs/39753501673/artifacts/12415086035).
+- **Original visual artifact, preserved and compared:** [12411956655](https://github.com/Algolon/Aurora-Rest/actions/runs/39747354928/artifacts/12411956655).
+- **r04-refinement-regression:** PASS: 35/35 tests, Vite+strict TS check, original birch/pine/grass/rock parity.
+- **r04-real-webgl:** PASS: 37 actual WebGL screenshots, no recorded page/console errors, texture lifecycle 9/9 recreation.
+- **Evidence consistency:** the two artifact ZIPs contain the same 37 filenames and all PNG image bytes match; their metrics.json files differ. Contact sheets are derived by cropping/labeling the genuine screenshot pixels (no new synthetic model rendering). These are provided directly in the handoff conversation alongside the source ZIP.
+
+### Actual rendered geometry and performance observations
+
+| Scenario | Rendered rock vertices / triangles | Whole-scene Chromium WebGL renderer calls | Whole-scene rendered triangles |
+|---|---|---:|---:|
+| G0 original alone | 384 vertices / 128 triangles | 5 | 526 |
+| G0+G1+G2 neutral comparison | 384/408/432 vertices, 128/136/144 triangles | 7 | 818 |
+| G1 with M1/M2/M3 neutral | 3 × 408 vertices, 3 × 136 triangles | 8 | 946 |
+| G2 with M1/M2/M3 neutral | 3 × 432 vertices, 3 × 144 triangles | 8 | 994 |
+| G0 + G1 + original birch/pine/grass + production rock | G0 128 / G1 136 | 21 | 11,422 |
+
+The above **renderer calls and rendered triangles refer to the entire showroom frame**, including floor, height marker and shadow passes; they are not per-rock GPU-cost measurements. Screenshots captured at 1440 × 900, WebGL 2.0 Chromium/SwiftShader. No Android FPS claims.
+
+### Remaining art acceptance questions
+1. Is the G1/G2 structural difference meaningful at human walking distance? Its fracture interventions are deliberately small, and the original applied front slab is still prominent.
+2. Does M2/M3's repeated diagonal mineral pattern help or distract from large-scale faceting? Compare neutral/Nordic/grazing plus detail crops.
+3. Do G1/M1, G1/M2 or G1/M3 fit the source-faithful vegetation in normal Nordic lighting? Final selection **must be made by the owner**.
+4. The contact sheet is a *review convenience*, not a geometry-quality proof. The original 37 full-resolution PNGs and metrics remain the authoritative evidence.
+
+**Final art status: ART REVIEW PENDING. No E2R-B, merge, deployment, production changes or geological redesign.**
