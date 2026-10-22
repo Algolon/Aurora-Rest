@@ -1,0 +1,120 @@
+{
+ "schema": "aurora-terrain-variants/1",
+ "base": "public/geo-r02b/terrain.f32",
+ "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "note": "Review-only A1a form-study variants. Compose by copying each patch block into the canonical R1 grid; never overwrite R1.",
+ "variants": {
+  "m0": {
+   "id": "m0",
+   "label": "M0 \u00b7 empty overlay (R1 parity)",
+   "spec": "tools/geo-r02c-a1a/specs/a1a-m0.json",
+   "specSha256": "f83b4793b4fe1acf178729d50b2773abbada8e450c5eec14082427142c92d2b4",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "changedCells": 0,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "timing": {
+    "loadS": 0.83,
+    "buildAndComposeS": 49.74
+   },
+   "patch": null
+  },
+  "v1": {
+   "id": "v1",
+   "label": "V1 \u00b7 ridge and flank sculpting",
+   "spec": "tools/geo-r02c-a1a/specs/a1a-v1.json",
+   "specSha256": "585f94988a655600a6d479b11d5d1d5cc6e3af3d2b0619e414c86534188e1e9d",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "61b599545d60f9bfdcba7fe88f171be78186e78667fdef55e9612346e45786a3",
+   "changedCells": 16694,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "timing": {
+    "loadS": 0.78,
+    "buildAndComposeS": 55.12
+   },
+   "patch": {
+    "file": "v1.patch.f32",
+    "rows": [
+     199,
+     384
+    ],
+    "cols": [
+     616,
+     821
+    ],
+    "sha256": "0231a4a997ee97805bb7f826a77ff77696b0865c32feecb0378266ea534835f8",
+    "bytes": 153264
+   }
+  },
+  "v2": {
+   "id": "v2",
+   "label": "V2 \u00b7 V1 + C1 Nordbotn",
+   "spec": "tools/geo-r02c-a1a/specs/a1a-v2.json",
+   "specSha256": "892c5023d48bf47acb653cc63457f40d04a6d69e05e4e8d6e097b93092280824",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "e012c711a7e9e62bfd06e27af8cde7afca019d6d0006f9280040ac365f21cab3",
+   "changedCells": 16694,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "timing": {
+    "loadS": 0.87,
+    "buildAndComposeS": 58.46
+   },
+   "patch": {
+    "file": "v2.patch.f32",
+    "rows": [
+     199,
+     384
+    ],
+    "cols": [
+     616,
+     821
+    ],
+    "sha256": "541c9c3723f27d2241076791c9d8badbee585e048ad65781728d9c97ef7a9bc5",
+    "bytes": 153264
+   }
+  },
+  "v3": {
+   "id": "v3",
+   "label": "V3 \u00b7 V2 + G1 gully study",
+   "spec": "tools/geo-r02c-a1a/specs/a1a-v3.json",
+   "specSha256": "50fbfd315b49f01038e8951ffe38221e4feebdc4781f96c314855457beb6642d",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "changedCells": 18096,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "timing": {
+    "loadS": 0.72,
+    "buildAndComposeS": 57.59
+   },
+   "patch": {
+    "file": "v3.patch.f32",
+    "rows": [
+     199,
+     426
+    ],
+    "cols": [
+     616,
+     944
+    ],
+    "sha256": "b49cf1101e6536bd815b0d6bfb3fc5ce1f15c6500fbf09fa5c03da0c51ed55e9",
+    "bytes": 300048
+   }
+  }
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "variant": "v3",
+ "label": "V3 \u00b7 V2 + G1 gully study",
+ "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+ "changedCells": 18096,
+ "checks": {
+  "outsideWindowBboxUnchanged": true,
+  "protectedClassChangedCells": {
+   "sea": 0,
+   "lake": 0,
+   "wet": 0,
+   "valley": 0,
+   "crest": 0,
+   "otherEquality": 0,
+   "corridor": 0,
+   "zone": 0,
+   "divide": 0,
+   "waterSurface": 0
+  },
+  "protectedUnchanged": true,
+  "changedOnlyWhereMaskPositive": true,
+  "crestCellsBelowBound": 0,
+  "wetCellsChanged": 0,
+  "landSeaSignChanged": 0,
+  "coastBand0to150Changed": 0,
+  "routeCentrelineMaxChangeM": {
+   "hero": 0.0,
+   "tarn-ascent": 0.0,
+   "peak-ascent": 0.0,
+   "hidden-loop": 0.0,
+   "west-cape-spur": 0.0,
+   "south-shoulder-loop": 0.0
+  },
+  "sinksBox": {
+   "rows": [
+    124,
+    502
+   ],
+   "cols": [
+    541,
+    1020
+   ]
+  },
+  "sinksR1": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "sinksVariant": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "newDrySinkCells1cm": 0,
+  "maxNewFillDepthM": 0.0,
+  "drainageDestinationChangedCells": 0,
+  "drainageTransitions(1=HighTarn,2=sea,3=other)": {},
+  "drainageChangedHa": 0.0,
+  "deltaStats": {
+   "minM": -82.81072998046875,
+   "maxM": 14.3966064453125,
+   "changedHa": 28.95,
+   "maxDeltaGradient": 1.866851806640625,
+   "cellsDeltaGradientOver1": 452
+  },
+  "slopeStats": {
+   "r1MaxCellSlope": 12.154516458511353,
+   "variantMaxCellSlope": 12.154516458511353,
+   "variantCellEdgesOver45deg": 78767,
+   "r1CellEdgesOver45deg": 77099,
+   "variantCellEdgesOver60deg": 18166
+  },
+  "pass": true
+ }
+}

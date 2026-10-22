@@ -1,0 +1,55 @@
+{
+ "schema": "aurora-terrain-overlay/1",
+ "base": {
+  "terrain": "public/geo-r02b/terrain.f32",
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a"
+ },
+ "designReference": "docs/geo-r02c-a1d/data/a1d-concept-v1.json (approved checkpoint 15c0977)",
+ "mask": {
+  "window": {
+   "file": "docs/geo-r02c-a1d/data/window-v2-proposed.json"
+  },
+  "coast": {
+   "frozenM": 150,
+   "taperToM": 300
+  },
+  "falloffM": {
+   "lake": 30,
+   "wet": 12,
+   "valley": 20,
+   "crest": 6,
+   "otherEquality": 16,
+   "corridor": 60,
+   "zone": 40,
+   "divide": 40,
+   "waterSurface": 4
+  },
+  "corridors": {
+   "peak-ascent": 75,
+   "tarn-ascent": 55
+  },
+  "frozenZones": [
+   {
+    "id": "inlet-n-head",
+    "centre": [
+     1290,
+     2650
+    ],
+    "radiusM": 200
+   },
+   {
+    "id": "high-tarn-seam",
+    "centre": [
+     750,
+     2172
+    ],
+    "radiusM": 185
+   }
+  ],
+  "protectDivides": true,
+  "divideOffCrestM": 12
+ },
+ "id": "m0",
+ "label": "M0 \u00b7 empty overlay (R1 parity)",
+ "operators": []
+}

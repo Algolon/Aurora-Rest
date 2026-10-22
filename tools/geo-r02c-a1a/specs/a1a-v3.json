@@ -1,0 +1,427 @@
+{
+ "schema": "aurora-terrain-overlay/1",
+ "base": {
+  "terrain": "public/geo-r02b/terrain.f32",
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a"
+ },
+ "designReference": "docs/geo-r02c-a1d/data/a1d-concept-v1.json (approved checkpoint 15c0977)",
+ "mask": {
+  "window": {
+   "file": "docs/geo-r02c-a1d/data/window-v2-proposed.json"
+  },
+  "coast": {
+   "frozenM": 150,
+   "taperToM": 300
+  },
+  "falloffM": {
+   "lake": 30,
+   "wet": 12,
+   "valley": 20,
+   "crest": 6,
+   "otherEquality": 16,
+   "corridor": 60,
+   "zone": 40,
+   "divide": 40,
+   "waterSurface": 4
+  },
+  "corridors": {
+   "peak-ascent": 75,
+   "tarn-ascent": 55
+  },
+  "frozenZones": [
+   {
+    "id": "inlet-n-head",
+    "centre": [
+     1290,
+     2650
+    ],
+    "radiusM": 200
+   },
+   {
+    "id": "high-tarn-seam",
+    "centre": [
+     750,
+     2172
+    ],
+    "radiusM": 185
+   }
+  ],
+  "protectDivides": true,
+  "divideOffCrestM": 12
+ },
+ "id": "v3",
+ "label": "V3 \u00b7 V2 + G1 gully study",
+ "operators": [
+  {
+   "type": "faces",
+   "id": "aretes-A1-A2-A3",
+   "blendTauM": 40,
+   "smoothCells": 1.5,
+   "arms": [
+    {
+     "id": "A1",
+     "ridge": "n-crown",
+     "from": [
+      -520,
+      2770
+     ],
+     "lengthM": 520,
+     "startRampM": 1e-06,
+     "endRampM": 160,
+     "maxCutM": 45,
+     "smoothCells": 1.0,
+     "right": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        15,
+        26
+       ],
+       [
+        40,
+        58
+       ],
+       [
+        80,
+        88
+       ],
+       [
+        140,
+        115
+       ],
+       [
+        220,
+        142
+       ],
+       [
+        320,
+        175
+       ]
+      ],
+      "mod": [
+       [
+        0.15,
+        260,
+        0.6
+       ],
+       [
+        0.08,
+        130,
+        2.1
+       ]
+      ]
+     },
+     "left": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        12,
+        14
+       ],
+       [
+        30,
+        27
+       ],
+       [
+        48,
+        31
+       ],
+       [
+        75,
+        46
+       ],
+       [
+        130,
+        85
+       ],
+       [
+        210,
+        140
+       ],
+       [
+        320,
+        215
+       ]
+      ],
+      "mod": [
+       [
+        0.18,
+        220,
+        4.0
+       ]
+      ]
+     },
+     "note": "n-crown: sharp concave east face (continues into the C1 headwall); stepped west face with an upper shoulder bench"
+    },
+    {
+     "id": "A2",
+     "ridge": "n-main",
+     "from": [
+      -520,
+      2770
+     ],
+     "to": [
+      -230,
+      2540
+     ],
+     "startRampM": 1e-06,
+     "endRampM": 120,
+     "maxCutM": 40,
+     "smoothCells": 1.0,
+     "left": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        15,
+        22
+       ],
+       [
+        40,
+        48
+       ],
+       [
+        90,
+        78
+       ],
+       [
+        160,
+        108
+       ],
+       [
+        260,
+        140
+       ]
+      ],
+      "mod": [
+       [
+        0.15,
+        200,
+        1.7
+       ],
+       [
+        0.07,
+        110,
+        0.3
+       ]
+      ]
+     },
+     "right": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        20,
+        14
+       ],
+       [
+        60,
+        38
+       ],
+       [
+        140,
+        74
+       ],
+       [
+        240,
+        112
+       ]
+      ],
+      "mod": [
+       [
+        0.2,
+        170,
+        3.1
+       ]
+      ]
+     },
+     "note": "SE arete: steep NE face above C1/C2; gentler SW face (mostly inside the frozen trail corridor)"
+    },
+    {
+     "id": "A3",
+     "ridge": "n-main",
+     "from": [
+      -520,
+      2770
+     ],
+     "to": [
+      -710,
+      2570
+     ],
+     "startRampM": 1e-06,
+     "endRampM": 120,
+     "maxCutM": 30,
+     "smoothCells": 1.0,
+     "right": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        25,
+        12
+       ],
+       [
+        60,
+        25
+       ],
+       [
+        95,
+        29
+       ],
+       [
+        150,
+        55
+       ],
+       [
+        260,
+        105
+       ]
+      ],
+      "mod": [
+       [
+        0.15,
+        190,
+        0.9
+       ]
+      ]
+     },
+     "left": {
+      "profile": [
+       [
+        0,
+        0
+       ],
+       [
+        15,
+        18
+       ],
+       [
+        45,
+        42
+       ],
+       [
+        100,
+        70
+       ],
+       [
+        180,
+        104
+       ],
+       [
+        280,
+        142
+       ]
+      ],
+      "mod": [
+       [
+        0.22,
+        120,
+        1.2
+       ],
+       [
+        0.1,
+        240,
+        2.8
+       ]
+      ]
+     },
+     "note": "W arete: broad north face with a mid shoulder bench; south face with a slow rib/hollow rhythm"
+    }
+   ],
+   "note": "face-cut sculpt of the three summit aretes; targets blended over ridge proximity; every other authored ridge keeps R1",
+   "footSoftM": 6,
+   "minFaceFreedom": 0.75
+  },
+  {
+   "type": "cirque",
+   "id": "C1-nordbotn",
+   "centre": [
+    -245,
+    2930
+   ],
+   "rxM": 75,
+   "rzM": 85,
+   "outlineHarmonics": [
+    [
+     0.06,
+     2,
+     0.9
+    ],
+    [
+     0.04,
+     3,
+     2.4
+    ],
+    [
+     0.02,
+     5,
+     0.4
+    ]
+   ],
+   "flowAzimuthDeg": 78,
+   "lipU": 1000000000.0,
+   "lipFadeM": 1,
+   "lipOvershootM": 1,
+   "lipX": -172,
+   "floorLengthM": 155,
+   "lipM": 694,
+   "floorWestM": 716,
+   "floorDishM": 4,
+   "headwallCoeffM": 88,
+   "headwallExponent": 1.5,
+   "fadeStartRho": 2.6,
+   "fadeWidthRho": 0.6,
+   "rimSmoothCells": 1.5,
+   "note": "E/ENE cirque under the A1 arete; excavation only; irregular plan; dished floor graded east to a lip set at the existing slope height (no step, no overdeepening); envelope max lowering 85 m"
+  },
+  {
+   "type": "gully",
+   "id": "G1-tarn-inlet-w",
+   "channel": "tarn-inlet-w",
+   "reachFraction": [
+    0.35,
+    0.65
+   ],
+   "rampM": 60,
+   "halfWidthM": 110,
+   "hillSampleM": 110,
+   "bankEdgeM": 18,
+   "bankRiseM": 0.65,
+   "wallMidDeg": 34,
+   "wallBendDeg": 5,
+   "bendGain": 6,
+   "angleMod": [
+    [
+     0.08,
+     140,
+     0.9
+    ]
+   ],
+   "kneeSoftM": 3,
+   "kneeMod": [
+    [
+     0.4,
+     110,
+     2.0
+    ]
+   ],
+   "falloffOverrideM": {
+    "wet": 4
+   },
+   "note": "releases only the R1 valley-floor band on this reach; channel bed and wet section stay frozen",
+   "smoothCells": 2
+  }
+ ]
+}
