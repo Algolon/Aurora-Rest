@@ -63,9 +63,9 @@ const geos:Record<Choice,{primary:THREE.BufferGeometry;refined:THREE.BufferGeome
  G1:{primary:r04StudyGeometry('G1'),refined:r04StudyGeometry('G1')}
 };
 const choices:Choice[]=['G1',...ROCK_ARCHETYPES];
-const meshes=new Map<Choice,THREE.Mesh>();
-for(const id of choices){const mesh=new THREE.Mesh(geos[id].refined,diag);mesh.castShadow=true;mesh.receiveShadow=true;meshes.set(id,mesh);scene.add(mesh);}
-const before=new THREE.Mesh(geos.A.primary,diag);before.castShadow=true;before.receiveShadow=true;scene.add(before);
+const meshes=new Map<Choice,THREE.Mesh<THREE.BufferGeometry,THREE.Material>>();
+for(const id of choices){const mesh=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(geos[id].refined,diag);mesh.castShadow=true;mesh.receiveShadow=true;meshes.set(id,mesh);scene.add(mesh);}
+const before=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(geos.A.primary,diag);before.castShadow=true;before.receiveShadow=true;scene.add(before);
 const production=createRockFamily(),productionRock=production.createMesh(11);
 productionRock.position.set(-6,-.18,-.2);scene.add(productionRock);
 const birchFamily=createBirchFamily(),pineFamily=createPineFamily(),grassFamily=createGrassFamily();
@@ -104,7 +104,7 @@ function setCamera(){
  camera.position.set(dir[0]*orbitDistance, isHuman?1.70:focusY+dir[1]*orbitDistance,dir[2]*orbitDistance);
  camera.lookAt(0,isHuman?1.25:focusY,0);
  camera.updateProjectionMatrix();camera.updateMatrixWorld();
- controls.enabled=!isHuman;controls.object=camera;controls.target.set(0,isHuman?1.25:focusY,0);controls.update();
+ controls.enabled=!isHuman;if(!isHuman){controls.target.set(0,focusY,0);controls.update();}
  renderer.setRenderTarget(null);
 }
 function chooseMat(){
