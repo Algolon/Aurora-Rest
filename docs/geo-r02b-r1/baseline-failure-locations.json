@@ -1,0 +1,1124 @@
+{
+  "baseline": "7438e6a",
+  "terrainSha256": "0e2788a52066463881d346dda4c7018b2155208c82916c5552e1824215fec462",
+  "measurementTiming": "Post-correction consolidation from immutable baseline; original causal stage analysis was performed before implementation.",
+  "originalLowBankCount": 81,
+  "originalLowBankLocations": [
+    {
+      "channel": "main-mire-upper",
+      "xz": [
+        585.113,
+        -1467.939
+      ],
+      "referenceWaterM": 7.28168,
+      "terrainM": 6.674298399206242,
+      "deficitM": 0.607381600793758
+    },
+    {
+      "channel": "main-mire-upper",
+      "xz": [
+        664.044,
+        -1500.302
+      ],
+      "referenceWaterM": 6.82921,
+      "terrainM": 6.501368609584738,
+      "deficitM": 0.32784139041526217
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1403.769,
+        -2375.566
+      ],
+      "referenceWaterM": 0.09742,
+      "terrainM": -0.1878793224428186,
+      "deficitM": 0.28529932244281864
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1404.875,
+        -2376.938
+      ],
+      "referenceWaterM": 0.09031,
+      "terrainM": -0.26125690938158497,
+      "deficitM": 0.35156690938158497
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1405.95,
+        -2378.272
+      ],
+      "referenceWaterM": 0.08339,
+      "terrainM": -0.33652877530343506,
+      "deficitM": 0.4199187753034351
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1406.993,
+        -2379.565
+      ],
+      "referenceWaterM": 0.07666,
+      "terrainM": -0.40951794824566323,
+      "deficitM": 0.48617794824566324
+    },
+    {
+      "channel": "main-mire-out",
+      "xz": [
+        1408.002,
+        -2380.816
+      ],
+      "referenceWaterM": 0.07013,
+      "terrainM": -0.4801863723929501,
+      "deficitM": 0.5503163723929501
+    },
+    {
+      "channel": "fold-outlet",
+      "xz": [
+        597.312,
+        -742.733
+      ],
+      "referenceWaterM": 14.83146,
+      "terrainM": 14.447288662136964,
+      "deficitM": 0.3841713378630356
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1269.754,
+        571.693
+      ],
+      "referenceWaterM": 11.38031,
+      "terrainM": 10.40398418954364,
+      "deficitM": 0.976325810456359
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1272.132,
+        570.815
+      ],
+      "referenceWaterM": 11.12689,
+      "terrainM": 8.952060279460072,
+      "deficitM": 2.174829720539927
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1274.526,
+        569.927
+      ],
+      "referenceWaterM": 10.87142,
+      "terrainM": 7.6186827421691135,
+      "deficitM": 3.252737257830887
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1276.934,
+        569.03
+      ],
+      "referenceWaterM": 10.61412,
+      "terrainM": 6.270772949911204,
+      "deficitM": 4.343347050088796
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1279.355,
+        568.125
+      ],
+      "referenceWaterM": 10.35521,
+      "terrainM": 5.026814334136166,
+      "deficitM": 5.328395665863834
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1281.787,
+        567.212
+      ],
+      "referenceWaterM": 10.09488,
+      "terrainM": 4.063003407385565,
+      "deficitM": 6.031876592614434
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1284.228,
+        566.293
+      ],
+      "referenceWaterM": 9.83336,
+      "terrainM": 3.251140714479396,
+      "deficitM": 6.582219285520605
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1286.676,
+        565.369
+      ],
+      "referenceWaterM": 9.57085,
+      "terrainM": 2.5304468792324606,
+      "deficitM": 7.0404031207675395
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1289.129,
+        564.439
+      ],
+      "referenceWaterM": 9.30757,
+      "terrainM": 1.80696002462492,
+      "deficitM": 7.50060997537508
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1291.586,
+        563.505
+      ],
+      "referenceWaterM": 9.04371,
+      "terrainM": 1.1160796764451983,
+      "deficitM": 7.927630323554802
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1294.044,
+        562.569
+      ],
+      "referenceWaterM": 8.7795,
+      "terrainM": 0.6437937046429333,
+      "deficitM": 8.135706295357068
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1296.502,
+        561.63
+      ],
+      "referenceWaterM": 8.51515,
+      "terrainM": 0.44615285221876777,
+      "deficitM": 8.068997147781232
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1298.958,
+        560.689
+      ],
+      "referenceWaterM": 8.25086,
+      "terrainM": 0.2608231972795858,
+      "deficitM": 7.990036802720414
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1301.41,
+        559.748
+      ],
+      "referenceWaterM": 7.98684,
+      "terrainM": 0.2428601366725959,
+      "deficitM": 7.743979863327404
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1303.855,
+        558.807
+      ],
+      "referenceWaterM": 7.72331,
+      "terrainM": 0.34416701795774407,
+      "deficitM": 7.379142982042255
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1306.293,
+        557.867
+      ],
+      "referenceWaterM": 7.46047,
+      "terrainM": 0.19065807110499786,
+      "deficitM": 7.2698119288950025
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1308.722,
+        556.929
+      ],
+      "referenceWaterM": 7.19855,
+      "terrainM": 0.03612262414989309,
+      "deficitM": 7.162427375850107
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1311.138,
+        555.994
+      ],
+      "referenceWaterM": 6.93774,
+      "terrainM": -0.11280363970897372,
+      "deficitM": 7.050543639708973
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1313.542,
+        555.062
+      ],
+      "referenceWaterM": 6.67826,
+      "terrainM": -0.21397428723607542,
+      "deficitM": 6.892234287236075
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1315.93,
+        554.134
+      ],
+      "referenceWaterM": 6.42032,
+      "terrainM": -0.24776988999719296,
+      "deficitM": 6.668089889997193
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1318.301,
+        553.212
+      ],
+      "referenceWaterM": 6.16413,
+      "terrainM": -0.2812832247941773,
+      "deficitM": 6.445413224794177
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1320.653,
+        552.296
+      ],
+      "referenceWaterM": 5.9099,
+      "terrainM": -0.3549364613334788,
+      "deficitM": 6.264836461333479
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1322.983,
+        551.387
+      ],
+      "referenceWaterM": 5.65784,
+      "terrainM": -0.4483839586760804,
+      "deficitM": 6.106223958676081
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1325.291,
+        550.485
+      ],
+      "referenceWaterM": 5.40816,
+      "terrainM": -0.5164653616884181,
+      "deficitM": 5.924625361688418
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1327.574,
+        549.592
+      ],
+      "referenceWaterM": 5.16108,
+      "terrainM": -0.5653701402873399,
+      "deficitM": 5.72645014028734
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1329.831,
+        548.709
+      ],
+      "referenceWaterM": 4.9168,
+      "terrainM": -0.5615613398596229,
+      "deficitM": 5.478361339859623
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1332.058,
+        547.836
+      ],
+      "referenceWaterM": 4.67553,
+      "terrainM": -0.5485698620272803,
+      "deficitM": 5.2240998620272805
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1334.255,
+        546.974
+      ],
+      "referenceWaterM": 4.43749,
+      "terrainM": -0.6137967987380099,
+      "deficitM": 5.05128679873801
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1336.42,
+        546.124
+      ],
+      "referenceWaterM": 4.20289,
+      "terrainM": -0.6761018802624768,
+      "deficitM": 4.878991880262477
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1338.55,
+        545.287
+      ],
+      "referenceWaterM": 3.97193,
+      "terrainM": -0.7373845981751889,
+      "deficitM": 4.7093145981751885
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1340.644,
+        544.464
+      ],
+      "referenceWaterM": 3.74483,
+      "terrainM": -0.8139776723149449,
+      "deficitM": 4.558807672314945
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1342.7,
+        543.655
+      ],
+      "referenceWaterM": 3.5218,
+      "terrainM": -0.8914874304357756,
+      "deficitM": 4.413287430435775
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1344.715,
+        542.862
+      ],
+      "referenceWaterM": 3.30305,
+      "terrainM": -0.942123380726303,
+      "deficitM": 4.245173380726303
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1346.689,
+        542.085
+      ],
+      "referenceWaterM": 3.08879,
+      "terrainM": -0.957886606809349,
+      "deficitM": 4.046676606809349
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1348.618,
+        541.325
+      ],
+      "referenceWaterM": 2.87924,
+      "terrainM": -0.9757018516379069,
+      "deficitM": 3.8549418516379066
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1350.501,
+        540.583
+      ],
+      "referenceWaterM": 2.67459,
+      "terrainM": -0.985466914730692,
+      "deficitM": 3.660056914730692
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1352.337,
+        539.861
+      ],
+      "referenceWaterM": 2.47507,
+      "terrainM": -1.0038278603579307,
+      "deficitM": 3.4788978603579306
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1354.122,
+        539.157
+      ],
+      "referenceWaterM": 2.28088,
+      "terrainM": -1.0589855001553363,
+      "deficitM": 3.3398655001553363
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1355.855,
+        538.475
+      ],
+      "referenceWaterM": 2.09223,
+      "terrainM": -1.1125505299469478,
+      "deficitM": 3.2047805299469476
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "xz": [
+        -1357.535,
+        537.814
+      ],
+      "referenceWaterM": 1.90934,
+      "terrainM": -1.1498030193146629,
+      "deficitM": 3.059143019314663
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1688.932,
+        -1083.93
+      ],
+      "referenceWaterM": 0.59883,
+      "terrainM": 0.2374148417414934,
+      "deficitM": 0.36141515825850656
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1690.675,
+        -1083.94
+      ],
+      "referenceWaterM": 0.56673,
+      "terrainM": 0.15293262784285455,
+      "deficitM": 0.4137973721571454
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1692.384,
+        -1083.949
+      ],
+      "referenceWaterM": 0.53525,
+      "terrainM": 0.059511660328200364,
+      "deficitM": 0.4757383396717996
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1694.06,
+        -1083.958
+      ],
+      "referenceWaterM": 0.50441,
+      "terrainM": -0.06179785497209009,
+      "deficitM": 0.5662078549720901
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1695.7,
+        -1083.967
+      ],
+      "referenceWaterM": 0.47421,
+      "terrainM": -0.18056816889210411,
+      "deficitM": 0.6547781688921042
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1697.305,
+        -1083.976
+      ],
+      "referenceWaterM": 0.44468,
+      "terrainM": -0.23074224208948294,
+      "deficitM": 0.675422242089483
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1698.873,
+        -1083.985
+      ],
+      "referenceWaterM": 0.41583,
+      "terrainM": -0.2668066270310793,
+      "deficitM": 0.6826366270310793
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1700.405,
+        -1083.994
+      ],
+      "referenceWaterM": 0.38765,
+      "terrainM": -0.3118825588288463,
+      "deficitM": 0.6995325588288464
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1701.899,
+        -1084.003
+      ],
+      "referenceWaterM": 0.36018,
+      "terrainM": -0.38129245892726615,
+      "deficitM": 0.7414724589272661
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1703.353,
+        -1084.012
+      ],
+      "referenceWaterM": 0.33343,
+      "terrainM": -0.4488173907130846,
+      "deficitM": 0.7822473907130846
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1704.769,
+        -1084.021
+      ],
+      "referenceWaterM": 0.30739,
+      "terrainM": -0.4931441618440327,
+      "deficitM": 0.8005341618440327
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "xz": [
+        -1706.147,
+        -1084.03
+      ],
+      "referenceWaterM": 0.2821,
+      "terrainM": -0.5185706219957381,
+      "deficitM": 0.8006706219957381
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1597.934,
+        1665.246
+      ],
+      "referenceWaterM": 7.40452,
+      "terrainM": 6.035254535905544,
+      "deficitM": 1.3692654640944557
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1600.037,
+        1663.963
+      ],
+      "referenceWaterM": 7.10007,
+      "terrainM": 3.0795412423411905,
+      "deficitM": 4.020528757658809
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1602.121,
+        1662.69
+      ],
+      "referenceWaterM": 6.79825,
+      "terrainM": 1.9648838638625243,
+      "deficitM": 4.833366136137476
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1604.185,
+        1661.43
+      ],
+      "referenceWaterM": 6.49931,
+      "terrainM": 0.9069285456308854,
+      "deficitM": 5.592381454369115
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1606.227,
+        1660.182
+      ],
+      "referenceWaterM": 6.20349,
+      "terrainM": 0.3152772347245899,
+      "deficitM": 5.88821276527541
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1608.245,
+        1658.948
+      ],
+      "referenceWaterM": 5.91104,
+      "terrainM": 0.032862685661266156,
+      "deficitM": 5.878177314338734
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1610.238,
+        1657.729
+      ],
+      "referenceWaterM": 5.6222,
+      "terrainM": -0.19060068311540634,
+      "deficitM": 5.812800683115407
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1612.204,
+        1656.527
+      ],
+      "referenceWaterM": 5.33722,
+      "terrainM": -0.21690127981604873,
+      "deficitM": 5.554121279816049
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1614.141,
+        1655.341
+      ],
+      "referenceWaterM": 5.05634,
+      "terrainM": -0.23429278150877567,
+      "deficitM": 5.2906327815087755
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1616.048,
+        1654.174
+      ],
+      "referenceWaterM": 4.77981,
+      "terrainM": -0.25363971700869087,
+      "deficitM": 5.033449717008692
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1617.923,
+        1653.026
+      ],
+      "referenceWaterM": 4.50788,
+      "terrainM": -0.3583171832171017,
+      "deficitM": 4.866197183217102
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1619.764,
+        1651.898
+      ],
+      "referenceWaterM": 4.24079,
+      "terrainM": -0.45869325314884973,
+      "deficitM": 4.699483253148849
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1621.569,
+        1650.792
+      ],
+      "referenceWaterM": 3.97879,
+      "terrainM": -0.5267640755254246,
+      "deficitM": 4.505554075525424
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1623.338,
+        1649.709
+      ],
+      "referenceWaterM": 3.72213,
+      "terrainM": -0.5926301590071797,
+      "deficitM": 4.31476015900718
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1625.068,
+        1648.649
+      ],
+      "referenceWaterM": 3.47104,
+      "terrainM": -0.6368791143894299,
+      "deficitM": 4.10791911438943
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1626.757,
+        1647.613
+      ],
+      "referenceWaterM": 3.22578,
+      "terrainM": -0.6678768246307007,
+      "deficitM": 3.8936568246307006
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1628.404,
+        1646.604
+      ],
+      "referenceWaterM": 2.98659,
+      "terrainM": -0.7088952120072153,
+      "deficitM": 3.6954852120072155
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1630.007,
+        1645.621
+      ],
+      "referenceWaterM": 2.75372,
+      "terrainM": -0.7811158563178671,
+      "deficitM": 3.534835856317867
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1631.565,
+        1644.667
+      ],
+      "referenceWaterM": 2.52741,
+      "terrainM": -0.8485408352557829,
+      "deficitM": 3.375950835255783
+    },
+    {
+      "channel": "windward-gully",
+      "xz": [
+        -1633.076,
+        1643.741
+      ],
+      "referenceWaterM": 2.30792,
+      "terrainM": -0.923903901221924,
+      "deficitM": 3.231823901221924
+    },
+    {
+      "channel": "south-fen-tributary",
+      "xz": [
+        584.911,
+        -1459.98
+      ],
+      "referenceWaterM": 7.23022,
+      "terrainM": 6.238252108411628,
+      "deficitM": 0.9919678915883718
+    }
+  ],
+  "originalWettedMeshResolutionChecks": [
+    {
+      "channel": "tarn-inlet-w",
+      "meshStepM": 4,
+      "interiorWidthProbes": 1184,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "tarn-inlet-w",
+      "meshStepM": 16,
+      "interiorWidthProbes": 1184,
+      "terrainAboveWaterCount": 142,
+      "maxExposureM": 1.7387145435419598
+    },
+    {
+      "channel": "tarn-inlet-n",
+      "meshStepM": 4,
+      "interiorWidthProbes": 864,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "tarn-inlet-n",
+      "meshStepM": 16,
+      "interiorWidthProbes": 864,
+      "terrainAboveWaterCount": 58,
+      "maxExposureM": 1.9755272442442902
+    },
+    {
+      "channel": "main-upper",
+      "meshStepM": 4,
+      "interiorWidthProbes": 5876,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "main-upper",
+      "meshStepM": 16,
+      "interiorWidthProbes": 5876,
+      "terrainAboveWaterCount": 394,
+      "maxExposureM": 5.636297744826891
+    },
+    {
+      "channel": "main-mire-upper",
+      "meshStepM": 4,
+      "interiorWidthProbes": 1920,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "main-mire-upper",
+      "meshStepM": 16,
+      "interiorWidthProbes": 1920,
+      "terrainAboveWaterCount": 110,
+      "maxExposureM": 1.9644404747134416
+    },
+    {
+      "channel": "main-mire-out",
+      "meshStepM": 4,
+      "interiorWidthProbes": 2500,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "main-mire-out",
+      "meshStepM": 16,
+      "interiorWidthProbes": 2500,
+      "terrainAboveWaterCount": 111,
+      "maxExposureM": 2.808113297786452
+    },
+    {
+      "channel": "fold-inlet",
+      "meshStepM": 4,
+      "interiorWidthProbes": 932,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "fold-inlet",
+      "meshStepM": 16,
+      "interiorWidthProbes": 932,
+      "terrainAboveWaterCount": 28,
+      "maxExposureM": 0.984166909589419
+    },
+    {
+      "channel": "fold-outlet",
+      "meshStepM": 4,
+      "interiorWidthProbes": 1796,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "fold-outlet",
+      "meshStepM": 16,
+      "interiorWidthProbes": 1796,
+      "terrainAboveWaterCount": 131,
+      "maxExposureM": 8.946277438307703
+    },
+    {
+      "channel": "birch-upper-in",
+      "meshStepM": 4,
+      "interiorWidthProbes": 480,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "birch-upper-in",
+      "meshStepM": 16,
+      "interiorWidthProbes": 480,
+      "terrainAboveWaterCount": 15,
+      "maxExposureM": 0.7079146641203664
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "meshStepM": 4,
+      "interiorWidthProbes": 1136,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "birch-upper-outlet",
+      "meshStepM": 16,
+      "interiorWidthProbes": 1136,
+      "terrainAboveWaterCount": 342,
+      "maxExposureM": 29.246489677690864
+    },
+    {
+      "channel": "birch-lower-in",
+      "meshStepM": 4,
+      "interiorWidthProbes": 828,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "birch-lower-in",
+      "meshStepM": 16,
+      "interiorWidthProbes": 828,
+      "terrainAboveWaterCount": 89,
+      "maxExposureM": 1.2085705869422725
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "meshStepM": 4,
+      "interiorWidthProbes": 2040,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "birch-lower-outlet",
+      "meshStepM": 16,
+      "interiorWidthProbes": 2040,
+      "terrainAboveWaterCount": 325,
+      "maxExposureM": 6.141621479011768
+    },
+    {
+      "channel": "windward-gully",
+      "meshStepM": 4,
+      "interiorWidthProbes": 1360,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "windward-gully",
+      "meshStepM": 16,
+      "interiorWidthProbes": 1360,
+      "terrainAboveWaterCount": 208,
+      "maxExposureM": 24.747875754923903
+    },
+    {
+      "channel": "south-fen-tributary",
+      "meshStepM": 4,
+      "interiorWidthProbes": 2428,
+      "terrainAboveWaterCount": 0,
+      "maxExposureM": 0.0
+    },
+    {
+      "channel": "south-fen-tributary",
+      "meshStepM": 16,
+      "interiorWidthProbes": 2428,
+      "terrainAboveWaterCount": 375,
+      "maxExposureM": 24.06534445626167
+    }
+  ],
+  "originalRouteFailures": [
+    {
+      "id": "hero",
+      "maximumFailureStartXZ": [
+        271.33,
+        613.9529
+      ],
+      "maximumFailureEndXZ": [
+        271.4581,
+        615.5953
+      ],
+      "oldContactHeightsM": [
+        107.16523107471667,
+        121.54693742389642
+      ],
+      "oldMaxGrade": 8.73000529230107,
+      "expectedMaxGrade": 0.25,
+      "oldWetSampleCount": 12,
+      "diagnosisAndCorrection": "Largest spike is a Central Valley nearest-station jump across a broad concave axis bend (not the M1 deck). Separate M1 wet/deck-entry conflicts also exist. Shared field removes the valley discontinuity; ramps and route alignment resolve the crossing.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    },
+    {
+      "id": "tarn-ascent",
+      "maximumFailureStartXZ": [
+        513.4043,
+        1324.867
+      ],
+      "maximumFailureEndXZ": [
+        514.0885,
+        1327.0657
+      ],
+      "oldContactHeightsM": [
+        221.65209561538728,
+        224.85385625991833
+      ],
+      "oldMaxGrade": 1.3904396851952532,
+      "expectedMaxGrade": 0.3,
+      "oldWetSampleCount": 0,
+      "diagnosisAndCorrection": "Upper-glen and ridge flank transition; use a contour-following approach after joint terrain construction.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    },
+    {
+      "id": "peak-ascent",
+      "maximumFailureStartXZ": [
+        -614.1593,
+        2656.7144
+      ],
+      "maximumFailureEndXZ": [
+        -616.142,
+        2658.6362
+      ],
+      "oldContactHeightsM": [
+        811.0086192367554,
+        817.0358360900875
+      ],
+      "oldMaxGrade": 2.1827980999540584,
+      "expectedMaxGrade": 0.3,
+      "oldWetSampleCount": 0,
+      "diagnosisAndCorrection": "Compact maximum-union mountain flanks and drawn zigzags cross steep fall lines; preserve summit, search actual contours.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    },
+    {
+      "id": "hidden-loop",
+      "maximumFailureStartXZ": [
+        1301.9056,
+        274.988
+      ],
+      "maximumFailureEndXZ": [
+        1300.4487,
+        276.0977
+      ],
+      "oldContactHeightsM": [
+        147.33820156555169,
+        154.16877373076753
+      ],
+      "oldMaxGrade": 3.729718822337992,
+      "expectedMaxGrade": 0.28,
+      "oldWetSampleCount": 16,
+      "diagnosisAndCorrection": "Oblique H1/H2 deck entry and gorge/basin flank transitions; align approaches and connect the actual outlet floor.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    },
+    {
+      "id": "west-cape-spur",
+      "maximumFailureStartXZ": [
+        -633.4509,
+        -119.8034
+      ],
+      "maximumFailureEndXZ": [
+        -635.1381,
+        -119.1262
+      ],
+      "oldContactHeightsM": [
+        133.60232858963013,
+        132.56483476715076
+      ],
+      "oldMaxGrade": 0.5706683382479185,
+      "expectedMaxGrade": 0.3,
+      "oldWetSampleCount": 0,
+      "diagnosisAndCorrection": "Short woodland/headland flank grade; reposition onto a contour shoulder without flattening the cape.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    },
+    {
+      "id": "south-shoulder-loop",
+      "maximumFailureStartXZ": [
+        -931.162,
+        -2152.4542
+      ],
+      "maximumFailureEndXZ": [
+        -931.6102,
+        -2153.3203
+      ],
+      "oldContactHeightsM": [
+        252.60851205215445,
+        251.87021169624384
+      ],
+      "oldMaxGrade": 0.7570768675744993,
+      "expectedMaxGrade": 0.3,
+      "oldWetSampleCount": 0,
+      "diagnosisAndCorrection": "Uniform compact flank crossed directly on the lower massif; connect the massif and follow shoulders.",
+      "adjacentTerrainEffects": "Route search changes intermediate path positions; shared field changes ridge/valley transitions. No hiking operation changes terrain elevation. Exact departures and full-width conflicts are reported separately."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Additional source consistency check discovered during R1; original source/preflight files remain unchanged.",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "ridge": "south-low-tail",
+  "authoredEndpointXZ": [
+    450,
+    -3440
+  ],
+  "authoredElevationM": 8,
+  "insideAuthoredMainland": false,
+  "distanceOutsideMainlandM": 19.003740224316875,
+  "decision": "Coastline takes priority; propose inland relocation or coast termination of this last crest point for user review. No original-master edit."
+}

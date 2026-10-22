@@ -1,0 +1,35 @@
+{
+  "sourceImplementationHead": "613c27d1ad3689f999307dbb023203271f9e857a",
+  "testsSummary": "npm test: 24/24 pass (19 unchanged WORLD-01B tests; 5 GEO-R02B/R1 tests).",
+  "buildSummary": "npm run build: TypeScript and Vite production build pass for both entries; shared Three.js chunk >500 kB warning remains.",
+  "reproducibilitySummary": "Independent complete generation \u2192 water clipping \u2192 route search reproduced byte-identical terrain, features and both water binaries.",
+  "files": {
+    "terrain.f32": {
+      "sha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+      "repeatSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+      "identical": true
+    },
+    "features.json": {
+      "sha256": "8f538cef4ce368c958abb0d5097895b4bd230ff2d5f97fd0f32ed8b37ed0166e",
+      "repeatSha256": "8f538cef4ce368c958abb0d5097895b4bd230ff2d5f97fd0f32ed8b37ed0166e",
+      "identical": true
+    },
+    "water-mesh.f32": {
+      "sha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+      "repeatSha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+      "identical": true
+    },
+    "water-surface.f32": {
+      "sha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+      "repeatSha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+      "identical": true
+    }
+  },
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "primaryWORLD01B": {
+    "head": "c3621ea7d73334d6cd16b5af096d3f933a249845",
+    "clean": true
+  },
+  "originalCheckpointDocsAndWorldSourcesUnchanged": true,
+  "noMergeDeployPush": true
+}

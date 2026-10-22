@@ -1,0 +1,27 @@
+{
+  "milestone": "GEO-R02B-R1",
+  "status": "review candidate \u2014 not fully accepted",
+  "gates": {
+    "terrainContinuity": "pass shared canonical vertices/normals and finite field; local slope is measured separately",
+    "hydrology": "conditional: seven original large depressions removed; review small residual depressions, watershed fidelity and fine bed ripples",
+    "coast": "conditional: clipped water interfaces verified; inspect rocky mouth transitions and measured coast exceptions",
+    "geomorphology": "not fully accepted: continuity improves, but smooth flanks, constrained inlet shoulders and weak secondary landforms remain visible",
+    "traversability": "centreline and runtime results below; full widths not accepted where transverse slope fails",
+    "visualQuality": "matched eight-view review required; no automatic art acceptance",
+    "regression": "source master, coast/lake/channel curves and regional identities retained; ridge elevations are constrained lower bounds, deviations measured",
+    "technical": "tests/build/reproducibility pass; actual browser controls recorded; no physical Android validation"
+  },
+  "sourceHead": "fcb2ce3806f15c6014eecfb191d53df37c9913b2",
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "centrelinePassCount": 6,
+  "fullWidthPassCount": 0,
+  "materialDepressions4m": 0,
+  "smallerDepressions4m": {
+    "count": 0,
+    "maximumDepthM": 0.0,
+    "totalAreaM2": 0,
+    "locations": []
+  },
+  "browserChecksAllPassed": true,
+  "noMergeOrDeployment": true
+}
