@@ -81,21 +81,21 @@ export function generateRockLookdevPixels(study:RockLookdevStudy):RockPixels {
   // Three unaligned scales; no repeated diagonal mineral lines.
   const base=broad*.45+med*.29+fine*.14+tiny*.045;
   const crack=fractures(u,v,paths);
-  const coastStain=coast?Math.pow(Math.max(0,noise(u,v,7,211)-.52),1.35)*1.55:0;
+  const coastStain=coast?Math.pow(Math.max(0,noise(u,v,7,211)-.44),1.15)*2.0:0;
   const speck=noise(u,v,47,431);
   const rareMineral=smooth(.73,.92,speck)*(.10+.18*noise(u,v,19,547));
-  const h=base*.042-crack*.90 + (coast?coastStain*.006:0);
+  const h=base*.085-crack*1.10 + (coast?coastStain*.007:0);
   relief[id]=h;fracture[id]=crack;
   if(crack>.018)coverage++;
   const palette=study==='T1'?[231,232,231]:study==='T2'?[224,228,233]:[215,226,232];
-  const local=base*31+rareMineral*12;
-  const darkCrack=crack*(faulted?128:96);
-  const patina=coastStain*23;
+  const local=base*69+rareMineral*22;
+  const darkCrack=crack*(faulted?225:140);
+  const patina=coastStain*38;
   setRGBA(albedo,j,
    palette[0]+local-darkCrack-patina*.30,
    palette[1]+local*.93-darkCrack-patina*.12+patina*.15,
    palette[2]+local*.87-darkCrack-patina*.29);
-  const r=clamp(230+base*21+(faulted?crack*105:crack*55)+coastStain*10,204,251);
+  const r=clamp(230+base*36+(faulted?crack*105:crack*55)+coastStain*13,204,251);
   roughSum+=r;
   setRGBA(roughness,j,r,r,r);
  }
