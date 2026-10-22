@@ -1,0 +1,62 @@
+name: ASSET-01E2R-A R04 refinement visual calibration
+on:
+  push:
+    branches:
+      - art/asset-01e2r-r04-refinement
+  workflow_dispatch:
+jobs:
+  r04-refinement-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Existing tree / grass / rock tests, new R04 integrity tests, TS and production build
+        run: |
+          npm test
+          npm run build
+      - name: Checkout protected Feh Lu We production reference for independent parity
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Original birch pine grass rock geometry parity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:rock-parity
+  r04-real-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Genuine Three.js / Chromium G0-G1-G2 and M1-M2-M3 comparative WebGL renders
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-r04-refinement.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-01e2r-a-genuine-threejs-webgl-review
+          path: asset-lab/birch/r04-e2r-evidence/
+          if-no-files-found: warn
