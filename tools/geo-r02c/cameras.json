@@ -1,0 +1,278 @@
+{
+ "schema": "aurora-rest-review-cameras/1",
+ "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "yawConvention": "0 = north (+z), pi/2 = east (+x); matches src/geo-r02b/main.ts",
+ "eyeHeightM": 1.75,
+ "cameras": [
+  {
+   "id": "cv-before",
+   "name": "Central Valley approach \u00b7 before",
+   "group": "reveal-central-valley",
+   "uv": [
+    257.6,
+    464.848
+   ],
+   "xz": [
+    -424.0,
+    -648.48
+   ],
+   "yaw": 0.7111,
+   "pitch": 0.02,
+   "kind": "walk",
+   "groundM": 73.98,
+   "source": "hero route at 2800 m, facing (350, 250)"
+  },
+  {
+   "id": "cv-partial",
+   "name": "Central Valley approach \u00b7 partial",
+   "group": "reveal-central-valley",
+   "uv": [
+    267.629,
+    427.785
+   ],
+   "xz": [
+    -323.71,
+    -277.85
+   ],
+   "yaw": 0.9062,
+   "pitch": 0.02,
+   "kind": "walk",
+   "groundM": 130.84,
+   "source": "hero route at 3200 m, facing (350, 250)"
+  },
+  {
+   "id": "cv-full",
+   "name": "Central Valley approach \u00b7 full",
+   "group": "reveal-central-valley",
+   "uv": [
+    282.403,
+    415.595
+   ],
+   "xz": [
+    -175.97,
+    -155.95
+   ],
+   "yaw": 0.9135,
+   "pitch": 0.02,
+   "kind": "walk",
+   "groundM": 135.63,
+   "source": "hero route at 3400 m, facing (350, 250)"
+  },
+  {
+   "id": "cairn-below-400",
+   "name": "Cairn ascent \u00b7 400 m below the col",
+   "group": "reveal-cairn",
+   "uv": [
+    326.4,
+    331.288
+   ],
+   "xz": [
+    264.0,
+    687.12
+   ],
+   "yaw": -0.766,
+   "pitch": 0.03,
+   "kind": "walk",
+   "groundM": 134.63,
+   "source": "hero route at 4526 m (end 4926 m), facing the col"
+  },
+  {
+   "id": "cairn-below-100",
+   "name": "Cairn ascent \u00b7 100 m below the col",
+   "group": "reveal-cairn",
+   "uv": [
+    312.675,
+    311.2
+   ],
+   "xz": [
+    126.75,
+    888.0
+   ],
+   "yaw": -1.2174,
+   "pitch": 0.03,
+   "kind": "walk",
+   "groundM": 191.68,
+   "source": "hero route at 4826 m (end 4926 m), facing the col"
+  },
+  {
+   "id": "cairn-col-west",
+   "name": "Cairn col \u00b7 facing west",
+   "group": "reveal-cairn",
+   "uv": [
+    304.0,
+    308.0
+   ],
+   "xz": [
+    40.0,
+    920.0
+   ],
+   "yaw": -1.5708,
+   "pitch": 0.0,
+   "kind": "walk",
+   "groundM": 215.0,
+   "source": "pass point, facing the far (west) side"
+  },
+  {
+   "id": "cairn-col-north",
+   "name": "Cairn col \u00b7 facing north",
+   "group": "reveal-cairn",
+   "uv": [
+    304.0,
+    308.0
+   ],
+   "xz": [
+    40.0,
+    920.0
+   ],
+   "yaw": 0.0,
+   "pitch": 0.04,
+   "kind": "walk",
+   "groundM": 215.0,
+   "source": "pass point, facing North Peak"
+  },
+  {
+   "id": "fold-from-hero",
+   "name": "Hidden Fold \u00b7 from the hero route (concealment check)",
+   "group": "reveal-hidden-fold",
+   "uv": [
+    319.477,
+    366.369
+   ],
+   "xz": [
+    194.77,
+    336.31
+   ],
+   "yaw": 1.8925,
+   "pitch": 0.02,
+   "kind": "walk",
+   "groundM": 60.59,
+   "source": "hero route point nearest the lake (4164 m)"
+  },
+  {
+   "id": "fold-rim-entry",
+   "name": "Hidden Fold \u00b7 rim entry",
+   "group": "reveal-hidden-fold",
+   "uv": [
+    447.2,
+    442.78
+   ],
+   "xz": [
+    1472.0,
+    -427.8
+   ],
+   "yaw": -0.5442,
+   "pitch": -0.06,
+   "kind": "walk",
+   "groundM": 157.18,
+   "source": "hidden-loop at 1200 m (first sight of the lake)"
+  },
+  {
+   "id": "fold-lake-shore",
+   "name": "Hidden Fold \u00b7 east shore facing the western walls",
+   "group": "reveal-hidden-fold",
+   "uv": [
+    440.352,
+    396.728
+   ],
+   "xz": [
+    1403.52,
+    32.72
+   ],
+   "yaw": -1.633,
+   "pitch": 0.03,
+   "kind": "walk",
+   "groundM": 118.62,
+   "source": "first dry point 20 m outside the eastern lake shore"
+  },
+  {
+   "id": "fold-gorge-upstream",
+   "name": "Hidden Fold \u00b7 outlet valley looking upstream",
+   "group": "reveal-hidden-fold",
+   "uv": [
+    402.398,
+    429.594
+   ],
+   "xz": [
+    1023.98,
+    -295.94
+   ],
+   "yaw": 0.5805,
+   "pitch": 0.02,
+   "kind": "walk",
+   "groundM": 125.23,
+   "source": "hidden-loop at 2950 m"
+  },
+  {
+   "id": "np-from-valley-shoulder",
+   "name": "North Peak silhouette \u00b7 Central Valley shoulder",
+   "group": "silhouette-north-peak",
+   "uv": [
+    282.403,
+    415.595
+   ],
+   "xz": [
+    -175.97,
+    -155.95
+   ],
+   "yaw": -0.117,
+   "pitch": 0.06,
+   "kind": "walk",
+   "groundM": 135.63,
+   "source": "facing North Peak summit (-520.0, 2770.0)"
+  },
+  {
+   "id": "np-from-tarn-overlook",
+   "name": "North Peak silhouette \u00b7 High Tarn overlook (tarn-ascent end)",
+   "group": "silhouette-north-peak",
+   "uv": [
+    370.0,
+    205.0
+   ],
+   "xz": [
+    700.0,
+    1950.0
+   ],
+   "yaw": -0.979,
+   "pitch": 0.06,
+   "kind": "walk",
+   "groundM": 372.22,
+   "source": "facing North Peak summit (-520.0, 2770.0)"
+  },
+  {
+   "id": "np-from-cairn-col",
+   "name": "North Peak silhouette \u00b7 Cairn col",
+   "group": "silhouette-north-peak",
+   "uv": [
+    304.0,
+    308.0
+   ],
+   "xz": [
+    40.0,
+    920.0
+   ],
+   "yaw": -0.2939,
+   "pitch": 0.06,
+   "kind": "walk",
+   "groundM": 215.0,
+   "source": "facing North Peak summit (-520.0, 2770.0)"
+  },
+  {
+   "id": "np-from-birchwood",
+   "name": "North Peak silhouette \u00b7 Birchwood edge",
+   "group": "silhouette-north-peak",
+   "uv": [
+    230.0,
+    370.0
+   ],
+   "xz": [
+    -700.0,
+    300.0
+   ],
+   "yaw": 0.0727,
+   "pitch": 0.06,
+   "kind": "walk",
+   "groundM": 113.23,
+   "source": "facing North Peak summit (-520.0, 2770.0)"
+  }
+ ]
+}
