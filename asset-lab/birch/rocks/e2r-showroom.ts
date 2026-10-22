@@ -44,7 +44,8 @@ const geometries:Record<R04GeometryStudy,THREE.BufferGeometry>={
  G0:r04StudyGeometry('G0'),G1:r04StudyGeometry('G1'),G2:r04StudyGeometry('G2')};
 const materials=createR04MaterialStudies(),originalMaterial=rockR04Material();
 const neutral=new THREE.MeshStandardMaterial({color:'#aab2bb',roughness:0.94});
-const meshes:[THREE.Mesh,THREE.Mesh,THREE.Mesh]=[0,1,2].map(()=>{const m=new THREE.Mesh(geometries.G0,neutral);m.castShadow=m.receiveShadow=true;scene.add(m);return m;}) as [THREE.Mesh,THREE.Mesh,THREE.Mesh];
+const makeStudyMesh=():THREE.Mesh=>{const m=new THREE.Mesh(geometries.G0,neutral);m.castShadow=m.receiveShadow=true;scene.add(m);return m;};
+const meshes:[THREE.Mesh,THREE.Mesh,THREE.Mesh]=[makeStudyMesh(),makeStudyMesh(),makeStudyMesh()];
 const production=createRockFamily();const sourceRock=production.createMesh(11);sourceRock.scale.setScalar(.65);sourceRock.position.set(-5,-.25,-1.8);scene.add(sourceRock);
 const birchFamily=createBirchFamily(),pineFamily=createPineFamily(),grassFamily=createGrassFamily();
 const birch=birchFamily.createMesh(0,'near');birch.position.set(-4.7,-.49,-.4);birch.scale.setScalar(.8);scene.add(birch);
