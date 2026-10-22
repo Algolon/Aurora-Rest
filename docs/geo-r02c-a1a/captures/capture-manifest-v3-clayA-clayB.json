@@ -1,0 +1,750 @@
+{
+ "tool": "tools/geo-r02c-a1a/capture.mjs",
+ "captures": [
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-birchwood",
+   "file": "v3/clayA/a1a-birchwood.jpg",
+   "sha256": "384f17e8b431db6727b326103f0c481ac20208426871030671609c7e36b075ed",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 135.416,
+   "player": [
+    -700,
+    114.98426818847656,
+    300
+   ],
+   "camera": [
+    700,
+    114.98426818847656,
+    300
+   ],
+   "yaw": 0.0727,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-valley-shoulder",
+   "file": "v3/clayA/a1a-valley-shoulder.jpg",
+   "sha256": "18a31293f01204c5aacb5993d7e6721b147a5dbe9b335f32edea3711f2b9ad1f",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 154.553,
+   "player": [
+    -175.9699999999998,
+    137.37897048950185,
+    -155.95000000000073
+   ],
+   "camera": [
+    175.9699999999998,
+    137.37897048950185,
+    -155.95000000000073
+   ],
+   "yaw": -0.117,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-tarn-overlook",
+   "file": "v3/clayA/a1a-tarn-overlook.jpg",
+   "sha256": "5853329b7565009acb869b93ec70b01bb3fddbc52a4122961b8a45efbc3ef942",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 129.918,
+   "player": [
+    700,
+    373.9699401855469,
+    1950
+   ],
+   "camera": [
+    -700,
+    373.9699401855469,
+    1950
+   ],
+   "yaw": -0.979,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-tarn-shore",
+   "file": "v3/clayA/a1a-tarn-shore.jpg",
+   "sha256": "3e40b2a0d8b804068f2362edcadf133c9b8c0d3123ae0dd145133e5957dd0cbb",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 132.821,
+   "player": [
+    1080,
+    420.7858581542969,
+    2420
+   ],
+   "camera": [
+    -1080,
+    420.7858581542969,
+    2420
+   ],
+   "yaw": -1.3554,
+   "pitch": 0.05,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-approach-mid",
+   "file": "v3/clayA/a1a-approach-mid.jpg",
+   "sha256": "d2adf416e21dcd43b30725af5534f149209a1bea87bb85ad58610289d28f9c72",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 107.628,
+   "player": [
+    -581,
+    635.2791900634766,
+    2341
+   ],
+   "camera": [
+    581,
+    635.2791900634766,
+    2341
+   ],
+   "yaw": 0.1412,
+   "pitch": 0.12,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-approach-upper",
+   "file": "v3/clayA/a1a-approach-upper.jpg",
+   "sha256": "3c18258d9e7ffea69a4cb79f9427c1a9a0d8badba714f408ab043906df884b09",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 77.984,
+   "player": [
+    -542,
+    777.0644836425781,
+    2579
+   ],
+   "camera": [
+    542,
+    777.0644836425781,
+    2579
+   ],
+   "yaw": 0.1147,
+   "pitch": 0.2,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-ncrown-ridge",
+   "file": "v3/clayA/a1a-ncrown-ridge.jpg",
+   "sha256": "c8c2d5f5a478fac653e270c5fbf93cc617b73dd4fe85af02724fb11e932c8c0c",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 155.212,
+   "player": [
+    -266,
+    760.4197235107422,
+    3159
+   ],
+   "camera": [
+    266,
+    760.4197235107422,
+    3159
+   ],
+   "yaw": -2.5631,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-west-arm",
+   "file": "v3/clayA/a1a-west-arm.jpg",
+   "sha256": "fe41404b6a25a53b553df37e9cea4450c284020583aadf642ae4651dec5cccb2",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 65.5,
+   "player": [
+    -620,
+    829.8871154785156,
+    2665
+   ],
+   "camera": [
+    620,
+    829.8871154785156,
+    2665
+   ],
+   "yaw": 0.761,
+   "pitch": 0.1,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-c1-floor",
+   "file": "v3/clayA/a1a-c1-floor.jpg",
+   "sha256": "1f63bdf61009e443477238b109b778294ede994d3b3b75164d8ccc68284b44e4",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 94.011,
+   "player": [
+    -215,
+    701.8964538574219,
+    2930
+   ],
+   "camera": [
+    215,
+    701.8964538574219,
+    2930
+   ],
+   "yaw": -1.5708,
+   "pitch": 0.22,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-c1-lip",
+   "file": "v3/clayA/a1a-c1-lip.jpg",
+   "sha256": "3eae1a29903ac643d99f243899d2cff52717b62cc6c9d9b6901f04f4ee75ec04",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 76.535,
+   "player": [
+    -120,
+    660.0399780273438,
+    2960
+   ],
+   "camera": [
+    120,
+    660.0399780273438,
+    2960
+   ],
+   "yaw": -1.65,
+   "pitch": 0.12,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-g1-upstream",
+   "file": "v3/clayA/a1a-g1-upstream.jpg",
+   "sha256": "01dfc9f745e960dc00e7643ef24c882301af0b7b98b9d8aa01d6f6f953933ee1",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 138.422,
+   "player": [
+    585.0900000000001,
+    515.3788110351562,
+    2436.92
+   ],
+   "camera": [
+    -585.0900000000001,
+    515.3788110351562,
+    2436.92
+   ],
+   "yaw": 2.4899,
+   "pitch": -0.1,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-g1-downstream",
+   "file": "v3/clayA/a1a-g1-downstream.jpg",
+   "sha256": "ad6f61ccd8ad6960c5fed31805b3b333dae1a29ab7549b87da51392c45b42ba8",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 124.416,
+   "player": [
+    706.3299999999999,
+    449.7056131744384,
+    2402.12
+   ],
+   "camera": [
+    -706.3299999999999,
+    449.7056131744384,
+    2402.12
+   ],
+   "yaw": -1.3396,
+   "pitch": 0.04,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-oblique-se",
+   "file": "v3/clayA/a1a-oblique-se.jpg",
+   "sha256": "effa89daad18b77a7e69fd06d0f816dad1da243f1a9f9a00681786e624b78b25",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 115.629,
+   "player": [
+    700,
+    1450,
+    1650
+   ],
+   "camera": [
+    -700,
+    1450,
+    1650
+   ],
+   "yaw": -0.7722,
+   "pitch": 0,
+   "eyeHeight": 1123.8399047851562,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-oblique-n",
+   "file": "v3/clayA/a1a-oblique-n.jpg",
+   "sha256": "1f24628ef13ec2673cb55d23dcf1f7f5bf0b45071bbca73838da09d73ddc913b",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 214.918,
+   "player": [
+    -250,
+    1300,
+    4300
+   ],
+   "camera": [
+    250,
+    1300,
+    4300
+   ],
+   "yaw": -3.0045,
+   "pitch": 0,
+   "eyeHeight": 1328.1234865188599,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-oblique-c1",
+   "file": "v3/clayA/a1a-oblique-c1.jpg",
+   "sha256": "bd4804e7cb2961afc1baf49331b5f98cfdb7c7983bee3fd92e09ef6f9bf7470c",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 153.176,
+   "player": [
+    300,
+    1150,
+    3150
+   ],
+   "camera": [
+    -300,
+    1150,
+    3150
+   ],
+   "yaw": -1.9656,
+   "pitch": 0,
+   "eyeHeight": 873.7435607910156,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-birchwood",
+   "file": "v3/clayB/a1a-birchwood.jpg",
+   "sha256": "bc243278e20c2c2ffe6f4865ad7810de3a490d9f03b2d3fb6d420c65a947149a",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 142.565,
+   "player": [
+    -700,
+    114.98426818847656,
+    300
+   ],
+   "camera": [
+    700,
+    114.98426818847656,
+    300
+   ],
+   "yaw": 0.0727,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-valley-shoulder",
+   "file": "v3/clayB/a1a-valley-shoulder.jpg",
+   "sha256": "29cd5724c842a4ad5aad408a71ce92e278ceff226c5f8196cc080f78c1318b0b",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 162.92,
+   "player": [
+    -175.9699999999998,
+    137.37897048950185,
+    -155.95000000000073
+   ],
+   "camera": [
+    175.9699999999998,
+    137.37897048950185,
+    -155.95000000000073
+   ],
+   "yaw": -0.117,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-tarn-overlook",
+   "file": "v3/clayB/a1a-tarn-overlook.jpg",
+   "sha256": "817e13c01ceb5d1ffd328f9fb9e76456ea7c24a096c8f0295e4dbd6ad50b2f7a",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 143.498,
+   "player": [
+    700,
+    373.9699401855469,
+    1950
+   ],
+   "camera": [
+    -700,
+    373.9699401855469,
+    1950
+   ],
+   "yaw": -0.979,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-tarn-shore",
+   "file": "v3/clayB/a1a-tarn-shore.jpg",
+   "sha256": "973fd5fc7ab977bb51ff7aba511ce3fff30ddcf01fe7abca7fe1dbe8d2e5bcda",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 149.04,
+   "player": [
+    1080,
+    420.7858581542969,
+    2420
+   ],
+   "camera": [
+    -1080,
+    420.7858581542969,
+    2420
+   ],
+   "yaw": -1.3554,
+   "pitch": 0.05,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-approach-mid",
+   "file": "v3/clayB/a1a-approach-mid.jpg",
+   "sha256": "ff7c80743a46e5a20e1dc1ad7d44b8666cf26ce1ec2b9b1741449f58b57cc077",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 113.72,
+   "player": [
+    -581,
+    635.2791900634766,
+    2341
+   ],
+   "camera": [
+    581,
+    635.2791900634766,
+    2341
+   ],
+   "yaw": 0.1412,
+   "pitch": 0.12,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-approach-upper",
+   "file": "v3/clayB/a1a-approach-upper.jpg",
+   "sha256": "0c47aeeda9250846958339c589020975961f92033acf520b023d0ed4c354ed52",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 109.994,
+   "player": [
+    -542,
+    777.0644836425781,
+    2579
+   ],
+   "camera": [
+    542,
+    777.0644836425781,
+    2579
+   ],
+   "yaw": 0.1147,
+   "pitch": 0.2,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-ncrown-ridge",
+   "file": "v3/clayB/a1a-ncrown-ridge.jpg",
+   "sha256": "f933b4ae9a02c3391f368f0e319259bf149cdc83fd1ea313c6a6a4554b5242be",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 192.496,
+   "player": [
+    -266,
+    760.4197235107422,
+    3159
+   ],
+   "camera": [
+    266,
+    760.4197235107422,
+    3159
+   ],
+   "yaw": -2.5631,
+   "pitch": 0.06,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-west-arm",
+   "file": "v3/clayB/a1a-west-arm.jpg",
+   "sha256": "f45d1900415d2f8fd2c0560ad2a6b629c540ffe3833b33878a802d634f14fc3b",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 141.073,
+   "player": [
+    -620,
+    829.8871154785156,
+    2665
+   ],
+   "camera": [
+    620,
+    829.8871154785156,
+    2665
+   ],
+   "yaw": 0.761,
+   "pitch": 0.1,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-c1-floor",
+   "file": "v3/clayB/a1a-c1-floor.jpg",
+   "sha256": "b175a11fd911c18a617a9354fd4a5450e3e9af9bf2faeb134d130180de1b012b",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 81.134,
+   "player": [
+    -215,
+    701.8964538574219,
+    2930
+   ],
+   "camera": [
+    215,
+    701.8964538574219,
+    2930
+   ],
+   "yaw": -1.5708,
+   "pitch": 0.22,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-c1-lip",
+   "file": "v3/clayB/a1a-c1-lip.jpg",
+   "sha256": "82b4895f8b180c0a51b3ecee8e73e768d5e1a0c19842d2beda0a488d69ca8bd0",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 116.01,
+   "player": [
+    -120,
+    660.0399780273438,
+    2960
+   ],
+   "camera": [
+    120,
+    660.0399780273438,
+    2960
+   ],
+   "yaw": -1.65,
+   "pitch": 0.12,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-g1-upstream",
+   "file": "v3/clayB/a1a-g1-upstream.jpg",
+   "sha256": "c88e7ac4d78c8909400698399f2178d29effb12535e3b9c6dd053eea4af4a771",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 155.573,
+   "player": [
+    585.0900000000001,
+    515.3788110351562,
+    2436.92
+   ],
+   "camera": [
+    -585.0900000000001,
+    515.3788110351562,
+    2436.92
+   ],
+   "yaw": 2.4899,
+   "pitch": -0.1,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-g1-downstream",
+   "file": "v3/clayB/a1a-g1-downstream.jpg",
+   "sha256": "439781e3ed36efcf18fe7c876b5357598d520bb07f83cbe92223abab4e9f99b3",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 146.721,
+   "player": [
+    706.3299999999999,
+    449.7056131744384,
+    2402.12
+   ],
+   "camera": [
+    -706.3299999999999,
+    449.7056131744384,
+    2402.12
+   ],
+   "yaw": -1.3396,
+   "pitch": 0.04,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-oblique-se",
+   "file": "v3/clayB/a1a-oblique-se.jpg",
+   "sha256": "f086b50f4156ad5903b2f077b62d6eb41318c9d9e027bc1dbb668b51a3bada50",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 129.717,
+   "player": [
+    700,
+    1450,
+    1650
+   ],
+   "camera": [
+    -700,
+    1450,
+    1650
+   ],
+   "yaw": -0.7722,
+   "pitch": 0,
+   "eyeHeight": 1123.8399047851562,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-oblique-n",
+   "file": "v3/clayB/a1a-oblique-n.jpg",
+   "sha256": "5946db6043eb05f5dcfebb79d55fa9088cc2b4d3ef5ffac0a362600423dbe435",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 138.893,
+   "player": [
+    -250,
+    1300,
+    4300
+   ],
+   "camera": [
+    250,
+    1300,
+    4300
+   ],
+   "yaw": -3.0045,
+   "pitch": 0,
+   "eyeHeight": 1328.1234865188599,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-oblique-c1",
+   "file": "v3/clayB/a1a-oblique-c1.jpg",
+   "sha256": "e40dab33c54de20f8b916fb23330e444e21394061b5d35f0a9f5d3cbf2529ef7",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 66.991,
+   "player": [
+    300,
+    1150,
+    3150
+   ],
+   "camera": [
+    -300,
+    1150,
+    3150
+   ],
+   "yaw": -1.9656,
+   "pitch": 0,
+   "eyeHeight": 873.7435607910156,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayA",
+   "view": "a1a-summit-into-c1",
+   "file": "v3/clayA/a1a-summit-into-c1.jpg",
+   "sha256": "7e7e14844977ae0c7c6276b4edbe880e59b70dee3d07a71e3bfbd84adaa1d712",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 103.438,
+   "player": [
+    -475,
+    889.4252777099609,
+    2881
+   ],
+   "camera": [
+    475,
+    889.4252777099609,
+    2881
+   ],
+   "yaw": 1.3609,
+   "pitch": -0.28,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  {
+   "variant": "v3",
+   "mode": "clayB",
+   "view": "a1a-summit-into-c1",
+   "file": "v3/clayB/a1a-summit-into-c1.jpg",
+   "sha256": "0fde6b2505b1a8a9fcf1ab4689bc482b9d644754541f320b4bf8e063e17704bc",
+   "terrainSha256": "8d81f9fca284d69ab23314a70e726686eef4dea81788cc0a84c4b3d514d5f017",
+   "secondsToCapture": 139.153,
+   "player": [
+    -475,
+    889.4252777099609,
+    2881
+   ],
+   "camera": [
+    475,
+    889.4252777099609,
+    2881
+   ],
+   "yaw": 1.3609,
+   "pitch": -0.28,
+   "eyeHeight": 1.75,
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  }
+ ],
+ "gitHead": "15c0977156edc2ded35f7440c84c46207177d06a",
+ "url": "http://127.0.0.1:4311/geo-r02b.html",
+ "viewport": {
+  "width": 1280,
+  "height": 800,
+  "dpr": 1
+ },
+ "browser": "141.0.7390.37",
+ "evidence": "Actual WebGL screenshots of the Three.js viewer rendering the composed variant terrain; UI overlay hidden by CSS; no retouching."
+}

@@ -1,0 +1,7 @@
+{
+ "date": "22\u201323 Oct 2026",
+ "determinism": "Each variant was generated twice in the reference environment (Linux x86_64, CPython 3.13, numpy 2.3.5, scipy 1.18.1, shapely 2.2.0); both runs gave identical terrain SHA-256s for M0, V1, V2 and V3 (overlay.py --repeat 2 asserts this).",
+ "cost": "R1 constraint extraction 229 s, once (cached). Per variant: about 50\u201358 s (mask distance transforms dominate). Validation about 8 s per variant. Patches 314\u2013459 KB. Browser capture with software WebGL and an 8192\u00b2 clay shadow map: about 50 s per frame alone, 100\u2013180 s with four parallel processes; 160 frames in total (128 clay + 32 standard).",
+ "tests": "npm test: 35/35 pass (29 P0 + 6 new A1a). npm run build (tsc --noEmit + vite build): pass.",
+ "defaultViewerPath": "8 of 8 R1 views pixel-identical outside the FPS panel between the P0 build and the A1a build, default URL, identical cameras (default-viewer-identity.json)."
+}

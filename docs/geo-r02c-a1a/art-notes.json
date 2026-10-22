@@ -1,0 +1,43 @@
+{
+ "lede": "The incremental overlay works and is safe: empty-overlay parity, exact protection of every constrained cell, no new sinks or rerouting, deterministic output. As art, this first study does not yet meet the bar. The sculptable faces are the ones nobody sees from today's approaches, C1 reads as a stamped bowl from the air, and G1 shows a mask artefact.",
+ "overall": "Recommendation: accept the overlay mechanism and its validation as the platform for A1; do not accept V1, V2 or V3 as landforms yet. The decisive constraint is protection geometry. The trail corridor, crest bands and divide guards freeze exactly the south and south-west faces that the approaches see, so the visible silhouette cannot change without an art-direction decision on those protections.",
+ "criteria": [
+  {
+   "criterion": "Silhouette meaningfully more distinctive",
+   "v1": "No from Birchwood, the valley shoulder, High Tarn or the trail (frozen faces). Slightly sharper A1 east face from the north and east obliques only.",
+   "v2": "As V1; C1 adds a hollow on the east face visible only from the air and the east.",
+   "v3": "As V2."
+  },
+  {
+   "criterion": "Ridge branches read as connected natural structures",
+   "v1": "A1 and the A2 north-east face only; A3 and the A2 south-west face cannot be sculpted (99.8 % and 31 % protected). Soft couloir hollows where faces meet; no artefacts after the face gate.",
+   "v2": "Same arms; C1 headwall continues the A1 east face.",
+   "v3": "Same."
+  },
+  {
+   "criterion": "C1 glacial landform, not an artificial depression",
+   "v1": "n/a",
+   "v2": "Partly. From its floor the headwall reads as a real amphitheatre wall. From the elevated obliques it reads as a rounded, rimmed bowl stamped into a planar face. The section matches the A1-D design.",
+   "v3": "As V2."
+  },
+  {
+   "criterion": "G1 real mountain gully",
+   "v1": "n/a",
+   "v2": "n/a",
+   "v3": "No. Fill-only V (0 to +14 m) on a shallow host valley reads as mounds, and a serrated wall where steep walls meet the rasterised frozen channel section (a mask artefact). Kept as a diagnostic checkpoint."
+  },
+  {
+   "criterion": "Geographic coherence",
+   "v1": "Yes: all checks pass, no rerouting, no sinks.",
+   "v2": "Yes, hydrologically; visually C1 sits on the face rather than in a valley head.",
+   "v3": "Hydrologically yes; visually no (G1 artefact)."
+  },
+  {
+   "criterion": "Appealing from player height",
+   "v1": "Unchanged from existing player positions (Birchwood, valley shoulder, High Tarn, trail).",
+   "v2": "Only inside C1 (no route reaches it).",
+   "v3": "G1 view worse than M0."
+  }
+ ],
+ "defectsHtml": "<h3>Defects found (generated terrain)</h3><ul>\n<li><b>C1 reads as a stamped bowl from the air.</b> R1's east face is a uniform planar slope with no valley head, so any bowl cut into it exposes its rim on all sides. A convincing cirque must span the full width between the A1 and A2 ar\u00eates, so its rim <i>is</i> the ar\u00eates. Its headwall also needs structure (ribs, couloirs, talus) rather than a smooth surface.</li>\n<li><b>G1 serrated wall.</b> Steep walls start right at R1's frozen channel section, which is rasterised as a staircase on this diagonal reach, and the 4 m fade lets the staircase through. A \u2265 12 m fade (a wider floor) or a smooth vector channel boundary would remove it.</li>\n<li><b>G1 reads as mounds.</b> The reach lies in a valley only 5\u201312 m deep, so with the bed fixed a V can only be built by filling (0 to +14 m). Half the reach is also frozen by the High Tarn seam zone (approved r 185 m).</li>\n<li><b>Camera placement.</b> From the summit dome, and from the frozen \u00b110 m crest cap of A1, the convex cap hides the face below, so C1 cannot be seen from the summit area at eye height. It is judged from its floor, its lip and the east oblique.</li></ul>\n<h3>Trade-offs that are decisions, not bugs</h3><ul>\n<li><b>Trail corridor freeze (\u00b175 m, 60 m fade)</b> covers the summit's whole south face and A3's south face. With it, the silhouette from the south and south-west cannot change. Options: (a) keep it, and accept that A1 is a north/east-side study; (b) narrow it near the summit to centreline \u00b1 12\u201320 m with a passability gate; (c) move the summit reveal to A2.</li>\n<li><b>Crest bands are lower bounds (\u00b110 m frozen).</b> Crest irregularity (steps, towers) needs raises, which you have not approved. Without them the ar\u00eates keep R1's smooth crest profile.</li>\n<li><b>Face gate (\u2265 75 % unprotected).</b> This prevents mask-shaped cuts but excludes A2 south-west and A3. It is a parameter you can review.</li>\n<li><b>Production builds copy <code>public/geo-r02c-a1a/</code> (1.1 MB) into <code>dist</code>.</b> This needs a decision before any deploy (none is authorised).</li></ul>\n<h3>Recommendations for the next gate</h3><ol>\n<li>Approve the overlay platform (mechanism, mask, validation, tests) as the basis for A1.</li>\n<li>Decide the protection question first, because it determines whether the approaches can ever see the change. Recommended: option (b) for the summit block plus a passability test, and keep the rest.</li>\n<li>Redesign C1 as a valley-head amphitheatre spanning A1\u2013A2 (rim = ar\u00eates, opening ENE), with headwall structure. Re-check against the 85 m envelope.</li>\n<li>Replace G1's reach, or its approach: test on a reach with \u2265 25 m of side relief, and use a \u2265 12 m channel-edge fade. Do not generalise the gully method yet.</li>\n<li>Add one or two player-height viewpoints that actually see the north/east faces (for example an A2 route candidate), or the study cannot be judged from player height.</li></ol>"
+}

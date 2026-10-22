@@ -1,0 +1,94 @@
+{
+ "method": "same machine, same Chromium/SwiftShader, default URL (no query parameters), UI visible in both builds; P0 build (feature/geo-r02c-p0-calibration-infra @ 90d0cb7) vs A1a build (this branch); top-right status panel (live FPS text) and crosshair excluded. Comparison code: tools/geo-r02c/compare_default.py (P0), labels remapped.",
+ "summary": "8 of 8 R1 views are pixel-identical outside the UI panel, with identical cameras, between the P0 build and the A1a build",
+ "views": [
+  {
+   "view": "overview",
+   "sha256P0Build": "a5936be45b4515e25fba8e5fc95866d9567b0f940df9676a4a7665415db890a2",
+   "sha256A1aBuild": "9eff3699dcfcf6cf1baa2895268e81dba59090ef65040e7285fb95cbf967c98b",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 53,
+   "cameraIdentical": true
+  },
+  {
+   "view": "island-oblique",
+   "sha256P0Build": "8069a879b4a3fdc4ad3d7f1250be667f8af4b4f0eaab56cfb9fbab4c4102caf6",
+   "sha256A1aBuild": "8069a879b4a3fdc4ad3d7f1250be667f8af4b4f0eaab56cfb9fbab4c4102caf6",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "home-cove",
+   "sha256P0Build": "80658d02e56bcf39a7df60a54ffe9337ca7b7bf2b26d7d7f50e24dd01e5166ac",
+   "sha256A1aBuild": "57d7766af57c1a954d1039fbeaf41f6ec8d8be349533ba3f6e85f956352f04cc",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 3922,
+   "cameraIdentical": true
+  },
+  {
+   "view": "central-valley",
+   "sha256P0Build": "b6e3320db7cf827d67593151dd2351099d61b49075d0a1c0e1fc215fd109d208",
+   "sha256A1aBuild": "b6e3320db7cf827d67593151dd2351099d61b49075d0a1c0e1fc215fd109d208",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  },
+  {
+   "view": "cairn-saddle",
+   "sha256P0Build": "f8d4cb2356c2cfa5964d9e8cb2720959ce176e41ad1403e0ec1c12917b97b95d",
+   "sha256A1aBuild": "dc6c42b402733dc939bec80fbb1d7b1cc2a0f390a9177b2ef6c08c90e140f212",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 2284,
+   "cameraIdentical": true
+  },
+  {
+   "view": "high-tarn",
+   "sha256P0Build": "8ccca3a53e14f60ce3331ea1d770c8c252614f991390dc3df1203e88e5527962",
+   "sha256A1aBuild": "e3c1cf654a094893136124f848b7b88aaaf12ac29cdddebe5d7865d335a6d994",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 2722,
+   "cameraIdentical": true
+  },
+  {
+   "view": "hidden-fold",
+   "sha256P0Build": "a9d56bcbad72ffdf4ddf9f607992a3838b4b30ded52c91d3330f2b479938ff81",
+   "sha256A1aBuild": "3872aeb7840360ee6a653efa59ab4b904854ac742d8e07970cb8d12804e6ac06",
+   "byteIdenticalPng": false,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 2753,
+   "cameraIdentical": true
+  },
+  {
+   "view": "mirelands",
+   "sha256P0Build": "477d9ea9056210c066f8eafdaaf17bc91e78cc10f8e72e4aefa6af64abf30e40",
+   "sha256A1aBuild": "477d9ea9056210c066f8eafdaaf17bc91e78cc10f8e72e4aefa6af64abf30e40",
+   "byteIdenticalPng": true,
+   "comparedPixels": 1742088,
+   "pixelsDifferingOutsideUi": 0,
+   "maxChannelDiffOutsideUi": 0,
+   "pixelsDifferingInUiPanel": 0,
+   "cameraIdentical": true
+  }
+ ]
+}
