@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 628" font-family="system-ui,sans-serif" font-size="11">
+<rect class="bg" width="900" height="628" fill="#fffdf9"/>
+<text x="46" y="16" font-size="13" font-weight="700" fill="currentColor">H1 · N→S at x = 1290 through the tarn-inlet-n source: an authored 640 m source on a 553 m crest</text>
+<line x1="46" x2="888" y1="588.0" y2="588.0" stroke="currentColor" opacity=".12"/><text x="4" y="592.0" fill="currentColor" opacity=".7">264 m</text>
+<line x1="46" x2="888" y1="458.0" y2="458.0" stroke="currentColor" opacity=".12"/><text x="4" y="462.0" fill="currentColor" opacity=".7">366 m</text>
+<line x1="46" x2="888" y1="328.0" y2="328.0" stroke="currentColor" opacity=".12"/><text x="4" y="332.0" fill="currentColor" opacity=".7">468 m</text>
+<line x1="46" x2="888" y1="198.0" y2="198.0" stroke="currentColor" opacity=".12"/><text x="4" y="202.0" fill="currentColor" opacity=".7">570 m</text>
+<line x1="46" x2="888" y1="68.0" y2="68.0" stroke="currentColor" opacity=".12"/><text x="4" y="72.0" fill="currentColor" opacity=".7">672 m</text>
+<polyline points="46.0,575.3 56.4,563.0 66.8,550.6 77.2,538.1 87.6,525.6 98.0,512.9 108.4,500.2 118.8,487.4 129.2,474.6 139.6,461.7 150.0,448.7 160.3,435.6 170.7,422.4 181.1,409.2 191.5,395.8 201.9,382.3 212.3,368.8 222.7,355.0 233.1,341.2 243.5,327.0 253.9,312.7 264.3,298.0 274.7,282.8 285.1,267.2 295.5,250.8 305.9,233.6 316.3,215.4 326.7,195.8 337.1,174.4 347.5,150.9 357.9,124.6 368.2,106.2 378.6,106.6 389.0,107.0 399.4,107.4 409.8,107.8 420.2,110.0 430.6,111.2 441.0,115.1 451.4,121.0 461.8,125.7 472.2,130.6 482.6,136.2 493.0,142.1 503.4,148.2 513.8,154.2 524.2,160.4 534.6,166.6 545.0,172.8 555.4,181.5 565.8,194.8 576.1,207.9 586.5,221.5 596.9,235.5 607.3,249.8 617.7,263.5 628.1,276.3 638.5,288.1 648.9,299.0 659.3,309.2 669.7,319.0 680.1,328.4 690.5,337.6 700.9,346.3 711.3,355.0 721.7,362.6 732.1,368.2 742.5,372.8 752.9,377.4 763.3,382.0 773.7,386.7 784.0,391.3 794.4,395.9 804.8,400.5 815.2,405.1 825.6,409.7 836.0,414.3 846.4,418.9 856.8,423.5 867.2,428.1 877.6,432.7 888.0,437.3" fill="none" stroke="#8a8f98" stroke-width="2.2"/>
+<line x1="363.7" x2="381.7" y1="213.6" y2="213.6" stroke="#2f6fb0" stroke-width="3"/><text x="383.7" y="217.6" fill="#2f6fb0" font-size="10.5">authored n-east-arc crest 553 m</text>
+<line x1="434.6" x2="434.6" y1="109.7" y2="94.7" stroke="#c2410c" opacity=".7"/><text x="437.6" y="91.7" fill="#9a3412">source 640 m (authored)</text>
+<line x1="525.3" x2="525.3" y1="158.0" y2="128.0" stroke="#c2410c" opacity=".7"/><text x="528.3" y="125.0" fill="#9a3412">R1 knob: crest up to +94 m above authored</text>
+<line x1="97.8" x2="97.8" y1="510.1" y2="495.1" stroke="#c2410c" opacity=".7"/><text x="100.8" y="492.1" fill="#9a3412">north face → sea</text>
+<line x1="771.4" x2="771.4" y1="382.7" y2="352.7" stroke="#c2410c" opacity=".7"/><text x="768.4" y="349.7" fill="#9a3412" text-anchor="end">channel → High Tarn</text>
+<rect x="46.0" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="56.4" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="66.8" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="77.2" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="87.6" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="98.0" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="108.4" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="118.8" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="129.2" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="139.6" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="150.0" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="160.3" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="170.7" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="181.1" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="191.5" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="201.9" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="212.3" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="222.7" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="233.1" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="243.5" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="253.9" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="264.3" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="274.7" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="285.1" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="295.5" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="305.9" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="316.3" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="326.7" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="337.1" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="347.5" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="357.9" y="594" width="11.0" height="7" fill="#475569"/>
+<rect x="368.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="378.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="389.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="399.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="409.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="420.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="430.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="441.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="451.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="461.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="472.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="482.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="493.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="503.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="513.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="524.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="534.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="545.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="555.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="565.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="576.1" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="586.5" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="596.9" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="607.3" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="617.7" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="628.1" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="638.5" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="648.9" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="659.3" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="669.7" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="680.1" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="690.5" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="700.9" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="711.3" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="721.7" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="732.1" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="742.5" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="752.9" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="763.3" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="773.7" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="784.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="794.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="804.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="815.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="825.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="836.0" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="846.4" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="856.8" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="867.2" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<rect x="877.6" y="594" width="11.0" height="7" fill="#2f6fb0"/>
+<text x="888" y="592" text-anchor="end" font-size="10" fill="currentColor" opacity=".7">R1 drainage: <tspan fill="#2f6fb0">■ High Tarn</tspan> <tspan fill="#475569">■ sea</tspan> <tspan fill="#a8a29e">■ other catchment</tspan></text>
+<text x="46" y="620" fill="currentColor" opacity=".7">N</text><text x="888" y="620" text-anchor="end" fill="currentColor" opacity=".7">S</text>
+<text x="450" y="620" text-anchor="middle" fill="currentColor" opacity=".7">650 m section · true scale, no vertical exaggeration</text></svg>
