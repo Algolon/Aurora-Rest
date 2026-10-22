@@ -43,7 +43,8 @@ floor.position.y=-.49;floor.receiveShadow=true;scene.add(floor);
 // One and only one immutable geometry object for all three specimens.
 const geometry=r04StudyGeometry('G1');
 const lookdev=createRockLookdevFactory(),previous=createR04MaterialStudies();
-const meshes:[THREE.Mesh,THREE.Mesh,THREE.Mesh]=[0,1,2].map(()=>new THREE.Mesh(geometry)) as [THREE.Mesh,THREE.Mesh,THREE.Mesh];
+const makeRockMesh=():THREE.Mesh=>new THREE.Mesh(geometry);
+const meshes:[THREE.Mesh,THREE.Mesh,THREE.Mesh]=[makeRockMesh(),makeRockMesh(),makeRockMesh()];
 for(const mesh of meshes){mesh.castShadow=mesh.receiveShadow=true;mesh.position.y=-.25;scene.add(mesh);}
 const rockFamily=createRockFamily(),sourceRock=rockFamily.createMesh(11);
 sourceRock.position.set(-5,-.25,-1.9);sourceRock.scale.setScalar(.65);scene.add(sourceRock);
