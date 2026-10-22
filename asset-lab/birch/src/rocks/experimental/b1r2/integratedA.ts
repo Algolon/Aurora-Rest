@@ -71,7 +71,7 @@ export function buildIntegratedA():IntegratedA {
  const b=cloneCSGSource(source.parts[1]);
  const evaluator=new Evaluator();
  evaluator.useGroups=false;
- evaluator.useCDTClipping=true; // constrained triangulation for clipped intersection polygons
+ Object.assign(evaluator,{useCDTClipping:true}); // constrained triangulation for clipped intersection polygons
  evaluator.attributes=['position','normal','uv','color'];
  // No texture modification. Both closed brushes share one common material.
  const mat=new THREE.MeshStandardMaterial({vertexColors:true});
