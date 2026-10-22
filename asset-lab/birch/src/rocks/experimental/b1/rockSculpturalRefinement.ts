@@ -20,7 +20,7 @@ const ROCK_SCULPTS:Readonly<Record<RockArchetype,RockSculpt>>={
  [-.92,.16,.21,.83],[.16,.13,1,.73],[-.17,.08,-1,.70],
  [-.42,.69,-.67,1.17],[.71,.24,-.72,.91],
  [-.66,-.56,.19,.89],[.64,-.68,.10,.85],
- [.22,.81,.64,1.27]],
+ [.22,.81,.64,1.27],[-.58,.32,-.74,.78]],
  details:[2,6]},
  B:{bounds:{x:[-2.67,2.53],y:[-.34,1.57],z:[-1.21,1.16]},
  cuts:[
@@ -29,7 +29,7 @@ const ROCK_SCULPTS:Readonly<Record<RockArchetype,RockSculpt>>={
  [.15,.10,1,1.04],[-.17,.09,-1,1.09],
  [-.55,.41,-.66,1.86],[.72,.31,-.74,1.87],
  [-.31,-.72,.21,1.27],[.60,-.70,.15,1.41],
- [.13,.83,.65,1.46]],
+ [.13,.83,.65,1.46],[-.61,.32,.62,1.83]],
  details:[3,8]},
  C:{bounds:{x:[-1.75,1.74],y:[-.34,2.43],z:[-1.48,1.45]},
  cuts:[
@@ -39,7 +39,7 @@ const ROCK_SCULPTS:Readonly<Record<RockArchetype,RockSculpt>>={
  [-.79,.14,-.57,1.45],[.72,.19,-.68,1.57],
  [-.58,-.71,.10,1.38],[.58,-.66,.22,1.35],
  [-.42,.78,.59,2.29],[.52,.80,.43,2.43],
- [.12,.77,-.75,2.25],[-.44,.34,-.72,1.59]],
+ [.12,.77,-.75,2.25],[-.44,.34,-.72,1.59],[-.79,.35,.20,1.56],[.75,.29,-.33,1.39],[.28,.72,.66,2.17]],
  details:[5,12,14]},
  D:{bounds:{x:[-2.04,1.98],y:[-.34,2.92],z:[-1.64,1.51]},
  cuts:[
@@ -50,7 +50,7 @@ const ROCK_SCULPTS:Readonly<Record<RockArchetype,RockSculpt>>={
  [-.65,-.58,.22,1.48],[.59,-.72,.17,1.39],
  [-.64,.69,.49,2.24],[.54,.67,.54,2.35],
  [-.51,.44,-.77,1.79],[.53,.42,-.74,1.71],
- [-.44,.84,-.31,2.29]],
+ [-.44,.84,-.31,2.29],[-.62,.36,.74,1.74],[.83,.34,-.23,1.78],[-.29,.71,.72,2.44]],
  details:[5,8,12]},
  E:{bounds:{x:[-1.77,1.68],y:[-.34,4.56],z:[-1.53,1.49]},
  cuts:[
@@ -61,7 +61,7 @@ const ROCK_SCULPTS:Readonly<Record<RockArchetype,RockSculpt>>={
  [-.73,-.52,.10,1.52],[.66,-.62,.15,1.34],
  [-.56,.77,.28,3.42],[.51,.78,.24,3.89],
  [-.38,.49,-.73,2.70],[.54,.50,-.69,2.62],
- [.20,.88,.36,4.45]],
+ [.20,.88,.36,4.45],[-.86,.29,.22,1.59],[.71,.35,-.28,1.56],[-.54,.51,.66,3.16],[.46,.68,-.58,3.35]],
  details:[4,13]}
 };
 const dot=(a:V3,b:V3)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
@@ -129,14 +129,17 @@ export function buildSculptRock(id:RockArchetype):THREE.BufferGeometry{
   const n=normalize(cross(sub(v[1],v[0]),sub(v[2],v[0])));
   const faceColor:V3=[.235+Math.max(0,n[1])*.034,.263+Math.max(0,n[1])*.036,.298+Math.max(0,n[1])*.037];
   planesUsed++;
-  const chisel=d.details.includes(face.id)&&v.length>=4;
+  const area=v.slice(1,-1).reduce((sum,p,i)=>sum+Math.hypot(...cross(sub(p,v[0]),sub(v[i+2],v[0])))*.5,0);
+  const planned=d.details.includes(face.id);
+  const geologicalFlank=face.id>=0&&n[2]>.30&&area>(id==='B'?2.5:id==='A'?.50:1.10);
+  const chisel=v.length>=4&&chipCount<(id==='D'?4:3)&&(planned||geologicalFlank);
   if(chisel){
    const centroid:V3=[0,0,0];
    for(const p of v)for(let j=0;j<3;j++)centroid[j]+=p[j]/v.length;
    const lead=v[1],anchor:V3=[
-    centroid[0]*.74+lead[0]*.26-n[0]*.048,
-    centroid[1]*.74+lead[1]*.26-n[1]*.048,
-    centroid[2]*.74+lead[2]*.26-n[2]*.048
+    centroid[0]*.69+lead[0]*.31-n[0]*.085,
+    centroid[1]*.69+lead[1]*.31-n[1]*.085,
+    centroid[2]*.69+lead[2]*.31-n[2]*.085
    ];
    for(let i=0;i<v.length;i++)emit(anchor,v[i],v[(i+1)%v.length],faceColor);
    chipCount++;
