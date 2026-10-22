@@ -1,0 +1,6 @@
+# GEO-R02C proposed reference environment (tier 2): Linux x86_64, CPython 3.13, glibc >= 2.28.
+# Install with: python3.13 -m venv .venv && .venv/bin/pip install --require-hashes --no-deps -r tools/geo-r02c/env/requirements.lock.txt
+# Versions equal tools/geo-r02b/requirements.txt; hashes are the manylinux x86_64 cp313 wheels used for the P0 runs.
+numpy==2.3.5 --hash=sha256:11e06aa0af8c0f05104d56450d6093ee639e15f24ecf62d417329d06e522e017
+scipy==1.18.1 --hash=sha256:fdaf5ea890a6183d0565f51a61799d67081bd5b1cf03c5f4b3fd3732108625c9
+shapely==2.2.0 --hash=sha256:f340e7f99aaee3df5acd6b247cddf723051a7c93d1e1ef09025b80d84e4c0ded

@@ -1,0 +1,444 @@
+{
+ "canonicalSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "linuxReplaySha256": "19c5f839104b7a9cd458f52134933b8e9a9cb5f6113c1f5b77f93d552b722b32",
+ "replayReport": {
+  "generatorSha256": "61d2f8ab591bdb222da6b5fe3ecc0332dbb5a4586d156306a5f99c0675b8d25a",
+  "replayTerrainSha256": "19c5f839104b7a9cd458f52134933b8e9a9cb5f6113c1f5b77f93d552b722b32",
+  "expectedSha256": "19c5f839104b7a9cd458f52134933b8e9a9cb5f6113c1f5b77f93d552b722b32",
+  "faithful": true,
+  "activeSetIterations": 6,
+  "secondsIncludingDumps": 210.2,
+  "stages": [
+   "coarse",
+   "final",
+   "jacobi240",
+   "upsample"
+  ],
+  "constraintCells": [
+   4,
+   16
+  ]
+ },
+ "canonicalVsLinux": {
+  "cellsDiffering": 23369,
+  "over1e-4": 2093,
+  "over1mm": 1384,
+  "over1cm": 629,
+  "over10cm": 118,
+  "maxAbsDiffM": 1.4141159057617188,
+  "componentsOver1cm": [
+   {
+    "xRange": [
+     -1040.0,
+     -900.0
+    ],
+    "zRange": [
+     644.0,
+     780.0
+    ],
+    "cells": 625,
+    "maxAbsDiffM": 1.41412
+   },
+   {
+    "xRange": [
+     -1684.0,
+     -1684.0
+    ],
+    "zRange": [
+     2808.0,
+     2808.0
+    ],
+    "cells": 1,
+    "maxAbsDiffM": 0.3
+   },
+   {
+    "xRange": [
+     -1756.0,
+     -1756.0
+    ],
+    "zRange": [
+     2712.0,
+     2712.0
+    ],
+    "cells": 1,
+    "maxAbsDiffM": 0.3
+   },
+   {
+    "xRange": [
+     -1768.0,
+     -1768.0
+    ],
+    "zRange": [
+     2696.0,
+     2696.0
+    ],
+    "cells": 1,
+    "maxAbsDiffM": 0.3
+   },
+   {
+    "xRange": [
+     -1792.0,
+     -1792.0
+    ],
+    "zRange": [
+     2664.0,
+     2664.0
+    ],
+    "cells": 1,
+    "maxAbsDiffM": 0.3
+   }
+  ],
+  "absDiffOfDifferingCells": {
+   "n": 23369,
+   "p50": 1.52587890625e-05,
+   "p90": 8.31604003906257e-05,
+   "p99": 0.04662048339843733,
+   "p999": 0.3171709594726704,
+   "max": 1.4141159057617188
+  }
+ },
+ "crestAtBound": {
+  "linux": 18937,
+  "canonical": 18937,
+  "xor": 0
+ },
+ "mechanismCoastNodes": {
+  "cells": [
+   {
+    "x": -1684.0,
+    "z": 2808.0,
+    "signedCoastDistanceM": -0.0,
+    "linuxLand": false,
+    "linux": -0.30000001192092896,
+    "canonical": 0.0,
+    "canonicalEqualsOppositeBranch": true
+   },
+   {
+    "x": -1756.0,
+    "z": 2712.0,
+    "signedCoastDistanceM": -0.0,
+    "linuxLand": false,
+    "linux": -0.30000001192092896,
+    "canonical": 0.0,
+    "canonicalEqualsOppositeBranch": true
+   },
+   {
+    "x": -1768.0,
+    "z": 2696.0,
+    "signedCoastDistanceM": 1.4210854715202004e-13,
+    "linuxLand": true,
+    "linux": 5.968558709334298e-14,
+    "canonical": -0.30000001192092896,
+    "canonicalEqualsOppositeBranch": true
+   },
+   {
+    "x": -1792.0,
+    "z": 2664.0,
+    "signedCoastDistanceM": 1.4210854715202004e-13,
+    "linuxLand": true,
+    "linux": 5.968558709334298e-14,
+    "canonical": -0.30000001192092896,
+    "canonicalEqualsOppositeBranch": true
+   }
+  ],
+  "verified": "nodes lie on the coast polyline within 1e-12 m; canonical value equals the formula of the opposite land/sea branch",
+  "unverified": "why the Mac classifies them differently (ULP-level differences in tessellated coast vertices or in the point-in-polygon predicate)"
+ },
+ "mechanismRingSeamTies": {
+  "rings": [
+   {
+    "lake": "high-tarn",
+    "ringVertices": 894,
+    "distinctVertices": 893,
+    "gridCellsWithExactNearestVertexTie": 156,
+    "tiedCellsInsideConstraintBand": 78,
+    "tiedCellsWithProjectionErrorOver1cm": 126,
+    "maxProjectionErrorM": 12.637281168304433
+   },
+   {
+    "lake": "hidden-lake",
+    "ringVertices": 531,
+    "distinctVertices": 530,
+    "gridCellsWithExactNearestVertexTie": 279,
+    "tiedCellsInsideConstraintBand": 162,
+    "tiedCellsWithProjectionErrorOver1cm": 3,
+    "maxProjectionErrorM": 0.02240528577922163
+   },
+   {
+    "lake": "birch-upper-lake",
+    "ringVertices": 452,
+    "distinctVertices": 451,
+    "gridCellsWithExactNearestVertexTie": 359,
+    "tiedCellsInsideConstraintBand": 198,
+    "tiedCellsWithProjectionErrorOver1cm": 188,
+    "maxProjectionErrorM": 16.26345596729027
+   },
+   {
+    "lake": "birch-lower-lake",
+    "ringVertices": 414,
+    "distinctVertices": 413,
+    "gridCellsWithExactNearestVertexTie": 315,
+    "tiedCellsInsideConstraintBand": 176,
+    "tiedCellsWithProjectionErrorOver1cm": 232,
+    "maxProjectionErrorM": 20.696191602650636
+   }
+  ],
+  "verified": "every closed ring repeats its first vertex; exact KD ties exist on grid cells near each seam; R1 projection() can then return a distance that is not the nearest-segment distance",
+  "unverified": "why cKDTree resolves the Birchwood-upper ties differently on macOS while High Tarn and Birchwood-lower ties resolve the same way on both platforms"
+ },
+ "birchUpperRimInversion": {
+  "outsideLakeEqualityCells": 34,
+  "canonicalMinusExactM": {
+   "n": 34,
+   "p50": 0.0,
+   "p90": 0.0001000000000015433,
+   "p99": 0.4770080000000011,
+   "p999": 0.6737408000000039,
+   "max": 0.6956
+  },
+  "linuxMinusExactM": {
+   "n": 34,
+   "p50": 2.180249999999999,
+   "p90": 8.169999999999998,
+   "p99": 11.344104000000002,
+   "p999": 11.540480400000005,
+   "max": 11.5623
+  },
+  "examples": [
+   {
+    "x": -956.0,
+    "z": 708.0,
+    "exactDistanceM": 31.1127,
+    "canonicalImpliedDistanceM": 31.1126,
+    "linuxImpliedDistanceM": 31.185
+   },
+   {
+    "x": -956.0,
+    "z": 704.0,
+    "exactDistanceM": 28.2843,
+    "canonicalImpliedDistanceM": 28.2843,
+    "linuxImpliedDistanceM": 28.7141
+   },
+   {
+    "x": -952.0,
+    "z": 704.0,
+    "exactDistanceM": 25.4558,
+    "canonicalImpliedDistanceM": 25.4559,
+    "linuxImpliedDistanceM": 25.5441
+   },
+   {
+    "x": -960.0,
+    "z": 700.0,
+    "exactDistanceM": 28.2843,
+    "canonicalImpliedDistanceM": 28.2843,
+    "linuxImpliedDistanceM": 30.2076
+   },
+   {
+    "x": -956.0,
+    "z": 700.0,
+    "exactDistanceM": 25.4558,
+    "canonicalImpliedDistanceM": 25.4559,
+    "linuxImpliedDistanceM": 26.6176
+   },
+   {
+    "x": -952.0,
+    "z": 700.0,
+    "exactDistanceM": 22.6274,
+    "canonicalImpliedDistanceM": 22.6275,
+    "linuxImpliedDistanceM": 23.1625
+   },
+   {
+    "x": -948.0,
+    "z": 700.0,
+    "exactDistanceM": 19.799,
+    "canonicalImpliedDistanceM": 19.799,
+    "linuxImpliedDistanceM": 19.9123
+   },
+   {
+    "x": -960.0,
+    "z": 696.0,
+    "exactDistanceM": 25.4558,
+    "canonicalImpliedDistanceM": 25.4559,
+    "linuxImpliedDistanceM": 28.7837
+   }
+  ]
+ },
+ "counterfactuals": [
+  {
+   "dir": "cf-tie",
+   "tieAwareLakes": null,
+   "terrainSha256": "286e51195b35c22d4f11569a25fcb9623e17ac3e50c5164963574e61c5653fc4",
+   "vsCanonical": {
+    "cellsDiffering": 105010,
+    "over1e-4": 33107,
+    "over1mm": 10742,
+    "over1cm": 950,
+    "over10cm": 139,
+    "maxAbsDiffM": 1.3452529907226562,
+    "componentsOver1cm": [
+     {
+      "xRange": [
+       -940.0,
+       -736.0
+      ],
+      "zRange": [
+       -660.0,
+       -532.0
+      ],
+      "cells": 718,
+      "maxAbsDiffM": 1.34525
+     },
+     {
+      "xRange": [
+       708.0,
+       832.0
+      ],
+      "zRange": [
+       2144.0,
+       2200.0
+      ],
+      "cells": 227,
+      "maxAbsDiffM": 0.82141
+     },
+     {
+      "xRange": [
+       -1684.0,
+       -1684.0
+      ],
+      "zRange": [
+       2808.0,
+       2808.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1756.0,
+       -1756.0
+      ],
+      "zRange": [
+       2712.0,
+       2712.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1768.0,
+       -1768.0
+      ],
+      "zRange": [
+       2696.0,
+       2696.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1792.0,
+       -1792.0
+      ],
+      "zRange": [
+       2664.0,
+       2664.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -932.0,
+       -932.0
+      ],
+      "zRange": [
+       688.0,
+       688.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.04521
+     }
+    ]
+   }
+  },
+  {
+   "dir": "cf-tie-upper",
+   "tieAwareLakes": [
+    "birch-upper-lake"
+   ],
+   "terrainSha256": "9c1d5396b09fb96672481e8a26d37ca53740f2848840d3069f046ebaf04d9374",
+   "vsCanonical": {
+    "cellsDiffering": 12,
+    "over1e-4": 9,
+    "over1mm": 6,
+    "over1cm": 5,
+    "over10cm": 4,
+    "maxAbsDiffM": 0.30000001192098863,
+    "componentsOver1cm": [
+     {
+      "xRange": [
+       -1684.0,
+       -1684.0
+      ],
+      "zRange": [
+       2808.0,
+       2808.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1756.0,
+       -1756.0
+      ],
+      "zRange": [
+       2712.0,
+       2712.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1768.0,
+       -1768.0
+      ],
+      "zRange": [
+       2696.0,
+       2696.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -1792.0,
+       -1792.0
+      ],
+      "zRange": [
+       2664.0,
+       2664.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.3
+     },
+     {
+      "xRange": [
+       -932.0,
+       -932.0
+      ],
+      "zRange": [
+       688.0,
+       688.0
+      ],
+      "cells": 1,
+      "maxAbsDiffM": 0.04521
+     }
+    ]
+   }
+  }
+ ]
+}
