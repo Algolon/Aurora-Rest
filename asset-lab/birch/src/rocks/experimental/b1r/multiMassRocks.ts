@@ -30,7 +30,7 @@ const RECIPES:Readonly<Record<MultiMassArchetype,RecipeSet>>={
   V1:{
    name:'Embedded lower-right angular shoulder',
    purpose:'A small transverse foothill emerges through the front-right lower flank',
-   center:[.59,-.07,.44],extents:[.46,.38,.42],
+   center:[.62,-.07,.29],extents:[.46,.38,.42],
    cuts:[
     [.21,1,.18,.325],[-.54,.76,.24,.44],[.75,.46,.25,.48],
     [-.84,.08,.50,.43],[.71,-.07,-.69,.51],
@@ -42,7 +42,7 @@ const RECIPES:Readonly<Record<MultiMassArchetype,RecipeSet>>={
   V2:{
    name:'Tightly interlocked oblique shoulder',
    purpose:'A larger asymmetric flange with raked crown, tucked inner buttress and a short receding joint',
-   center:[.57,-.045,.435],extents:[.51,.46,.44],
+   center:[.60,-.045,.32],extents:[.51,.46,.44],
    cuts:[
     [.18,1,.30,.386],[-.67,.68,.23,.50],[.75,.38,.31,.48],
     [-.85,.18,.39,.51],[.78,.06,-.62,.54],
@@ -56,7 +56,7 @@ const RECIPES:Readonly<Record<MultiMassArchetype,RecipeSet>>={
   V1:{
    name:'Broad embedded down-glacier shoulder',
    purpose:'An elongated supporting stone mass emerges from the lower right-side glacis',
-   center:[1.96,-.075,.475],extents:[.79,.53,.66],
+   center:[2.11,-.075,.23],extents:[.79,.53,.66],
    cuts:[
     [.16,1,.15,.430],[-.52,.82,.22,.58],[.63,.64,.18,.62],
     [-.90,.15,.31,.72],[.84,.20,-.37,.66],
@@ -68,7 +68,7 @@ const RECIPES:Readonly<Record<MultiMassArchetype,RecipeSet>>={
   V2:{
    name:'Interlocking glacial fracture shoulder',
    purpose:'A deliberately oblique wedge runs into the main body and its exposed face follows the dominant glacial rake',
-   center:[1.91,-.025,.48],extents:[.86,.55,.69],
+   center:[2.05,-.025,.26],extents:[.86,.55,.69],
    cuts:[
     [.10,1,.22,.494],[-.60,.78,.24,.70],[.76,.45,.24,.69],
     [-.91,.10,.32,.71],[.81,.24,-.47,.70],
