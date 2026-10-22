@@ -55,7 +55,7 @@ const neutral=new THREE.MeshStandardMaterial({color:'#aab2bb',roughness:.95});
 const silhouette=new THREE.MeshBasicMaterial({color:'#253341'});
 const primaryColor=new THREE.MeshStandardMaterial({color:'#9daab8',roughness:1});
 const secondaryColor=new THREE.MeshStandardMaterial({color:'#ba967b',roughness:1});
-const g1=r04StudyGeometry('G1'),g1Mesh=new THREE.Mesh(g1,neutral);
+const g1=r04StudyGeometry('G1'),g1Mesh=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(g1,neutral);
 g1Mesh.castShadow=g1Mesh.receiveShadow=true;g1Mesh.visible=false;scene.add(g1Mesh);
 const rocks:Record<MultiMassArchetype,Record<MultiMassVersion,MultiMassAsset>>={
  A:{V0:buildB1R('A','V0'),V1:buildB1R('A','V1'),V2:buildB1R('A','V2')},
