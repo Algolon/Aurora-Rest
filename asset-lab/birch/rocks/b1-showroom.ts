@@ -86,8 +86,10 @@ const slotX:Record<Choice,number>={G1:-15,A:-10.5,B:-5.5,C:0.3,D:6,E:12.7};
 function setCamera(){
  const group=state.mode==='gallery'||state.mode==='normalized',pair=state.mode==='geometry-pair';
  const contextView=state.mode==='context';
- const extent=(group?41:pair?13:contextView?18:7.9)*100/state.zoom;
- const focusY=contextView?2.0:group?1.3:pair?1.25:1.45;
+ const extent=(group?41:pair?13:contextView?18:10.0)*100/state.zoom;
+ // A fixed whole-rock orthographic framing preserves physical size comparisons,
+ // including E's 4.6m crown without clipping the tallest silhouette.
+ const focusY=contextView?2.0:group?1.3:pair?1.25:1.95;
  const theta=state.orbit*Math.PI/180;
  const view=state.view;
  const vectors:Record<View,[number,number,number]>={
