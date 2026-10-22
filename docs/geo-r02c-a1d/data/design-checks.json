@@ -1,0 +1,224 @@
+{
+ "window": {
+  "valid": true,
+  "areaHa": 819.8,
+  "ringM": 8,
+  "featherM": 200
+ },
+ "featureClearance": {
+  "C1 floor": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 980.0,
+   "inCore": true,
+   "minCoastDistanceM": 388.4,
+   "coastWeight": 1.0
+  },
+  "C1 headwall": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 900.0,
+   "inCore": true,
+   "minCoastDistanceM": 366.4,
+   "coastWeight": 1.0
+  },
+  "C1 lip": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 1015.0,
+   "inCore": true,
+   "minCoastDistanceM": 399.5,
+   "coastWeight": 1.0
+  },
+  "C2 floor": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 576.4,
+   "inCore": true,
+   "minCoastDistanceM": 770.6,
+   "coastWeight": 1.0
+  },
+  "C2 headwall": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 846.0,
+   "inCore": true,
+   "minCoastDistanceM": 680.2,
+   "coastWeight": 1.0
+  },
+  "C2 lip": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 550.8,
+   "inCore": true,
+   "minCoastDistanceM": 703.7,
+   "coastWeight": 1.0
+  },
+  "B1": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 730.0,
+   "inCore": true,
+   "minCoastDistanceM": 816.2,
+   "coastWeight": 1.0
+  },
+  "B2": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 484.1,
+   "inCore": true,
+   "minCoastDistanceM": 967.4,
+   "coastWeight": 1.0
+  },
+  "B2.2": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 268.7,
+   "inCore": true,
+   "minCoastDistanceM": 1128.2,
+   "coastWeight": 1.0
+  },
+  "B3": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 550.0,
+   "inCore": true,
+   "minCoastDistanceM": 286.3,
+   "coastWeight": 0.91
+  },
+  "A1 sharpening band (60 m)": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 700.0,
+   "inCore": true,
+   "minCoastDistanceM": 76.4,
+   "coastWeight": 0.0
+  },
+  "A2 sharpening band (60 m)": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 780.0,
+   "inCore": true,
+   "minCoastDistanceM": 599.4,
+   "coastWeight": 1.0
+  },
+  "A3 sharpening band (60 m)": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 810.0,
+   "inCore": true,
+   "minCoastDistanceM": 556.3,
+   "coastWeight": 1.0
+  },
+  "G1 trial reach": {
+   "insideWindow": true,
+   "minDistanceToEdgeM": 415.3,
+   "inCore": true,
+   "minCoastDistanceM": 717.4,
+   "coastWeight": 1.0
+  }
+ },
+ "protectedItems": {
+  "ht-spill (880,1850)": {
+   "zone": "outside",
+   "areaInsideWindowPct": null,
+   "distanceToWindowM": 100.0
+  },
+  "glen-tarn-outlet valley": {
+   "zone": "outside",
+   "areaInsideWindowPct": 0.0,
+   "distanceToWindowM": 85.6
+  },
+  "High Tarn lake": {
+   "zone": "feather/ring",
+   "areaInsideWindowPct": 88.5,
+   "distanceToWindowM": 0.0
+  },
+  "peak-ascent route": {
+   "lengthM": 2925.4,
+   "insideWindowM": 2007.6,
+   "inCoreM": 1781.4,
+   "inFeatherOrRingM": 226.1
+  },
+  "tarn-ascent route": {
+   "lengthM": 1228.5,
+   "insideWindowM": 0.0,
+   "inCoreM": 0.0,
+   "inFeatherOrRingM": 0.0
+  },
+  "tarn-inlet-w": {
+   "insideWindowM": 594.4,
+   "inCoreM": 594.4
+  },
+  "tarn-inlet-n": {
+   "insideWindowM": 434.2,
+   "inCoreM": 434.2
+  },
+  "windward-gully": {
+   "insideWindowM": 521.4,
+   "inCoreM": 219.4
+  }
+ },
+ "gridCells4m": {
+  "ring": {
+   "cells": 5991,
+   "landCells": 2765,
+   "landCellsCoastFrozen0to150": 344,
+   "landCellsCoastTaper150to300": 322
+  },
+  "feather": {
+   "cells": 138820,
+   "landCells": 65716,
+   "landCellsCoastFrozen0to150": 8980,
+   "landCellsCoastTaper150to300": 8298
+  },
+  "core": {
+   "cells": 368846,
+   "landCells": 264652,
+   "landCellsCoastFrozen0to150": 45254,
+   "landCellsCoastTaper150to300": 46665
+  }
+ },
+ "reflexCorner": {
+  "xz": [
+   450,
+   1950
+  ],
+  "note": "Euclidean distance gives rounded feather contours around the reflex corner; an axis-aligned (Chebyshev) feather would leave a sharp inward notch there"
+ },
+ "p0MaskLoaderLimitation": "tools/geo-r02c/lib/common.py load_mask() reads xMin/xMax/zMin/zMax boxes only; window v2 needs a polygon mask implementation (A1 prerequisite)",
+ "C1coastal": {
+  "v1": {
+   "C1 floor": {
+    "insideWindow": true,
+    "minDistanceToEdgeM": 980.0,
+    "inCore": true,
+    "minCoastDistanceM": 388.4,
+    "coastWeight": 1.0
+   },
+   "C1 lip": {
+    "insideWindow": true,
+    "minDistanceToEdgeM": 1015.0,
+    "inCore": true,
+    "minCoastDistanceM": 399.5,
+    "coastWeight": 1.0
+   },
+   "C1 headwall": {
+    "insideWindow": true,
+    "minDistanceToEdgeM": 900.0,
+    "inCore": true,
+    "minCoastDistanceM": 366.4,
+    "coastWeight": 1.0
+   }
+  },
+  "v0": {
+   "lipMinCoastDistanceM": 213.3,
+   "floorMinCoastDistanceM": 311.3
+  },
+  "verdict": "v1 C1 lies entirely beyond 300 m from the coast (taper weight 1.0); the outflow continues on unedited R1 slope through the taper and frozen band"
+ },
+ "B1route": {
+  "v1MinDistanceToCentrelineM": 114.0,
+  "v0MinDistanceToCentrelineM": 35.4,
+  "corridorHalfWidthM": 75,
+  "requiredM": 100,
+  "v1Passes": true,
+  "R1FlowSeedsReachingCorridorWithin600m": "2/24",
+  "side": "east of the route (right-hand side when climbing)"
+ },
+ "C2": {
+  "C2bCatchmentTransferHa": 1.03,
+  "C2bTransferInsideAuthoredCatchment01Pct": 100.0,
+  "note": "cells now draining to the sea that a 15-25 m north rim along (120,2640)-(250,2668)-(380,2650) would turn toward High Tarn",
+  "C2aContributingAreaEstimateHa": 7.9,
+  "C2aNote": "High Tarn-draining R1 cells in x -250..420, z 2440..2680, i.e. the bowl and headwall that a graded floor would gather to the source-w threshold (estimate)",
+  "sourceWNowHa": 0.12
+ }
+}

@@ -1,0 +1,244 @@
+{
+ "method": "terrain-only skyline (max elevation angle per azimuth, 0.25 deg steps, rays to 7 km) on the rendered R1 triangles; zone = which A1-D design zone forms the skyline point; no vegetation, haze or earth curvature",
+ "viewpoints": {
+  "valley-shoulder": {
+   "label": "P0 np-from-valley-shoulder",
+   "xz": [
+    -175.97,
+    -155.95
+   ],
+   "eyeM": 137.4,
+   "approach": "S",
+   "distanceToSummitM": 2946,
+   "summitBearingDeg": -6.7,
+   "summitLineOfSight": true,
+   "summitElevationAngleDeg": 14.51,
+   "skylineShareWithin12degPct": {
+    "massif, unsculpted": 34.0,
+    "A2": 23.7,
+    "A3": 18.6,
+    "foreground / other": 15.5,
+    "summit": 8.2
+   },
+   "massifSkylineWidthDeg": 33.2,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 7.3,
+    "C4": 0.0
+   }
+  },
+  "birchwood": {
+   "label": "P0 np-from-birchwood",
+   "xz": [
+    -700.0,
+    300.0
+   ],
+   "eyeM": 115.0,
+   "approach": "SSW",
+   "distanceToSummitM": 2477,
+   "summitBearingDeg": 4.2,
+   "summitLineOfSight": true,
+   "summitElevationAngleDeg": 17.59,
+   "skylineShareWithin12degPct": {
+    "massif, unsculpted": 38.1,
+    "A2": 32.0,
+    "A3": 19.6,
+    "summit": 10.3
+   },
+   "massifSkylineWidthDeg": 40.8,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 2.7,
+    "C4": 30.4
+   }
+  },
+  "cairn-col": {
+   "label": "P0 np-from-cairn-col (A2 context)",
+   "xz": [
+    40.0,
+    920.0
+   ],
+   "eyeM": 216.8,
+   "approach": "S",
+   "distanceToSummitM": 1933,
+   "summitBearingDeg": -16.8,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 19.47,
+   "skylineShareWithin12degPct": {
+    "foreground / other": 100.0
+   },
+   "massifSkylineWidthDeg": 0.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  },
+  "route-mid": {
+   "label": "peak-ascent s = 1825 m",
+   "xz": [
+    -581.0,
+    2341.0
+   ],
+   "eyeM": 635.3,
+   "approach": "S, near",
+   "distanceToSummitM": 433,
+   "summitBearingDeg": 8.1,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 31.42,
+   "skylineShareWithin12degPct": {
+    "summit": 53.1,
+    "A3": 27.1,
+    "A2": 19.8
+   },
+   "massifSkylineWidthDeg": 80.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  },
+  "tarn-overlook": {
+   "label": "P0 np-from-tarn-overlook",
+   "xz": [
+    700.0,
+    1950.0
+   ],
+   "eyeM": 374.0,
+   "approach": "SE",
+   "distanceToSummitM": 1470,
+   "summitBearingDeg": -56.1,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 19.69,
+   "skylineShareWithin12degPct": {
+    "massif, unsculpted": 58.3,
+    "A2": 15.6,
+    "A1": 13.5,
+    "A3": 8.3,
+    "summit": 4.2
+   },
+   "massifSkylineWidthDeg": 37.8,
+   "cirqueZoneVisiblePct": {
+    "C1": 15.8,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  },
+  "K1": {
+   "label": "A1-D K1 High Tarn north shore",
+   "xz": [
+    1080.0,
+    2420.0
+   ],
+   "eyeM": 420.8,
+   "approach": "E",
+   "distanceToSummitM": 1638,
+   "summitBearingDeg": -77.7,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 16.31,
+   "skylineShareWithin12degPct": {
+    "massif, unsculpted": 72.2,
+    "A1": 24.7,
+    "summit": 3.1
+   },
+   "massifSkylineWidthDeg": 50.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 10.5,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  },
+  "east-ridge": {
+   "label": "n-east-arc high point",
+   "xz": [
+    870.0,
+    2880.0
+   ],
+   "eyeM": 621.7,
+   "approach": "ENE, high",
+   "distanceToSummitM": 1394,
+   "summitBearingDeg": -94.5,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 11.29,
+   "skylineShareWithin12degPct": {
+    "A2": 44.3,
+    "A1": 41.2,
+    "summit": 14.4
+   },
+   "massifSkylineWidthDeg": 50.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 81.2,
+    "C2": 96.4,
+    "C4": 0.0
+   }
+  },
+  "K3": {
+   "label": "A1-D K3 windward coast",
+   "xz": [
+    -1520.0,
+    2060.0
+   ],
+   "eyeM": 47.8,
+   "approach": "WSW",
+   "distanceToSummitM": 1226,
+   "summitBearingDeg": 54.6,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 34.79,
+   "skylineShareWithin12degPct": {
+    "C4 (deferred)": 59.8,
+    "massif, unsculpted": 40.2
+   },
+   "massifSkylineWidthDeg": 50.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 0.0,
+    "C4": 88.8
+   }
+  },
+  "sea-north": {
+   "label": "sea, 3 m above water",
+   "xz": [
+    -300.0,
+    3900.0
+   ],
+   "eyeM": 3.0,
+   "approach": "N, from the water",
+   "distanceToSummitM": 1151,
+   "summitBearingDeg": -169.0,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 37.92,
+   "skylineShareWithin12degPct": {
+    "A1": 51.5,
+    "massif, unsculpted": 48.5
+   },
+   "massifSkylineWidthDeg": 72.0,
+   "cirqueZoneVisiblePct": {
+    "C1": 9.0,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  },
+  "sea-northeast": {
+   "label": "NE bay, 3 m above water",
+   "xz": [
+    200.0,
+    3500.0
+   ],
+   "eyeM": 3.0,
+   "approach": "NE, from the water",
+   "distanceToSummitM": 1025,
+   "summitBearingDeg": -135.4,
+   "summitLineOfSight": false,
+   "summitElevationAngleDeg": 41.18,
+   "skylineShareWithin12degPct": {
+    "massif, unsculpted": 100.0
+   },
+   "massifSkylineWidthDeg": 64.2,
+   "cirqueZoneVisiblePct": {
+    "C1": 0.0,
+    "C2": 0.0,
+    "C4": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,397 @@
+{
+ "schema": "aurora-rest-a1d-concept/1",
+ "status": "A1-D concept v1 - DESIGN TARGETS ONLY. Nothing here is generated terrain or an implementation overlay. Supersedes v0 after the 2026-10-22 preliminary art decisions (D1-D10) and the v1 measurement checks.",
+ "units": "world metres; x east, z north; heights in metres above sea level",
+ "statusVocabulary": {
+  "fixed": "existing R1 / A-R1 geometry that A1 must not change",
+  "proposed": "design target recommended for A1",
+  "conditional": "design target allowed only if the stated condition is met in validation",
+  "option": "alternative presented for art review; not part of the A1 baseline",
+  "deferred": "kept for reference; not part of A1",
+  "not-recommended": "examined and rejected, with reasons"
+ },
+ "summit": {
+  "xz": [
+   -520,
+   2770
+  ],
+  "heightM": 900,
+  "status": "fixed"
+ },
+ "aretes": [
+  {
+   "id": "A1",
+   "name": "n-crown arete (N/NE arm)",
+   "ridge": "n-crown",
+   "status": "proposed",
+   "intent": "sharpest arm: steep concave east flank (C1 headwall), broader stepped west flank to the sea face",
+   "crestPositionAndLevel": "fixed (authored)",
+   "coastalFade": "sharpening fades to zero in the 150-300 m coastal taper; the last ~200 m of n-crown toward (-100,3240) stays R1"
+  },
+  {
+   "id": "A2",
+   "name": "n-main SE arete",
+   "ridge": "n-main (summit -> -230,2540)",
+   "status": "proposed",
+   "intent": "steep NE flank above C1/C2; ribbed SW flank above the peak-ascent route (B1)",
+   "crestPositionAndLevel": "fixed (authored)"
+  },
+  {
+   "id": "A3",
+   "name": "n-main W arete",
+   "ridge": "n-main (summit -> -710,2570)",
+   "status": "proposed",
+   "intent": "broadest arm: lower-angle north flank, gullied south flank; the least sculpted of the three",
+   "crestPositionAndLevel": "fixed (authored)"
+  }
+ ],
+ "irregularity": {
+  "status": "proposed",
+  "basis": "R1 holds all three summit arms within 1.2 m of their authored crest levels (data/hydrology-north-sources.json, crestFidelity), so A1 has no headroom to cut notches or cols into the crests",
+  "means": [
+   "different cross-section per arm (A1 sharp, A2 asymmetric, A3 broad)",
+   "different flank character either side of each arm",
+   "irregular rib and gully spacing",
+   "C1 and C2 differ in aspect, size and depth"
+  ],
+  "option": {
+   "id": "towers",
+   "status": "option",
+   "text": "up to three small raised towers (gendarmes) on A1 and A2, each 8-15 m above the authored crest and 20-40 m long; raises only, art approval required"
+  }
+ },
+ "cirques": [
+  {
+   "id": "C1",
+   "name": "Nordbotn",
+   "status": "proposed",
+   "aspect": "E to ENE",
+   "floor": [
+    -255,
+    2930,
+    100,
+    90
+   ],
+   "floorM": "690-705, graded east to the lip",
+   "lip": [
+    [
+     -165,
+     2985
+    ],
+    [
+     -160,
+     2885
+    ]
+   ],
+   "lipM": 688,
+   "head": [
+    [
+     -420,
+     2790
+    ],
+    [
+     -470,
+     2850
+    ],
+    [
+     -440,
+     2950
+    ],
+    [
+     -395,
+     3035
+    ],
+    [
+     -330,
+     3100
+    ]
+   ],
+   "headwallReliefM": "145-175 below the n-crown and summit crests (845-900)",
+   "maxLoweringM": 85,
+   "maxRaiseM": 0,
+   "coastDistanceM": {
+    "lip": "380-480",
+    "floor": "430-560"
+   },
+   "notes": "carved into R1's uniform ~33 deg east-facing slope between A1 and A2; outflow follows the existing slope to the NE bay (R1 drainage: sea)"
+  },
+  {
+   "id": "C2",
+   "name": "Vastra tarnbotn",
+   "status": "proposed",
+   "aspect": "ESE",
+   "floor": [
+    150,
+    2530,
+    115,
+    65
+   ],
+   "floorM": "622-632, graded east to the source-w threshold",
+   "lip": [
+    [
+     400,
+     2545
+    ],
+    [
+     420,
+     2500
+    ]
+   ],
+   "lipM": 620,
+   "head": [
+    [
+     -200,
+     2560
+    ],
+    [
+     -150,
+     2620
+    ],
+    [
+     -60,
+     2665
+    ],
+    [
+     40,
+     2690
+    ]
+   ],
+   "headwallReliefM": "60-105 below the A2 / n-east-arc junction (730)",
+   "maxLoweringM": 31,
+   "maxRaiseM": 9,
+   "notes": "the R1 source-w knob (2 m) becomes the cirque threshold; the 615 m saddle west of it is filled 5-10 m so the floor drains through the source; floor kept inside the measured High Tarn catchment",
+   "variants": [
+    {
+     "id": "C2-a",
+     "status": "proposed",
+     "text": "corrie bench: west/north-west headwall, low natural north side; drains ~2.3 ha headwall zone (90 % inside the authored A-R1 High Tarn catchment 01, 1.3 ha of it currently drained to the sea by R1) to the source-w threshold"
+    },
+    {
+     "id": "C2-b",
+     "status": "option",
+     "text": "enclosed bowl: add a north rim 15-25 m high along (120,2640)-(250,2668)-(380,2650); turns a further 1.03 ha toward High Tarn, all of it inside authored catchment 01 (restores A-R1 hydrology); art approval required"
+    }
+   ],
+   "hydrology": "R1 drains only part of the authored High Tarn catchment here (data/hydrology-north-sources.json, authoredCatchment01); C2 moves R1 toward the authored catchment, not away from it"
+  },
+  {
+   "id": "C3",
+   "name": "Norra tarnbotn",
+   "status": "not-recommended",
+   "reasons": [
+    "v0 floor centre is 21.5 m from the fixed n-east-arc crest line",
+    "45 % of the v0 floor drains to the sea in R1",
+    "only feasible with the 44-50 m divide raise that D3 declined"
+   ]
+  },
+  {
+   "id": "C4",
+   "name": "Vindbotn",
+   "status": "deferred",
+   "floor": [
+    -1130,
+    2370,
+    170,
+    130
+   ],
+   "reasons": [
+    "D2: defer unless its artistic contribution is compelling",
+    "largest edit of v0 (-66 / +42 m)",
+    "visibility from approaches measured in data/silhouettes.json"
+   ]
+  }
+ ],
+ "buttresses": [
+  {
+   "id": "B1",
+   "name": "south pillar",
+   "status": "conditional",
+   "line": [
+    [
+     -410,
+     2630
+    ],
+    [
+     -370,
+     2530
+    ],
+    [
+     -320,
+     2430
+    ]
+   ],
+   "condition": "rib crest >= 100 m from the peak-ascent centreline (75 m frozen corridor + rib half-width); must not shed new flow across the route; judged in clay from the route",
+   "v0Correction": "v0 B1 started at (-470,2720), 35 m from the route centreline, inside the frozen corridor; v1 branches from the SE arete 53 m below its crest and keeps >= 100 m from the centreline"
+  },
+  {
+   "id": "B2",
+   "name": "SE-arm east ribs",
+   "status": "option",
+   "lines": [
+    [
+     [
+      -40,
+      2400
+     ],
+     [
+      150,
+      2330
+     ]
+    ],
+    [
+     [
+      60,
+      2230
+     ],
+     [
+      260,
+      2140
+     ]
+    ]
+   ],
+   "condition": "justified only by K1 / valley-shoulder views (A1), not by the Cairn col view (A2)"
+  },
+  {
+   "id": "B3",
+   "name": "Tarnryggen spur rib",
+   "status": "option",
+   "line": [
+    [
+     880,
+     2860
+    ],
+    [
+     905,
+     2660
+    ],
+    [
+     880,
+     2500
+    ]
+   ],
+   "condition": "low priority now that C3 is dropped; must stay clear of the frozen tarn-inlet-n zone"
+  }
+ ],
+ "shoulders": [
+  {
+   "id": "S1",
+   "name": "route shoulder below the final climb",
+   "status": "fixed",
+   "xz": [
+    -620,
+    2545
+   ],
+   "heightM": 740,
+   "v0Correction": "v0 placed S1 at (-650,2700), about 100 m off the trail; the real walkable shoulder is the route's traverse at z 2545, inside the frozen corridor"
+  },
+  {
+   "id": "S2",
+   "name": "stepped spur knoll",
+   "status": "deferred",
+   "xz": [
+    -860,
+    2240
+   ]
+  },
+  {
+   "id": "S3",
+   "name": "SE-arm shoulder",
+   "status": "option",
+   "xz": [
+    20,
+    2380
+   ]
+  }
+ ],
+ "gullies": [
+  {
+   "id": "G1",
+   "channel": "tarn-inlet-w",
+   "status": "proposed",
+   "scope": "trial reach only: P0 transect tarn-inlet-w-mid (channel fraction 0.35-0.65)",
+   "section": "bed and level fixed; bench +/-4-6 m; asymmetric walls (steeper on the outside of bends); cut 10-15 m into the reconstructed hillslope"
+  },
+  {
+   "id": "G2",
+   "channel": "tarn-inlet-n",
+   "status": "deferred",
+   "reason": "inlet-n stays frozen in A1 pending the source decision (D3)"
+  },
+  {
+   "id": "G3",
+   "channel": "windward-gully",
+   "status": "deferred",
+   "reason": "generalise only after the G1 trial is reviewed (D8)"
+  }
+ ],
+ "frozenZones": [
+  {
+   "id": "inlet-n-head",
+   "status": "fixed",
+   "centre": [
+    1290,
+    2650
+   ],
+   "radiusM": 200,
+   "reason": "D3: no A1 edits around the conflicted source until the design-master decision"
+  },
+  {
+   "id": "high-tarn-seam",
+   "status": "fixed",
+   "centre": [
+    750,
+    2172
+   ],
+   "radiusM": 185,
+   "reason": "seam-error patch (R1.x candidate)"
+  }
+ ],
+ "couloirsAndTalus": {
+  "status": "proposed",
+  "scope": "C1 and C2 headwalls only; spacing irregular"
+ },
+ "cameras": [
+  {
+   "id": "K1",
+   "xz": [
+    1080,
+    2420
+   ],
+   "yaw": -1.4,
+   "purpose": "High Tarn north shore: C2 threshold and summit"
+  },
+  {
+   "id": "K2",
+   "xz": [
+    -430,
+    3040
+   ],
+   "yaw": 2.14,
+   "purpose": "into Nordbotn from the n-crown arete"
+  },
+  {
+   "id": "K3",
+   "xz": [
+    -1520,
+    2060
+   ],
+   "yaw": 0.75,
+   "purpose": "windward coast (context for the deferred C4)"
+  },
+  {
+   "id": "K4",
+   "xz": [
+    -520,
+    2770
+   ],
+   "yaw": 1.02,
+   "purpose": "summit reward view into Nordbotn"
+  }
+ ],
+ "approachSilhouetteViewpoints": "see data/silhouettes.json",
+ "scopeBoundary": {
+  "A1": "North Peak sculpture, alpine landforms, glacial valleys, High Tarn connections",
+  "A2": "Cairn Saddle panorama, scenic reveal, route alignment and trail engineering",
+  "rule": "A1 is not reshaped to force North Peak into view from the Cairn col"
+ }
+}

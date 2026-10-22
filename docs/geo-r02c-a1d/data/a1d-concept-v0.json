@@ -1,0 +1,446 @@
+{
+ "status": "A1-D concept v0 (reviewed 22 Oct 2026) - DESIGN ONLY; superseded by a1d-concept-v1.json, kept for traceability",
+ "units": "world metres, x east, z north",
+ "features": {
+  "summit": {
+   "xz": [
+    -520,
+    2770
+   ],
+   "label": "North Peak 900 m — position and height fixed"
+  },
+  "aretes": [
+   [
+    "A1 n-crown arête",
+    [
+     [
+      -520,
+      2770
+     ],
+     [
+      -450,
+      2930
+     ],
+     [
+      -370,
+      3090
+     ]
+    ]
+   ],
+   [
+    "A2 SE arête",
+    [
+     [
+      -520,
+      2770
+     ],
+     [
+      -380,
+      2650
+     ],
+     [
+      -230,
+      2540
+     ]
+    ]
+   ],
+   [
+    "A3 W arête",
+    [
+     [
+      -520,
+      2770
+     ],
+     [
+      -620,
+      2660
+     ],
+     [
+      -710,
+      2570
+     ]
+    ]
+   ]
+  ],
+  "cirques": [
+   {
+    "id": "C1",
+    "name": "Nordbotn (north cirque, hanging above the sea face)",
+    "floor": [
+     -260,
+     2990,
+     140,
+     110
+    ],
+    "head": [
+     [
+      -430,
+      2930
+     ],
+     [
+      -380,
+      2830
+     ],
+     [
+      -260,
+      2790
+     ],
+     [
+      -140,
+      2810
+     ],
+     [
+      -60,
+      2870
+     ]
+    ],
+    "lip": [
+     [
+      -180,
+      3110
+     ],
+     [
+      -150,
+      3175
+     ]
+    ],
+    "floorM": "690–715, graded to lip",
+    "reliefM": "60–210"
+   },
+   {
+    "id": "C2",
+    "name": "Västra tarnbotn (west tarn cirque)",
+    "floor": [
+     300,
+     2610,
+     150,
+     105
+    ],
+    "head": [
+     [
+      70,
+      2440
+     ],
+     [
+      60,
+      2600
+     ],
+     [
+      150,
+      2735
+     ],
+     [
+      330,
+      2770
+     ],
+     [
+      470,
+      2745
+     ]
+    ],
+    "lip": [
+     [
+      420,
+      2520
+     ],
+     [
+      470,
+      2480
+     ]
+    ],
+    "floorM": "617–624, graded to the authored source 618",
+    "reliefM": "40–110 (N) to 280 (NW, under the summit arm)"
+   },
+   {
+    "id": "C3",
+    "name": "Norra tarnbotn (option A — needs the divide raised)",
+    "floor": [
+     1265,
+     2690,
+     90,
+     48
+    ],
+    "head": [
+     [
+      1110,
+      2770
+     ],
+     [
+      1200,
+      2780
+     ],
+     [
+      1330,
+      2730
+     ],
+     [
+      1410,
+      2650
+     ]
+    ],
+    "lip": [
+     [
+      1290,
+      2650
+     ],
+     [
+      1290,
+      2600
+     ]
+    ],
+    "floorM": "645–650, lip = authored source 637",
+    "reliefM": "15–35 (after raising the divide to 660–680)",
+    "option": true
+   },
+   {
+    "id": "C4",
+    "name": "Vindbotn (shallow SW corrie)",
+    "floor": [
+     -1130,
+     2370,
+     170,
+     130
+    ],
+    "head": [
+     [
+      -1330,
+      2600
+     ],
+     [
+      -1150,
+      2580
+     ],
+     [
+      -960,
+      2500
+     ],
+     [
+      -890,
+      2370
+     ]
+    ],
+    "lip": [
+     [
+      -1190,
+      2210
+     ],
+     [
+      -1205,
+      2150
+     ]
+    ],
+    "floorM": "410–440, graded to lip ~410",
+    "reliefM": "180–330"
+   }
+  ],
+  "buttresses": [
+   [
+    "B1 south pillar — east wall of the summit climb",
+    [
+     [
+      -470,
+      2720
+     ],
+     [
+      -410,
+      2570
+     ],
+     [
+      -360,
+      2420
+     ]
+    ]
+   ],
+   [
+    "B2 SE-arm east ribs",
+    [
+     [
+      -40,
+      2400
+     ],
+     [
+      150,
+      2330
+     ]
+    ]
+   ],
+   [
+    "B2",
+    [
+     [
+      60,
+      2230
+     ],
+     [
+      260,
+      2140
+     ]
+    ]
+   ],
+   [
+    "B3 Tarnryggen divide rib",
+    [
+     [
+      880,
+      2860
+     ],
+     [
+      905,
+      2660
+     ],
+     [
+      880,
+      2500
+     ]
+    ]
+   ]
+  ],
+  "shoulders": [
+   [
+    "S1 summit shoulder (trail, keep walkable)",
+    [
+     -650,
+     2700
+    ]
+   ],
+   [
+    "S2 stepped spur knoll",
+    [
+     -860,
+     2240
+    ]
+   ],
+   [
+    "S3 SE-arm shoulder",
+    [
+     20,
+     2380
+    ]
+   ]
+  ],
+  "couloirs": [
+   [
+    [
+     -400,
+     2880
+    ],
+    [
+     -350,
+     2960
+    ]
+   ],
+   [
+    [
+     -200,
+     2815
+    ],
+    [
+     -215,
+     2900
+    ]
+   ],
+   [
+    [
+     120,
+     2700
+    ],
+    [
+     190,
+     2640
+    ]
+   ],
+   [
+    [
+     250,
+     2755
+    ],
+    [
+     280,
+     2680
+    ]
+   ]
+  ],
+  "talus": [
+   [
+    [
+     -410,
+     2900
+    ],
+    [
+     -350,
+     2860
+    ],
+    [
+     -260,
+     2850
+    ],
+    [
+     -150,
+     2870
+    ]
+   ],
+   [
+    [
+     110,
+     2610
+    ],
+    [
+     170,
+     2690
+    ],
+    [
+     310,
+     2715
+    ]
+   ],
+   [
+    [
+     -1270,
+     2520
+    ],
+    [
+     -1130,
+     2510
+    ],
+    [
+     -990,
+     2440
+    ]
+   ]
+  ]
+ },
+ "proposedCameras": [
+  [
+   "K1 tarn north shore — cirque staircase",
+   [
+    1080,
+    2420
+   ],
+   -0.9
+  ],
+  [
+   "K2 Nordbotn from the n-crown arête",
+   [
+    -430,
+    3040
+   ],
+   1.9
+  ],
+  [
+   "K3 Vindbotn from the windward coast",
+   [
+    -1520,
+    2060
+   ],
+   0.75
+  ],
+  [
+   "K4 summit shoulder looking NE into Nordbotn",
+   [
+    -640,
+    2720
+   ],
+   0.75
+  ]
+ ]
+}

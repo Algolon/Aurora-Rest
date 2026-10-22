@@ -1,0 +1,694 @@
+{
+ "method": {
+  "drainage": "D8 steepest descent on canonical R1 to its terminal (High Tarn / sea / other); measured, not designed",
+  "area": "Freeman multiple-flow (p = 1.1) contributing area in box x -400..1700, z 2150..3050; channel cells already carry the 1.6 m R1 channel cut",
+  "crest": "authored crest level = A-R1 ridge polyline height in public/geo-r02b/features.json; R1 = rendered terrain"
+ },
+ "sources": {
+  "ht-source-n": {
+   "channel": "tarn-inlet-n",
+   "x": 1290.0,
+   "z": 2650.0,
+   "authoredSourceLevelM": 640.0,
+   "r1GroundM": 637.3,
+   "localHighM": {
+    "riseToMaxWithin12m": 4.34,
+    "dropToMinWithin12m": 12.79
+   },
+   "nearestAuthoredCrest": {
+    "ridge": "n-east-arc",
+    "distanceM": 37.2,
+    "authoredLevelM": 552.5,
+    "r1AtCrestM": 641.8,
+    "sourceAboveAuthoredCrestM": 87.5
+   },
+   "drainsTo": "High Tarn",
+   "distanceToDrainageDivideM": 50.9,
+   "channelLengthM": 434.2,
+   "stations": [
+    {
+     "sM": 0,
+     "x": 1290.0,
+     "z": 2650.0,
+     "bedM": 640.0,
+     "mfdUpstreamHa": 0.1,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 37.2,
+     "crestAuthoredM": 552.5,
+     "bedBelowAuthoredCrestM": -87.5
+    },
+    {
+     "sM": 25,
+     "x": 1274.6,
+     "z": 2629.4,
+     "bedM": 620.4,
+     "mfdUpstreamHa": 0.1,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 62.9,
+     "crestAuthoredM": 552.5,
+     "bedBelowAuthoredCrestM": -67.9
+    },
+    {
+     "sM": 50,
+     "x": 1259.3,
+     "z": 2609.3,
+     "bedM": 601.2,
+     "mfdUpstreamHa": 0.12,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 88.1,
+     "crestAuthoredM": 552.1,
+     "bedBelowAuthoredCrestM": -49.1
+    },
+    {
+     "sM": 100,
+     "x": 1229.9,
+     "z": 2567.9,
+     "bedM": 562.6,
+     "mfdUpstreamHa": 0.18,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 138.7,
+     "crestAuthoredM": 551.3,
+     "bedBelowAuthoredCrestM": -11.3
+    },
+    {
+     "sM": 150,
+     "x": 1209.3,
+     "z": 2524.4,
+     "bedM": 525.7,
+     "mfdUpstreamHa": 0.23,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 185.2,
+     "crestAuthoredM": 548.4,
+     "bedBelowAuthoredCrestM": 22.8
+    },
+    {
+     "sM": 200,
+     "x": 1219.0,
+     "z": 2475.0,
+     "bedM": 487.1,
+     "mfdUpstreamHa": 0.3,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 215.4,
+     "crestAuthoredM": 539.6,
+     "bedBelowAuthoredCrestM": 52.5
+    },
+    {
+     "sM": 250,
+     "x": 1234.8,
+     "z": 2427.4,
+     "bedM": 448.9,
+     "mfdUpstreamHa": 0.38,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 238.2,
+     "crestAuthoredM": 529.5,
+     "bedBelowAuthoredCrestM": 80.6
+    },
+    {
+     "sM": 300,
+     "x": 1247.5,
+     "z": 2379.9,
+     "bedM": 420.9,
+     "mfdUpstreamHa": 0.53,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 260.1,
+     "crestAuthoredM": 514.8,
+     "bedBelowAuthoredCrestM": 93.9
+    },
+    {
+     "sM": 400,
+     "x": 1271.7,
+     "z": 2283.1,
+     "bedM": 375.5,
+     "mfdUpstreamHa": 0.81,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 287.7,
+     "crestAuthoredM": 495.9,
+     "bedBelowAuthoredCrestM": 120.4
+    }
+   ]
+  },
+  "ht-source-w": {
+   "channel": "tarn-inlet-w",
+   "x": 420.0,
+   "z": 2520.0,
+   "authoredSourceLevelM": 620.0,
+   "r1GroundM": 618.4,
+   "localHighM": {
+    "riseToMaxWithin12m": 2.2,
+    "dropToMinWithin12m": 6.38
+   },
+   "nearestAuthoredCrest": {
+    "ridge": "n-east-arc",
+    "distanceM": 240.8,
+    "authoredLevelM": 595.1,
+    "r1AtCrestM": 595.3,
+    "sourceAboveAuthoredCrestM": 24.9
+   },
+   "drainsTo": "High Tarn",
+   "distanceToDrainageDivideM": 138.6,
+   "channelLengthM": 594.4,
+   "stations": [
+    {
+     "sM": 0,
+     "x": 420.0,
+     "z": 2520.0,
+     "bedM": 620.0,
+     "mfdUpstreamHa": 0.12,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 240.8,
+     "crestAuthoredM": 595.1,
+     "bedBelowAuthoredCrestM": -24.9
+    },
+    {
+     "sM": 25,
+     "x": 446.7,
+     "z": 2515.9,
+     "bedM": 606.8,
+     "mfdUpstreamHa": 0.09,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 243.3,
+     "crestAuthoredM": 593.2,
+     "bedBelowAuthoredCrestM": -13.6
+    },
+    {
+     "sM": 50,
+     "x": 471.4,
+     "z": 2512.3,
+     "bedM": 594.6,
+     "mfdUpstreamHa": 0.11,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 246.0,
+     "crestAuthoredM": 591.9,
+     "bedBelowAuthoredCrestM": -2.7
+    },
+    {
+     "sM": 100,
+     "x": 519.0,
+     "z": 2504.2,
+     "bedM": 571.0,
+     "mfdUpstreamHa": 0.18,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 253.8,
+     "crestAuthoredM": 590.4,
+     "bedBelowAuthoredCrestM": 19.4
+    },
+    {
+     "sM": 150,
+     "x": 567.8,
+     "z": 2491.1,
+     "bedM": 546.2,
+     "mfdUpstreamHa": 0.26,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 270.2,
+     "crestAuthoredM": 590.0,
+     "bedBelowAuthoredCrestM": 43.8
+    },
+    {
+     "sM": 200,
+     "x": 602.9,
+     "z": 2456.4,
+     "bedM": 515.2,
+     "mfdUpstreamHa": 0.32,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 309.9,
+     "crestAuthoredM": 590.0,
+     "bedBelowAuthoredCrestM": 74.8
+    },
+    {
+     "sM": 250,
+     "x": 634.0,
+     "z": 2415.5,
+     "bedM": 483.0,
+     "mfdUpstreamHa": 0.42,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 356.2,
+     "crestAuthoredM": 590.2,
+     "bedBelowAuthoredCrestM": 107.2
+    },
+    {
+     "sM": 300,
+     "x": 671.8,
+     "z": 2384.8,
+     "bedM": 455.1,
+     "mfdUpstreamHa": 0.59,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 395.3,
+     "crestAuthoredM": 590.5,
+     "bedBelowAuthoredCrestM": 135.4
+    },
+    {
+     "sM": 400,
+     "x": 769.7,
+     "z": 2362.0,
+     "bedM": 417.0,
+     "mfdUpstreamHa": 0.9,
+     "nearestCrest": "n-east-arc",
+     "crestDistanceM": 448.3,
+     "crestAuthoredM": 592.9,
+     "bedBelowAuthoredCrestM": 176.0
+    }
+   ]
+  },
+  "windward-source": {
+   "channel": "windward-gully",
+   "x": -1210.0,
+   "z": 2100.0,
+   "authoredSourceLevelM": 175.0,
+   "r1GroundM": 173.2,
+   "localHighM": {
+    "riseToMaxWithin12m": 2.63,
+    "dropToMinWithin12m": 5.18
+   },
+   "nearestAuthoredCrest": {
+    "ridge": "n-west-spur",
+    "distanceM": 245.6,
+    "authoredLevelM": 388.5,
+    "r1AtCrestM": 388.9,
+    "sourceAboveAuthoredCrestM": -213.5
+   },
+   "drainsTo": "sea",
+   "distanceToDrainageDivideM": null,
+   "channelLengthM": 682.9,
+   "stations": [
+    {
+     "sM": 0,
+     "x": -1210.0,
+     "z": 2100.0,
+     "bedM": 175.0,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 245.6,
+     "crestAuthoredM": 388.5,
+     "bedBelowAuthoredCrestM": 213.5
+    },
+    {
+     "sM": 25,
+     "x": -1222.8,
+     "z": 2077.2,
+     "bedM": 166.2,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 243.5,
+     "crestAuthoredM": 375.2,
+     "bedBelowAuthoredCrestM": 209.0
+    },
+    {
+     "sM": 50,
+     "x": -1235.6,
+     "z": 2054.6,
+     "bedM": 157.4,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 241.0,
+     "crestAuthoredM": 362.3,
+     "bedBelowAuthoredCrestM": 204.9
+    },
+    {
+     "sM": 100,
+     "x": -1259.2,
+     "z": 2012.5,
+     "bedM": 141.1,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 235.8,
+     "crestAuthoredM": 339.0,
+     "bedBelowAuthoredCrestM": 197.9
+    },
+    {
+     "sM": 150,
+     "x": -1284.0,
+     "z": 1967.9,
+     "bedM": 123.9,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 229.2,
+     "crestAuthoredM": 315.5,
+     "bedBelowAuthoredCrestM": 191.6
+    },
+    {
+     "sM": 200,
+     "x": -1307.5,
+     "z": 1924.6,
+     "bedM": 107.3,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 221.6,
+     "crestAuthoredM": 292.5,
+     "bedBelowAuthoredCrestM": 185.2
+    },
+    {
+     "sM": 250,
+     "x": -1328.2,
+     "z": 1878.8,
+     "bedM": 91.5,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 209.5,
+     "crestAuthoredM": 270.6,
+     "bedBelowAuthoredCrestM": 179.2
+    },
+    {
+     "sM": 300,
+     "x": -1342.3,
+     "z": 1831.0,
+     "bedM": 77.1,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 189.9,
+     "crestAuthoredM": 249.6,
+     "bedBelowAuthoredCrestM": 172.5
+    },
+    {
+     "sM": 400,
+     "x": -1389.6,
+     "z": 1746.1,
+     "bedM": 49.1,
+     "mfdUpstreamHa": null,
+     "nearestCrest": "n-west-spur",
+     "crestDistanceM": 163.2,
+     "crestAuthoredM": 188.5,
+     "bedBelowAuthoredCrestM": 139.3
+    }
+   ]
+  }
+ },
+ "nEastArcAnomaly": {
+  "note": "R1 holds every northern crest at its authored level (within 4 m) except here, where the 640 m source constraint lifts the crest",
+  "samples": [
+   {
+    "sM": 1500,
+    "x": 1151.5,
+    "z": 2780.9,
+    "authoredM": 584.6,
+    "r1M": 584.5,
+    "excessM": -0.2
+   },
+   {
+    "sM": 1520,
+    "x": 1169.5,
+    "z": 2772.2,
+    "authoredM": 581.1,
+    "r1M": 581.0,
+    "excessM": -0.0
+   },
+   {
+    "sM": 1540,
+    "x": 1187.4,
+    "z": 2763.2,
+    "authoredM": 577.8,
+    "r1M": 578.1,
+    "excessM": 0.4
+   },
+   {
+    "sM": 1560,
+    "x": 1205.1,
+    "z": 2753.9,
+    "authoredM": 574.3,
+    "r1M": 576.1,
+    "excessM": 1.8
+   },
+   {
+    "sM": 1580,
+    "x": 1222.6,
+    "z": 2744.3,
+    "authoredM": 571.2,
+    "r1M": 575.8,
+    "excessM": 4.6
+   },
+   {
+    "sM": 1600,
+    "x": 1239.8,
+    "z": 2734.0,
+    "authoredM": 568.3,
+    "r1M": 580.9,
+    "excessM": 12.6
+   },
+   {
+    "sM": 1620,
+    "x": 1256.4,
+    "z": 2722.8,
+    "authoredM": 565.2,
+    "r1M": 595.5,
+    "excessM": 30.2
+   },
+   {
+    "sM": 1640,
+    "x": 1272.6,
+    "z": 2711.1,
+    "authoredM": 561.7,
+    "r1M": 620.4,
+    "excessM": 58.6
+   },
+   {
+    "sM": 1660,
+    "x": 1288.5,
+    "z": 2699.0,
+    "authoredM": 558.2,
+    "r1M": 642.3,
+    "excessM": 84.0
+   },
+   {
+    "sM": 1680,
+    "x": 1304.1,
+    "z": 2686.5,
+    "authoredM": 554.9,
+    "r1M": 641.8,
+    "excessM": 87.0
+   },
+   {
+    "sM": 1700,
+    "x": 1319.5,
+    "z": 2673.8,
+    "authoredM": 551.3,
+    "r1M": 641.8,
+    "excessM": 90.5
+   },
+   {
+    "sM": 1720,
+    "x": 1334.7,
+    "z": 2660.7,
+    "authoredM": 547.6,
+    "r1M": 642.1,
+    "excessM": 94.5
+   },
+   {
+    "sM": 1740,
+    "x": 1349.6,
+    "z": 2647.4,
+    "authoredM": 543.9,
+    "r1M": 626.2,
+    "excessM": 82.4
+   },
+   {
+    "sM": 1760,
+    "x": 1364.4,
+    "z": 2633.9,
+    "authoredM": 540.1,
+    "r1M": 589.1,
+    "excessM": 49.1
+   },
+   {
+    "sM": 1780,
+    "x": 1378.9,
+    "z": 2620.2,
+    "authoredM": 536.7,
+    "r1M": 562.0,
+    "excessM": 25.3
+   },
+   {
+    "sM": 1800,
+    "x": 1393.2,
+    "z": 2606.2,
+    "authoredM": 532.6,
+    "r1M": 543.4,
+    "excessM": 10.8
+   },
+   {
+    "sM": 1820,
+    "x": 1407.2,
+    "z": 2591.9,
+    "authoredM": 529.1,
+    "r1M": 532.8,
+    "excessM": 3.7
+   },
+   {
+    "sM": 1840,
+    "x": 1420.9,
+    "z": 2577.3,
+    "authoredM": 525.7,
+    "r1M": 526.6,
+    "excessM": 0.9
+   },
+   {
+    "sM": 1860,
+    "x": 1434.2,
+    "z": 2562.4,
+    "authoredM": 521.9,
+    "r1M": 522.1,
+    "excessM": 0.2
+   },
+   {
+    "sM": 1880,
+    "x": 1447.1,
+    "z": 2547.1,
+    "authoredM": 518.5,
+    "r1M": 518.5,
+    "excessM": 0.0
+   },
+   {
+    "sM": 1900,
+    "x": 1459.2,
+    "z": 2531.2,
+    "authoredM": 515.2,
+    "r1M": 515.2,
+    "excessM": -0.1
+   },
+   {
+    "sM": 1920,
+    "x": 1470.4,
+    "z": 2514.6,
+    "authoredM": 512.0,
+    "r1M": 511.9,
+    "excessM": -0.1
+   }
+  ],
+  "maxExcessM": 94.5,
+  "lengthOver10mM": 220
+ },
+ "crestFidelity": {
+  "n-east-arc": {
+   "samples": 148,
+   "maxAbsExcessM": 94.5,
+   "samplesOver4m": 15
+  },
+  "n-main": {
+   "samples": 95,
+   "maxAbsExcessM": 1.2,
+   "samplesOver4m": 0
+  },
+  "n-crown": {
+   "samples": 34,
+   "maxAbsExcessM": 0.8,
+   "samplesOver4m": 0
+  },
+  "n-west-spur": {
+   "samples": 71,
+   "maxAbsExcessM": 1.9,
+   "samplesOver4m": 0
+  },
+  "n-nw-cape": {
+   "samples": 43,
+   "maxAbsExcessM": 2.4,
+   "samplesOver4m": 0
+  }
+ },
+ "v0CirqueChecks": {
+  "C2": {
+   "floorCentre": [
+    300,
+    2610
+   ],
+   "floorDrainsToTarnPct": 63.4,
+   "floorDrainsToSeaPct": 36.6,
+   "centreToNearestCrestM": 160.5,
+   "nearestCrest": "n-east-arc",
+   "authoredCrestLevelM": 611.1,
+   "v0FloorM": "617–624, graded to the authored source 618",
+   "crestNorthOfFloor": [
+    {
+     "x": 100,
+     "authoredM": 648.3
+    },
+    {
+     "x": 200,
+     "authoredM": 630.8
+    },
+    {
+     "x": 300,
+     "authoredM": 613.5
+    },
+    {
+     "x": 400,
+     "authoredM": 598.9
+    },
+    {
+     "x": 500,
+     "authoredM": 590.8
+    },
+    {
+     "x": 600,
+     "authoredM": 592.5
+    }
+   ]
+  },
+  "C3": {
+   "floorCentre": [
+    1265,
+    2690
+   ],
+   "floorDrainsToTarnPct": 54.6,
+   "floorDrainsToSeaPct": 45.4,
+   "centreToNearestCrestM": 21.5,
+   "nearestCrest": "n-east-arc",
+   "authoredCrestLevelM": 560.7,
+   "v0FloorM": "645–650, lip = authored source 637"
+  }
+ },
+ "inletNHeadCandidates": {
+  "note": "first station along the authored channel where the bed sits below the nearest authored crest by the stated margin and distance",
+  "headroom20m_dist80m": {
+   "sM": 150,
+   "x": 1209.3,
+   "z": 2524.4,
+   "bedM": 525.7,
+   "mfdUpstreamHa": 0.23,
+   "nearestCrest": "n-east-arc",
+   "crestDistanceM": 185.2,
+   "crestAuthoredM": 548.4,
+   "bedBelowAuthoredCrestM": 22.8
+  },
+  "headroom40m_dist120m": {
+   "sM": 180,
+   "x": 1213.4,
+   "z": 2494.7,
+   "bedM": 502.7,
+   "mfdUpstreamHa": 0.27,
+   "nearestCrest": "n-east-arc",
+   "crestDistanceM": 204.6,
+   "crestAuthoredM": 543.9,
+   "bedBelowAuthoredCrestM": 41.1
+  },
+  "headroom60m_dist150m": {
+   "sM": 220,
+   "x": 1225.6,
+   "z": 2454.8,
+   "bedM": 470.9,
+   "mfdUpstreamHa": 0.33,
+   "nearestCrest": "n-east-arc",
+   "crestDistanceM": 225.4,
+   "crestAuthoredM": 535.5,
+   "bedBelowAuthoredCrestM": 64.5
+  }
+ },
+ "authoredCatchment01": {
+  "note": "A-R1 catchment 01 (High Tarn) polygon from public/geo-r02b/features.json vs R1 D8 drainage, 8 m sampling",
+  "authoredHa": 152.0,
+  "r1DrainsToHighTarnHa": 102.1,
+  "authoredButNotDrainingToTarnHa": 51.7,
+  "ofWhichToSeaHa": 22.9,
+  "ofWhichToOtherHa": 28.8,
+  "ofWhichWestOfX450Ha": 24.4,
+  "r1TarnOutsideAuthoredHa": 1.9,
+  "northOfZ2300": {
+   "note": "inflow side only (excludes the outlet glen south of the lake, where polygon conventions may differ)",
+   "authoredHa": 73.1,
+   "notDrainingToTarnHa": 13.4,
+   "toSeaHa": 7.5,
+   "toOtherHa": 5.9
+  },
+  "c2HeadwallZoneHa": 2.3,
+  "c2HeadwallZoneInsideAuthored01Pct": 89.8,
+  "c2HeadwallZoneNotDrainingToTarnNowHa": 1.3,
+  "interpretation": "R1 honours the authored source and crest LEVELS; where those conflict with the authored catchment polygon (source-w 620 m above the 597 m n-east-arc section; source-n 640 m above a 553 m crest) the drainage follows the levels"
+ }
+}

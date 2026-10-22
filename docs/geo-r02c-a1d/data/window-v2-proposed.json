@@ -1,0 +1,11 @@
+{
+ "schema": "aurora-rest-a1-window/2-proposal",
+ "status": "PROPOSED design boundary (D7: provisional). Not consumed by any tool yet: the P0 mask loader (tools/geo-r02c/lib/common.py load_mask) only supports axis-aligned boxes.",
+ "polygon": [[-2000, 1700], [450, 1700], [450, 1950], [1700, 1950], [1700, 4000], [-2000, 4000]],
+ "frozenRingM": 8,
+ "featherM": 200,
+ "featherProfile": "smoothstep of (distance to polygon boundary - ring) / feather, Euclidean distance, so feather contours are rounded at the reflex corner (450, 1950)",
+ "coastalBand": {"frozenM": 150, "taperToM": 300, "taperProfile": "linear 0 -> 1 between 150 and 300 m from the coastline"},
+ "additionalFrozenZones": ["inlet-n-head (1290,2650) r 200 m", "high-tarn-seam (750,2172) r 185 m", "peak-ascent corridor 75 m", "tarn-ascent corridor 55 m", "all R1 equality constraints (channels, lakes, coast, pass)"],
+ "supersedes": "tools/geo-r02c/masks/A1-window-v1.json (box x -2000..1700, z 1500..4000), which stays unchanged on the P0 branch"
+}

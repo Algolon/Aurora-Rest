@@ -1,0 +1,44 @@
+{
+ "ev-oblique-clayA": {
+  "source": "docs/geo-r02c-p0/captures/clayA/island-oblique.png",
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "ev-valley-shoulder-clayB": {
+  "source": "docs/geo-r02c-p0/captures/clayB/np-from-valley-shoulder.png",
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "ev-birchwood-clayA": {
+  "source": "docs/geo-r02c-p0/captures/clayA/np-from-birchwood.png",
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "ev-cairn-col-clayA": {
+  "source": "docs/geo-r02c-p0/captures/clayA/np-from-cairn-col.png",
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "ev-high-tarn-clayA": {
+  "source": "docs/geo-r02c-p0/captures/clayA/high-tarn.png",
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "ev-tarn-overlook-std": {
+  "source": "docs/geo-r02c-p0/captures/standard/np-from-tarn-overlook.png",
+  "size": [
+   1200,
+   900
+  ]
+ }
+}

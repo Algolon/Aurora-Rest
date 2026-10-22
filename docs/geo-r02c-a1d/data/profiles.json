@@ -1,0 +1,280 @@
+{
+ "note": "DESIGN TARGETS, not generated terrain. Grey = measured R1 on the rendered triangles; dashed = hand-specified target.",
+ "profiles": [
+  {
+   "id": "T1",
+   "file": "images/profile-T1-c1-nordbotn.svg",
+   "status": "proposed (v1)",
+   "title": "T1 · W→E at z = 2930: A1 arête → Nordbotn (C1) headwall → floor → lip → existing east slope",
+   "line": [
+    [
+     -650,
+     2930
+    ],
+    [
+     150,
+     2930
+    ]
+   ],
+   "controlPoints": [
+    [
+     90.0,
+     null
+    ],
+    [
+     197.0,
+     null
+    ],
+    [
+     210.0,
+     null
+    ],
+    [
+     225.0,
+     846
+    ],
+    [
+     250.0,
+     812
+    ],
+    [
+     280.0,
+     768
+    ],
+    [
+     310.0,
+     722
+    ],
+    [
+     350.0,
+     704
+    ],
+    [
+     400.0,
+     699
+    ],
+    [
+     450.0,
+     694
+    ],
+    [
+     480.0,
+     690
+    ],
+    [
+     500.0,
+     null
+    ]
+   ],
+   "maxLoweringM": 84.8,
+   "maxRaiseM": 0.0,
+   "v0": "v0 T1 ran N–S at x = −250, parallel to the contours, which made the east slope look like a plateau; superseded"
+  },
+  {
+   "id": "T2",
+   "file": "images/profile-T2-c2-vastra-tarnbotn.svg",
+   "status": "proposed (v1, variant C2-a)",
+   "title": "T2 · W→E at z = 2530: A2 crest → Västra tarnbotn (C2) headwall → floor → source-w threshold → gully",
+   "line": [
+    [
+     -300,
+     2530
+    ],
+    [
+     700,
+     2530
+    ]
+   ],
+   "controlPoints": [
+    [
+     40.0,
+     null
+    ],
+    [
+     85.0,
+     null
+    ],
+    [
+     130.0,
+     null
+    ],
+    [
+     150.0,
+     690
+    ],
+    [
+     200.0,
+     660
+    ],
+    [
+     250.0,
+     640
+    ],
+    [
+     300.0,
+     632
+    ],
+    [
+     400.0,
+     629
+    ],
+    [
+     500.0,
+     626
+    ],
+    [
+     600.0,
+     623
+    ],
+    [
+     680.0,
+     621
+    ],
+    [
+     720.0,
+     null
+    ]
+   ],
+   "maxLoweringM": 30.6,
+   "maxRaiseM": 9.3,
+   "v0": "v0 T2 ran NW→SE through a floor that straddled the tarn/sea divide; superseded"
+  },
+  {
+   "id": "G1",
+   "file": "images/profile-G1-tarn-inlet-w-gully.svg",
+   "status": "proposed (trial reach only, D8)",
+   "title": "G1 · tarn-inlet-w trial cross-section: R1 110 m graded bench → asymmetric V-gully (bed fixed)",
+   "line": "P0 transect tarn-inlet-w-mid",
+   "controlPoints": "computed V-section (bench ±5 m, 40° outer / 30° inner walls)",
+   "maxLoweringM": 0.9,
+   "maxRaiseM": 12.9,
+   "v0": "v0 used symmetric 36° walls"
+  },
+  {
+   "id": "T4",
+   "file": "images/profile-T4-c4-vindbotn-deferred.svg",
+   "status": "deferred (D2)",
+   "title": "T4 · NE→SW: Vindbotn (C4), DEFERRED — kept as a study, not part of A1",
+   "line": [
+    [
+     -1000,
+     2750
+    ],
+    [
+     -1300,
+     2000
+    ]
+   ],
+   "controlPoints": [
+    [
+     60.0,
+     null
+    ],
+    [
+     104.0,
+     null
+    ],
+    [
+     150.0,
+     575
+    ],
+    [
+     200.0,
+     500
+    ],
+    [
+     240.0,
+     455
+    ],
+    [
+     300.0,
+     438
+    ],
+    [
+     360.0,
+     425
+    ],
+    [
+     420.0,
+     412
+    ],
+    [
+     460.0,
+     395
+    ],
+    [
+     520.0,
+     330
+    ],
+    [
+     560.0,
+     280
+    ],
+    [
+     600.0,
+     220
+    ],
+    [
+     640.0,
+     null
+    ]
+   ],
+   "maxLoweringM": 66.4,
+   "maxRaiseM": 41.5,
+   "v0": "unchanged from v0"
+  },
+  {
+   "id": "T5",
+   "file": "images/profile-T5-inlet-n-option-a-not-recommended.svg",
+   "status": "not recommended (D3)",
+   "title": "T5 · N→S at x = 1270: v0 option A (raise the divide ~+50 m) — NOT recommended, see H1/H2",
+   "line": [
+    [
+     1270,
+     2950
+    ],
+    [
+     1270,
+     2250
+    ]
+   ],
+   "controlPoints": [
+    [
+     150.0,
+     480
+    ],
+    [
+     200.0,
+     600
+    ],
+    [
+     240.0,
+     668
+    ],
+    [
+     270.0,
+     656
+    ],
+    [
+     285.0,
+     646
+    ],
+    [
+     300.0,
+     639
+    ],
+    [
+     340.0,
+     610
+    ],
+    [
+     400.0,
+     569
+    ]
+   ],
+   "maxLoweringM": 0.0,
+   "maxRaiseM": 50.0,
+   "v0": "v0 option A"
+  }
+ ]
+}
