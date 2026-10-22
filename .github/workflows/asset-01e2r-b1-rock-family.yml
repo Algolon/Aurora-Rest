@@ -1,0 +1,67 @@
+name: ASSET-01E2R-B1 five authored rock archetypes
+on:
+  push:
+    branches: [art/asset-01e2r-b1-rock-family-archetypes]
+  workflow_dispatch:
+jobs:
+  b1-geometry-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Fail if A2 / G1 / production or other approved nature source was modified
+        run: |
+          git diff --exit-code 91a2e0c8fc909a4a25f00e6d5fd621ddb703e6d8 HEAD -- \
+            src/rocks/experimental/rockSculptR04Core.ts \
+            src/rocks/experimental/r04RefinementCore.ts \
+            src/rocks/experimental/r04HeroBoulder.ts \
+            src/rocks/experimental/r04MaterialStudies.ts \
+            src/rocks/experimental/a2 \
+            src/rocks/index.ts \
+            src/rocks/rockMaterials.ts \
+            src/pine src/grass src/woodkit.ts src/index.ts
+      - run: npm install --no-audit --no-fund
+      - name: All nature / rock unit tests, B1 topology and differentiability, TypeScript / Vite
+        run: |
+          npm test
+          npm run build
+      - name: Fetch pinned Feh Lu We original production source read-only
+        run: |
+          git init "$RUNNER_TEMP/flw-source"
+          git -C "$RUNNER_TEMP/flw-source" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-source" sparse-checkout set src package.json
+          git -C "$RUNNER_TEMP/flw-source" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-source" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-source"
+          npm install --no-audit --no-fund
+      - name: Independent original birch, Scots pine, grass and rock parity
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-source" npm run test:rock-parity
+  b1-genuine-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund
+      - name: Render actual Three.js / Chromium WebGL B1 family, true camera views and material comparisons
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME_PATH"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-b1.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aurora-b1-rock-family-genuine-webgl-art-review
+          path: asset-lab/birch/rock-b1-evidence/
+          if-no-files-found: warn
