@@ -246,9 +246,10 @@ try {
   setMode('medium');
   document.querySelector('#loading')!.remove();
   const status=document.querySelector<HTMLDivElement>('#status')!;
-  const samples:number[]=[];let previous=performance.now(),frame=0;
+  const samples:number[]=[];let previous=performance.now(),frame=0,reviewFrozen=false;
   function render(now:number){
     requestAnimationFrame(render);
+    if(reviewFrozen)return;
     const ms=Math.max(1,now-previous);previous=now;
     if(running&&stepControl.value==='live')clockSec+=Math.min(ms/1000,.1);
     if(currentShader)currentShader.uniforms.uTime.value=clockSec;
@@ -263,7 +264,8 @@ try {
     ready:true,views:views.map(v=>({id:v.id,label:v.label,xz:v.sourceXZ,level:v.level})),
     setView,setMode,setFocus,setSun,
     setTime(t:number){if(!Number.isFinite(t)||t<0)throw new Error('Invalid fixed time');clockSec=t;running=false;stepControl.value=['0','1.5','3'].includes(String(t))?String(t):'0';pauseButton.textContent='Play';},
-    snapshot,measureWaterPixels
+    snapshot,measureWaterPixels,
+    freezeForCapture(frozen:boolean){reviewFrozen=frozen;if(frozen){if(currentShader)currentShader.uniforms.uTime.value=clockSec;renderer.render(scene,camera);}}
   }});
   requestAnimationFrame(render);
   window.addEventListener('beforeunload',()=>{
