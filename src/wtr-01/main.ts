@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {HeightGrid,Terrain,waterAt,type Data} from '../geo-r02b/terrain.ts';
 import {sunDirection} from '../geo-r02b/review-options.ts';
-import {classifyCanonicalWaterMesh,pointInRing,type Quality} from './config.ts';
+import {classifyCanonicalWaterMesh,type Quality} from './config.ts';
 import {createCanonicalWaterGeometry,createOceanGeometry,createWaterShader} from './material.ts';
 import './style.css';
 
@@ -92,46 +92,27 @@ function nearbyDry(x:number,z:number,grid:HeightGrid,data:Data):[number,number]{
   }
   throw new Error('No dry R1 location near '+x+','+z);
 }
-function lakeShore(grid:HeightGrid,data:Data):{
-  position:[number,number];center:[number,number];target:[number,number];level:number;
-}{
-  const lake=data.lakes.find(l=>/high[\\s_-]*tarn/i.test(l.id+' '+l.name));
+function lakeShore(grid:HeightGrid,data:Data):{position:[number,number];center:[number,number];level:number}{
+  const lake=data.lakes.find(l=>/high[\s_-]*tarn/i.test(l.id+' '+l.name));
   if(!lake)throw new Error('High Tarn not found in canonical R1 features.json');
   const ring=lake.boundary,center:[number,number]=[
     ring.reduce((a,p)=>a+p[0],0)/ring.length,
     ring.reduce((a,p)=>a+p[1],0)/ring.length
   ];
-  // The original "nearest dry spot" camera looked through a foreground ridge.
-  // Select an actual dry shoreline from which the canonical lake is visible.
-  // No geometry, water elevation or lake boundary is generated or changed.
-  const visible=(at:[number,number],target:[number,number]):boolean=>{
-    const eyeY=grid.surface(at[0],at[1])+1.75;
-    const endY=lake.level+.025,dist=Math.hypot(target[0]-at[0],target[1]-at[1]);
-    const steps=Math.max(2,Math.ceil(dist/6));
-    for(let i=1;i<steps;i++){
-      const t=i/steps,x=at[0]+(target[0]-at[0])*t,z=at[1]+(target[1]-at[1])*t;
-      if(grid.surface(x,z)>eyeY*(1-t)+endY*t+.25)return false;
-    }
-    return true;
-  };
-  let best:{position:[number,number];target:[number,number];score:number}|null=null;
-  for(let i=0;i<ring.length;i+=Math.max(1,Math.floor(ring.length/160))){
-    const point=ring[i],dx=point[0]-center[0],dz=point[1]-center[1],length=Math.hypot(dx,dz)||1;
-    for(const inward of [20,45,80,140]){
-      const target:[number,number]=[point[0]-dx/length*inward,point[1]-dz/length*inward];
-      if(!pointInRing(target[0],target[1],ring))continue;
-      for(const outward of [8,14,22,36,55]){
-        const at:[number,number]=[point[0]+dx/length*outward,point[1]+dz/length*outward];
-        if(!dryAt(at[0],at[1],grid,data)||!visible(at,target))continue;
-        const rise=grid.surface(at[0],at[1])-lake.level;
-        // Prefer a low, reachable water-facing near-shore viewpoint.
-        const score=outward*.12+Math.abs(rise-3)*1.5+Math.abs(inward-80)*.02;
-        if(!best||score<best.score)best={position:at,target,score};
-      }
+  let best:[number,number]|null=null,score=Infinity;
+  for(let i=0;i<ring.length;i+=Math.max(1,Math.floor(ring.length/80))){
+    const point=ring[i];
+    const dx=point[0]-center[0],dz=point[1]-center[1],length=Math.hypot(dx,dz)||1;
+    for(const distance of [12,25,45,70,100]){
+      const x=point[0]+dx/length*distance,z=point[1]+dz/length*distance;
+      if(!dryAt(x,z,grid,data))continue;
+      const rise=grid.surface(x,z)-lake.level;
+      const s=Math.abs(rise-6)*2+distance*.06;
+      if(s<score){score=s;best=[x,z];}
     }
   }
-  if(!best)throw new Error('High Tarn: no dry camera with direct canonical lake line of sight');
-  return {position:best.position,target:best.target,center,level:lake.level};
+  if(!best)best=nearbyDry(ring[0][0],ring[0][1],grid,data);
+  return {position:best,center,level:lake.level};
 }
 function createCameras(grid:HeightGrid,data:Data):ReviewCamera[]{
   const cove=nearbyDry(1670,-1900,grid,data);
@@ -146,7 +127,7 @@ function createCameras(grid:HeightGrid,data:Data):ReviewCamera[]{
     cameraSpec('home-elevated','Home Cove · elevated',cove,[cove[0]+30,0,cove[1]-120],170),
     cameraSpec('wind-shore','Windward Coast · shore level',wind,[wind[0]-240,0,wind[1]+35],1.75),
     cameraSpec('wind-elevated','Windward Coast · elevated',wind,[wind[0]-200,0,wind[1]+35],210),
-    cameraSpec('tarn-shore','High Tarn · near water',tarn.position,[tarn.target[0],tarn.level,tarn.target[1]],1.75),
+    cameraSpec('tarn-shore','High Tarn · near water',tarn.position,[tarn.center[0],tarn.level,tarn.center[1]],1.75),
     cameraSpec('tarn-panorama','High Tarn · panorama',tarn.position,[tarn.center[0],tarn.level,tarn.center[1]],155)
   ];
 }
