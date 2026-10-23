@@ -33,7 +33,7 @@ test('G02 is ONE watertight, consistently oriented triangular manifold',()=>{
      +vs[0][1]*(vs[1][2]*vs[2][0]-vs[1][0]*vs[2][2])
      +vs[0][2]*(vs[1][0]*vs[2][1]-vs[1][1]*vs[2][0]))/6;
   for(let k=0;k<3;k++){
-   const normal=g.normals.slice(i/3+k*3,i/3+k*3+3);
+   const normal=g.normals.slice(i+k*3,i+k*3+3);
    assert.ok(n.reduce((a,x,j)=>a+x*normal[j],0)/area>.999,'normal/orientation');
    const a=key(vs[k]),b=key(vs[(k+1)%3]),s=[a,b].sort(),ek=s.join('|');
    edges.set(ek,[...(edges.get(ek)??[]),a===s[0]?1:-1]);
