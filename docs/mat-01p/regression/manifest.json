@@ -1,0 +1,435 @@
+{
+ "tool": "tools/mat-01p/compare.mjs",
+ "injectedCameras": "{id:'nadir-forest',name:'Nadir 320 m \u00b7 Birchwood forest floor',group:'mat-01p',x:-700,z:250,yaw:0,pitch:-1.5,eye:320},{id:'nadir-meadow',name:'Nadir 320 m \u00b7 Central Valley meadow',group:'mat-01p',x:810,z:-1158,yaw:0,pitch:-1.5,eye:320},",
+ "browser": "141.0.7390.37",
+ "viewport": {
+  "width": 1280,
+  "height": 800,
+  "dpr": 1
+ },
+ "lighting": "nordic",
+ "layout": "canonical 400 m tiles \u00b7 4 m",
+ "evidence": "Unretouched Chromium WebGL2 screenshots (SwiftShader software renderer) of the MAT-01 review page served from the pinned baseline worktree and from the MAT-01P experimental branch.",
+ "runs": [
+  {
+   "id": "base-high",
+   "url": "http://127.0.0.1:4330/mat-01.html",
+   "profile": "high",
+   "noise": "procedural",
+   "label": "MAT-01 ae8a9c1 \u00b7 High \u00b7 procedural fBm",
+   "materialMemoryBytes": {
+    "classification": 32037344,
+    "detail": 11184811,
+    "total": 43222155
+   },
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "shaderErrors": [],
+   "pageErrors": [],
+   "shots": [
+    {
+     "view": "m01-walk",
+     "file": "base-high/m01-walk.jpg",
+     "originalPngSha256": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1",
+     "sha256": "3959d37f5ce06fd1dc3b45f666e9f03dd9de2aa9f51808e9be468837d6c14c0d",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m01-elevated",
+     "file": "base-high/m01-elevated.jpg",
+     "originalPngSha256": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7",
+     "sha256": "0d04d264b89a9aaad57b058b87091b7adb92410e5d3e146dde10951a0b1cbc13",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-walk",
+     "file": "base-high/m02-walk.jpg",
+     "originalPngSha256": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32",
+     "sha256": "780a41c37edaedbe23ab4535ac3b7423f5d811413d38b6ca4c7a55f3e708f7b6",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-elevated",
+     "file": "base-high/m02-elevated.jpg",
+     "originalPngSha256": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1",
+     "sha256": "e27b1548053eca6cc3c570a918b602d4d038118eaf17b76150447b30d5ed1002",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "tr-forest-meadow",
+     "file": "base-high/tr-forest-meadow.jpg",
+     "originalPngSha256": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8",
+     "sha256": "c98c98954d1ae2d3a9c463f946d179240bfef43f40ae5be0ba00dede3f7b3e27",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "birchwood-overview",
+     "file": "base-high/birchwood-overview.jpg",
+     "originalPngSha256": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b",
+     "sha256": "03421bba74948260ad8224a3b8aa44f45a4ba53813d120aede90c1dedb4344ac",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "valley-walk",
+     "file": "base-high/valley-walk.jpg",
+     "originalPngSha256": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c",
+     "sha256": "58e632f76d59f35513f22ca3cccecafb1fc4b9cc6ad7ffc553b944c7122b6384",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m04-walk",
+     "file": "base-high/m04-walk.jpg",
+     "originalPngSha256": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d",
+     "sha256": "4d71a2be57527f0ab7cc155df7bbcfe2863b192dad8b9074c9c13242ad04857c",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-forest",
+     "file": "base-high/nadir-forest.jpg",
+     "originalPngSha256": "8ee4b59e26eef00b475f38733c96cee6c47a7a35b14dbeec0a73d4491dba8ba1",
+     "sha256": "6d746b755446f84a6973774c9a0b96c35d79be67f941b10305108d9f3411a7a8",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-meadow",
+     "file": "base-high/nadir-meadow.jpg",
+     "originalPngSha256": "cf8f05298106ee0bb45468730930094b9e7205fb1437fa9aa56187d403b67b01",
+     "sha256": "c27cc8d7e0856e25b0a50b3df7f24bd339127aa9a55c36807b794d295b6ef75c",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    }
+   ]
+  },
+  {
+   "id": "cand-high-default",
+   "url": "http://127.0.0.1:4331/mat-01.html",
+   "profile": "high",
+   "noise": "procedural",
+   "label": "MAT-01P branch \u00b7 High \u00b7 default (candidate off)",
+   "materialMemoryBytes": {
+    "classification": 32037344,
+    "detail": 11184811,
+    "noise": 0,
+    "total": 43222155
+   },
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "shaderErrors": [],
+   "pageErrors": [],
+   "shots": [
+    {
+     "view": "m01-walk",
+     "file": null,
+     "sha256": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1"
+    },
+    {
+     "view": "m01-elevated",
+     "file": null,
+     "sha256": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7"
+    },
+    {
+     "view": "m02-walk",
+     "file": null,
+     "sha256": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32"
+    },
+    {
+     "view": "m02-elevated",
+     "file": null,
+     "sha256": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1"
+    },
+    {
+     "view": "tr-forest-meadow",
+     "file": null,
+     "sha256": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8"
+    },
+    {
+     "view": "birchwood-overview",
+     "file": null,
+     "sha256": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b"
+    },
+    {
+     "view": "valley-walk",
+     "file": null,
+     "sha256": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c"
+    },
+    {
+     "view": "m04-walk",
+     "file": null,
+     "sha256": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d"
+    },
+    {
+     "view": "nadir-forest",
+     "file": null,
+     "sha256": "8ee4b59e26eef00b475f38733c96cee6c47a7a35b14dbeec0a73d4491dba8ba1"
+    },
+    {
+     "view": "nadir-meadow",
+     "file": null,
+     "sha256": "cf8f05298106ee0bb45468730930094b9e7205fb1437fa9aa56187d403b67b01"
+    }
+   ],
+   "filesIdenticalTo": "base-high"
+  },
+  {
+   "id": "cand-high-baked",
+   "url": "http://127.0.0.1:4331/mat-01.html",
+   "profile": "high",
+   "noise": "baked",
+   "label": "MAT-01P branch \u00b7 High \u00b7 baked noise (candidate)",
+   "materialMemoryBytes": {
+    "classification": 32037344,
+    "detail": 11184811,
+    "noise": 1398101,
+    "total": 44620256
+   },
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "shaderErrors": [],
+   "pageErrors": [],
+   "shots": [
+    {
+     "view": "m01-walk",
+     "file": "cand-high-baked/m01-walk.jpg",
+     "originalPngSha256": "7c7cc8e4216199d8b339654866899e6d18169d7828fbb054566c91bab1fb01f9",
+     "sha256": "d643e5204b844d7542176eda75b06d57e0f9fe8d02e0b49406cd0de7cdb3e202",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m01-elevated",
+     "file": "cand-high-baked/m01-elevated.jpg",
+     "originalPngSha256": "c6553dd94cf9014454c9f90652a9803cc5bee586b3ba17cbb5b397f6dce94da3",
+     "sha256": "8c2af732b2912cae580de1c09539c99b45e69fc65cefb09d3ed7c356e5687c9f",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-walk",
+     "file": "cand-high-baked/m02-walk.jpg",
+     "originalPngSha256": "7acbefbd707f6e89f926bcc5bbb317ee6430285dedcf9701ee2c775b90ca9586",
+     "sha256": "2abcad98a542fdb1997a897f62551b7befee29e0bd5d445e9a955075558e0e2a",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-elevated",
+     "file": "cand-high-baked/m02-elevated.jpg",
+     "originalPngSha256": "80c84bb567be77b3509f839e0f2ca583ff8ab83314156c716a0f301503cca789",
+     "sha256": "8a5f42ca1f893a8d9e3418aba4f6f3ea438f7d1718228c01e476c32fa6a4fabd",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "tr-forest-meadow",
+     "file": "cand-high-baked/tr-forest-meadow.jpg",
+     "originalPngSha256": "fa6d82283783328cba4d27fcf078501fb22016923ccd35f128775172e360e10f",
+     "sha256": "2893dbc7085ee5ab89e2784723544bd67f6ddbd54dda1a94a2fa3b03b9801fdf",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "birchwood-overview",
+     "file": "cand-high-baked/birchwood-overview.jpg",
+     "originalPngSha256": "40045256cff287c94b41ead2fa3723cd3354529abc186a93c9713e20a398deaa",
+     "sha256": "c33acc053a7b0b05d3eedd192e5406dd0479be61a98676dd0ef121fdd2b8f20e",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "valley-walk",
+     "file": "cand-high-baked/valley-walk.jpg",
+     "originalPngSha256": "f0b809b9cd46a5d13ee5f8a366041b253c08152cd88410cbd44ace59434a3106",
+     "sha256": "712e63d5a3744f7b6f08bdadc165c58e4b7c48e99708b711d972d0307908fa0f",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m04-walk",
+     "file": "cand-high-baked/m04-walk.jpg",
+     "originalPngSha256": "7f5ee0c8dd7064a3f6625fc6242b7bd9c7e4775734800369c3dc50665594b0b4",
+     "sha256": "71b4e8c94576a83a66ebd6f5fce090dcef69bce8aa10ff436b2b11671971844a",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-forest",
+     "file": "cand-high-baked/nadir-forest.jpg",
+     "originalPngSha256": "6bd8bf1b8189f14deee493b0e2502331fc14e7423b6a00ae6500d11b7447eb5d",
+     "sha256": "f6a718166f90dd85c7e6ab0bcc97a61ec9bc91426da0996e73f45588267fb7ba",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-meadow",
+     "file": "cand-high-baked/nadir-meadow.jpg",
+     "originalPngSha256": "d1338debefe1defc4b98457339d409b356e6fec16f7191cf488b450b20f1a328",
+     "sha256": "5c932e6b9a2286a986af61c30ef233e94c6e9dedb71ec3eb88045cc1ab9ba356",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    }
+   ]
+  },
+  {
+   "id": "base-mobile",
+   "url": "http://127.0.0.1:4330/mat-01.html",
+   "profile": "mobile",
+   "noise": "procedural",
+   "label": "MAT-01 ae8a9c1 \u00b7 Mobile \u00b7 procedural fBm",
+   "materialMemoryBytes": {
+    "classification": 8018677,
+    "detail": 2796203,
+    "total": 10814880
+   },
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "shaderErrors": [],
+   "pageErrors": [],
+   "shots": [
+    {
+     "view": "m01-walk",
+     "file": "base-mobile/m01-walk.jpg",
+     "originalPngSha256": "6c10f21463539102811cb81d5b310530c4f50bb7fa382802ecf9dbf18e58865c",
+     "sha256": "82e48d60f3bc92613f5bdf1f26d5c352fcb516f1219e0464fea13a54c98e1ebb",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m01-elevated",
+     "file": "base-mobile/m01-elevated.jpg",
+     "originalPngSha256": "2cf1a208676b9ce9e24777ca81e5f8387c1adfdc23c0d99c3fff91d44a7fbba0",
+     "sha256": "8b78f148d94b7d7d4341b4c5d356df6b3c8276b29be8e45498bd07345b32f3bd",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-walk",
+     "file": "base-mobile/m02-walk.jpg",
+     "originalPngSha256": "f678cd578bcdd67642fe2c8c3bb7d3f5043d2b9d425c63cbb699c1a9e81ebb45",
+     "sha256": "ab71008b64f369157aa240fc8d946135eb8934d2fe7e39a32ac38a598d5ef03c",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-elevated",
+     "file": "base-mobile/m02-elevated.jpg",
+     "originalPngSha256": "1a8a8d202a2990f27dd3556851f85d056ebe2d642b01a01e57d08fdb967adbe6",
+     "sha256": "f1af25fea27f161439bdd4a66c28306b1de42c1e5d57ed3664dc05a3cb78477f",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "tr-forest-meadow",
+     "file": "base-mobile/tr-forest-meadow.jpg",
+     "originalPngSha256": "9e36127270004602a6ebf00265193eda581db3689eb627a3df4cb29605b6efb8",
+     "sha256": "43e221f100466f242e40eda31e802117a55b16c55b994e651901e620c17a5d59",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "birchwood-overview",
+     "file": "base-mobile/birchwood-overview.jpg",
+     "originalPngSha256": "e1edadef0614782671aa743d90a1d52938ee4d017ba4be4c699cdc12893b0653",
+     "sha256": "114ae7130c22b5bfc09d3279af3d67fe9c7313cc413b718b7e61996fda3dcb4e",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "valley-walk",
+     "file": "base-mobile/valley-walk.jpg",
+     "originalPngSha256": "c750d50d53c3d7267c58a0a6c4721ba94422a6a01d9c63d7ff16ba0537efb635",
+     "sha256": "180315589b113575f0cf4ffa835dbf87754b1bd0bd75ed1cca59cc7eefacaed2",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m04-walk",
+     "file": "base-mobile/m04-walk.jpg",
+     "originalPngSha256": "d85ab9ccc7404562af63ce7c0c04ccad88bcb2780ce101205483bbc193190319",
+     "sha256": "57ea5f9dbe785a90665a36493ac4a0d847734de3a48a0c50a08a2d5b4c9e5e5c",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-forest",
+     "file": "base-mobile/nadir-forest.jpg",
+     "originalPngSha256": "227546aeaf3b206b9b13ff18e30669fbfa050625aa81a81c927fb245e0340fed",
+     "sha256": "c894d848520ffcd5e00adcc307cf98c88accffd95e316b404c23747350414cff",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-meadow",
+     "file": "base-mobile/nadir-meadow.jpg",
+     "originalPngSha256": "68bf51031ddde8b85fed4771b0723e25874f1e3f37fb37e01a6a21782edc8e4e",
+     "sha256": "0b896b648108d494efb68d454f432fccafd9b1be7c17a31aa50e9b4e97612641",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    }
+   ]
+  },
+  {
+   "id": "cand-mobile-baked",
+   "url": "http://127.0.0.1:4331/mat-01.html",
+   "profile": "mobile",
+   "noise": "baked",
+   "label": "MAT-01P branch \u00b7 Mobile \u00b7 baked noise (candidate)",
+   "materialMemoryBytes": {
+    "classification": 8018677,
+    "detail": 2796203,
+    "noise": 1398101,
+    "total": 12212981
+   },
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "shaderErrors": [],
+   "pageErrors": [],
+   "shots": [
+    {
+     "view": "m01-walk",
+     "file": "cand-mobile-baked/m01-walk.jpg",
+     "originalPngSha256": "4080aaaaa3c59465501f6e39b73654eb6b00b1a5447923ac77df0edd21108ba7",
+     "sha256": "c6b443b76002817ccde8e3db31d223512e33586441ef41fa35a54be42c570f1e",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m01-elevated",
+     "file": "cand-mobile-baked/m01-elevated.jpg",
+     "originalPngSha256": "c44ed8d24388b4d2050b254d930f690484d90c1279df22688ebf96a2584ce5e4",
+     "sha256": "e6d73665cf435a4042c5b639deb7452dbd7088bad20f997bdb7044cc0dfb640a",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-walk",
+     "file": "cand-mobile-baked/m02-walk.jpg",
+     "originalPngSha256": "f22d869d55ad031533ac44a207c92638967dcb3555062c7bd96331824247956f",
+     "sha256": "c3c408015e4c1d5f3683c7a78c03657be2761a774a469e12485749205294c724",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m02-elevated",
+     "file": "cand-mobile-baked/m02-elevated.jpg",
+     "originalPngSha256": "fc6cedccb6f6e642f193f9b9ab2a01a200e12293d663d2c257d102ae51ae2999",
+     "sha256": "6da164c158afc8760bd6e853eb92f8cc9445ce2c5c0627130aeba5c217db38ff",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "tr-forest-meadow",
+     "file": "cand-mobile-baked/tr-forest-meadow.jpg",
+     "originalPngSha256": "b67317de8fb0393fb90adbbd61c0bebccaefac59af4aee307dcd65204e419274",
+     "sha256": "5da74326926ccb93d774cd2c08f99ea4d994f17d60b0ff1e69d32aff194503c7",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "birchwood-overview",
+     "file": "cand-mobile-baked/birchwood-overview.jpg",
+     "originalPngSha256": "e6f39c821d18f49e8ff9020407720f403b3bb645ecf2c9e1925ee06e7beb3336",
+     "sha256": "dd699ac33aa8df16ee76c7f4f0a9dba6e8cc19654715671d01040fd63d7b0d83",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "valley-walk",
+     "file": "cand-mobile-baked/valley-walk.jpg",
+     "originalPngSha256": "b2a1523d99061acf337661b3a5d50e2fb1b0bd0345ad3bee6607fc0b5d028f8e",
+     "sha256": "f8000199e06d2a3ba32e9a4fe963368ef0b48f146b4698fe28d17dd731402e7b",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "m04-walk",
+     "file": "cand-mobile-baked/m04-walk.jpg",
+     "originalPngSha256": "ba36592958013ca34e465c6465c46f04c49e6e659eec64ee5dcf405082d0ae45",
+     "sha256": "59af98f53bfda21f9681369af554b68f3a07cd671cf1625846af5f081cef1b41",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-forest",
+     "file": "cand-mobile-baked/nadir-forest.jpg",
+     "originalPngSha256": "7b62bbbca0f2dc7892c21c18822fdca32959149e243f9a6bc773f7f6b47763be",
+     "sha256": "f59ba8cbf319103741e803ac612213e274467720d769b75822346f0ca79304bf",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    },
+    {
+     "view": "nadir-meadow",
+     "file": "cand-mobile-baked/nadir-meadow.jpg",
+     "originalPngSha256": "06b386da2892490f242588f2363d8e719f49b7920923fcbd79cc6fbde6f318f1",
+     "sha256": "6e49aa0c9c3baa324bcff661c952702e11ab91e167c313be80b53dea7fc44280",
+     "encoding": "JPEG q88 re-encode of the lossless PNG capture; statistics were computed on the PNG"
+    }
+   ]
+  }
+ ],
+ "packaging": "cand-high-default PNGs were byte-identical to base-high and are not stored twice (hashes kept). Other captures: JPEG q88 re-encodes; originalPngSha256 identifies the lossless capture used for all statistics."
+}

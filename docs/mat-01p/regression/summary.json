@@ -1,0 +1,483 @@
+{
+ "tool": "tools/mat-01p/compare-images.py",
+ "note": "Values in 0..255 sRGB units unless stated. hist L1 is in 0..2.",
+ "pairs": {
+  "identity-high": {
+   "a": "base-high",
+   "b": "cand-high-default",
+   "worst": {
+    "maxDelta": 0,
+    "fractionOver16": 0.0,
+    "meanColourShift": 0.0,
+    "histL1": 0.0,
+    "toneDelta16": 0.0,
+    "lumStdRatioRange": [
+     1.0,
+     1.0
+    ]
+   },
+   "views": {
+    "m01-walk": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1",
+     "shaB": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1"
+    },
+    "m01-elevated": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7",
+     "shaB": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7"
+    },
+    "m02-walk": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32",
+     "shaB": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32"
+    },
+    "m02-elevated": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1",
+     "shaB": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1"
+    },
+    "tr-forest-meadow": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8",
+     "shaB": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8"
+    },
+    "birchwood-overview": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b",
+     "shaB": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b"
+    },
+    "valley-walk": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c",
+     "shaB": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c"
+    },
+    "m04-walk": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d",
+     "shaB": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d"
+    },
+    "nadir-forest": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "8ee4b59e26eef00b475f38733c96cee6c47a7a35b14dbeec0a73d4491dba8ba1",
+     "shaB": "8ee4b59e26eef00b475f38733c96cee6c47a7a35b14dbeec0a73d4491dba8ba1"
+    },
+    "nadir-meadow": {
+     "maxDelta": 0,
+     "meanDelta": 0.0,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.0,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0,
+     "toneDelta16": 0.0,
+     "shaA": "cf8f05298106ee0bb45468730930094b9e7205fb1437fa9aa56187d403b67b01",
+     "shaB": "cf8f05298106ee0bb45468730930094b9e7205fb1437fa9aa56187d403b67b01"
+    }
+   }
+  },
+  "candidate-high": {
+   "a": "base-high",
+   "b": "cand-high-baked",
+   "worst": {
+    "maxDelta": 136,
+    "fractionOver16": 0.14688,
+    "meanColourShift": 3.334,
+    "histL1": 0.1544,
+    "toneDelta16": 3.04,
+    "lumStdRatioRange": [
+     0.9821,
+     1.0424
+    ]
+   },
+   "views": {
+    "m01-walk": {
+     "maxDelta": 123,
+     "meanDelta": 6.502,
+     "fractionOver16": 0.07547,
+     "meanColourShift": 3.334,
+     "lumStdRatio": 1.0098,
+     "histL1": 0.1544,
+     "toneDelta16": 3.04,
+     "shaA": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1",
+     "shaB": "7c7cc8e4216199d8b339654866899e6d18169d7828fbb054566c91bab1fb01f9",
+     "composite": "composites/candidate-high--m01-walk.jpg",
+     "compositeSha256": "5d5ed82eef840df798c4224153d8d8ccbc63ac308b9283db4a5f3f3aa8523cfe"
+    },
+    "m01-elevated": {
+     "maxDelta": 62,
+     "meanDelta": 4.894,
+     "fractionOver16": 0.02263,
+     "meanColourShift": 0.414,
+     "lumStdRatio": 0.9924,
+     "histL1": 0.0258,
+     "toneDelta16": 2.201,
+     "shaA": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7",
+     "shaB": "c6553dd94cf9014454c9f90652a9803cc5bee586b3ba17cbb5b397f6dce94da3",
+     "composite": "composites/candidate-high--m01-elevated.jpg",
+     "compositeSha256": "c438766a8b337c3fbab35695860a77aaf30df9493c888897da781e2f27426fc2"
+    },
+    "m02-walk": {
+     "maxDelta": 117,
+     "meanDelta": 5.301,
+     "fractionOver16": 0.08311,
+     "meanColourShift": 1.742,
+     "lumStdRatio": 0.9877,
+     "histL1": 0.0806,
+     "toneDelta16": 1.971,
+     "shaA": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32",
+     "shaB": "7acbefbd707f6e89f926bcc5bbb317ee6430285dedcf9701ee2c775b90ca9586",
+     "composite": "composites/candidate-high--m02-walk.jpg",
+     "compositeSha256": "8ae9d3ff8d572e382cc8fac483c2cce3af7c0bd7fc91b11190eda1207b529086"
+    },
+    "m02-elevated": {
+     "maxDelta": 47,
+     "meanDelta": 3.707,
+     "fractionOver16": 0.00705,
+     "meanColourShift": 0.033,
+     "lumStdRatio": 1.0181,
+     "histL1": 0.0352,
+     "toneDelta16": 1.767,
+     "shaA": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1",
+     "shaB": "80c84bb567be77b3509f839e0f2ca583ff8ab83314156c716a0f301503cca789",
+     "composite": "composites/candidate-high--m02-elevated.jpg",
+     "compositeSha256": "020e0647d606ecb0729b1d5f7ca2712aa9c3d53b05ac1c7caf0127fedf1cab59"
+    },
+    "tr-forest-meadow": {
+     "maxDelta": 76,
+     "meanDelta": 6.659,
+     "fractionOver16": 0.08016,
+     "meanColourShift": 0.73,
+     "lumStdRatio": 1.0424,
+     "histL1": 0.0872,
+     "toneDelta16": 2.328,
+     "shaA": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8",
+     "shaB": "fa6d82283783328cba4d27fcf078501fb22016923ccd35f128775172e360e10f",
+     "composite": "composites/candidate-high--tr-forest-meadow.jpg",
+     "compositeSha256": "83b95b42b78d0067f3fe030fad1dd859ae2faa746e8ddfaeaf3dc844931f9e31"
+    },
+    "birchwood-overview": {
+     "maxDelta": 97,
+     "meanDelta": 2.706,
+     "fractionOver16": 0.00222,
+     "meanColourShift": 0.143,
+     "lumStdRatio": 0.9996,
+     "histL1": 0.0167,
+     "toneDelta16": 1.153,
+     "shaA": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b",
+     "shaB": "40045256cff287c94b41ead2fa3723cd3354529abc186a93c9713e20a398deaa",
+     "composite": "composites/candidate-high--birchwood-overview.jpg",
+     "compositeSha256": "a7a1a9a8d373c60a6aa7b2c5ab1fbbe5882a5efa7859c505bbac5369846b2af4"
+    },
+    "valley-walk": {
+     "maxDelta": 136,
+     "meanDelta": 8.285,
+     "fractionOver16": 0.14688,
+     "meanColourShift": 2.046,
+     "lumStdRatio": 0.9821,
+     "histL1": 0.0848,
+     "toneDelta16": 2.775,
+     "shaA": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c",
+     "shaB": "f0b809b9cd46a5d13ee5f8a366041b253c08152cd88410cbd44ace59434a3106",
+     "composite": "composites/candidate-high--valley-walk.jpg",
+     "compositeSha256": "262fbf6d3dda28dbfa46abebe8fb5cd35ebc2691f6b0bdacfee82af7671369f0"
+    },
+    "m04-walk": {
+     "maxDelta": 64,
+     "meanDelta": 3.361,
+     "fractionOver16": 0.0243,
+     "meanColourShift": 0.134,
+     "lumStdRatio": 0.9984,
+     "histL1": 0.1177,
+     "toneDelta16": 2.187,
+     "shaA": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d",
+     "shaB": "7f5ee0c8dd7064a3f6625fc6242b7bd9c7e4775734800369c3dc50665594b0b4",
+     "composite": "composites/candidate-high--m04-walk.jpg",
+     "compositeSha256": "478e9530d1b0e23d13763be37246040dd05a849756d0b79f07f64d5d137f9774"
+    },
+    "nadir-forest": {
+     "maxDelta": 33,
+     "meanDelta": 4.866,
+     "fractionOver16": 5e-05,
+     "meanColourShift": 0.38,
+     "lumStdRatio": 1.003,
+     "histL1": 0.0593,
+     "toneDelta16": 2.474,
+     "shaA": "8ee4b59e26eef00b475f38733c96cee6c47a7a35b14dbeec0a73d4491dba8ba1",
+     "shaB": "6bd8bf1b8189f14deee493b0e2502331fc14e7423b6a00ae6500d11b7447eb5d",
+     "composite": "composites/candidate-high--nadir-forest.jpg",
+     "compositeSha256": "edb6c6f041aaa1be94ec1725d9cf879165a57bc1ae3d4b63b0c4684a0cf4f92c",
+     "repetition": {
+      "a": {
+       "ecotone 103 m (lag 223 px)": -0.1036,
+       "patch 288 m (lag 624 px)": -0.0132,
+       "meso 373 m (lag 808 px)": -0.0116,
+       "control 240 m (lag 520 px)": -0.0006
+      },
+      "b": {
+       "ecotone 103 m (lag 223 px)": -0.1045,
+       "patch 288 m (lag 624 px)": 0.0341,
+       "meso 373 m (lag 808 px)": 0.0146,
+       "control 240 m (lag 520 px)": -0.016
+      }
+     }
+    },
+    "nadir-meadow": {
+     "maxDelta": 38,
+     "meanDelta": 3.267,
+     "fractionOver16": 8e-05,
+     "meanColourShift": 0.182,
+     "lumStdRatio": 0.9889,
+     "histL1": 0.0488,
+     "toneDelta16": 2.018,
+     "shaA": "cf8f05298106ee0bb45468730930094b9e7205fb1437fa9aa56187d403b67b01",
+     "shaB": "d1338debefe1defc4b98457339d409b356e6fec16f7191cf488b450b20f1a328",
+     "composite": "composites/candidate-high--nadir-meadow.jpg",
+     "compositeSha256": "b678c3f70b9dd3c55a1dc712c954a2ef46fc310b9458e7cd848d789617186e2b",
+     "repetition": {
+      "a": {
+       "ecotone 103 m (lag 223 px)": -0.0156,
+       "patch 192 m (lag 416 px)": -0.012,
+       "control 240 m (lag 520 px)": 0.0242,
+       "control 330 m (lag 714 px)": 0.0212
+      },
+      "b": {
+       "ecotone 103 m (lag 223 px)": 0.0044,
+       "patch 192 m (lag 416 px)": -0.0199,
+       "control 240 m (lag 520 px)": 0.0127,
+       "control 330 m (lag 714 px)": -0.0046
+      }
+     }
+    }
+   }
+  },
+  "candidate-mobile": {
+   "a": "base-mobile",
+   "b": "cand-mobile-baked",
+   "worst": {
+    "maxDelta": 94,
+    "fractionOver16": 0.0051,
+    "meanColourShift": 1.488,
+    "histL1": 0.0852,
+    "toneDelta16": 1.881,
+    "lumStdRatioRange": [
+     0.9957,
+     1.0084
+    ]
+   },
+   "views": {
+    "m01-walk": {
+     "maxDelta": 41,
+     "meanDelta": 2.383,
+     "fractionOver16": 0.0005,
+     "meanColourShift": 1.488,
+     "lumStdRatio": 0.9957,
+     "histL1": 0.0852,
+     "toneDelta16": 1.733,
+     "shaA": "6c10f21463539102811cb81d5b310530c4f50bb7fa382802ecf9dbf18e58865c",
+     "shaB": "4080aaaaa3c59465501f6e39b73654eb6b00b1a5447923ac77df0edd21108ba7",
+     "composite": "composites/candidate-mobile--m01-walk.jpg",
+     "compositeSha256": "9fa945009db390eaca2b628fc171fcd341f53edf7641c6c5e67b6a58d5974be9"
+    },
+    "m01-elevated": {
+     "maxDelta": 43,
+     "meanDelta": 2.324,
+     "fractionOver16": 0.00019,
+     "meanColourShift": 0.113,
+     "lumStdRatio": 1.0005,
+     "histL1": 0.0706,
+     "toneDelta16": 1.679,
+     "shaA": "2cf1a208676b9ce9e24777ca81e5f8387c1adfdc23c0d99c3fff91d44a7fbba0",
+     "shaB": "c44ed8d24388b4d2050b254d930f690484d90c1279df22688ebf96a2584ce5e4",
+     "composite": "composites/candidate-mobile--m01-elevated.jpg",
+     "compositeSha256": "699eb285fc6ca07b24f2e843eac39531c1e330cebdfc9050bf07d5aa2586578b"
+    },
+    "m02-walk": {
+     "maxDelta": 49,
+     "meanDelta": 0.443,
+     "fractionOver16": 0.0051,
+     "meanColourShift": 0.017,
+     "lumStdRatio": 1.0,
+     "histL1": 0.0039,
+     "toneDelta16": 0.199,
+     "shaA": "f678cd578bcdd67642fe2c8c3bb7d3f5043d2b9d425c63cbb699c1a9e81ebb45",
+     "shaB": "f22d869d55ad031533ac44a207c92638967dcb3555062c7bd96331824247956f",
+     "composite": "composites/candidate-mobile--m02-walk.jpg",
+     "compositeSha256": "1497cc1a3dfb284b136dc9c7edf4ad61edebce52a55a319f835bc5cf3e7e5e99"
+    },
+    "m02-elevated": {
+     "maxDelta": 49,
+     "meanDelta": 0.208,
+     "fractionOver16": 0.0023,
+     "meanColourShift": 0.037,
+     "lumStdRatio": 1.0084,
+     "histL1": 0.0045,
+     "toneDelta16": 0.096,
+     "shaA": "1a8a8d202a2990f27dd3556851f85d056ebe2d642b01a01e57d08fdb967adbe6",
+     "shaB": "fc6cedccb6f6e642f193f9b9ab2a01a200e12293d663d2c257d102ae51ae2999",
+     "composite": "composites/candidate-mobile--m02-elevated.jpg",
+     "compositeSha256": "79b72a2a58af135ae2a2357c2a7059505c99435240a3fe63df0fe4d7229fc43c"
+    },
+    "tr-forest-meadow": {
+     "maxDelta": 48,
+     "meanDelta": 0.951,
+     "fractionOver16": 0.00173,
+     "meanColourShift": 0.251,
+     "lumStdRatio": 0.9972,
+     "histL1": 0.0106,
+     "toneDelta16": 0.555,
+     "shaA": "9e36127270004602a6ebf00265193eda581db3689eb627a3df4cb29605b6efb8",
+     "shaB": "b67317de8fb0393fb90adbbd61c0bebccaefac59af4aee307dcd65204e419274",
+     "composite": "composites/candidate-mobile--tr-forest-meadow.jpg",
+     "compositeSha256": "b9f982d5d27da65ef71a3b5671a3074a7ffa19b63b3308e1e3db893cb16ba2eb"
+    },
+    "birchwood-overview": {
+     "maxDelta": 94,
+     "meanDelta": 1.561,
+     "fractionOver16": 0.00258,
+     "meanColourShift": 0.054,
+     "lumStdRatio": 1.0003,
+     "histL1": 0.0096,
+     "toneDelta16": 0.866,
+     "shaA": "e1edadef0614782671aa743d90a1d52938ee4d017ba4be4c699cdc12893b0653",
+     "shaB": "e6f39c821d18f49e8ff9020407720f403b3bb645ecf2c9e1925ee06e7beb3336",
+     "composite": "composites/candidate-mobile--birchwood-overview.jpg",
+     "compositeSha256": "a79144f681edf6a1ea5e770d1edee2d06caf47a53bea9c59c74063420fabaaad"
+    },
+    "valley-walk": {
+     "maxDelta": 45,
+     "meanDelta": 0.281,
+     "fractionOver16": 0.00244,
+     "meanColourShift": 0.033,
+     "lumStdRatio": 0.9998,
+     "histL1": 0.0051,
+     "toneDelta16": 0.148,
+     "shaA": "c750d50d53c3d7267c58a0a6c4721ba94422a6a01d9c63d7ff16ba0537efb635",
+     "shaB": "b2a1523d99061acf337661b3a5d50e2fb1b0bd0345ad3bee6607fc0b5d028f8e",
+     "composite": "composites/candidate-mobile--valley-walk.jpg",
+     "compositeSha256": "037a7799513121f6eb929cdbc7fc3cba02bb20b15bce4a21d1cde9d97a566f13"
+    },
+    "m04-walk": {
+     "maxDelta": 10,
+     "meanDelta": 0.018,
+     "fractionOver16": 0.0,
+     "meanColourShift": 0.016,
+     "lumStdRatio": 1.0001,
+     "histL1": 0.0014,
+     "toneDelta16": 0.015,
+     "shaA": "d85ab9ccc7404562af63ce7c0c04ccad88bcb2780ce101205483bbc193190319",
+     "shaB": "ba36592958013ca34e465c6465c46f04c49e6e659eec64ee5dcf405082d0ae45",
+     "composite": "composites/candidate-mobile--m04-walk.jpg",
+     "compositeSha256": "3be764caad2665b17e3d8306feb73db7b59acbe08f357c84425eb5ac67331ce8"
+    },
+    "nadir-forest": {
+     "maxDelta": 36,
+     "meanDelta": 2.839,
+     "fractionOver16": 3e-05,
+     "meanColourShift": 0.385,
+     "lumStdRatio": 1.001,
+     "histL1": 0.0372,
+     "toneDelta16": 1.881,
+     "shaA": "227546aeaf3b206b9b13ff18e30669fbfa050625aa81a81c927fb245e0340fed",
+     "shaB": "7b62bbbca0f2dc7892c21c18822fdca32959149e243f9a6bc773f7f6b47763be",
+     "composite": "composites/candidate-mobile--nadir-forest.jpg",
+     "compositeSha256": "23e9419bbdc76035904363d49d55e9631e9f28fee66e47e59d7545ec17eaec04",
+     "repetition": {
+      "a": {
+       "ecotone 103 m (lag 223 px)": -0.1341,
+       "patch 288 m (lag 624 px)": 0.0071,
+       "meso 373 m (lag 808 px)": -0.006,
+       "control 240 m (lag 520 px)": -0.007
+      },
+      "b": {
+       "ecotone 103 m (lag 223 px)": -0.1319,
+       "patch 288 m (lag 624 px)": 0.0025,
+       "meso 373 m (lag 808 px)": 0.0091,
+       "control 240 m (lag 520 px)": -0.002
+      }
+     }
+    },
+    "nadir-meadow": {
+     "maxDelta": 41,
+     "meanDelta": 0.021,
+     "fractionOver16": 0.0001,
+     "meanColourShift": 0.001,
+     "lumStdRatio": 1.0011,
+     "histL1": 0.0008,
+     "toneDelta16": 0.008,
+     "shaA": "68bf51031ddde8b85fed4771b0723e25874f1e3f37fb37e01a6a21782edc8e4e",
+     "shaB": "06b386da2892490f242588f2363d8e719f49b7920923fcbd79cc6fbde6f318f1",
+     "composite": "composites/candidate-mobile--nadir-meadow.jpg",
+     "compositeSha256": "12ce3ca2b40f491026a3ea6c54dec997021deed45cfa74107a6d93de95204def",
+     "repetition": {
+      "a": {
+       "ecotone 103 m (lag 223 px)": 0.0055,
+       "patch 192 m (lag 416 px)": 0.005,
+       "control 240 m (lag 520 px)": -0.0139,
+       "control 330 m (lag 714 px)": 0.0149
+      },
+      "b": {
+       "ecotone 103 m (lag 223 px)": 0.005,
+       "patch 192 m (lag 416 px)": 0.0027,
+       "control 240 m (lag 520 px)": -0.0131,
+       "control 330 m (lag 714 px)": 0.0173
+      }
+     }
+    }
+   }
+  }
+ }
+}
