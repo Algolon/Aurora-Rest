@@ -31,6 +31,28 @@ try{
     console.log('CAPTURED',file,snapshot.calls,'draws',snapshot.triangles,'triangles');
   }
   const views=['home-shore','home-elevated','wind-shore','wind-elevated','tarn-shore','tarn-panorama'];
+  const finalReview=process.argv.includes('--final');
+  if(finalReview){
+    const available=await page.evaluate(()=>window.__auroraWTR01.views.map(v=>v.id));
+    for(const view of views){
+      for(const [quality,study] of [
+        ['baseline','original'],['low','final'],['medium','final'],
+        ['high','original'],['high','final']
+      ])await capture(view,quality,study,0,'B');
+    }
+    for(const view of ['home-elevated','wind-elevated','tarn-panorama']){
+      await capture(view,'high','original',0,'A');
+      await capture(view,'high','final',0,'A');
+    }
+    for(const view of ['home-shore','wind-shore','tarn-shore']){
+      for(const t of [1.5,3])await capture(view,'high','final',t,'B');
+    }
+    if(available.includes('home-water-walk')){
+      await capture('home-water-walk','high','original');
+      await capture('home-water-walk','high','final');
+    }
+  }else{
+
   for(const study of ['original','A','B','C']){
     for(const view of views)await capture(view,'high',study);
     for(const view of ['wind-elevated','tarn-panorama'])await capture(view,'medium',study);
@@ -40,8 +62,9 @@ try{
       for(const t of [1.5,3])await capture(view,'high',study,t);
     }
   }
+  }
   // Actual GPU scene A/B with and without water; never infer visibility from a PNG.
-  for(const study of ['original','A','B','C']){
+  for(const study of (finalReview?['original','final']:['original','A','B','C'])){
     for(const view of ['home-elevated','wind-shore','tarn-panorama']){
       const value=await page.evaluate(v=>{
         const a=window.__auroraWTR01;a.setView(v.view);a.setMode('high');a.setStudy(v.study);a.setTime(0);
@@ -56,10 +79,10 @@ try{
     provenance:'Actual unretouched Three.js/Chromium WebGL at WTR-01A1 art branch',
     baseline:'90037110189f5a51d2f4fdad5790b84a05df36fd',
     browser:browser.version(),viewport:[1600,900],
-    note:'original is unchanged WTR-01R shader path; A/B/C are independent candidate branches. Software renderer, NOT device FPS.',
-    frames,visibility,errors,warnings
+    note:finalReview?'WTR-01A selected final C filtering + calibrated regional shader against untouched WTR-01R original, no device FPS.':'original is unchanged WTR-01R shader path; A/B/C are independent candidate variants. Software renderer, NOT device FPS.',
+    phase:finalReview?'A2/A3 matched final look':'A1 isolated wave studies',frames,visibility,errors,warnings
   },null,2)+'\n');
-  console.log('STUDY PASS:',frames.length,'genuine frames; water visibility',visibility.length);
+  console.log(finalReview?'FINAL REVIEW PASS:':'STUDY PASS:',frames.length,'genuine frames; water visibility',visibility.length);
 }catch(e){
   process.exitCode=1;console.error('STUDY FAILED:',e);
   await writeFile(folder+'/failure.json',JSON.stringify({error:String(e),stack:e.stack,errors,warnings,completed:frames.map(x=>x.file)},null,2));
