@@ -1,0 +1,33 @@
+name: ROCK-R01-G01R authored-panel reconstruction / genuine WebGL / ART REVIEW PENDING
+on:
+  push:
+    branches: [art/rock-r01-g01r-sculptural-reconstruction]
+  workflow_dispatch:
+jobs:
+  sculptural-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Protect F01, R04, A2, vegetation, original G01 tests and island sources
+        run: |
+          git diff --exit-code c40b6a68f8860a42e826b8b953f327d27e621247 HEAD -- src art rocks/f01 rocks/e2r-showroom.ts rocks/r01/geometry.ts tests/rock-r01-g01.test.ts ../../src
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.r01.config.ts
+      - name: Genuine Three.js/WebGL G1 comparison, neutral and T1 renders
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-r01.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rock-r01-g01r-authored-panels-real-webgl
+          path: asset-lab/birch/r01-g01-evidence/
+          if-no-files-found: warn
+# No deployment. No G01 original branch writes. Only owner can approve art.

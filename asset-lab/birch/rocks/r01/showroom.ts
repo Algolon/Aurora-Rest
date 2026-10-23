@@ -1,4 +1,4 @@
-/** ROCK-R01-G01 genuine WebGL showroom. R01 is ART UNAPPROVED. */
+/** ROCK-R01-G01R genuine WebGL showroom. R01 is ART UNAPPROVED. */
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {createR01Geometry} from './geometry.ts';
@@ -19,7 +19,7 @@ const style=document.createElement('style');
 style.textContent='body{margin:0;overflow:hidden;font:13px system-ui;background:#c7d0d6}canvas{display:block}aside{position:absolute;top:14px;left:14px;z-index:2;background:#14232be9;color:#fff;padding:13px;border-radius:10px;max-width:300px;box-shadow:0 8px 22px #152d3c55}label{display:block;margin-top:8px}select{display:block;width:100%;padding:4px;margin-top:4px}small{color:#bed0d8}#legend{position:absolute;bottom:14px;right:16px;z-index:1;color:white;background:#15232bd9;padding:10px;border-radius:7px}';
 document.head.appendChild(style);
 const panel=document.createElement('aside');
-panel.innerHTML='<b>AURORA REST · ROCK-R01-G01</b><p><small>The Sheltered Fault · geometry study · ART UNAPPROVED</small></p>'
+panel.innerHTML='<b>AURORA REST · ROCK-R01-G01R</b><p><small>The Sheltered Fault · geometry study · ART UNAPPROVED</small></p>'
 +'<label>Scene<select id="mode"><option value="single">R01 isolated</option><option value="comparison">G1 vs R01</option><option value="context">R01 + Aurora nature</option></select></label>'
 +'<label>Surface<select id="surface"><option value="neutral">Neutral clay</option><option value="T1">Existing A2 T1 Nordic Granite</option></select></label>'
 +'<label>Camera<select id="view"><option value="frontThreeQuarter">Front three-quarter</option><option value="front">Front</option><option value="rear">Rear</option><option value="left">Left</option><option value="right">Right</option><option value="rearThreeQuarter">Rear three-quarter</option><option value="top">Top</option><option value="human">Human height</option></select></label>'
@@ -92,7 +92,7 @@ function apply(c:Partial<Config>={}):ReturnType<typeof inspect>{
  hemi.intensity=current.lighting==='grazing'?1.2:1.65;
  scene.background=new THREE.Color(current.lighting==='neutral'?'#d2d5d6':'#bccdd7');
  floorMaterial.color.set(current.lighting==='neutral'?'#8e9699':'#829787');
- legend.textContent=current.mode==='comparison'?'LEFT: original R04/G1  ·  RIGHT: new R01 (same scene and scale)':
+ legend.textContent=current.mode==='comparison'?'LEFT: original R04/G1  ·  RIGHT: reconstructed R01 (same scene and scale)':
   current.mode==='context'?'R01 in existing approved Aurora birch, Scots pine and grass context':
   'The Sheltered Fault · unapproved sculptural geometry';
  preset();renderer.render(scene,camera);return inspect();
