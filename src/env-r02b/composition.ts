@@ -54,7 +54,8 @@ export class WoodlandCompositionSink implements ChunkSink{
   readonly originals=new Map<string,ChunkPopulation>();
   private rendered=new Map<string,ChunkPopulation>();
   enabled=false;
-  constructor(private sink:ChunkSink,readonly forestX:number,readonly forestZ:number){}
+  private sink:ChunkSink;readonly forestX:number;readonly forestZ:number;
+  constructor(sink:ChunkSink,forestX:number,forestZ:number){this.sink=sink;this.forestX=forestX;this.forestZ=forestZ;}
   attach(p:ChunkPopulation){if(this.originals.has(p.key))throw Error('Duplicate composition chunk '+p.key);
     const c=composeChunk(p,this.enabled,this.forestX,this.forestZ);
     this.sink.attach(c.chunk);this.originals.set(p.key,p);this.rendered.set(p.key,c.chunk);
