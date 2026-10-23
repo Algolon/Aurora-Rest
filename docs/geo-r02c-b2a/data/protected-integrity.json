@@ -1,0 +1,50 @@
+{
+ "base": "679958e6b29d7739c4b0b37809e0c11101a264c4",
+ "head": "679958e6b29d7739c4b0b37809e0c11101a264c4",
+ "changedTrackedFiles": [
+  "M\tsrc/geo-r02b/main.ts",
+  "M\tsrc/geo-r02c-a1a/variants.ts"
+ ],
+ "declaredAdditiveEdits": {
+  "src/geo-r02b/main.ts": "imports and registers the B2a review cameras (?cams=b2a)",
+  "src/geo-r02c-a1a/variants.ts": "accepts the b2a variant family and routes that are added (adds: true) rather than replaced"
+ },
+ "unexpectedChanges": [],
+ "untrackedOutsideB2a": [],
+ "keyFilesGitBlob": {
+  "public/geo-r02b/terrain.f32": {
+   "base": "fc929b08e7dff10b052c074f85682ae0ed672480",
+   "worktree": "fc929b08e7dff10b052c074f85682ae0ed672480"
+  },
+  "public/geo-r02b/water-surface.f32": {
+   "base": "1fc6d65cea35bf12903cf62003a35bc85537a872",
+   "worktree": "1fc6d65cea35bf12903cf62003a35bc85537a872"
+  },
+  "public/geo-r02b/features.json": {
+   "base": "6e91c4090f7453f17144d1694b9805bc5205e7f2",
+   "worktree": "6e91c4090f7453f17144d1694b9805bc5205e7f2"
+  },
+  "docs/geo-r02b/design-master-A-R1-v1.json": {
+   "base": "7a28fd433ffac95f3f91f38c6406d467a930bf6b",
+   "worktree": "7a28fd433ffac95f3f91f38c6406d467a930bf6b"
+  },
+  "tools/geo-r02c-b01/design/north-massif-b1.json": {
+   "base": "7431c5d87feca82d65f91ba91df43fcad0817a23",
+   "worktree": "7431c5d87feca82d65f91ba91df43fcad0817a23"
+  },
+  "public/geo-r02c-b01/b1.patch.f32": {
+   "base": "98383b56b917f0a832a2dfdb0eb7d72b18fe184f",
+   "worktree": "98383b56b917f0a832a2dfdb0eb7d72b18fe184f"
+  },
+  "public/geo-r02c-b01/manifest.json": {
+   "base": "c18a404e2b595589ae57c2dfab3f907599be0f48",
+   "worktree": "c18a404e2b595589ae57c2dfab3f907599be0f48"
+  },
+  "public/geo-r02c-b01/routes.json": {
+   "base": "945ff40e56100600fea40048aba9d906706b8b4d",
+   "worktree": "945ff40e56100600fea40048aba9d906706b8b4d"
+  }
+ },
+ "keyFilesIdentical": true,
+ "pass": true
+}

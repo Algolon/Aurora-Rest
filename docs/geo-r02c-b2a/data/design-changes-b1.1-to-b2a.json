@@ -1,0 +1,328 @@
+[
+ {
+  "path": "designId",
+  "b1.1": "north-massif-b1",
+  "b2a": "north-massif-b2a"
+ },
+ {
+  "path": "outlets",
+  "b1.1": null,
+  "b2a": [
+   {
+    "id": "O1",
+    "name": "Tarn-rim hollow outlet",
+    "nearXZ": [
+     187,
+     2311
+    ],
+    "widthM": 14,
+    "bedHalfWidthM": 2,
+    "sideSlope": 0.7,
+    "bedGrade": 0.04,
+    "dropM": 1.5,
+    "searchRadiusCells": 120,
+    "note": "D4: the 0.39 ha conditioned hollow between the south-east arm and the High Tarn rim gets a natural outlet (no new tarn)."
+   }
+  ]
+ },
+ {
+  "path": "parentB11",
+  "b1.1": null,
+  "b2a": {
+   "file": "tools/geo-r02c-b01/design/north-massif-b1.json",
+   "sha256": "b2a36745c527ff36577bd2fee5946d4490b805b39fcd34f7a46d888271126db4",
+   "terrainSha256": "86e89c1e955ef44b252111d87cfce1194eae55efac479bb1a3b069966ce7323d",
+   "checkpoint": "679958e6b29d7739c4b0b37809e0c11101a264c4"
+  }
+ },
+ {
+  "path": "revision",
+  "b1.1": "B1.1",
+  "b2a": "B2a.1"
+ },
+ {
+  "path": "revisionNote",
+  "b1.1": "B1.1 = the one corrective iteration after the first Three.js review of B1.0: broader face structure (weaker, longer rib field, more smoothing), flank variation along every ridge, clearer summit hierarchy (Tarntind 768, Vesttind 724, Skar notch 690, Western Col opened), wider windward-gully feather.",
+  "b2a": "B2a.1 = the one bounded corrective pass: the first B2a build (B2a.0) passed the seam limit but lowered the west arm beyond Vesttind by about 80 m (21 px on the Birchwood skyline) because the 520 m arm-west terminal reached inland past the protected Vesttind radius. The arm-west terminal is shortened to 380 m."
+ },
+ {
+  "path": "ridges[arm-west].knots",
+  "b1.1": [
+   [
+    -520,
+    2770,
+    892
+   ],
+   [
+    -600,
+    2738,
+    866
+   ],
+   [
+    -690,
+    2706,
+    758
+   ],
+   [
+    -770,
+    2690,
+    668
+   ],
+   [
+    -880,
+    2672,
+    694
+   ],
+   [
+    -1010,
+    2655,
+    724
+   ],
+   [
+    -1120,
+    2682,
+    648
+   ],
+   [
+    -1220,
+    2716,
+    520
+   ],
+   [
+    -1323,
+    2741,
+    400
+   ],
+   [
+    -1417,
+    2696,
+    325
+   ],
+   [
+    -1497,
+    2625,
+    260
+   ]
+  ],
+  "b2a": [
+   [
+    -520,
+    2770,
+    892
+   ],
+   [
+    -600,
+    2738,
+    866
+   ],
+   [
+    -690,
+    2706,
+    758
+   ],
+   [
+    -770,
+    2690,
+    676
+   ],
+   [
+    -880,
+    2672,
+    694
+   ],
+   [
+    -1010,
+    2655,
+    724
+   ],
+   [
+    -1120,
+    2682,
+    648
+   ],
+   [
+    -1220,
+    2716,
+    520
+   ],
+   [
+    -1323,
+    2741,
+    400
+   ],
+   [
+    -1417,
+    2696,
+    325
+   ],
+   [
+    -1497,
+    2625,
+    260
+   ]
+  ]
+ },
+ {
+  "path": "ridges[arm-southeast].startCap",
+  "b1.1": null,
+  "b2a": {
+   "taperM": 30,
+   "grade": 1.6,
+   "note": "D2: B1.1 applied no end caps in its flank-variation branch, so this arm continued as a radial cone behind the summit and filled the Western Col (726 m at N1). The cap now ends it 30 m behind the summit."
+  }
+ },
+ {
+  "path": "ridges[fjell-southwest].knots",
+  "b1.1": [
+   [
+    -900,
+    2615,
+    648
+   ],
+   [
+    -878,
+    2520,
+    640
+   ],
+   [
+    -890,
+    2380,
+    600
+   ],
+   [
+    -910,
+    2250,
+    566
+   ],
+   [
+    -955,
+    2110,
+    470
+   ],
+   [
+    -1028,
+    1950,
+    376
+   ],
+   [
+    -1126,
+    1796,
+    297
+   ],
+   [
+    -1237,
+    1662,
+    224
+   ]
+  ],
+  "b2a": [
+   [
+    -935,
+    2580,
+    640
+   ],
+   [
+    -878,
+    2520,
+    640
+   ],
+   [
+    -890,
+    2380,
+    600
+   ],
+   [
+    -910,
+    2250,
+    566
+   ],
+   [
+    -955,
+    2110,
+    470
+   ],
+   [
+    -1028,
+    1950,
+    376
+   ],
+   [
+    -1126,
+    1796,
+    297
+   ],
+   [
+    -1237,
+    1662,
+    224
+   ]
+  ]
+ },
+ {
+  "path": "route",
+  "b1.1": "The R1 peak-ascent is kept unchanged as reference (peak-ascent-r1 in the viewer). The candidate alignment follows R1 to where it enters the edited terrain, then is regenerated on the B1 surface by a grade-constrained search: it climbs the windward Vestfjell plateau, crosses towards the Western Col, and reaches the summit by switchbacks on the south-west shoulder. The target hiking grade is 0.30; a declared summit scramble covers the last 140 m to the top.",
+  "b2a": {
+   "text": "B2a: the R1 peak-ascent is followed to where it enters the edited terrain, then a grade- and cross-slope-limited search reaches the Vestfjell shoulder viewpoint (primary hiking approach, hiking grade <= 0.30). From the viewpoint an explicitly optional summit scramble (grade <= 0.50) reaches North Peak. Steep traverses get a modelled trail bench.",
+   "viewpointXZ": [
+    -636,
+    2680
+   ],
+   "viewpointName": "Vestfjell shoulder viewpoint",
+   "summitXZ": [
+    -520,
+    2772
+   ],
+   "bench": {
+    "benchWhereCrossSlope": 0.35,
+    "treadHalfWidthM": 2.5,
+    "cutFillM": 5.0,
+    "treadSmoothM": 2,
+    "rampInSkipM": 10,
+    "rampInM": 20
+   },
+   "viewpointNote": "The viewpoint is the highest node on the south-west shoulder reachable within the primary limits (grade <= 0.30 on rendered triangle edges, side-slope <= 0.9, no cell steeper than 1.25), searched within 200 m of (-636, 2680). It is chosen deterministically by the build.",
+   "viewpointSearchM": 200
+  }
+ },
+ {
+  "path": "saddles[N1].levelM",
+  "b1.1": 668,
+  "b2a": 680
+ },
+ {
+  "path": "saddles[N1].note",
+  "b1.1": null,
+  "b2a": "D2 reconciliation: B1.1 authored N1 668 m with Vesttind 724 m (56 m prominence). Vesttind came out 735.8 m and is kept (summit hierarchy is protected), so the prominence intent (about 56 m) sets the col to about 680 m. 668 m would make Vesttind 68 m prominent, over-separating the west arm."
+ },
+ {
+  "path": "status",
+  "b1.1": "experimental derived design master for the GEO-R02C-B0/B1 candidate; supersedes the A-R1 North massif ridges inside the study area only; not approved",
+  "b2a": "experimental B2a candidate design derived from the protected B1.1 design; corrects defects D1-D4 only; not approved"
+ },
+ {
+  "path": "terminals",
+  "b1.1": null,
+  "b2a": {
+   "note": "D1 authored terminal profiles: (authored - R1) decays to 0 by smoothstep between the coast freeze (70 m) and the terminal length L, blended between nearby structures; separately before the protected windward-gully corridor.",
+   "coastTerminalM": {
+    "default": 380,
+    "arm-west": 380,
+    "b-vesttind-north": 480,
+    "arm-north": 450,
+    "C-N": 520,
+    "C-NW": 440
+   },
+   "defaultInfluenceM": 400,
+   "corridorBufferM": 40,
+   "corridorTerminalM": 320,
+   "protectSummits": [
+    "S1",
+    "S3"
+   ],
+   "summitProtectM": [
+    90,
+    120
+   ]
+  }
+ }
+]

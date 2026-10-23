@@ -1,0 +1,90 @@
+{
+ "method": "GEO-R02C-B2a skyline regression against the protected B1.1 baseline (MEASURED, terrain ray cast, eye 1.75 m, 60\u00b0 vertical FOV over 800 px).",
+ "tolerancePx": 1.0,
+ "summitTolerancePx": 0.25,
+ "allowedWindows": [
+  {
+   "id": "D2-western-col",
+   "xz": [
+    [
+     -1060,
+     2460
+    ],
+    [
+     -1060,
+     2760
+    ],
+    [
+     -640,
+     2760
+    ],
+    [
+     -640,
+     2460
+    ]
+   ],
+   "why": "D2 directly affects the S0-S1 crest from 120 m west of the summit to the Vestfjell plateau start: the south-east arm start cap removes the B1.1 spill-over cone behind the summit, the col is opened and the plateau start moved. North Peak itself (x > -640) stays guarded."
+  },
+  {
+   "id": "D1-west-arm-terminal",
+   "xz": [
+    [
+     -1750,
+     2500
+    ],
+    [
+     -1750,
+     2850
+    ],
+    [
+     -1100,
+     2850
+    ],
+    [
+     -1100,
+     2500
+    ]
+   ],
+   "why": "D1 directly affects the west arm beyond the protected 90 m core of Vesttind (the terminal taper fades in between 90 and 210 m): this is the artificially high arm end that formed the 2.08 ha coastal seam, and its terminal profile now descends to the R1 coast. Vesttind itself stays guarded."
+  }
+ ],
+ "views": {
+  "birchwood": {
+   "maxShiftOutsideAllowedPx": 0.51,
+   "meanShiftOutsideAllowedPx": 0.012,
+   "maxShiftPerAllowedWindowPx": {
+    "D2-western-col": 2.89,
+    "D1-west-arm-terminal": 16.41
+   },
+   "maxShiftInsideAllowedPx": 16.41,
+   "allowedWidthDeg": 13.45,
+   "summitShiftPx": 0.0,
+   "pass": true
+  },
+  "valley-shoulder": {
+   "maxShiftOutsideAllowedPx": 0.23,
+   "meanShiftOutsideAllowedPx": 0.005,
+   "maxShiftPerAllowedWindowPx": {
+    "D2-western-col": 2.09,
+    "D1-west-arm-terminal": 0.0
+   },
+   "maxShiftInsideAllowedPx": 2.09,
+   "allowedWidthDeg": 8.0,
+   "summitShiftPx": 0.0,
+   "pass": true
+  },
+  "tarn-overlook": {
+   "maxShiftOutsideAllowedPx": 0.0,
+   "meanShiftOutsideAllowedPx": 0.0,
+   "maxShiftPerAllowedWindowPx": {
+    "D2-western-col": 0.0,
+    "D1-west-arm-terminal": 0.0
+   },
+   "maxShiftInsideAllowedPx": 0.0,
+   "allowedWidthDeg": 0.0,
+   "summitShiftPx": 0.0,
+   "pass": true
+  }
+ },
+ "pass": true
+}

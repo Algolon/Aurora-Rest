@@ -1,0 +1,46 @@
+{
+ "branch": "feature/geo-r02c-b2a-geographic-integration",
+ "base": "679958e6b29d7739c4b0b37809e0c11101a264c4",
+ "terrainSha256": "a2476daa86a3b4291d20a13b89359446eb19a923d62621102daac147dc2a3332",
+ "referenceTerrainSha256B11": "86e89c1e955ef44b252111d87cfce1194eae55efac479bb1a3b069966ce7323d",
+ "deterministic": true,
+ "deterministicRuns": 2,
+ "tests": "npm test: 66/66 pass (58 existing tests unmodified + 8 new in tests/geo-r02c-b2a.test.ts)",
+ "testsPass": true,
+ "build": "npm run build: passes (chunk-size warning only, pre-existing)",
+ "buildPass": true,
+ "protectedUnchanged": true,
+ "iterations": [
+  {
+   "id": "B2a.0",
+   "what": "first coherent B2a build (D1-D4)",
+   "result": "geographic gates pass; skyline regression fails: Birchwood west arm -21 px from the arm-west 520 m terminal"
+  },
+  {
+   "id": "B2a.1",
+   "what": "the one bounded corrective pass: arm-west terminal 520 -> 380 m; D1 window declared beyond Vesttind's protected core",
+   "result": "skyline regression passes (D1 window 16.4 px, outside windows <= 0.51 px)"
+  },
+  {
+   "id": "B2a.1 implementation fix",
+   "what": "D4 outlet carved along the smoothed path polyline instead of the 8-connected grid staircase (comb of notches); no design parameter changed",
+   "result": "terrain a2476daa...; all gates as B2a.1"
+  }
+ ],
+ "captures": "56 frames: 14 views x {B1.1, B2a} x {clayA, clayB}; every manifest frame carries the matching terrain SHA-256, no page errors",
+ "commands": [
+  "python3 tools/geo-r02c-b2a/build.py --repeat 2",
+  "python3 tools/geo-r02c-b2a/validate.py",
+  "python3 tools/geo-r02c-b2a/final_checks.py",
+  "python3 tools/geo-r02c-b2a/skyline_regression.py",
+  "python3 tools/geo-r02c-b2a/evidence.py",
+  "node tools/geo-r02c-b2a/capture.mjs ...",
+  "node tools/geo-r02c-b2a/traverse.mjs --url http://127.0.0.1:4351/geo-r02b.html",
+  "python3 tools/geo-r02c-b2a/compare.py",
+  "python3 tools/geo-r02c-b2a/protect_check.py",
+  "python3 tools/geo-r02c-b2a/checksums.py",
+  "python3 tools/geo-r02c-b2a/build_review.py",
+  "npm test",
+  "npm run build"
+ ]
+}

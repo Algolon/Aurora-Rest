@@ -1,0 +1,239 @@
+{
+ "recomposedInMemorySha256": "a2476daa86a3b4291d20a13b89359446eb19a923d62621102daac147dc2a3332",
+ "committedSha256": "a2476daa86a3b4291d20a13b89359446eb19a923d62621102daac147dc2a3332",
+ "recomposedEqualsCommitted": true,
+ "A_seams": {
+  "criterion": "blend-band cells where B1 is steeper than R1 + 0.5 and steeper than the core p99 (2.16); failure if any cluster > 0.25 ha",
+  "clusters": [
+   {
+    "xz": [
+     -1486,
+     2666
+    ],
+    "areaHa": 0.09,
+    "meanHeightAboveR1M": 43.3,
+    "maxHeightAboveR1M": 62.8,
+    "minHeightAboveR1M": 23.3,
+    "slopeB1Mean": 2.23,
+    "slopeR1Mean": 1.54,
+    "blendWeightMean": 0.89,
+    "coastDistanceMeanM": 198,
+    "nearestAuthoredStructure": "arm-west",
+    "nearestStructureDistanceM": 23,
+    "exceedsThreshold": false
+   }
+  ],
+  "failingClusters": 0,
+  "totalAddedSteepHa": 0.16,
+  "b11Cause": "Two mechanisms. (1) Too high: the west arm (nw-cape end) and the Vesttind north buttress are still 50-66 m above R1 (locally up to 140 m) where the blend weight falls to 0 at the frozen coast band (coastFreezeM 70 m, coastFeatherM 160 m), so the difference is absorbed in a ~160 m strip and the slope doubles (about 2.5 against R1 1.3-1.6). (2) Too low: at the north-arm headland the carved north cirque and its trough end up to 190 m below R1 just inside the coast feather, so B1 steps up into the frozen R1 cliff. A smaller cluster lies beside the protected windward-gully corridor, where the fjell flank meets the corridor fade.",
+  "b11VisibleConsequence": "Short, over-steep steps where the west arm and the Vesttind north buttress meet the coast: an artificial sea cliff rather than an arm running down to the sea. A raised lip where the north cirque trough meets the frozen R1 cliff at the headland. A steep bank beside the windward gully. All four fail the declared 0.25 ha limit.",
+  "b2aCorrection": "Authored terminal profiles (D1): the authored difference to R1 decays to zero by smoothstep between the 70 m coast freeze and a per-structure terminal length (default 380 m, arm-west 380 m, b-vesttind-north 480 m, arm-north 450 m, C-N 520 m, C-NW 440 m; blended between structures by inverse-square distance), with S1 and S3 protected from the taper; a separate 320 m terminal taper before the windward-gully corridor. Same seam criterion, same 0.25 ha limit."
+ },
+ "B_westernCol": {
+  "authoredLevelM": 680,
+  "b1LevelAtAuthoredPointM": 692.5,
+  "lowestPointOnArmCrestS0toS1": {
+   "xz": [
+    -810,
+    2683
+   ],
+   "levelM": 681.4
+  },
+  "vesttindB1M": 735.8,
+  "vesttindAuthoredM": 724,
+  "vesttindProminenceAboveColM": 54.4,
+  "authoredProminenceM": 44,
+  "structuresAtColPoint(height of each authored part at N1)": {
+   "arm-north": 687.8,
+   "arm-west": 674.4,
+   "b-peak-southwest": 661.1,
+   "fjell-southwest": 620.3
+  },
+  "r1LevelAtColM": 688.5,
+  "drainageEitherSide": {
+   "north (30 m)": 2,
+   "south (30 m)": 2,
+   "codes": "1 High Tarn, 2 sea, 3 other"
+  },
+  "candidateRouteDistanceToColM": 134.4,
+  "b11Cause": "At the authored col point the highest authored part is not the west arm (666 m, as designed) but the south-east arm (726 m): that arm starts at the summit, and because the flank-variation branch of ridge_height applied no end caps, the arm continued past its start as a radial cone that still stands 726 m high 250 m west of S0. The smooth-max union keeps it, so the col point is filled to about 729 m. The real low point of the S0-S1 crest moves 100 m west to the arm-west/plateau junction, where the Vestfjell plateau shoulder holds it at 695 m. Vesttind keeps 40 m of prominence instead of the authored 56 m.",
+  "b2aCorrection": "South-east arm start cap (30 m, then a 1.6 fall) ends the arm behind the summit; col knot 676 m (target col about 680 m, reconciling the 56 m prominence intent with the achieved Vesttind); Vestfjell plateau start moved to (-935, 2580). Vesttind is not changed; the North Peak apex is unchanged (within 0.1 m inside 25 m), but its west shoulder 25-100 m from the apex is up to 2.3 m lower where the B1.1 spill-over cone is removed."
+ },
+ "C_hydrology": {
+  "dryHollows": [],
+  "destinationChangeZones(>=0.5 ha)": [
+   {
+    "xz": [
+     176,
+     2579
+    ],
+    "areaHa": 13.34,
+    "from": 1,
+    "to": 3
+   },
+   {
+    "xz": [
+     -26,
+     2273
+    ],
+    "areaHa": 4.14,
+    "from": 2,
+    "to": 3
+   }
+  ],
+  "waterCellsWithChangedTerrain": 0,
+  "lakeAndRiverLevels": "unchanged: the water-surface raster is shared with R1 and no terrain under any water cell changed, so every lake level (High Tarn 360 m) and channel bed/water level is as in R1",
+  "classification": {
+   "acceptable authored change": "drainage reassignment inside the study area following the new cirques and troughs (the north-coast and central-trough catchments gain, High Tarn loses about 7 ha of its west slope)",
+   "defect": "none found for sinks or unresolved flow; one dry tarn-site hollow is a representation gap (no water-surface variant), not a drainage failure"
+  }
+ },
+ "D_route": {
+  "peak-ascent": {
+   "role": "primary hiking approach to the Vestfjell shoulder viewpoint",
+   "gradeLimit": 0.3,
+   "lengthM": 3017.5,
+   "newSectionLengthM": 1984,
+   "climbM": 493.6,
+   "endM": 708.6,
+   "hikingGrade10mHistogramM": {
+    "0.00-0.10": 611,
+    "0.10-0.20": 1233,
+    "0.20-0.25": 630,
+    "0.25-0.30": 534,
+    "0.30-0.35": 0,
+    "0.35-0.40": 0,
+    "0.40-0.50": 0,
+    "0.50-0.60": 0,
+    "0.60-1.00": 0
+   },
+   "sectionsOverLimit": [],
+   "overLimitM": 0,
+   "over030M": 0,
+   "hikingGrade10mMax": 0.296,
+   "p95": 0.277,
+   "crossSlopeNewSection": {
+    "0.75m": {
+     "p50": 0.152,
+     "p95": 0.342,
+     "max": 0.473,
+     "shareOver0.15": 0.503,
+     "shareOver0.5": 0.0,
+     "shareOver1.0": 0.0
+    },
+    "1.5m": {
+     "p50": 0.152,
+     "p95": 0.342,
+     "max": 0.473,
+     "shareOver0.15": 0.504,
+     "shareOver0.5": 0.0,
+     "shareOver1.0": 0.0
+    },
+    "2m": {
+     "p50": 0.152,
+     "p95": 0.342,
+     "max": 0.473,
+     "shareOver0.15": 0.504,
+     "shareOver0.5": 0.0,
+     "shareOver1.0": 0.0
+    },
+    "4m": {
+     "p50": 0.173,
+     "p95": 0.34,
+     "max": 0.439,
+     "shareOver0.15": 0.577,
+     "shareOver0.5": 0.0,
+     "shareOver1.0": 0.0
+    }
+   },
+   "usableTreadWidthM(cross-slope <= 0.5 both sides, sampled every 5 m)": {
+    "p10": 12.0,
+    "p50": 12.0,
+    "shareBelow2m": 0.013
+   }
+  },
+  "peak-scramble": {
+   "role": "optional alpine summit scramble (viewpoint to North Peak)",
+   "gradeLimit": 0.5,
+   "lengthM": 1222.6,
+   "newSectionLengthM": 1236,
+   "climbM": 188.4,
+   "endM": 897.0,
+   "hikingGrade10mHistogramM": {
+    "0.00-0.10": 126,
+    "0.10-0.20": 251,
+    "0.20-0.25": 152,
+    "0.25-0.30": 131,
+    "0.30-0.35": 121,
+    "0.35-0.40": 156,
+    "0.40-0.50": 268,
+    "0.50-0.60": 8,
+    "0.60-1.00": 0
+   },
+   "sectionsOverLimit": [
+    {
+     "fromS": 133,
+     "toS": 133,
+     "lengthM": 1,
+     "maxGrade": 0.514
+    },
+    {
+     "fromS": 1009,
+     "toS": 1012,
+     "lengthM": 4,
+     "maxGrade": 0.514
+    },
+    {
+     "fromS": 1210,
+     "toS": 1212,
+     "lengthM": 3,
+     "maxGrade": 0.516
+    }
+   ],
+   "overLimitM": 8,
+   "over030M": 553,
+   "hikingGrade10mMax": 0.516,
+   "p95": 0.471,
+   "crossSlopeNewSection": {
+    "0.75m": {
+     "p50": 0.816,
+     "p95": 1.082,
+     "max": 1.215,
+     "shareOver0.15": 0.892,
+     "shareOver0.5": 0.693,
+     "shareOver1.0": 0.143
+    },
+    "1.5m": {
+     "p50": 0.815,
+     "p95": 1.078,
+     "max": 1.21,
+     "shareOver0.15": 0.896,
+     "shareOver0.5": 0.688,
+     "shareOver1.0": 0.142
+    },
+    "2m": {
+     "p50": 0.815,
+     "p95": 1.076,
+     "max": 1.203,
+     "shareOver0.15": 0.899,
+     "shareOver0.5": 0.687,
+     "shareOver1.0": 0.142
+    },
+    "4m": {
+     "p50": 0.814,
+     "p95": 1.072,
+     "max": 1.194,
+     "shareOver0.15": 0.909,
+     "shareOver0.5": 0.684,
+     "shareOver1.0": 0.141
+    }
+   },
+   "usableTreadWidthM(cross-slope <= 0.5 both sides, sampled every 5 m)": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "shareBelow2m": 0.734
+   }
+  },
+  "note": "Terrain-level cross-slope at +-2 m and +-4 m is the B1.1 metric (unchanged). +-0.75 m and +-1.5 m measure the tread modelled by the B2a bench on the rendered surface. The 4 m heightfield represents the bench with grid nodes, so a 1-2 m tread is only approximated: at switchback interiors the bench is deliberately left out, and there the tread is the original terrain."
+ }
+}

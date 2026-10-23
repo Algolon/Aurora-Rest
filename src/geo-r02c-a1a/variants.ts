@@ -1,17 +1,18 @@
-/** GEO-R02C opt-in review terrain variants. A1a: ?terrain=a1a-m0|a1a-v1|a1a-v2|a1a-v3; A1b-alpha: ?terrain=a1b-m0|a1b-alpha; A1c: ?terrain=a1c-m0|a1c-s1; B01: ?terrain=b01-m0|b01-b1 (authored North massif candidate, may carry a route override).
+/** GEO-R02C opt-in review terrain variants. A1a: ?terrain=a1a-m0|a1a-v1|a1a-v2|a1a-v3; A1b-alpha: ?terrain=a1b-m0|a1b-alpha; A1c: ?terrain=a1c-m0|a1c-s1; B01: ?terrain=b01-m0|b01-b1 (authored North massif candidate, may carry a route override); B2a: ?terrain=b2a-m0|b2a-a (geographic integration of B1.1).
  * Without the parameter nothing is fetched and the canonical R1 heights are used unchanged. A variant is composed by copying
  * its exact float32 patch block into the R1 grid (no arithmetic), then the whole grid is hashed and compared with the
  * manifest's terrain SHA-256. */
-export interface VariantRoute {id:string;replaces?:string;points2:number[][]}
+export interface VariantRoute {id:string;replaces?:string;adds?:boolean;role?:string;targetMaxGrade?:number;points2:number[][]}
 export interface VariantInfo {id:string;family:VariantFamily;key:string;label:string;terrainSha256:string;expectedSha256:string;baselineSha256:string;verified:boolean;changedCells:number;routes?:VariantRoute[]}
 export interface VariantPatch {file:string;rows:[number,number];cols:[number,number];sha256:string;bytes:number}
 export interface VariantEntry {id:string;label:string;terrainSha256:string;changedCells:number;patch:VariantPatch|null;routes?:string|null}
-export type VariantFamily='a1a'|'a1b'|'a1c'|'b01';
+export type VariantFamily='a1a'|'a1b'|'a1c'|'b01'|'b2a';
 const FAMILIES:Record<VariantFamily,{pattern:RegExp;base:string}>={
  a1a:{pattern:/^a1a-(m0|v[1-3])$/,base:'/geo-r02c-a1a/'},
  a1b:{pattern:/^a1b-(m0|alpha)$/,base:'/geo-r02c-a1b/'},
  a1c:{pattern:/^a1c-(m0|s1)$/,base:'/geo-r02c-a1c/'},
- b01:{pattern:/^b01-(m0|b1)$/,base:'/geo-r02c-b01/'}
+ b01:{pattern:/^b01-(m0|b1)$/,base:'/geo-r02c-b01/'},
+ b2a:{pattern:/^b2a-(m0|a)$/,base:'/geo-r02c-b2a/'}
 };
 export function variantRef(search:string):{family:VariantFamily;id:string}|null{
  const v=new URLSearchParams(search).get('terrain');if(!v)return null;
@@ -44,6 +45,9 @@ export async function applyVariant(search:string,heights:Float32Array,width:numb
 }
 /** Replaces route alignments in place with a variant's realigned ones; each replaced R1 alignment is kept as '<id>-r1'. */
 export function applyVariantRoutes(routes:{id:string;points2:number[][]}[],overrides:VariantRoute[]){
- for(const o of overrides){const id=o.replaces??o.id,i=routes.findIndex(r=>r.id===id);if(i<0)throw new Error('Variant route replaces unknown route '+id);
+ for(const o of overrides){
+  // B2a: a variant may add a route of its own (e.g. an optional summit scramble); it must not collide with an existing id.
+  if(o.adds){if(routes.some(r=>r.id===o.id))throw new Error('Variant route adds an existing id '+o.id);routes.push({id:o.id,role:o.role??'variant route',widthM:0,targetMaxGrade:o.targetMaxGrade??0,points2:o.points2} as never);continue;}
+  const id=o.replaces??o.id,i=routes.findIndex(r=>r.id===id);if(i<0)throw new Error('Variant route replaces unknown route '+id);
   const old=routes[i];routes.splice(i,1,{...old,id,points2:o.points2},{...old,id:id+'-r1'});}
 }

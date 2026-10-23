@@ -1,0 +1,65 @@
+{
+ "method": "Band-independent cross-check of D1: area within 220 m of each B1.1 seam where slope exceeds R1 by > 0.5 (inside or outside the blend band).",
+ "seams": [
+  {
+   "seam": 1,
+   "xz": [
+    -1460,
+    2687
+   ],
+   "b11": {
+    "addedSlopeOver05Ha": 4.98,
+    "maxAddedSlope": 2.85
+   },
+   "b2a": {
+    "addedSlopeOver05Ha": 2.07,
+    "maxAddedSlope": 1.11
+   }
+  },
+  {
+   "seam": 2,
+   "xz": [
+    -997,
+    2953
+   ],
+   "b11": {
+    "addedSlopeOver05Ha": 3.41,
+    "maxAddedSlope": 1.67
+   },
+   "b2a": {
+    "addedSlopeOver05Ha": 1.43,
+    "maxAddedSlope": 1.13
+   }
+  },
+  {
+   "seam": 3,
+   "xz": [
+    -1117,
+    2093
+   ],
+   "b11": {
+    "addedSlopeOver05Ha": 2.46,
+    "maxAddedSlope": 1.19
+   },
+   "b2a": {
+    "addedSlopeOver05Ha": 0.15,
+    "maxAddedSlope": 0.56
+   }
+  },
+  {
+   "seam": 4,
+   "xz": [
+    -73,
+    3180
+   ],
+   "b11": {
+    "addedSlopeOver05Ha": 2.37,
+    "maxAddedSlope": 3.47
+   },
+   "b2a": {
+    "addedSlopeOver05Ha": 0.81,
+    "maxAddedSlope": 1.54
+   }
+  }
+ ]
+}

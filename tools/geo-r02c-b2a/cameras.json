@@ -1,0 +1,234 @@
+{
+ "schema": "aurora-review-cameras/1",
+ "note": "B2a review cameras; the A1a, A1c and B01 cameras are reused unchanged. Route-bound cameras (group b2a-route) were placed on the final B2a routes and are captured for B1.1 and B2a at identical positions.",
+ "cameras": [
+  {
+   "id": "b2a-col-south",
+   "name": "Western Col and Vesttind \u00b7 elevated view from the south",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    -880.0,
+    1950.0
+   ],
+   "yaw": 0.0809,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -880.0,
+     1150.0,
+     1950.0
+    ],
+    "target": [
+     -820.0,
+     690.0,
+     2690.0
+    ]
+   },
+   "uv": [
+    212.0,
+    205.0
+   ],
+   "source": "D2 before/after: frames the S0-S1 crest, the authored col point (-770, 2690) and the B1.1 real col (-873, 2673)"
+  },
+  {
+   "id": "b2a-seam-nw",
+   "name": "North-west coast seams \u00b7 elevated close-up",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    -1950.0,
+    3450.0
+   ],
+   "yaw": 2.3192,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -1950.0,
+     780.0,
+     3450.0
+    ],
+    "target": [
+     -1250.0,
+     330.0,
+     2800.0
+    ]
+   },
+   "uv": [
+    105.0,
+    55.0
+   ],
+   "source": "D1 seam clusters at (-1460, 2687) and (-997, 2953)"
+  },
+  {
+   "id": "b2a-seam-north",
+   "name": "North headland seam \u00b7 elevated close-up from the sea",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    250.0,
+    3800.0
+   ],
+   "yaw": -2.6597,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     250.0,
+     700.0,
+     3800.0
+    ],
+    "target": [
+     -90.0,
+     380.0,
+     3150.0
+    ]
+   },
+   "uv": [
+    325.0,
+    20.0
+   ],
+   "source": "D1 seam cluster at (-73, 3180)"
+  },
+  {
+   "id": "b2a-seam-gully",
+   "name": "Windward-gully corridor seam \u00b7 elevated close-up",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    -1750.0,
+    1650.0
+   ],
+   "yaw": 0.9536,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -1750.0,
+     620.0,
+     1650.0
+    ],
+    "target": [
+     -1130.0,
+     360.0,
+     2090.0
+    ]
+   },
+   "uv": [
+    125.0,
+    235.0
+   ],
+   "source": "D1 seam cluster at (-1117, 2093) beside the protected windward-gully corridor"
+  },
+  {
+   "id": "b2a-outlet",
+   "name": "D4 hollow outlet \u00b7 elevated close-up from the south-east",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    700.0,
+    1700.0
+   ],
+   "yaw": -0.7366,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     700.0,
+     900.0,
+     1700.0
+    ],
+    "target": [
+     210.0,
+     520.0,
+     2240.0
+    ]
+   },
+   "uv": [
+    370.0,
+    230.0
+   ],
+   "source": "D4 outlet from the hollow floor (187, 2311) to (256, 2144)"
+  },
+  {
+   "id": "b2a-switchbacks",
+   "name": "D3 primary approach switchbacks and benches \u00b7 elevated close-up from the south-west",
+   "group": "b2a",
+   "kind": "aerial",
+   "xz": [
+    -700.0,
+    1300.0
+   ],
+   "yaw": 0.6947,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -700.0,
+     900.0,
+     1300.0
+    ],
+    "target": [
+     -200.0,
+     460.0,
+     1900.0
+    ]
+   },
+   "uv": [
+    230.0,
+    270.0
+   ],
+   "source": "peak-ascent hairpins at (-444, 1824) and (55, 1999), benched traverses between them"
+  },
+  {
+   "id": "b2a-route-upper",
+   "name": "B2a primary approach \u00b7 upper hiking section, looking up to North Peak",
+   "group": "b2a-route",
+   "kind": "walk",
+   "xz": [
+    -600.0,
+    2390.0
+   ],
+   "yaw": 0.2064,
+   "pitch": 0.16,
+   "uv": [
+    240.0,
+    161.0
+   ],
+   "source": "peak-ascent (B2a primary) s = 2700 m",
+   "onRoute": true
+  },
+  {
+   "id": "b2a-route-viewpoint",
+   "name": "B2a Vestfjell shoulder viewpoint \u00b7 looking at the Western Col and Vesttind",
+   "group": "b2a-route",
+   "kind": "walk",
+   "xz": [
+    -736.0,
+    2560.0
+   ],
+   "yaw": -0.9005,
+   "pitch": 0.08,
+   "uv": [
+    226.4,
+    144.0
+   ],
+   "source": "end of the B2a primary approach (708.6 m)",
+   "onRoute": true
+  },
+  {
+   "id": "b2a-route-scramble",
+   "name": "B2a optional scramble \u00b7 North gap, looking up the north ar\u00eate",
+   "group": "b2a-route",
+   "kind": "walk",
+   "xz": [
+    -413.3,
+    2930.7
+   ],
+   "yaw": -2.5497,
+   "pitch": 0.22,
+   "uv": [
+    258.67,
+    106.93
+   ],
+   "source": "peak-scramble s = 900 m",
+   "onRoute": true
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "verdict": "GEOGRAPHIC PASS · PRIMARY HIKE PASS · SCRAMBLE AND TRAIL ART CONDITIONAL. Not full acceptance.",
+ "summary": [
+  "B2a fixes the four B1.1 geographic defects in the geometry, without loosening any criterion. No seam cluster exceeds 0.25 ha (B1.1 had four). The Western Col is at 681.4 m and gives Vesttind 54.4 m of prominence (B1.1: 695.3 m and 40.5 m). The dry hollow drains through a natural outlet. Coast, water, High Tarn, corridors and every other route are byte-identical.",
+  "B1.1's character survives in every identity view. The summit is unchanged at 897.04 m and is still the island maximum. The three arms, the cirques, the asymmetric crown and the Birchwood and Central Valley silhouettes all read the same. Outside the two declared windows the skyline moves at most 0.51 px.",
+  "The primary hiking approach is comfortable on the terrain: 3.0 km to the Vestfjell shoulder viewpoint, no metre above 0.30, max 0.296, no cross-slope above 0.5.",
+  "The optional scramble is not acceptable yet. It runs 8 m above its own 0.50 limit, 69 % of it has cross-slope above 0.5, and it has no usable tread. It is longer and steeper than the B1.1 summit section, and it first drops 66 m below the viewpoint. The heightfield bench also produces visible artefacts: a sawtooth on the north arête skyline and thin hard chevrons at the hairpins. Both need dedicated trail geometry, not more heightfield editing."
+ ],
+ "gates": [
+  [
+   "Geographic",
+   "D1: no blend-band seam cluster > 0.25 ha (criterion unchanged)",
+   "0 clusters; largest 0.09 ha (B1.1: 2.08, 1.71, 0.88, 0.79 ha)",
+   "pass"
+  ],
+  [
+   "Geographic",
+   "D2: Vesttind prominence ≈ 55–56 m without changing North Peak",
+   "col 681.4 m at (−810, 2683), prominence 54.4 m; the col is 40 m west of the authored point",
+   "pass"
+  ],
+  [
+   "Geographic",
+   "D4: no dry closed hollow, no new tarn, High Tarn preserved",
+   "outlet carved (188 m, max cut 7.25 m); 0 dry hollows, 0 new sinks",
+   "pass"
+  ],
+  [
+   "Geographic",
+   "Preserved areas: coast, water, High Tarn + 150 m, corridors, other routes, outside the study area",
+   "all unchanged (0 cells, Δ 0 m)",
+   "pass"
+  ],
+  [
+   "Geographic",
+   "Summit and hierarchy",
+   "897.04 m, island maximum; apex within 0.1 m inside 25 m; west shoulder up to 2.3 m lower (D2)",
+   "pass"
+  ],
+  [
+   "Geographic",
+   "Skyline regression vs B1.1 (1.0 px outside declared windows, summit 0.25 px)",
+   "max 0.51 px outside, summit 0.0 px; D1 window 16.4 px, D2 window 2.9 px",
+   "pass"
+  ],
+  [
+   "Hiking",
+   "Primary approach: 10 m grade ≤ 0.30",
+   "0 m over; max 0.296, p95 0.277",
+   "pass"
+  ],
+  [
+   "Hiking",
+   "Primary approach: terrain cross-slope",
+   "0 % over 0.5 (B1.1: 25.7 %)",
+   "pass"
+  ],
+  [
+   "Hiking",
+   "Primary approach: modelled tread comfort",
+   "tread p95 0.34; about 50 % above 0.15; a 4 m grid cannot model a 1–2 m tread",
+   "partial"
+  ],
+  [
+   "Hiking",
+   "Optional scramble: 10 m grade ≤ 0.50 (its declared limit)",
+   "8 m over in 3 short sections; max 0.516",
+   "fail"
+  ],
+  [
+   "Hiking",
+   "Optional scramble: tread",
+   "69 % cross-slope > 0.5; usable tread median 0 m",
+   "fail"
+  ],
+  [
+   "Hiking",
+   "Genuine browser traversal (viewer walk rule)",
+   "every route, including both B2a routes, walks end to end",
+   "pass"
+  ],
+  [
+   "Artistic",
+   "B1.1 identity preserved (Birchwood, Central Valley, obliques)",
+   "preserved",
+   "pass"
+  ],
+  [
+   "Artistic",
+   "Seams, col and outlet read as natural landform",
+   "seam steps replaced by descending arm ends; col reads as a saddle; outlet is a smooth notch",
+   "pass"
+  ],
+  [
+   "Artistic",
+   "Trail benches read as a path, not as artefacts",
+   "sawtooth on the north arête skyline (scramble); thin hard chevrons and scratches at hairpins",
+   "fail"
+  ],
+  [
+   "Engineering",
+   "Determinism, recomposition, tests, build, protected-file integrity, collision consistency",
+   "2 runs identical; recomposition identical; 66/66; build passes; protected files identical; rendered = canonical",
+   "pass"
+  ]
+ ],
+ "questions": [
+  [
+   "Is B1.1's character intact?",
+   "Yes. In Birchwood and the Central Valley the B1.1 and B2a frames are hard to tell apart. The crown, the dominant summit and the three-arm massing are unchanged. The west-arm end is slightly lower and softer, the declared D1 change."
+  ],
+  [
+   "Do the coastal ends look natural now?",
+   "Clearly better. The north-west arm and the Vesttind buttress now run down to the sea instead of ending in a stepped sea cliff. The isolated lit fin at the north headland is gone, and the hard crease band beside the windward gully is replaced by a continuous flank."
+  ],
+  [
+   "Does the Western Col read as a col?",
+   "Yes. From the south and from the viewpoint, Vesttind now stands as its own top over a real saddle, instead of merging into the North Peak shoulder."
+  ],
+  [
+   "Does the outlet look believable?",
+   "Yes, as a small descending notch. The first carve had a comb of notches, which was fixed. In an aerial view the outlet is barely noticeable, which is right for its size."
+  ],
+  [
+   "How do the route and benches read?",
+   "The primary benches are mostly subtle. At hairpins and on traverses they show as thin, hard, perfectly straight scratches, which reads engineered. On the scramble the bench breaks the north arête into a sawtooth that is visible on the skyline from the route. That is a defect."
+  ],
+  [
+   "Overall",
+   "A better landform than B1.1 with the same identity. The remaining problems are trail geometry, not terrain. They belong in a dedicated trail mesh (ribbon plus collision), not in further heightfield edits."
+  ]
+ ],
+ "defects": [
+  {
+   "id": "B2a-1",
+   "severity": "high",
+   "title": "Optional scramble exceeds its own 0.50 limit (8 m, max 0.516). 69 % of it has cross-slope above 0.5 and it has no usable tread. It is longer (1223 m) and steeper than the B1.1 summit section (246 m, max 0.475). It first descends 66 m from the viewpoint (708.6 → 642.4 m) across the south face before climbing, so the summit costs 267 m of ascent for 188 m of net gain.",
+   "next": "B2a follow-up or B2b: a dedicated trail mesh (ribbon plus collision) with authored steps, or a re-routed scramble line on the south-west shoulder. Re-measure on the mesh."
+  },
+  {
+   "id": "B2a-2",
+   "severity": "high",
+   "title": "The heightfield bench on the scramble produces a sawtooth on the north arête skyline (visible in b2a-route-scramble).",
+   "next": "Remove the bench from the scramble and carry its tread in the trail mesh."
+  },
+  {
+   "id": "B2a-3",
+   "severity": "medium",
+   "title": "Primary bench edges read as thin, hard, straight scratches and chevrons at hairpins in aerial views (b2a-switchbacks, b2a-outlet, b2a-col-south).",
+   "next": "Trail mesh and material; widen and soften the cut-and-fill blend once the tread lives in the mesh."
+  },
+  {
+   "id": "B2a-4",
+   "severity": "medium",
+   "title": "The primary route plan is grid-aligned (triangle-edge routing), with long straight legs and a lower detour east to x ≈ −33.",
+   "next": "Spline the route plan and verify the grade on the trail mesh rather than on triangle edges."
+  },
+  {
+   "id": "B2a-5",
+   "severity": "low",
+   "title": "Tread comfort: about 50 % of the primary tread has cross-slope above 0.15 (p95 0.34). A 4 m grid cannot represent a 1–2 m tread.",
+   "next": "Trail mesh (see B2a-3)."
+  },
+  {
+   "id": "B2a-6",
+   "severity": "low",
+   "title": "The real col is 40 m west of the authored point, which stands at 692.5 m.",
+   "next": "Accept, or move the authored col knot in B2b."
+  },
+  {
+   "id": "B2a-7",
+   "severity": "low",
+   "title": "The North Peak west shoulder is up to 2.3 m lower 25–100 m from the apex (removal of the B1.1 spill-over cone). The apex is unchanged.",
+   "next": "Accept: it is the intended effect of the D2 root-cause fix."
+  },
+  {
+   "id": "B2a-8",
+   "severity": "low",
+   "title": "A residual 0.09 ha seam cluster at (−1486, 2666). The added-slope area around seams 1 and 2 is reduced (4.98 → 2.07 ha and 3.41 → 1.43 ha), not eliminated.",
+   "next": "Plinth sculpting and rock bands in B2b."
+  },
+  {
+   "id": "B2a-9",
+   "severity": "info",
+   "title": "Device performance unverified; captures use SwiftShader.",
+   "next": "Device check before any approval."
+  }
+ ],
+ "b2b": [
+  "Out of scope for B2a and deferred to B2b: the southern extension, plinth sculpting, rock bands and talus, vegetation, the Cairn reveal and other regions.",
+  "Trail geometry before any of that: a trail ribbon mesh with collision for both routes, a re-routed or stepped scramble that meets its 0.50 limit with a real tread (B2a-1, B2a-2), a splined primary plan (B2a-4) and softer bench blending (B2a-3, B2a-5).",
+  "Decide whether the col should sit on the authored point (B2a-6), then re-run the skyline regression against B2a as the new baseline.",
+  "Device performance check."
+ ],
+ "limitations": [
+  "Captures are SwiftShader renders in clay material only. No vegetation, texture or trail ribbon is shown.",
+  "The tread is measured on the 4 m heightfield; a 1–2 m tread is only approximated.",
+  "The viewer walk rule (grade ≤ 0.7) proves walkability, not comfort; comfort is the hiking-grade and cross-slope metrics.",
+  "Walk cameras stand on whichever terrain is loaded, so the B1.1 frame at a B2a route camera is not on a B1.1 route.",
+  "Art judgement is one reviewer's reading of the captures."
+ ]
+}

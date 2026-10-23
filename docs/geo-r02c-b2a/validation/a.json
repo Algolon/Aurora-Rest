@@ -1,0 +1,239 @@
+{
+ "parity": {
+  "m0EqualsR1": true,
+  "m0Sha256": true
+ },
+ "preserved": {
+  "changedCellsOutsideStudyArea": 0,
+  "landSeaSignChanged": 0,
+  "coastBand0to70mChanged": 0,
+  "waterCellsChanged": 0,
+  "highTarnLakeAnd150mChanged": 0,
+  "highTarnLevelM": 360,
+  "tarn-inlet-wCorridor40mChanged": 0,
+  "windward-gullyCorridor40mChanged": 0,
+  "routeCentrelineMaxChangeM": {
+   "hero": 0.0,
+   "tarn-ascent": 0.0,
+   "peak-ascent": 148.055,
+   "hidden-loop": 0.0,
+   "west-cape-spur": 0.0,
+   "south-shoulder-loop": 0.0
+  },
+  "pass": true
+ },
+ "hydrology": {
+  "newDrySinkCells1cm": 0,
+  "newDrySinks": [],
+  "maxDryFillDepthB1M": 0.033,
+  "maxDryFillDepthR1M": 0.033,
+  "drainageDestinationChangedHa": 17.56,
+  "drainageTransitionsHa(1=HighTarn,2=sea,3=other,0=unresolved)": {
+   "1->2": 0.53,
+   "1->3": 7.42,
+   "2->1": 0.88,
+   "2->3": 8.62,
+   "3->2": 0.12
+  },
+  "highTarnCatchmentHa": {
+   "r1": 102.3,
+   "b1": 95.3
+  },
+  "unresolvedCellsB1": 1921,
+  "unresolvedCellsR1": 1921,
+  "conditionedHollows(tarn sites, dry in B1)": [],
+  "streamNetwork": {
+   "thresholdHa": 5.0,
+   "r1StreamCells": 2394,
+   "b1StreamCells": 3200,
+   "streamCellsOnlyR1": 289,
+   "streamCellsOnlyB1": 1095
+  },
+  "pass": true
+ },
+ "boundary": {
+  "bandCells": 80261,
+  "slopeB1Band": {
+   "p50": 0.73,
+   "p99": 3.46,
+   "max": 10.805
+  },
+  "slopeR1Band": {
+   "p50": 0.649,
+   "p99": 3.555,
+   "max": 11.241
+  },
+  "slopeB1Core": {
+   "p50": 0.689,
+   "p99": 2.165,
+   "max": 3.292
+  },
+  "deltaGradientBand": {
+   "p50": 0.037,
+   "p99": 0.848,
+   "max": 1.991
+  },
+  "curvatureB1Band": {
+   "p50": 0.001,
+   "p99": 0.069,
+   "max": 4.735
+  },
+  "curvatureB1Core": {
+   "p50": 0.005,
+   "p99": 0.147,
+   "max": 0.903
+  },
+  "note": "the blend band should not be steeper or more curved than the authored core; a seam would show as band slope/curvature above the core",
+  "addedSteepBandHa": 0.16,
+  "largestAddedSteepClusterHa": 0.09,
+  "coreSlopeP99": 2.165,
+  "criterion": "band cells where B1 is steeper than R1 + 0.5 and steeper than the core p99; pass if no such cluster exceeds 0.25 ha",
+  "pass": true
+ },
+ "hierarchy": [
+  {
+   "id": "S0",
+   "name": "North Peak",
+   "authoredM": 900,
+   "b1M": 897.0,
+   "r1M": 900.0
+  },
+  {
+   "id": "S2",
+   "name": "Tarntind",
+   "authoredM": 768,
+   "b1M": 774.7,
+   "r1M": 693.3
+  },
+  {
+   "id": "S1",
+   "name": "Vesttind",
+   "authoredM": 724,
+   "b1M": 735.8,
+   "r1M": 636.0
+  },
+  {
+   "id": "S3",
+   "name": "Nordhorn",
+   "authoredM": 738,
+   "b1M": 754.0,
+   "r1M": 797.9
+  },
+  {
+   "id": "S4",
+   "name": "Austtind",
+   "authoredM": 700,
+   "b1M": 700.2,
+   "r1M": 644.3
+  },
+  {
+   "id": "N1",
+   "name": "Western Col",
+   "authoredM": 680,
+   "b1M": 692.5,
+   "r1M": 688.5
+  },
+  {
+   "id": "N2",
+   "name": "Skar notch",
+   "authoredM": 690,
+   "b1M": 711.9,
+   "r1M": 809.8
+  },
+  {
+   "id": "N3",
+   "name": "North gap",
+   "authoredM": 760,
+   "b1M": 759.5,
+   "r1M": 861.2
+  },
+  {
+   "id": "N4",
+   "name": "Tarn col",
+   "authoredM": 655,
+   "b1M": 625.4,
+   "r1M": 667.9
+  }
+ ],
+ "summit": {
+  "b1M": 897.04,
+  "xz": [
+   -520.0,
+   2772.0
+  ],
+  "r1M": 899.96,
+  "islandMaximumIsNorthPeak": true,
+  "offsetFromApprovedM": 2.0
+ },
+ "route": {
+  "candidate": {
+   "sharedWithR1Points": 1073,
+   "viewpointXZ": [
+    -736.0,
+    2560.0
+   ],
+   "viewpointM": 708.6,
+   "declaredViewpointXZ": [
+    -636,
+    2680
+   ],
+   "bench": [
+    {
+     "hairpinNodesKept": 81,
+     "benchedLengthM": 1593,
+     "routeLengthM": 2935,
+     "nodesChanged": 1021,
+     "maxCutM": 3.38,
+     "maxFillM": 3.64,
+     "route": "primary new section + scramble"
+    }
+   ],
+   "postBenchFillCells": 0,
+   "primary": {
+    "lengthM": 3056,
+    "walkTestBlockedAt": -1,
+    "hikingGrade10mMax": 0.296,
+    "p95": 0.277,
+    "over030M": 0
+   },
+   "scramble": {
+    "lengthM": 1236,
+    "walkTestBlockedAt": -1,
+    "hikingGrade10mMax": 0.516,
+    "p95": 0.471,
+    "over030M": 553
+   }
+  },
+  "walkTestCandidateOnB1": -1,
+  "walkTestR1RouteOnB1": 2000,
+  "walkTestR1RouteOnR1": -1,
+  "candidateMaxHikingGrade10m": 0.296,
+  "candidateStartsOnR1Route": true,
+  "endDistanceToSummitM": 302.7,
+  "otherRoutesWalkTestOnB1": {
+   "hero": -1,
+   "tarn-ascent": -1,
+   "hidden-loop": -1,
+   "west-cape-spur": -1,
+   "south-shoulder-loop": -1
+  },
+  "pass": true
+ },
+ "expectedDifferences": [
+  "peak-ascent R1 alignment: blocked on B1 (superseded by the candidate alignment peak-ascent-b1)",
+  "R1 North Peak crest lines and crest levels in features.json / the A-R1 master: superseded inside the study area by the derived master tools/geo-r02c-b2a/design/north-massif-b2a.json",
+  "catchment rings in features.json describe R1 drainage; B1 drainage is recomputed here"
+ ],
+ "changes": {
+  "changedCells": 203591,
+  "changedHa": 325.75,
+  "raisedOver1mHa": 169.75,
+  "loweredOver1mHa": 84.45,
+  "maxRaiseM": 105.24,
+  "maxLoweringM": 167.65,
+  "volumeRaisedM3": 44147438,
+  "volumeLoweredM3": 40027649
+ },
+ "terrainSha256": "a2476daa86a3b4291d20a13b89359446eb19a923d62621102daac147dc2a3332",
+ "pass": true
+}
