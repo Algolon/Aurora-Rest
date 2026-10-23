@@ -9,8 +9,25 @@ const report={url:'http://127.0.0.1:4220/env-p01.html',errors:[],cycles:[],profi
 const sha=o=>createHash('sha256').update(JSON.stringify(o)).digest('hex');
 const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','4220','--strictPort']);
 let browser;
+let previewOutput = '';
+let previewFailure;
+server.stdout.on('data', b => { previewOutput += b.toString(); });
+server.stderr.on('data', b => { previewOutput += b.toString(); });
+server.on('error', e => { previewFailure = e; });
+server.on('exit', code => { previewFailure = Error('Preview exited ' + code); });
 try {
- await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Preview startup timeout')),30000);server.once('exit',code=>reject(Error('Preview exited '+code)));server.stdout.on('data',b=>{if(b.toString().includes('Local:')){clearTimeout(timer);resolve();}});});
+ // Readiness is an HTTP property; CI log formatting is not a server contract.
+ const deadline = Date.now() + 30000;
+ while (true) {
+  if (previewFailure) throw previewFailure;
+  try {
+   const response = await fetch(report.url, {signal:AbortSignal.timeout(1000)});
+   if (response.ok) break;
+  } catch {}
+  if (Date.now() >= deadline) throw Error('Preview HTTP startup timeout: ' + previewOutput);
+  await new Promise(resolve => setTimeout(resolve, 200));
+ }
+
  browser=await chromium.launch({executablePath:process.env.CHROME,headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
  report.browser=browser.version();const p=await browser.newPage({viewport:{width:1280,height:900}});p.setDefaultTimeout(240000);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.errors.push(m.text());});p.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url());});
@@ -39,4 +56,4 @@ try {
  for(const id of ['forest-landscape','valley-landscape']){await view(id);await p.locator('#ground').selectOption('material');const png=await p.evaluate(()=>window.__pop02.capture());await writeFile(out+'/'+id+'.png',Buffer.from(png.split(',')[1],'base64'));}
  await p.evaluate(()=>window.__pop02.dispose());report.checks.push('Viewer teardown completes without exception.');assert.deepEqual(report.errors,[]);report.passed=true;console.log('RECOVERY WEBGL PASS');
 } catch(e){report.failure=String(e.stack??e);process.exitCode=1;console.error(e);}
-finally {await writeFile(out+'/result.json',JSON.stringify(report,null,2)+'\n');await browser?.close();server.kill();}
+finally {report.previewOutput=previewOutput;await writeFile(out+'/result.json',JSON.stringify(report,null,2)+'\n');await browser?.close();server.kill();}
