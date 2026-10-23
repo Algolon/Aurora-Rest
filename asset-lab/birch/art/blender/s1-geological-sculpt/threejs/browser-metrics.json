@@ -1,0 +1,1340 @@
+{
+  "method": "Real Chromium Three.js WebGL2 / SwiftShader; actual Blender GLB",
+  "errors": [],
+  "captures": {
+    "s1-neutral-front": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 6,
+      "artApproved": false
+    },
+    "s1-neutral-rear": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 15,
+      "artApproved": false
+    },
+    "s1-neutral-left": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "left"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 24,
+      "artApproved": false
+    },
+    "s1-neutral-right": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "right"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 33,
+      "artApproved": false
+    },
+    "s1-neutral-threequarter-front": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 44,
+      "artApproved": false
+    },
+    "s1-neutral-threequarter-rear": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 53,
+      "artApproved": false
+    },
+    "s1-neutral-top": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "top"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 62,
+      "artApproved": false
+    },
+    "s1-neutral-human-height": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "human-height"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 71,
+      "artApproved": false
+    },
+    "s1-neutral-shoulder": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "shoulder"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 3,
+        "triangles": 190
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 82,
+      "artApproved": false
+    },
+    "s1-neutral-ground": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "ground"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 3,
+        "triangles": 190
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 91,
+      "artApproved": false
+    },
+    "s1-T1": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "T1",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 100,
+      "artApproved": false
+    },
+    "s1-wireframe": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "wireframe",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 34
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 110,
+      "artApproved": false
+    },
+    "s1-silhouette": {
+      "state": {
+        "mode": "single",
+        "reference": "G1",
+        "surface": "silhouette",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 119,
+      "artApproved": false
+    },
+    "A-V0-s1-neutral-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V0",
+        "surface": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 346
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 129,
+      "artApproved": false
+    },
+    "A-V0-s1-neutral-threequarter-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V0",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 346
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 139,
+      "artApproved": false
+    },
+    "A-V0-s1-neutral-threequarter-rear": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V0",
+        "surface": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 346
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 149,
+      "artApproved": false
+    },
+    "A-V2-s1-neutral-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V2",
+        "surface": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 8,
+        "triangles": 458
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 159,
+      "artApproved": false
+    },
+    "A-V2-s1-neutral-threequarter-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V2",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 8,
+        "triangles": 458
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 168,
+      "artApproved": false
+    },
+    "A-V2-s1-neutral-threequarter-rear": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V2",
+        "surface": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 8,
+        "triangles": 458
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 177,
+      "artApproved": false
+    },
+    "A-V3-s1-neutral-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V3",
+        "surface": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 550
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 187,
+      "artApproved": false
+    },
+    "A-V3-s1-neutral-threequarter-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V3",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 550
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 196,
+      "artApproved": false
+    },
+    "A-V3-s1-neutral-threequarter-rear": {
+      "state": {
+        "mode": "compare",
+        "reference": "A-V3",
+        "surface": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 550
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 208,
+      "artApproved": false
+    },
+    "G1-s1-neutral-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 494
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 219,
+      "artApproved": false
+    },
+    "G1-s1-neutral-threequarter-front": {
+      "state": {
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 494
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 231,
+      "artApproved": false
+    },
+    "G1-s1-neutral-threequarter-rear": {
+      "state": {
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 494
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 241,
+      "artApproved": false
+    },
+    "G1-s1-T1": {
+      "state": {
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "T1",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 494
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 250,
+      "artApproved": false
+    },
+    "aurora-nature-T1": {
+      "state": {
+        "mode": "context",
+        "reference": "G1",
+        "surface": "T1",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 20,
+        "triangles": 11754
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 260,
+      "artApproved": false
+    },
+    "aurora-nature-wide-T1": {
+      "state": {
+        "mode": "context-wide",
+        "reference": "G1",
+        "surface": "T1",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 20,
+        "triangles": 11754
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 269,
+      "artApproved": false
+    },
+    "aurora-nature-neutral": {
+      "state": {
+        "mode": "context",
+        "reference": "G1",
+        "surface": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.0799999237060547,
+          1.6469476222991943,
+          1.5467999577522278
+        ],
+        "min": [
+          -1.0199999809265137,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6469476222991943,
+          0.7667999863624573
+        ],
+        "vertices": 172,
+        "triangles": 94,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 20,
+        "triangles": 11754
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 278,
+      "artApproved": false
+    }
+  }
+}

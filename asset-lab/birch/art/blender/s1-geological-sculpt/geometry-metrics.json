@@ -1,0 +1,110 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "source": {
+    "vertices": 34,
+    "edges": 61,
+    "faces_before_triangulation": 29,
+    "triangles": 64,
+    "connected_components": 1,
+    "non_manifold_edges": 0,
+    "boundary_edges": 0,
+    "inconsistent_edge_winding": 0,
+    "degenerate_faces": 0,
+    "signed_volume_m3": 2.989995762088836,
+    "euler_characteristic": 2,
+    "nonadjacent_triangle_overlap_candidates": [],
+    "bounds_blender": {
+      "min": [
+        -1.0199999809265137,
+        -0.7667999863624573,
+        0.0
+      ],
+      "max": [
+        1.059999942779541,
+        0.7799999713897705,
+        1.659999966621399
+      ]
+    },
+    "dimensions_W_H_D_m": [
+      2.0799999237060547,
+      1.659999966621399,
+      1.546799898147583
+    ],
+    "object_location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "object_rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "object_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "runtime": {
+    "vertices": 49,
+    "edges": 86,
+    "faces_before_triangulation": 39,
+    "triangles": 94,
+    "connected_components": 1,
+    "non_manifold_edges": 0,
+    "boundary_edges": 0,
+    "inconsistent_edge_winding": 0,
+    "degenerate_faces": 0,
+    "signed_volume_m3": 2.9888177550806523,
+    "euler_characteristic": 2,
+    "nonadjacent_triangle_overlap_candidates": [],
+    "bounds_blender": {
+      "min": [
+        -1.0199999809265137,
+        -0.7667999863624573,
+        0.0
+      ],
+      "max": [
+        1.059999942779541,
+        0.7799999713897705,
+        1.6469476222991943
+      ]
+    },
+    "dimensions_W_H_D_m": [
+      2.0799999237060547,
+      1.6469476222991943,
+      1.546799898147583
+    ],
+    "object_location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "object_rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "object_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "pivot": "[0,0,0] at ground plane inside support footprint",
+  "method": "hand-authored shared cage; five selective 18mm one-segment bevel edges; flat polygon normals",
+  "export": "GLB, selected runtime only, Y-up, metre scale, normals, UV, color, no camera/light/animation",
+  "reimport": [
+    {
+      "name": "S1 RUNTIME \u2022 authored stone.001",
+      "vertices": 172,
+      "polygons": 94,
+      "dimensions_blender": [
+        2.0799999237060547,
+        1.546799898147583,
+        1.6469476222991943
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "name": "S1 EDITABLE \u2022 crown-to-shoulder cage",
+    "vertices": 34,
+    "polygons": 29,
+    "triangles": 64,
+    "triangulated_volume_m3": 2.981891504102047,
+    "flat_polygons": true,
+    "vertex_groups": 34
+  },
+  "runtime": {
+    "name": "S1 RUNTIME \u2022 authored stone",
+    "vertices": 49,
+    "polygons": 39,
+    "triangles": 94,
+    "triangulated_volume_m3": 2.9802578282991212,
+    "flat_polygons": true,
+    "vertex_groups": 34
+  },
+  "blender_version": "5.2.2 LTS",
+  "saved_collections": [
+    "01 EDITABLE \u2022 shared geological control cage",
+    "02 EXPORT \u2022 evaluated stone surface",
+    "03 REVIEW \u2022 cameras and studio only",
+    "04 REFERENCES \u2022 pinned unchanged Aurora meshes"
+  ],
+  "blend_sha256": "1fdc9f30797fe28a8974ae52e7c3209fc1c69a61a62a31a1e1c2f199732d834e",
+  "glb_sha256": "3b1d978c21e5195f89dbb00f77b1230cb7a0a5fea0abdc8512ed4d9590f5e92b",
+  "constructor_dependency": "None to open/edit the saved mesh; script retained for reproduction"
+}

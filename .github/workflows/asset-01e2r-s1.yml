@@ -1,0 +1,38 @@
+name: ASSET-01E2R-S1 Blender sculpt runtime validation
+on:
+  push:
+    branches: [art/asset-01e2r-s1-blender-geological-sculpt]
+  workflow_dispatch:
+jobs:
+  static-export-and-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: asset-lab/birch
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Protected source parity against authorized B1R foundation
+        run: git diff --exit-code 5e1d412e24d054ff8b659236b39feb0f99c1cced HEAD -- src ../../src
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - name: All nature regressions and independent static GLB topology checks
+        run: npm test
+      - name: TypeScript and lab build
+        run: npm run build
+      - name: Build isolated S1 GLB showroom
+        run: npx vite build --config vite.s1.config.ts
+      - name: Genuine Chromium GLB loading, neutral/T1 and nature evidence
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-s1.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aurora-s1-actual-glb-webgl-review
+          path: asset-lab/birch/art/blender/s1-geological-sculpt/threejs/
+          if-no-files-found: error
+# Blender editability/render validation is performed on the verified local Mac.
+# This job validates the checked-in export and browser integration only.
