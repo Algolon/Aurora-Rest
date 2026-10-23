@@ -10,6 +10,7 @@ const VERTEX = `
 attribute float waterKind;
 varying float vWaterKind;
 varying vec3 vWaterWorld;
+#include <common>
 #include <fog_pars_vertex>
 #include <logdepthbuf_pars_vertex>
 void main(){
