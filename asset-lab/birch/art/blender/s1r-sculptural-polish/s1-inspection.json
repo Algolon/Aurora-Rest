@@ -1,0 +1,796 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "bpy_access": true,
+  "input_sha256": {
+    "aurora-rock-s1.blend": "1fdc9f30797fe28a8974ae52e7c3209fc1c69a61a62a31a1e1c2f199732d834e",
+    "aurora-rock-s1.glb": "3b1d978c21e5195f89dbb00f77b1230cb7a0a5fea0abdc8512ed4d9590f5e92b"
+  },
+  "collections": {
+    "01 EDITABLE \u2022 shared geological control cage": [
+      {
+        "name": "S1 EDITABLE \u2022 crown-to-shoulder cage",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      }
+    ],
+    "02 EXPORT \u2022 evaluated stone surface": [
+      {
+        "name": "S1 RUNTIME \u2022 authored stone",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only",
+          "Patch 0",
+          "Patch 1",
+          "Patch 2",
+          "Patch 3",
+          "Patch 4",
+          "Patch 5"
+        ]
+      }
+    ],
+    "03 REVIEW \u2022 cameras and studio only": [
+      {
+        "name": "Studio floor \u2022 excluded from GLB",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Studio floor"
+        ]
+      },
+      {
+        "name": "Key",
+        "type": "LIGHT",
+        "modifiers": [],
+        "materials": []
+      },
+      {
+        "name": "Fill",
+        "type": "LIGHT",
+        "modifiers": [],
+        "materials": []
+      },
+      {
+        "name": "Rim",
+        "type": "LIGHT",
+        "modifiers": [],
+        "materials": []
+      },
+      {
+        "name": "Review camera",
+        "type": "CAMERA",
+        "modifiers": [],
+        "materials": []
+      },
+      {
+        "name": "Diagnostic \u2022 source cage edge overlay",
+        "type": "MESH",
+        "modifiers": [
+          "WIREFRAME"
+        ],
+        "materials": [
+          "Silhouette black"
+        ]
+      }
+    ],
+    "04 REFERENCES \u2022 pinned unchanged Aurora meshes": [
+      {
+        "name": "A-V0",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      },
+      {
+        "name": "A-V2",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      },
+      {
+        "name": "A-V2.001",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      },
+      {
+        "name": "A-V3",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      },
+      {
+        "name": "G1",
+        "type": "MESH",
+        "modifiers": [],
+        "materials": [
+          "Neutral diagnostic \u2022 shape review only"
+        ]
+      }
+    ]
+  },
+  "vertices": {
+    "a": [
+      -0.699999988079071,
+      -0.5899999737739563,
+      0.0
+    ],
+    "b": [
+      0.11999999731779099,
+      -0.7200000286102295,
+      0.0
+    ],
+    "c": [
+      0.7799999713897705,
+      -0.5699999928474426,
+      0.0
+    ],
+    "d": [
+      1.0199999809265137,
+      -0.2199999988079071,
+      0.0
+    ],
+    "e": [
+      0.8600000143051147,
+      0.47999998927116394,
+      0.0
+    ],
+    "f": [
+      0.2199999988079071,
+      0.6899999976158142,
+      0.0
+    ],
+    "g": [
+      -0.6399999856948853,
+      0.6000000238418579,
+      0.0
+    ],
+    "h": [
+      -0.9900000095367432,
+      0.11999999731779099,
+      0.0
+    ],
+    "i": [
+      -0.9399999976158142,
+      -0.3199999928474426,
+      0.0
+    ],
+    "al": [
+      -0.8399999737739563,
+      -0.6399999856948853,
+      0.23000000417232513
+    ],
+    "bl": [
+      0.019999999552965164,
+      -0.7667999863624573,
+      0.18000000715255737
+    ],
+    "cl": [
+      0.7200000286102295,
+      -0.7059999704360962,
+      0.2199999988079071
+    ],
+    "dl": [
+      1.059999942779541,
+      -0.23999999463558197,
+      0.2199999988079071
+    ],
+    "el": [
+      0.9300000071525574,
+      0.4300000071525574,
+      0.30000001192092896
+    ],
+    "fl": [
+      0.2199999988079071,
+      0.7799999713897705,
+      0.25999999046325684
+    ],
+    "gl": [
+      -0.6600000262260437,
+      0.6600000262260437,
+      0.2199999988079071
+    ],
+    "hl": [
+      -1.0199999809265137,
+      0.10000000149011612,
+      0.36000001430511475
+    ],
+    "il": [
+      -0.9900000095367432,
+      -0.33000001311302185,
+      0.25999999046325684
+    ],
+    "A": [
+      -0.75,
+      -0.5400000214576721,
+      1.1799999475479126
+    ],
+    "B": [
+      -0.10000000149011612,
+      -0.6660000085830688,
+      1.100000023841858
+    ],
+    "C": [
+      0.6100000143051147,
+      -0.647599995136261,
+      0.7799999713897705
+    ],
+    "D": [
+      1.0,
+      -0.17000000178813934,
+      0.6800000071525574
+    ],
+    "E": [
+      0.7799999713897705,
+      0.44999998807907104,
+      0.9100000262260437
+    ],
+    "F": [
+      0.18000000715255737,
+      0.7099999785423279,
+      1.159999966621399
+    ],
+    "G": [
+      -0.6800000071525574,
+      0.5,
+      1.2799999713897705
+    ],
+    "H": [
+      -0.9100000262260437,
+      0.05999999865889549,
+      1.1200000047683716
+    ],
+    "I": [
+      -0.8799999952316284,
+      -0.3100000023841858,
+      1.1200000047683716
+    ],
+    "J": [
+      -0.550000011920929,
+      -0.28999999165534973,
+      1.559999942779541
+    ],
+    "K": [
+      -0.12999999523162842,
+      -0.3199999928474426,
+      1.659999966621399
+    ],
+    "L": [
+      0.3199999928474426,
+      -0.019999999552965164,
+      1.4800000190734863
+    ],
+    "M": [
+      0.1599999964237213,
+      0.38999998569488525,
+      1.5199999809265137
+    ],
+    "N": [
+      -0.4300000071525574,
+      0.4000000059604645,
+      1.600000023841858
+    ],
+    "R": [
+      0.3799999952316284,
+      -0.6395999789237976,
+      1.0
+    ],
+    "S": [
+      0.6600000262260437,
+      -0.014999999664723873,
+      1.100000023841858
+    ]
+  },
+  "faces": [
+    {
+      "index": 0,
+      "name": "ground",
+      "vertices": [
+        "i",
+        "h",
+        "g",
+        "f",
+        "e",
+        "d",
+        "c",
+        "b",
+        "a"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "area_m2": 2.2476999759674072
+    },
+    {
+      "index": 1,
+      "name": "toe front-left",
+      "vertices": [
+        "a",
+        "b",
+        "bl",
+        "al"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0016086027026176453,
+      "normal": [
+        -0.15265007317066193,
+        -0.9381224513053894,
+        -0.3108444809913635
+      ],
+      "area_m2": 0.18036027252674103
+    },
+    {
+      "index": 2,
+      "name": "toe front",
+      "vertices": [
+        "b",
+        "c",
+        "cl",
+        "bl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.018466386944055557,
+      "normal": [
+        0.15325094759464264,
+        -0.9205223917961121,
+        -0.3593781888484955
+      ],
+      "area_m2": 0.14948032796382904
+    },
+    {
+      "index": 3,
+      "name": "toe right",
+      "vertices": [
+        "c",
+        "d",
+        "dl",
+        "cl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0035263393074274063,
+      "normal": [
+        0.8037698864936829,
+        -0.5713069438934326,
+        -0.16601933538913727
+      ],
+      "area_m2": 0.1116737499833107
+    },
+    {
+      "index": 4,
+      "name": "toe flank",
+      "vertices": [
+        "d",
+        "e",
+        "el",
+        "dl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.002115171402692795,
+      "normal": [
+        0.9611856341362,
+        0.2136562317609787,
+        -0.17456622421741486
+      ],
+      "area_m2": 0.18674853444099426
+    },
+    {
+      "index": 5,
+      "name": "toe rear",
+      "vertices": [
+        "e",
+        "f",
+        "fl",
+        "el"
+      ],
+      "max_distance_from_polygon_plane_m": 0.026500537060201168,
+      "normal": [
+        0.3835504651069641,
+        0.9165300130844116,
+        -0.11341027170419693
+      ],
+      "area_m2": 0.20544880628585815
+    },
+    {
+      "index": 6,
+      "name": "toe rear-left",
+      "vertices": [
+        "f",
+        "g",
+        "gl",
+        "fl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0035639586858451366,
+      "normal": [
+        -0.10746292769908905,
+        0.9476691484451294,
+        -0.30062419176101685
+      ],
+      "area_m2": 0.2205410897731781
+    },
+    {
+      "index": 7,
+      "name": "toe west",
+      "vertices": [
+        "g",
+        "h",
+        "hl",
+        "gl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.012764111161231995,
+      "normal": [
+        -0.8277329206466675,
+        0.5503716468811035,
+        -0.10931297391653061
+      ],
+      "area_m2": 0.18387576937675476
+    },
+    {
+      "index": 8,
+      "name": "toe chip",
+      "vertices": [
+        "h",
+        "i",
+        "il",
+        "hl"
+      ],
+      "max_distance_from_polygon_plane_m": 0.008033016696572304,
+      "normal": [
+        -0.9884516000747681,
+        -0.07581042498350143,
+        -0.13121037185192108
+      ],
+      "area_m2": 0.1371842622756958
+    },
+    {
+      "index": 9,
+      "name": "toe corner",
+      "vertices": [
+        "i",
+        "a",
+        "al",
+        "il"
+      ],
+      "max_distance_from_polygon_plane_m": 0.02537938579916954,
+      "normal": [
+        -0.7812395095825195,
+        -0.5064400434494019,
+        -0.3649427592754364
+      ],
+      "area_m2": 0.09152121841907501
+    },
+    {
+      "index": 10,
+      "name": "main frontal cleavage",
+      "vertices": [
+        "al",
+        "bl",
+        "B",
+        "A"
+      ],
+      "max_distance_from_polygon_plane_m": 0.007200554013252258,
+      "normal": [
+        -0.155609130859375,
+        -0.9824343323707581,
+        0.10299703478813171
+      ],
+      "area_m2": 0.7175541520118713
+    },
+    {
+      "index": 11,
+      "name": "descending frontal plane",
+      "vertices": [
+        "bl",
+        "cl",
+        "C",
+        "R",
+        "B"
+      ],
+      "max_distance_from_polygon_plane_m": 1.1175870895385742e-07,
+      "normal": [
+        0.0791807696223259,
+        -0.9897594451904297,
+        0.1187712699174881
+      ],
+      "area_m2": 0.5525585412979126
+    },
+    {
+      "index": 12,
+      "name": "integral shoulder face",
+      "vertices": [
+        "cl",
+        "dl",
+        "D",
+        "C"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0029988884925842285,
+      "normal": [
+        0.7845990657806396,
+        -0.585324764251709,
+        0.20444852113723755
+      ],
+      "area_m2": 0.31076762080192566
+    },
+    {
+      "index": 13,
+      "name": "right supported flank",
+      "vertices": [
+        "dl",
+        "el",
+        "E",
+        "D"
+      ],
+      "max_distance_from_polygon_plane_m": 0.01798427850008011,
+      "normal": [
+        0.9606173634529114,
+        0.21976853907108307,
+        0.17004714906215668
+      ],
+      "area_m2": 0.3519611656665802
+    },
+    {
+      "index": 14,
+      "name": "rear diagonal fracture",
+      "vertices": [
+        "el",
+        "fl",
+        "F",
+        "E"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0022422857582569122,
+      "normal": [
+        0.43167564272880554,
+        0.8981040120124817,
+        0.08405536413192749
+      ],
+      "area_m2": 0.5395254492759705
+    },
+    {
+      "index": 15,
+      "name": "broad rear plane",
+      "vertices": [
+        "fl",
+        "gl",
+        "G",
+        "F"
+      ],
+      "max_distance_from_polygon_plane_m": 0.018528595566749573,
+      "normal": [
+        -0.1803714483976364,
+        0.9775193929672241,
+        0.10918735712766647
+      ],
+      "area_m2": 0.8709799647331238
+    },
+    {
+      "index": 16,
+      "name": "west broad plane",
+      "vertices": [
+        "gl",
+        "hl",
+        "H",
+        "G"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0200951024889946,
+      "normal": [
+        -0.8579921722412109,
+        0.5042585134506226,
+        0.09784121066331863
+      ],
+      "area_m2": 0.5314734578132629
+    },
+    {
+      "index": 17,
+      "name": "west weathered corner",
+      "vertices": [
+        "hl",
+        "il",
+        "I",
+        "H"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0019633080810308456,
+      "normal": [
+        -0.9869745373725891,
+        -0.09063740819692612,
+        0.13291457295417786
+      ],
+      "area_m2": 0.3287825882434845
+    },
+    {
+      "index": 18,
+      "name": "front corner",
+      "vertices": [
+        "il",
+        "al",
+        "A",
+        "I"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0017334483563899994,
+      "normal": [
+        -0.883385181427002,
+        -0.45096778869628906,
+        0.12751002609729767
+      ],
+      "area_m2": 0.2776252329349518
+    },
+    {
+      "index": 19,
+      "name": "crown front bevel",
+      "vertices": [
+        "A",
+        "B",
+        "K",
+        "J"
+      ],
+      "max_distance_from_polygon_plane_m": 0.012326031923294067,
+      "normal": [
+        -0.13072648644447327,
+        -0.8264390826225281,
+        0.5476396679878235
+      ],
+      "area_m2": 0.3032286465167999
+    },
+    {
+      "index": 20,
+      "name": "long oblique roof",
+      "vertices": [
+        "B",
+        "R",
+        "S",
+        "L",
+        "K"
+      ],
+      "max_distance_from_polygon_plane_m": 0.08563409745693207,
+      "normal": [
+        0.5120470523834229,
+        -0.5768029689788818,
+        0.6364794969558716
+      ],
+      "area_m2": 0.5299903154373169
+    },
+    {
+      "index": 21,
+      "name": "shoulder bridge",
+      "vertices": [
+        "R",
+        "C",
+        "D",
+        "S"
+      ],
+      "max_distance_from_polygon_plane_m": 0.0015503093600273132,
+      "normal": [
+        0.6372576355934143,
+        -0.3873731791973114,
+        0.6662167310714722
+      ],
+      "area_m2": 0.276735782623291
+    },
+    {
+      "index": 22,
+      "name": "upper shoulder connecting plane",
+      "vertices": [
+        "S",
+        "D",
+        "E"
+      ],
+      "max_distance_from_polygon_plane_m": 6.984919309616089e-08,
+      "normal": [
+        0.7851623296737671,
+        0.049607641994953156,
+        0.6172999739646912
+      ],
+      "area_m2": 0.14312328398227692
+    },
+    {
+      "index": 23,
+      "name": "raked right roof",
+      "vertices": [
+        "S",
+        "E",
+        "M",
+        "L"
+      ],
+      "max_distance_from_polygon_plane_m": 0.011543266475200653,
+      "normal": [
+        0.7046874165534973,
+        0.1510573923587799,
+        0.6932512521743774
+      ],
+      "area_m2": 0.3038581311702728
+    },
+    {
+      "index": 24,
+      "name": "rear roof",
+      "vertices": [
+        "E",
+        "F",
+        "M"
+      ],
+      "max_distance_from_polygon_plane_m": 5.960464477539063e-08,
+      "normal": [
+        0.515186071395874,
+        0.6261767148971558,
+        0.5852229595184326
+      ],
+      "area_m2": 0.16848278045654297
+    },
+    {
+      "index": 25,
+      "name": "rear cap edge",
+      "vertices": [
+        "F",
+        "G",
+        "N",
+        "M"
+      ],
+      "max_distance_from_polygon_plane_m": 0.03817174769937992,
+      "normal": [
+        -0.04250381514430046,
+        0.8435378670692444,
+        0.535385012626648
+      ],
+      "area_m2": 0.3058546781539917
+    },
+    {
+      "index": 26,
+      "name": "left crown edge",
+      "vertices": [
+        "G",
+        "H",
+        "J",
+        "N"
+      ],
+      "max_distance_from_polygon_plane_m": 0.007569659501314163,
+      "normal": [
+        -0.7413342595100403,
+        0.11251278221607208,
+        0.6616377234458923
+      ],
+      "area_m2": 0.31996363401412964
+    },
+    {
+      "index": 27,
+      "name": "corner crown edge",
+      "vertices": [
+        "H",
+        "I",
+        "A",
+        "J"
+      ],
+      "max_distance_from_polygon_plane_m": 0.015987126622349024,
+      "normal": [
+        -0.7876240611076355,
+        -0.15027828514575958,
+        0.5975489616394043
+      ],
+      "area_m2": 0.1683543622493744
+    },
+    {
+      "index": 28,
+      "name": "glacial crown",
+      "vertices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N"
+      ],
+      "max_distance_from_polygon_plane_m": 0.07101387329748832,
+      "normal": [
+        0.07745454460382462,
+        0.06863858550786972,
+        0.9946303963661194
+      ],
+      "area_m2": 0.4764081537723541
+    }
+  ],
+  "disposable_edit_save_export": "PASS"
+}
