@@ -109,7 +109,7 @@ function inspect(){
 function capture(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/png');}
 for(const key of Object.keys(initial)){
  const el=document.getElementById(key) as HTMLInputElement|HTMLSelectElement;
- el.addEventListener('change',()=>{try{apply({[key]:key==='wireframe'?el.checked:el.value} as Partial<Config>);lastError=null;}
+ el.addEventListener('change',()=>{try{apply({[key]:key==='wireframe'?(el as HTMLInputElement).checked:el.value} as Partial<Config>);lastError=null;}
  catch(e){lastError=String(e);console.error(e);}});
 }
 function animate(){try{controls.update();renderer.render(scene,camera);frames++;}catch(e){lastError=String(e);console.error(e);}requestAnimationFrame(animate);}
