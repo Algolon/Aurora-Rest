@@ -1,0 +1,38 @@
+name: WTR-01A Wave Calibration Study (no deployment)
+on:
+  push:
+    branches: [art/wtr-01a-nordic-water-calibration]
+    paths:
+      - 'src/wtr-01/**'
+      - 'tools/wtr-01a/**'
+      - 'tests/wtr-01.test.ts'
+      - '.github/workflows/wtr-01a-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  webgl-study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Real Chromium WebGL wave studies
+        shell: bash
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 --strictPort > /tmp/wtr-01a-preview.log 2>&1 &
+          for n in $(seq 1 40); do if curl --fail --silent http://127.0.0.1:4173/wtr-01.html >/dev/null; then break; fi; sleep 1; done
+          WTR_OUTPUT=docs/wtr-01a/study-captures node tools/wtr-01a/capture.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WTR-01A1-genuine-WebGL-study
+          path: docs/wtr-01a/study-captures/
+          if-no-files-found: warn
+          retention-days: 20
