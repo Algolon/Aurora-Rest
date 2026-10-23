@@ -52,6 +52,13 @@ float tmHash(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fra
 float tmNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
  return mix(mix(tmHash(i),tmHash(i+vec2(1,0)),f.x),mix(tmHash(i+vec2(0,1)),tmHash(i+vec2(1,1)),f.x),f.y);}
 float tmFbm(vec2 p){return .6*tmNoise(p)+.3*tmNoise(p*2.13+17.)+.1*tmNoise(p*4.41+31.);}
+#ifdef TM_BAKED_NOISE
+// MAT-01P candidate: one filtered fetch from a tileable baked fBm instead of three value-noise octaves. p is in tmFbm
+// lattice units; gradients are passed explicitly because callers run inside per-material (non-uniform) branches.
+uniform highp sampler2D uNoise;
+uniform float uNoisePeriod;
+vec4 tmFbmB(vec2 p,vec2 dx,vec2 dy){return textureGrad(uNoise,p/uNoisePeriod,dx/uNoisePeriod,dy/uNoisePeriod);}
+#endif
 vec3 tmSlopeColor(float s){return s<.12?vec3(.569,.733,.565):s<.25?vec3(.851,.835,.490):s<.35?vec3(.906,.667,.376):s<.6?vec3(.792,.416,.325):vec3(.424,.212,.365);}
 `;
 
@@ -89,7 +96,11 @@ for(int m=0;m<MAT_COUNT;m++){
   vec2 o2=vec2(float(m)*.37+.21,float(m)*-.53+.67);
   vec4 a2=textureGrad(uAlbedo,vec3(R*(tmXZ*s)+o2,layer),R*(tmDx.xz*s),R*(tmDy.xz*s));
   vec4 s2=textureGrad(uSurface,vec3(R*(tmXZ*s)+o2,layer),R*(tmDx.xz*s),R*(tmDy.xz*s));
+#ifdef TM_BAKED_NOISE
+  float k=smoothstep(-.08,.08,tmFbmB(tmXZ*uAntiTile.y+vec2(float(m)*5.1,1.7),tmDx.xz*uAntiTile.y,tmDy.xz*uAntiTile.y).r-.5+(a2.a-a.a)*.35)*(1.-smoothstep(uAntiTile.x*.7,uAntiTile.x,vViewDist));
+#else
   float k=smoothstep(-.08,.08,tmFbm(tmXZ*uAntiTile.y+vec2(float(m)*5.1,1.7))-.5+(a2.a-a.a)*.35)*(1.-smoothstep(uAntiTile.x*.7,uAntiTile.x,vViewDist));
+#endif
   // Rotate the second sample's tangent normal back into the world frame.
   vec2 n2=s2.rg*2.-1.;n2=vec2(co*n2.x-si*n2.y,si*n2.x+co*n2.y);s2.rg=n2*.5+.5;
   a=mix(a,a2,k);sf=mix(sf,s2,k);
@@ -107,12 +118,20 @@ for(int m=0;m<MAT_COUNT;m++){
  }
 #ifdef TM_MESO
  // Meso tone (≈ 3–20 m): procedural world-space noise, so it can never repeat with the detail tile.
+#ifdef TM_BAKED_NOISE
+ float ms=uMatScale[m].y;float mn=tmFbmB(tmXZ*ms+vec2(float(m)*37.1,-11.7),tmDx.xz*ms,tmDy.xz*ms).g-.5;
+#else
  float ms=uMatScale[m].y;float mn=tmFbm(tmXZ*ms+vec2(float(m)*37.1,-11.7))-.5;
+#endif
  a.rgb*=1.+mn*uMatMisc[m].w*vec3(1.,.86,.72);
 #endif
  tmAlb[m]=a;tmSrf[m]=sf;tmPert[m]=pert;
  float edge=4.*tmW[m]*(1.-tmW[m]);
+#ifdef TM_BAKED_NOISE
+ tmScore[m]=tmW[m]+((a.a-.5)*uMatScale[m].w*min(1.,tmW[m]*4.)+(tmFbmB(tmXZ*.31+vec2(float(m)*7.3,2.9),tmDx.xz*.31,tmDy.xz*.31).b-.5)*.5*edge)*uHeightBlend;
+#else
  tmScore[m]=tmW[m]+((a.a-.5)*uMatScale[m].w*min(1.,tmW[m]*4.)+(tmFbm(tmXZ*.31+vec2(float(m)*7.3,2.9))-.5)*.5*edge)*uHeightBlend;
+#endif
  tmBest=max(tmBest,tmScore[m]);
 }
 float tmB[MAT_COUNT];float tmTot=0.;
@@ -126,7 +145,12 @@ for(int m=0;m<MAT_COUNT;m++){
  vec3 tint=mix(uMatMacroA[m],uMatMacroB[m],smoothstep(.22,.78,tmMacro))*mix(vec3(1.),uMatExposure[m],tmExpo);
  vec3 c=tmAlb[m].rgb*mix(1.,tmSrf[m].b,.6*(1.-tmFar));
  // Meso patches (1–8 m): irregular, height-aware, art-directed tint per material.
+#ifdef TM_BAKED_NOISE
+ float pw=uMatPatch[m].w;
+ float pn=.62*tmFbmB(tmXZ*pw+vec2(float(m)*13.7,float(m)*5.3),tmDx.xz*pw,tmDy.xz*pw).a+.38*tmFbmB(tmXZ*pw*.23+vec2(float(m)*3.1,9.2),tmDx.xz*pw*.23,tmDy.xz*pw*.23).r;
+#else
  float pn=.62*tmFbm(tmXZ*uMatPatch[m].w+vec2(float(m)*13.7,float(m)*5.3))+.38*tmFbm(tmXZ*uMatPatch[m].w*.23+vec2(float(m)*3.1,9.2));
+#endif
  float cov=uMatMisc[m].x;
  float pm=smoothstep(1.-cov-.07,1.-cov+.07,pn+(tmAlb[m].a-.5)*.22);
  c*=mix(vec3(1.),uMatPatch[m].rgb,pm);

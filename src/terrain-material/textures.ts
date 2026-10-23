@@ -3,7 +3,7 @@
  *   albedo  = sRGB colour (gradient-mapped through the material palette) + height in A
  *   surface = tangent normal x/z in R/G, cavity AO in B, roughness in A
  * Pure TypeScript, deterministic per (definition, size); runs once at load. */
-import {clamp,fbm,hash2,lerp,mulberry32,smoothstep} from './noise.ts';
+import {clamp,fbm,hash2,lerp,mulberry32,smoothstep,valueNoise} from './noise.ts';
 import type {MaterialDefinition} from './materials.ts';
 
 export interface SynthesizedTexture {size:number;albedo:Uint8Array;surface:Uint8Array;meanLinear:[number,number,number];meanHeight:number}
@@ -141,4 +141,19 @@ export function synthesizeMaterial(def:MaterialDefinition,size=512):SynthesizedT
   surface[o]=Math.round((.5-.5*sx/l)*255);surface[o+1]=Math.round((.5-.5*sz/l)*255);surface[o+2]=Math.round(ao*255);surface[o+3]=Math.round(clamp(p.r[i])*255);
  }
  return {size:S,albedo,surface,meanLinear:mean.map(v=>v/(S*S)) as [number,number,number],meanHeight:meanH/(S*S)};
+}
+
+/** MAT-01P candidate (opt-in): baked fBm for the shader's meso, patch, ecotone and anti-tiling masks.
+ * Same value-noise basis (smoothstep-interpolated lattice hash) and octave weights (.6/.3/.1) as `tmFbm` in shader.ts,
+ * but integer octave ratios (1, 2, 4) so it tiles every `period` lattice cells. Four decorrelated channels; output
+ * range 0..1 like tmFbm. Deterministic; synthesised once at load. */
+export interface BakedNoiseTexture {size:number;period:number;data:Uint8Array}
+export function synthesizeNoiseTexture(size=512,period=32,seed=7331):BakedNoiseTexture{
+ const data=new Uint8Array(size*size*4);
+ for(let y=0;y<size;y++)for(let x=0;x<size;x++){const u=x/size*period,v=y/size*period,o=(y*size+x)*4;
+  for(let c=0;c<4;c++){const s=seed+c*977;
+   const n=.6*(valueNoise(u,v,s,period)*.5+.5)+.3*(valueNoise(u*2,v*2,s+101,period*2)*.5+.5)+.1*(valueNoise(u*4,v*4,s+202,period*4)*.5+.5);
+   data[o+c]=Math.round(clamp(n)*255);}
+ }
+ return {size,period,data};
 }

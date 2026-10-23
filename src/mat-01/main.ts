@@ -3,7 +3,7 @@
 import * as THREE from 'three';
 import {TerrainMaterialQuery} from '../terrain-material/query.ts';
 import {MATERIALS} from '../terrain-material/materials.ts';
-import {synthesizeMaterial,type SynthesizedTexture} from '../terrain-material/textures.ts';
+import {synthesizeMaterial,synthesizeNoiseTexture,type BakedNoiseTexture,type SynthesizedTexture} from '../terrain-material/textures.ts';
 import type {MaterialClassification} from '../terrain-material/types.ts';
 import {TerrainMaterialResources,createTerrainMaterial,PROFILES,type QualityProfile} from '../terrain-material/render/terrain-material.ts';
 import {DEBUG_VIEWS,type DebugView} from '../terrain-material/render/shader.ts';
@@ -11,7 +11,7 @@ import {TerrainTiles,applyVertexColors,nodeHeight,type TileLayout} from '../terr
 import {CAMERAS,type Camera} from './cameras.ts';
 import './style.css';
 
-type Surface='material'|'vertex'|'plain';type Lighting='neutral'|'nordic'|'grazing';type Layout='canonical'|'tile200'|'lod';
+type Surface='material'|'vertex'|'plain';type NoiseMode='procedural'|'baked';type Lighting='neutral'|'nordic'|'grazing';type Layout='canonical'|'tile200'|'lod';
 const app=document.querySelector('#app')!;
 const opt=(v:string,l=v)=>`<option value="${v}">${l}</option>`;
 app.innerHTML=`<canvas id="world"></canvas><section id="ui"><h1>AURORA REST</h1><small>MAT-01 · terrain material review · GEO-R02B-R1 terrain</small>
@@ -21,6 +21,7 @@ app.innerHTML=`<canvas id="world"></canvas><section id="ui"><h1>AURORA REST</h1>
 <label>Debug <select id="debug">${DEBUG_VIEWS.map(v=>opt(v)).join('')}</select></label>
 <label>Lighting <select id="lighting">${opt('nordic','Nordic daylight')}${opt('neutral','Neutral')}${opt('grazing','Low grazing sun')}</select></label>
 <label>Profile <select id="profile">${opt('high')}${opt('balanced')}${opt('mobile')}</select></label>
+<label>Noise <select id="noise">${opt('procedural','Procedural fBm (MAT-01)')}${opt('baked','Baked noise texture (MAT-01P candidate)')}</select></label>
 <label>Tiling <select id="layout">${opt('canonical','400 m tiles · 4 m (canonical)')}${opt('tile200','200 m tiles · 4 m')}${opt('lod','LOD 4/8/16 m by distance')}</select></label>
 <div class="toggles"><label><input id="heightBlend" type="checkbox" checked> height blend</label><label><input id="normals" type="checkbox" checked> detail normals</label><label><input id="triplanar" type="checkbox" checked> triplanar rock</label><label><input id="wireframe" type="checkbox"> wireframe</label><label><input id="water" type="checkbox" checked> water</label></div>
 <div id="status">Loading…</div><div class="note">Review prototype. Software-rendered measurements are not GPU performance. Art approval is a separate owner decision.</div><div id="error"></div></section><div id="loading">Classifying terrain and synthesising materials…</div>`;
@@ -63,8 +64,15 @@ const waterGroup=new THREE.Group();scene.add(waterGroup);
 const ocean=new THREE.Mesh(new THREE.PlaneGeometry(40000,40000),new THREE.MeshLambertMaterial({color:0x3c6471,side:THREE.DoubleSide}));ocean.rotation.x=-Math.PI/2;waterGroup.add(ocean);
 {const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(meshBuf),3));g.computeVertexNormals();waterGroup.add(new THREE.Mesh(g,new THREE.MeshLambertMaterial({color:0x467c8c,side:THREE.DoubleSide})));}
 
-const state={surface:'material' as Surface,lighting:'nordic' as Lighting,profile:'high' as QualityProfile,layout:'canonical' as Layout,debug:'off' as DebugView,force:-1,heightBlend:true,normals:true,triplanar:true,wireframe:false,water:true,view:'m01-walk'};
-let resources=new TerrainMaterialResources(classification,textureCache[512],'high').acquire();
+const state={surface:'material' as Surface,lighting:'nordic' as Lighting,profile:'high' as QualityProfile,layout:'canonical' as Layout,debug:'off' as DebugView,force:-1,heightBlend:true,normals:true,triplanar:true,wireframe:false,water:true,view:'m01-walk',noise:'procedural' as NoiseMode};
+// MAT-01P: the baked noise texture is synthesised on first use only; procedural mode is MAT-01's unchanged path.
+let bakedNoise:BakedNoiseTexture|null=null;
+function buildResources(p:QualityProfile,noise:NoiseMode){
+ const size=PROFILES[p].textureSize;textureCache[size]??=MATERIALS.map(d=>synthesizeMaterial(d,size));
+ if(noise==='baked')bakedNoise??=synthesizeNoiseTexture();
+ return new TerrainMaterialResources(classification,textureCache[size],p,noise==='baked'?bakedNoise:null).acquire();
+}
+let resources=buildResources('high','procedural');
 let terrainMaterial=createTerrainMaterial(resources);
 const plainMaterial=new THREE.MeshLambertMaterial({color:0xb4b6b0,side:THREE.DoubleSide});
 const vertexMaterial=new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide});
@@ -81,11 +89,12 @@ function applyState(){
  resources.uniforms.uTriplanarOn.value=state.triplanar&&resources.settings.triplanar?1:0;
  waterGroup.visible=state.water;
 }
-async function setProfile(p:QualityProfile){
- const size=PROFILES[p].textureSize;textureCache[size]??=MATERIALS.map(d=>synthesizeMaterial(d,size));
- const old=resources,oldMat=terrainMaterial;resources=new TerrainMaterialResources(classification,textureCache[size],p).acquire();terrainMaterial=createTerrainMaterial(resources);
- oldMat.dispose();old.release();state.profile=p;$<HTMLSelectElement>('profile').value=p;applyState();
+function rebuild(p:QualityProfile,noise:NoiseMode){
+ const old=resources,oldMat=terrainMaterial;resources=buildResources(p,noise);terrainMaterial=createTerrainMaterial(resources);
+ oldMat.dispose();old.release();state.profile=p;state.noise=noise;$<HTMLSelectElement>('profile').value=p;$<HTMLSelectElement>('noise').value=noise;applyState();
 }
+async function setProfile(p:QualityProfile){rebuild(p,state.noise);}
+function setNoise(n:NoiseMode){if(n!==state.noise)rebuild(state.profile,n);}
 function setLayout(id:Layout,focus:{x:number;z:number}={x:eye.x,z:eye.z}){tiles.relayout(layoutFor(id,focus));state.layout=id;vertexColorsBuilt=false;$<HTMLSelectElement>('layout').value=id;applyState();}
 
 // Cameras (same mirrored convention as src/geo-r02b/main.ts).
@@ -104,7 +113,7 @@ addEventListener('resize',resize);
 // UI wiring.
 const bindSelect=(id:string,fn:(v:string)=>void)=>{$<HTMLSelectElement>(id).onchange=e=>fn((e.target as HTMLSelectElement).value);};
 bindSelect('view',setView);bindSelect('surface',v=>{state.surface=v as Surface;applyState();});bindSelect('force',v=>{state.force=Number(v);applyState();});
-bindSelect('debug',v=>{state.debug=v as DebugView;applyState();});bindSelect('lighting',v=>setLighting(v as Lighting));bindSelect('profile',v=>void setProfile(v as QualityProfile));bindSelect('layout',v=>setLayout(v as Layout));
+bindSelect('debug',v=>{state.debug=v as DebugView;applyState();});bindSelect('lighting',v=>setLighting(v as Lighting));bindSelect('profile',v=>void setProfile(v as QualityProfile));bindSelect('noise',v=>setNoise(v as NoiseMode));bindSelect('layout',v=>setLayout(v as Layout));
 for(const k of ['heightBlend','normals','triplanar','wireframe','water'] as const)$<HTMLInputElement>(k).onchange=e=>{(state as any)[k]=(e.target as HTMLInputElement).checked;applyState();};
 const keys=new Set<string>();let drag=false;
 addEventListener('keydown',e=>{if((e.target as HTMLElement).matches('input,select'))return;keys.add(e.key.toLowerCase());});addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());
@@ -117,7 +126,7 @@ function gpuName(){const gl=renderer.getContext(),ext=gl.getExtension('WEBGL_deb
 function metrics(){const info=renderer.info,sorted=[...frameTimes].sort((a,b)=>a-b);
  return {renderer:gpuName(),calls:info.render.calls,triangles:info.render.triangles,programs:info.programs?.length??0,geometries:info.memory.geometries,textures:info.memory.textures,
   medianFrameMs:sorted.length?+sorted[Math.floor(sorted.length/2)].toFixed(1):null,terrainTriangles:tiles.triangleCount,tiles:tiles.tiles.length,
-  materialMemoryBytes:resources.memoryBytes,profile:state.profile,classificationHash:result.hash,classificationTimingsMs:result.timingsMs,synthesisMs:result.synthesisMs,workerTotalMs:result.workerTotalMs,dataLoadMs:loadMs,shaderErrors:[...shaderErrors]};}
+  materialMemoryBytes:resources.memoryBytes,profile:state.profile,noise:state.noise,classificationHash:result.hash,classificationTimingsMs:result.timingsMs,synthesisMs:result.synthesisMs,workerTotalMs:result.workerTotalMs,dataLoadMs:loadMs,shaderErrors:[...shaderErrors]};}
 let paused=false;
 function animate(now:number){requestAnimationFrame(animate);if(paused)return;const dt=Math.min(.07,(now-last)/1000);frameTimes.push(now-last);if(frameTimes.length>120)frameTimes.shift();last=now;
  if(camera===perspective&&keys.size){const sp=keys.has('shift')?120:12,f=Number(keys.has('w'))-Number(keys.has('s')),r=Number(keys.has('d'))-Number(keys.has('a'));
@@ -135,7 +144,7 @@ const qa={
  uniform(name:string,value:unknown){const u=resources.uniforms[name];if(!u)throw new Error('No uniform '+name);const v=u.value as {set?:(...a:number[])=>void};if(Array.isArray(value)&&v.set)v.set(...value);else u.value=value;},
  /** Stop the continuous render loop (automation renders explicitly via snap/benchmark). */
  pause(p=true){paused=p;},setView,applyState,setLighting,setProfile,setLayout,
- set(patch:Partial<typeof state>){if(patch.lighting)setLighting(patch.lighting);Object.assign(state,patch);applyState();},
+ set(patch:Partial<typeof state>){if(patch.lighting)setLighting(patch.lighting);if(patch.noise)setNoise(patch.noise);Object.assign(state,patch);applyState();},setNoise,
  metrics,errors,sample:(x:number,z:number)=>query.sample(x,z),
  /** Synchronous render+readPixels timing. On a software renderer this measures CPU rasterisation, not GPU speed. */
  benchmark(n=5){renderSync();const t=performance.now();for(let i=0;i<n;i++)renderSync();return +((performance.now()-t)/n).toFixed(1);},
@@ -160,12 +169,12 @@ const qa={
    max=Math.max(max,d);sum+=d;if(d>4)over4++;if(d>16)over16++;const v=Math.min(255,d*8);img.data[o]=v;img.data[o+1]=v;img.data[o+2]=v;img.data[o+3]=255;}
   ctx.putImageData(img,0,0);return {pixels:A.w*A.h,maxDelta:max,meanDelta:+(sum/(A.w*A.h)).toFixed(4),over4,over16,image:c.toDataURL('image/png')};},
  /** Dispose every terrain-material GPU resource, verify the texture count drops, recreate, render again. */
- lifecycle(){state.surface='material';applyState();renderSync();const before=renderer.info.memory.textures;const p=state.profile;
+ lifecycle(){state.surface='material';applyState();renderSync();const before=renderer.info.memory.textures;const p=state.profile,owned=resources.textures.length;
   terrainMaterial.dispose();resources.release();const disposed={resourcesDisposed:resources.disposed,owners:resources.ownerCount};
   tiles.setMaterial(plainMaterial);renderSync();const afterDispose=renderer.info.memory.textures;
-  resources=new TerrainMaterialResources(classification,textureCache[PROFILES[p].textureSize],p).acquire();terrainMaterial=createTerrainMaterial(resources);applyState();renderSync();
-  return {before,afterDispose,afterRecreate:renderer.info.memory.textures,...disposed,shaderErrors:[...shaderErrors]};},
+  resources=buildResources(p,state.noise);terrainMaterial=createTerrainMaterial(resources);applyState();renderSync();
+  return {owned,noise:state.noise,before,afterDispose,afterRecreate:renderer.info.memory.textures,...disposed,shaderErrors:[...shaderErrors]};},
 };
 Object.assign(window,{__auroraMAT01:qa});
-setLighting('nordic');applyState();setView(new URLSearchParams(location.search).get('view')??'m01-walk');
+setLighting('nordic');if(new URLSearchParams(location.search).get('noise')==='baked')setNoise('baked');applyState();setView(new URLSearchParams(location.search).get('view')??'m01-walk');
 $('loading').remove();requestAnimationFrame(animate);

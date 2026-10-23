@@ -7,16 +7,16 @@ import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
 const arg=(n,f)=>{const i=process.argv.indexOf('--'+n);return i>0?process.argv[i+1]:f;};
-const url=arg('url','http://127.0.0.1:4320/mat-01.html'),out=arg('out','docs/mat-01/browser-check.json');
+const url=arg('url','http://127.0.0.1:4320/mat-01.html'),out=arg('out','docs/mat-01/browser-check.json'),noise=arg('noise','procedural');
 const executablePath=process.env.CHROME||(existsSync('/opt/pw-browsers/chromium')?'/opt/pw-browsers/chromium':undefined);
 const browser=await chromium.launch({headless:true,executablePath,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
-const results={tool:'tools/mat-01/browser-check.mjs',url,browser:browser.version(),viewport:'640x400',checks:[]};let ok=true;
+const results={tool:'tools/mat-01/browser-check.mjs',url,noise,browser:browser.version(),viewport:'640x400',checks:[]};let ok=true;
 const check=(name,pass,detail)=>{results.checks.push({name,pass,detail});if(!pass)ok=false;console.log(pass?'PASS':'FAIL',name,JSON.stringify(detail));};
 try{
  const page=await browser.newPage({viewport:{width:640,height:400},deviceScaleFactor:1}),errors=[];page.setDefaultTimeout(900000);
  page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  await page.goto(url,{waitUntil:'load'});await page.waitForFunction(()=>window.__auroraMAT01?.ready,null,{timeout:900000});
- await page.addStyleTag({content:'#ui{display:none!important}'});await page.evaluate(()=>window.__auroraMAT01.pause(true));
+ await page.addStyleTag({content:'#ui{display:none!important}'});await page.evaluate(n=>{const q=window.__auroraMAT01;q.pause(true);if(n!=='procedural')q.setNoise(n);},noise);
  const stats=()=>page.evaluate(()=>{const src=document.querySelector('#world'),c=document.createElement('canvas');c.width=src.width;c.height=src.height;const x=c.getContext('2d');x.drawImage(src,0,0);
   const d=x.getImageData(0,0,c.width,c.height).data;let n=0,m=[0,0,0],v=0;
   for(let y=Math.floor(c.height*.55);y<c.height;y++)for(let i=0;i<c.width;i++){const o=(y*c.width+i)*4;for(let q=0;q<3;q++)m[q]+=d[o+q];n++;}
@@ -41,7 +41,7 @@ try{
  const lod=await page.evaluate(()=>{const q=window.__auroraMAT01;q.set({debug:'weights',water:false});q.setLayout('canonical');q.setView('birchwood-ortho');q.snap('a');q.setLayout('lod',{x:150,z:-1150});q.setView('birchwood-ortho');q.snap('b');const d=q.diff('a','b');delete d.image;q.setLayout('canonical');q.set({debug:'off',water:true});return d;});
  check('LOD (4 → 8/16 m mesh) keeps top-down material identity (≤0.5% pixels Δ>16)',lod.over16/lod.pixels<=.005,{...lod,fractionOver16:+(lod.over16/lod.pixels).toFixed(5)});
  const life=await page.evaluate(()=>window.__auroraMAT01.lifecycle());
- check('resources dispose (texture count drops by 4) and recreate (count restored)',life.afterDispose===life.before-4&&life.afterRecreate===life.before&&life.resourcesDisposed,life);
+ check(`resources dispose (texture count drops by ${life.owned??4}) and recreate (count restored)`,life.afterDispose===life.before-(life.owned??4)&&life.afterRecreate===life.before&&life.resourcesDisposed&&(life.noise??'procedural')===noise,life);
  check('no page errors',errors.length===0,{errors});
 }catch(e){ok=false;results.failure=String(e?.stack??e);console.error(e);}
 finally{results.pass=ok;await writeFile(out,JSON.stringify(results,null,1)+'\n');await browser.close();}

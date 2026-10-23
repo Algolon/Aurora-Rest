@@ -4,7 +4,7 @@
 import * as THREE from 'three';
 import {MATERIALS,type MaterialDefinition} from '../materials.ts';
 import type {MaterialClassification} from '../types.ts';
-import type {SynthesizedTexture} from '../textures.ts';
+import type {BakedNoiseTexture,SynthesizedTexture} from '../textures.ts';
 import {DEBUG_VIEWS,FRAGMENT_DEBUG,FRAGMENT_MATERIAL,FRAGMENT_NORMAL,FRAGMENT_PARS,FRAGMENT_ROUGHNESS,VERTEX_MAIN,VERTEX_PARS,type DebugView} from './shader.ts';
 
 export type QualityProfile='high'|'balanced'|'mobile';
@@ -31,10 +31,12 @@ export class TerrainMaterialResources {
  readonly albedo:THREE.DataArrayTexture;readonly surface:THREE.DataArrayTexture;
  readonly definitions:readonly MaterialDefinition[];readonly means:[number,number,number][];
  readonly uniforms:Record<string,THREE.IUniform>;
- readonly memoryBytes:{classification:number;detail:number;total:number};
+ readonly memoryBytes:{classification:number;detail:number;noise:number;total:number};
+ /** MAT-01P candidate: present only when baked noise was requested; otherwise the shader is MAT-01's procedural path. */
+ readonly noise:THREE.DataTexture|null;
  private owners=0;private disposedFlag=false;
 
- constructor(classification:MaterialClassification,textures:readonly SynthesizedTexture[],profile:QualityProfile){
+ constructor(classification:MaterialClassification,textures:readonly SynthesizedTexture[],profile:QualityProfile,bakedNoise:BakedNoiseTexture|null=null){
   this.profile=profile;this.settings=PROFILES[profile];
   this.definitions=classification.materials.map(id=>{const d=MATERIALS.find(m=>m.id===id);if(!d)throw new Error('No definition for '+id);return d;});
   if(textures.length!==this.definitions.length)throw new Error('Texture count does not match material count');
@@ -64,8 +66,14 @@ export class TerrainMaterialResources {
    uDetailFade:{value:new THREE.Vector2(35,170)},uFarBlend:{value:new THREE.Vector2(350,1800)},uAntiTile:{value:new THREE.Vector2(260,1/9)},
    uHeightBlend:{value:1},uNormalScale:{value:1},uTriplanarOn:{value:this.settings.triplanar?1:0},uDebug:{value:0},uForce:{value:-1},
   };
-  const mip=4/3,classBytes=(map.weights.length+map.attributes.length)*mip,detailBytes=S*S*4*N*2*mip;
-  this.memoryBytes={classification:Math.round(classBytes),detail:Math.round(detailBytes),total:Math.round(classBytes+detailBytes)};
+  this.noise=null;
+  if(bakedNoise){
+   const n=linearMip(new THREE.DataTexture(bakedNoise.data,bakedNoise.size,bakedNoise.size,THREE.RGBAFormat,THREE.UnsignedByteType));
+   n.wrapS=n.wrapT=THREE.RepeatWrapping;this.noise=n;
+   Object.assign(this.uniforms,{uNoise:{value:n},uNoisePeriod:{value:bakedNoise.period}});
+  }
+  const mip=4/3,classBytes=(map.weights.length+map.attributes.length)*mip,detailBytes=S*S*4*N*2*mip,noiseBytes=bakedNoise?bakedNoise.data.length*mip:0;
+  this.memoryBytes={classification:Math.round(classBytes),detail:Math.round(detailBytes),noise:Math.round(noiseBytes),total:Math.round(classBytes+detailBytes+noiseBytes)};
  }
  get disposed(){return this.disposedFlag;}
  acquire(){if(this.disposedFlag)throw new Error('Terrain material resources were disposed');this.owners++;return this;}
@@ -73,14 +81,16 @@ export class TerrainMaterialResources {
  get ownerCount(){return this.owners;}
  setDebug(view:DebugView){const i=DEBUG_VIEWS.indexOf(view);if(i<0)throw new Error('Unknown debug view '+view);this.uniforms.uDebug.value=i;}
  forceMaterial(index:number){this.uniforms.uForce.value=index;}
- dispose(){if(this.disposedFlag)return;this.disposedFlag=true;for(const t of [this.weights,this.attributes,this.albedo,this.surface])t.dispose();}
+ /** GPU textures owned by this instance (4, or 5 with baked noise). */
+ get textures(){return [this.weights,this.attributes,this.albedo,this.surface,...(this.noise?[this.noise]:[])];}
+ dispose(){if(this.disposedFlag)return;this.disposedFlag=true;for(const t of this.textures)t.dispose();}
 }
 
 /** One shared material per resources instance; the program is identical for every tile and LOD. */
 export function createTerrainMaterial(resources:TerrainMaterialResources):THREE.MeshStandardMaterial{
  const material=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});
  const N=resources.definitions.length;
- material.defines={MAT_COUNT:N,MAT_LAYERS:Math.ceil(N/4),...(resources.settings.meso?{TM_MESO:''}:{}),...(resources.settings.antiTile?{TM_ANTITILE:''}:{})};
+ material.defines={MAT_COUNT:N,MAT_LAYERS:Math.ceil(N/4),...(resources.settings.meso?{TM_MESO:''}:{}),...(resources.settings.antiTile?{TM_ANTITILE:''}:{}),...(resources.noise?{TM_BAKED_NOISE:''}:{})};
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,resources.uniforms);
   shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\n'+VERTEX_PARS).replace('#include <project_vertex>','#include <project_vertex>\n'+VERTEX_MAIN);
@@ -88,7 +98,7 @@ export function createTerrainMaterial(resources:TerrainMaterialResources):THREE.
    .replace('#include <map_fragment>',FRAGMENT_MATERIAL).replace('#include <roughnessmap_fragment>',FRAGMENT_ROUGHNESS)
    .replace('#include <normal_fragment_maps>',FRAGMENT_NORMAL).replace('#include <dithering_fragment>','#include <dithering_fragment>\n'+FRAGMENT_DEBUG);
  };
- material.customProgramCacheKey=()=>`aurora-terrain-material-v1-${resources.profile}-${N}`;
+ material.customProgramCacheKey=()=>`aurora-terrain-material-v1-${resources.profile}-${N}${resources.noise?'-baked':''}`;
  material.userData.terrainMaterial=true;
  return material;
 }
