@@ -7,7 +7,10 @@ const fixture=(id:string,family:Placement['family'],x:number,z:number):Placement
 test('genuine corridor anchor is in authored experience ROI and NOT forest anchor',()=>{
  assert.equal(GATEWAY.route[2][0],-350);assert.equal(GATEWAY.route[2][1],-290);
  assert(GATEWAY.groves.length>=5);assert(Math.hypot(-350+740,-290+50)>450);
- assert(clearance(-350,-290));assert(!clearance(-740,-50));assert(!clearance(-200,250));
+ assert(clearance(-350,-290));
+ assert(GATEWAY.route[0][1]<GATEWAY.route.at(-1)![1], 'route should progress north-east, not south-east');
+ assert(GATEWAY.cameras.length===3);
+ assert(GATEWAY.cameras.every(c=>c.heading<-1.9&&c.heading>-3.0),'walk views should follow route tangent');assert(!clearance(-740,-50));assert(!clearance(-200,250));
 });
 test('authored grove/juvenile/grass data has unique deterministic local IDs and route remains open',()=>{
  const a=authoredPositions(),b=authoredPositions();
