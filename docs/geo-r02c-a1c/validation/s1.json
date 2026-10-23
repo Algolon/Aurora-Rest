@@ -1,0 +1,226 @@
+{
+ "variant": "s1",
+ "label": "A1c S1 \u00b7 asymmetric ridge massing",
+ "terrainSha256": "dcdb46ca1d7ec93cf977ece7fe3ece36ae60c5c1884341c29b2951c7443915c3",
+ "changedCells": 24596,
+ "checks": {
+  "outsideWindowBboxUnchanged": true,
+  "protectedClassChangedCells": {
+   "sea": 0,
+   "lake": 0,
+   "wet": 0,
+   "valley": 0,
+   "crest": 1965,
+   "otherEquality": 0,
+   "corridor": 0,
+   "zone": 0,
+   "divide": 0,
+   "waterSurface": 0
+  },
+  "protectedUnchanged": false,
+  "changedOnlyWhereMaskPositive": true,
+  "crestCellsBelowBound": 0,
+  "wetCellsChanged": 0,
+  "landSeaSignChanged": 0,
+  "coastBand0to150Changed": 0,
+  "routeCentrelineMaxChangeM": {
+   "hero": 0.0,
+   "tarn-ascent": 0.0,
+   "peak-ascent": 0.0,
+   "hidden-loop": 0.0,
+   "west-cape-spur": 0.0,
+   "south-shoulder-loop": 0.0
+  },
+  "sinksBox": {
+   "rows": [
+    117,
+    605
+   ],
+   "cols": [
+    399,
+    867
+   ]
+  },
+  "sinksR1": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "sinksVariant": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "newDrySinkCells1cm": 0,
+  "maxNewFillDepthM": 0.0,
+  "drainageDestinationChangedCells": 0,
+  "drainageTransitions(1=HighTarn,2=sea,3=other)": {},
+  "drainageChangedHa": 0.0,
+  "deltaStats": {
+   "minM": 0.0,
+   "maxM": 19.99993896484375,
+   "changedHa": 39.35,
+   "maxDeltaGradient": 0.5435638427734375,
+   "cellsDeltaGradientOver1": 0
+  },
+  "slopeStats": {
+   "r1MaxCellSlope": 12.154516458511353,
+   "variantMaxCellSlope": 12.154516458511353,
+   "variantCellEdgesOver45deg": 77854,
+   "r1CellEdgesOver45deg": 77099,
+   "variantCellEdgesOver60deg": 18149
+  },
+  "pass": true,
+  "protectedUnchangedExceptDeclaredCrest": true,
+  "allChangedCellsDeclared": true,
+  "crestRelease": {
+   "crestCellsRaised": 1965,
+   "crestCellsLowered": 0,
+   "crestCellsBelowBound": 0,
+   "maxCrestRaiseM": 19.99993896484375
+  },
+  "summit": {
+   "heightR1M": 899.953369140625,
+   "heightVariantM": 899.953369140625,
+   "unchanged": true,
+   "windowMaximumUnchanged": true,
+   "closestChangeToSummitM": 196.98730923589977,
+   "closestChangeToTrailM": 137.7534028617805
+  },
+  "transitions": {
+   "deltaGradientFade": {
+    "cells": 10917,
+    "p99": 0.3752731152324917,
+    "max": 0.44883305969666154
+   },
+   "deltaGradientCore": {
+    "cells": 14639,
+    "p99": 0.384527898924067,
+    "max": 0.49918619386402074
+   },
+   "deltaCurvatureFade": {
+    "cells": 10917,
+    "p99": 0.0325427132844925,
+    "max": 0.05838167667388916
+   },
+   "deltaCurvatureCore": {
+    "cells": 14639,
+    "p99": 0.036590356081723924,
+    "max": 0.07880473136901855
+   },
+   "designedVolumeM3": 2577091.6767019946,
+   "appliedVolumeM3": 1660972.5640115098,
+   "smooth": true
+  },
+  "routeCrossSlope": {
+   "hero": {
+    "8m": {
+     "p95Before": 0.442,
+     "p95After": 0.442,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.424,
+     "p95After": 0.424,
+     "maxChange": 0.0
+    }
+   },
+   "tarn-ascent": {
+    "8m": {
+     "p95Before": 0.406,
+     "p95After": 0.406,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.407,
+     "p95After": 0.407,
+     "maxChange": 0.0
+    }
+   },
+   "peak-ascent": {
+    "8m": {
+     "p95Before": 0.7,
+     "p95After": 0.7,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.684,
+     "p95After": 0.684,
+     "maxChange": 0.0
+    }
+   },
+   "hidden-loop": {
+    "8m": {
+     "p95Before": 0.49,
+     "p95After": 0.49,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.492,
+     "p95After": 0.492,
+     "maxChange": 0.0
+    }
+   },
+   "west-cape-spur": {
+    "8m": {
+     "p95Before": 0.239,
+     "p95After": 0.239,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.239,
+     "p95After": 0.239,
+     "maxChange": 0.0
+    }
+   },
+   "south-shoulder-loop": {
+    "8m": {
+     "p95Before": 0.414,
+     "p95After": 0.414,
+     "maxChange": 0.0
+    },
+    "20m": {
+     "p95Before": 0.414,
+     "p95After": 0.414,
+     "maxChange": 0.0
+    }
+   }
+  },
+  "a1aStrictPassNote": "The unmodified A1a suite reports pass = false whenever crest cells change; under the declared R-B trial the A1c pass above applies instead.",
+  "a1aStrictPass": false
+ }
+}

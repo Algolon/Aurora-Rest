@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 508" font-family="DejaVu Sans,Arial,sans-serif" font-size="12">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="16" y="24" font-size="16" font-weight="bold" fill="#0b0b0b">North Peak silhouette feasibility under the R-B trial envelope (+25 m, raise-only)</text>
+<text x="16" y="44" fill="#52514e">Measured on R1 and on the generated S1 terrain. Pixels at the review size (60° vertical FOV over 800 px).</text>
+<text x="250" y="74" font-weight="bold" fill="#0b0b0b">What forms the skyline (% of its width)</text>
+<text x="680" y="74" font-weight="bold" fill="#0b0b0b">Maximum skyline shift (px)</text>
+<rect x="250" y="446" width="10" height="10" rx="2" fill="#b9b7ad"/><text x="266" y="455" fill="#52514e">frozen: summit dome, trail corridor, frozen crest</text>
+<rect x="250" y="462" width="10" height="10" rx="2" fill="#1baf7a"/><text x="266" y="471" fill="#52514e">eligible crest</text>
+<rect x="250" y="478" width="10" height="10" rx="2" fill="#eda100"/><text x="266" y="487" fill="#52514e">eligible shoulder</text>
+<rect x="680" y="446" width="10" height="10" rx="2" fill="#2a78d6"/><text x="696" y="455" fill="#52514e">+25 m upper bound (every eligible point lifted the full 25 m)</text>
+<rect x="680" y="462" width="10" height="10" rx="2" fill="#eb6834"/><text x="696" y="471" fill="#52514e">S1 as built (after flow and drainage guarantees)</text>
+<line x1="680.0" x2="680.0" y1="86" y2="432" stroke="#e1e0d9"/><text x="680.0" y="442" fill="#898781" text-anchor="middle" font-size="10">0</text>
+<line x1="748.3333333333334" x2="748.3333333333334" y1="86" y2="432" stroke="#e1e0d9"/><text x="748.3333333333334" y="442" fill="#898781" text-anchor="middle" font-size="10">10</text>
+<line x1="816.6666666666666" x2="816.6666666666666" y1="86" y2="432" stroke="#e1e0d9"/><text x="816.6666666666666" y="442" fill="#898781" text-anchor="middle" font-size="10">20</text>
+<line x1="885.0" x2="885.0" y1="86" y2="432" stroke="#e1e0d9"/><text x="885.0" y="442" fill="#898781" text-anchor="middle" font-size="10">30</text>
+<line x1="953.3333333333333" x2="953.3333333333333" y1="86" y2="432" stroke="#e1e0d9"/><text x="953.3333333333333" y="442" fill="#898781" text-anchor="middle" font-size="10">40</text>
+<line x1="1021.6666666666667" x2="1021.6666666666667" y1="86" y2="432" stroke="#e1e0d9"/><text x="1021.6666666666667" y="442" fill="#898781" text-anchor="middle" font-size="10">50</text>
+<line x1="1090.0" x2="1090.0" y1="86" y2="432" stroke="#e1e0d9"/><text x="1090.0" y="442" fill="#898781" text-anchor="middle" font-size="10">60</text>
+<text x="16" y="106" fill="#0b0b0b">Birchwood Forest</text><text x="16" y="119" fill="#898781" font-size="10">2.5 km to summit</text>
+<rect x="250.0" y="96" width="154.8" height="18" rx="3" fill="#b9b7ad"><title>Birchwood Forest: frozen 49.0 %</title></rect>
+<rect x="406.8" y="96" width="161.2" height="18" rx="3" fill="#1baf7a"><title>Birchwood Forest: eligible crest 51.0 %</title></rect>
+<text x="576" y="109" fill="#52514e" font-size="11">49 % frozen</text>
+<line x1="680" x2="1090" y1="100" y2="100" stroke="transparent" stroke-width="10"><title>Birchwood Forest: upper bound 9.3 px</title></line>
+<rect x="680" y="96" width="63.5" height="9" rx="2" fill="#2a78d6"><title>Birchwood Forest: upper bound 9.3 px</title></rect>
+<text x="748.5" y="104" fill="#52514e" font-size="10">9.3</text>
+<line x1="680" x2="1090" y1="111" y2="111" stroke="transparent" stroke-width="10"><title>Birchwood Forest: S1 4.2 px</title></line>
+<rect x="680" y="107" width="28.7" height="9" rx="2" fill="#eb6834"><title>Birchwood Forest: S1 4.2 px</title></rect>
+<text x="713.7" y="115" fill="#52514e" font-size="10">4.2</text>
+<text x="16" y="140" fill="#0b0b0b">Central Valley shoulder</text><text x="16" y="153" fill="#898781" font-size="10">2.9 km to summit</text>
+<rect x="250.0" y="130" width="159.0" height="18" rx="3" fill="#b9b7ad"><title>Central Valley shoulder: frozen 50.3 %</title></rect>
+<rect x="411.0" y="130" width="139.8" height="18" rx="3" fill="#1baf7a"><title>Central Valley shoulder: eligible crest 44.3 %</title></rect>
+<rect x="552.7" y="130" width="15.3" height="18" rx="3" fill="#eda100"><title>Central Valley shoulder: eligible shoulder 5.4 %</title></rect>
+<text x="576" y="143" fill="#52514e" font-size="11">50 % frozen</text>
+<line x1="680" x2="1090" y1="134" y2="134" stroke="transparent" stroke-width="10"><title>Central Valley shoulder: upper bound 7.6 px</title></line>
+<rect x="680" y="130" width="51.9" height="9" rx="2" fill="#2a78d6"><title>Central Valley shoulder: upper bound 7.6 px</title></rect>
+<text x="736.9" y="138" fill="#52514e" font-size="10">7.6</text>
+<line x1="680" x2="1090" y1="145" y2="145" stroke="transparent" stroke-width="10"><title>Central Valley shoulder: S1 2.7 px</title></line>
+<rect x="680" y="141" width="18.5" height="9" rx="2" fill="#eb6834"><title>Central Valley shoulder: S1 2.7 px</title></rect>
+<text x="703.5" y="149" fill="#52514e" font-size="10">2.7</text>
+<text x="16" y="174" fill="#0b0b0b">Western windward coast (K3)</text><text x="16" y="187" fill="#898781" font-size="10">1.2 km to summit</text>
+<rect x="250.0" y="164" width="144.9" height="18" rx="3" fill="#b9b7ad"><title>Western windward coast (K3): frozen 45.9 %</title></rect>
+<rect x="396.9" y="164" width="97.8" height="18" rx="3" fill="#1baf7a"><title>Western windward coast (K3): eligible crest 31.2 %</title></rect>
+<rect x="496.7" y="164" width="71.3" height="18" rx="3" fill="#eda100"><title>Western windward coast (K3): eligible shoulder 22.9 %</title></rect>
+<text x="576" y="177" fill="#52514e" font-size="11">46 % frozen</text>
+<line x1="680" x2="1090" y1="168" y2="168" stroke="transparent" stroke-width="10"><title>Western windward coast (K3): upper bound 27.7 px</title></line>
+<rect x="680" y="164" width="189.3" height="9" rx="2" fill="#2a78d6"><title>Western windward coast (K3): upper bound 27.7 px</title></rect>
+<text x="874.3" y="172" fill="#52514e" font-size="10">27.7</text>
+<line x1="680" x2="1090" y1="179" y2="179" stroke="transparent" stroke-width="10"><title>Western windward coast (K3): S1 14.9 px</title></line>
+<rect x="680" y="175" width="101.8" height="9" rx="2" fill="#eb6834"><title>Western windward coast (K3): S1 14.9 px</title></rect>
+<text x="786.8" y="183" fill="#52514e" font-size="10">14.9</text>
+<text x="16" y="208" fill="#0b0b0b">High Tarn east shore</text><text x="16" y="221" fill="#898781" font-size="10">2.1 km to summit</text>
+<rect x="250.0" y="198" width="110.3" height="18" rx="3" fill="#b9b7ad"><title>High Tarn east shore: frozen 35.1 %</title></rect>
+<rect x="362.3" y="198" width="114.5" height="18" rx="3" fill="#1baf7a"><title>High Tarn east shore: eligible crest 36.4 %</title></rect>
+<rect x="478.8" y="198" width="89.2" height="18" rx="3" fill="#eda100"><title>High Tarn east shore: eligible shoulder 28.5 %</title></rect>
+<text x="576" y="211" fill="#52514e" font-size="11">35 % frozen</text>
+<line x1="680" x2="1090" y1="202" y2="202" stroke="transparent" stroke-width="10"><title>High Tarn east shore: upper bound 17.4 px</title></line>
+<rect x="680" y="198" width="118.9" height="9" rx="2" fill="#2a78d6"><title>High Tarn east shore: upper bound 17.4 px</title></rect>
+<text x="803.9" y="206" fill="#52514e" font-size="10">17.4</text>
+<line x1="680" x2="1090" y1="213" y2="213" stroke="transparent" stroke-width="10"><title>High Tarn east shore: S1 5.7 px</title></line>
+<rect x="680" y="209" width="39.0" height="9" rx="2" fill="#eb6834"><title>High Tarn east shore: S1 5.7 px</title></rect>
+<text x="724.0" y="217" fill="#52514e" font-size="10">5.7</text>
+<text x="16" y="242" fill="#0b0b0b">High Tarn overlook</text><text x="16" y="255" fill="#898781" font-size="10">1.5 km to summit</text>
+<rect x="250.0" y="232" width="189.7" height="18" rx="3" fill="#b9b7ad"><title>High Tarn overlook: frozen 59.9 %</title></rect>
+<rect x="441.7" y="232" width="76.7" height="18" rx="3" fill="#1baf7a"><title>High Tarn overlook: eligible crest 24.6 %</title></rect>
+<rect x="520.4" y="232" width="47.6" height="18" rx="3" fill="#eda100"><title>High Tarn overlook: eligible shoulder 15.5 %</title></rect>
+<text x="576" y="245" fill="#52514e" font-size="11">60 % frozen</text>
+<line x1="680" x2="1090" y1="236" y2="236" stroke="transparent" stroke-width="10"><title>High Tarn overlook: upper bound 39.4 px</title></line>
+<rect x="680" y="232" width="269.2" height="9" rx="2" fill="#2a78d6"><title>High Tarn overlook: upper bound 39.4 px</title></rect>
+<text x="954.2" y="240" fill="#52514e" font-size="10">39.4</text>
+<line x1="680" x2="1090" y1="247" y2="247" stroke="transparent" stroke-width="10"><title>High Tarn overlook: S1 1.1 px</title></line>
+<rect x="680" y="243" width="7.5" height="9" rx="2" fill="#eb6834"><title>High Tarn overlook: S1 1.1 px</title></rect>
+<text x="692.5" y="251" fill="#52514e" font-size="10">1.1</text>
+<text x="16" y="276" fill="#0b0b0b">High Tarn north shore</text><text x="16" y="289" fill="#898781" font-size="10">1.6 km to summit</text>
+<rect x="250.0" y="266" width="57.5" height="18" rx="3" fill="#b9b7ad"><title>High Tarn north shore: frozen 18.6 %</title></rect>
+<rect x="309.5" y="266" width="258.5" height="18" rx="3" fill="#1baf7a"><title>High Tarn north shore: eligible crest 81.4 %</title></rect>
+<text x="576" y="279" fill="#52514e" font-size="11">19 % frozen</text>
+<line x1="680" x2="1090" y1="270" y2="270" stroke="transparent" stroke-width="10"><title>High Tarn north shore: upper bound 33.2 px</title></line>
+<rect x="680" y="266" width="226.9" height="9" rx="2" fill="#2a78d6"><title>High Tarn north shore: upper bound 33.2 px</title></rect>
+<text x="911.9" y="274" fill="#52514e" font-size="10">33.2</text>
+<line x1="680" x2="1090" y1="281" y2="281" stroke="transparent" stroke-width="10"><title>High Tarn north shore: S1 0.1 px</title></line>
+<rect x="680" y="277" width="1.0" height="9" rx="2" fill="#eb6834"><title>High Tarn north shore: S1 0.1 px</title></rect>
+<text x="685.7" y="285" fill="#52514e" font-size="10">0.1</text>
+<text x="16" y="310" fill="#0b0b0b">Alpine ascent, mid</text><text x="16" y="323" fill="#898781" font-size="10">0.4 km to summit</text>
+<rect x="250.0" y="300" width="310.0" height="18" rx="3" fill="#b9b7ad"><title>Alpine ascent, mid: frozen 97.5 %</title></rect>
+<rect x="562.0" y="300" width="4.4" height="18" rx="3" fill="#1baf7a"><title>Alpine ascent, mid: eligible crest 2.0 %</title></rect>
+<text x="576" y="313" fill="#52514e" font-size="11">98 % frozen</text>
+<line x1="680" x2="1090" y1="304" y2="304" stroke="transparent" stroke-width="10"><title>Alpine ascent, mid: upper bound 58.1 px</title></line>
+<rect x="680" y="300" width="397.0" height="9" rx="2" fill="#2a78d6"><title>Alpine ascent, mid: upper bound 58.1 px</title></rect>
+<text x="1082.0" y="308" fill="#52514e" font-size="10">58.1</text>
+<line x1="680" x2="1090" y1="315" y2="315" stroke="transparent" stroke-width="10"><title>Alpine ascent, mid: S1 7.5 px</title></line>
+<rect x="680" y="311" width="51.2" height="9" rx="2" fill="#eb6834"><title>Alpine ascent, mid: S1 7.5 px</title></rect>
+<text x="736.2" y="319" fill="#52514e" font-size="10">7.5</text>
+<text x="16" y="344" fill="#0b0b0b">Alpine ascent, s = 2600 m</text><text x="16" y="357" fill="#898781" font-size="10">0.1 km to summit</text>
+<rect x="250.0" y="334" width="318.0" height="18" rx="3" fill="#b9b7ad"><title>Alpine ascent, s = 2600 m: frozen 100.0 %</title></rect>
+<text x="576" y="347" fill="#52514e" font-size="11">100 % frozen</text>
+<line x1="680" x2="1090" y1="338" y2="338" stroke="transparent" stroke-width="10"><title>Alpine ascent, s = 2600 m: upper bound 108.7 px</title></line>
+<rect x="680" y="334" width="410.0" height="9" rx="2" fill="#2a78d6"><title>Alpine ascent, s = 2600 m: upper bound 108.7 px</title></rect>
+<text x="1095.0" y="342" fill="#52514e" font-size="10">108.7 (clipped)</text>
+<line x1="680" x2="1090" y1="349" y2="349" stroke="transparent" stroke-width="10"><title>Alpine ascent, s = 2600 m: S1 0.0 px</title></line>
+<rect x="680" y="345" width="1.0" height="9" rx="2" fill="#eb6834"><title>Alpine ascent, s = 2600 m: S1 0.0 px</title></rect>
+<text x="685.0" y="353" fill="#52514e" font-size="10">0</text>
+<text x="16" y="378" fill="#0b0b0b">South-east elevated oblique</text><text x="16" y="391" fill="#898781" font-size="10">1.7 km to summit</text>
+<rect x="250.0" y="368" width="211.1" height="18" rx="3" fill="#b9b7ad"><title>South-east elevated oblique: frozen 66.6 %</title></rect>
+<rect x="463.1" y="368" width="84.1" height="18" rx="3" fill="#1baf7a"><title>South-east elevated oblique: eligible crest 26.9 %</title></rect>
+<rect x="549.2" y="368" width="18.8" height="18" rx="3" fill="#eda100"><title>South-east elevated oblique: eligible shoulder 6.5 %</title></rect>
+<text x="576" y="381" fill="#52514e" font-size="11">67 % frozen</text>
+<line x1="680" x2="1090" y1="372" y2="372" stroke="transparent" stroke-width="10"><title>South-east elevated oblique: upper bound 11.0 px</title></line>
+<rect x="680" y="368" width="75.2" height="9" rx="2" fill="#2a78d6"><title>South-east elevated oblique: upper bound 11.0 px</title></rect>
+<text x="760.2" y="376" fill="#52514e" font-size="10">11</text>
+<line x1="680" x2="1090" y1="383" y2="383" stroke="transparent" stroke-width="10"><title>South-east elevated oblique: S1 6.5 px</title></line>
+<rect x="680" y="379" width="44.4" height="9" rx="2" fill="#eb6834"><title>South-east elevated oblique: S1 6.5 px</title></rect>
+<text x="729.4" y="387" fill="#52514e" font-size="10">6.5</text>
+<text x="16" y="412" fill="#0b0b0b">Northern elevated oblique</text><text x="16" y="425" fill="#898781" font-size="10">1.6 km to summit</text>
+<rect x="250.0" y="402" width="220.4" height="18" rx="3" fill="#b9b7ad"><title>Northern elevated oblique: frozen 69.5 %</title></rect>
+<rect x="472.4" y="402" width="95.6" height="18" rx="3" fill="#1baf7a"><title>Northern elevated oblique: eligible crest 30.5 %</title></rect>
+<text x="576" y="415" fill="#52514e" font-size="11">70 % frozen</text>
+<line x1="680" x2="1090" y1="406" y2="406" stroke="transparent" stroke-width="10"><title>Northern elevated oblique: upper bound 11.2 px</title></line>
+<rect x="680" y="402" width="76.5" height="9" rx="2" fill="#2a78d6"><title>Northern elevated oblique: upper bound 11.2 px</title></rect>
+<text x="761.5" y="410" fill="#52514e" font-size="10">11.2</text>
+<line x1="680" x2="1090" y1="417" y2="417" stroke="transparent" stroke-width="10"><title>Northern elevated oblique: S1 5.1 px</title></line>
+<rect x="680" y="413" width="34.9" height="9" rx="2" fill="#eb6834"><title>Northern elevated oblique: S1 5.1 px</title></rect>
+<text x="719.9" y="421" fill="#52514e" font-size="10">5.1</text>
+<text x="16" y="500" fill="#898781" font-size="10">Upper trail: the 108.7 px bound comes from shoulder points 76 m away over 3.3° of width only (p90 = 0 px).</text>
+<line x1="680" x2="680" y1="86" y2="432" stroke="#c3c2b7"/></svg>

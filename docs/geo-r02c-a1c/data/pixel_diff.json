@@ -1,0 +1,95 @@
+{
+ "method": "pixels with |delta| > 12 of 255 in any channel after a 3 x 3 median",
+ "views": {
+  "a1a-birchwood": {
+   "clayA": {
+    "a1b-alpha": 0.16,
+    "a1c-s1": 0.14
+   },
+   "clayB": {
+    "a1b-alpha": 0.07,
+    "a1c-s1": 0.07
+   }
+  },
+  "a1a-valley-shoulder": {
+   "clayA": {
+    "a1b-alpha": 0.14,
+    "a1c-s1": 0.05
+   },
+   "clayB": {
+    "a1b-alpha": 0.04,
+    "a1c-s1": 0.01
+   }
+  },
+  "a1a-tarn-overlook": {
+   "clayA": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.0
+   },
+   "clayB": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.0
+   }
+  },
+  "a1c-tarn-east": {
+   "clayA": {
+    "a1b-alpha": 0.01,
+    "a1c-s1": 0.07
+   },
+   "clayB": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.04
+   }
+  },
+  "a1b-face-from-upper-route": {
+   "clayA": {
+    "a1b-alpha": 1.56,
+    "a1c-s1": 0.4
+   },
+   "clayB": {
+    "a1b-alpha": 0.83,
+    "a1c-s1": 0.12
+   }
+  },
+  "a1a-west-arm": {
+   "clayA": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.0
+   },
+   "clayB": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.0
+   }
+  },
+  "a1a-oblique-se": {
+   "clayA": {
+    "a1b-alpha": 1.92,
+    "a1c-s1": 1.0
+   },
+   "clayB": {
+    "a1b-alpha": 0.31,
+    "a1c-s1": 0.34
+   }
+  },
+  "a1a-oblique-n": {
+   "clayA": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.28
+   },
+   "clayB": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.39
+   }
+  },
+  "a1c-west-coast": {
+   "clayA": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.49
+   },
+   "clayB": {
+    "a1b-alpha": 0.0,
+    "a1c-s1": 0.93
+   }
+  }
+ }
+}

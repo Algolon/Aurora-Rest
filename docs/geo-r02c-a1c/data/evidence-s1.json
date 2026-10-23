@@ -1,0 +1,162 @@
+{
+ "variant": "s1",
+ "skylines": {
+  "birchwood": {
+   "name": "Birchwood Forest",
+   "maxShiftPx": 4.2,
+   "widthShiftOver3pxDeg": 2.2,
+   "widthShiftOver1pxDeg": 5.4
+  },
+  "valley-shoulder": {
+   "name": "Central Valley shoulder",
+   "maxShiftPx": 2.7,
+   "widthShiftOver3pxDeg": 0.0,
+   "widthShiftOver1pxDeg": 2.0
+  },
+  "tarn-overlook": {
+   "name": "High Tarn overlook",
+   "maxShiftPx": 1.1,
+   "widthShiftOver3pxDeg": 0.0,
+   "widthShiftOver1pxDeg": 0.2
+  },
+  "tarn-shore": {
+   "name": "High Tarn north shore",
+   "maxShiftPx": 0.1,
+   "widthShiftOver3pxDeg": 0.0,
+   "widthShiftOver1pxDeg": 0.0
+  },
+  "high-tarn": {
+   "name": "High Tarn east shore",
+   "maxShiftPx": 5.7,
+   "widthShiftOver3pxDeg": 4.4,
+   "widthShiftOver1pxDeg": 9.6
+  },
+  "approach-mid": {
+   "name": "Alpine ascent, mid",
+   "maxShiftPx": 7.5,
+   "widthShiftOver3pxDeg": 15.2,
+   "widthShiftOver1pxDeg": 17.2
+  },
+  "upper-trail": {
+   "name": "Alpine ascent, s = 2600 m",
+   "maxShiftPx": 0.0,
+   "widthShiftOver3pxDeg": 0.0,
+   "widthShiftOver1pxDeg": 0.0
+  },
+  "oblique-se": {
+   "name": "South-east elevated oblique",
+   "maxShiftPx": 6.5,
+   "widthShiftOver3pxDeg": 6.0,
+   "widthShiftOver1pxDeg": 8.0
+  },
+  "oblique-n": {
+   "name": "Northern elevated oblique",
+   "maxShiftPx": 5.1,
+   "widthShiftOver3pxDeg": 3.4,
+   "widthShiftOver1pxDeg": 4.8
+  },
+  "west-coast": {
+   "name": "Western windward coast (K3)",
+   "maxShiftPx": 14.9,
+   "widthShiftOver3pxDeg": 40.0,
+   "widthShiftOver1pxDeg": 47.0
+  }
+ },
+ "viewshed": {
+  "birchwood": {
+   "visibleBeforeHa": 116.8,
+   "visibleAfterHa": 114.4,
+   "newlyHiddenHa": 2.6,
+   "newlyVisibleHa": 0.2
+  },
+  "valley-shoulder": {
+   "visibleBeforeHa": 124.6,
+   "visibleAfterHa": 124.6,
+   "newlyHiddenHa": 0.4,
+   "newlyVisibleHa": 0.5
+  },
+  "tarn-overlook": {
+   "visibleBeforeHa": 87.8,
+   "visibleAfterHa": 87.3,
+   "newlyHiddenHa": 0.7,
+   "newlyVisibleHa": 0.3
+  },
+  "tarn-shore": {
+   "visibleBeforeHa": 81.8,
+   "visibleAfterHa": 81.9,
+   "newlyHiddenHa": 0.0,
+   "newlyVisibleHa": 0.1
+  },
+  "high-tarn": {
+   "visibleBeforeHa": 127.4,
+   "visibleAfterHa": 123.6,
+   "newlyHiddenHa": 4.5,
+   "newlyVisibleHa": 0.8
+  },
+  "approach-mid": {
+   "visibleBeforeHa": 84.0,
+   "visibleAfterHa": 82.9,
+   "newlyHiddenHa": 2.6,
+   "newlyVisibleHa": 1.5
+  },
+  "upper-trail": {
+   "visibleBeforeHa": 144.9,
+   "visibleAfterHa": 136.9,
+   "newlyHiddenHa": 8.7,
+   "newlyVisibleHa": 0.7
+  },
+  "west-coast": {
+   "visibleBeforeHa": 33.1,
+   "visibleAfterHa": 32.8,
+   "newlyHiddenHa": 0.4,
+   "newlyVisibleHa": 0.1
+  }
+ },
+ "changedHa": 35.26,
+ "maxRaiseM": 20.0,
+ "maxLoweringM": -0.0,
+ "affectedCrest": {
+  "n-main": {
+   "crestCells": 573,
+   "approxCrestLengthM": 458,
+   "maxRaiseM": 13.7
+  },
+  "n-crown": {
+   "crestCells": 284,
+   "approxCrestLengthM": 227,
+   "maxRaiseM": 17.0
+  },
+  "n-west-spur": {
+   "crestCells": 569,
+   "approxCrestLengthM": 455,
+   "maxRaiseM": 17.6
+  },
+  "n-east-arc": {
+   "crestCells": 539,
+   "approxCrestLengthM": 431,
+   "maxRaiseM": 20.0
+  }
+ },
+ "crestProfiles": [
+  {
+   "ridge": "n-main",
+   "maxCrestRaiseM": 13.7,
+   "raisedLengthOver2mM": 180
+  },
+  {
+   "ridge": "n-east-arc",
+   "maxCrestRaiseM": 20.0,
+   "raisedLengthOver2mM": 296
+  },
+  {
+   "ridge": "n-crown",
+   "maxCrestRaiseM": 17.0,
+   "raisedLengthOver2mM": 204
+  },
+  {
+   "ridge": "n-west-spur",
+   "maxCrestRaiseM": 15.4,
+   "raisedLengthOver2mM": 380
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "branch": "feature/geo-r02c-a1c-macro-massing-study",
+ "base": "154eb0706aee951d8ec3f3401f2c17b1940de468",
+ "authorization": "R-B trial only: reversible raise-only changes to selected secondary crest segments, envelope +25 m; no R-A, no R-C, no design-master change, no merge or deployment",
+ "deterministic": true,
+ "determinism": "a1c_overlay.py --repeat 2 for m0 and s1 gave identical SHA-256 (asserted by the tool); a re-run after reinstalling scipy and shapely reproduced the committed patch, declared-cell list and manifest byte for byte",
+ "pythonEnvironment": {
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "shapely": "2.2.0"
+ },
+ "tests": "npm test: 50/50 pass (43 existing, unmodified, + 7 new A1c tests)",
+ "testsPass": true,
+ "build": "npm run build (tsc --noEmit + vite build): pass",
+ "buildPass": true,
+ "candidates": {
+  "s1": "generated, validated, rendered: ART NOT PASS",
+  "s2": "not generated (S1 failed; brief: do not proceed automatically)"
+ },
+ "captures": "28 new frames: S1 at 9 views x clay A/B; M0 and A1b-alpha at the 2 new A1c cameras x clay A/B; A1b-alpha northern oblique x clay A/B. All other M0 and A1b-alpha frames reused from the committed A1a and A1b-alpha captures (same renderer, byte-identical frames shown in docs/geo-r02c-a1b-alpha/data/render-identity.json). No standard-material gallery, per the brief.",
+ "stopConditionsTriggered": [
+  "forms remain visually insignificant",
+  "only one camera clearly improves (western coast)",
+  "+25 m envelope insufficient for the far silhouette",
+  "a meaningful result needs summit-zone, corridor and crest-bound changes"
+ ]
+}

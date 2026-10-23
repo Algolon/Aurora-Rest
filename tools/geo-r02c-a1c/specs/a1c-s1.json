@@ -1,0 +1,280 @@
+{
+ "schema": "aurora-terrain-overlay/1",
+ "base": {
+  "terrain": "public/geo-r02b/terrain.f32",
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a"
+ },
+ "designReference": "A-R1 design master (unchanged); A1b-D dossier; R-B trial authorization of 23 Oct 2026 (secondary crest raises <= 25 m, reversible, not a crest revision)",
+ "mask": {
+  "window": {
+   "file": "docs/geo-r02c-a1d/data/window-v2-proposed.json"
+  },
+  "coast": {
+   "frozenM": 150,
+   "taperToM": 300
+  },
+  "falloffM": {
+   "lake": 30,
+   "wet": 12,
+   "valley": 20,
+   "crest": 6,
+   "otherEquality": 16,
+   "corridor": 60,
+   "zone": 40,
+   "divide": 40,
+   "waterSurface": 4
+  },
+  "corridors": {
+   "peak-ascent": 75,
+   "tarn-ascent": 55
+  },
+  "frozenZones": [
+   {
+    "id": "inlet-n-head",
+    "centre": [
+     1290,
+     2650
+    ],
+    "radiusM": 200
+   },
+   {
+    "id": "high-tarn-seam",
+    "centre": [
+     750,
+     2172
+    ],
+    "radiusM": 185
+   }
+  ],
+  "protectDivides": true,
+  "divideOffCrestM": 12
+ },
+ "id": "s1",
+ "label": "A1c S1 \u00b7 asymmetric ridge massing",
+ "operators": [
+  {
+   "type": "ridgeMassing",
+   "id": "S1-massing",
+   "segments": [
+    {
+     "id": "A2-shoulder",
+     "arm": "A2 (south-east arm)",
+     "character": "broad shoulder below the summit, then a steep rock step",
+     "ridge": "n-main",
+     "origin": [
+      -520,
+      2770
+     ],
+     "profile": [
+      [
+       200,
+       0
+      ],
+      [
+       255,
+       22
+      ],
+      [
+       300,
+       22
+      ],
+      [
+       340,
+       5
+      ],
+      [
+       420,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 110,
+      "right": 170
+     }
+    },
+    {
+     "id": "A2-lower-step",
+     "arm": "A2 (south-east arm)",
+     "character": "second, lower step on the continuing ar\u00eate",
+     "ridge": "n-main",
+     "origin": [
+      -520,
+      2770
+     ],
+     "profile": [
+      [
+       480,
+       0
+      ],
+      [
+       560,
+       13
+      ],
+      [
+       620,
+       12
+      ],
+      [
+       680,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 120,
+      "right": 150
+     }
+    },
+    {
+     "id": "EA-rim",
+     "arm": "A2 / n-east-arc (High Tarn rim)",
+     "character": "one broad sub-summit on the tarn rim near the A2 junction (the second hump was dropped: it sits on the sea / High Tarn spillway saddle and would reroute about 9 ha into High Tarn)",
+     "ridge": "n-east-arc",
+     "profile": [
+      [
+       40,
+       0
+      ],
+      [
+       200,
+       18
+      ],
+      [
+       300,
+       20
+      ],
+      [
+       380,
+       8
+      ],
+      [
+       470,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 140,
+      "right": 120
+     }
+    },
+    {
+     "id": "A1-steps",
+     "arm": "A1 (north arm, n-crown)",
+     "character": "stepped ar\u00eate: two rock steps of different height",
+     "ridge": "n-crown",
+     "profile": [
+      [
+       230,
+       0
+      ],
+      [
+       285,
+       16
+      ],
+      [
+       310,
+       17
+      ],
+      [
+       335,
+       9
+      ],
+      [
+       360,
+       9
+      ],
+      [
+       395,
+       14
+      ],
+      [
+       425,
+       6
+      ],
+      [
+       460,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 100,
+      "right": 130
+     }
+    },
+    {
+     "id": "A3-spur-shoulder",
+     "arm": "A3 (west arm, n-west-spur)",
+     "character": "one massive shoulder, gentle on its long south-west side",
+     "ridge": "n-west-spur",
+     "profile": [
+      [
+       220,
+       0
+      ],
+      [
+       300,
+       20
+      ],
+      [
+       400,
+       22
+      ],
+      [
+       470,
+       12
+      ],
+      [
+       560,
+       6
+      ],
+      [
+       680,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 150,
+      "right": 120
+     }
+    },
+    {
+     "id": "A3-west-hump",
+     "arm": "A3 (west arm, n-main west)",
+     "character": "low broad hump beyond the trail, keeps A3 the gentlest arm",
+     "ridge": "n-main",
+     "origin": [
+      -520,
+      2770
+     ],
+     "profile": [
+      [
+       -640,
+       0
+      ],
+      [
+       -570,
+       12
+      ],
+      [
+       -500,
+       14
+      ],
+      [
+       -440,
+       0
+      ]
+     ],
+     "widthM": {
+      "left": 130,
+      "right": 130
+     }
+    }
+   ]
+  }
+ ],
+ "raise": {
+  "minFadeM": 90,
+  "flowPreserving": true,
+  "note": "stricter than A1a for raises: >= 90 m fades from every protected class; every cell keeps draining to its R1 receiver; no cell may change drainage destination",
+  "destinationPreserving": true
+ }
+}

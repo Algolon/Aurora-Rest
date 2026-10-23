@@ -1,0 +1,38 @@
+{
+ "schema": "aurora-review-cameras/1",
+ "note": "A1c additions (player height, looking at the summit); A1a and A1b cameras are reused unchanged",
+ "cameras": [
+  {
+   "id": "a1c-west-coast",
+   "name": "North Peak from the western windward coast (K3)",
+   "uv": [
+    148.0,
+    194.0
+   ],
+   "xz": [
+    -1520.0,
+    2060.0
+   ],
+   "yaw": 0.9534,
+   "pitch": 0.33,
+   "kind": "walk",
+   "group": "a1c-massing"
+  },
+  {
+   "id": "a1c-tarn-east",
+   "name": "North Peak across High Tarn from its east shore",
+   "uv": [
+    443.0,
+    207.0
+   ],
+   "xz": [
+    1430.0,
+    1930.0
+   ],
+   "yaw": -1.164,
+   "pitch": 0.12,
+   "kind": "walk",
+   "group": "a1c-massing"
+  }
+ ]
+}

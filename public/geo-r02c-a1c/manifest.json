@@ -1,0 +1,63 @@
+{
+ "schema": "aurora-terrain-variants/1",
+ "base": "public/geo-r02b/terrain.f32",
+ "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "note": "Review-only A1c macro-massing trial variants (R-B trial raises). Compose by copying each patch block into the canonical R1 grid; never overwrite R1.",
+ "variants": {
+  "m0": {
+   "id": "m0",
+   "label": "A1c M0 \u00b7 empty overlay (parity with R1)",
+   "spec": "tools/geo-r02c-a1c/specs/a1c-m0.json",
+   "specSha256": "e8f1b79f01fa634e852d7e91066bf26cbd082956cc672d564d1830c46dadf990",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "changedCells": 0,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "release": "R-B trial (raise-only crest cells on declared segments); not a crest revision, not a design-master change",
+   "patch": null,
+   "declared": null
+  },
+  "s1": {
+   "id": "s1",
+   "label": "A1c S1 \u00b7 asymmetric ridge massing",
+   "spec": "tools/geo-r02c-a1c/specs/a1c-s1.json",
+   "specSha256": "dda4ef20e49f645c0210015cb6f8b4bf9ff499086ccce86263d0b8641e86e780",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "dcdb46ca1d7ec93cf977ece7fe3ece36ae60c5c1884341c29b2951c7443915c3",
+   "changedCells": 24596,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "release": "R-B trial (raise-only crest cells on declared segments); not a crest revision, not a design-master change",
+   "patch": {
+    "file": "s1.patch.f32",
+    "rows": [
+     192,
+     529
+    ],
+    "cols": [
+     474,
+     791
+    ],
+    "sha256": "8eb1c2d9caade5d9db523f4c98f482c42bc313711a28f490fd929ffd6ccb1774",
+    "bytes": 429936
+   },
+   "declared": {
+    "file": "s1.declared.json",
+    "sha256": "f13bcc14c94cd4e67720d28c7c170c365370035ca65583d016ca397951fa21db",
+    "crestCellsRaised": 1965,
+    "shoulderCellsChanged": 22631,
+    "maxRaiseM": 20.0,
+    "maxLoweringM": -0.0,
+    "changedHa": 39.35,
+    "crestCellsLoweredMustBe0": 0
+   }
+  }
+ }
+}
