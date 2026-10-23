@@ -1,0 +1,33 @@
+name: ROCK-R01-G01 authored geometry and actual WebGL evidence — ART REVIEW PENDING
+on:
+  push:
+    branches: [art/rock-r01-r04-sculptural-study]
+  workflow_dispatch:
+jobs:
+  geometry-real-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Preserve F01, G1, A2, vegetation, WORLD and POP without changes
+        run: |
+          git diff --exit-code 604ff2a82a3ef7d49638fcac1b2af4c22ec0f0ab HEAD -- src art rocks/f01 rocks/e2r-showroom.ts rocks/a2-showroom.ts rocks/b1-showroom.ts rocks/b1r-showroom.ts rocks/s1-showroom.ts rocks/s1r-showroom.ts ../../src
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.r01.config.ts
+      - name: Capture actual R01 and original G1 in browser
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-r01.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rock-r01-g01-genuine-webgl-review
+          path: asset-lab/birch/r01-g01-evidence/
+          if-no-files-found: warn
+# Isolated asset lab only; no population changes, merge, deployment or art approval.
