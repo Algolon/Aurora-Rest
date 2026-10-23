@@ -43,7 +43,9 @@ try{
     await capture('home-shore','baseline',0);
     await capture('home-shore','high',0);
     await capture('wind-shore','high',0);
+    await capture('tarn-shore','baseline',0);
     await capture('tarn-shore','high',0);
+    await capture('tarn-panorama','high',0);
     await capture('tarn-shore','high',1.5);
   }else{
     for(const v of views)for(const q of ['baseline','low','medium','high'])await capture(v.id,q,0);
@@ -54,15 +56,17 @@ try{
   // GPU render-target A/B validation: actual same-camera pixel differences
   // between the canonical scene with and without water. A PNG alone is not proof.
   const coverage=[];
-  for(const [id,quality] of [['home-shore','baseline'],['home-shore','high'],['wind-shore','high'],['tarn-shore','high']]){
+  for(const [id,quality] of [['home-shore','baseline'],['home-shore','high'],['wind-shore','high'],['tarn-shore','baseline'],['tarn-shore','high'],['tarn-panorama','high']]){
     const c=await page.evaluate(({id,quality})=>{
       const w=window.__auroraWTR01;w.setView(id);w.setMode(quality);w.setTime(0);
       return w.measureWaterPixels();
     },{id,quality});
     coverage.push({id,quality,...c});
     console.log('WATER PIXELS',id,quality,c.pixels,'/',c.totalPixels);
-    if(c.pixels<64)throw new Error('Water-visibility gate: insufficient actual water pixels at '+id+'/'+quality+' ('+c.pixels+')');
+    // Collect all baselines first; never suppress the final visibility gate.
   }
+  const absent=coverage.filter(c=>c.pixels<64);
+  if(absent.length)throw new Error('Water-visibility gate failed: '+JSON.stringify(absent));
   if(errors.length)throw new Error('Browser / shader errors: '+errors.join(' | '));
   await writeFile(folder+'/manifest.json',JSON.stringify({
     evidence:'Unretouched real Chromium WebGL screenshots; UI hidden only',
