@@ -87,7 +87,11 @@ export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3):TH
     vertexShader:VERTEX, fragmentShader:FRAGMENT,
     defines:{WATER_DETAIL:renderQualityDetail(quality)},
     side:THREE.DoubleSide, transparent:false, depthWrite:true, fog:true,
+    // ShaderMaterial does not inject ShaderLib uniforms automatically. Fog
+    // chunks declare fogColor/fogDensity (and fogNear/fogFar for linear fog);
+    // omitting them causes WebGLUniforms.upload to read undefined.value.
     uniforms:{
+      ...THREE.UniformsUtils.clone(THREE.UniformsLib.fog),
       uTime:{value:0},
       uShowLakesOnly:{value:0},
       uSunDirection:{value:sunDirection.clone().normalize()},
