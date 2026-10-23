@@ -1,0 +1,77 @@
+{
+ "tool": "tools/mat-01p/shader-stats.mjs",
+ "label": "baseline",
+ "url": "http://127.0.0.1:4330/mat-01.html",
+ "glslang": "Glslang Version: 11:15.1.0",
+ "note": "Static SPIR-V counts of the exact WebGL fragment shader after spirv-opt -O. The per-material loops stay loops, so each loop body is counted once (≈ one active material; transition pixels run 2–3 iterations). aluLanes weights each ALU instruction by its vector width. Hardware-independent proxy; not GPU cycles.",
+ "variants": {
+  "high": {
+   "profile": "high",
+   "edits": [],
+   "noise": "procedural",
+   "defines": [
+    "MAT_COUNT 4",
+    "MAT_LAYERS 1",
+    "TM_MESO",
+    "TM_ANTITILE"
+   ],
+   "instructions": 1979,
+   "textureSamples": 11,
+   "aluInstructions": 1186,
+   "aluLanes": 1958,
+   "conditionalBranches": 40,
+   "optimisedSpirvSha256": "240c71e3296008b9fb7b016797594b473a824bbcdabe33246ec3a9ea2b708dc0"
+  },
+  "mobile": {
+   "profile": "mobile",
+   "edits": [],
+   "noise": "procedural",
+   "defines": [
+    "MAT_COUNT 4",
+    "MAT_LAYERS 1"
+   ],
+   "instructions": 1548,
+   "textureSamples": 9,
+   "aluInstructions": 880,
+   "aluLanes": 1467,
+   "conditionalBranches": 39,
+   "optimisedSpirvSha256": "444025cf5f3a95f83354615b0ceb77aff5ba6df8abeda9952a555acb9d67dbad"
+  },
+  "high-no-fbm": {
+   "profile": "high",
+   "edits": [
+    "fbmBody"
+   ],
+   "noise": "procedural",
+   "defines": [
+    "MAT_COUNT 4",
+    "MAT_LAYERS 1",
+    "TM_MESO",
+    "TM_ANTITILE"
+   ],
+   "instructions": 891,
+   "textureSamples": 11,
+   "aluInstructions": 373,
+   "aluLanes": 654,
+   "conditionalBranches": 40,
+   "optimisedSpirvSha256": "32e73819a524cb525e418857062abcf148d94691aadbc7b1846ad1f21525d904"
+  },
+  "mobile-no-fbm": {
+   "profile": "mobile",
+   "edits": [
+    "fbmBody"
+   ],
+   "noise": "procedural",
+   "defines": [
+    "MAT_COUNT 4",
+    "MAT_LAYERS 1"
+   ],
+   "instructions": 824,
+   "textureSamples": 9,
+   "aluInstructions": 338,
+   "aluLanes": 602,
+   "conditionalBranches": 39,
+   "optimisedSpirvSha256": "b7865058bf70c9f687f772b4e8eeae03ac6b4bff1cd5ec811c43d5a3a166f812"
+  }
+ }
+}

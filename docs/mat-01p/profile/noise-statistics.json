@@ -1,0 +1,64 @@
+{
+ "tool": "tools/mat-01p/noise-stats.ts",
+ "samples": 40000,
+ "texture": {
+  "size": 512,
+  "period": 32,
+  "channels": 4
+ },
+ "note": "Procedural values come from a float64 JavaScript replica of the GLSL tmFbm; the GPU evaluates it in float32 (pointwise different, statistically equivalent).",
+ "fbm": {
+  "procedural": {
+   "mean": 0.4985,
+   "std": 0.1461,
+   "q05": 0.2596,
+   "q50": 0.4975,
+   "q95": 0.7387
+  },
+  "baked": {
+   "mean": 0.504,
+   "std": 0.1453,
+   "q05": 0.265,
+   "q50": 0.5044,
+   "q95": 0.7427
+  }
+ },
+ "patchNoise": {
+  "procedural": {
+   "mean": 0.4991,
+   "std": 0.1063,
+   "q05": 0.3235,
+   "q50": 0.4984,
+   "q95": 0.6744
+  },
+  "baked": {
+   "mean": 0.5024,
+   "std": 0.1051,
+   "q05": 0.3299,
+   "q50": 0.5024,
+   "q95": 0.6763
+  }
+ },
+ "patchCoverageFraction": {
+  "forest-floor": {
+   "designCoverage": 0.5,
+   "procedural": 0.4955,
+   "baked": 0.5086
+  },
+  "meadow-turf": {
+   "designCoverage": 0.22,
+   "procedural": 0.0036,
+   "baked": 0.0039
+  },
+  "coastal-sand": {
+   "designCoverage": 0.18,
+   "procedural": 0.0007,
+   "baked": 0.001
+  },
+  "bedrock": {
+   "designCoverage": 0.34,
+   "procedural": 0.0757,
+   "baked": 0.0775
+  }
+ }
+}

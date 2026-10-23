@@ -10,7 +10,11 @@ import {createHash} from 'node:crypto';
 const arg=(n,f)=>{const i=process.argv.indexOf('--'+n);return i>0?process.argv[i+1]:f;};
 const base=arg('base','http://127.0.0.1:4330/mat-01.html'),cand=arg('cand','http://127.0.0.1:4331/mat-01.html'),out=arg('out','docs/mat-01p/regression');
 const [width,height]=arg('size','1280x800').split('x').map(Number);
-const VIEWS=arg('views','m01-walk,m01-elevated,m02-walk,m02-elevated,m03-walk,m04-walk,birchwood-overview,birchwood-walk,valley-walk,valley-overview,tr-forest-meadow,cove-elevated,tarn-slope').split(',');
+const VIEWS=arg('views','m01-walk,m01-elevated,m02-walk,m02-elevated,tr-forest-meadow,birchwood-overview,valley-walk,m04-walk,nadir-forest,nadir-meadow').split(',');
+// Repetition diagnostics: two near-nadir cameras 320 m above forest and meadow, injected into the served cameras module
+// identically on both servers (tooling only; no source change). 320 m keeps patches visible (far blend starts at 350 m)
+// and spans ≈ 590 × 370 m, enough to expose the baked noise period (32 lattice cells).
+const EXTRA_CAMERAS="{id:'nadir-forest',name:'Nadir 320 m · Birchwood forest floor',group:'mat-01p',x:-836,z:-626,yaw:0,pitch:-1.5,eye:320},{id:'nadir-meadow',name:'Nadir 320 m · Central Valley meadow',group:'mat-01p',x:260,z:-458,yaw:0,pitch:-1.5,eye:320},";
 const ALL_RUNS=[
  {id:'base-high',url:base,profile:'high',noise:'procedural',label:'MAT-01 ae8a9c1 · High · procedural fBm'},
  {id:'cand-high-default',url:cand,profile:'high',noise:'procedural',label:'MAT-01P branch · High · default (candidate off)'},
@@ -22,7 +26,7 @@ const runs=arg('runs','')?ALL_RUNS.filter(r=>arg('runs','').split(',').includes(
 const executablePath=process.env.CHROME||(existsSync('/opt/pw-browsers/chromium')?'/opt/pw-browsers/chromium':undefined);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const browser=await chromium.launch({headless:true,executablePath,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
-const manifest={tool:'tools/mat-01p/compare.mjs',browser:browser.version(),viewport:{width,height,dpr:1},lighting:'nordic',layout:'canonical 400 m tiles · 4 m',
+const manifest={tool:'tools/mat-01p/compare.mjs',injectedCameras:EXTRA_CAMERAS,browser:browser.version(),viewport:{width,height,dpr:1},lighting:'nordic',layout:'canonical 400 m tiles · 4 m',
  evidence:'Unretouched Chromium WebGL2 screenshots (SwiftShader software renderer) of the MAT-01 review page served from the pinned baseline worktree and from the MAT-01P experimental branch.',runs:[]};
 let failed=false;
 try{
@@ -30,6 +34,8 @@ try{
  for(const r of runs){
   const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1}),errors=[];page.setDefaultTimeout(1800000);
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  await page.route(/\/src\/mat-01\/cameras\.ts/,async route=>{const resp=await route.fetch();const body=await resp.text(),anchor="eye:22},";
+   if(body.split(anchor).length!==2)throw new Error('camera injection anchor not unique');await route.fulfill({response:resp,body:body.replace(anchor,anchor+EXTRA_CAMERAS)});});
   await page.goto(r.url,{waitUntil:'load'});await page.waitForFunction(()=>window.__auroraMAT01?.ready,null,{timeout:1800000});
   await page.addStyleTag({content:'#ui{display:none!important}'});
   const info=await page.evaluate(async r=>{const q=window.__auroraMAT01;q.pause(true);await q.setProfile(r.profile);

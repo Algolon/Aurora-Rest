@@ -8,6 +8,8 @@ import {chromium} from 'playwright';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
 const arg=(n,f)=>{const i=process.argv.indexOf('--'+n);return i>0?process.argv[i+1]:f;};
 const url=arg('url','http://127.0.0.1:4330/mat-01.html'),out=arg('out','docs/mat-01p/profile'),label=arg('label','baseline');
 const executablePath=process.env.CHROME||(existsSync('/opt/pw-browsers/chromium')?'/opt/pw-browsers/chromium':undefined);
@@ -38,7 +40,8 @@ function analyse(frag,name){
   total++;if(op==='OpBranchConditional')branches++;
   if(TEX.test(op))tex++;else if(ALU.test(op)){alu++;aluLanes+=types[m[2]]??1;}
  }
- return {instructions:total,textureSamples:tex,aluInstructions:alu,aluLanes,conditionalBranches:branches};
+ const spvSha256=createHash('sha256').update(readFileSync(`${base}.opt.spv`)).digest('hex');
+ return {instructions:total,textureSamples:tex,aluInstructions:alu,aluLanes,conditionalBranches:branches,optimisedSpirvSha256:spvSha256};
 }
 import {writeFileSync} from 'node:fs';
 function require_write(p,s){writeFileSync(p,s);}

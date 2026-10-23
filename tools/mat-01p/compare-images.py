@@ -18,6 +18,24 @@ PAIRS = [('identity-high', 'base-high', 'cand-high-default'), ('candidate-high',
 load = lambda p: np.asarray(Image.open(os.path.join(root, p)).convert('RGB')).astype(np.float64)
 lum = lambda a: a @ np.array([.2126, .7152, .0722])
 os.makedirs(os.path.join(root, 'composites'), exist_ok=True)
+# Baked noise tiles every 32 lattice cells. At the nadir cameras (320 m, 60° vertical FOV, 800 px) one pixel ≈ 0.46 m,
+# so the candidate's periods map to these horizontal lags (px). 'control' is a lag that matches no period.
+M_PER_PX = 2 * 320 * np.tan(np.radians(30)) / 800
+PERIODS_M = {'nadir-forest': {'ecotone 103 m': 32 / .31, 'patch 288 m': 9 * 32, 'meso 373 m': 2.2 * 5.3 * 32, 'control 240 m': 240},
+             'nadir-meadow': {'ecotone 103 m': 32 / .31, 'patch 192 m': 6 * 32, 'control 240 m': 240, 'control 330 m': 330}}
+def repetition(img, view):
+    # Pearson autocorrelation of high-passed luminance at each period lag, horizontally (≈ world x).
+    L = lum(img)
+    blur = np.asarray(Image.fromarray(np.clip(L, 0, 255).astype(np.uint8)).resize((L.shape[1] // 64, L.shape[0] // 64), Image.BOX).resize((L.shape[1], L.shape[0]), Image.BILINEAR)).astype(np.float64)
+    H = L - blur
+    out = {}
+    for label, metres in PERIODS_M[view].items():
+        lag = int(round(metres / M_PER_PX))
+        if lag >= H.shape[1] - 64:
+            continue
+        a, b = H[:, :-lag].ravel(), H[:, lag:].ravel()
+        out[f'{label} (lag {lag} px)'] = round(float(np.corrcoef(a, b)[0, 1]), 4)
+    return out
 summary = {'tool': 'tools/mat-01p/compare-images.py', 'note': 'Values in 0..255 sRGB units unless stated. hist L1 is in 0..2.', 'pairs': {}}
 for name, a_id, b_id in PAIRS:
     if a_id not in runs or b_id not in runs:
@@ -50,6 +68,8 @@ for name, a_id, b_id in PAIRS:
             comp.save(path, 'JPEG', quality=88)
             rows[v]['composite'] = f'composites/{name}--{v}.jpg'
             rows[v]['compositeSha256'] = hashlib.sha256(open(path, 'rb').read()).hexdigest()
+        if v.startswith('nadir-') and name != 'identity-high':
+            rows[v]['repetition'] = {'a': repetition(A, v), 'b': repetition(B, v)}
     vals = list(rows.values())
     agg = {k: (max(r[k] for r in vals) if k in ('maxDelta', 'meanColourShift', 'histL1', 'toneDelta16', 'fractionOver16') else None) for k in vals[0] if isinstance(vals[0][k], (int, float))}
     agg['lumStdRatioRange'] = [min(r['lumStdRatio'] for r in vals), max(r['lumStdRatio'] for r in vals)]
