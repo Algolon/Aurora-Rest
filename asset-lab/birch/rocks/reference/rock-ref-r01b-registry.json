@@ -1,0 +1,69 @@
+{
+  "milestone": "ROCK-REF-R01B",
+  "date": "2026-10-24",
+  "status": "completed_research_only",
+  "baseline": "4367f1232300b824b628c7c67a79b0df37bc7bd4",
+  "primaryId": "N01",
+  "artApproved": false,
+  "modelingAuthorized": false,
+  "references": [
+    {
+      "id": "N01",
+      "site": "Hunnebo klovor",
+      "country": "SE",
+      "material": "Bohus granite",
+      "priority": "primary",
+      "latitude": 58.43183,
+      "longitude": 11.30136,
+      "geologicUrl": "https://www.sgu.se/om-geologi/sevard-geologi/hunnebo-klovor/",
+      "photoPageUrl": "https://www.sgu.se/globalassets/om-geologi/sevard-geologi/geologiskt-arv/geologisktarv-2014-webb.pdf",
+      "shape": "deep-weathered rounded blocks"
+    },
+    {
+      "id": "N02",
+      "site": "Kummakivi Ruokolahti",
+      "country": "FI",
+      "material": "granite-cordierite-mica gneiss",
+      "priority": "silhouette_secondary",
+      "latitude": 61.493320157,
+      "longitude": 28.430009592,
+      "geologicUrl": "https://saimaageopark.fi/en/kummakivi-erratic-boulder/",
+      "photoPageUrl": "https://gosaimaa.com/en/kummakivi-erratic-boulder/",
+      "shape": "isolated glacial erratic and belly mass"
+    },
+    {
+      "id": "N03",
+      "site": "Ramsvikslandet and Tryggö",
+      "country": "SE",
+      "material": "Bohus granite with local younger lithologies",
+      "priority": "surface_secondary",
+      "geologicUrl": "https://www.lansstyrelsen.se/vastra-gotaland/besoksmal/naturreservat/ramsvikslandet.html",
+      "photoPageUrl": "https://www.bohuscoast.se/se/natur/ramsvikslandet-15998967",
+      "shape": "ice-polished continuous rock sweep"
+    },
+    {
+      "id": "N04",
+      "site": "Sörknatten reserve",
+      "country": "SE",
+      "material": "quartzite",
+      "priority": "alternative_architecture",
+      "reserveAccessLatitude": 58.877417,
+      "reserveAccessLongitude": 12.476016,
+      "geologicUrl": "https://www.lansstyrelsen.se/vastra-gotaland/besoksmal/naturreservat/sorknatten.html",
+      "photoPageUrl": "https://vastkuststiftelsen.se/naturreservat/sorknatten/",
+      "shape": "hard resistant elongated exposed ridge"
+    },
+    {
+      "id": "N05",
+      "site": "Western Senja, Trælen region",
+      "country": "NO",
+      "material": "heterogeneous gneiss and local graphite schist",
+      "priority": "specialist_geologic_fabric",
+      "depositLatitude": 69.49756,
+      "depositLongitude": 17.203937,
+      "geologicUrl": "https://aps.ngu.no/pls/oradb/minres_deposit_fakta_NY_KS.Main?p_objid=24697&p_spraak=E",
+      "photoPageUrl": "https://aps.ngu.no/pls/oradb/minres_deposit_fakta_NY_KS.Main?p_objid=24697&p_spraak=E",
+      "shape": "complex folded foliation and shear-oriented planes"
+    }
+  ]
+}
