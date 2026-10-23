@@ -1,0 +1,111 @@
+
+> aurora-rest@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+fatal: not a tree object
+✖ ENV preserves all POP source, nature assets and canonical geography byte for byte (99.096708ms)
+✔ controlled MAT imports retain original file hashes (13.088209ms)
+✔ POP mesh and MAT adapter agree on geographic positions and canonical normals (25.882042ms)
+✔ MAT resources support balanced ownership and repeated release/recreate (88.850708ms)
+✔ R1 canonical tiles share identical edge vertices and normals, without skirts (34.436416ms)
+✔ R1 immutable source, generated digest and saddle/flank relationships (155.684666ms)
+✔ R1 clipped water stays above canonical terrain, exercising shoreline vertices (93.299917ms)
+✔ GEO-R02B sampling matches actual mesh triangles at all LODs and boundaries (277.2395ms)
+✔ GEO-R02B world boundary sampling is finite and north-up grid maps correctly (0.16625ms)
+✔ protected R1 files and canonical artifacts are byte-identical to the P0 baseline manifest (145.484ms)
+✔ no dry closed depressions on the canonical 4 m grid (ocean, wet cells and border drain) (1745.401208ms)
+✔ channel water surfaces descend within the proposed 5 cm tolerance and stay finite along every channel (22.738042ms)
+✔ review cameras are on dry ground, consistent and do not replace R1 views (0.644458ms)
+✔ review mode is opt-in and the A1 diagnostic window is internally consistent (1.133041ms)
+✔ MAT-01 changes no protected GEO-R02B, WORLD, water, route or P0 file (P0 git-blob baseline) (44.236125ms)
+✔ classification never mutates the canonical heightfield or water surface (12.167417ms)
+✔ classification is deterministic and matches the recorded golden hash (1844.121834ms)
+✔ every lattice node has weights summing to exactly 255 and valid attributes (10.52475ms)
+✔ island composition and named places are ecologically plausible (104.311125ms)
+✔ CPU query: bilinear lattice sampling, normalised weights, exact at nodes (2.587584ms)
+✔ material identity is a function of world position only: tiling and LOD cannot change it (13.658083ms)
+✔ quantisation preserves exact sums and degenerate inputs (0.166833ms)
+✔ rules declare provenance for every input and reference existing source data (0.181375ms)
+✔ material definitions are complete, ordered and palettes are well formed (0.242791ms)
+✔ detail textures are deterministic, tileable and within expected tone ranges (45.70125ms)
+✔ GPU resources: shared, reference counted, fully disposed and re-creatable (2.407417ms)
+✔ actual named geographic anchors are present and dry (0.99975ms)
+✔ seed and generation order reproduce identical complete descriptors (181.683042ms)
+✔ canonical heights, wet surface and class-specific shoreline/tread/elevation/slope constraints (84.971958ms)
+✔ spacing holds across shared chunk borders for trees, rocks and cover (894.976458ms)
+✔ world candidate identity and transforms survive different chunk size (ownership only changes) (25.248375ms)
+✔ future heightfield adapter requeries Y and rejects newly flooded terrain (42.711667ms)
+✔ load/unload, reversed targets, teleport and cleanup retain bounded resources and reproduce IDs (305.558625ms)
+✔ pending targets cancel; failed attachment is retryable without retained manager state (68.273708ms)
+✔ community definitions use only available families and mark absent plants future (0.137708ms)
+✔ canonical geography, water, prior viewer and P0 artifacts unchanged (46.212833ms)
+✔ invalid inputs fail explicitly (0.263667ms)
+✔ canonical clipped water triangles distinguish inland/ocean and prevent wet anchors (15.383083ms)
+✔ explicit glade and vista controls preserve open space without removing ground cover (38.9875ms)
+✔ pinned source modules and material/shadow code remain exact except explicit grass compatibility extension (6.672667ms)
+✔ original POP-01 placement and canonical geography remain byte-identical (63.433666ms)
+✔ all 26 source geometry configurations retain attribute/index fingerprints and scale (254.960292ms)
+✔ source grass full orientation composes terrain normal then yaw, without modifying geometry (2.322416ms)
+✔ source default orientation remains upright and stable fade key is independent of page registration order (0.304167ms)
+✔ production seeds map explicitly; unsupported variants and seeds fail (1.047125ms)
+✔ upright grass policy rejects steep slopes; normal policy retains them and clips rock footprint (1.512708ms)
+✔ real source batches detach completely and preserve shared geometry/material ownership after partial failure (8.493ms)
+✔ LOD source thresholds and hysteresis remain unchanged (7.850625ms)
+✔ rock exclusion uses supplied neighboring-page footprints, without changing grass descriptors (0.311917ms)
+✔ 6 m cross-page halo conservatively covers maximum current source rock and grass footprint (30.95675ms)
+✔ generation chunks aggregate into independent pages, including negative coordinates (3.4395ms)
+✔ detach removes registrations after coalesced rebuild; empty pages immediately release (4.571959ms)
+✔ replacement transforms do not create stale registrations and re-entry is bounded (0.382709ms)
+✔ failed page construction or update leaves the previous hidden page owned, supports retry (1.708167ms)
+✔ worker sends one near-first job, cancels stale work, and never attaches a former target (1.152166ms)
+✔ walking height matches real Three.js terrain triangles, including tile edges and diagonals (444.554ms)
+✔ all route segments are dry and remain under 36% grade on rendered ground at 1 m samples (399.254542ms)
+✔ the actual walking collision function traverses every authored route (870.0495ms)
+✔ lake entry, cliff descent and cabin entry are blocked, while the bridge is walkable (51.476542ms)
+✔ reference region relationships and named spawn surfaces remain coherent (0.3155ms)
+✔ authored coastline has finite inlets and detached offshore land (0.224ms)
+✔ all catchments descend, with their channel beds below water at interior controls (0.192667ms)
+✔ seeded noise is deterministic (1.549917ms)
+✔ ocean is below sea level at distant positions (0.372917ms)
+✔ north mountain is above southern lowlands (0.317541ms)
+✔ macro world contains coast and inland (0.177ms)
+✔ river authored levels strictly descend from alpine source to sea (0.196417ms)
+✔ river nearest segment distance zero at interior controls (0.280959ms)
+✔ landmark elevations and classifications are finite (4.219375ms)
+✔ macro terrain range is finite over a coarse sampling grid (11.392291ms)
+✔ ocean surrounds all four boundaries of the world mesh (3.021667ms)
+✔ walk trail macro anchors lie on dry land (8.301834ms)
+✔ river bed is below surface water inland (0.370792ms)
+✔ hiking route segments remain on land at 20 m intervals (28.588333ms)
+ℹ tests 74
+ℹ suites 0
+ℹ pass 73
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5705.634625
+
+✖ failing tests:
+
+test at tests/env-p01.test.ts:8:1
+✖ ENV preserves all POP source, nature assets and canonical geography byte for byte (99.096708ms)
+  Error: Command failed: git ls-tree -r --name-only 4d562187c10e64884e2193a0b09ced6eed3b4b08 src/pop-01 src/pop-02a src/nature-library src/geo-r02b public/geo-r02b
+  fatal: not a tree object
+
+      at genericNodeError (node:internal/errors:985:15)
+      at wrappedFn (node:internal/errors:539:14)
+      at checkExecSyncError (node:child_process:925:11)
+      at execFileSync (node:child_process:961:15)
+      at TestContext.<anonymous> (file://<recovery-checkout>/tests/env-p01.test.ts:9:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.start (node:internal/test_runner/test:1177:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    status: 128,
+    signal: null,
+    output: [ null, <Buffer >, <Buffer 66 61 74 61 6c 3a 20 6e 6f 74 20 61 20 74 72 65 65 20 6f 62 6a 65 63 74 0a> ],
+    pid: 83376,
+    stdout: <Buffer >,
+    stderr: <Buffer 66 61 74 61 6c 3a 20 6e 6f 74 20 61 20 74 72 65 65 20 6f 62 6a 65 63 74 0a>
+  }

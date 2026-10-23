@@ -1,0 +1,10 @@
+{
+  "grassBatchSha256": "42a4499b6dcc7ba57c51c6132407fd1374ec5ea694759df4f8941368b83117aa",
+  "source": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+  "changes": [
+    "optional terrain orientation, default identity",
+    "optional stable per-descriptor fade offset; default source sequence unchanged",
+    "parameter properties expanded to fields for Node strip-types test runner"
+  ],
+  "geometryMaterialFadeRulesChanged": false
+}

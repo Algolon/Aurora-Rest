@@ -1,0 +1,3146 @@
+{
+  "outer": [
+    {
+      "path": "Aurora-Rest-ENV-P01-Source-Snapshot.zip",
+      "size": 158681073,
+      "mode": "0o100644"
+    },
+    {
+      "path": "SOURCE.json",
+      "size": 96887,
+      "mode": "0o100644"
+    },
+    {
+      "path": "README.txt",
+      "size": 2097,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/INTEGRATION.md",
+      "size": 2994,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/NEXT_STEPS.md",
+      "size": 1775,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/PERFORMANCE.md",
+      "size": 5458,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/QA.json",
+      "size": 3944,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/RECOVERY_STATUS.md",
+      "size": 2640,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/REVIEW_ADDENDUM.md",
+      "size": 7891,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/VISUAL_REVIEW.md",
+      "size": 5017,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/capture-manifest.json",
+      "size": 8138,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/ecological-mismatches.json",
+      "size": 35968,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/contact-sheet.jpg",
+      "size": 821120,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/ecological-mismatch-map.png",
+      "size": 108934,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/ecological-overlay.png",
+      "size": 1690878,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/elevated-transition-comparison.jpg",
+      "size": 218170,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-close-birch-faithful.png",
+      "size": 3355758,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-close-birch-neutral.png",
+      "size": 2195519,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-close-grass-faithful.png",
+      "size": 3135688,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-close-grass-neutral.png",
+      "size": 1332928,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-corridor-faithful.png",
+      "size": 2835649,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-corridor-neutral.png",
+      "size": 872362,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-ecotone-outward-faithful.png",
+      "size": 1954180,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-ecotone-outward-neutral.png",
+      "size": 97458,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-edge-faithful.png",
+      "size": 2454564,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-edge-neutral.png",
+      "size": 1513805,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-interior-faithful.png",
+      "size": 3406029,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-interior-neutral.png",
+      "size": 1433795,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-interior-proxies.png",
+      "size": 134930,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-interior-shadows-off.png",
+      "size": 3379597,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-interior-shadows-on.png",
+      "size": 3406029,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-landscape-faithful.png",
+      "size": 2574508,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-landscape-neutral.png",
+      "size": 1439811,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-overhead-faithful.png",
+      "size": 2633144,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/forest-overhead-weights.png",
+      "size": 754623,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/resume-browser.json",
+      "size": 30399,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/runtime.json",
+      "size": 10182894,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/supplement.json",
+      "size": 201922,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/valley-landscape-faithful.png",
+      "size": 2319629,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/valley-landscape-neutral.png",
+      "size": 487849,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/ecotone-0.png",
+      "size": 2545890,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/ecotone-1.png",
+      "size": 2127113,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/ecotone-2.png",
+      "size": 1291227,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/ecotone-3.png",
+      "size": 1230284,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/ecotone-4.png",
+      "size": 1389748,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/frame-0.png",
+      "size": 2609788,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/frame-1.png",
+      "size": 2918549,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/frame-2.png",
+      "size": 2832577,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/frame-3.png",
+      "size": 2397871,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking/frame-4.png",
+      "size": 2812169,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/evidence/walking-height-contact-sheet.jpg",
+      "size": 601103,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/birchwood-overview.jpg",
+      "size": 62052,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/island-dominant.png",
+      "size": 28137,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/m01-elevated.jpg",
+      "size": 113433,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/m01-walk.jpg",
+      "size": 131705,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/m02-walk.jpg",
+      "size": 213805,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/tr-forest-meadow.jpg",
+      "size": 179735,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/evidence/tr-wet-shore.jpg",
+      "size": 53339,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/index.html",
+      "size": 848,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/manifest.json",
+      "size": 1778,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/mat-source-evidence/review.html",
+      "size": 33413,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/overlay-projection.json",
+      "size": 26635,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/post-resume-hash-audit.json",
+      "size": 39273,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/provenance.json",
+      "size": 5224,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/resume-restoration.json",
+      "size": 296,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/review.html",
+      "size": 6565,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/validation-logs/build-post-resume.log",
+      "size": 2685,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/validation-logs/build-pre-resume.log",
+      "size": 2685,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/validation-logs/tests-post-resume.log",
+      "size": 8654,
+      "mode": "0o100644"
+    },
+    {
+      "path": "review/validation-logs/tests-pre-resume.log",
+      "size": 7074,
+      "mode": "0o100644"
+    }
+  ],
+  "inner": [
+    {
+      "path": "Aurora-Rest/.github/copilot-instructions.md",
+      "size": 314,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/.github/workflows/checks.yml",
+      "size": 495,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/.gitignore",
+      "size": 34,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/AGENTS.md",
+      "size": 3284,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/README.md",
+      "size": 4186,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/PROJECT_INSTRUCTIONS.md",
+      "size": 6476,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/WORLD_00_AUDIT.md",
+      "size": 3992,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/WORLD_01B_GEOGRAPHIC_PLAN.md",
+      "size": 4147,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/WORLD_01B_REPORT.md",
+      "size": 12631,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/WORLD_01_REPORT.md",
+      "size": 3686,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/INTEGRATION.md",
+      "size": 2994,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/NEXT_STEPS.md",
+      "size": 1775,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/PERFORMANCE.md",
+      "size": 5458,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/QA.json",
+      "size": 3944,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/RECOVERY_STATUS.md",
+      "size": 2640,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/REVIEW_ADDENDUM.md",
+      "size": 7891,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/VISUAL_REVIEW.md",
+      "size": 5017,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/capture-manifest.json",
+      "size": 8138,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/ecological-mismatches.json",
+      "size": 35968,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/contact-sheet.jpg",
+      "size": 821120,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/ecological-mismatch-map.png",
+      "size": 108934,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/ecological-overlay.png",
+      "size": 1690878,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/elevated-transition-comparison.jpg",
+      "size": 218170,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-close-birch-faithful.png",
+      "size": 3355758,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-close-birch-neutral.png",
+      "size": 2195519,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-close-grass-faithful.png",
+      "size": 3135688,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-close-grass-neutral.png",
+      "size": 1332928,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-corridor-faithful.png",
+      "size": 2835649,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-corridor-neutral.png",
+      "size": 872362,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-ecotone-outward-faithful.png",
+      "size": 1954180,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-ecotone-outward-neutral.png",
+      "size": 97458,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-edge-faithful.png",
+      "size": 2454564,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-edge-neutral.png",
+      "size": 1513805,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-interior-faithful.png",
+      "size": 3406029,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-interior-neutral.png",
+      "size": 1433795,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-interior-proxies.png",
+      "size": 134930,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-interior-shadows-off.png",
+      "size": 3379597,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-interior-shadows-on.png",
+      "size": 3406029,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-landscape-faithful.png",
+      "size": 2574508,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-landscape-neutral.png",
+      "size": 1439811,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-overhead-faithful.png",
+      "size": 2633144,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/forest-overhead-weights.png",
+      "size": 754623,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/resume-browser.json",
+      "size": 30399,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/runtime.json",
+      "size": 10182894,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/supplement.json",
+      "size": 201922,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/valley-landscape-faithful.png",
+      "size": 2319629,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/valley-landscape-neutral.png",
+      "size": 487849,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/ecotone-0.png",
+      "size": 2545890,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/ecotone-1.png",
+      "size": 2127113,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/ecotone-2.png",
+      "size": 1291227,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/ecotone-3.png",
+      "size": 1230284,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/ecotone-4.png",
+      "size": 1389748,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/frame-0.png",
+      "size": 2609788,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/frame-1.png",
+      "size": 2918549,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/frame-2.png",
+      "size": 2832577,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/frame-3.png",
+      "size": 2397871,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking/frame-4.png",
+      "size": 2812169,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/evidence/walking-height-contact-sheet.jpg",
+      "size": 601103,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/birchwood-overview.jpg",
+      "size": 62052,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/island-dominant.png",
+      "size": 28137,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/m01-elevated.jpg",
+      "size": 113433,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/m01-walk.jpg",
+      "size": 131705,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/m02-walk.jpg",
+      "size": 213805,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/tr-forest-meadow.jpg",
+      "size": 179735,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/evidence/tr-wet-shore.jpg",
+      "size": 53339,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/index.html",
+      "size": 848,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/manifest.json",
+      "size": 1778,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/mat-source-evidence/review.html",
+      "size": 33413,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/overlay-projection.json",
+      "size": 26635,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/post-resume-hash-audit.json",
+      "size": 39273,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/provenance.json",
+      "size": 5224,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/resume-restoration.json",
+      "size": 296,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/review.html",
+      "size": 6565,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/validation-logs/build-post-resume.log",
+      "size": 2685,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/validation-logs/build-pre-resume.log",
+      "size": 2685,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/validation-logs/tests-post-resume.log",
+      "size": 8654,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/env-p01/validation-logs/tests-pre-resume.log",
+      "size": 7074,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/birchwood.png",
+      "size": 191060,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/browser-checks.json",
+      "size": 942,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/build.txt",
+      "size": 767,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/cairn-saddle.png",
+      "size": 238954,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/central-valley.png",
+      "size": 243789,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/dune-fields.png",
+      "size": 98573,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/hidden-fold.png",
+      "size": 150006,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/high-tarn.png",
+      "size": 139413,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/home-cove.png",
+      "size": 169928,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/island-oblique.png",
+      "size": 304779,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/mobile-emulation.png",
+      "size": 730302,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/overview.png",
+      "size": 456419,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/production-smoke.json",
+      "size": 481,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/routes.json",
+      "size": 1051,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/runtime.json",
+      "size": 7838,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/south-shoulder.png",
+      "size": 115185,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/terrain-cpu.json",
+      "size": 1216,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/tests.txt",
+      "size": 1653,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/after/windward-coast.png",
+      "size": 110009,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/birchwood.png",
+      "size": 141427,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/build.txt",
+      "size": 1490,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/cairn-saddle.png",
+      "size": 169201,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/central-valley.png",
+      "size": 169124,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/high-tarn.png",
+      "size": 95234,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/home-cove.png",
+      "size": 128334,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/overview.png",
+      "size": 297063,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/routes.json",
+      "size": 1056,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/runtime.json",
+      "size": 5091,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/tests.txt",
+      "size": 985,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/before/windward-coast.png",
+      "size": 144820,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/blueprint-coast.json",
+      "size": 1473,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/geographic-blueprint.svg",
+      "size": 11324,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/manifest.json",
+      "size": 5549,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/evidence/world-01b/reference-island.png",
+      "size": 3179762,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/README.md",
+      "size": 18887,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/acceptance.json",
+      "size": 750,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/checkpoint-manifest.json",
+      "size": 4634,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/design-master-A-R1-v1.json",
+      "size": 1012813,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/diagnostics.svg",
+      "size": 738934,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/cairn-saddle.png",
+      "size": 138878,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/central-valley.png",
+      "size": 210422,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/diagnostic-overlays.png",
+      "size": 490576,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/hidden-fold.png",
+      "size": 198422,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/high-tarn.png",
+      "size": 258513,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/home-cove.png",
+      "size": 82240,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/island-oblique.png",
+      "size": 375609,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/mirelands.png",
+      "size": 94545,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/overview.png",
+      "size": 454091,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/evidence/runtime.json",
+      "size": 11139,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/generation.json",
+      "size": 4043,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/geometry-check-A-R1.json",
+      "size": 2019,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/hiking-profiles.csv",
+      "size": 140679,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/reference-a-r1-hydrology.png",
+      "size": 903073,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/reference-a-r1.png",
+      "size": 978937,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/review.html",
+      "size": 4033,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/source-preflight.json",
+      "size": 1138,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/source-reference-manifest.json",
+      "size": 743,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/terrain-validation.json",
+      "size": 28297,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b/verification-results.json",
+      "size": 1596,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/QA_NOTES.md",
+      "size": 790,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/README.md",
+      "size": 14982,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/REMAINING_ISSUES.md",
+      "size": 5325,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/ROOT_CAUSES.md",
+      "size": 7933,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/acceptance.json",
+      "size": 1561,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/baseline-failure-locations.json",
+      "size": 27415,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/baseline-features.json",
+      "size": 1993620,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/before-sections.csv",
+      "size": 374230,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/checkpoint-manifest.json",
+      "size": 8072,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/depression-sections.png",
+      "size": 133352,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/depression-sections.svg",
+      "size": 62798,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/cairn-saddle.png",
+      "size": 124256,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/capture-progress.json",
+      "size": 9591,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/central-valley.png",
+      "size": 130904,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-depressions.png",
+      "size": 246630,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-drainage.png",
+      "size": 353317,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-failures.png",
+      "size": 259856,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-height.png",
+      "size": 310297,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-overlays.png",
+      "size": 283261,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-slope.png",
+      "size": 326555,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/diagnostic-water.png",
+      "size": 250027,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/hidden-fold.png",
+      "size": 131041,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/high-tarn.png",
+      "size": 140415,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/home-cove.png",
+      "size": 60224,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/island-oblique.png",
+      "size": 194650,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/mirelands.png",
+      "size": 64205,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/overview.png",
+      "size": 243856,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/qa-initial-timeout.png",
+      "size": 267206,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/evidence/runtime.json",
+      "size": 12025,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/generation.json",
+      "size": 4448,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/hiking-profiles.csv",
+      "size": 275202,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/integrity.json",
+      "size": 30606,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/preflight.json",
+      "size": 692,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/review-layout.png",
+      "size": 290104,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/review-qa.json",
+      "size": 191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/review.html",
+      "size": 6661,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/root-measurements.json",
+      "size": 5111,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/route-candidates.json",
+      "size": 9348,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/route-profiles-full.csv",
+      "size": 2177916,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/route-profiles.png",
+      "size": 115423,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/route-profiles.svg",
+      "size": 312191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/source-integrity-addendum.json",
+      "size": 559,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/stage-depressions.json",
+      "size": 1022,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/terrain-validation.json",
+      "size": 20155,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/verification-results.json",
+      "size": 1696,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/water-integrity.json",
+      "size": 23601,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02b-r1/water-mesh-validation.json",
+      "size": 525,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/README.md",
+      "size": 14692,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/baseline-manifest.json",
+      "size": 12496,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/crease-residual.png",
+      "size": 125106,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/form.json",
+      "size": 12340,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/hillshade-sunA.png",
+      "size": 185583,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/hillshade-sunB.png",
+      "size": 195956,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/hydrology.json",
+      "size": 2929,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/reveals.json",
+      "size": 13962,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/routes.json",
+      "size": 8310,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/sinks.json",
+      "size": 1485,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/slope-classes.png",
+      "size": 32004,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/timing.json",
+      "size": 117,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/baseline/transects.json",
+      "size": 49960,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/capture-manifest.json",
+      "size": 57606,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cairn-below-100.png",
+      "size": 166016,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cairn-below-400.png",
+      "size": 237102,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cairn-col-north.png",
+      "size": 271976,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cairn-col-west.png",
+      "size": 83877,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cairn-saddle.png",
+      "size": 347476,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/central-valley.png",
+      "size": 94204,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cv-before.png",
+      "size": 26730,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cv-full.png",
+      "size": 189834,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/cv-partial.png",
+      "size": 15642,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/fold-from-hero.png",
+      "size": 123557,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/fold-gorge-upstream.png",
+      "size": 158356,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/fold-lake-shore.png",
+      "size": 38075,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/fold-rim-entry.png",
+      "size": 179258,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/hidden-fold.png",
+      "size": 159938,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/high-tarn.png",
+      "size": 169168,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/home-cove.png",
+      "size": 12972,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/island-oblique.png",
+      "size": 252105,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/mirelands.png",
+      "size": 26446,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/np-from-birchwood.png",
+      "size": 114191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/np-from-cairn-col.png",
+      "size": 191222,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/np-from-tarn-overlook.png",
+      "size": 211499,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/np-from-valley-shoulder.png",
+      "size": 83276,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayA/overview.png",
+      "size": 318106,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cairn-below-100.png",
+      "size": 30239,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cairn-below-400.png",
+      "size": 22958,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cairn-col-north.png",
+      "size": 67327,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cairn-col-west.png",
+      "size": 64168,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cairn-saddle.png",
+      "size": 130438,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/central-valley.png",
+      "size": 129899,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cv-before.png",
+      "size": 23605,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cv-full.png",
+      "size": 195594,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/cv-partial.png",
+      "size": 12719,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/fold-from-hero.png",
+      "size": 179908,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/fold-gorge-upstream.png",
+      "size": 98723,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/fold-lake-shore.png",
+      "size": 46199,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/fold-rim-entry.png",
+      "size": 126539,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/hidden-fold.png",
+      "size": 104184,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/high-tarn.png",
+      "size": 110250,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/home-cove.png",
+      "size": 11822,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/island-oblique.png",
+      "size": 202572,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/mirelands.png",
+      "size": 20873,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/np-from-birchwood.png",
+      "size": 93191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/np-from-cairn-col.png",
+      "size": 48505,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/np-from-tarn-overlook.png",
+      "size": 37190,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/np-from-valley-shoulder.png",
+      "size": 74852,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/clayB/overview.png",
+      "size": 267960,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/default-viewer-identity.json",
+      "size": 3561,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cairn-below-100.png",
+      "size": 28305,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cairn-below-400.png",
+      "size": 18800,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cairn-col-north.png",
+      "size": 40455,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cairn-col-west.png",
+      "size": 33811,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cairn-saddle.png",
+      "size": 80200,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/central-valley.png",
+      "size": 88821,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cv-before.png",
+      "size": 14281,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cv-full.png",
+      "size": 106632,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/cv-partial.png",
+      "size": 10505,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/fold-from-hero.png",
+      "size": 100338,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/fold-gorge-upstream.png",
+      "size": 49958,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/fold-lake-shore.png",
+      "size": 54645,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/fold-rim-entry.png",
+      "size": 90034,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/hidden-fold.png",
+      "size": 85751,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/high-tarn.png",
+      "size": 94417,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/home-cove.png",
+      "size": 10906,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/island-oblique.png",
+      "size": 148774,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/mirelands.png",
+      "size": 17206,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/np-from-birchwood.png",
+      "size": 44903,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/np-from-cairn-col.png",
+      "size": 31624,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/np-from-tarn-overlook.png",
+      "size": 41240,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/np-from-valley-shoulder.png",
+      "size": 67571,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/captures/standard/overview.png",
+      "size": 196642,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence/convergence.json",
+      "size": 6191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence/diff-M0c-minus-R1.png",
+      "size": 196583,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence/diff-M0w-minus-R1.png",
+      "size": 65463,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence/hillshade-M0c.png",
+      "size": 204954,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence/hillshade-R1.png",
+      "size": 206351,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/convergence.md",
+      "size": 5582,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/invariance/r1-vs-linux-regeneration.json",
+      "size": 1134,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/reproducibility/canonical-minus-linux.png",
+      "size": 7900,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/reproducibility/platform-diff.json",
+      "size": 9093,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/reproducibility/probe-linux-x86_64.json",
+      "size": 2417,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/reproducibility.md",
+      "size": 8808,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/geo-r02c-p0/review.html",
+      "size": 19447,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/mat-01/ADR-001-terrain-material-architecture.md",
+      "size": 8993,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/mat-01/INTEGRATION.md",
+      "size": 4949,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/mat-01/README.md",
+      "size": 10684,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/mat-01/protected-baseline.json",
+      "size": 27785,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/ADR.md",
+      "size": 9286,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/ASSET_INTEGRATION.md",
+      "size": 6165,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/PERFORMANCE.md",
+      "size": 2601,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/QA.md",
+      "size": 4894,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/README.md",
+      "size": 6333,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/benchmarks.json",
+      "size": 23823,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-chunks.png",
+      "size": 400045,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-community.png",
+      "size": 407050,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-landscape.png",
+      "size": 511697,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-overhead.png",
+      "size": 394111,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-slope.png",
+      "size": 416604,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-trail.png",
+      "size": 421314,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-walk-interaction.png",
+      "size": 153310,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-walk.png",
+      "size": 163143,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/forest-water.png",
+      "size": 399748,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/home-landscape.png",
+      "size": 305562,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/home-overhead.png",
+      "size": 217141,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/home-walk.png",
+      "size": 164439,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/runtime.json",
+      "size": 13122,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/valley-landscape.png",
+      "size": 361239,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/valley-overhead.png",
+      "size": 289736,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/evidence/valley-walk.png",
+      "size": 186749,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/preflight.json",
+      "size": 14706,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-01/review.html",
+      "size": 3980,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/ARCHITECTURE.md",
+      "size": 6877,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/ASSET_COMPATIBILITY.md",
+      "size": 6153,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/MAT_WTR_COORDINATION.md",
+      "size": 3259,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/PERFORMANCE.md",
+      "size": 3474,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/QA.md",
+      "size": 5612,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/README.md",
+      "size": 4614,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/compatibility.json",
+      "size": 432,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/.forest-density-1.png.iyAsz1",
+      "size": 524288,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/backend-comparison.json",
+      "size": 272,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/backend-diff-x5.png",
+      "size": 5197,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/backend-instanced.png",
+      "size": 1124795,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/backend-multidraw.png",
+      "size": 1124795,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-fidelity-batch.png",
+      "size": 183435,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-fidelity-initial-diff.png",
+      "size": 11617,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-fidelity-negative-opaque-depth.png",
+      "size": 160906,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-fidelity-reference.png",
+      "size": 183448,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-fidelity.json",
+      "size": 1385,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-lighting-cool.png",
+      "size": 1388893,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-lod-auto.png",
+      "size": 1442788,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-lod-far.png",
+      "size": 1567699,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-lod-mid.png",
+      "size": 1571798,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-lod-near.png",
+      "size": 1430080,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-shadows-off.png",
+      "size": 1229595,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-shadows-on.png",
+      "size": 1442879,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-studio-batch.png",
+      "size": 179311,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/birch-studio-reference.png",
+      "size": 179311,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/contact-sheet.jpg",
+      "size": 527295,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/final-forest-interior.png",
+      "size": 1031189,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/final-forest-landscape.png",
+      "size": 1135752,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/final-home-landscape.png",
+      "size": 313018,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/final-validation.json",
+      "size": 50678,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/final-valley-landscape.png",
+      "size": 300465,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-close-birch.png",
+      "size": 1443098,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-close-grass.png",
+      "size": 976336,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-close-rock.png",
+      "size": 937560,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-corridor.png",
+      "size": 632950,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-density-1.png",
+      "size": 1135861,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-density-2.png",
+      "size": 1404149,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-density-5.png",
+      "size": 782311,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-edge.png",
+      "size": 1079012,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-interior-assets-matched.png",
+      "size": 1031555,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-interior-proxies.png",
+      "size": 164462,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-interior.png",
+      "size": 1031814,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-landscape-assets-matched.png",
+      "size": 1135782,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-landscape-proxies.png",
+      "size": 382361,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-landscape.png",
+      "size": 1135651,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-overhead.png",
+      "size": 564426,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/forest-walk.png",
+      "size": 1047813,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/grass-alignment-normal.png",
+      "size": 976016,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/grass-alignment-upright.png",
+      "size": 977782,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/grass-fade-source.png",
+      "size": 973995,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/home-landscape.png",
+      "size": 313078,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/home-overhead.png",
+      "size": 214691,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/home-shore.png",
+      "size": 283287,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/home-walk.png",
+      "size": 428044,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/media.json",
+      "size": 278,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/runtime.json",
+      "size": 548576,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/supplement.json",
+      "size": 22776,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/valley-bank.png",
+      "size": 189801,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/valley-landscape.png",
+      "size": 300587,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/valley-overhead.png",
+      "size": 252322,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/valley-walk.png",
+      "size": 470966,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-00.png",
+      "size": 636493,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-01.png",
+      "size": 690857,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-02.png",
+      "size": 712006,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-03.png",
+      "size": 741818,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-04.png",
+      "size": 748593,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-05.png",
+      "size": 714887,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-06.png",
+      "size": 842985,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-07.png",
+      "size": 830441,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-08.png",
+      "size": 714768,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking/frame-09.png",
+      "size": 565622,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/evidence/walking-review.mp4",
+      "size": 1268370,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/geometry-baseline.json",
+      "size": 9573,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/grass-compatibility.patch",
+      "size": 4279,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/preflight.json",
+      "size": 511,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/provenance.json",
+      "size": 9427,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/review.html",
+      "size": 38575,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/pop-02a/source-ancestry.json",
+      "size": 802,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/terrain-samples.json",
+      "size": 244384,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/world01-route-profile.png",
+      "size": 66544,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/docs/world01-terrain-diagnostic.png",
+      "size": 175950,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/env-p01.html",
+      "size": 270,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/geo-r02b.html",
+      "size": 281,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/index.html",
+      "size": 330,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/mat-01.html",
+      "size": 324,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/package-lock.json",
+      "size": 41470,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/package.json",
+      "size": 1063,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/pop-01.html",
+      "size": 274,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/pop-02a-fidelity.html",
+      "size": 182,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/pop-02a.html",
+      "size": 270,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/public/geo-r02b/diagnostics.json",
+      "size": 148738,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/public/geo-r02b/features.json",
+      "size": 2359175,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/public/geo-r02b/terrain.f32",
+      "size": 12014004,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/public/geo-r02b/water-mesh.f32",
+      "size": 4026780,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/public/geo-r02b/water-surface.f32",
+      "size": 12014004,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/env-p01/ground.ts",
+      "size": 3220,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/env-p01/main.ts",
+      "size": 17416,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/geo-r02b/main.ts",
+      "size": 18035,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/geo-r02b/review-options.ts",
+      "size": 1042,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/geo-r02b/review.ts",
+      "size": 2148,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/geo-r02b/style.css",
+      "size": 1198,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/geo-r02b/terrain.ts",
+      "size": 4470,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/main.ts",
+      "size": 9839,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/mat-01/cameras.ts",
+      "size": 3236,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/mat-01/main.ts",
+      "size": 19188,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/mat-01/style.css",
+      "size": 1002,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/mat-01/worker.ts",
+      "size": 1773,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/foliage.ts",
+      "size": 7719,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/geometry.ts",
+      "size": 25632,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/grass/geometry.ts",
+      "size": 12964,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/grass/index.ts",
+      "size": 1665,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/grass/materials.ts",
+      "size": 5563,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/grass/rendering/grassBatch.ts",
+      "size": 14580,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/grass/rendering/grassFade.ts",
+      "size": 1714,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/index.ts",
+      "size": 2328,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/lod.ts",
+      "size": 711,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/materials.ts",
+      "size": 18719,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/pine/geometry.ts",
+      "size": 12388,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/pine/index.ts",
+      "size": 1735,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/pine/materials.ts",
+      "size": 1521,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/batchedRenderer.ts",
+      "size": 2300,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/capabilities.ts",
+      "size": 917,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/instancedRenderer.ts",
+      "size": 3329,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/mixedForest.ts",
+      "size": 5554,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/natureBatch.ts",
+      "size": 11084,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rendering/visibility.ts",
+      "size": 1712,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rng.ts",
+      "size": 661,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rocks/index.ts",
+      "size": 1325,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rocks/productionRock.ts",
+      "size": 3226,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/nature-library/rocks/rockMaterials.ts",
+      "size": 5148,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/composition.ts",
+      "size": 715,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/contracts.ts",
+      "size": 2950,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/ecology.ts",
+      "size": 2756,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/generator.ts",
+      "size": 6534,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/geography.ts",
+      "size": 4265,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/main.ts",
+      "size": 13101,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/proxy-renderer.ts",
+      "size": 4336,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/spatial.ts",
+      "size": 1262,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/streaming.ts",
+      "size": 2135,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-01/style.css",
+      "size": 1601,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/cameras.ts",
+      "size": 2798,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/fidelity.ts",
+      "size": 3625,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/main.ts",
+      "size": 15331,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/page-store.ts",
+      "size": 3160,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/population-worker.ts",
+      "size": 902,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/renderer.ts",
+      "size": 3783,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/source-page.ts",
+      "size": 7581,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/style.css",
+      "size": 1503,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/pop-02a/worker-stream.ts",
+      "size": 2894,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/render/landmarks.ts",
+      "size": 4705,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/render/terrain.ts",
+      "size": 6056,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/render/trails.ts",
+      "size": 1819,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/render/water.ts",
+      "size": 2009,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/style.css",
+      "size": 1673,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/classify.ts",
+      "size": 10453,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/fields.ts",
+      "size": 4160,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/materials.ts",
+      "size": 3891,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/noise.ts",
+      "size": 2573,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/query.ts",
+      "size": 2943,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/render/shader.ts",
+      "size": 8600,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/render/terrain-material.ts",
+      "size": 7917,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/render/terrain-tiles.ts",
+      "size": 4451,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/rules.ts",
+      "size": 3119,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/sources/geo-r02b.ts",
+      "size": 1344,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/textures.ts",
+      "size": 11196,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/terrain-material/types.ts",
+      "size": 2697,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/world/config.ts",
+      "size": 2287,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/world/geography.ts",
+      "size": 9249,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/world/layout.ts",
+      "size": 1859,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/world/routes.ts",
+      "size": 5787,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/src/world/surface.ts",
+      "size": 2314,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/env-p01.test.ts",
+      "size": 2806,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/geo-r02b-r1.test.ts",
+      "size": 2155,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/geo-r02b.test.ts",
+      "size": 1507,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/geo-r02c-p0.test.ts",
+      "size": 5523,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/mat-01.test.ts",
+      "size": 10838,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/pop-01.test.ts",
+      "size": 8135,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/pop-02a-assets.test.ts",
+      "size": 8427,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/pop-02a-lifecycle.test.ts",
+      "size": 4065,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/runtime.test.ts",
+      "size": 4775,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tests/world.test.ts",
+      "size": 2813,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/capture-world.mjs",
+      "size": 4804,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/check-browser.mjs",
+      "size": 6330,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/draw-blueprint.mjs",
+      "size": 5047,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/addendum.py",
+      "size": 3617,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/capture.mjs",
+      "size": 7603,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/finalize.py",
+      "size": 6894,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/reentry.mjs",
+      "size": 2773,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/report.py",
+      "size": 7514,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/smoke.mjs",
+      "size": 1153,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/env-p01/supplement.mjs",
+      "size": 6533,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/capture.mjs",
+      "size": 5335,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/generate.py",
+      "size": 15917,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/preflight.py",
+      "size": 5364,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/report.py",
+      "size": 26080,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/requirements.txt",
+      "size": 42,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b/validate.py",
+      "size": 12791,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/.gitignore",
+      "size": 13,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/baseline-diagnostics.py",
+      "size": 5372,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/capture.mjs",
+      "size": 6775,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/generate.py",
+      "size": 12568,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/geometry.py",
+      "size": 1965,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/integrity.py",
+      "size": 8926,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/report.py",
+      "size": 24947,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/review-check.mjs",
+      "size": 1692,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/routes.py",
+      "size": 9048,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/validate.py",
+      "size": 12290,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/water-integrity.py",
+      "size": 4376,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02b-r1/water.py",
+      "size": 4237,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/.gitignore",
+      "size": 13,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/baseline.py",
+      "size": 9585,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/cameras.json",
+      "size": 5368,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/cameras_build.py",
+      "size": 4795,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/capture.mjs",
+      "size": 4415,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/compare_default.py",
+      "size": 3206,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/env/fingerprint.py",
+      "size": 1191,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/env/requirements.lock.txt",
+      "size": 628,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/invariance.py",
+      "size": 4826,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/lib/common.py",
+      "size": 3563,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/lib/form.py",
+      "size": 3513,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/lib/hydro.py",
+      "size": 3754,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/lib/los.py",
+      "size": 2512,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/lib/routes.py",
+      "size": 2928,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/masks/A1-window-v1.json",
+      "size": 989,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/repro/convergence.py",
+      "size": 7710,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/repro/platform_diff.py",
+      "size": 7666,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/repro/platform_probe.py",
+      "size": 2579,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/repro/r1_stages.py",
+      "size": 6078,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/review_page.py",
+      "size": 3740,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/geo-r02c/transects.json",
+      "size": 1674,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-01/benchmark.ts",
+      "size": 2464,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-01/capture.mjs",
+      "size": 7171,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-01/handoff.mjs",
+      "size": 1350,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/capture.mjs",
+      "size": 9071,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/extract.py",
+      "size": 2213,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/fidelity.mjs",
+      "size": 2960,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/final-validation.mjs",
+      "size": 3109,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/geometry-baseline.ts",
+      "size": 1675,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/handoff.mjs",
+      "size": 1780,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/media.py",
+      "size": 1807,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/review.py",
+      "size": 19704,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/smoke.mjs",
+      "size": 1580,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/pop-02a/supplement.mjs",
+      "size": 3480,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/profile-routes.ts",
+      "size": 1281,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/profile-terrain.ts",
+      "size": 1035,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/render_diagnostic.py",
+      "size": 4303,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/route-trails.ts",
+      "size": 4489,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tools/sample-terrain.mjs",
+      "size": 670,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/tsconfig.json",
+      "size": 234,
+      "mode": "0o600"
+    },
+    {
+      "path": "Aurora-Rest/vite.config.ts",
+      "size": 310,
+      "mode": "0o600"
+    }
+  ]
+}

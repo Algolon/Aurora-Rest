@@ -1,0 +1,6 @@
+{
+  "contactSheet": "Derived montage of 12 unretouched full-resolution WebGL captures; originals retained.",
+  "walkingMovie": "Derived from 10 actual keyboard-driven WebGL sample frames at 4 fps replay, not a real-time FPS recording.",
+  "sourceFrames": 10,
+  "replayFps": 4
+}

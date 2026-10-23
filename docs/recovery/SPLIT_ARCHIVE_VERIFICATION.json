@@ -1,0 +1,51 @@
+{
+  "parts": [
+    {
+      "name": "Aurora-01-Source-Code.zip",
+      "sha256": "08d1ca1bd73a4b4c5074d4a71172a3b5adfb2195dfc578fdd41468fc00bcf5e7",
+      "verifiedFiles": 365
+    },
+    {
+      "name": "Aurora-02-Data-Evidence.zip",
+      "sha256": "4c9778dfc1dff99f2b4703e59027e0a38b9fc06844d902c93523b96103f0246d",
+      "verifiedFiles": 12
+    },
+    {
+      "name": "Aurora-03-Data-Evidence.zip",
+      "sha256": "21d58be8f19f50caa0155ddbdd4098107a33d661366913ac973e727d92cb1613",
+      "verifiedFiles": 8
+    },
+    {
+      "name": "Aurora-04-Data-Evidence.zip",
+      "sha256": "f2cfcbd87ba6ae04c81f571701fc1e01db9d823ce835805a5adf234ca200c445",
+      "verifiedFiles": 13
+    },
+    {
+      "name": "Aurora-05-Data-Evidence.zip",
+      "sha256": "a81ce8ffe2a29fe261b6359369b3d6ac00c5e8fa382245d3149f0ce95945ddde",
+      "verifiedFiles": 42
+    },
+    {
+      "name": "Aurora-06-Data-Evidence.zip",
+      "sha256": "5e35c284215f0d4955a3957b5867bc108a96e7e17bc75fdefac5991b8c438652",
+      "verifiedFiles": 60
+    },
+    {
+      "name": "Aurora-07-Data-Evidence.zip",
+      "sha256": "a25f0bbd9b1a73850291034e071ce4af993d37ad63796c392d011b9090d5a8c0",
+      "verifiedFiles": 20
+    },
+    {
+      "name": "Aurora-08-Data-Evidence.zip",
+      "sha256": "9bc20aefdd87b1871f3885a5029a6c2b56f0a3f3f3979501473f7cc27cdbce9b",
+      "verifiedFiles": 31
+    },
+    {
+      "name": "Aurora-09-Data-Evidence.zip",
+      "sha256": "4eb808b0a3137a81d29e2d6beafa4c7c7e9e914e53422f3284be4a6ccf1b4ba4",
+      "verifiedFiles": 7
+    }
+  ],
+  "uniqueVerifiedFiles": 558,
+  "missing": []
+}

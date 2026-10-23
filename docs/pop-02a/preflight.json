@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/Algolon/Aurora-Rest.git",
+  "restoredPop01": "4afbb6f9598a1611df53d0c9f61b6fd1845a3fc7",
+  "parentGeography": "90d0cb745e8e51a3dc737bd4dc11d6f8c322758b",
+  "pop01BundleSha256": "98201073ea7ed95a05eb75c52f7cc5665f4e83a4ca172ee547cfdda599c2dc23",
+  "bundleVerified": true,
+  "isolatedWorkingBranch": "feature/pop-02a-nature-asset-integration",
+  "baselineTests": "42/42 pass",
+  "baselineBuild": "pass",
+  "policyFilesUnchanged": true,
+  "pushMergeDeployAuthorized": false
+}

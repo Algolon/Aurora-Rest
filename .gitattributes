@@ -1,0 +1,16 @@
+recovery-evidence/*.zip filter=lfs diff=lfs merge=lfs -text
+docs/env-p01/**/*.png filter=lfs diff=lfs merge=lfs -text
+docs/env-p01/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/env-p01/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+docs/pop-01/**/*.png filter=lfs diff=lfs merge=lfs -text
+docs/pop-01/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/pop-01/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+docs/pop-02a/**/*.png filter=lfs diff=lfs merge=lfs -text
+docs/pop-02a/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/pop-02a/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+docs/mat-01/**/*.png filter=lfs diff=lfs merge=lfs -text
+docs/mat-01/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/mat-01/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+docs/recovery/**/*.png filter=lfs diff=lfs merge=lfs -text
+docs/recovery/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/recovery/**/*.mp4 filter=lfs diff=lfs merge=lfs -text

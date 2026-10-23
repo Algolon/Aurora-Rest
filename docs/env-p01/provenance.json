@@ -1,0 +1,138 @@
+{
+  "pop": "4d562187c10e64884e2193a0b09ced6eed3b4b08",
+  "mat": "ae8a9c17781cdaa85c9e55696697c6213a860ef6",
+  "files": [
+    {
+      "path": "src/mat-01/cameras.ts",
+      "sourceGitBlob": "e52de662353b9990251d1f9c589167e200213d03",
+      "sha256": "12fbd45dc14237ff383e3314010d34a3ea01371eea090dca6efe55b2e7491d82",
+      "patch": null
+    },
+    {
+      "path": "src/mat-01/main.ts",
+      "sourceGitBlob": "62179d2ab7fce490a60b8f31a87787901fbe0d2e",
+      "sha256": "2b15c46f12095d42c7022f357c25dc1a5c291d96704bd1c1cbe582e1c0821053",
+      "patch": null
+    },
+    {
+      "path": "src/mat-01/style.css",
+      "sourceGitBlob": "c549fc4cd455f3be44488fac6b33e2fe79e84b5a",
+      "sha256": "2722d3f6162cb1f90006f5277bad7a66612bd35edcda276f05cbea0ec61bb5b3",
+      "patch": null
+    },
+    {
+      "path": "src/mat-01/worker.ts",
+      "sourceGitBlob": "31457d9fa1ecbc5f70b591b7fde5f1cab9d9af68",
+      "sha256": "bac37f3a508c294b1a99a24cbe4329e965513e6cc9b5062008f93f8cd460f74a",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/classify.ts",
+      "sourceGitBlob": "d6995f1225bd201eb706cbe3b1ab1515454fa82a",
+      "sha256": "2d638adaac71f6583939cf7f485505451a0e5044adb8e0b9e6baef80cc71a502",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/fields.ts",
+      "sourceGitBlob": "fcf1912150ad4e70ae3e219d33caf25671d71768",
+      "sha256": "331e90a7e6ea52ab797613ac704f6a650a16437aa2581664c60dd67ff126c0ac",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/materials.ts",
+      "sourceGitBlob": "6f592588a2f1c3c73962b0b4e6e8f552cbff9113",
+      "sha256": "41ba8468c976945356cc0b7e1f6fb7144f817151fdb77d95b7ac38f23f7b68e3",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/noise.ts",
+      "sourceGitBlob": "99f6f52fed5c83c584bbfe1f86f91d4ab5c35b67",
+      "sha256": "66bc3421d0e7dcaf3962451ff6fb42dddcd5bd01951e19f570f77573a25c0a78",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/query.ts",
+      "sourceGitBlob": "7cd7936a89398011538579d01bba41cd164d3176",
+      "sha256": "cb32349c7bc3977291a98c72d78c5d4fc5ee301ac4e69477e5427415477694ba",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/render/shader.ts",
+      "sourceGitBlob": "a23e4c2a7613f3b7cdfc7929471508a3271e90eb",
+      "sha256": "fca05f77f2d597937affb51689257fa28dd426b774fa97c6c8c981608213268b",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/render/terrain-material.ts",
+      "sourceGitBlob": "2e6d732b9aaec8231658232c919f476339681208",
+      "sha256": "3ba042ff9447cc2f5b77e9777dd53d79436cac3dbbf0d704e3757e5c0a62c383",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/render/terrain-tiles.ts",
+      "sourceGitBlob": "4a2e2d6d51282d276840f1227611a8669f49e5f1",
+      "sha256": "77ec0390d250d9e66df6fc7d464df189b4c9014817815946bbb12871842eb9db",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/rules.ts",
+      "sourceGitBlob": "f8e9ef4803f65c11b6007998b203da2b6fd8a7c6",
+      "sha256": "449b7e0b0933523af4b7348db1c3c54129837c8f2dffa2952485fd9018c21f7f",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/sources/geo-r02b.ts",
+      "sourceGitBlob": "857914cb35676df054078667453a5eca800e1008",
+      "sha256": "c4be8e07954f11ebfd55f13a8f6d4df68319c4c2e072573ffd378f884875b3cc",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/textures.ts",
+      "sourceGitBlob": "7894a2f120b943e0a8f89dd02b0db9674ab43443",
+      "sha256": "998cb2be98aad7abec7f01bad27b246310af414bde6b24fabdc5a457415ef466",
+      "patch": null
+    },
+    {
+      "path": "src/terrain-material/types.ts",
+      "sourceGitBlob": "f6c97beb4a613ee431246379150198218227ecd9",
+      "sha256": "627b9599d535a886a44b272ac1f5acafb6755aa77b69a28a71821a4f273dc9c9",
+      "patch": null
+    },
+    {
+      "path": "tests/mat-01.test.ts",
+      "sourceGitBlob": "d3c5f2d3e8d40b9bad1a113cff665bc1622114f0",
+      "sha256": "9939e5d0c9c9b416bbc8b85f3535cbd4c7fc6dfbfa928920422264b28cef8ac5",
+      "patch": null
+    },
+    {
+      "path": "docs/mat-01/protected-baseline.json",
+      "sourceGitBlob": "06c63410324574fb769f2ccd1e1d1cc1a547e599",
+      "sha256": "ed3f9342945a4ad631f42fce892ee08a2cc1e86a34316d88edb1dd0554342181",
+      "patch": null
+    },
+    {
+      "path": "docs/mat-01/INTEGRATION.md",
+      "sourceGitBlob": "a99624b22177f6f8ddca265159d7e062834b225f",
+      "sha256": "c7b30c34f4991aa225c19ebc60e679861f7b4ee0ade38e06111d614c5f7059a0",
+      "patch": null
+    },
+    {
+      "path": "docs/mat-01/ADR-001-terrain-material-architecture.md",
+      "sourceGitBlob": "33a4dab11a01f0b661a8944f201e1b9cb12d6003",
+      "sha256": "a0281178590493efa4430daa218f87381ee30fa0c79120aa5666244993581e3f",
+      "patch": null
+    },
+    {
+      "path": "docs/mat-01/README.md",
+      "sourceGitBlob": "828120be0a266e1cf19f23ad1626cb226a9b2554",
+      "sha256": "1d3e46b91bdff4b4e5d6bb6dea4513d36a0e23d0f4ec355beed8fb494f4670d0",
+      "patch": null
+    },
+    {
+      "path": "mat-01.html",
+      "sourceGitBlob": "25d14bac38c789c0f5876e32478c89530eba652d",
+      "sha256": "32af08793fa1ac91afa7db26fcd58b600d7d2796ecb47fea427a50ee286445fc",
+      "patch": null
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "source": "4d562187c10e64884e2193a0b09ced6eed3b4b08",
+  "files": [
+    {
+      "path": "evidence/ecological-mismatch-map.png",
+      "sha256": "c0c04ae573ba31c5e8ef566c62596dc205ff94852020d893b174a337832bbeff",
+      "width": 1000,
+      "height": 1000,
+      "kind": "spatial data diagnostic"
+    },
+    {
+      "path": "evidence/ecological-overlay.png",
+      "sha256": "1c4e33919f835c767cab976457204a3d96d76569a59cac73c670a23feca88466",
+      "width": 1600,
+      "height": 1100,
+      "kind": "diagnostic overlay on genuine WebGL"
+    },
+    {
+      "path": "evidence/forest-close-birch-faithful.png",
+      "sha256": "2506b23c40c56de76ca9d533c4451ca6e46caf6b0364612a99f938e4d08e1ac1",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-close-birch-neutral.png",
+      "sha256": "f785917d7eae60b21a5afb88516609007c1f09ddb580d81bccdb08be3379af50",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-close-grass-faithful.png",
+      "sha256": "8707ff5dcb15dc8a38560db60d55fdb2531e6c366f95c9574ad1c58d8d2b6403",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-close-grass-neutral.png",
+      "sha256": "2280fb93caf783e04f22307ef1ed9eadad3cbe8be3415230fe67f020b303911b",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-corridor-faithful.png",
+      "sha256": "ac5ec3a128e01f5b968654d0a7b7d7ea0229f9c1278f9bf96f71d242d322228b",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-corridor-neutral.png",
+      "sha256": "6561494f9c0ddc0fded7aac850077948386511424f4b9e53a7e4c1e418d73c1a",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-ecotone-outward-faithful.png",
+      "sha256": "2be7970c17bcc32a6547ceba2da9331381d4f56e57c14ced2de22a414f70013d",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-ecotone-outward-neutral.png",
+      "sha256": "ba4263faafb21a061878d201e2794db9ebae1e877cad96af4de1f30b505b67e9",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-edge-faithful.png",
+      "sha256": "08fe030c31014e4021cc37d5302e6c02d39f3629dce6f31a18989f9930521190",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-edge-neutral.png",
+      "sha256": "6b4a994a014ef94900bd83a857a267f7a85c213f2772df0d51b69ce57172bc21",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-interior-faithful.png",
+      "sha256": "ec0540dadfe9de8c2581178eb3f24554af0cfd85308e5a35053d1a78f8b04847",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-interior-neutral.png",
+      "sha256": "525ce7f787cb0c6e5be00101f06462296e5565f7c53c21ae8dcf8ddf807ea4e1",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-interior-proxies.png",
+      "sha256": "3eea7d60b2fe0ceb88aaa86ac57f1510b0b2f9ff4ef4350acafb5421729ba4d6",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-interior-shadows-off.png",
+      "sha256": "bab74b93293070424d3feeead2a5956119c1da766dfc8c5cfab1c672484131c4",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-interior-shadows-on.png",
+      "sha256": "ec0540dadfe9de8c2581178eb3f24554af0cfd85308e5a35053d1a78f8b04847",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-landscape-faithful.png",
+      "sha256": "8976b8cbe5a253a8fe84d64add3330ad59a7bc6a37ebc598d46e3c0d9dd97f26",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-landscape-neutral.png",
+      "sha256": "90e3541edfa242987e5fdb5cffc95a6ab3a756f7ceb560236168ef1865a21111",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-overhead-faithful.png",
+      "sha256": "e7c52eb4d941720b1f48885f486e703c5359c164a851e373d993c994ee31c1be",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/forest-overhead-weights.png",
+      "sha256": "ad652089d1b442e117a935bd4ea03aaf4e13272e3c9b40f1de817a9174a61d32",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/valley-landscape-faithful.png",
+      "sha256": "2d4fc98a86f32db063f62818d4fb0163a23376d99b95c1728bf83121c194a52d",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/valley-landscape-neutral.png",
+      "sha256": "f430b971cb65c813fe71919027339413de0064367c7a96857e9721d52d8f105f",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/ecotone-0.png",
+      "sha256": "02c233dfedd91ac38a29e8b25b79e642a37b536f2001314a7f463bcaf35e1e7a",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/ecotone-1.png",
+      "sha256": "111376d093c3999fae1245e35631b7aee34c455d4ad24b3d9aa6c6edb1f0c75e",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/ecotone-2.png",
+      "sha256": "e7188a61ad8d2f05de44cc45a8bcf8278247e2509bc13f41956f8e37db899ec0",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/ecotone-3.png",
+      "sha256": "6c6077f27590a2c9db277a53cfc639167d4f3a4ab581c4bc6ceffcbe94186cac",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/ecotone-4.png",
+      "sha256": "ea592de99a4d8e75e7836dd29797fdd0751198e4582dbaa0bd84d27826fca57f",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/frame-0.png",
+      "sha256": "af7e7701d5b53b42b893f53c65043d5a7ccc59717fa2e56e46fb60e82e4255ec",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/frame-1.png",
+      "sha256": "72b4c837cfea5d83482e769fe9dbaebd6e7e4b3f36af5437617ee1dbe00a1622",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/frame-2.png",
+      "sha256": "6ea91861daa6fa94eadb4031a257b596662c0bf64a9d9f65242c23b934d2d23d",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/frame-3.png",
+      "sha256": "8de7301db8a8ae9d6208e874840df95cc4873510c44efefd4499be13fa86733d",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    },
+    {
+      "path": "evidence/walking/frame-4.png",
+      "sha256": "153da0c60897187f2658c108d1cfa0a81c0a5893b2d02b5c10ecf33880b57ac7",
+      "width": 1600,
+      "height": 1100,
+      "kind": "genuine WebGL canvas capture"
+    }
+  ],
+  "capture": "Real Three.js/WebGL canvas readback; ecological map explicitly data-only",
+  "sourceFieldMeaning": "Observed HEAD at initial capture start; final Git recovery is blocked. See RECOVERY_STATUS.md."
+}

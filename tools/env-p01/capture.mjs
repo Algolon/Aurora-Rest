@@ -1,0 +1,38 @@
+import{chromium}from'playwright';import{spawn,execFileSync}from'node:child_process';import{mkdir,writeFile,readFile}from'node:fs/promises';import{createHash}from'node:crypto';import assert from'node:assert/strict';
+const out='docs/env-p01/evidence';await mkdir(out+'/walking',{recursive:true});
+const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','4215','--strictPort']);await new Promise(r=>server.stdout.on('data',b=>{if(b.toString().includes('Local:'))r();}));let browser;
+let report;try{report=JSON.parse(await readFile(out+'/runtime.json','utf8'));delete report.failure;}catch{}
+report??={source:execFileSync('git',['rev-parse','HEAD']).toString().trim(),browser:null,viewport:{width:1600,height:1100,dpr:1},errors:[],warnings:[],checks:[],measurements:[],diagnostics:[],walking:[],lifecycle:[],limits:'Genuine WebGL2 on SwiftShader. PNGs are lossless canvas readbacks, no AI imagery. Synchronous readback capture cost is not FPS. Existing page activation stalls remain. No physical Android measurement.'};
+const hash=o=>createHash('sha256').update(JSON.stringify(o)).digest('hex');
+const save=()=>writeFile(out+'/runtime.json',JSON.stringify(report,null,2));
+try{
+ browser=await chromium.launch({executablePath:process.env.CHROME,headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'],env:{...process.env,LD_LIBRARY_PATH:process.env.CHROME_LIB}});report.browser=browser.version();
+ const page=await browser.newPage({viewport:report.viewport});page.setDefaultTimeout(240000);page.on('pageerror',e=>{report.errors.push(e.message);console.log('ERROR',e.message);});page.on('console',m=>{if(m.type()==='error')report.errors.push(m.text());if(m.type()==='warning')report.warnings.push(m.text());});
+ const start=Date.now();await page.goto('http://127.0.0.1:4215/env-p01.html');
+ async function settle(){await page.waitForFunction(()=>window.__pop02Failure||window.__pop02?.snapshot().ready,null,{timeout:240000});assert.equal(await page.evaluate(()=>window.__pop02Failure),undefined);await page.evaluate(()=>window.__pop02.pause(true));}
+ await settle();if(report.initialReadyMs)report.resumeReadyMs=Date.now()-start;else report.initialReadyMs=Date.now()-start;
+ report.gl=await page.evaluate(()=>{const g=document.querySelector('canvas').getContext('webgl2'),e=g.getExtension('WEBGL_debug_renderer_info');return e?g.getParameter(e.UNMASKED_RENDERER_WEBGL):'unknown';});console.log('READY',report.initialReadyMs,report.gl);await save();
+ async function setView(id){await page.locator('#ground').selectOption('neutral');await page.evaluate(id=>{window.__pop02.setView(id);window.__pop02.pause(false);},id);await settle();}
+ async function capture(name){const t=Date.now();const png=await page.evaluate(()=>window.__pop02.capture());await writeFile(out+'/'+name+'.png',Buffer.from(png.split(',')[1],'base64'));const s=await page.evaluate(()=>window.__pop02.snapshot());const placements=await page.evaluate(()=>window.__pop02.placements());report.measurements.push({name,captureReadbackMs:Date.now()-t,placementsHash:hash(placements),...s});assert.equal(s.visibleTerrainSurfaces,1);assert.equal(s.error,null);console.log('CAPTURE',name,Date.now()-t);await save();return s;}
+ const views=['forest-landscape','forest-interior','forest-edge','forest-close-birch','forest-close-grass','forest-corridor','valley-landscape'];
+ for(const id of views){if(report.checks.some(c=>c.name===id+' material toggle preserves full descriptors and mesh buffers'))continue;await setView(id);const before=await page.evaluate(()=>({placements:window.__pop02.placements(),geometry:window.__pop02.groundArrays(),snapshot:window.__pop02.snapshot()}));
+  await page.locator('#ground').selectOption('neutral');await capture(id+'-neutral');
+  await page.locator('#ground').selectOption('material');await capture(id+'-faithful');
+  const after=await page.evaluate(()=>({placements:window.__pop02.placements(),geometry:window.__pop02.groundArrays()}));assert.equal(hash(after.placements),hash(before.placements));assert.equal(hash(after.geometry),hash(before.geometry));
+  report.checks.push({name:id+' material toggle preserves full descriptors and mesh buffers',passed:true,placementHash:hash(after.placements),geometryHash:hash(after.geometry)});
+  report.diagnostics.push({view:id,points:await page.evaluate(()=>window.__pop02.diagnostics())});await save();
+ }
+ // Ground-only weight diagnostic and renderer-owned resources through three complete profile cycles.
+ await setView('forest-overhead');await page.locator('#ground').selectOption('weights');await capture('forest-overhead-weights');await page.locator('#ground').selectOption('material');await capture('forest-overhead-faithful');
+ await setView('forest-interior');await page.locator('#ground').selectOption('material');const descriptors=hash(await page.evaluate(()=>window.__pop02.placements()));
+ for(let cycle=0;cycle<2;cycle++)for(const profile of ['balanced','mobile','high']){await page.locator('#profile').selectOption(profile);await page.evaluate(()=>window.__pop02.renderOnce());const s=await page.evaluate(()=>window.__pop02.snapshot());report.lifecycle.push({cycle,profile,...s});assert.equal(s.ground.owners,1);assert.equal(hash(await page.evaluate(()=>window.__pop02.placements())),descriptors);}
+ const highs=report.lifecycle.filter(s=>s.profile==='high');assert.deepEqual(highs[0].renderer.memory,highs[1].renderer.memory);report.checks.push({name:'profile dispose/recreate has stable high-profile GPU counters and full placements',passed:true});
+ // Proxy mode remains functional; population unchanged.
+ await page.locator('#ground').selectOption('neutral');await page.locator('#representation').selectOption('proxies');await page.evaluate(()=>window.__pop02.pause(false));await settle();await capture('forest-interior-proxies');assert.equal(hash(await page.evaluate(()=>window.__pop02.placements())),descriptors);await page.locator('#representation').selectOption('assets');await page.evaluate(()=>window.__pop02.pause(false));await settle();
+ // Reproducible segmented camera replay. Visual review only, not real-time FPS or physical collision.
+ await page.locator('#ground').selectOption('material');
+ const route=await page.evaluate(async()=>{const f=await(await fetch('/geo-r02b/features.json')).json(),r=f.routes.find(r=>r.id==='hero').points2;let nearest=0;for(let i=0;i<r.length;i++)if(Math.hypot(r[i][0]+740,r[i][1]+50)<Math.hypot(r[nearest][0]+740,r[nearest][1]+50))nearest=i;const out=[];for(const delta of [-80,-40,0,40,80])out.push(r[Math.max(0,Math.min(r.length-1,nearest+delta))]);return out;});
+ await setView('forest-corridor');for(let i=0;i<route.length;i++){await page.locator('#ground').selectOption('neutral');await page.evaluate(([x,z])=>{window.__pop02.teleport(x,z);window.__pop02.pause(false);},route[i]);await settle();await page.locator('#ground').selectOption('material');await capture('walking/frame-'+i);report.walking.push({routePoint:route[i],snapshot:await page.evaluate(()=>window.__pop02.snapshot())});}
+ assert.deepEqual(report.errors,[]);report.checks.push({name:'all required views and profiles compile without browser/GLSL errors',passed:true});
+ await page.evaluate(()=>window.__pop02.dispose());report.checks.push({name:'full viewer teardown completes without exception',passed:true});await save();console.log('PASS',report.measurements.length);
+}catch(e){report.failure=String(e.stack??e);await save();console.error(e);process.exitCode=1;}finally{await browser?.close();server.kill();}

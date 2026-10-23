@@ -1,0 +1,51 @@
+{
+  "browser": "153.0.8010.0",
+  "scope": "Unbatched immutable source-family Mesh versus instanced descriptor mapping on actual terrain. Near LOD, matched transforms, light, alpha-aware shadows.",
+  "parity": {
+    "changedAbove12": 71,
+    "maxDelta": 202,
+    "meanDelta": 0.004071296296296296
+  },
+  "studioParity": {
+    "changedAbove12": 0,
+    "maxDelta": 0,
+    "meanDelta": 0
+  },
+  "negativeControl": {
+    "changedAbove12": 29988,
+    "maxDelta": 83,
+    "meanDelta": 0.8222879629629629
+  },
+  "placement": {
+    "id": "73129:0:-102:-1",
+    "family": "birch",
+    "variant": 1,
+    "x": -710.9759437255561,
+    "y": 118.16343350131433,
+    "z": -3.3790163055527955,
+    "rotation": 2.3938413966685395,
+    "scale": 0.9714462610660122,
+    "normal": [
+      -0.1803756724720264,
+      0.9835183566641342,
+      0.012500355392758003
+    ],
+    "alignment": "upright",
+    "burial": 0,
+    "tint": 1.0540529681788757,
+    "renderClass": "tree-lod",
+    "chunk": "-12,-1",
+    "metadata": {
+      "community": "birch-woodland",
+      "patch": 0.7928937733706006,
+      "region": "forest",
+      "slope": 0.18383825870143775,
+      "source": "geo-r02c-p0:fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a:d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d"
+    }
+  },
+  "geometry": {
+    "vertices": 1188,
+    "alphaDepth": true
+  },
+  "errors": []
+}

@@ -1,0 +1,60 @@
+--- D2R/asset-lab/birch/src/grass/rendering/grassBatch.ts
++++ src/nature-library/grass/rendering/grassBatch.ts
+@@ -1,3 +1,4 @@
++// POP-02A compatibility extension: optional terrain orientation; geometry/material/fade unchanged.
+ import * as THREE from 'three';
+ import type {GrassFamily,GrassVariant} from '../index.ts';
+ import {getBatchCapabilities,resolveBatchMode,type RenderMode,type ActiveMode} from '../../rendering/capabilities.ts';
+@@ -5,10 +6,11 @@
+ 
+ export interface GrassInstance {
+  variant:GrassVariant;position:readonly [number,number,number];rotationY?:number;
++ orientation?:readonly [number,number,number,number];fadeOffset?:number;
+  scale?:number;brightness?:number;tint?:THREE.ColorRepresentation;visible?:boolean;
+ }
+ interface Stored {
+- id:number;variant:GrassVariant;position:THREE.Vector3;rotationY:number;scale:number;
++ id:number;variant:GrassVariant;position:THREE.Vector3;rotationY:number;scale:number;orientation:THREE.Quaternion;
+  color:THREE.Color;visible:boolean;dirty:boolean;lastFade:number;fadeOffset:number;matrix:THREE.Matrix4;
+ }
+ interface RecordItem {id:number;variant:GrassVariant;matrix:THREE.Matrix4;color:THREE.Color;active:boolean;dirty:boolean}
+@@ -25,7 +27,9 @@
+ class InstancedGrassBackend implements Backend {
+  readonly objects:THREE.Mesh[]=[];private readonly groupsByVariant:GrassGroup[]=[];
+  bufferUpdates=0;reallocations=0;
+- constructor(private scene:THREE.Scene,geometries:readonly THREE.BufferGeometry[],private material:THREE.MeshLambertMaterial,castShadow:boolean){
++ private scene:THREE.Scene;private material:THREE.MeshLambertMaterial;
++ constructor(scene:THREE.Scene,geometries:readonly THREE.BufferGeometry[],material:THREE.MeshLambertMaterial,castShadow:boolean){
++  this.scene=scene;this.material=material;
+   for(const geo of geometries){
+    const group:GrassGroup={mesh:null as unknown as THREE.InstancedMesh,capacity:8,ids:[],geometry:geo};
+    group.mesh=this.makeMesh(group,8,castShadow);this.groupsByVariant.push(group);
+@@ -154,16 +158,18 @@
+   const scale=value.scale??1,rotationY=value.rotationY??0,brightness=value.brightness??1;
+   if(![...value.position,scale,rotationY,brightness].every(Number.isFinite)||scale<=0||brightness<=0||brightness>2)throw RangeError('Invalid grass transform/brightness');
+   if(![0,1,2,3].includes(value.variant))throw RangeError('Invalid grass variant');
++  if(value.orientation){if(!value.orientation.every(Number.isFinite)||Math.abs(Math.hypot(...value.orientation)-1)>.001)throw RangeError('Invalid grass orientation');e.orientation.fromArray(value.orientation);}
+   e.variant=value.variant;e.position.set(...value.position);e.scale=scale;e.rotationY=rotationY;
+   e.color.set(value.tint??0xffffff).multiplyScalar(brightness);e.visible=value.visible!==false;e.dirty=true;this.needsUpdate=true;
+  }
+  add(value:GrassInstance):number{
+   this.live();if(this.entries.length>=this.capacity)throw RangeError('GrassBatch capacity exceeded');
+   const id=this.nextId++;
+-  const e:Stored={id,variant:0,position:new THREE.Vector3(),scale:1,rotationY:0,color:new THREE.Color(),
++  const e:Stored={id,variant:0,position:new THREE.Vector3(),scale:1,rotationY:0,orientation:new THREE.Quaternion(),color:new THREE.Color(),
+    visible:true,dirty:true,lastFade:-1,fadeOffset:0,matrix:new THREE.Matrix4()};
+   const pseudo=Math.sin((id+1)*78.233+13.41)*43758.5453;
+   e.fadeOffset=2*(pseudo-Math.floor(pseudo)) - 1;
++  if(value.fadeOffset!==undefined){if(!Number.isFinite(value.fadeOffset)||Math.abs(value.fadeOffset)>1)throw RangeError('Invalid stable grass fade offset');e.fadeOffset=value.fadeOffset;}
+   this.configure(e,value);this.entries.push(e);return id;
+  }
+  setTransform(id:number,patch:Pick<GrassInstance,'position'|'scale'|'rotationY'>){
+@@ -200,7 +206,7 @@
+    const k=this.distanceCulling?grassScaleFade(distance,this.config,e.fadeOffset):1;
+    const activeScale=e.scale*k;
+    const geo=this.geometry[e.variant];const bound=geo.boundingSphere!;
+-   Q.setFromAxisAngle(Y,e.rotationY);
++   Q.setFromAxisAngle(Y,e.rotationY).premultiply(e.orientation);
+    // Apply every instance transform, including fade, before spatial classification.
+    const dirty=e.dirty||k!==e.lastFade;
+    if(dirty){e.matrix.compose(e.position,Q,S.setScalar(activeScale));e.lastFade=k}

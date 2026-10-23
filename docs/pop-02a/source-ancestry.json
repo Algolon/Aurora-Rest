@@ -1,0 +1,37 @@
+[
+  {
+    "pin": "birch-shadow",
+    "sha": "dfc6b56f98cc560f6debce9b4e1fb3237069ef74",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "birch-batch",
+    "sha": "87b4a2e00f0b29a89ec8aa1c5cdcf3bf7d170f6b",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "pine",
+    "sha": "06a7edadb0a7df798a483f9c3bd8bf0311da67e3",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "mixed",
+    "sha": "5f87d08a430051c9656e7bf44d1dfdc4f784f85d",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "grass-d1",
+    "sha": "64606fe3df5d2444d0af21683319f6637b8d34f8",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "grass-d2r",
+    "sha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+    "isAncestorOfE1": true
+  },
+  {
+    "pin": "rocks-e1",
+    "sha": "33adfb992d907e386bc272dd73716d734191f2bf",
+    "isAncestorOfE1": true
+  }
+]

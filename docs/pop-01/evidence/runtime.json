@@ -1,0 +1,547 @@
+{
+  "observedParent": "90d0cb745e8e51a3dc737bd4dc11d6f8c322758b",
+  "sourceState": "POP-01 working tree; committed capture source and protected manifest",
+  "browser": "153.0.8010.0",
+  "viewport": {
+    "width": 1600,
+    "height": 1100,
+    "dpr": 1
+  },
+  "gl": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "vendor": "Google Inc. (Google)"
+  },
+  "evidence": "Actual Three.js WebGL screenshots; diagnostic proxies; no concept images",
+  "hardwareLimit": "Software WebGL only; no Android FPS or production asset render cost validated",
+  "measurements": [
+    {
+      "ready": true,
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "mode": "overhead",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4986,
+      "counts": {
+        "pine": 250,
+        "birch": 488,
+        "grass": 4164,
+        "rock": 84
+      },
+      "visibleProxyInstances": 4986,
+      "submittedProxyInstances": 4986,
+      "densityPerHa": 486.9140625,
+      "rejected": {
+        "neighbor-owner": 522,
+        "density/patch/bounds": 11730,
+        "spacing": 356,
+        "provisional-tread": 37
+      },
+      "generationMs": 220.8999999994412,
+      "lastTickMs": 10.400000000139698,
+      "serializedBytes": 3090000,
+      "renderer": {
+        "calls": 101,
+        "triangles": 281853,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        -740,
+        533.3523178100586,
+        -49.99000000002382
+      ],
+      "terrainY": 113.35221126556422,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "mode": "landscape",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4986,
+      "counts": {
+        "pine": 250,
+        "birch": 488,
+        "grass": 4164,
+        "rock": 84
+      },
+      "visibleProxyInstances": 4468,
+      "submittedProxyInstances": 4468,
+      "densityPerHa": 486.9140625,
+      "rejected": {
+        "neighbor-owner": 522,
+        "density/patch/bounds": 11730,
+        "spacing": 356,
+        "provisional-tread": 37
+      },
+      "generationMs": 220.8999999994412,
+      "lastTickMs": 10.400000000139698,
+      "serializedBytes": 3090000,
+      "renderer": {
+        "calls": 101,
+        "triangles": 278071,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        -590,
+        233.35231781005865,
+        130.00000000000009
+      ],
+      "terrainY": 138.95962524414062,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "mode": "walk",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4986,
+      "counts": {
+        "pine": 250,
+        "birch": 488,
+        "grass": 4164,
+        "rock": 84
+      },
+      "visibleProxyInstances": 273,
+      "submittedProxyInstances": 273,
+      "densityPerHa": 486.9140625,
+      "rejected": {
+        "neighbor-owner": 522,
+        "density/patch/bounds": 11730,
+        "spacing": 356,
+        "provisional-tread": 37
+      },
+      "generationMs": 220.8999999994412,
+      "lastTickMs": 10.400000000139698,
+      "serializedBytes": 3090000,
+      "renderer": {
+        "calls": 32,
+        "triangles": 245877,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        -740,
+        115.1023178100586,
+        -50
+      ],
+      "terrainY": 113.3523178100586,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "mode": "overhead",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 6109,
+      "counts": {
+        "pine": 18,
+        "grass": 5996,
+        "rock": 47,
+        "birch": 48
+      },
+      "visibleProxyInstances": 6109,
+      "submittedProxyInstances": 6109,
+      "densityPerHa": 596.58203125,
+      "rejected": {
+        "density/patch/bounds": 10591,
+        "neighbor-owner": 576,
+        "spacing": 70,
+        "shore-clearance": 43,
+        "inland-water": 354,
+        "provisional-tread": 37,
+        "slope": 2
+      },
+      "generationMs": 239.7000000004191,
+      "lastTickMs": 12.699999999953434,
+      "serializedBytes": 3714981,
+      "renderer": {
+        "calls": 80,
+        "triangles": 280985,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        200,
+        449.33887100219727,
+        10.009999999976179
+      ],
+      "terrainY": 29.339091749190757,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "mode": "landscape",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 6109,
+      "counts": {
+        "pine": 18,
+        "grass": 5996,
+        "rock": 47,
+        "birch": 48
+      },
+      "visibleProxyInstances": 5380,
+      "submittedProxyInstances": 5380,
+      "densityPerHa": 596.58203125,
+      "rejected": {
+        "density/patch/bounds": 10591,
+        "neighbor-owner": 576,
+        "spacing": 70,
+        "shore-clearance": 43,
+        "inland-water": 354,
+        "provisional-tread": 37,
+        "slope": 2
+      },
+      "generationMs": 239.7000000004191,
+      "lastTickMs": 12.699999999953434,
+      "serializedBytes": 3714981,
+      "renderer": {
+        "calls": 77,
+        "triangles": 276495,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        350,
+        149.3388710021973,
+        190.00000000000003
+      ],
+      "terrainY": 39.78102684020996,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "mode": "walk",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 6109,
+      "counts": {
+        "pine": 18,
+        "grass": 5996,
+        "rock": 47,
+        "birch": 48
+      },
+      "visibleProxyInstances": 388,
+      "submittedProxyInstances": 388,
+      "densityPerHa": 596.58203125,
+      "rejected": {
+        "density/patch/bounds": 10591,
+        "neighbor-owner": 576,
+        "spacing": 70,
+        "shore-clearance": 43,
+        "inland-water": 354,
+        "provisional-tread": 37,
+        "slope": 2
+      },
+      "generationMs": 239.7000000004191,
+      "lastTickMs": 12.699999999953434,
+      "serializedBytes": 3714981,
+      "renderer": {
+        "calls": 23,
+        "triangles": 245557,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        200,
+        31.088871002197266,
+        10
+      ],
+      "terrainY": 29.338871002197266,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "mode": "overhead",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4566,
+      "counts": {
+        "birch": 120,
+        "pine": 27,
+        "grass": 4343,
+        "rock": 76
+      },
+      "visibleProxyInstances": 4566,
+      "submittedProxyInstances": 4566,
+      "densityPerHa": 445.8984375,
+      "rejected": {
+        "density/patch/bounds": 12592,
+        "provisional-tread": 21,
+        "neighbor-owner": 344,
+        "spacing": 51,
+        "shore-clearance": 1,
+        "ocean": 5
+      },
+      "generationMs": 291.29999999981374,
+      "lastTickMs": 8.400000000139698,
+      "serializedBytes": 2817498,
+      "renderer": {
+        "calls": 82,
+        "triangles": 273177,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        1670,
+        424.55172085762024,
+        -1899.9900000000239
+      ],
+      "terrainY": 4.55196681261005,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "mode": "landscape",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4566,
+      "counts": {
+        "birch": 120,
+        "pine": 27,
+        "grass": 4343,
+        "rock": 76
+      },
+      "visibleProxyInstances": 4150,
+      "submittedProxyInstances": 4150,
+      "densityPerHa": 445.8984375,
+      "rejected": {
+        "density/patch/bounds": 12592,
+        "provisional-tread": 21,
+        "neighbor-owner": 344,
+        "spacing": 51,
+        "shore-clearance": 1,
+        "ocean": 5
+      },
+      "generationMs": 291.29999999981374,
+      "lastTickMs": 8.400000000139698,
+      "serializedBytes": 2817498,
+      "renderer": {
+        "calls": 78,
+        "triangles": 270611,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        1820,
+        124.55172085762027,
+        -1720
+      ],
+      "terrainY": 7.901333808898926,
+      "proxyOnly": true
+    },
+    {
+      "ready": true,
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "mode": "walk",
+      "chunkSize": 64,
+      "seed": 73129,
+      "density": 1,
+      "activeChunks": 25,
+      "queued": 0,
+      "descriptors": 4566,
+      "counts": {
+        "birch": 120,
+        "pine": 27,
+        "grass": 4343,
+        "rock": 76
+      },
+      "visibleProxyInstances": 429,
+      "submittedProxyInstances": 429,
+      "densityPerHa": 445.8984375,
+      "rejected": {
+        "density/patch/bounds": 12592,
+        "provisional-tread": 21,
+        "neighbor-owner": 344,
+        "spacing": 51,
+        "shore-clearance": 1,
+        "ocean": 5
+      },
+      "generationMs": 291.29999999981374,
+      "lastTickMs": 8.400000000139698,
+      "serializedBytes": 2817498,
+      "renderer": {
+        "calls": 23,
+        "triangles": 246145,
+        "memory": {
+          "geometries": 7,
+          "textures": 0
+        }
+      },
+      "camera": [
+        1670,
+        6.301720857620239,
+        -1900
+      ],
+      "terrainY": 4.551720857620239,
+      "proxyOnly": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "four region teleport roundtrips + unload/regenerate preserve IDs and GPU geometry/texture counts",
+      "passed": true,
+      "memoryBefore": {
+        "geometries": 7,
+        "textures": 0
+      },
+      "memoryAfter": {
+        "geometries": 7,
+        "textures": 0
+      },
+      "lifecycle": [
+        {
+          "geometries": 7,
+          "textures": 0
+        },
+        {
+          "geometries": 7,
+          "textures": 0
+        },
+        {
+          "geometries": 7,
+          "textures": 0
+        },
+        {
+          "geometries": 7,
+          "textures": 0
+        }
+      ]
+    },
+    {
+      "name": "instance inspector data resolves stable ID",
+      "passed": true
+    },
+    {
+      "name": "family visibility affects rendered instances without changing population",
+      "passed": true
+    },
+    {
+      "name": "density regeneration deterministic",
+      "passed": true
+    },
+    {
+      "name": "seed control changes and restores population",
+      "passed": true
+    },
+    {
+      "name": "actual WASD movement uses canonical ground height",
+      "passed": true,
+      "distanceM": 1.0000000000000142
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

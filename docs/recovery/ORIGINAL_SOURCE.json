@@ -1,0 +1,2802 @@
+{
+  "requestedBranch": "feature/env-p01-birchwood-ground-integration",
+  "verifiedInitialPop": "4d562187c10e64884e2193a0b09ced6eed3b4b08",
+  "verifiedMat": "ae8a9c17781cdaa85c9e55696697c6213a860ef6",
+  "historicalFaithfulCommit": "73fcfa7d237092f335c86f8afa024ee7ae1ddb49",
+  "finalCommit": null,
+  "worktreeStatus": "Unavailable: worktree Git pointer targets vanished external common directory. No final clean-tree claim.",
+  "finalMilestone": "Source-history recovery blocked; evidence and source snapshot preserved.",
+  "sourceSnapshotSha256": "4b1d1c1008626f22352fca876f132715890fb6c6def37f7409616f520f354878",
+  "files": [
+    {
+      "path": ".github/copilot-instructions.md",
+      "size": 314,
+      "sha256": "afe92d488aefd06d0abe7396fc7ea52722363f31caf97b528a25ac6573565853"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "size": 495,
+      "sha256": "3bf80f7ddc040267d37d6f78e6e18632be3da6a1e6cf3b75e4ab4856cd3675f7"
+    },
+    {
+      "path": ".gitignore",
+      "size": 34,
+      "sha256": "dd70969fb0e63258af71d960052e6de9ff66ef389bf584e52e8b52dd6d85b1a6"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 3284,
+      "sha256": "82d536e47044213e8ec36fcfff6a998863c4ab7e7ea3b0eddf2694aa3fba110b"
+    },
+    {
+      "path": "README.md",
+      "size": 4186,
+      "sha256": "b964c5b9d1ddeb29411969bc75fbbeeddf6c39cce370702468a3f395300fea7d"
+    },
+    {
+      "path": "docs/PROJECT_INSTRUCTIONS.md",
+      "size": 6476,
+      "sha256": "bf7184e7b16104b17ea0fa56a6d03e8bd72b2f8551c8e98593607802630039c8"
+    },
+    {
+      "path": "docs/WORLD_00_AUDIT.md",
+      "size": 3992,
+      "sha256": "1e07f73d32f6b4e52d4b73b7aca6c8455143dc6a96d53251343c3e0f832ab891"
+    },
+    {
+      "path": "docs/WORLD_01B_GEOGRAPHIC_PLAN.md",
+      "size": 4147,
+      "sha256": "b007c4e5d4aef6346bc39979d732df06247b57490e5666fcfe11aae34284322f"
+    },
+    {
+      "path": "docs/WORLD_01B_REPORT.md",
+      "size": 12631,
+      "sha256": "08f1df4ef812181bdb70c29481b96f2d521856687bd2e28ee27bf6302d9aeba7"
+    },
+    {
+      "path": "docs/WORLD_01_REPORT.md",
+      "size": 3686,
+      "sha256": "a967d89999367066ac644d9569100b0588029c63a914cf52e56115c7f3ac45ff"
+    },
+    {
+      "path": "docs/env-p01/INTEGRATION.md",
+      "size": 2994,
+      "sha256": "193bf74a31c384c88b61ac47286e7d73c55f25f10d1c55e5e2af0878ce0da9ed"
+    },
+    {
+      "path": "docs/env-p01/NEXT_STEPS.md",
+      "size": 1775,
+      "sha256": "237688b9fdb5065b5415275e68e3d0ad543e8285f8f0c72fb4ed18df93ec50a3"
+    },
+    {
+      "path": "docs/env-p01/PERFORMANCE.md",
+      "size": 5458,
+      "sha256": "71360ff3615120a84e5770c3e663356f87dbee740f24b76f6ff0f8d6753ca714"
+    },
+    {
+      "path": "docs/env-p01/QA.json",
+      "size": 3944,
+      "sha256": "cfd40e944c73dd1a46e61f38928484b1a718d251255c9e9874cb2aa6cd5068a6"
+    },
+    {
+      "path": "docs/env-p01/RECOVERY_STATUS.md",
+      "size": 2640,
+      "sha256": "0606e2d32550c0a3982849ecd5dbcfb964a7cc9deb53b60599d9dc301f8ad9d3"
+    },
+    {
+      "path": "docs/env-p01/REVIEW_ADDENDUM.md",
+      "size": 7891,
+      "sha256": "63e0f94679c38fe3827493210b74c39e9df697eb0af622b01878103c86d80e74"
+    },
+    {
+      "path": "docs/env-p01/VISUAL_REVIEW.md",
+      "size": 5017,
+      "sha256": "9c7ee3f2b2a6f91a1a8c99da2643eab1bfa1e9fe04d0edd1d045b87c6cbc68ff"
+    },
+    {
+      "path": "docs/env-p01/capture-manifest.json",
+      "size": 8138,
+      "sha256": "3c893e098203817d847c14e3626c07b1b736fc67807589ffc04c1c43fc37fdb1"
+    },
+    {
+      "path": "docs/env-p01/ecological-mismatches.json",
+      "size": 35968,
+      "sha256": "32795b20ac710e4233d8fb0d4744bffbe5308ca0118c388158c234648c1bf69f"
+    },
+    {
+      "path": "docs/env-p01/evidence/contact-sheet.jpg",
+      "size": 821120,
+      "sha256": "bd56cf36bbb3857ccfec64309880597edf569dd871cc82a9fc8bd69f51f4cfb6"
+    },
+    {
+      "path": "docs/env-p01/evidence/ecological-mismatch-map.png",
+      "size": 108934,
+      "sha256": "c0c04ae573ba31c5e8ef566c62596dc205ff94852020d893b174a337832bbeff"
+    },
+    {
+      "path": "docs/env-p01/evidence/ecological-overlay.png",
+      "size": 1690878,
+      "sha256": "1c4e33919f835c767cab976457204a3d96d76569a59cac73c670a23feca88466"
+    },
+    {
+      "path": "docs/env-p01/evidence/elevated-transition-comparison.jpg",
+      "size": 218170,
+      "sha256": "ea009b8968a2dd79faaa2b5b74ad0f27ebc53a8da2d998f3554a62d275f23ab6"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-close-birch-faithful.png",
+      "size": 3355758,
+      "sha256": "2506b23c40c56de76ca9d533c4451ca6e46caf6b0364612a99f938e4d08e1ac1"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-close-birch-neutral.png",
+      "size": 2195519,
+      "sha256": "f785917d7eae60b21a5afb88516609007c1f09ddb580d81bccdb08be3379af50"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-close-grass-faithful.png",
+      "size": 3135688,
+      "sha256": "8707ff5dcb15dc8a38560db60d55fdb2531e6c366f95c9574ad1c58d8d2b6403"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-close-grass-neutral.png",
+      "size": 1332928,
+      "sha256": "2280fb93caf783e04f22307ef1ed9eadad3cbe8be3415230fe67f020b303911b"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-corridor-faithful.png",
+      "size": 2835649,
+      "sha256": "ac5ec3a128e01f5b968654d0a7b7d7ea0229f9c1278f9bf96f71d242d322228b"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-corridor-neutral.png",
+      "size": 872362,
+      "sha256": "6561494f9c0ddc0fded7aac850077948386511424f4b9e53a7e4c1e418d73c1a"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-ecotone-outward-faithful.png",
+      "size": 1954180,
+      "sha256": "2be7970c17bcc32a6547ceba2da9331381d4f56e57c14ced2de22a414f70013d"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-ecotone-outward-neutral.png",
+      "size": 97458,
+      "sha256": "ba4263faafb21a061878d201e2794db9ebae1e877cad96af4de1f30b505b67e9"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-edge-faithful.png",
+      "size": 2454564,
+      "sha256": "08fe030c31014e4021cc37d5302e6c02d39f3629dce6f31a18989f9930521190"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-edge-neutral.png",
+      "size": 1513805,
+      "sha256": "6b4a994a014ef94900bd83a857a267f7a85c213f2772df0d51b69ce57172bc21"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-interior-faithful.png",
+      "size": 3406029,
+      "sha256": "ec0540dadfe9de8c2581178eb3f24554af0cfd85308e5a35053d1a78f8b04847"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-interior-neutral.png",
+      "size": 1433795,
+      "sha256": "525ce7f787cb0c6e5be00101f06462296e5565f7c53c21ae8dcf8ddf807ea4e1"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-interior-proxies.png",
+      "size": 134930,
+      "sha256": "3eea7d60b2fe0ceb88aaa86ac57f1510b0b2f9ff4ef4350acafb5421729ba4d6"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-interior-shadows-off.png",
+      "size": 3379597,
+      "sha256": "bab74b93293070424d3feeead2a5956119c1da766dfc8c5cfab1c672484131c4"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-interior-shadows-on.png",
+      "size": 3406029,
+      "sha256": "ec0540dadfe9de8c2581178eb3f24554af0cfd85308e5a35053d1a78f8b04847"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-landscape-faithful.png",
+      "size": 2574508,
+      "sha256": "8976b8cbe5a253a8fe84d64add3330ad59a7bc6a37ebc598d46e3c0d9dd97f26"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-landscape-neutral.png",
+      "size": 1439811,
+      "sha256": "90e3541edfa242987e5fdb5cffc95a6ab3a756f7ceb560236168ef1865a21111"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-overhead-faithful.png",
+      "size": 2633144,
+      "sha256": "e7c52eb4d941720b1f48885f486e703c5359c164a851e373d993c994ee31c1be"
+    },
+    {
+      "path": "docs/env-p01/evidence/forest-overhead-weights.png",
+      "size": 754623,
+      "sha256": "ad652089d1b442e117a935bd4ea03aaf4e13272e3c9b40f1de817a9174a61d32"
+    },
+    {
+      "path": "docs/env-p01/evidence/resume-browser.json",
+      "size": 30399,
+      "sha256": "df5de5e5b07792f9e73e70ece2fc81c4ea464c339a835fcac48b76a538b7c1d7"
+    },
+    {
+      "path": "docs/env-p01/evidence/runtime.json",
+      "size": 10182894,
+      "sha256": "b52a1770bdc980d6cd506122f283c706d648d08d92f765c59f1ef40c9a25d32f"
+    },
+    {
+      "path": "docs/env-p01/evidence/supplement.json",
+      "size": 201922,
+      "sha256": "57c57c19bbdfc700def6b6b74835c2626e5b30cba507e6702f5fd8b1c4af8edf"
+    },
+    {
+      "path": "docs/env-p01/evidence/valley-landscape-faithful.png",
+      "size": 2319629,
+      "sha256": "2d4fc98a86f32db063f62818d4fb0163a23376d99b95c1728bf83121c194a52d"
+    },
+    {
+      "path": "docs/env-p01/evidence/valley-landscape-neutral.png",
+      "size": 487849,
+      "sha256": "f430b971cb65c813fe71919027339413de0064367c7a96857e9721d52d8f105f"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/ecotone-0.png",
+      "size": 2545890,
+      "sha256": "02c233dfedd91ac38a29e8b25b79e642a37b536f2001314a7f463bcaf35e1e7a"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/ecotone-1.png",
+      "size": 2127113,
+      "sha256": "111376d093c3999fae1245e35631b7aee34c455d4ad24b3d9aa6c6edb1f0c75e"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/ecotone-2.png",
+      "size": 1291227,
+      "sha256": "e7188a61ad8d2f05de44cc45a8bcf8278247e2509bc13f41956f8e37db899ec0"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/ecotone-3.png",
+      "size": 1230284,
+      "sha256": "6c6077f27590a2c9db277a53cfc639167d4f3a4ab581c4bc6ceffcbe94186cac"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/ecotone-4.png",
+      "size": 1389748,
+      "sha256": "ea592de99a4d8e75e7836dd29797fdd0751198e4582dbaa0bd84d27826fca57f"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/frame-0.png",
+      "size": 2609788,
+      "sha256": "af7e7701d5b53b42b893f53c65043d5a7ccc59717fa2e56e46fb60e82e4255ec"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/frame-1.png",
+      "size": 2918549,
+      "sha256": "72b4c837cfea5d83482e769fe9dbaebd6e7e4b3f36af5437617ee1dbe00a1622"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/frame-2.png",
+      "size": 2832577,
+      "sha256": "6ea91861daa6fa94eadb4031a257b596662c0bf64a9d9f65242c23b934d2d23d"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/frame-3.png",
+      "size": 2397871,
+      "sha256": "8de7301db8a8ae9d6208e874840df95cc4873510c44efefd4499be13fa86733d"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking/frame-4.png",
+      "size": 2812169,
+      "sha256": "153da0c60897187f2658c108d1cfa0a81c0a5893b2d02b5c10ecf33880b57ac7"
+    },
+    {
+      "path": "docs/env-p01/evidence/walking-height-contact-sheet.jpg",
+      "size": 601103,
+      "sha256": "86202521784199d246d39c5b747e16d9202440044b7055e61bb6cc7bf2481fbe"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/birchwood-overview.jpg",
+      "size": 62052,
+      "sha256": "3fd3a6b8d84aa7d85e1a4f1c80b7f75a74cc3217a2cb599367605d8d235d5ddf"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/island-dominant.png",
+      "size": 28137,
+      "sha256": "563fe5857172123c3eb5af066f71ce95a512775083c7c83df3a2088257b27711"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/m01-elevated.jpg",
+      "size": 113433,
+      "sha256": "70c4a0bb17ce47831326eee4ee9e47b4eea08b9961cbfed9ca95ac7baa04f8fb"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/m01-walk.jpg",
+      "size": 131705,
+      "sha256": "56146e7ef60b0a9457f9d308d3d9e610ffc10ee9471cfb75c56c10a6d2658ad9"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/m02-walk.jpg",
+      "size": 213805,
+      "sha256": "20bd10db0d7a6c805897b937f50ddbbbc643b7fd870c51261361d609711d4d31"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/tr-forest-meadow.jpg",
+      "size": 179735,
+      "sha256": "f52506b8d5f00b5e90555f94287d6a99d42c51e6474b6476b3ae3ccf3ade2cad"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/evidence/tr-wet-shore.jpg",
+      "size": 53339,
+      "sha256": "209f6920136a3ac1976787e590a1b3fe053d446f870f377dcea60ec28899518b"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/index.html",
+      "size": 848,
+      "sha256": "70d9932419431a49ad8010a764c0e1007b186be241ede443c9ce5b47dc735935"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/manifest.json",
+      "size": 1778,
+      "sha256": "ac8264339c2683ca83a99bb3b7d4f38ebb3a15640143428a1439e575fcd89df0"
+    },
+    {
+      "path": "docs/env-p01/mat-source-evidence/review.html",
+      "size": 33413,
+      "sha256": "36038f31329f53ecd1835371c20e29fc5dafa12f8d51b1e6b033d67a3c262036"
+    },
+    {
+      "path": "docs/env-p01/overlay-projection.json",
+      "size": 26635,
+      "sha256": "c5a243477df7ea6b0b5476e541ac5b158b83781eb0b3fe585309d96109cc0d98"
+    },
+    {
+      "path": "docs/env-p01/post-resume-hash-audit.json",
+      "size": 39273,
+      "sha256": "2d9433ac70ec3c4c9b6bd4001b33063c00632bec93425a24522013b5da61fe32"
+    },
+    {
+      "path": "docs/env-p01/provenance.json",
+      "size": 5224,
+      "sha256": "b057e908ffa7e8f9676ed4fa08458af6098d3cde1071b6529e450085209dfd8b"
+    },
+    {
+      "path": "docs/env-p01/resume-restoration.json",
+      "size": 296,
+      "sha256": "e7ebc90835af9bec10ac6139b45cac363afca861d7dbeb3b2a5a4eec62cf92ce"
+    },
+    {
+      "path": "docs/env-p01/review.html",
+      "size": 6565,
+      "sha256": "03478b1906a191374f4f809cb730d8a75759780622c79b829a40cd46081411e5"
+    },
+    {
+      "path": "docs/env-p01/validation-logs/build-post-resume.log",
+      "size": 2685,
+      "sha256": "d20249e0dc7eece9d083882c74735d270cdf909b0eddda98bce6f21ad67d6214"
+    },
+    {
+      "path": "docs/env-p01/validation-logs/build-pre-resume.log",
+      "size": 2685,
+      "sha256": "6fd6c709bddf32d91982611618644a2bfea762847c000854dc9223aada762dc0"
+    },
+    {
+      "path": "docs/env-p01/validation-logs/tests-post-resume.log",
+      "size": 8654,
+      "sha256": "76ce0223ff8f8f11fdd71f4788580b2b3492babea63e15b7f36cad9a8a15393c"
+    },
+    {
+      "path": "docs/env-p01/validation-logs/tests-pre-resume.log",
+      "size": 7074,
+      "sha256": "0cd3d659783bd8be9366e00511cebf5e784b931b9e5700407e6b33d6ace78cf4"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/birchwood.png",
+      "size": 191060,
+      "sha256": "1abd5d7e073e8c5fac8585a68f1c27985cc2fdde968ed371c494357e61b18562"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/browser-checks.json",
+      "size": 942,
+      "sha256": "083e7f701f1dc55321713b9f4c0ebf270c9185e569f004a8961cf87eebcb872f"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/build.txt",
+      "size": 767,
+      "sha256": "41b38bdb565014489dec24c8d455ced77afa3c45b576a9b32ba0e04ed3ab5773"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/cairn-saddle.png",
+      "size": 238954,
+      "sha256": "27241c258f1ff156525fc839719800de6cd9195d3f6420e80321180946d6ddca"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/central-valley.png",
+      "size": 243789,
+      "sha256": "5edededff2ae3ade2d02b8c0ef53744efea860d9808e8034ec10edc8b2a06592"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/dune-fields.png",
+      "size": 98573,
+      "sha256": "11413728b3a9f66977c35513cb4adb6cb9bac5c5bd24f485d7d22ae121a14b44"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/hidden-fold.png",
+      "size": 150006,
+      "sha256": "2f53ae05f5a59b958f617c8a0c1a7cf645b5c12451712976bf73c6bb701d882e"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/high-tarn.png",
+      "size": 139413,
+      "sha256": "cedc89ac3e81afda94fb40534bbf1c6c457de7e898630e6e384011c94c523374"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/home-cove.png",
+      "size": 169928,
+      "sha256": "5a0c84a0f5211f1c1c7dca3425edc1e3aa7975d69cc11c2acb0968feac276684"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/island-oblique.png",
+      "size": 304779,
+      "sha256": "93a475f7342c936e6882617c1345ad1a15ca7e23316a1909bdb90aa9567f48ca"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/mobile-emulation.png",
+      "size": 730302,
+      "sha256": "d6e2d3bb4a8cef2763e087735e77a0fc19b53cf3aaa6a209e23bc56a7ae145ef"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/overview.png",
+      "size": 456419,
+      "sha256": "85b8e53ea5a2d52bc01aa49efa0a3b310623c7308fa472835372d1a99efa83c7"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/production-smoke.json",
+      "size": 481,
+      "sha256": "5b15d5378b5def506a4eea4bd46636aa9a2d29deaf2e554e42887c43e40f07bb"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/routes.json",
+      "size": 1051,
+      "sha256": "357308eb948e17a32433fbe1281f0a129e6a6f45f8320ed48f496ac2a5aa2dfc"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/runtime.json",
+      "size": 7838,
+      "sha256": "3907c65ad0b1dd89d91fbcababe6c008248d4a0e09a50dd41d5683fd5d7eff98"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/south-shoulder.png",
+      "size": 115185,
+      "sha256": "f5e21be62daec5c1ecec6a199c03176c02c600cccf95002837b4a95001ed4584"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/terrain-cpu.json",
+      "size": 1216,
+      "sha256": "6f8c18861e93138cb6705863d17d038ca447c138f270d718867aa0368786eb5d"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/tests.txt",
+      "size": 1653,
+      "sha256": "5717aecf5d4be96bc059966e8dd216e428aade6eac0b309ff19c162b2efae7b6"
+    },
+    {
+      "path": "docs/evidence/world-01b/after/windward-coast.png",
+      "size": 110009,
+      "sha256": "2ba773b635f87dd5e392fac6e4554d4700c66c92a6246aafed6b423bb2cbd14a"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/birchwood.png",
+      "size": 141427,
+      "sha256": "2b8c9cf73ba86277cd68aac13a5bda1080a1f87aec34a9d0a5f85207fab09b63"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/build.txt",
+      "size": 1490,
+      "sha256": "16ffb5569388651cb7ff2ef76075e751f3c7998f6d31516dac9dd33f4558d5d4"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/cairn-saddle.png",
+      "size": 169201,
+      "sha256": "7ec81d2c4ee3686559487a2052bb994c7d60e941eaedea86c733bbcd00a8a5db"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/central-valley.png",
+      "size": 169124,
+      "sha256": "7eed8cd1dacc897ff54f12bf2ef54e1cadc54c4a0531237ae3de6fb47777baba"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/high-tarn.png",
+      "size": 95234,
+      "sha256": "52338da0d868a54fb11a149b887c2caf145465986025c30f7829a7b9ae76df74"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/home-cove.png",
+      "size": 128334,
+      "sha256": "52a9ff571913cda0571dca13254a90b96233cb564ea18c15b637634ab371171b"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/overview.png",
+      "size": 297063,
+      "sha256": "d99188b166e267e2e182e77c68e1341b366a72a16789739d52cd91435e522bfa"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/routes.json",
+      "size": 1056,
+      "sha256": "3d317a0464d7184aa3be9fdf75343a287f9817fbca77ff38e5de39f5384ff6d0"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/runtime.json",
+      "size": 5091,
+      "sha256": "25aab4d1e9dd507e4e79bceeafb200935b9ed201c60983d821896b20e7a8e3e5"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/tests.txt",
+      "size": 985,
+      "sha256": "f3d55ed5ab8aa18177d91812364ae61fcaea27af645daf9974f7ca6165618715"
+    },
+    {
+      "path": "docs/evidence/world-01b/before/windward-coast.png",
+      "size": 144820,
+      "sha256": "50c2ae765ed25c0a7039cddcdae797e11c1d83a09db7ce025fce97173ac0f27d"
+    },
+    {
+      "path": "docs/evidence/world-01b/blueprint-coast.json",
+      "size": 1473,
+      "sha256": "9fed52c5e7104d1bce07c8360db6c307736e2478331d92eaf3a807698c69fe07"
+    },
+    {
+      "path": "docs/evidence/world-01b/geographic-blueprint.svg",
+      "size": 11324,
+      "sha256": "45a8a1befb8c51e5bf5b7bde5224633fae25941c1fc80c59f712b717463af4c8"
+    },
+    {
+      "path": "docs/evidence/world-01b/manifest.json",
+      "size": 5549,
+      "sha256": "d8f7946d7bdd26726f42d4a7a418376594c002ba39c1eeebdc4d18755a39eb6f"
+    },
+    {
+      "path": "docs/evidence/world-01b/reference-island.png",
+      "size": 3179762,
+      "sha256": "2de2505be019ca364d971d4d53c54b9f7b5be7092e18041e6c2df76ee89bfb8c"
+    },
+    {
+      "path": "docs/geo-r02b/README.md",
+      "size": 18887,
+      "sha256": "8780f79c1dd29c6294958d0cee8d5d51371236ede154b1b2f89fc959df84df0b"
+    },
+    {
+      "path": "docs/geo-r02b/acceptance.json",
+      "size": 750,
+      "sha256": "3f4a6c553be767cd936329ef1954aaa86e2ff744deec5be3bf14ad5457628b00"
+    },
+    {
+      "path": "docs/geo-r02b/checkpoint-manifest.json",
+      "size": 4634,
+      "sha256": "5b260119f5583e984c744812aa1c4c70b9771018167dfd933bcecca3ba3d98c1"
+    },
+    {
+      "path": "docs/geo-r02b/design-master-A-R1-v1.json",
+      "size": 1012813,
+      "sha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598"
+    },
+    {
+      "path": "docs/geo-r02b/diagnostics.svg",
+      "size": 738934,
+      "sha256": "5eac7fd8346b093f5069c646bc66642de9d3f4aa797268178a874dc7a33d7f01"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/cairn-saddle.png",
+      "size": 138878,
+      "sha256": "e8b4fdffb828db5e74eb306bb1fdf277057092ff2f0794924f6ef53500ec1965"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/central-valley.png",
+      "size": 210422,
+      "sha256": "79f370547f7d299406c24dd791786a15219fa733dafc23b5ec1167ec90f38bd0"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/diagnostic-overlays.png",
+      "size": 490576,
+      "sha256": "7e13a60bd4a324afe74561ae294a03e6fee65b27b175adfaf656d321ace6a3ac"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/hidden-fold.png",
+      "size": 198422,
+      "sha256": "208f8c4dcc106ec541b3c3afad34a7da1b106638b3d75cfe27bf90e34c99f8ee"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/high-tarn.png",
+      "size": 258513,
+      "sha256": "0ad4fcadc90ee0eb386704b87724f213ccb5a8959cc9e81da6bacc27471af695"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/home-cove.png",
+      "size": 82240,
+      "sha256": "81e1ee25c463f0118280b5e1e51470dc8289a9ace511710500cf9ef7a97a7152"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/island-oblique.png",
+      "size": 375609,
+      "sha256": "256964a0a1eec4db2c4ea0b66663093d24b7da0edcb435490c2589490d29d027"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/mirelands.png",
+      "size": 94545,
+      "sha256": "3462813ca6700cb03be779c27d569daf9ac1bc7bccf325323e3738b86f650e6c"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/overview.png",
+      "size": 454091,
+      "sha256": "a22747c05d33a784a77d4c756a19ffb9e71152561d5ff2ea2c482d337832e1d9"
+    },
+    {
+      "path": "docs/geo-r02b/evidence/runtime.json",
+      "size": 11139,
+      "sha256": "613b258b682558809bcd7a14f21ca17cbce7101ebc188c0c984cca530a107c7f"
+    },
+    {
+      "path": "docs/geo-r02b/generation.json",
+      "size": 4043,
+      "sha256": "eba9c28219d50b7c0800192c15ef166ef7d3ee60a35af7b45bd3024058a4667b"
+    },
+    {
+      "path": "docs/geo-r02b/geometry-check-A-R1.json",
+      "size": 2019,
+      "sha256": "ed3e51030c2b3b95c494afa1f9b277bc102e5e0cf8444ebc90a7c8166c5ca416"
+    },
+    {
+      "path": "docs/geo-r02b/hiking-profiles.csv",
+      "size": 140679,
+      "sha256": "f008a17b88d8f4583e7c4f2aad7253ce68f459ee205aa30e0a41eb3dd43365f1"
+    },
+    {
+      "path": "docs/geo-r02b/reference-a-r1-hydrology.png",
+      "size": 903073,
+      "sha256": "5c2087847e158fc43271c3c68978938b064609facdab137fd4541a8ff2d058ad"
+    },
+    {
+      "path": "docs/geo-r02b/reference-a-r1.png",
+      "size": 978937,
+      "sha256": "5acb8384c0b32d9ed02356c36a419e67833257f27df882e2eb86a20154621204"
+    },
+    {
+      "path": "docs/geo-r02b/review.html",
+      "size": 4033,
+      "sha256": "e4e51f7fa22012e50f553d4df9d1d69ad8a654ae81ed759dd2b5aca6f10db211"
+    },
+    {
+      "path": "docs/geo-r02b/source-preflight.json",
+      "size": 1138,
+      "sha256": "4dd63a0839a33fe3594c08f29e6defaac2bc787937ed9c23ec10d42017f89e8a"
+    },
+    {
+      "path": "docs/geo-r02b/source-reference-manifest.json",
+      "size": 743,
+      "sha256": "461bf81ea0007e5ad3fd826d385048724d7028ff320334d01bf99882de5c5f21"
+    },
+    {
+      "path": "docs/geo-r02b/terrain-validation.json",
+      "size": 28297,
+      "sha256": "1a66094893ae605c9ce292e8044afefa844527b5801efd26553e0be2a0e394a5"
+    },
+    {
+      "path": "docs/geo-r02b/verification-results.json",
+      "size": 1596,
+      "sha256": "39066804bc88dd7553df5ca0ce0ae2df7678ad880b37b67b219c32fb3fbd67fb"
+    },
+    {
+      "path": "docs/geo-r02b-r1/QA_NOTES.md",
+      "size": 790,
+      "sha256": "51540bcf726808a2c78860dff715f8312b3c5396f4a0d15164e4abf4c707cb8d"
+    },
+    {
+      "path": "docs/geo-r02b-r1/README.md",
+      "size": 14982,
+      "sha256": "6868b67d78b24e22aa7091653d90300ff36983f45dfbda31ae2f4459e635a54f"
+    },
+    {
+      "path": "docs/geo-r02b-r1/REMAINING_ISSUES.md",
+      "size": 5325,
+      "sha256": "4bf2e03951deba20fbb949e140f4dfbc4df802c4e02f1693ebe3300e619a1b58"
+    },
+    {
+      "path": "docs/geo-r02b-r1/ROOT_CAUSES.md",
+      "size": 7933,
+      "sha256": "4edcb40f513f4cea7086dc71df6082071072a3b3d42cb6ebe5fe336c099ecf0f"
+    },
+    {
+      "path": "docs/geo-r02b-r1/acceptance.json",
+      "size": 1561,
+      "sha256": "31a327100c50a8e5a1a3362819cf2c68d382db5b6d9a7826828fec37846cdc11"
+    },
+    {
+      "path": "docs/geo-r02b-r1/baseline-failure-locations.json",
+      "size": 27415,
+      "sha256": "a7ed210a49a7d1150ae5bf06871c1c88eb64c4133212c41d2539c8a654e2ca61"
+    },
+    {
+      "path": "docs/geo-r02b-r1/baseline-features.json",
+      "size": 1993620,
+      "sha256": "0d72ecc75f2c065d6f020647a69f2d354b33856de140cd13dc10b111a39d11ed"
+    },
+    {
+      "path": "docs/geo-r02b-r1/before-sections.csv",
+      "size": 374230,
+      "sha256": "b67a2f720a56a06839516ebbfbffafbb00b272ed53a94f61a020c1e0e60484c5"
+    },
+    {
+      "path": "docs/geo-r02b-r1/checkpoint-manifest.json",
+      "size": 8072,
+      "sha256": "5b039dea972651d3924b88d48069c71d5b8ef1081669276b347e3724ca9cf384"
+    },
+    {
+      "path": "docs/geo-r02b-r1/depression-sections.png",
+      "size": 133352,
+      "sha256": "8ba81a43f9c43dbc50b576165ef5effa8f322398e362b472b5a6d2827eb8eda6"
+    },
+    {
+      "path": "docs/geo-r02b-r1/depression-sections.svg",
+      "size": 62798,
+      "sha256": "464d8c6928f00dba7879fbbcaedc568ffa353ee320727ba536bc4d05604a0faf"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/cairn-saddle.png",
+      "size": 124256,
+      "sha256": "a842e762ee6f5318ff00848bacc30d8cee47b3008d851dfa917052c84d6d3497"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/capture-progress.json",
+      "size": 9591,
+      "sha256": "edec04740d6ff61bfc4db359ca9096d6a43b693c574da37315885bcb47f5336a"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/central-valley.png",
+      "size": 130904,
+      "sha256": "67f1b16dffc827c197eced4126598b19fc7a9479f0e35359c627f679bcb1b6a6"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-depressions.png",
+      "size": 246630,
+      "sha256": "35336cac4d68271dc1ed95009820d2e6547b128aeea8ff5ed29972cf0c886acd"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-drainage.png",
+      "size": 353317,
+      "sha256": "13c3be5c8bf9b8d06d31da589ad013844fa7469a5cd0a0a418c5e7ba006b7208"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-failures.png",
+      "size": 259856,
+      "sha256": "0951aee02aa7c4cc3b024aa942002e2a862e86134fc5e8c7b09ab40114f11d34"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-height.png",
+      "size": 310297,
+      "sha256": "45dd595702cb91a8cd5fa3c2604dba419e8307bc9e9eca560acc7b1ae30e57f0"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-overlays.png",
+      "size": 283261,
+      "sha256": "2981561ba43de9664c91125c896768851f9e16bd0c2d824072abe046baa5ea8e"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-slope.png",
+      "size": 326555,
+      "sha256": "dc9ec76cd03f7e8e308368675959905712f88370d9cef1207771dd861ddb7094"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-water.png",
+      "size": 250027,
+      "sha256": "a64a77b5e3776f4f86a02098c3d551be3ae340d883ccdf1eded6b46d7fd539ba"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/hidden-fold.png",
+      "size": 131041,
+      "sha256": "ea39d9d016cf5884f368a911c2a6a6df8e73d882369b300df501d24a93ce98d5"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/high-tarn.png",
+      "size": 140415,
+      "sha256": "fbef3d5b5cdd192102c6be12427628ffbfa98023d8417394aefa775b15f1c0a7"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/home-cove.png",
+      "size": 60224,
+      "sha256": "533b8de1a066303557a85e5471901da7e8eabf0684fb20b9488ca0d9e4ad7477"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/island-oblique.png",
+      "size": 194650,
+      "sha256": "4e34d3a02c98e6757cde8493d377dcba059c2dad56ed31d791965dbcc2f6a1df"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/mirelands.png",
+      "size": 64205,
+      "sha256": "961099d5f010e4db5f711d6e10ffd05cfc34c227dbfda625bf418c55eb5e3834"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/overview.png",
+      "size": 243856,
+      "sha256": "81650e032e0b4cd67be84f79de9129f5dd41fc10995a759c2d35def5e7f20630"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/qa-initial-timeout.png",
+      "size": 267206,
+      "sha256": "2d5f5502f921e557eda5961f9f1ee4669839a3fc09e195874a09f9c1e6693ce5"
+    },
+    {
+      "path": "docs/geo-r02b-r1/evidence/runtime.json",
+      "size": 12025,
+      "sha256": "aac236de6ecc723c365ae7f4a769b85049da9a95e01c9c12cdb600e757f161d2"
+    },
+    {
+      "path": "docs/geo-r02b-r1/generation.json",
+      "size": 4448,
+      "sha256": "de07f05c3ea49b683ee24491be03700df2cd4224353e58e18e8675b5cd8d15ca"
+    },
+    {
+      "path": "docs/geo-r02b-r1/hiking-profiles.csv",
+      "size": 275202,
+      "sha256": "ac3f62d7b1b6c068d7bf0b59c4faa1d36da6c5635f31b292dfffc539cb124210"
+    },
+    {
+      "path": "docs/geo-r02b-r1/integrity.json",
+      "size": 30606,
+      "sha256": "9052d1237f961938aab11866d1b37cdf8b0dc68382ee75e9ce9065156df9641c"
+    },
+    {
+      "path": "docs/geo-r02b-r1/preflight.json",
+      "size": 692,
+      "sha256": "d420416e4f6325faa93c27362d4ed99abd9af3a911538895483bd3823b835b2e"
+    },
+    {
+      "path": "docs/geo-r02b-r1/review-layout.png",
+      "size": 290104,
+      "sha256": "c112e9c3202144a5cb0b573d244dd9bf98cfa3e854aee258767534ca0fb6b827"
+    },
+    {
+      "path": "docs/geo-r02b-r1/review-qa.json",
+      "size": 191,
+      "sha256": "6526781b7f2545f03929e142e1a9ddc0c5d8c9dd4bd7271b5689cf98b52fc9d7"
+    },
+    {
+      "path": "docs/geo-r02b-r1/review.html",
+      "size": 6661,
+      "sha256": "c0d3886c6aced212939e3d0f613665e217b8d01d3f78fddb38c07c8d02d70307"
+    },
+    {
+      "path": "docs/geo-r02b-r1/root-measurements.json",
+      "size": 5111,
+      "sha256": "608273dd2423d787986126aa2d37787f74e4683492c70fb3518fa76faede9189"
+    },
+    {
+      "path": "docs/geo-r02b-r1/route-candidates.json",
+      "size": 9348,
+      "sha256": "b0480d2d4d01805f6025ea369f52698a1e2c6c6b2619f489840ac3138da0ca95"
+    },
+    {
+      "path": "docs/geo-r02b-r1/route-profiles-full.csv",
+      "size": 2177916,
+      "sha256": "25f77d609c420e50f5ece30a17dcbdd386c0303a0c376df0d4a38a3aa623aa83"
+    },
+    {
+      "path": "docs/geo-r02b-r1/route-profiles.png",
+      "size": 115423,
+      "sha256": "23d2bbd31d1b6eb28257a0eeddc02f724612f14b091e94fb7c392852cd0c78f1"
+    },
+    {
+      "path": "docs/geo-r02b-r1/route-profiles.svg",
+      "size": 312191,
+      "sha256": "5c4ace1836ab9fd06a12776ebc6b5ef8c3000c2c492789c9033f9ec4856e90cd"
+    },
+    {
+      "path": "docs/geo-r02b-r1/source-integrity-addendum.json",
+      "size": 559,
+      "sha256": "8470ab5110f0d773ee371798b341f32d31da44ecae00813e9bf9d159d84ebe90"
+    },
+    {
+      "path": "docs/geo-r02b-r1/stage-depressions.json",
+      "size": 1022,
+      "sha256": "e46e9bd24260c660c91237c13ed6ff882b27bde84a26b30f7758d4b2bb471fd3"
+    },
+    {
+      "path": "docs/geo-r02b-r1/terrain-validation.json",
+      "size": 20155,
+      "sha256": "318ece7adc375a029b47f697ffc5f7a7d349d0fe6d24f7b29ae8d70934bc12fe"
+    },
+    {
+      "path": "docs/geo-r02b-r1/verification-results.json",
+      "size": 1696,
+      "sha256": "2f417268488db900b2af39d2108d334290a4d1b7a13fccd15c98776c0baff5b3"
+    },
+    {
+      "path": "docs/geo-r02b-r1/water-integrity.json",
+      "size": 23601,
+      "sha256": "dbda8dfdd7107b00dd9825a85db7d8179e1948015383e461817d97094e6f2e8a"
+    },
+    {
+      "path": "docs/geo-r02b-r1/water-mesh-validation.json",
+      "size": 525,
+      "sha256": "3db977eb8cfa492d587ba720461672dce7ffb5b51e5598f9366885c07a9ce3b6"
+    },
+    {
+      "path": "docs/geo-r02c-p0/README.md",
+      "size": 14692,
+      "sha256": "b56953aaf1c193d088ecdba6c7115751db74406fb5e49e8c3ad18f4620bf5c9c"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/baseline-manifest.json",
+      "size": 12496,
+      "sha256": "9256faef1c28fe81895b2f7ac36a1ec14e4250bf3969c58ffb64e36c53bfcf3a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/crease-residual.png",
+      "size": 125106,
+      "sha256": "f2f5acea1b71c351751ee9564f1dad8606ffc68867cae276dabb360d526d8de8"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/form.json",
+      "size": 12340,
+      "sha256": "d0930b0ce184e2c367b073b4b94f52e80cb40f49f331d568a9a93e1c20023d74"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/hillshade-sunA.png",
+      "size": 185583,
+      "sha256": "5b00e36bbefcb36c5009b7f0044cc48cd949accd6e3380b81b90c72eef3d0572"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/hillshade-sunB.png",
+      "size": 195956,
+      "sha256": "fbdc8a20b9b87757e1078beb42d15404cfe78c8961cf6bf34c0cf71f03475e44"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/hydrology.json",
+      "size": 2929,
+      "sha256": "f235fc94a993ec761a1c0d52a53794ad5bb989514925dd2c066c0a170a4cc837"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/reveals.json",
+      "size": 13962,
+      "sha256": "2a4212913c6250ba41dfea55ca80c3954a17ea2e9468f6962e775efa786f5583"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/routes.json",
+      "size": 8310,
+      "sha256": "04751666ae6be781bab19424017dcf14d96189e125af6b6ebf7c2d61f64eb5fb"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/sinks.json",
+      "size": 1485,
+      "sha256": "9116b0226234f0e7383025be33ed9c3db0b3ff3ebac0d1d00e2d403e781bebee"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/slope-classes.png",
+      "size": 32004,
+      "sha256": "3ba572d84c7d930a03c468b1080f41038af05df77b998ef3bb9a83168d77b33d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/timing.json",
+      "size": 117,
+      "sha256": "869b76f06a36267c8606639fa6ba2bae8ae769be2d478beb028b1d52ce8d8398"
+    },
+    {
+      "path": "docs/geo-r02c-p0/baseline/transects.json",
+      "size": 49960,
+      "sha256": "bfc3a1fc3c2e8f773631fff29fdfdea73a4da4c58881c2a15233586fbc62b7d3"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/capture-manifest.json",
+      "size": 57606,
+      "sha256": "c0c9707f8b58e0aca28e7885ff04a5051b903b8340cfa52e2de9e5bdae44329e"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-below-100.png",
+      "size": 166016,
+      "sha256": "f2d0f88cf7eb917db8ec7c2a67f8645086dde3c2c2154739fbddde6bf38881b7"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-below-400.png",
+      "size": 237102,
+      "sha256": "407b29ed9dd9fd1a835f2ae545c5389dd34744dc20a7db10af494b2a36676ce7"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-col-north.png",
+      "size": 271976,
+      "sha256": "848e2d7501f28b70c5ea16e3719d68fddaa75db6edff1ed37a1d720b8ab0a2f7"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-col-west.png",
+      "size": 83877,
+      "sha256": "e62ed5af8e126c80dad870f2ce9561e1e970556bd6376032f010ac4c77ead091"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-saddle.png",
+      "size": 347476,
+      "sha256": "9c8456389c6bd2406a54ab759d29a55d36e3da6453fc72a6e6653e73526de81e"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/central-valley.png",
+      "size": 94204,
+      "sha256": "0579dff53a5b3aa0d8582d3692626162f69745bf94dea058b9ee52b5cd928233"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-before.png",
+      "size": 26730,
+      "sha256": "c84c381f84da5704e40ac996ec7bcee6fdcb0d2a5b4bff1a2a068476cd5d623c"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-full.png",
+      "size": 189834,
+      "sha256": "e8e587a54b296461fea57efed2ed191fd7433c147d0d1b6c92105f598279dadd"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-partial.png",
+      "size": 15642,
+      "sha256": "5d5b8d288af0d3d6de9456dd2428c1529a7072a0fab9fa0428d67da3c8cc664a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-from-hero.png",
+      "size": 123557,
+      "sha256": "b5a2c41f7d5f697ecc2038d212b2bc461e529d1e0f1c2c7bb2b674cfb8c66b3a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-gorge-upstream.png",
+      "size": 158356,
+      "sha256": "fd5414aaa28de828a785137aefc24fa489c0f4b9bdabb98b4fc5dfae241f25db"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-lake-shore.png",
+      "size": 38075,
+      "sha256": "7dd272312b5a1f23ba6c210f27943951ecaeefab70ea2806b1f1e4018586a4b8"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-rim-entry.png",
+      "size": 179258,
+      "sha256": "014296ff73369f84917c7b756fc639dd196259ba22b981fe9194224b386b57ec"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/hidden-fold.png",
+      "size": 159938,
+      "sha256": "c9d0092438903fbd9b47d9ea0ce5b0db07d8fbf33efff22fb688b0e6bfe7a340"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/high-tarn.png",
+      "size": 169168,
+      "sha256": "b05d54ffad345e89062f9ff050287b5a006137d683a583c30599e13a15cf89c4"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/home-cove.png",
+      "size": 12972,
+      "sha256": "f26fe7b881d27ee3910ec976d7960ac5a373c22e727173a8e5b13f71506b8059"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/island-oblique.png",
+      "size": 252105,
+      "sha256": "d810da66c93808698d90391a13a1ffcf4e1bc488e238b38c588546e47950fcaf"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/mirelands.png",
+      "size": 26446,
+      "sha256": "213d860e8919de2ce4874f7bdd95e9970a6a1b225a5536b0993bc28dffed4e15"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-birchwood.png",
+      "size": 114191,
+      "sha256": "62c40d0ea0ffe5e5754e7f72550d2d65fa1c810c9b4ae9e1b0f5bc7cec11f72d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-cairn-col.png",
+      "size": 191222,
+      "sha256": "ff2dc472ba1055ce141137909e462c6db5637cfdaa4793ad18cdc2a3aa854142"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-tarn-overlook.png",
+      "size": 211499,
+      "sha256": "f955d18dfd1e47b839b90691b98b2d00aa1a195bdd0e4612db7f3198ef021d4f"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-valley-shoulder.png",
+      "size": 83276,
+      "sha256": "17e1f987156a0b0c94f2c904fa183afd2fbbf9847f0189700e20a6f572f4c05d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayA/overview.png",
+      "size": 318106,
+      "sha256": "6fa1e463024abd60b9837a20e8da5603963ebfd2eed36bae390b239d31efca5a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-below-100.png",
+      "size": 30239,
+      "sha256": "baaab389d84a331854c141b8de6255e9316bb500cd8846bb3385372d37de203d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-below-400.png",
+      "size": 22958,
+      "sha256": "6d1cf20913992fe46afe6a8259c2826957d7773b574312cc1963bb5d3d7b0398"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-col-north.png",
+      "size": 67327,
+      "sha256": "8c6b53939de1a50b1691c9dcc367c7bc4608d11de866217483e4b8ae42363f69"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-col-west.png",
+      "size": 64168,
+      "sha256": "7149677f8232537e7efc29c3b7f0747a71b2596c488c03c06c0db783efe9fb64"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-saddle.png",
+      "size": 130438,
+      "sha256": "a1ccb0b2556b355fd91fb71fb9c9567f8b906006add0af8d2bb13ed6b056ed6a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/central-valley.png",
+      "size": 129899,
+      "sha256": "ecd4d39d4411940099bbcd2cf963a7e3c514e4b8960b30893dc3eb94b6dfb149"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-before.png",
+      "size": 23605,
+      "sha256": "03d91ed3cb8c28f4c44522dc8ee28e4af2243501d3c133db2ea5a31d2039bf70"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-full.png",
+      "size": 195594,
+      "sha256": "50887d308a3cb6d3bb5cdbf2ee1d0414d949d3efaa0a05a570999d88b1d4692d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-partial.png",
+      "size": 12719,
+      "sha256": "0c6bc68aaf07ccae439fe906855280acf8986ac75db34fb8e0e64543d27638cb"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-from-hero.png",
+      "size": 179908,
+      "sha256": "5522c5c8b74638b0ab8930ddaffb428cf104c87b1fcc20f5d54ac08f31940fcd"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-gorge-upstream.png",
+      "size": 98723,
+      "sha256": "e6c9b371829ce53d16f067ca1fb822c49b14d4a4f179439c4319d9db73f3bfea"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-lake-shore.png",
+      "size": 46199,
+      "sha256": "1d845fef011ba28455168ebabd13d655a6075785cd995c5e7bb35cb5ec2503f5"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-rim-entry.png",
+      "size": 126539,
+      "sha256": "3c075ea941f6a1826c4b4188bf703166d69530abaa4083658405377340276fca"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/hidden-fold.png",
+      "size": 104184,
+      "sha256": "fd3b54f588b5a5d70a4c79d404c48a0c140a7d7506efd5eadc9ce46811c5869c"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/high-tarn.png",
+      "size": 110250,
+      "sha256": "31f969d2e93e5f121936a44e8433c8a33de4b69b338b55dda7b8d6d95c0094d0"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/home-cove.png",
+      "size": 11822,
+      "sha256": "e0a024d6743d3d37c3047377ab44e709815fc59ae7b0394ee812b706715283b5"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/island-oblique.png",
+      "size": 202572,
+      "sha256": "5080ddb160cef07217a60692ef8421da3d4d79d2a8a3660d1719201b3c98fbc4"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/mirelands.png",
+      "size": 20873,
+      "sha256": "31b4a9028f3992624357392e535d240c2b61817e8373c296184f92bf5c3a5dd5"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-birchwood.png",
+      "size": 93191,
+      "sha256": "74610cab1016b98a254e067550dad9c0438ee3fc2375b5b48947d03aa0c7e099"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-cairn-col.png",
+      "size": 48505,
+      "sha256": "0f8c784859a7b538a864ca2770980513fdb1163b553f5d75e28e7786209114d4"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-tarn-overlook.png",
+      "size": 37190,
+      "sha256": "1169be86e74bc85e72e25eb7f056d0395d4c816f14f7e0a324555a674aee5197"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-valley-shoulder.png",
+      "size": 74852,
+      "sha256": "5298984197eb41aea35041a2ee0f13683586063018c9be04bd97b754b9d3ebd0"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/clayB/overview.png",
+      "size": 267960,
+      "sha256": "4ca6f5bfc74cb6c3722649ad4b9951f4072ac56dad7c22c4d5cbafd6d0d6f24c"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/default-viewer-identity.json",
+      "size": 3561,
+      "sha256": "56674f5577d865337d97701aa23b4f4a502bade1e581fa5d907283da5ac61836"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-below-100.png",
+      "size": 28305,
+      "sha256": "93be0d5e1a61daf622bab62c5b0308044c50ca71b734d54b219f23f0fee26f7f"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-below-400.png",
+      "size": 18800,
+      "sha256": "a4e24ecc10f99b849a4c7edb4458b86ef3b3a96cc058e014ffb8bdc084603fb7"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-col-north.png",
+      "size": 40455,
+      "sha256": "0ca45c7e94087a42a82e3c35d3fde20fbfc21400affc34ed87409ae5ca7ab7ae"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-col-west.png",
+      "size": 33811,
+      "sha256": "2b289a326ab452455113927a43ce0f79c4dfa9b8dab666cfc3f388add3200a81"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-saddle.png",
+      "size": 80200,
+      "sha256": "3086ea33509f429f19e3d59da3e58d66fc4429d184fdf4c19374c9bed5d7e866"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/central-valley.png",
+      "size": 88821,
+      "sha256": "7b890d364271867c700859857f113eac5a9172c7d94ecee421956684f66243b3"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cv-before.png",
+      "size": 14281,
+      "sha256": "cff13e046b06753f57b6ef8ed3e2f671f9a06c0c7ed51fc0ace4e989afa723de"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cv-full.png",
+      "size": 106632,
+      "sha256": "c7b47f12d02d0c4639a444abdcec11d59b707020b26e540fc80c01ec52abf495"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/cv-partial.png",
+      "size": 10505,
+      "sha256": "2c4b68881c03942d8f6abdca27dbe26c109f295650b06567a2d5e2511e9c357c"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/fold-from-hero.png",
+      "size": 100338,
+      "sha256": "0db92c9c18239b5ca60b0910cc8cb7f6fda15851c37c5ceef5317a5765663021"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/fold-gorge-upstream.png",
+      "size": 49958,
+      "sha256": "571b2e5517db0286ef3502ef80b4cecde102432ac878ffc9b16b8f44e845c855"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/fold-lake-shore.png",
+      "size": 54645,
+      "sha256": "4dc1f3d1463ee2d5be168e486112edbb81e20137d09ac49ebcb939645491ae19"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/fold-rim-entry.png",
+      "size": 90034,
+      "sha256": "0eb90e5ca237e10e6d6878a60afb20ba31a6107ae7d545b399541970bd6123ac"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/hidden-fold.png",
+      "size": 85751,
+      "sha256": "44c0a79300d38b777d369315b2926f0ddce236c77180c4f1bf230d33d143ecdd"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/high-tarn.png",
+      "size": 94417,
+      "sha256": "e353ce6c956e9090a7e2b7a1d03d7ca39981fcdd6f37f881f0ac596cd9a287e6"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/home-cove.png",
+      "size": 10906,
+      "sha256": "f026abbe7e0cd2f130f62ec16c6a2d9d13e374742c6403fb78f0525a9f22afc8"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/island-oblique.png",
+      "size": 148774,
+      "sha256": "4844d9ce56e1dbaa127f1dcc6a6f19c3035f7a7247272bc40086940d4cc90d47"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/mirelands.png",
+      "size": 17206,
+      "sha256": "6a70bf7bfc5f2854b5875705db2e72bf282d66094f874e1c7343fa1fc5808119"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-birchwood.png",
+      "size": 44903,
+      "sha256": "14c278f469fafddb4a654d1c2debd01b7029704ef627561392620ba196f3c48e"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-cairn-col.png",
+      "size": 31624,
+      "sha256": "514c5a0ce691540d306649f061c99e31f963322c3d882b24cc32db901e901263"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-tarn-overlook.png",
+      "size": 41240,
+      "sha256": "8f61f09c9556201c03f5c5eccc9756a70439b26faa79cffa7aff1722fc1be218"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-valley-shoulder.png",
+      "size": 67571,
+      "sha256": "1ea188d1b42b40429bc4743991a5fcba7fdcf010dfedc1665ed79cac3ecd492d"
+    },
+    {
+      "path": "docs/geo-r02c-p0/captures/standard/overview.png",
+      "size": 196642,
+      "sha256": "0a27de653c3d3b5f6a4f5026073bbcd3136a89dc0ed80898868891e77724d4cd"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence/convergence.json",
+      "size": 6191,
+      "sha256": "0e61c664d8277ea614b5efc7d4a47946a68323c17409ace82c51936df7e778fd"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence/diff-M0c-minus-R1.png",
+      "size": 196583,
+      "sha256": "344479d9bd8352ed3583c5025d155f0e89058733c83ccc4eed6e10ce389ea8bb"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence/diff-M0w-minus-R1.png",
+      "size": 65463,
+      "sha256": "519e2e6c2da21c51cc410262f283caae65726ef2990c9645eba91300d40a0778"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence/hillshade-M0c.png",
+      "size": 204954,
+      "sha256": "fb99169a58e67e06feb9d822755b14e71d5a48cfca221798885d1bc51695d81b"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence/hillshade-R1.png",
+      "size": 206351,
+      "sha256": "38d1e2fe256832d7890daa5a5e674021f2127d5831d57b8b583fbff4ce3315c5"
+    },
+    {
+      "path": "docs/geo-r02c-p0/convergence.md",
+      "size": 5582,
+      "sha256": "d6ddaacd1be2c8969f972c64cd6170324184683a1f04453d1a3666e7404248cc"
+    },
+    {
+      "path": "docs/geo-r02c-p0/invariance/r1-vs-linux-regeneration.json",
+      "size": 1134,
+      "sha256": "d29d3c8c4b3f308ca8434f974f2874153e815aa51d060ab131c1c996b69a8312"
+    },
+    {
+      "path": "docs/geo-r02c-p0/reproducibility/canonical-minus-linux.png",
+      "size": 7900,
+      "sha256": "bdd290e902ab950fcc59a21ca8e6718a2602170f3ff2ac3682f6045915e76c72"
+    },
+    {
+      "path": "docs/geo-r02c-p0/reproducibility/platform-diff.json",
+      "size": 9093,
+      "sha256": "bcad1052b545dc91f1561c637225609045df4aecf7ec91cdddb5287455ff374a"
+    },
+    {
+      "path": "docs/geo-r02c-p0/reproducibility/probe-linux-x86_64.json",
+      "size": 2417,
+      "sha256": "09eea371324f5a7ea7efd611be4817e9bcd958d5aa3856f9f8208eab5da3ee98"
+    },
+    {
+      "path": "docs/geo-r02c-p0/reproducibility.md",
+      "size": 8808,
+      "sha256": "83fe092ffb6c1d555e60423950b5047776a27a213b6668554d2c3dbdfd9e16b1"
+    },
+    {
+      "path": "docs/geo-r02c-p0/review.html",
+      "size": 19447,
+      "sha256": "2e039db3a6a027fbfc30da73b427463402752946df4a2d19bf965dedf3074db8"
+    },
+    {
+      "path": "docs/mat-01/ADR-001-terrain-material-architecture.md",
+      "size": 8993,
+      "sha256": "a0281178590493efa4430daa218f87381ee30fa0c79120aa5666244993581e3f"
+    },
+    {
+      "path": "docs/mat-01/INTEGRATION.md",
+      "size": 4949,
+      "sha256": "c7b30c34f4991aa225c19ebc60e679861f7b4ee0ade38e06111d614c5f7059a0"
+    },
+    {
+      "path": "docs/mat-01/README.md",
+      "size": 10684,
+      "sha256": "1d3e46b91bdff4b4e5d6bb6dea4513d36a0e23d0f4ec355beed8fb494f4670d0"
+    },
+    {
+      "path": "docs/mat-01/protected-baseline.json",
+      "size": 27785,
+      "sha256": "ed3f9342945a4ad631f42fce892ee08a2cc1e86a34316d88edb1dd0554342181"
+    },
+    {
+      "path": "docs/pop-01/ADR.md",
+      "size": 9286,
+      "sha256": "4f4693fd5ef6b8440ef5a0793ec7450a5bb2820d660a1fe785e593fd7b5f18bb"
+    },
+    {
+      "path": "docs/pop-01/ASSET_INTEGRATION.md",
+      "size": 6165,
+      "sha256": "3e16c1b89fd37fd5af9e05d4cc83696fbf65ce064047a2284d98f5f3610335f7"
+    },
+    {
+      "path": "docs/pop-01/PERFORMANCE.md",
+      "size": 2601,
+      "sha256": "8b3fc720a99b969655fbd6c32dbf1df8988b4701a23fff160262ae5045c4355b"
+    },
+    {
+      "path": "docs/pop-01/QA.md",
+      "size": 4894,
+      "sha256": "86392d797e02a5820d6f528d6f3581e38bd3afb467f4133e22ac0ca96a8e869c"
+    },
+    {
+      "path": "docs/pop-01/README.md",
+      "size": 6333,
+      "sha256": "48ac7db71d4ed21d677d705cd99db75c368a9ab2236bdf44d10cc3805aac087a"
+    },
+    {
+      "path": "docs/pop-01/benchmarks.json",
+      "size": 23823,
+      "sha256": "3c4b910ee99d896f9c5d4d658423f6d574c5e7a473f741394d8fe19f801f119e"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-chunks.png",
+      "size": 400045,
+      "sha256": "c827fa54225e7bc051a459b90e8c7e720bb8617926651abf2a72c4461ea58162"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-community.png",
+      "size": 407050,
+      "sha256": "5d9a7fcb6aed41aec40431bfd0b721c3cd2d9c89f7fd8f2395b5346cf3dd3cc6"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-landscape.png",
+      "size": 511697,
+      "sha256": "627de70afa8dd37a0b72569ef369e822d3980c026b3ef8a4be0bb33bf8d9d954"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-overhead.png",
+      "size": 394111,
+      "sha256": "f04f1a57e582b28dcf05c3662d8f203e5f4f852b9cb3a11508d5fbf5794dd9b4"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-slope.png",
+      "size": 416604,
+      "sha256": "329ab061b43a8871cec837cf42e4448bd7aba5e4059bbf1f77d7837e8f82df30"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-trail.png",
+      "size": 421314,
+      "sha256": "50a64439a0db5583cb722e40f1a0cd18dd24d811a2d0f3dad14ac0cadde21787"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-walk-interaction.png",
+      "size": 153310,
+      "sha256": "3e3f2ae1c8ded3767d0af0c1605d5571cc3edb86fc9e8507e6a0e135384bf696"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-walk.png",
+      "size": 163143,
+      "sha256": "39f64e50712708fc8993e863b17ae619952bfb8bd9ad49104dc495e3156cfc6d"
+    },
+    {
+      "path": "docs/pop-01/evidence/forest-water.png",
+      "size": 399748,
+      "sha256": "50d538af5a9aa15966b0ceac9e1d6ca425b54e47275a153ee74eb911a45a0a4d"
+    },
+    {
+      "path": "docs/pop-01/evidence/home-landscape.png",
+      "size": 305562,
+      "sha256": "c9c7e9631bb1bf37505df1523e9476787eb78616ec1637b777e8365222b56b19"
+    },
+    {
+      "path": "docs/pop-01/evidence/home-overhead.png",
+      "size": 217141,
+      "sha256": "eb777fe7e64a1628052597a5f70567e3948986466b00b689781e3e936efbcffb"
+    },
+    {
+      "path": "docs/pop-01/evidence/home-walk.png",
+      "size": 164439,
+      "sha256": "68e998befbd3e7f613ff90a298e2b38f05d74021e9defda7a9950006e0bdfd8b"
+    },
+    {
+      "path": "docs/pop-01/evidence/runtime.json",
+      "size": 13122,
+      "sha256": "bca5354a3556deabf84b0a4206e74d05034ae04a5c844f707fc24ee0909c1796"
+    },
+    {
+      "path": "docs/pop-01/evidence/valley-landscape.png",
+      "size": 361239,
+      "sha256": "3881c59dbbac48566930b6e73ff18e9ed5d519e4fd9a876ed0dbdc369314205f"
+    },
+    {
+      "path": "docs/pop-01/evidence/valley-overhead.png",
+      "size": 289736,
+      "sha256": "824749e258a456aaa3c24671792f0657d5931d280a87b7c1dc1cf4955d56cc76"
+    },
+    {
+      "path": "docs/pop-01/evidence/valley-walk.png",
+      "size": 186749,
+      "sha256": "d49a02d9da8f7df9deca971ec42a44d8c9b972d788b815fd7230e59f551486ef"
+    },
+    {
+      "path": "docs/pop-01/preflight.json",
+      "size": 14706,
+      "sha256": "f4eb4c67bc69f15096313b139a107d24576c9df5d8f3c9fa164613145c711f9e"
+    },
+    {
+      "path": "docs/pop-01/review.html",
+      "size": 3980,
+      "sha256": "56aecdcf358906f7ea9e571b66246090818c4d8846edd469baf947c329186681"
+    },
+    {
+      "path": "docs/pop-02a/ARCHITECTURE.md",
+      "size": 6877,
+      "sha256": "c213c2c049920305d13e360478f7baf07b80a5b32c6d7e261633d2dae2863893"
+    },
+    {
+      "path": "docs/pop-02a/ASSET_COMPATIBILITY.md",
+      "size": 6153,
+      "sha256": "fcbf80a671865d4ac385786e7efd8c4741b12325e4a05364852bfa0a7b9eccd5"
+    },
+    {
+      "path": "docs/pop-02a/MAT_WTR_COORDINATION.md",
+      "size": 3259,
+      "sha256": "f6fc094f8ebc1a12a43c8fa9e4a72208e966e0ae0fdeb85c0fdcc37144c557ef"
+    },
+    {
+      "path": "docs/pop-02a/PERFORMANCE.md",
+      "size": 3474,
+      "sha256": "cfaabd021282f478e7c2a9874b30c50f0a40eeb029f8892978f884688c77814b"
+    },
+    {
+      "path": "docs/pop-02a/QA.md",
+      "size": 5612,
+      "sha256": "1cca2b83b2f529ec2693ef7583c5a152e7ab82f175e5cdb25654704a7910467d"
+    },
+    {
+      "path": "docs/pop-02a/README.md",
+      "size": 4614,
+      "sha256": "74ff244e7993e3dd90acb8acee16b8f3156c5d756f4408b09b10b01093c50c2f"
+    },
+    {
+      "path": "docs/pop-02a/compatibility.json",
+      "size": 432,
+      "sha256": "185fd0c2993aebe8f3b478abef660b46ed4fd95e02629ba3b6d0022690eaaa2f"
+    },
+    {
+      "path": "docs/pop-02a/evidence/.forest-density-1.png.iyAsz1",
+      "size": 524288,
+      "sha256": "f6094b3c8424cdc8f3af3b936df44130ee46e1a13158cdbf19411f720d6ab43f"
+    },
+    {
+      "path": "docs/pop-02a/evidence/backend-comparison.json",
+      "size": 272,
+      "sha256": "6577191f3fd37587fc1401a2d14936bc41c85af60cd3000025f62098f94abb57"
+    },
+    {
+      "path": "docs/pop-02a/evidence/backend-diff-x5.png",
+      "size": 5197,
+      "sha256": "9169dd5d9c1f84ee6508f5124fc083c2fe0ceeb70f2d7fee629d3bb8cd961d0d"
+    },
+    {
+      "path": "docs/pop-02a/evidence/backend-instanced.png",
+      "size": 1124795,
+      "sha256": "e5be43a219e519ec9be0665a6ada9cca91d2e97126ee9c4dfe63f21fbc534f13"
+    },
+    {
+      "path": "docs/pop-02a/evidence/backend-multidraw.png",
+      "size": 1124795,
+      "sha256": "e5be43a219e519ec9be0665a6ada9cca91d2e97126ee9c4dfe63f21fbc534f13"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-fidelity-batch.png",
+      "size": 183435,
+      "sha256": "76bd97d459bdfe78dca6ca6b67d9faaf4ecaa05f25204d35a7c7c8c3df6be131"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-fidelity-initial-diff.png",
+      "size": 11617,
+      "sha256": "63ea35281b3d9d1ba9dcd9c98aca14dba098acee299595d38aacc7c82dc6e70e"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-fidelity-negative-opaque-depth.png",
+      "size": 160906,
+      "sha256": "adcc15f65220c0802564e0c84f020a0fb338d193bd3821a2ce8a7a89323279b7"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-fidelity-reference.png",
+      "size": 183448,
+      "sha256": "76c2dfb641ab81c9bc865591de73635e2a4c54caee519914fcb37c5e162980d3"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-fidelity.json",
+      "size": 1385,
+      "sha256": "3278b4da7b7b1c10f736977066b09f78210e953ad31183d71426292d15372ce9"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-lighting-cool.png",
+      "size": 1388893,
+      "sha256": "108a7a384ee63d781434dc4345d54f7b82f74f8e2488dd665e6ce1e126a8d8c2"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-lod-auto.png",
+      "size": 1442788,
+      "sha256": "f5fd85543b867b0e0383ed2e1f4ce7b0f8e73224e07436f84a713db11677c871"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-lod-far.png",
+      "size": 1567699,
+      "sha256": "1cca11a1b15baf2b19153d6ba986d72726a0da32939eb31f6bc16a3ee8a0e23b"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-lod-mid.png",
+      "size": 1571798,
+      "sha256": "375ae171787d9f53f63b43329e6eec5a6e6afae68547638a1869de615eaf2a4d"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-lod-near.png",
+      "size": 1430080,
+      "sha256": "d188c751b484f84c6b19f254fc9bf84bf9e8b29ec91649e7729de5c8bf98a204"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-shadows-off.png",
+      "size": 1229595,
+      "sha256": "db19bcf478bc8476d5900a4fb16e024b5d871db5f4ce43acbf3984354d10bf13"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-shadows-on.png",
+      "size": 1442879,
+      "sha256": "aefaf7f19b338351448f20d818554fb6d2b0b12c9c6dfbf05d60cf84c286118b"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-studio-batch.png",
+      "size": 179311,
+      "sha256": "f659f858cfbb6826bf0954a0a0b840aa24ba3a305444a34696b3b52a98785eb3"
+    },
+    {
+      "path": "docs/pop-02a/evidence/birch-studio-reference.png",
+      "size": 179311,
+      "sha256": "f659f858cfbb6826bf0954a0a0b840aa24ba3a305444a34696b3b52a98785eb3"
+    },
+    {
+      "path": "docs/pop-02a/evidence/contact-sheet.jpg",
+      "size": 527295,
+      "sha256": "4ef9d03f734933ae814f9500c2010b37c6e49d87a3da84e42e26772f2373e5ab"
+    },
+    {
+      "path": "docs/pop-02a/evidence/final-forest-interior.png",
+      "size": 1031189,
+      "sha256": "e5adfe230accd03da62110b62040b363a1d0a15f41d3f763998220c8ac1eba10"
+    },
+    {
+      "path": "docs/pop-02a/evidence/final-forest-landscape.png",
+      "size": 1135752,
+      "sha256": "691de42770d9d758f28a34c85ece4e07e7ddde9a3c86b929a09c5ed6ad6dece7"
+    },
+    {
+      "path": "docs/pop-02a/evidence/final-home-landscape.png",
+      "size": 313018,
+      "sha256": "4d4f7c0048f108766447000a4a7ce9402b2ca795250b1f333785f2d084a71ac5"
+    },
+    {
+      "path": "docs/pop-02a/evidence/final-validation.json",
+      "size": 50678,
+      "sha256": "a9a8d1a3795bbc5e81a3ff45169e2f4c94026dd6ba0852f8298da188a726aebc"
+    },
+    {
+      "path": "docs/pop-02a/evidence/final-valley-landscape.png",
+      "size": 300465,
+      "sha256": "79811631bf3907f2aff08cfb3d1f6fc037cc202af1146193effc70c56350706c"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-close-birch.png",
+      "size": 1443098,
+      "sha256": "846df3ccecdeb04c3061aebe1902276afcdc09937e2f39beb2c59473b6a92bb3"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-close-grass.png",
+      "size": 976336,
+      "sha256": "701ee833160b4e2a184a0ee6bbd14e9e536914c08901d4da010cd9e71afd7cb1"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-close-rock.png",
+      "size": 937560,
+      "sha256": "0efdec461973872f1882af52a01cbf3d272015b404b2854d4ca6dc3e5881d505"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-corridor.png",
+      "size": 632950,
+      "sha256": "d349cd7bc879f2e3dc5046c9c7d3f29c9829f21694cfcceb6f26ee54091164b0"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-density-1.png",
+      "size": 1135861,
+      "sha256": "e54c9ccf6bf30a877ac7576085bd055ea85e6993347bf14df867aadbb7a3478e"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-density-2.png",
+      "size": 1404149,
+      "sha256": "d46757397539df1726e6a971dc1d82b6012a92413a02d6330739119a113f1dce"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-density-5.png",
+      "size": 782311,
+      "sha256": "095590be7a81dd66d73f242537656a56cf46bcd709a4fb8d2e573ef475b98506"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-edge.png",
+      "size": 1079012,
+      "sha256": "ddc0328762a5ccdfdacb1f912b6a8429155e785ae41755724f41b1a0c26f6e95"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-interior-assets-matched.png",
+      "size": 1031555,
+      "sha256": "386a99f636860691efa8384760dc7e2fc0583382254e7a74b3b1c23d0ac92144"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-interior-proxies.png",
+      "size": 164462,
+      "sha256": "a2bfa0d2b5d2ee8fe770228fe264983b02139f24e4ebbe9118145e39ad90c2aa"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-interior.png",
+      "size": 1031814,
+      "sha256": "5466576882754e682fa3d6a255d3a8383305482caa79465939ee4609a3190283"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-landscape-assets-matched.png",
+      "size": 1135782,
+      "sha256": "98e40266e56139e48b3894b132d70c30a50ffedc62cdcbbf43eb16bcb47076e0"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-landscape-proxies.png",
+      "size": 382361,
+      "sha256": "e9f283eac51f40b76f6529fe493ee7e1baea331df0fb4fd95e4bf5bf92ca349d"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-landscape.png",
+      "size": 1135651,
+      "sha256": "5f5124166aae771799bd1214a155af31877882694b82057c03aa82aca368e1ea"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-overhead.png",
+      "size": 564426,
+      "sha256": "a17c47f2e2f9998c229a34346b0ca98d4d967a40dc5e3c8bdc92fa657f6d628c"
+    },
+    {
+      "path": "docs/pop-02a/evidence/forest-walk.png",
+      "size": 1047813,
+      "sha256": "1e1eb35f5a5ceb854e52465efadc801b632ac610c07b8b1f8b03a78eb9454132"
+    },
+    {
+      "path": "docs/pop-02a/evidence/grass-alignment-normal.png",
+      "size": 976016,
+      "sha256": "74a6bfb63c1f7f508f88ead7215082a0196b72547fdf506ab4f29902674e41eb"
+    },
+    {
+      "path": "docs/pop-02a/evidence/grass-alignment-upright.png",
+      "size": 977782,
+      "sha256": "c28a6d4a7795d4cefce034bd3bd715ce8d0491dd7458b69c5f82454eb6d9b9a8"
+    },
+    {
+      "path": "docs/pop-02a/evidence/grass-fade-source.png",
+      "size": 973995,
+      "sha256": "6f11effa795d311929efad7a43b57d2ef9efb3ba87b35dd6fe165c743e9047d5"
+    },
+    {
+      "path": "docs/pop-02a/evidence/home-landscape.png",
+      "size": 313078,
+      "sha256": "e49d540d8b2e51b87fd9bad38142688a63d8f88f7ea961029432a0d991e6bd1d"
+    },
+    {
+      "path": "docs/pop-02a/evidence/home-overhead.png",
+      "size": 214691,
+      "sha256": "1fb1977f77186c0aa329c5c21472e79fe8e60664ababb01065097b1387178666"
+    },
+    {
+      "path": "docs/pop-02a/evidence/home-shore.png",
+      "size": 283287,
+      "sha256": "75827725e960bb3803e452fa55e26085ae84e6b2a236116f8ac5a0377c6be85a"
+    },
+    {
+      "path": "docs/pop-02a/evidence/home-walk.png",
+      "size": 428044,
+      "sha256": "b6bb4ebb4fe462c3b00f20bddfb0e1e5f9e750284f52a7cae1783282b55daadb"
+    },
+    {
+      "path": "docs/pop-02a/evidence/media.json",
+      "size": 278,
+      "sha256": "a2679fc695b683d412dae39b7cb1121770f7ee741eca62f2a4eea40c2ec13da0"
+    },
+    {
+      "path": "docs/pop-02a/evidence/runtime.json",
+      "size": 548576,
+      "sha256": "2b66877c8406d26a2b143973c374e4b7c9c6982c19f9d974ebe8f6acc4ab4c13"
+    },
+    {
+      "path": "docs/pop-02a/evidence/supplement.json",
+      "size": 22776,
+      "sha256": "373afb643b599e12f68696f9c2317f5a5ea79cbf74fead1398e08ee913cd885b"
+    },
+    {
+      "path": "docs/pop-02a/evidence/valley-bank.png",
+      "size": 189801,
+      "sha256": "ee95a5c08bd16d691266955646ecbde51c2e69eaad96af6fd61f32614c8dcace"
+    },
+    {
+      "path": "docs/pop-02a/evidence/valley-landscape.png",
+      "size": 300587,
+      "sha256": "213b9a2f0cd36770c72778ead46431f03bb45df8f44bf22ff084be356d6eb595"
+    },
+    {
+      "path": "docs/pop-02a/evidence/valley-overhead.png",
+      "size": 252322,
+      "sha256": "36e41ce315553e8ee4b8d017751df771d9a046c036edbe197da18c6cc4e70205"
+    },
+    {
+      "path": "docs/pop-02a/evidence/valley-walk.png",
+      "size": 470966,
+      "sha256": "58995cee1cde81c45f312f9e98762386ebbb0e87a716ff927af1e4f3297d85e1"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-00.png",
+      "size": 636493,
+      "sha256": "977e325bc10c4ff7bb934f6d43745cfeb48daf55e72b9eef62b8dcde590b4270"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-01.png",
+      "size": 690857,
+      "sha256": "d726b06a0634870a9bad88af40edc1efd9943b9168f94ebea691d5030e1dfef4"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-02.png",
+      "size": 712006,
+      "sha256": "d6cd4b6a24a69679954929767e3143da23923ecf9e13a1b4c8e2c23c914cd2b3"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-03.png",
+      "size": 741818,
+      "sha256": "620b325b7cdff9a5581f5897bfaaf9560e43c0ede947f53d99a1d34bea4c6773"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-04.png",
+      "size": 748593,
+      "sha256": "d9a49ae9b8b63df6254c199b6587d21221244f996df29e4eeddbfa6f7e0eefe1"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-05.png",
+      "size": 714887,
+      "sha256": "782c6a678b898e6a98ae51fed041cd3b3561b8c4b3118ff2c23290389f8a44cc"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-06.png",
+      "size": 842985,
+      "sha256": "b290fc9801b8f00ea0b3f201b1df43d0cbbb18d4685be85405ea27d469b47550"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-07.png",
+      "size": 830441,
+      "sha256": "87c4c261f97d96af0d47823a89597acc5d8d8494dd98a4cc21c342eb8ad67da4"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-08.png",
+      "size": 714768,
+      "sha256": "48c4c6a287c39ee69fe78201c05fc1998aed6b441c31e6e3c7f8033432dfcc42"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking/frame-09.png",
+      "size": 565622,
+      "sha256": "b8d4eec69ae990174c95381e88c3592e60e64efa347bd9fd04e542913f9757fc"
+    },
+    {
+      "path": "docs/pop-02a/evidence/walking-review.mp4",
+      "size": 1268370,
+      "sha256": "d2662a9390b2533e87b753d826f690a2189bc913111f7041a74d49082d020773"
+    },
+    {
+      "path": "docs/pop-02a/geometry-baseline.json",
+      "size": 9573,
+      "sha256": "100ed7829a3430fb4736cd1946cf3cca202a5bd103e74d163287798ae11d4e6a"
+    },
+    {
+      "path": "docs/pop-02a/grass-compatibility.patch",
+      "size": 4279,
+      "sha256": "1a3353c8b0c0c28f469e5ffc8b87849aa0bca289c36a97c91de72ac1d458c9af"
+    },
+    {
+      "path": "docs/pop-02a/preflight.json",
+      "size": 511,
+      "sha256": "b6ebc5c907890c252f916c2db46c4750be21309583e8d9f9e2805c0895b1536a"
+    },
+    {
+      "path": "docs/pop-02a/provenance.json",
+      "size": 9427,
+      "sha256": "33d1754d77862db02f17bc828579f6a38b19a1c267c5431ebe714e0af8a866d4"
+    },
+    {
+      "path": "docs/pop-02a/review.html",
+      "size": 38575,
+      "sha256": "f7bae5c126363272fde6bd781c91d293c0ec69bc715e31d7e12761e8b55313b4"
+    },
+    {
+      "path": "docs/pop-02a/source-ancestry.json",
+      "size": 802,
+      "sha256": "6c0b686123c1ed8e47d04b6ba350805a161ed993e255cae859b0faa7a5fb811a"
+    },
+    {
+      "path": "docs/terrain-samples.json",
+      "size": 244384,
+      "sha256": "5b33c95e98faeca6d7e0625ad8ce73fb987f99f4d2d4db89cc1cd62118fa48c6"
+    },
+    {
+      "path": "docs/world01-route-profile.png",
+      "size": 66544,
+      "sha256": "c200a1e983fa04348ee8b429d238c392e541970cb0be77db7e3f82718482cb94"
+    },
+    {
+      "path": "docs/world01-terrain-diagnostic.png",
+      "size": 175950,
+      "sha256": "d491f2210fca2ed5eb42f0e5c0e44b7537e7ce71ddc66f70eedf9ad3722fd42f"
+    },
+    {
+      "path": "env-p01.html",
+      "size": 270,
+      "sha256": "0bff03fd46c6815273db40e4af0a31cb28728b3f240f8971d964921b784c61f2"
+    },
+    {
+      "path": "geo-r02b.html",
+      "size": 281,
+      "sha256": "b0bfa43dd975fd082138d24df44db827bc2e4cf1ca91a37c8d15f33d6f00f4f5"
+    },
+    {
+      "path": "index.html",
+      "size": 330,
+      "sha256": "567a29aad419ed1f5402b58398e99128ad3e3975d559411b15fd8a1a07d24fe7"
+    },
+    {
+      "path": "mat-01.html",
+      "size": 324,
+      "sha256": "32af08793fa1ac91afa7db26fcd58b600d7d2796ecb47fea427a50ee286445fc"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 41470,
+      "sha256": "2bd512a9f124fd5ae42060f867a80ba4b01fc5d49e49ed07935c65a1dc56eca7"
+    },
+    {
+      "path": "package.json",
+      "size": 1063,
+      "sha256": "f0dc2e146f0d9034c8a4044addea74b8a468737fae57ccf3f10dc2a72c40a1dd"
+    },
+    {
+      "path": "pop-01.html",
+      "size": 274,
+      "sha256": "b69236c77a97812b25a57f5bf6d10452e56ae009e9abacc9fe224dbb78e95aec"
+    },
+    {
+      "path": "pop-02a-fidelity.html",
+      "size": 182,
+      "sha256": "aada352c166d280306f1b9e296c999b28ec480c3dcba4c943689d7e40a7d13e1"
+    },
+    {
+      "path": "pop-02a.html",
+      "size": 270,
+      "sha256": "13b6dc53c51f835cc034fd95153ca92467d603d01366864b6c8c55e2cbdcd70f"
+    },
+    {
+      "path": "public/geo-r02b/diagnostics.json",
+      "size": 148738,
+      "sha256": "05dbe21ff988056897145594b82f2e75cbdc6555c04854222120c50fd06805f3"
+    },
+    {
+      "path": "public/geo-r02b/features.json",
+      "size": 2359175,
+      "sha256": "8f538cef4ce368c958abb0d5097895b4bd230ff2d5f97fd0f32ed8b37ed0166e"
+    },
+    {
+      "path": "public/geo-r02b/terrain.f32",
+      "size": 12014004,
+      "sha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a"
+    },
+    {
+      "path": "public/geo-r02b/water-mesh.f32",
+      "size": 4026780,
+      "sha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d"
+    },
+    {
+      "path": "public/geo-r02b/water-surface.f32",
+      "size": 12014004,
+      "sha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55"
+    },
+    {
+      "path": "src/env-p01/ground.ts",
+      "size": 3220,
+      "sha256": "718cedd6e6f2eab6263e624b96477fe1bb7c25ceec94d0f738ef9be71b9766e4"
+    },
+    {
+      "path": "src/env-p01/main.ts",
+      "size": 17416,
+      "sha256": "e75e7ee27759fc8b367ebc4058d4acaca91c7a01397d75de42437b0db1df92e1"
+    },
+    {
+      "path": "src/geo-r02b/main.ts",
+      "size": 18035,
+      "sha256": "54686addf5aad40025670e8ab05a333ed9e0d348bc941cd427850bccf50967e0"
+    },
+    {
+      "path": "src/geo-r02b/review-options.ts",
+      "size": 1042,
+      "sha256": "f01f314b8d3f8aa083609f735bbed5f657bef1f9b9340dd5a5c045f8d86fcf8a"
+    },
+    {
+      "path": "src/geo-r02b/review.ts",
+      "size": 2148,
+      "sha256": "f5c61de502b3c2af3066a825d008f7b6df4c48d0a2b3a7ec49c8ea3a5afa1f4b"
+    },
+    {
+      "path": "src/geo-r02b/style.css",
+      "size": 1198,
+      "sha256": "1902f4978dad3ed59edb40941a10138c89e7e71ba9719826e963f3d892c2dd32"
+    },
+    {
+      "path": "src/geo-r02b/terrain.ts",
+      "size": 4470,
+      "sha256": "630b96bb4a3682f4e6be41dc4b71a73a0ab99ba8b54a5e4051df17e947f3bfbd"
+    },
+    {
+      "path": "src/main.ts",
+      "size": 9839,
+      "sha256": "8913e8959bdc7cc09d390defc3d52fe50769f3147eca8aeb7e968103d84bad92"
+    },
+    {
+      "path": "src/mat-01/cameras.ts",
+      "size": 3236,
+      "sha256": "12fbd45dc14237ff383e3314010d34a3ea01371eea090dca6efe55b2e7491d82"
+    },
+    {
+      "path": "src/mat-01/main.ts",
+      "size": 19188,
+      "sha256": "2b15c46f12095d42c7022f357c25dc1a5c291d96704bd1c1cbe582e1c0821053"
+    },
+    {
+      "path": "src/mat-01/style.css",
+      "size": 1002,
+      "sha256": "2722d3f6162cb1f90006f5277bad7a66612bd35edcda276f05cbea0ec61bb5b3"
+    },
+    {
+      "path": "src/mat-01/worker.ts",
+      "size": 1773,
+      "sha256": "bac37f3a508c294b1a99a24cbe4329e965513e6cc9b5062008f93f8cd460f74a"
+    },
+    {
+      "path": "src/nature-library/foliage.ts",
+      "size": 7719,
+      "sha256": "8340b43e6bd5a82ee9642dec7e1afade0999b671c5c4b88567855663794c3e8a"
+    },
+    {
+      "path": "src/nature-library/geometry.ts",
+      "size": 25632,
+      "sha256": "466ccfd096c10d82a2e5c676fd01c2d0ee1fcf589258ef4f44c2454c6ec7d059"
+    },
+    {
+      "path": "src/nature-library/grass/geometry.ts",
+      "size": 12964,
+      "sha256": "632ad6970f83fee8f63328099dd3b9c3e1fe5e47b8c328c7c7d074d5238d39f8"
+    },
+    {
+      "path": "src/nature-library/grass/index.ts",
+      "size": 1665,
+      "sha256": "73bad47a9665f851059512a02da89d89126a08b0b6d8b8274f877186719e1f7d"
+    },
+    {
+      "path": "src/nature-library/grass/materials.ts",
+      "size": 5563,
+      "sha256": "74e31dfc088ccaded4689c85b5aa44573ed3dbf2bc3c31ab7e301f08c56dc7b2"
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassBatch.ts",
+      "size": 14580,
+      "sha256": "42a4499b6dcc7ba57c51c6132407fd1374ec5ea694759df4f8941368b83117aa"
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassFade.ts",
+      "size": 1714,
+      "sha256": "243668dc62d433a62a129ca9dc255dcd22fe7bc2732ea57b0879bb99140eec40"
+    },
+    {
+      "path": "src/nature-library/index.ts",
+      "size": 2328,
+      "sha256": "1667815c32def800baef7f8c369cefd87e14f6fb9469ee52e8af417225fa6e26"
+    },
+    {
+      "path": "src/nature-library/lod.ts",
+      "size": 711,
+      "sha256": "4a5145c2e4e6d4531b255ae4927f88ac8d91d0ef0cff494f9013a922379165b5"
+    },
+    {
+      "path": "src/nature-library/materials.ts",
+      "size": 18719,
+      "sha256": "c16abbf2193a245f9c949f0cdbf01097ee8e2225561532054595518326c41331"
+    },
+    {
+      "path": "src/nature-library/pine/geometry.ts",
+      "size": 12388,
+      "sha256": "6528bea5b6e6d6a1d9bb3b18c30534e2639fdb4c4029f2ac68f25267ad1d39a3"
+    },
+    {
+      "path": "src/nature-library/pine/index.ts",
+      "size": 1735,
+      "sha256": "b342b424ba106aabb5555f4b5660d2fa20d58af26e41484d8d27a79516e12a5b"
+    },
+    {
+      "path": "src/nature-library/pine/materials.ts",
+      "size": 1521,
+      "sha256": "98aaa813224bfdf5ab9e943f822fed5d9d4fe689fe3710bbe3eeaa4e7b86feb2"
+    },
+    {
+      "path": "src/nature-library/rendering/batchedRenderer.ts",
+      "size": 2300,
+      "sha256": "8399f342de75eb5abb6c88efc2006eba71f16acac60320492399165348536f54"
+    },
+    {
+      "path": "src/nature-library/rendering/capabilities.ts",
+      "size": 917,
+      "sha256": "aa377af62cc76909ba1cbd735d2c4a89938cdfc07f924581f35f180ef400d4dd"
+    },
+    {
+      "path": "src/nature-library/rendering/instancedRenderer.ts",
+      "size": 3329,
+      "sha256": "462b0abdb10b0db62757297bc64e42b77155deebd7b7d9852fce9f64b19b647e"
+    },
+    {
+      "path": "src/nature-library/rendering/mixedForest.ts",
+      "size": 5554,
+      "sha256": "84ea3480d24636033a4b36f308ef3b99dd2d26a2d830a30d71a6b136cab75f98"
+    },
+    {
+      "path": "src/nature-library/rendering/natureBatch.ts",
+      "size": 11084,
+      "sha256": "ea9b1dcb606006ac413fa18883094c8d84c2d42e69de339dd372a6664365ea05"
+    },
+    {
+      "path": "src/nature-library/rendering/visibility.ts",
+      "size": 1712,
+      "sha256": "a224dd1b25dd468eef11dc09ef75efce20fdfafb0747d00ccc409a3d59f8fcd2"
+    },
+    {
+      "path": "src/nature-library/rng.ts",
+      "size": 661,
+      "sha256": "f4f5c875d8a1c1f4462637f4eb5c5a74206b09c637949e3e4d527ae63cbbb405"
+    },
+    {
+      "path": "src/nature-library/rocks/index.ts",
+      "size": 1325,
+      "sha256": "a9412c04ab1584b9d82594425b38bb42c1d7dfc2006087207117ab63dfcc0ee0"
+    },
+    {
+      "path": "src/nature-library/rocks/productionRock.ts",
+      "size": 3226,
+      "sha256": "62f4960b8011027a022f8e408801cb7d4e00c4b4c660fe7b18e0f1da2097ee8f"
+    },
+    {
+      "path": "src/nature-library/rocks/rockMaterials.ts",
+      "size": 5148,
+      "sha256": "64ae6af30cba26923aa9388798405b6281a5952dffd29c231d109f8c991ec5cc"
+    },
+    {
+      "path": "src/pop-01/composition.ts",
+      "size": 715,
+      "sha256": "3924fd46882cb627dd241d2444a56a293ebe7d86ef11e2093b4275ed4fc3247b"
+    },
+    {
+      "path": "src/pop-01/contracts.ts",
+      "size": 2950,
+      "sha256": "87a9a88c6adb2cdb068a3691c56a9cf7cae42889f419434e50d0cb6b6ddc8fbb"
+    },
+    {
+      "path": "src/pop-01/ecology.ts",
+      "size": 2756,
+      "sha256": "0903acb730315eb5eebc105efde873c3e54cea18b5fc7c6f617561ecd08da845"
+    },
+    {
+      "path": "src/pop-01/generator.ts",
+      "size": 6534,
+      "sha256": "f5d042674202720f613e5865c36160ed9e8dd70966586b3abfd7107137425908"
+    },
+    {
+      "path": "src/pop-01/geography.ts",
+      "size": 4265,
+      "sha256": "f48e795289c6f54fb3810bfdb7fa1da762f4dd707de3dabe60b3a1265a94db2b"
+    },
+    {
+      "path": "src/pop-01/main.ts",
+      "size": 13101,
+      "sha256": "0833f5a7c92c1832e9e988899f76e974370b3c6862fd509e1e67bc9a9720d698"
+    },
+    {
+      "path": "src/pop-01/proxy-renderer.ts",
+      "size": 4336,
+      "sha256": "c208dcc41c092a2b01994b4b21fd8dd441fcceda619cbadac535d17faa289a88"
+    },
+    {
+      "path": "src/pop-01/spatial.ts",
+      "size": 1262,
+      "sha256": "6ff9ece0a2fa5b9486fd25178120b4b1cdb2c435e9e4e9f3781421cb37ecd43a"
+    },
+    {
+      "path": "src/pop-01/streaming.ts",
+      "size": 2135,
+      "sha256": "c31d652b5567baa002c8dab9db9989b49d7d383945b0cd52cf193b4c60c3a89d"
+    },
+    {
+      "path": "src/pop-01/style.css",
+      "size": 1601,
+      "sha256": "1535bfee6aba39563dcdb1cc61076e24dc5e70123dae100664c59b1c4dd76bc2"
+    },
+    {
+      "path": "src/pop-02a/cameras.ts",
+      "size": 2798,
+      "sha256": "35105d50469628a4a72167623448082957146d242f1f3890bdd290cdf6e0ba77"
+    },
+    {
+      "path": "src/pop-02a/fidelity.ts",
+      "size": 3625,
+      "sha256": "5d8d9f77c8923c228dd2049abf74b4ca938b1a892fdf63d232c932befc117585"
+    },
+    {
+      "path": "src/pop-02a/main.ts",
+      "size": 15331,
+      "sha256": "6a73826fe425bdb173b04cc9109287b2b09332a3a3a670b9733f00bd534ed626"
+    },
+    {
+      "path": "src/pop-02a/page-store.ts",
+      "size": 3160,
+      "sha256": "82cbf7e771d82ff9eba1dc83e10d3e31f135df71c5211fbea7896cbf4feb9cc4"
+    },
+    {
+      "path": "src/pop-02a/population-worker.ts",
+      "size": 902,
+      "sha256": "ef797276b266306472f89ef182c6bfe5e641d88d2da96370d35245671e3e2012"
+    },
+    {
+      "path": "src/pop-02a/renderer.ts",
+      "size": 3783,
+      "sha256": "c0d50f30ad8d071a5b67550d4d3cf63390ce1a46d3c1d8652a20f4c2e6bf98fb"
+    },
+    {
+      "path": "src/pop-02a/source-page.ts",
+      "size": 7581,
+      "sha256": "c134b51341d5ff3b364e4d0cecf1182f2eeb1210d75879ed7fbc8c0f3a3e6766"
+    },
+    {
+      "path": "src/pop-02a/style.css",
+      "size": 1503,
+      "sha256": "0007c053a964485c4e90b4b63569ccad3709201029b8ed59ae79d82468832fd1"
+    },
+    {
+      "path": "src/pop-02a/worker-stream.ts",
+      "size": 2894,
+      "sha256": "3ab3b1d27249f94ecdb5e4d96f7c46d851b54294be6ae238207cbf4a5716a02b"
+    },
+    {
+      "path": "src/render/landmarks.ts",
+      "size": 4705,
+      "sha256": "2437eefa66f07dcb82b202943d5bb2dff7760b0f419ff04042b90e45e4382cf1"
+    },
+    {
+      "path": "src/render/terrain.ts",
+      "size": 6056,
+      "sha256": "54f4209d8ae25d785d0e453de672bdcc9eabd0cde3bfe542d2fe0ee0aa469ad5"
+    },
+    {
+      "path": "src/render/trails.ts",
+      "size": 1819,
+      "sha256": "ab0d90a463599859b810e2c1a48bfb344c067059778d2b64ee6cc71ea2102279"
+    },
+    {
+      "path": "src/render/water.ts",
+      "size": 2009,
+      "sha256": "6d1705d33771904d2811da9dcabdc23580012ad26c94ca4d266b779f93ad1353"
+    },
+    {
+      "path": "src/style.css",
+      "size": 1673,
+      "sha256": "41e8358d932af7a33159c92d291259be8abc1c3ff1aed10c764a43cdde168976"
+    },
+    {
+      "path": "src/terrain-material/classify.ts",
+      "size": 10453,
+      "sha256": "2d638adaac71f6583939cf7f485505451a0e5044adb8e0b9e6baef80cc71a502"
+    },
+    {
+      "path": "src/terrain-material/fields.ts",
+      "size": 4160,
+      "sha256": "331e90a7e6ea52ab797613ac704f6a650a16437aa2581664c60dd67ff126c0ac"
+    },
+    {
+      "path": "src/terrain-material/materials.ts",
+      "size": 3891,
+      "sha256": "41ba8468c976945356cc0b7e1f6fb7144f817151fdb77d95b7ac38f23f7b68e3"
+    },
+    {
+      "path": "src/terrain-material/noise.ts",
+      "size": 2573,
+      "sha256": "66bc3421d0e7dcaf3962451ff6fb42dddcd5bd01951e19f570f77573a25c0a78"
+    },
+    {
+      "path": "src/terrain-material/query.ts",
+      "size": 2943,
+      "sha256": "cb32349c7bc3977291a98c72d78c5d4fc5ee301ac4e69477e5427415477694ba"
+    },
+    {
+      "path": "src/terrain-material/render/shader.ts",
+      "size": 8600,
+      "sha256": "fca05f77f2d597937affb51689257fa28dd426b774fa97c6c8c981608213268b"
+    },
+    {
+      "path": "src/terrain-material/render/terrain-material.ts",
+      "size": 7917,
+      "sha256": "3ba042ff9447cc2f5b77e9777dd53d79436cac3dbbf0d704e3757e5c0a62c383"
+    },
+    {
+      "path": "src/terrain-material/render/terrain-tiles.ts",
+      "size": 4451,
+      "sha256": "77ec0390d250d9e66df6fc7d464df189b4c9014817815946bbb12871842eb9db"
+    },
+    {
+      "path": "src/terrain-material/rules.ts",
+      "size": 3119,
+      "sha256": "449b7e0b0933523af4b7348db1c3c54129837c8f2dffa2952485fd9018c21f7f"
+    },
+    {
+      "path": "src/terrain-material/sources/geo-r02b.ts",
+      "size": 1344,
+      "sha256": "c4be8e07954f11ebfd55f13a8f6d4df68319c4c2e072573ffd378f884875b3cc"
+    },
+    {
+      "path": "src/terrain-material/textures.ts",
+      "size": 11196,
+      "sha256": "998cb2be98aad7abec7f01bad27b246310af414bde6b24fabdc5a457415ef466"
+    },
+    {
+      "path": "src/terrain-material/types.ts",
+      "size": 2697,
+      "sha256": "627b9599d535a886a44b272ac1f5acafb6755aa77b69a28a71821a4f273dc9c9"
+    },
+    {
+      "path": "src/world/config.ts",
+      "size": 2287,
+      "sha256": "64d721ec616a9ec091ff53148369e3ee583c8bc4b6911368dd818cd76eb18c5d"
+    },
+    {
+      "path": "src/world/geography.ts",
+      "size": 9249,
+      "sha256": "a94697fcfc57011a6d4bf39c09b5163f9be7d335afda21ce9793e93a42dfb899"
+    },
+    {
+      "path": "src/world/layout.ts",
+      "size": 1859,
+      "sha256": "51dfb0cd8cb91091c4b6e14cdb9e5f5496dabd2aceeca86557886c63bfe706b7"
+    },
+    {
+      "path": "src/world/routes.ts",
+      "size": 5787,
+      "sha256": "baccbb191f63e5411a090d0a304b4ea86787a84cd8527cad531a47541b4af084"
+    },
+    {
+      "path": "src/world/surface.ts",
+      "size": 2314,
+      "sha256": "dde00186e4a294841123718413efb3870d0819431bf29517a1439711d4b24de1"
+    },
+    {
+      "path": "tests/env-p01.test.ts",
+      "size": 2806,
+      "sha256": "a068c34e4c9df53a94f1f0bfc4373741eac3fdd79a8c8cd48610035654cf297c"
+    },
+    {
+      "path": "tests/geo-r02b-r1.test.ts",
+      "size": 2155,
+      "sha256": "be2f7fdddef987fdf89ca07be21d37f63d089a153969bbf69740938ab0498483"
+    },
+    {
+      "path": "tests/geo-r02b.test.ts",
+      "size": 1507,
+      "sha256": "705d34b5d7197f656ed51d4696f7dcde2f603879a5765dff1d40761829abb6e3"
+    },
+    {
+      "path": "tests/geo-r02c-p0.test.ts",
+      "size": 5523,
+      "sha256": "d040032196ff65fa9af8514a9dbf6801a33bbf88f687dc79995422dc3080ea98"
+    },
+    {
+      "path": "tests/mat-01.test.ts",
+      "size": 10838,
+      "sha256": "9939e5d0c9c9b416bbc8b85f3535cbd4c7fc6dfbfa928920422264b28cef8ac5"
+    },
+    {
+      "path": "tests/pop-01.test.ts",
+      "size": 8135,
+      "sha256": "f92b17f85db7d1636450f0640065432ee7e32cd1f0aeb8f82c1ba8dafd899a8b"
+    },
+    {
+      "path": "tests/pop-02a-assets.test.ts",
+      "size": 8427,
+      "sha256": "31e2da0c38233ff43ba3b00251754b176b141d288467b2cef3912df14d4aaa55"
+    },
+    {
+      "path": "tests/pop-02a-lifecycle.test.ts",
+      "size": 4065,
+      "sha256": "6e3b92c4dc795504b736af01cf845fe2f038d1793f340cf0ac11084f2ebae3c7"
+    },
+    {
+      "path": "tests/runtime.test.ts",
+      "size": 4775,
+      "sha256": "ff75f305c4bf9ef1ff4f86dba15c4afb6ef20a572d9b71fed67536b0227c8deb"
+    },
+    {
+      "path": "tests/world.test.ts",
+      "size": 2813,
+      "sha256": "369537430aec253d699df38729a3952082ae77d7c1bdddbc4243a22e3e11331e"
+    },
+    {
+      "path": "tools/capture-world.mjs",
+      "size": 4804,
+      "sha256": "a06bf2b35d85cd9d2c7ea3a9db1dd66db4cb1dd711c0eea4a47d8d8918ec4f82"
+    },
+    {
+      "path": "tools/check-browser.mjs",
+      "size": 6330,
+      "sha256": "1aca0ee89f5e2fac482157dab4e3053dc4476ba9613e6b7c9e44cf93d2ed0968"
+    },
+    {
+      "path": "tools/draw-blueprint.mjs",
+      "size": 5047,
+      "sha256": "022b6d98376969d6bf7df8e6b1eb5cea0a6e9c9b3edafdd9deee890991307ac1"
+    },
+    {
+      "path": "tools/env-p01/addendum.py",
+      "size": 3617,
+      "sha256": "78f813171d6da25326adde1929bad3c852fac8b34bbabccfd22a17afc2bf6c73"
+    },
+    {
+      "path": "tools/env-p01/capture.mjs",
+      "size": 7603,
+      "sha256": "586b836893abc17c540bdb8142d7cef69c3bd3f3a3992f51d27b32f870c8fca1"
+    },
+    {
+      "path": "tools/env-p01/finalize.py",
+      "size": 6894,
+      "sha256": "e2a32c236e8c39a4dffa4409aadcfce394d163ad4fb70bea0b123b683f72902c"
+    },
+    {
+      "path": "tools/env-p01/reentry.mjs",
+      "size": 2773,
+      "sha256": "bb79f481c12a3f25d404e3099f27c10437a5c3c9080084d7d2edb627fd89243d"
+    },
+    {
+      "path": "tools/env-p01/report.py",
+      "size": 7514,
+      "sha256": "b02fafa1814109867e31c4e8a0295e24e2f6a59a3a63d054efbac430221d2378"
+    },
+    {
+      "path": "tools/env-p01/smoke.mjs",
+      "size": 1153,
+      "sha256": "6c8c548192ab5e65d0d1825cc472c0eabfcba21328a70cdad1ea6427a42f0bed"
+    },
+    {
+      "path": "tools/env-p01/supplement.mjs",
+      "size": 6533,
+      "sha256": "bbe81dc6b5c31e4f4f7df4156cf0d06663d66c34687d7e78bc3e276d159ad0ad"
+    },
+    {
+      "path": "tools/geo-r02b/capture.mjs",
+      "size": 5335,
+      "sha256": "712f28cc1f4f900f8aae0bc796df0a8e8aaad4a93b4bdfb5bcaab87792ce301e"
+    },
+    {
+      "path": "tools/geo-r02b/generate.py",
+      "size": 15917,
+      "sha256": "9814fb498f5b1cc9ea27c35858c3ec9ff7c7db90a7642e0d45223a6bab40b788"
+    },
+    {
+      "path": "tools/geo-r02b/preflight.py",
+      "size": 5364,
+      "sha256": "dbed6b3f17b460b1ffe7c898cf8a864d32985598266c53bc23491f90cc4aea54"
+    },
+    {
+      "path": "tools/geo-r02b/report.py",
+      "size": 26080,
+      "sha256": "48b6780a2119213f78599a02aa1144d26fa2b92d438cd284e01d773d2510a6f6"
+    },
+    {
+      "path": "tools/geo-r02b/requirements.txt",
+      "size": 42,
+      "sha256": "5d487ebfe75ad078a730312016bd9a8c77793a2721523b00bd7ccde75863cbd3"
+    },
+    {
+      "path": "tools/geo-r02b/validate.py",
+      "size": 12791,
+      "sha256": "59cffb291b49a0ab783ecf0b78bae648854fe77b84a2b603e473e6b2d55b23f7"
+    },
+    {
+      "path": "tools/geo-r02b-r1/.gitignore",
+      "size": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "tools/geo-r02b-r1/baseline-diagnostics.py",
+      "size": 5372,
+      "sha256": "bf23cda94026a65ea613be8c6a54175b663598d77ca975f466e2e0f525bffed9"
+    },
+    {
+      "path": "tools/geo-r02b-r1/capture.mjs",
+      "size": 6775,
+      "sha256": "4f23a195b3fbf13c75fce2ce8d311e41057f968a667ed2ad5bf9afd6881cdf26"
+    },
+    {
+      "path": "tools/geo-r02b-r1/generate.py",
+      "size": 12568,
+      "sha256": "61d2f8ab591bdb222da6b5fe3ecc0332dbb5a4586d156306a5f99c0675b8d25a"
+    },
+    {
+      "path": "tools/geo-r02b-r1/geometry.py",
+      "size": 1965,
+      "sha256": "843e9dcc8dc72abb0693d812a29b76c82225678d1ba796b313240b23d30e6fbb"
+    },
+    {
+      "path": "tools/geo-r02b-r1/integrity.py",
+      "size": 8926,
+      "sha256": "02a821d60b2bb148e49feee344e6cd4705bff98ef64003d3f533281d641a0d2c"
+    },
+    {
+      "path": "tools/geo-r02b-r1/report.py",
+      "size": 24947,
+      "sha256": "9b5e61fe35b648899078bf93ba610d8a26fc09c2e999d64ebcd1377e7ebb9a9c"
+    },
+    {
+      "path": "tools/geo-r02b-r1/review-check.mjs",
+      "size": 1692,
+      "sha256": "bc5322be86b1d445acdd31c107f0f7a27b9bed0eff9425efe0266c9728aae724"
+    },
+    {
+      "path": "tools/geo-r02b-r1/routes.py",
+      "size": 9048,
+      "sha256": "d750c6be12d656d5f80a001282d302e978c9c809fc502e9a3cdb90e97b80f7bf"
+    },
+    {
+      "path": "tools/geo-r02b-r1/validate.py",
+      "size": 12290,
+      "sha256": "5468020d120880249c7d8c2e62dc27dff71f43ee4138020e9e8b0cae67ef4068"
+    },
+    {
+      "path": "tools/geo-r02b-r1/water-integrity.py",
+      "size": 4376,
+      "sha256": "5a8a8342510e8b5d9f496c601c18cb10303d8104d82b1fdd3775804d80d909de"
+    },
+    {
+      "path": "tools/geo-r02b-r1/water.py",
+      "size": 4237,
+      "sha256": "7447988115aad31addf829ab75037a7f0cdd453492e5dc28b2f8d92b60caf57e"
+    },
+    {
+      "path": "tools/geo-r02c/.gitignore",
+      "size": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "tools/geo-r02c/baseline.py",
+      "size": 9585,
+      "sha256": "62f14904f369bd2853bb1168b6c65dd8450eb44816c3b99491587b556bd7226f"
+    },
+    {
+      "path": "tools/geo-r02c/cameras.json",
+      "size": 5368,
+      "sha256": "ab0390eda30be0dbe939469fcf0f972e63e76a095488f533352bfc763db1f9ed"
+    },
+    {
+      "path": "tools/geo-r02c/cameras_build.py",
+      "size": 4795,
+      "sha256": "14613c4f72c61a538a12cf8a2e92e781b33829843ae2eb6b0aec6690aff456b3"
+    },
+    {
+      "path": "tools/geo-r02c/capture.mjs",
+      "size": 4415,
+      "sha256": "ac15af11f2f00ec7a5e81747d7f4fbc452648fe0d54974d58cdced519b0259c8"
+    },
+    {
+      "path": "tools/geo-r02c/compare_default.py",
+      "size": 3206,
+      "sha256": "a7e08f933cde11a9600e484acadd1d22ffd38d63a283c21980070787e9f349a7"
+    },
+    {
+      "path": "tools/geo-r02c/env/fingerprint.py",
+      "size": 1191,
+      "sha256": "212d8c6d63fd48e344aa170705174af9c8478cd6ce976f6ca82be41698d16cd4"
+    },
+    {
+      "path": "tools/geo-r02c/env/requirements.lock.txt",
+      "size": 628,
+      "sha256": "a39d63e28ddb20a1608896d0441806086132bd5501046c6c2e22fc77c22850c6"
+    },
+    {
+      "path": "tools/geo-r02c/invariance.py",
+      "size": 4826,
+      "sha256": "4028e769f2f3add5b324f831b819f3b5761dc790ac2ca2def44638d18828db91"
+    },
+    {
+      "path": "tools/geo-r02c/lib/common.py",
+      "size": 3563,
+      "sha256": "23fa0406a82a78eed2c24202959c0172a545767b5f5f7ae3cc7e376ad040d476"
+    },
+    {
+      "path": "tools/geo-r02c/lib/form.py",
+      "size": 3513,
+      "sha256": "7dcf258a2cf664b4fc97da51f788c337297bc483e640f3f4033e2a33b3302935"
+    },
+    {
+      "path": "tools/geo-r02c/lib/hydro.py",
+      "size": 3754,
+      "sha256": "161b7f9272030bd0a10910c84bc1fa36c4c5f53fa73021762643ad8c1dc11756"
+    },
+    {
+      "path": "tools/geo-r02c/lib/los.py",
+      "size": 2512,
+      "sha256": "b13038be63be081a627024681c9a170bb04136b71e6dbc953e131e557875addf"
+    },
+    {
+      "path": "tools/geo-r02c/lib/routes.py",
+      "size": 2928,
+      "sha256": "c0d41e8c14b81797e1a22e174927295a861f49097557dedf317d6e9d1da25eed"
+    },
+    {
+      "path": "tools/geo-r02c/masks/A1-window-v1.json",
+      "size": 989,
+      "sha256": "23e65a9ee2d2e7af2f0f6ddbe9d01942ec4eddb1dde617e86d73ab01bce5e4c1"
+    },
+    {
+      "path": "tools/geo-r02c/repro/convergence.py",
+      "size": 7710,
+      "sha256": "6f2414dab0e33ac740e4e6dcbbff3b70fa76abcaf59e218eb2966a7417688367"
+    },
+    {
+      "path": "tools/geo-r02c/repro/platform_diff.py",
+      "size": 7666,
+      "sha256": "1542ea8abd773636933a46074727aeb4d36046f588e706b0797c631d05911c61"
+    },
+    {
+      "path": "tools/geo-r02c/repro/platform_probe.py",
+      "size": 2579,
+      "sha256": "359592119636e450d915bec5a2c2bbe9228487268a62bbdc66430befbb75d62c"
+    },
+    {
+      "path": "tools/geo-r02c/repro/r1_stages.py",
+      "size": 6078,
+      "sha256": "c0916cb27ba8db45984b446f7f9c8f715fdad0c53d4e623aaf6e073e37044942"
+    },
+    {
+      "path": "tools/geo-r02c/review_page.py",
+      "size": 3740,
+      "sha256": "dba3739d7101cf9e5e70c15804f69728b2f9686fd2f38fcb8e97345aa242e0fa"
+    },
+    {
+      "path": "tools/geo-r02c/transects.json",
+      "size": 1674,
+      "sha256": "34a63c2c3b5ff4beda265771c696e5b53c8449998264266f8153ae350d1a8a6e"
+    },
+    {
+      "path": "tools/pop-01/benchmark.ts",
+      "size": 2464,
+      "sha256": "8d9f056812d2fbee464ea63022fae8125e32a10d5487ce6eb55f65b76f2d1346"
+    },
+    {
+      "path": "tools/pop-01/capture.mjs",
+      "size": 7171,
+      "sha256": "e6db89d7de870ec849ef49b838616da2f618f681c2cbce04a7beea9fe2e16c67"
+    },
+    {
+      "path": "tools/pop-01/handoff.mjs",
+      "size": 1350,
+      "sha256": "076a634f18d8792c50f0bcede3139cb603a72ba6a0b3e9839efab1f492975ec1"
+    },
+    {
+      "path": "tools/pop-02a/capture.mjs",
+      "size": 9071,
+      "sha256": "42835d93435eea0750714f6ed24796adbb626d9b88166574fc29ab3187792733"
+    },
+    {
+      "path": "tools/pop-02a/extract.py",
+      "size": 2213,
+      "sha256": "8ddcbef277729ad146ec649a1409175541cdd74667dcd3c29118b4f5aa8d04d4"
+    },
+    {
+      "path": "tools/pop-02a/fidelity.mjs",
+      "size": 2960,
+      "sha256": "c7593a4d5196edde162e8d071356fb988d17476386cc9dba031a6bbde2d7f099"
+    },
+    {
+      "path": "tools/pop-02a/final-validation.mjs",
+      "size": 3109,
+      "sha256": "6214c760285fcd3358eb207cc336bcd3bfb280d9a7b781ec9013a90d573a4d5c"
+    },
+    {
+      "path": "tools/pop-02a/geometry-baseline.ts",
+      "size": 1675,
+      "sha256": "8d3beee8f0357458dbeeab1de6c077b8ae1409e7641d17d27391536012c995a0"
+    },
+    {
+      "path": "tools/pop-02a/handoff.mjs",
+      "size": 1780,
+      "sha256": "017b796f0edecdbea43de304a3652699fc1bf566f5adf8f6f2dd2e167649f8ea"
+    },
+    {
+      "path": "tools/pop-02a/media.py",
+      "size": 1807,
+      "sha256": "6bee45fdb0802b795a910ef1d8f09d1cecb914ddc2461b2a9901b3834398bf52"
+    },
+    {
+      "path": "tools/pop-02a/review.py",
+      "size": 19704,
+      "sha256": "f208fa09b8753234258f2c09551658511bb2615c0979923b10688e6370526988"
+    },
+    {
+      "path": "tools/pop-02a/smoke.mjs",
+      "size": 1580,
+      "sha256": "6e981f2561884705741dfbe9bcd910a4edf68ac9da51b7e39dc0b082a1b36a16"
+    },
+    {
+      "path": "tools/pop-02a/supplement.mjs",
+      "size": 3480,
+      "sha256": "8015f0f4315ce735a1182f65db3d603030078d5c45abc8050c1ab9cd64c8f666"
+    },
+    {
+      "path": "tools/profile-routes.ts",
+      "size": 1281,
+      "sha256": "2119ba828314d3dcb5c153eca0a46913f9bc68f0f86955076629d530170c1155"
+    },
+    {
+      "path": "tools/profile-terrain.ts",
+      "size": 1035,
+      "sha256": "6fa344ed7b06b9d77dc09ab0c441141fc52017e4e51ecf5c210aa08b4e7d08f6"
+    },
+    {
+      "path": "tools/render_diagnostic.py",
+      "size": 4303,
+      "sha256": "6f4c113154bc6d3fca5bfc67f94c9650c971f04893dd08b4f2dc077355125ea5"
+    },
+    {
+      "path": "tools/route-trails.ts",
+      "size": 4489,
+      "sha256": "919c0fd90074c947ae455645b44c360b7dd83c51e956e2a8820a761391136f71"
+    },
+    {
+      "path": "tools/sample-terrain.mjs",
+      "size": 670,
+      "sha256": "7ac7bbcb7176bf32b098478b012b9cd6530e7f7154be9e29a19bcdff4c169ab9"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 234,
+      "sha256": "bd9a86c6b56b7a4893dd432bdfbc8a05ba547f7471188c5df2633c32e323b4c3"
+    },
+    {
+      "path": "vite.config.ts",
+      "size": 310,
+      "sha256": "77c5bbaae2abb4ed32cfc63f9f097721929a4c8602f616f03cfc9b87e07fc8ef"
+    }
+  ]
+}

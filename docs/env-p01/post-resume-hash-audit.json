@@ -1,0 +1,1451 @@
+{
+  "allPassed": true,
+  "checks": [
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": ".github/copilot-instructions.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": ".github/workflows/checks.yml",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "AGENTS.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/PROJECT_INSTRUCTIONS.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/QA_NOTES.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/README.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/REMAINING_ISSUES.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/ROOT_CAUSES.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/acceptance.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/baseline-failure-locations.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/baseline-features.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/before-sections.csv",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/checkpoint-manifest.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/depression-sections.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/depression-sections.svg",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/cairn-saddle.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/capture-progress.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/central-valley.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-depressions.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-drainage.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-failures.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-height.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-overlays.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-slope.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/diagnostic-water.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/hidden-fold.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/high-tarn.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/home-cove.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/island-oblique.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/mirelands.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/overview.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/qa-initial-timeout.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/evidence/runtime.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/generation.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/hiking-profiles.csv",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/integrity.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/preflight.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/review-layout.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/review-qa.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/review.html",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/root-measurements.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/route-candidates.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/route-profiles-full.csv",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/route-profiles.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/route-profiles.svg",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/source-integrity-addendum.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/stage-depressions.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/terrain-validation.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/verification-results.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/water-integrity.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b-r1/water-mesh-validation.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/README.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/acceptance.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/checkpoint-manifest.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/design-master-A-R1-v1.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/diagnostics.svg",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/cairn-saddle.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/central-valley.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/diagnostic-overlays.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/hidden-fold.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/high-tarn.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/home-cove.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/island-oblique.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/mirelands.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/overview.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/evidence/runtime.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/generation.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/geometry-check-A-R1.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/hiking-profiles.csv",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/reference-a-r1-hydrology.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/reference-a-r1.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/review.html",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/source-preflight.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/source-reference-manifest.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/terrain-validation.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02b/verification-results.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/README.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/baseline-manifest.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/crease-residual.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/form.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/hillshade-sunA.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/hillshade-sunB.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/hydrology.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/reveals.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/routes.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/sinks.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/slope-classes.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/timing.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/baseline/transects.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/capture-manifest.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-below-100.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-below-400.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-col-north.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-col-west.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cairn-saddle.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/central-valley.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-before.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-full.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/cv-partial.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-from-hero.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-gorge-upstream.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-lake-shore.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/fold-rim-entry.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/hidden-fold.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/high-tarn.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/home-cove.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/island-oblique.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/mirelands.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-birchwood.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-cairn-col.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-tarn-overlook.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/np-from-valley-shoulder.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayA/overview.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-below-100.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-below-400.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-col-north.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-col-west.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cairn-saddle.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/central-valley.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-before.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-full.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/cv-partial.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-from-hero.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-gorge-upstream.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-lake-shore.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/fold-rim-entry.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/hidden-fold.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/high-tarn.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/home-cove.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/island-oblique.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/mirelands.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-birchwood.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-cairn-col.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-tarn-overlook.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/np-from-valley-shoulder.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/clayB/overview.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/default-viewer-identity.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-below-100.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-below-400.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-col-north.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-col-west.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cairn-saddle.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/central-valley.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cv-before.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cv-full.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/cv-partial.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/fold-from-hero.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/fold-gorge-upstream.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/fold-lake-shore.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/fold-rim-entry.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/hidden-fold.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/high-tarn.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/home-cove.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/island-oblique.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/mirelands.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-birchwood.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-cairn-col.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-tarn-overlook.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/np-from-valley-shoulder.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/captures/standard/overview.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence/convergence.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence/diff-M0c-minus-R1.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence/diff-M0w-minus-R1.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence/hillshade-M0c.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/convergence/hillshade-R1.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/invariance/r1-vs-linux-regeneration.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/reproducibility.md",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/reproducibility/canonical-minus-linux.png",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/reproducibility/platform-diff.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/reproducibility/probe-linux-x86_64.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "docs/geo-r02c-p0/review.html",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "geo-r02b.html",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "index.html",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "package-lock.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "package.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "public/geo-r02b/diagnostics.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "public/geo-r02b/features.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "public/geo-r02b/terrain.f32",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "public/geo-r02b/water-mesh.f32",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "public/geo-r02b/water-surface.f32",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/geo-r02b/main.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/geo-r02b/review-options.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/geo-r02b/review.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/geo-r02b/style.css",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/geo-r02b/terrain.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/main.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/render/landmarks.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/render/terrain.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/render/trails.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/render/water.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/style.css",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/world/config.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/world/geography.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/world/layout.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/world/routes.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "src/world/surface.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tests/geo-r02b-r1.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tests/geo-r02b.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tests/geo-r02c-p0.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tests/runtime.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tests/world.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/capture-world.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/check-browser.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/.gitignore",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/baseline-diagnostics.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/capture.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/generate.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/geometry.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/integrity.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/report.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/review-check.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/routes.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/validate.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/water-integrity.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b-r1/water.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/capture.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/generate.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/preflight.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/report.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/requirements.txt",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02b/validate.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/.gitignore",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/baseline.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/cameras.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/cameras_build.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/capture.mjs",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/compare_default.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/env/fingerprint.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/env/requirements.lock.txt",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/invariance.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/lib/common.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/lib/form.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/lib/hydro.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/lib/los.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/lib/routes.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/masks/A1-window-v1.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/repro/convergence.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/repro/platform_diff.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/repro/platform_probe.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/repro/r1_stages.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/review_page.py",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tools/geo-r02c/transects.json",
+      "passed": true
+    },
+    {
+      "kind": "protected-geography-and-viewer",
+      "path": "tsconfig.json",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/mat-01/cameras.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/mat-01/main.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/mat-01/style.css",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/mat-01/worker.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/classify.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/fields.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/materials.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/noise.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/query.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/render/shader.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/render/terrain-material.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/render/terrain-tiles.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/rules.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/sources/geo-r02b.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/textures.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "src/terrain-material/types.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "tests/mat-01.test.ts",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "docs/mat-01/protected-baseline.json",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "docs/mat-01/INTEGRATION.md",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "docs/mat-01/ADR-001-terrain-material-architecture.md",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "docs/mat-01/README.md",
+      "passed": true
+    },
+    {
+      "kind": "MAT-import",
+      "path": "mat-01.html",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/index.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/geometry.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rng.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/foliage.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/materials.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/lod.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/pine/index.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/pine/geometry.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/pine/materials.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/grass/index.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/grass/geometry.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/grass/materials.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/mixedForest.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/natureBatch.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/capabilities.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/visibility.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/instancedRenderer.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rendering/batchedRenderer.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/grass/rendering/grassBatch.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/grass/rendering/grassFade.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rocks/index.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rocks/productionRock.ts",
+      "passed": true
+    },
+    {
+      "kind": "source-asset-library",
+      "path": "src/nature-library/rocks/rockMaterials.ts",
+      "passed": true
+    }
+  ],
+  "limitation": "Exact POP Git commit comparison remains blocked; these are surviving pinned manifests, not replacement ancestry."
+}

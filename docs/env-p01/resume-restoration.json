@@ -1,0 +1,8 @@
+{
+  "reason": "Environment resume lost common Git directory and one terrain file was truncated; restore canonical bytes only.",
+  "files": [
+    "public/geo-r02b/terrain.f32"
+  ],
+  "source": "ae8a9c17781cdaa85c9e55696697c6213a860ef6",
+  "verifiedAgainst": "docs/mat-01/protected-baseline.json"
+}

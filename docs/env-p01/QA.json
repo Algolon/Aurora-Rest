@@ -1,0 +1,98 @@
+{
+  "implementationCommit": "73fcfa7d237092f335c86f8afa024ee7ae1ddb49",
+  "automated": {
+    "tests": 74,
+    "passed": 74,
+    "build": "pass"
+  },
+  "browserChecks": [
+    {
+      "name": "forest-landscape material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "44e0f7a1fd3231cbbee15b4dacb1abeb87e1c5533feadd61b799865d5e788f01",
+      "geometryHash": "ffd60af21097d1a1712a05ac3b9ec6fde519ae430e5117d5a1f7be4610c2fa71"
+    },
+    {
+      "name": "forest-interior material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "44e0f7a1fd3231cbbee15b4dacb1abeb87e1c5533feadd61b799865d5e788f01",
+      "geometryHash": "ace96e99d067e0d210efaa331ac929224bda0298bff04f5c1237f5bb79acea55"
+    },
+    {
+      "name": "forest-edge material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "650f4bce35528b00eb1360791f00eaac97031f3cc18f8d7dd81c8a17e37faee2",
+      "geometryHash": "7302c20d1c5467645f26797990e740c3dbbd2be72e132f75896c8e74de6b04a4"
+    },
+    {
+      "name": "forest-close-birch material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "e79c3476280ae266b9926c2feb48a041af6f61552b2bd3c8fd6cb5b46b7ea37c",
+      "geometryHash": "8b3324576aec32191625e7b62ed0083d0902f0956adbd2668bceb49fd6669f0a"
+    },
+    {
+      "name": "forest-close-grass material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "e79c3476280ae266b9926c2feb48a041af6f61552b2bd3c8fd6cb5b46b7ea37c",
+      "geometryHash": "6873d319765b060551cf20c36988ab1b104a4d6374b9efb2c7b5d8b686148fc4"
+    },
+    {
+      "name": "forest-corridor material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "8defa68cc73661f6ee573e371bb037b955bb94382296b3b7f12d36848d19c298",
+      "geometryHash": "d2a3ebe32364f9e72ccf03ff835f75c62b240e8928a6a1b3c34df7efff7c8588"
+    },
+    {
+      "name": "valley-landscape material toggle preserves full descriptors and mesh buffers",
+      "passed": true,
+      "placementHash": "0710bca25a71979eef33b0e8cbdcc27a2981ef55895771d42c702966e511e345",
+      "geometryHash": "de1a9be662aed3a7ef190666ca0a4904fb5a4672799b37a53abe10a1bf2b3509"
+    },
+    {
+      "name": "profile dispose/recreate has stable high-profile GPU counters and full placements",
+      "passed": true
+    },
+    {
+      "name": "all required views and profiles compile without browser/GLSL errors",
+      "passed": true
+    },
+    {
+      "name": "full viewer teardown completes without exception",
+      "passed": true
+    },
+    {
+      "name": "independent original POP entry vs ENV entry: identical sorted full descriptors and original camera",
+      "passed": true,
+      "hash": "eba0072530be51b3ec26be6633e46eb4350c2f06f09353afbb460a81af55dc93"
+    },
+    {
+      "name": "matched source-shadow on/off captures preserve full descriptors on MAT receiver",
+      "passed": true
+    },
+    {
+      "name": "supplement cameras and all profile measurements preserve placements and have no errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "technicalIntegration": "pass in earlier tested scenarios; final source-history gate blocked after environment resume",
+  "visualReviewCandidate": "conditional: continuity improved, edge coherence and composition incomplete",
+  "artApproval": "pending owner review",
+  "passB": "no presentation adjustment retained",
+  "captureCount": 31,
+  "currentTests": {
+    "passed": 73,
+    "total": 74,
+    "failed": "POP exact-Git-source parity cannot access missing common Git directory"
+  },
+  "finalMilestoneStatus": "blocked on exact Git history recovery",
+  "postResumeHashChecks": {
+    "passed": 289,
+    "total": 289
+  },
+  "postResumeBrowser": {
+    "regionReentryCycles": 3,
+    "placementAndResourcesStable": true,
+    "errors": 0
+  }
+}

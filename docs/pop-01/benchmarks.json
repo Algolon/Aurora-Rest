@@ -1,0 +1,949 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCPUs": 9,
+    "renderer": "none; CPU placement benchmark",
+    "hardwareRisk": "No native Android or desktop GPU FPS measurements"
+  },
+  "queryInitMs": 152.990133,
+  "memory": {
+    "before": {
+      "rss": 92090368,
+      "heapTotal": 39038976,
+      "heapUsed": 23824936,
+      "external": 13410209,
+      "arrayBuffers": 160427
+    },
+    "afterQueryBuild": {
+      "rss": 151162880,
+      "heapTotal": 72314880,
+      "heapUsed": 43627152,
+      "external": 29450997,
+      "arrayBuffers": 16201175
+    },
+    "note": "Process memory snapshots include temporary mesh-edge indexing garbage; serialized descriptor lengths below are NOT heap allocations"
+  },
+  "scenarios": [
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 0.5,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 5840,
+      "counts": {
+        "birch": 685,
+        "pine": 349,
+        "grass": 4711,
+        "rock": 95
+      },
+      "rejected": {
+        "neighbor-owner": 628,
+        "density/patch/bounds": 38241,
+        "spacing": 250,
+        "provisional-tread": 22,
+        "shore-clearance": 31,
+        "inland-water": 202,
+        "slope": 12
+      },
+      "serializedBytes": 3630195,
+      "totalGenerationMs": 391.44961900000027,
+      "medianChunkMs": 5.475983999999983,
+      "maxChunkMs": 12.466790000000003
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 0.5,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 5840,
+      "counts": {
+        "birch": 685,
+        "pine": 349,
+        "grass": 4711,
+        "rock": 95
+      },
+      "rejected": {
+        "neighbor-owner": 302,
+        "density/patch/bounds": 36339,
+        "spacing": 250,
+        "provisional-tread": 22,
+        "shore-clearance": 31,
+        "inland-water": 202,
+        "slope": 12
+      },
+      "serializedBytes": 3624865,
+      "totalGenerationMs": 317.019312,
+      "medianChunkMs": 18.50255399999992,
+      "maxChunkMs": 34.19838000000004
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 0.5,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 5840,
+      "counts": {
+        "pine": 349,
+        "birch": 685,
+        "grass": 4711,
+        "rock": 95
+      },
+      "rejected": {
+        "neighbor-owner": 156,
+        "density/patch/bounds": 35504,
+        "spacing": 250,
+        "provisional-tread": 22,
+        "shore-clearance": 31,
+        "inland-water": 202,
+        "slope": 12
+      },
+      "serializedBytes": 3624853,
+      "totalGenerationMs": 316.95068900000047,
+      "medianChunkMs": 85.52215000000001,
+      "maxChunkMs": 102.23919300000011
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 1,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 11516,
+      "counts": {
+        "birch": 1215,
+        "pine": 579,
+        "grass": 9558,
+        "rock": 164
+      },
+      "rejected": {
+        "neighbor-owner": 1298,
+        "density/patch/bounds": 30978,
+        "spacing": 899,
+        "provisional-tread": 48,
+        "shore-clearance": 66,
+        "inland-water": 395,
+        "slope": 26
+      },
+      "serializedBytes": 7158919,
+      "totalGenerationMs": 369.03052200000025,
+      "medianChunkMs": 5.198875000000044,
+      "maxChunkMs": 10.503901999999925
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 1,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 11516,
+      "counts": {
+        "birch": 1215,
+        "pine": 579,
+        "grass": 9558,
+        "rock": 164
+      },
+      "rejected": {
+        "neighbor-owner": 616,
+        "density/patch/bounds": 29432,
+        "spacing": 899,
+        "provisional-tread": 48,
+        "shore-clearance": 66,
+        "inland-water": 395,
+        "slope": 26
+      },
+      "serializedBytes": 7148416,
+      "totalGenerationMs": 372.46546200000034,
+      "medianChunkMs": 22.85975600000006,
+      "maxChunkMs": 35.474211000000196
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 1,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 11516,
+      "counts": {
+        "pine": 579,
+        "birch": 1215,
+        "grass": 9558,
+        "rock": 164
+      },
+      "rejected": {
+        "neighbor-owner": 323,
+        "density/patch/bounds": 28744,
+        "spacing": 899,
+        "provisional-tread": 48,
+        "shore-clearance": 66,
+        "inland-water": 395,
+        "slope": 26
+      },
+      "serializedBytes": 7148404,
+      "totalGenerationMs": 346.5921449999996,
+      "medianChunkMs": 88.46242900000016,
+      "maxChunkMs": 112.13353099999995
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 2,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 21486,
+      "counts": {
+        "birch": 1673,
+        "pine": 775,
+        "grass": 18783,
+        "rock": 255
+      },
+      "rejected": {
+        "neighbor-owner": 2402,
+        "spacing": 2125,
+        "density/patch/bounds": 18173,
+        "provisional-tread": 117,
+        "slope": 38,
+        "shore-clearance": 104,
+        "inland-water": 781
+      },
+      "serializedBytes": 13358883,
+      "totalGenerationMs": 414.8015399999995,
+      "medianChunkMs": 6.000879000000168,
+      "maxChunkMs": 10.977628999999979
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 2,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 21486,
+      "counts": {
+        "birch": 1673,
+        "pine": 775,
+        "grass": 18783,
+        "rock": 255
+      },
+      "rejected": {
+        "neighbor-owner": 1165,
+        "spacing": 2125,
+        "density/patch/bounds": 17182,
+        "provisional-tread": 117,
+        "slope": 38,
+        "shore-clearance": 104,
+        "inland-water": 781
+      },
+      "serializedBytes": 13339389,
+      "totalGenerationMs": 408.4157100000007,
+      "medianChunkMs": 25.063478999999916,
+      "maxChunkMs": 41.25552700000026
+    },
+    {
+      "region": {
+        "id": "forest",
+        "name": "Birchwood Forest",
+        "x": -740,
+        "z": -50,
+        "elevation": 113.3523178100586,
+        "source": "features.json anchors.forest"
+      },
+      "density": 2,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 21486,
+      "counts": {
+        "pine": 775,
+        "birch": 1673,
+        "grass": 18783,
+        "rock": 255
+      },
+      "rejected": {
+        "neighbor-owner": 619,
+        "spacing": 2125,
+        "density/patch/bounds": 16747,
+        "provisional-tread": 117,
+        "shore-clearance": 104,
+        "slope": 38,
+        "inland-water": 781
+      },
+      "serializedBytes": 13339377,
+      "totalGenerationMs": 424.0537110000005,
+      "medianChunkMs": 108.83093500000041,
+      "maxChunkMs": 133.9868150000002
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 0.5,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 7986,
+      "counts": {
+        "birch": 89,
+        "grass": 7792,
+        "rock": 81,
+        "pine": 24
+      },
+      "rejected": {
+        "density/patch/bounds": 36576,
+        "neighbor-owner": 684,
+        "provisional-tread": 67,
+        "spacing": 46,
+        "slope": 14,
+        "inland-water": 36,
+        "shore-clearance": 7
+      },
+      "serializedBytes": 4859278,
+      "totalGenerationMs": 314.08487800000285,
+      "medianChunkMs": 4.4229620000005525,
+      "maxChunkMs": 18.99009100000012
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 0.5,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 7986,
+      "counts": {
+        "pine": 24,
+        "birch": 89,
+        "grass": 7792,
+        "rock": 81
+      },
+      "rejected": {
+        "density/patch/bounds": 34442,
+        "neighbor-owner": 274,
+        "provisional-tread": 67,
+        "spacing": 46,
+        "slope": 14,
+        "inland-water": 36,
+        "shore-clearance": 7
+      },
+      "serializedBytes": 4859230,
+      "totalGenerationMs": 296.26866500000324,
+      "medianChunkMs": 17.939462000000276,
+      "maxChunkMs": 26.0339469999999
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 0.5,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 7986,
+      "counts": {
+        "birch": 89,
+        "pine": 24,
+        "grass": 7792,
+        "rock": 81
+      },
+      "rejected": {
+        "density/patch/bounds": 33427,
+        "provisional-tread": 67,
+        "neighbor-owner": 53,
+        "spacing": 46,
+        "slope": 14,
+        "inland-water": 36,
+        "shore-clearance": 7
+      },
+      "serializedBytes": 4859218,
+      "totalGenerationMs": 291.5897780000005,
+      "medianChunkMs": 76.95614999999998,
+      "maxChunkMs": 82.3494099999998
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 1,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 15784,
+      "counts": {
+        "birch": 165,
+        "grass": 15425,
+        "rock": 145,
+        "pine": 49
+      },
+      "rejected": {
+        "density/patch/bounds": 27855,
+        "neighbor-owner": 1369,
+        "provisional-tread": 135,
+        "spacing": 161,
+        "slope": 29,
+        "inland-water": 69,
+        "shore-clearance": 14
+      },
+      "serializedBytes": 9604685,
+      "totalGenerationMs": 355.1075620000029,
+      "medianChunkMs": 5.3911559999996825,
+      "maxChunkMs": 10.109145000000353
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 1,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 15784,
+      "counts": {
+        "pine": 49,
+        "birch": 165,
+        "grass": 15425,
+        "rock": 145
+      },
+      "rejected": {
+        "density/patch/bounds": 26120,
+        "neighbor-owner": 560,
+        "provisional-tread": 135,
+        "spacing": 161,
+        "slope": 29,
+        "inland-water": 69,
+        "shore-clearance": 14
+      },
+      "serializedBytes": 9604637,
+      "totalGenerationMs": 333.5261359999995,
+      "medianChunkMs": 19.6692979999998,
+      "maxChunkMs": 37.97929000000022
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 1,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 15784,
+      "counts": {
+        "birch": 165,
+        "pine": 49,
+        "grass": 15425,
+        "rock": 145
+      },
+      "rejected": {
+        "density/patch/bounds": 25314,
+        "neighbor-owner": 130,
+        "provisional-tread": 135,
+        "spacing": 161,
+        "slope": 29,
+        "inland-water": 69,
+        "shore-clearance": 14
+      },
+      "serializedBytes": 9604625,
+      "totalGenerationMs": 310.8982529999994,
+      "medianChunkMs": 78.20153499999924,
+      "maxChunkMs": 94.89511599999969
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 2,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 26147,
+      "counts": {
+        "birch": 306,
+        "grass": 25461,
+        "rock": 294,
+        "pine": 86
+      },
+      "rejected": {
+        "neighbor-owner": 2258,
+        "density/patch/bounds": 16116,
+        "provisional-tread": 224,
+        "spacing": 489,
+        "slope": 68,
+        "inland-water": 95,
+        "shore-clearance": 19
+      },
+      "serializedBytes": 15912130,
+      "totalGenerationMs": 413.68096799999967,
+      "medianChunkMs": 6.242573999999877,
+      "maxChunkMs": 15.059363000000303
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 2,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 26147,
+      "counts": {
+        "pine": 86,
+        "birch": 306,
+        "grass": 25461,
+        "rock": 294
+      },
+      "rejected": {
+        "neighbor-owner": 937,
+        "density/patch/bounds": 14893,
+        "spacing": 489,
+        "provisional-tread": 224,
+        "slope": 68,
+        "shore-clearance": 19,
+        "inland-water": 95
+      },
+      "serializedBytes": 15912082,
+      "totalGenerationMs": 351.1737599999997,
+      "medianChunkMs": 23.05529100000058,
+      "maxChunkMs": 28.00069799999983
+    },
+    {
+      "region": {
+        "id": "valley",
+        "name": "Central Valley",
+        "x": 200,
+        "z": 10,
+        "elevation": 29.338871002197266,
+        "source": "features.json anchors.valley"
+      },
+      "density": 2,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 26147,
+      "counts": {
+        "birch": 306,
+        "pine": 86,
+        "grass": 25461,
+        "rock": 294
+      },
+      "rejected": {
+        "neighbor-owner": 248,
+        "density/patch/bounds": 14346,
+        "spacing": 489,
+        "provisional-tread": 224,
+        "slope": 68,
+        "shore-clearance": 19,
+        "inland-water": 95
+      },
+      "serializedBytes": 15912070,
+      "totalGenerationMs": 334.51596999999856,
+      "medianChunkMs": 90.4321489999993,
+      "maxChunkMs": 92.66193199999998
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 0.5,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 4426,
+      "counts": {
+        "grass": 4118,
+        "birch": 187,
+        "rock": 82,
+        "pine": 39
+      },
+      "rejected": {
+        "density/patch/bounds": 39306,
+        "inland-water": 7,
+        "neighbor-owner": 448,
+        "spacing": 43,
+        "shore-clearance": 1,
+        "ocean": 922,
+        "provisional-tread": 19
+      },
+      "serializedBytes": 2742681,
+      "totalGenerationMs": 430.5842900000016,
+      "medianChunkMs": 6.584190999999919,
+      "maxChunkMs": 15.112334999999803
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 0.5,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 4426,
+      "counts": {
+        "birch": 187,
+        "grass": 4118,
+        "rock": 82,
+        "pine": 39
+      },
+      "rejected": {
+        "density/patch/bounds": 37395,
+        "spacing": 43,
+        "neighbor-owner": 211,
+        "inland-water": 7,
+        "ocean": 922,
+        "shore-clearance": 1,
+        "provisional-tread": 19
+      },
+      "serializedBytes": 2742620,
+      "totalGenerationMs": 417.92654400000174,
+      "medianChunkMs": 27.668329999999514,
+      "maxChunkMs": 35.9458539999996
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 0.5,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 4426,
+      "counts": {
+        "birch": 187,
+        "pine": 39,
+        "grass": 4118,
+        "rock": 82
+      },
+      "rejected": {
+        "density/patch/bounds": 36350,
+        "neighbor-owner": 65,
+        "spacing": 43,
+        "ocean": 922,
+        "inland-water": 7,
+        "shore-clearance": 1,
+        "provisional-tread": 19
+      },
+      "serializedBytes": 2733754,
+      "totalGenerationMs": 422.2258920000004,
+      "medianChunkMs": 109.95041999999921,
+      "maxChunkMs": 120.95783800000027
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 1,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 8797,
+      "counts": {
+        "grass": 8202,
+        "birch": 366,
+        "rock": 159,
+        "pine": 70
+      },
+      "rejected": {
+        "density/patch/bounds": 33437,
+        "inland-water": 17,
+        "neighbor-owner": 884,
+        "spacing": 147,
+        "shore-clearance": 4,
+        "ocean": 1851,
+        "provisional-tread": 35
+      },
+      "serializedBytes": 5451744,
+      "totalGenerationMs": 462.0642749999952,
+      "medianChunkMs": 6.977305999998862,
+      "maxChunkMs": 12.166788000000452
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 1,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 8797,
+      "counts": {
+        "birch": 366,
+        "grass": 8202,
+        "rock": 159,
+        "pine": 70
+      },
+      "rejected": {
+        "density/patch/bounds": 31754,
+        "spacing": 147,
+        "neighbor-owner": 419,
+        "inland-water": 17,
+        "shore-clearance": 4,
+        "ocean": 1851,
+        "provisional-tread": 35
+      },
+      "serializedBytes": 5451683,
+      "totalGenerationMs": 489.15516099999513,
+      "medianChunkMs": 29.58864099999846,
+      "maxChunkMs": 46.15659700000106
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 1,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 8797,
+      "counts": {
+        "birch": 366,
+        "pine": 70,
+        "grass": 8202,
+        "rock": 159
+      },
+      "rejected": {
+        "density/patch/bounds": 30856,
+        "neighbor-owner": 126,
+        "spacing": 147,
+        "shore-clearance": 4,
+        "ocean": 1851,
+        "inland-water": 17,
+        "provisional-tread": 35
+      },
+      "serializedBytes": 5434075,
+      "totalGenerationMs": 462.357468000002,
+      "medianChunkMs": 117.33990900000026,
+      "maxChunkMs": 127.18063799999982
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 2,
+      "chunkSize": 64,
+      "chunks": 64,
+      "footprintM": 512,
+      "descriptors": 16588,
+      "counts": {
+        "birch": 644,
+        "grass": 15542,
+        "pine": 125,
+        "rock": 277
+      },
+      "rejected": {
+        "density/patch/bounds": 22429,
+        "inland-water": 39,
+        "shore-clearance": 16,
+        "neighbor-owner": 1810,
+        "spacing": 545,
+        "ocean": 3678,
+        "provisional-tread": 67
+      },
+      "serializedBytes": 10283494,
+      "totalGenerationMs": 566.7712980000051,
+      "medianChunkMs": 8.158672999999908,
+      "maxChunkMs": 19.40913499999988
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 2,
+      "chunkSize": 128,
+      "chunks": 16,
+      "footprintM": 512,
+      "descriptors": 16588,
+      "counts": {
+        "birch": 644,
+        "pine": 125,
+        "grass": 15542,
+        "rock": 277
+      },
+      "rejected": {
+        "density/patch/bounds": 21252,
+        "neighbor-owner": 839,
+        "spacing": 545,
+        "inland-water": 39,
+        "shore-clearance": 16,
+        "ocean": 3678,
+        "provisional-tread": 67
+      },
+      "serializedBytes": 10283433,
+      "totalGenerationMs": 513.5024719999947,
+      "medianChunkMs": 31.27452699999958,
+      "maxChunkMs": 53.490397999999914
+    },
+    {
+      "region": {
+        "id": "home",
+        "name": "Home Cove dry apron",
+        "x": 1670,
+        "z": -1900,
+        "elevation": 4.551720857620239,
+        "source": "features.json anchors.home"
+      },
+      "density": 2,
+      "chunkSize": 256,
+      "chunks": 4,
+      "footprintM": 512,
+      "descriptors": 16588,
+      "counts": {
+        "pine": 125,
+        "birch": 644,
+        "grass": 15542,
+        "rock": 277
+      },
+      "rejected": {
+        "density/patch/bounds": 20635,
+        "neighbor-owner": 265,
+        "spacing": 545,
+        "inland-water": 39,
+        "shore-clearance": 16,
+        "ocean": 3678,
+        "provisional-tread": 67
+      },
+      "serializedBytes": 10250243,
+      "totalGenerationMs": 497.0739680000006,
+      "medianChunkMs": 128.61712099999932,
+      "maxChunkMs": 138.54152700000122
+    }
+  ]
+}

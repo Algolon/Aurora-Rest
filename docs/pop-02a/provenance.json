@@ -1,0 +1,179 @@
+{
+  "pins": {
+    "birch-shadow": "dfc6b56f98cc560f6debce9b4e1fb3237069ef74",
+    "birch-batch": "87b4a2e00f0b29a89ec8aa1c5cdcf3bf7d170f6b",
+    "pine": "06a7edadb0a7df798a483f9c3bd8bf0311da67e3",
+    "mixed": "5f87d08a430051c9656e7bf44d1dfdc4f784f85d",
+    "grass-d1": "64606fe3df5d2444d0af21683319f6637b8d34f8",
+    "grass-d2r": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+    "rocks-e1": "33adfb992d907e386bc272dd73716d734191f2bf"
+  },
+  "files": [
+    {
+      "path": "src/nature-library/index.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/index.ts",
+      "sha256": "1667815c32def800baef7f8c369cefd87e14f6fb9469ee52e8af417225fa6e26"
+    },
+    {
+      "path": "src/nature-library/geometry.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/geometry.ts",
+      "sha256": "466ccfd096c10d82a2e5c676fd01c2d0ee1fcf589258ef4f44c2454c6ec7d059"
+    },
+    {
+      "path": "src/nature-library/rng.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rng.ts",
+      "sha256": "f4f5c875d8a1c1f4462637f4eb5c5a74206b09c637949e3e4d527ae63cbbb405"
+    },
+    {
+      "path": "src/nature-library/foliage.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/foliage.ts",
+      "sha256": "8340b43e6bd5a82ee9642dec7e1afade0999b671c5c4b88567855663794c3e8a"
+    },
+    {
+      "path": "src/nature-library/materials.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/materials.ts",
+      "sha256": "c16abbf2193a245f9c949f0cdbf01097ee8e2225561532054595518326c41331"
+    },
+    {
+      "path": "src/nature-library/lod.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/lod.ts",
+      "sha256": "4a5145c2e4e6d4531b255ae4927f88ac8d91d0ef0cff494f9013a922379165b5"
+    },
+    {
+      "path": "src/nature-library/pine/index.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/pine/index.ts",
+      "sha256": "b342b424ba106aabb5555f4b5660d2fa20d58af26e41484d8d27a79516e12a5b"
+    },
+    {
+      "path": "src/nature-library/pine/geometry.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/pine/geometry.ts",
+      "sha256": "6528bea5b6e6d6a1d9bb3b18c30534e2639fdb4c4029f2ac68f25267ad1d39a3"
+    },
+    {
+      "path": "src/nature-library/pine/materials.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/pine/materials.ts",
+      "sha256": "98aaa813224bfdf5ab9e943f822fed5d9d4fe689fe3710bbe3eeaa4e7b86feb2"
+    },
+    {
+      "path": "src/nature-library/grass/index.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/grass/index.ts",
+      "sha256": "73bad47a9665f851059512a02da89d89126a08b0b6d8b8274f877186719e1f7d"
+    },
+    {
+      "path": "src/nature-library/grass/geometry.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/grass/geometry.ts",
+      "sha256": "632ad6970f83fee8f63328099dd3b9c3e1fe5e47b8c328c7c7d074d5238d39f8"
+    },
+    {
+      "path": "src/nature-library/grass/materials.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/grass/materials.ts",
+      "sha256": "74e31dfc088ccaded4689c85b5aa44573ed3dbf2bc3c31ab7e301f08c56dc7b2"
+    },
+    {
+      "path": "src/nature-library/rendering/mixedForest.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/mixedForest.ts",
+      "sha256": "84ea3480d24636033a4b36f308ef3b99dd2d26a2d830a30d71a6b136cab75f98"
+    },
+    {
+      "path": "src/nature-library/rendering/natureBatch.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/natureBatch.ts",
+      "sha256": "ea9b1dcb606006ac413fa18883094c8d84c2d42e69de339dd372a6664365ea05"
+    },
+    {
+      "path": "src/nature-library/rendering/capabilities.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/capabilities.ts",
+      "sha256": "aa377af62cc76909ba1cbd735d2c4a89938cdfc07f924581f35f180ef400d4dd"
+    },
+    {
+      "path": "src/nature-library/rendering/visibility.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/visibility.ts",
+      "sha256": "a224dd1b25dd468eef11dc09ef75efce20fdfafb0747d00ccc409a3d59f8fcd2"
+    },
+    {
+      "path": "src/nature-library/rendering/instancedRenderer.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/instancedRenderer.ts",
+      "sha256": "462b0abdb10b0db62757297bc64e42b77155deebd7b7d9852fce9f64b19b647e"
+    },
+    {
+      "path": "src/nature-library/rendering/batchedRenderer.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/rendering/batchedRenderer.ts",
+      "sha256": "8399f342de75eb5abb6c88efc2006eba71f16acac60320492399165348536f54"
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassBatch.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/grass/rendering/grassBatch.ts",
+      "sha256": "01683bbf88c8914f1aadd29c7582bab7e24021a02ec85d0132d729e24e4b53f4"
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassFade.ts",
+      "sourceSha": "0104a97cd3612e1bf1bec12cec1ea537e92d12e5",
+      "sourcePath": "asset-lab/birch/src/grass/rendering/grassFade.ts",
+      "sha256": "243668dc62d433a62a129ca9dc255dcd22fe7bc2732ea57b0879bb99140eec40"
+    },
+    {
+      "path": "src/nature-library/rocks/index.ts",
+      "sourceSha": "33adfb992d907e386bc272dd73716d734191f2bf",
+      "sourcePath": "asset-lab/birch/src/rocks/index.ts",
+      "sha256": "a9412c04ab1584b9d82594425b38bb42c1d7dfc2006087207117ab63dfcc0ee0"
+    },
+    {
+      "path": "src/nature-library/rocks/productionRock.ts",
+      "sourceSha": "33adfb992d907e386bc272dd73716d734191f2bf",
+      "sourcePath": "asset-lab/birch/src/rocks/productionRock.ts",
+      "sha256": "62f4960b8011027a022f8e408801cb7d4e00c4b4c660fe7b18e0f1da2097ee8f"
+    },
+    {
+      "path": "src/nature-library/rocks/rockMaterials.ts",
+      "sourceSha": "33adfb992d907e386bc272dd73716d734191f2bf",
+      "sourcePath": "asset-lab/birch/src/rocks/rockMaterials.ts",
+      "sha256": "64ae6af30cba26923aa9388798405b6281a5952dffd29c231d109f8c991ec5cc"
+    }
+  ],
+  "protected": {
+    "src/pop-01/main.ts": "0833f5a7c92c1832e9e988899f76e974370b3c6862fd509e1e67bc9a9720d698",
+    "src/pop-01/geography.ts": "f48e795289c6f54fb3810bfdb7fa1da762f4dd707de3dabe60b3a1265a94db2b",
+    "src/pop-01/generator.ts": "f5d042674202720f613e5865c36160ed9e8dd70966586b3abfd7107137425908",
+    "src/pop-01/spatial.ts": "6ff9ece0a2fa5b9486fd25178120b4b1cdb2c435e9e4e9f3781421cb37ecd43a",
+    "src/pop-01/streaming.ts": "c31d652b5567baa002c8dab9db9989b49d7d383945b0cd52cf193b4c60c3a89d",
+    "src/pop-01/style.css": "1535bfee6aba39563dcdb1cc61076e24dc5e70123dae100664c59b1c4dd76bc2",
+    "src/pop-01/contracts.ts": "87a9a88c6adb2cdb068a3691c56a9cf7cae42889f419434e50d0cb6b6ddc8fbb",
+    "src/pop-01/ecology.ts": "0903acb730315eb5eebc105efde873c3e54cea18b5fc7c6f617561ecd08da845",
+    "src/pop-01/proxy-renderer.ts": "c208dcc41c092a2b01994b4b21fd8dd441fcceda619cbadac535d17faa289a88",
+    "src/pop-01/composition.ts": "3924fd46882cb627dd241d2444a56a293ebe7d86ef11e2093b4275ed4fc3247b",
+    "public/geo-r02b/terrain.f32": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+    "public/geo-r02b/water-surface.f32": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+    "public/geo-r02b/water-mesh.f32": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+    "public/geo-r02b/diagnostics.json": "05dbe21ff988056897145594b82f2e75cbdc6555c04854222120c50fd06805f3",
+    "public/geo-r02b/features.json": "8f538cef4ce368c958abb0d5097895b4bd230ff2d5f97fd0f32ed8b37ed0166e",
+    "src/geo-r02b/main.ts": "54686addf5aad40025670e8ab05a333ed9e0d348bc941cd427850bccf50967e0",
+    "src/geo-r02b/style.css": "1902f4978dad3ed59edb40941a10138c89e7e71ba9719826e963f3d892c2dd32",
+    "src/geo-r02b/review.ts": "f5c61de502b3c2af3066a825d008f7b6df4c48d0a2b3a7ec49c8ea3a5afa1f4b",
+    "src/geo-r02b/review-options.ts": "f01f314b8d3f8aa083609f735bbed5f657bef1f9b9340dd5a5c045f8d86fcf8a",
+    "src/geo-r02b/terrain.ts": "630b96bb4a3682f4e6be41dc4b71a73a0ab99ba8b54a5e4051df17e947f3bfbd",
+    "src/world/config.ts": "64d721ec616a9ec091ff53148369e3ee583c8bc4b6911368dd818cd76eb18c5d",
+    "src/world/geography.ts": "a94697fcfc57011a6d4bf39c09b5163f9be7d335afda21ce9793e93a42dfb899",
+    "src/world/surface.ts": "dde00186e4a294841123718413efb3870d0819431bf29517a1439711d4b24de1",
+    "src/world/layout.ts": "51dfb0cd8cb91091c4b6e14cdb9e5f5496dabd2aceeca86557886c63bfe706b7",
+    "src/world/routes.ts": "baccbb191f63e5411a090d0a304b4ea86787a84cd8527cad531a47541b4af084"
+  },
+  "sourceException": "POP-02A owner instruction selects POP-01 parent; repository policy unchanged"
+}
