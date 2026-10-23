@@ -7,7 +7,7 @@ No original source file edited. No merge, deployment, terrain/biome changes or e
 Verified canonical GEO `public/geo-r02b/features.json` stores Birchwood anchor at **(-740,-50)**, while `reviewCameras()` uses closest hero route point **(-350,-290)** for the intended `forest-corridor` review. They are **~458m apart**. Earlier ENV-R02B eight-tree suppression was around Birchwood, leaving the corridor untouched. ENV-R02C deliberately locates the small design at the actual route camera, not the anchor.
 
 ## Authored landscape score: Enclosure — threshold — release
-The playable concept begins on a winding narrow route at (-389,-257), passes the camera (-350,-290) and resolves into an off-axis opening at (-326,-305), continuing toward (-300,-324). This is a **local scenic narrative, not a finalized 458m path connection or final Central Valley vista**.
+The playable concept follows the **verified hero-route tangent** from (-375,-357), through (-360,-312), past the camera (-350,-290) and toward (-328,-280) / (-300,-266), with an off-axis opening at (-316,-290). Earlier A1 crossed the hero trail instead of following it (its ends missed the route by ~51–52m). This A2 correction aligns the authored concept to the canonical centerline; do not claim the whole Birchwood-to-Central-Valley route is solved. This is a **local scenic narrative, not a finalized 458m path connection or final Central Valley vista**.
 - **A** Sheltered birches (-378,-240): irregular tall white-trunk rhythm, no straight plantation row.
 - **B** Mixed north edge (-338,-260): pine interruptions amongst birches; layered crown separation.
 - **C** Eastern frame (-296,-285): delayed opening ahead, not a symmetric hallway.
@@ -35,4 +35,4 @@ Northern mountain birch woodlands have varied crown spacing and a meaningful dwa
 ## Art decision gate
 **GO only if** the first-person path has meaningful enclosure, off-axis reveal, recognizable two-sided groves, and visible mid/near groundcover, and looks organically Nordic rather than stage-dressed. **REVISE/REJECT** if repeated tree patterns, excess sculptural symmetry, empty dark floor, awkward ground contact or unreadable route remain.
 
-The next action must be an art review of *real* screenshots, not another procedural iteration on faith. No device FPS claim.
+The next action must be an art review of *real* screenshots, not another procedural iteration on faith. A2 screenshots use three camera viewpoints following the actual hero route: gateway-approach, gateway-trail and gateway-reveal. The older forest-corridor camera heading was not aligned with this tangent and is not suitable as the primary A2 design proof. No device FPS claim.
