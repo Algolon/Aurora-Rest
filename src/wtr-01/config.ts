@@ -18,6 +18,18 @@ export const PALETTE: WaterPalette = {
   highTarn:  {base:0x3c6875,dark:0x2b4d5a,sky:0xc0ced0,frequency:.18,speed:.09,slope:.020,roughness:.86,glint:.11,fresnel:.23,wind:[.65,.76]},
   channel:   {base:0x466e75,dark:0x335761,sky:0xb6c6c8,frequency:.23,speed:.15,slope:.047,roughness:.77,glint:.13,fresnel:.17,wind:[.65,.76]}
 };
+/**
+ * WTR-01A selected Nordic look (C waves + restrained regional palette).
+ * WTR-01R PALETTE above stays BYTE-FOR-BYTE unchanged for matched comparisons.
+ * These are visual shading parameters, not depth or shoreline data.
+ */
+export const NORDIC_PALETTE:WaterPalette={
+  ocean:     {...PALETTE.ocean,base:0x345966,dark:0x274954,sky:0xafc2c5,frequency:.120,speed:.20,slope:.100,roughness:.74,glint:.195,fresnel:.21},
+  lowerLake: {...PALETTE.lowerLake,base:0x406969,dark:0x305253,sky:0xb1c4bd,frequency:.175,speed:.105,slope:.032,roughness:.84,glint:.13,fresnel:.17},
+  highTarn:  {...PALETTE.highTarn,base:0x3a626e,dark:0x2c4d58,sky:0xb9c9cb,frequency:.145,speed:.08,slope:.021,roughness:.90,glint:.095,fresnel:.18},
+  channel:   {...PALETTE.channel} // WTR-02 flow is deferred; do not invent a new channel treatment.
+};
+
 export interface LakeBoundary {
   id:string; name:string; level:number; boundary:number[][];
 }
