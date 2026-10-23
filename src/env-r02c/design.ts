@@ -6,8 +6,8 @@
 export const GATEWAY = {
   version:'env-r02c-authored-gateway-a1',
   bounds:{west:-420,east:-268,north:-215,south:-388},
-  route:[[-389,-257],[-370,-273],[-350,-290],[-326,-307],[-300,-324]] as readonly (readonly [number,number])[],
-  clearing:{x:-326,z:-305,rx:20,rz:14},
+  route:[[-375,-357],[-360,-312],[-350,-290],[-328,-280],[-300,-266]] as readonly (readonly [number,number])[],
+  clearing:{x:-316,z:-290,rx:18,rz:13},
   groves:[
     {id:'A',name:'Sheltered birches',center:[-378,-240],family:'birch',scale:1.0},
     {id:'B',name:'Mixed north edge',center:[-338,-260],family:'mixed',scale:1.05},
@@ -24,8 +24,9 @@ export const GATEWAY = {
     {id:'G5',center:[-325,-322],rx:12,rz:8},
   ],
   cameras:[
-    {id:'gateway-approach',x:-374,z:-274,heading:-.90,label:'Gateway · sheltered approach'},
-    {id:'gateway-reveal',x:-328,z:-307,heading:-.90,label:'Gateway · opening reveal'},
+    {id:'gateway-approach',x:-360,z:-312,heading:-2.72,label:'Gateway · sheltered approach on hero route'},
+    {id:'gateway-trail',x:-350,z:-290,heading:-2.0,label:'Gateway · canonical route hinge'},
+    {id:'gateway-reveal',x:-328,z:-280,heading:-2.04,label:'Gateway · north-east reveal'},
   ],
 } as const;
 /** Deliberate specific clusters, not a new procedural ecology.
