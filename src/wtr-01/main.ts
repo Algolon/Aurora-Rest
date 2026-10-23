@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {HeightGrid,Terrain,waterAt,type Data} from '../geo-r02b/terrain.ts';
 import {sunDirection} from '../geo-r02b/review-options.ts';
 import {classifyCanonicalWaterMesh,type Quality} from './config.ts';
-import {createCanonicalWaterGeometry,createOceanGeometry,createWaterShader,waveStudyId,type WaveStudy} from './material.ts';
+import {createCanonicalWaterGeometry,createOceanGeometry,createWaterShader,applyWaterStudy,type WaveStudy} from './material.ts';
 import './style.css';
 
 type Mode=Quality|'baseline';
@@ -14,7 +14,7 @@ app.innerHTML=`<canvas id="world" aria-label="Three.js canonical island water re
 <section id="ui"><h1>AURORA REST <span>WTR-01</span></h1><div class="sub">Ocean · lakes · High Tarn | isolated lookdev</div>
 <label>Review viewpoint <select id="view" aria-label="Review viewpoint"></select></label>
 <label>Material <select id="quality"><option value="baseline">GEO-R02B baseline</option><option value="low">WTR-01 Low</option><option value="medium" selected>WTR-01 Medium</option><option value="high">WTR-01 High</option></select></label>
-<label>Wave study <select id="study"><option value="original">WTR-01R original</option><option value="A">A — conservative</option><option value="B">B — multiscale</option><option value="C">C — screen stable</option></select></label>
+<label>Wave study <select id="study"><option value="original">WTR-01R original</option><option value="A">A — conservative</option><option value="B">B — multiscale</option><option value="C">C — screen stable</option><option value="final" selected>Nordic calibrated (selected)</option></select></label>
 <label>Water focus <select id="focus"><option value="all">All water</option><option value="ocean">Ocean only</option><option value="lakes">Lakes/tarns only</option></select></label>
 <label>Daylight <select id="sun"><option value="B">Sun B · south-east</option><option value="A">Sun A · west-north-west</option></select></label>
 <label>Time sequence <select id="time"><option value="live">Live animation</option><option value="0">Fixed 0.00 s</option><option value="1.5">Fixed 1.50 s</option><option value="3">Fixed 3.00 s</option></select></label>
@@ -62,7 +62,7 @@ function setSun(p:Daylight){
   if(currentShader)currentShader.uniforms.uSunDirection.value.copy(sun.position).normalize();
 }
 let currentShader:THREE.ShaderMaterial|null=null;
-let mode:Mode='medium',focus:Focus='all',daylight:Daylight='B',running=true,clockSec=0,study:WaveStudy='original';
+let mode:Mode='medium',focus:Focus='all',daylight:Daylight='B',running=true,clockSec=0,study:WaveStudy='final';
 setSun('B');
 
 async function getBinary(file:string){
@@ -115,6 +115,41 @@ function lakeShore(grid:HeightGrid,data:Data):{position:[number,number];center:[
   if(!best)best=nearbyDry(ring[0][0],ring[0][1],grid,data);
   return {position:best,center,level:lake.level};
 }
+/** Optional extra Home Cove walking-height view. Geographically sampled on
+ * canonical dry ground, aimed at actual sea (height below 0). Original six
+ * matched review viewpoints remain byte-for-byte unchanged. */
+function findWaterFramedCove(grid:HeightGrid,data:Data):ReviewCamera|null {
+  const center:[number,number]=[1670,-1900];
+  let best:ReviewCamera|null=null,score=Infinity;
+  const angles=[0,Math.PI/4,Math.PI/2,3*Math.PI/4,Math.PI,5*Math.PI/4,3*Math.PI/2,7*Math.PI/4];
+  for(let ix=-15;ix<=15;ix++)for(let iz=-15;iz<=15;iz++){
+    const x=center[0]+ix*24,z=center[1]+iz*24,h=grid.surface(x,z);
+    if(h<.8||h>24||!dryAt(x,z,grid,data))continue;
+    for(const a of angles){
+      const dx=Math.cos(a),dz=Math.sin(a);
+      for(const distance of [80,140,220,300]){
+        const waterX=x+dx*distance,waterZ=z+dz*distance;
+        if(grid.surface(waterX,waterZ)>-0.5)continue;
+        const eyeY=h+1.75;let open=true;
+        for(let k=1;k<16;k++){
+          const t=k/16,sx=x+dx*distance*t,sz=z+dz*distance*t;
+          const line=eyeY*(1-t)+.3*t;
+          if(grid.surface(sx,sz)>line+.2){open=false;break;}
+        }
+        if(!open)continue;
+        const current=distance*.10+Math.abs(h-3)*2+
+          Math.hypot(x-center[0],z-center[1])*.04;
+        if(current<score){
+          score=current;
+          best={id:'home-water-walk',label:'Home Cove · supplementary water-framed (noncanonical)',
+            sourceXZ:[x,z],camera:new THREE.Vector3(-x,eyeY,z),
+            target:new THREE.Vector3(-waterX,.3,waterZ),level:eyeY};
+        }
+      }
+    }
+  }
+  return best;
+}
 function createCameras(grid:HeightGrid,data:Data):ReviewCamera[]{
   const cove=nearbyDry(1670,-1900,grid,data);
   const wind=nearbyDry(-1608.245,1658.948,grid,data); // R1 documented Windward gully mouth reference.
@@ -123,7 +158,7 @@ function createCameras(grid:HeightGrid,data:Data):ReviewCamera[]{
     const y=grid.surface(at[0],at[1])+rise;
     return {id,label,sourceXZ:at,camera:new THREE.Vector3(-at[0],y,at[1]),target:new THREE.Vector3(-look[0],look[1],look[2]),level:y};
   }
-  return [
+  const cameras=[
     cameraSpec('home-shore','Home Cove · shore level',cove,[cove[0]+20,0,cove[1]-190],1.75),
     cameraSpec('home-elevated','Home Cove · elevated',cove,[cove[0]+30,0,cove[1]-120],170),
     cameraSpec('wind-shore','Windward Coast · shore level',wind,[wind[0]-240,0,wind[1]+35],1.75),
@@ -131,6 +166,9 @@ function createCameras(grid:HeightGrid,data:Data):ReviewCamera[]{
     cameraSpec('tarn-shore','High Tarn · near water',tarn.position,[tarn.center[0],tarn.level,tarn.center[1]],1.75),
     cameraSpec('tarn-panorama','High Tarn · panorama',tarn.position,[tarn.center[0],tarn.level,tarn.center[1]],155)
   ];
+  const supplemental=findWaterFramedCove(grid,data);
+  if(supplemental)cameras.push(supplemental);
+  return cameras;
 }
 try {
   const [data,terrainValues,waterPositions,waterSurface] = await Promise.all([
@@ -177,7 +215,7 @@ try {
   }
   function setStudy(next:WaveStudy){
     study=next;
-    if(currentShader)currentShader.uniforms.uStudy.value=waveStudyId(next);
+    if(currentShader)applyWaterStudy(currentShader,next);
     const selector=document.querySelector<HTMLSelectElement>('#study')!;
     selector.value=next;
   }
