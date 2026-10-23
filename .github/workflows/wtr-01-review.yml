@@ -1,4 +1,4 @@
-name: WTR-01 browser smoke (review only)
+name: WTR-01 full WebGL visual review (no deployment)
 on:
   push:
     branches: [feature/wtr-01-water-lookdev]
@@ -13,7 +13,7 @@ permissions:
   contents: read
 jobs:
   browser-review:
-    name: Canonical R1 shader smoke and real captures
+    name: Canonical R1 water full comparison and renderer metrics
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -32,11 +32,11 @@ jobs:
         run: |
           npm run preview -- --host 127.0.0.1 --port 4173 --strictPort > /tmp/wtr-preview.log 2>&1 &
           for n in $(seq 1 40); do if curl --fail --silent http://127.0.0.1:4173/wtr-01.html > /dev/null; then break; fi; sleep 1; done
-          WTR_OUTPUT=docs/wtr-01/captures node tools/wtr-01/capture.mjs --smoke
+          WTR_OUTPUT=docs/wtr-01/captures node tools/wtr-01/capture.mjs --two-suns
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: WTR-01-WebGL-smoke-captures
+          name: WTR-01R-WebGL-matched-captures
           path: docs/wtr-01/captures/
           if-no-files-found: warn
           retention-days: 14
