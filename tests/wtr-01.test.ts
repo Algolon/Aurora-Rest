@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import * as THREE from 'three';
-import {createWaterShader,WAVE_STUDIES,waveStudyId} from '../src/wtr-01/material.ts';
+import {createWaterShader,applyWaterStudy,WAVE_STUDIES,waveStudyId} from '../src/wtr-01/material.ts';
 import {createHash} from 'node:crypto';
-import {PALETTE,WATER_TYPES,AVAILABLE_FIELDS,PROPOSED_FIELDS,
+import {PALETTE,NORDIC_PALETTE,WATER_TYPES,AVAILABLE_FIELDS,PROPOSED_FIELDS,
   pointInRing,classifyCanonicalWaterMesh,renderQualityDetail,type LakeBoundary
 } from '../src/wtr-01/config.ts';
 
@@ -83,8 +83,8 @@ test('WTR-01 custom shader includes all Three.js fog and logarithmic-depth depen
 });
 
 test('WTR-01A candidate switch preserves WTR-01R uniforms and all quality levels',()=>{
-  assert.deepEqual(WAVE_STUDIES,['original','A','B','C']);
-  assert.deepEqual(WAVE_STUDIES.map(waveStudyId),[0,1,2,3]);
+  assert.deepEqual(WAVE_STUDIES,['original','A','B','C','final']);
+  assert.deepEqual(WAVE_STUDIES.map(waveStudyId),[0,1,2,3,4]);
   for(const study of WAVE_STUDIES){
     for(const quality of ['low','medium','high'] as const){
       const material=createWaterShader(quality,new THREE.Vector3(0.5,1,.2),study);
@@ -105,4 +105,27 @@ test('WTR-01A candidate switch preserves WTR-01R uniforms and all quality levels
       material.dispose();
     }
   }
+});
+
+test('WTR-01A Nordic palette has finite bounded values and original never mutates',()=>{
+  const baseline=JSON.stringify(PALETTE);
+  for(const k of WATER_TYPES){
+    const p=NORDIC_PALETTE[k];
+    for(const key of ['frequency','speed','slope','roughness','glint','fresnel'] as const){
+      assert.ok(Number.isFinite(p[key]),k+'/'+key);
+    }
+    assert.ok(p.frequency>0&&p.frequency<1&&p.speed>=0&&p.speed<2);
+    assert.ok(p.slope>=0&&p.slope<.3&&p.glint<=.5&&p.fresnel<=.5);
+    assert.ok(p.roughness>=0&&p.roughness<=1);
+    assert.ok(Math.hypot(...p.wind)>.25);
+  }
+  const original=createWaterShader('high',new THREE.Vector3(.3,1,.4),'original');
+  const baseColor=original.uniforms.uBase.value[0].getHex();
+  assert.equal(baseColor,PALETTE.ocean.base);
+  applyWaterStudy(original,'final');
+  assert.equal(original.uniforms.uBase.value[0].getHex(),NORDIC_PALETTE.ocean.base);
+  applyWaterStudy(original,'original');
+  assert.equal(original.uniforms.uBase.value[0].getHex(),PALETTE.ocean.base);
+  assert.equal(JSON.stringify(PALETTE),baseline);
+  original.dispose();
 });
