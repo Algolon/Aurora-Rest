@@ -1,15 +1,17 @@
-/** GEO-R02C opt-in review terrain variants. A1a: ?terrain=a1a-m0|a1a-v1|a1a-v2|a1a-v3; A1b-alpha: ?terrain=a1b-m0|a1b-alpha; A1c: ?terrain=a1c-m0|a1c-s1.
+/** GEO-R02C opt-in review terrain variants. A1a: ?terrain=a1a-m0|a1a-v1|a1a-v2|a1a-v3; A1b-alpha: ?terrain=a1b-m0|a1b-alpha; A1c: ?terrain=a1c-m0|a1c-s1; B01: ?terrain=b01-m0|b01-b1 (authored North massif candidate, may carry a route override).
  * Without the parameter nothing is fetched and the canonical R1 heights are used unchanged. A variant is composed by copying
  * its exact float32 patch block into the R1 grid (no arithmetic), then the whole grid is hashed and compared with the
  * manifest's terrain SHA-256. */
-export interface VariantInfo {id:string;family:VariantFamily;key:string;label:string;terrainSha256:string;expectedSha256:string;baselineSha256:string;verified:boolean;changedCells:number}
+export interface VariantRoute {id:string;replaces?:string;points2:number[][]}
+export interface VariantInfo {id:string;family:VariantFamily;key:string;label:string;terrainSha256:string;expectedSha256:string;baselineSha256:string;verified:boolean;changedCells:number;routes?:VariantRoute[]}
 export interface VariantPatch {file:string;rows:[number,number];cols:[number,number];sha256:string;bytes:number}
-export interface VariantEntry {id:string;label:string;terrainSha256:string;changedCells:number;patch:VariantPatch|null}
-export type VariantFamily='a1a'|'a1b'|'a1c';
+export interface VariantEntry {id:string;label:string;terrainSha256:string;changedCells:number;patch:VariantPatch|null;routes?:string|null}
+export type VariantFamily='a1a'|'a1b'|'a1c'|'b01';
 const FAMILIES:Record<VariantFamily,{pattern:RegExp;base:string}>={
  a1a:{pattern:/^a1a-(m0|v[1-3])$/,base:'/geo-r02c-a1a/'},
  a1b:{pattern:/^a1b-(m0|alpha)$/,base:'/geo-r02c-a1b/'},
- a1c:{pattern:/^a1c-(m0|s1)$/,base:'/geo-r02c-a1c/'}
+ a1c:{pattern:/^a1c-(m0|s1)$/,base:'/geo-r02c-a1c/'},
+ b01:{pattern:/^b01-(m0|b1)$/,base:'/geo-r02c-b01/'}
 };
 export function variantRef(search:string):{family:VariantFamily;id:string}|null{
  const v=new URLSearchParams(search).get('terrain');if(!v)return null;
@@ -37,5 +39,11 @@ export async function applyVariant(search:string,heights:Float32Array,width:numb
  if(manifest.baseTerrainSha256!==baselineSha256)throw new Error(`${family} manifest is not based on the loaded R1 terrain`);
  if(e.patch)applyPatch(heights,width,e.patch,new Float32Array(await (await fetch(base+e.patch.file)).arrayBuffer()));
  const sha=await sha256Hex(heights);if(sha!==e.terrainSha256)throw new Error(`${family} variant ${id} does not match its manifest SHA-256`);
- return {id,family,key:`${family}-${id}`,label:e.label,terrainSha256:sha,expectedSha256:e.terrainSha256,baselineSha256,verified:true,changedCells:e.changedCells};
+ const routes=e.routes?((await (await fetch(base+e.routes)).json()) as {routes:VariantRoute[]}).routes:undefined;
+ return {id,family,key:`${family}-${id}`,label:e.label,terrainSha256:sha,expectedSha256:e.terrainSha256,baselineSha256,verified:true,changedCells:e.changedCells,...(routes?{routes}:{})};
+}
+/** Replaces route alignments in place with a variant's realigned ones; each replaced R1 alignment is kept as '<id>-r1'. */
+export function applyVariantRoutes(routes:{id:string;points2:number[][]}[],overrides:VariantRoute[]){
+ for(const o of overrides){const id=o.replaces??o.id,i=routes.findIndex(r=>r.id===id);if(i<0)throw new Error('Variant route replaces unknown route '+id);
+  const old=routes[i];routes.splice(i,1,{...old,id,points2:o.points2},{...old,id:id+'-r1'});}
 }

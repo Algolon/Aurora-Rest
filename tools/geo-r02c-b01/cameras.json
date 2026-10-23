@@ -1,0 +1,69 @@
+{
+ "schema": "aurora-review-cameras/1",
+ "note": "B01 additions; the A1a, A1b and A1c cameras are reused unchanged, so M0 and B1 are seen from identical places",
+ "cameras": [
+  {
+   "id": "b01-route-fjell",
+   "name": "Vestfjell plateau \u00b7 looking up to North Peak",
+   "group": "b01-route",
+   "kind": "walk",
+   "xz": [
+    -899.7,
+    2602.4
+   ],
+   "yaw": 1.1551,
+   "pitch": 0.16,
+   "uv": [
+    210.03,
+    139.76
+   ],
+   "source": "placed on the B1.0 route alignment (s = 2050 m); the corrected B1.1 route passes 132 m to the east. Fixed viewpoint, identical for M0 and B1."
+  },
+  {
+   "id": "b01-route-shoulder",
+   "name": "B1 candidate route \u00b7 start of the summit scramble on the south-west shoulder",
+   "group": "b01-route",
+   "kind": "walk",
+   "xz": [
+    -640.4,
+    2680.9
+   ],
+   "yaw": 0.9337,
+   "pitch": 0.22,
+   "uv": [
+    235.96,
+    131.91
+   ],
+   "source": "peak-ascent-b1 s = 2437 m"
+  },
+  {
+   "id": "b01-oblique-sw",
+   "name": "Elevated oblique \u00b7 from the south-west over the windward fjell",
+   "group": "oblique",
+   "kind": "aerial",
+   "xz": [
+    -1900.0,
+    1300.0
+   ],
+   "yaw": 0.7817,
+   "pitch": 0.0,
+   "aerial": {
+    "pos": [
+     -1900.0,
+     1250.0,
+     1300.0
+    ],
+    "target": [
+     -560.0,
+     680.0,
+     2650.0
+    ]
+   },
+   "uv": [
+    110.0,
+    270.0
+   ],
+   "source": "fixed world position and target"
+  }
+ ]
+}

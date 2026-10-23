@@ -1,0 +1,19 @@
+{
+ "method": "terrain ray cast, eye 1.75 m, 60\u00b0 vertical FOV over 800 px",
+ "views": {
+  "birchwood": {
+   "maxShiftPx": 33.9,
+   "meanShiftPx": 13.6,
+   "widthShiftOver3pxDeg": 25.1,
+   "b1PeakElevationDeg": 17.53,
+   "m0PeakElevationDeg": 17.63
+  },
+  "valley-shoulder": {
+   "maxShiftPx": 29.2,
+   "meanShiftPx": 7.1,
+   "widthShiftOver3pxDeg": 20.4,
+   "b1PeakElevationDeg": 14.46,
+   "m0PeakElevationDeg": 14.55
+  }
+ }
+}

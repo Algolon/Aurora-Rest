@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 import {HeightGrid,Terrain,contains,waterAt,type Data,type V3} from './terrain.ts';
 import {reviewOptions,reviewCameras,applyClay} from './review.ts';
-import {applyVariant,terrainIdentity} from '../geo-r02c-a1a/variants.ts';
+import {applyVariant,applyVariantRoutes,terrainIdentity} from '../geo-r02c-a1a/variants.ts';
 import {a1aCameras} from '../geo-r02c-a1a/cameras.ts';
 import {a1bCameras} from '../geo-r02c-a1b/cameras.ts';
 import {a1cCameras} from '../geo-r02c-a1c/cameras.ts';
+import {b01Cameras} from '../geo-r02c-b01/cameras.ts';
 import './style.css';
 const app=document.querySelector('#app')!;
 app.innerHTML=`<canvas id="world"></canvas><section id="ui"><h1>AURORA REST</h1><small>GEO-R02B-R1 · terrain integrity review</small><div id="controls"><select id="view" aria-label="Viewpoint"><option>Loading terrain…</option></select><button id="mode">Fly / walk [F]</button><button id="top">Top-down [O]</button></div><div><label><input id="ridges" type="checkbox"> Ridges / valleys</label> <label><input id="routes" type="checkbox"> Hiking reservations</label> <label><input id="catchments" type="checkbox"> Catchments</label></div><div><select id="diagnostic" aria-label="Terrain diagnostic"><option value="neutral">Neutral terrain</option><option value="height">Elevation · 0–900 m</option><option value="slope">Slope · 12 / 25 / 35 / 60%</option><option value="drainage">Measured downhill directions</option><option value="depressions">Closed depressions · before / after</option><option value="water">River / terrain alignment</option><option value="failures">Route width / grade conflicts</option></select></div><div id="status">Loading A-R1 terrain…</div><div class="legend">WASD move · drag/mouse look · Q/E fly · Shift faster<br>Neutral terrain; no vegetation or environment assets.</div><div class="note">Design constraint prototype. Art acceptance and Android validation remain open.</div><div id="error"></div></section><div id="crosshair">·</div><div id="loading">Loading 4 m authored terrain grid…</div>`;
@@ -14,6 +15,8 @@ const perspective=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.2,24000
 const gridResponse=await fetch('/geo-r02b/terrain.f32'),data:Data=await (await fetch('/geo-r02b/features.json')).json();if(!gridResponse.ok)throw new Error('Generate the GEO-R02B terrain files first.');const buffer=await gridResponse.arrayBuffer();const heights=new Float32Array(buffer);
 // GEO-R02C-A1a review variants are opt-in (?terrain=a1a-v1 ...); without the parameter the R1 heights are untouched.
 const variant=await applyVariant(location.search,heights,data.meta.grid.width,data.meta.terrainSha256);if(variant)document.querySelector('#ui small')!.textContent+=' · '+variant.label;
+// A variant may realign routes on its terrain (B01: peak-ascent); the R1 alignment stays available as '<id>-r1' for reference.
+if(variant?.routes)applyVariantRoutes(data.routes,variant.routes);
 const grid=new HeightGrid(heights,data.meta.grid.width,data.meta.grid.height,4);const terrain=new Terrain(grid,scene);
 function line(points:V3[],color:number,offset=2){const geo=new THREE.BufferGeometry().setFromPoints(points.map(p=>new THREE.Vector3(p[0],p[1]+offset,p[2])));return new THREE.Line(geo,new THREE.LineBasicMaterial({color,depthTest:false,transparent:true,opacity:.8}));}
 const diagnostics={ridges:new THREE.Group(),routes:new THREE.Group(),catchments:new THREE.Group()};for(const [id,g] of Object.entries(diagnostics)){g.visible=false;scene.add(g);document.querySelector<HTMLInputElement>('#'+id)!.onchange=e=>{g.visible=(e.target as HTMLInputElement).checked;};}
@@ -68,7 +71,7 @@ const specs=[
  {id:'mirelands',name:'Mirelands · low river corridor',uv:[381,565],yaw:2.5,kind:'walk',pitch:-.03}
 ];
 // GEO-R02C-P0 review cameras and clay mode are opt-in (?presets=p0, ?review=clay&sun=A|B).
-const review=reviewOptions(location.search);specs.push(...reviewCameras(review),...a1aCameras(location.search),...a1bCameras(location.search),...a1cCameras(location.search));
+const review=reviewOptions(location.search);specs.push(...reviewCameras(review),...a1aCameras(location.search),...a1bCameras(location.search),...a1cCameras(location.search),...b01Cameras(location.search));
 let mode='walk',viewId='home-cove',yaw=0,pitch=0,aerialTarget=new THREE.Vector3(),frames=0,last=performance.now(),frameMs=16.7;const player=new THREE.Vector3();const keys=new Set<string>();let drag=false,savedWalk=2;const sel=document.querySelector<HTMLSelectElement>('#view')!;sel.innerHTML='';for(const s of specs){const o=document.createElement('option');o.value=s.id;o.textContent=s.name;sel.append(o);}
 function resize(){renderer.setSize(innerWidth,innerHeight);perspective.aspect=innerWidth/innerHeight;perspective.updateProjectionMatrix();const half=4450,aspect=innerWidth/innerHeight;ortho.left=-half*aspect;ortho.right=half*aspect;ortho.top=half;ortho.bottom=-half;ortho.updateProjectionMatrix();}addEventListener('resize',resize);resize();
 function setView(id:string){const spec=specs.find(v=>v.id===id);if(!spec)throw new Error('Unknown view '+id);viewId=id;sel.value=id;keys.clear();yaw=spec.yaw;pitch=spec.pitch??0;mode=spec.kind;camera=mode==='overview'?ortho:perspective;

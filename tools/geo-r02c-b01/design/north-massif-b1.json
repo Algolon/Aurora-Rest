@@ -1,0 +1,783 @@
+{
+ "schema": "aurora-north-massif-design/1",
+ "designId": "north-massif-b1",
+ "revision": "B1.1",
+ "status": "experimental derived design master for the GEO-R02C-B0/B1 candidate; supersedes the A-R1 North massif ridges inside the study area only; not approved",
+ "parent": {
+  "masterId": "aurora-rest-concept-a-r1",
+  "masterFile": "docs/geo-r02b/design-master-A-R1-v1.json",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598",
+  "r1TerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "supersededRidges": [
+   "n-main (west of x = 260)",
+   "n-crown",
+   "n-west-spur (north of z = 1900)",
+   "n-nw-cape (east of x = -1330)",
+   "n-east-arc (west of x = 430)"
+  ]
+ },
+ "coordinates": "world metres: x east, z north (x = 4i - 3000, z = 4000 - 4j on the canonical 4 m grid); heights in metres",
+ "concept": "The Weathered Glacial Sanctuary. A high, asymmetric massif: one dominant horn-like summit with three different arms. The north and east (lee) sides are cut by deep cirques with steep headwalls. The west and south-west (windward) sides keep a broad, scoured fjell plateau that ends in a steep escarpment. The south face holds a smaller hanging cirque that the walking route climbs beside.",
+ "summits": [
+  {
+   "id": "S0",
+   "name": "North Peak",
+   "xz": [
+    -520,
+    2770
+   ],
+   "levelM": 900,
+   "role": "primary summit, short WSW-ENE summit crest"
+  },
+  {
+   "id": "S2",
+   "name": "Tarntind",
+   "xz": [
+    -170,
+    2470
+   ],
+   "levelM": 768,
+   "role": "second summit on the south-east arm, seen right of North Peak from the south"
+  },
+  {
+   "id": "S1",
+   "name": "Vesttind",
+   "xz": [
+    -1010,
+    2655
+   ],
+   "levelM": 724,
+   "role": "third summit closing the west arm above the fjell plateau"
+  },
+  {
+   "id": "S3",
+   "name": "Nordhorn",
+   "xz": [
+    -330,
+    3075
+   ],
+   "levelM": 738,
+   "role": "gendarme summit on the north arete"
+  },
+  {
+   "id": "S4",
+   "name": "Austtind",
+   "xz": [
+    120,
+    2745
+   ],
+   "levelM": 700,
+   "role": "minor top on the High Tarn rim"
+  }
+ ],
+ "saddles": [
+  {
+   "id": "N1",
+   "name": "Western Col",
+   "xz": [
+    -770,
+    2690
+   ],
+   "levelM": 668,
+   "between": [
+    "S0",
+    "S1"
+   ]
+  },
+  {
+   "id": "N2",
+   "name": "Skar notch",
+   "xz": [
+    -345,
+    2635
+   ],
+   "levelM": 690,
+   "between": [
+    "S0",
+    "S2"
+   ],
+   "role": "deep notch, the clearest break in the southern skyline"
+  },
+  {
+   "id": "N3",
+   "name": "North gap",
+   "xz": [
+    -425,
+    2945
+   ],
+   "levelM": 760,
+   "between": [
+    "S0",
+    "S3"
+   ]
+  },
+  {
+   "id": "N4",
+   "name": "Tarn col",
+   "xz": [
+    -10,
+    2620
+   ],
+   "levelM": 655,
+   "between": [
+    "S2",
+    "S4"
+   ]
+  }
+ ],
+ "ridges": [
+  {
+   "id": "arm-west",
+   "name": "West arm (windward)",
+   "character": "broad crest; steep cirque-cut north side, long gentle fjell to the south",
+   "knots": [
+    [
+     -520,
+     2770,
+     892
+    ],
+    [
+     -600,
+     2738,
+     866
+    ],
+    [
+     -690,
+     2706,
+     758
+    ],
+    [
+     -770,
+     2690,
+     668
+    ],
+    [
+     -880,
+     2672,
+     694
+    ],
+    [
+     -1010,
+     2655,
+     724
+    ],
+    [
+     -1120,
+     2682,
+     648
+    ],
+    [
+     -1220,
+     2716,
+     520
+    ],
+    [
+     -1323,
+     2741,
+     400
+    ],
+    [
+     -1417,
+     2696,
+     325
+    ],
+    [
+     -1497,
+     2625,
+     260
+    ]
+   ],
+   "flankLeft": {
+    "g0": 1.05,
+    "g1": 0.32,
+    "decayM": 170
+   },
+   "flankRight": {
+    "g0": 0.62,
+    "g1": 0.2,
+    "decayM": 300
+   },
+   "endTaperM": 140
+  },
+  {
+   "id": "arm-north",
+   "name": "North arm (lee arete)",
+   "character": "narrow arete with a gap and a gendarme summit, steep on both sides",
+   "knots": [
+    [
+     -520,
+     2770,
+     892
+    ],
+    [
+     -478,
+     2858,
+     834
+    ],
+    [
+     -425,
+     2945,
+     760
+    ],
+    [
+     -378,
+     3012,
+     748
+    ],
+    [
+     -330,
+     3075,
+     738
+    ],
+    [
+     -262,
+     3148,
+     668
+    ],
+    [
+     -190,
+     3200,
+     615
+    ]
+   ],
+   "flankLeft": {
+    "g0": 1.15,
+    "g1": 0.38,
+    "decayM": 150
+   },
+   "flankRight": {
+    "g0": 1.1,
+    "g1": 0.35,
+    "decayM": 150
+   },
+   "endTaperM": 120
+  },
+  {
+   "id": "arm-southeast",
+   "name": "South-east arm (stepped)",
+   "character": "summit, deep notch, second summit, then stepped shoulders down to the Cairn approaches",
+   "knots": [
+    [
+     -520,
+     2770,
+     892
+    ],
+    [
+     -442,
+     2702,
+     812
+    ],
+    [
+     -345,
+     2635,
+     690
+    ],
+    [
+     -262,
+     2560,
+     735
+    ],
+    [
+     -170,
+     2470,
+     768
+    ],
+    [
+     -92,
+     2392,
+     712
+    ],
+    [
+     28,
+     2334,
+     640
+    ],
+    [
+     96,
+     2235,
+     592
+    ],
+    [
+     149,
+     2136,
+     560
+    ],
+    [
+     240,
+     1920,
+     471
+    ]
+   ],
+   "flankLeft": {
+    "g0": 1.0,
+    "g1": 0.3,
+    "decayM": 180
+   },
+   "flankRight": {
+    "g0": 0.9,
+    "g1": 0.28,
+    "decayM": 200
+   },
+   "endTaperM": 160
+  },
+  {
+   "id": "rim-east",
+   "name": "High Tarn west rim",
+   "character": "lower rim from Tarntind over the Tarn col to Austtind and on to the R1 rim",
+   "knots": [
+    [
+     -170,
+     2470,
+     768
+    ],
+    [
+     -80,
+     2560,
+     700
+    ],
+    [
+     -10,
+     2620,
+     655
+    ],
+    [
+     60,
+     2690,
+     684
+    ],
+    [
+     120,
+     2745,
+     700
+    ],
+    [
+     260,
+     2772,
+     640
+    ],
+    [
+     433,
+     2760,
+     596
+    ]
+   ],
+   "flankLeft": {
+    "g0": 0.85,
+    "g1": 0.3,
+    "decayM": 170
+   },
+   "flankRight": {
+    "g0": 0.75,
+    "g1": 0.28,
+    "decayM": 190
+   },
+   "endTaperM": 120
+  },
+  {
+   "id": "fjell-southwest",
+   "name": "Vestfjell plateau shoulder",
+   "character": "flat-topped windward plateau with a steep lee escarpment facing the south cirque",
+   "knots": [
+    [
+     -900,
+     2615,
+     648
+    ],
+    [
+     -878,
+     2520,
+     640
+    ],
+    [
+     -890,
+     2380,
+     600
+    ],
+    [
+     -910,
+     2250,
+     566
+    ],
+    [
+     -955,
+     2110,
+     470
+    ],
+    [
+     -1028,
+     1950,
+     376
+    ],
+    [
+     -1126,
+     1796,
+     297
+    ],
+    [
+     -1237,
+     1662,
+     224
+    ]
+   ],
+   "flankLeft": {
+    "g0": 0.12,
+    "g1": 0.24,
+    "decayM": 260,
+    "plateauM": 90
+   },
+   "flankRight": {
+    "g0": 0.9,
+    "g1": 0.26,
+    "decayM": 140,
+    "plateauM": 45
+   },
+   "endTaperM": 160
+  }
+ ],
+ "buttresses": [
+  {
+   "id": "b-tarntind-south",
+   "knots": [
+    [
+     -170,
+     2470,
+     768
+    ],
+    [
+     -150,
+     2330,
+     655
+    ],
+    [
+     -122,
+     2180,
+     548
+    ],
+    [
+     -100,
+     2050,
+     478
+    ]
+   ],
+   "flank": {
+    "g0": 0.95,
+    "g1": 0.3,
+    "decayM": 130
+   },
+   "role": "south buttress of Tarntind, east wall of the hanging trough"
+  },
+  {
+   "id": "b-peak-southwest",
+   "knots": [
+    [
+     -560,
+     2742,
+     868
+    ],
+    [
+     -610,
+     2640,
+     760
+    ],
+    [
+     -640,
+     2540,
+     680
+    ],
+    [
+     -662,
+     2440,
+     622
+    ]
+   ],
+   "flank": {
+    "g0": 0.85,
+    "g1": 0.34,
+    "decayM": 100
+   },
+   "role": "south-west shoulder of North Peak between the south cirque and the Western Col; carries the summit route"
+  },
+  {
+   "id": "b-nordhorn-east",
+   "knots": [
+    [
+     -330,
+     3075,
+     738
+    ],
+    [
+     -215,
+     3018,
+     648
+    ],
+    [
+     -80,
+     2962,
+     566
+    ]
+   ],
+   "flank": {
+    "g0": 1.0,
+    "g1": 0.32,
+    "decayM": 130
+   },
+   "role": "north wall of the east cirque"
+  },
+  {
+   "id": "b-vesttind-north",
+   "knots": [
+    [
+     -1010,
+     2655,
+     742
+    ],
+    [
+     -995,
+     2790,
+     612
+    ],
+    [
+     -968,
+     2930,
+     480
+    ]
+   ],
+   "flank": {
+    "g0": 1.0,
+    "g1": 0.34,
+    "decayM": 140
+   },
+   "role": "divides the great north cirque from the north-west slopes"
+  }
+ ],
+ "cirques": [
+  {
+   "id": "C-N",
+   "name": "Great North Cirque",
+   "floorXZ": [
+    -700,
+    3150
+   ],
+   "floorM": 500,
+   "floorRadiusM": 140,
+   "outDir": [
+    -0.15,
+    1.0
+   ],
+   "floorTiltOut": 0.06,
+   "wallP": 1.6,
+   "troughHalfWidthM": 150,
+   "troughGrade": 0.16,
+   "troughLengthM": 420,
+   "role": "largest lee cirque under the North Peak north face; drains to the north coast",
+   "rimM": 930,
+   "rimDistanceM": 420
+  },
+  {
+   "id": "C-E",
+   "name": "Tarn Head Cirque",
+   "floorXZ": [
+    -130,
+    2790
+   ],
+   "floorM": 640,
+   "floorRadiusM": 120,
+   "outDir": [
+    1.0,
+    -0.45
+   ],
+   "floorTiltOut": 0.09,
+   "wallP": 1.6,
+   "troughHalfWidthM": 120,
+   "troughGrade": 0.06,
+   "troughLengthM": 360,
+   "role": "east-facing cirque at the head of the High Tarn west inlet",
+   "rimM": 800,
+   "rimDistanceM": 330
+  },
+  {
+   "id": "C-S",
+   "name": "Hanging South Cirque",
+   "floorXZ": [
+    -470,
+    2500
+   ],
+   "floorM": 640,
+   "floorRadiusM": 100,
+   "outDir": [
+    0.25,
+    -1.0
+   ],
+   "floorTiltOut": 0.07,
+   "wallP": 1.6,
+   "troughHalfWidthM": 105,
+   "troughGrade": 0.2,
+   "troughLengthM": 520,
+   "role": "smaller south-facing hanging cirque below the summit, seen from Birchwood and the Central Valley",
+   "rimM": 920,
+   "rimDistanceM": 300
+  },
+  {
+   "id": "C-NW",
+   "name": "Vesttind north corrie",
+   "floorXZ": [
+    -1150,
+    2930
+   ],
+   "floorM": 380,
+   "floorRadiusM": 90,
+   "outDir": [
+    -0.35,
+    1.0
+   ],
+   "floorTiltOut": 0.07,
+   "wallP": 1.6,
+   "troughHalfWidthM": 95,
+   "troughGrade": 0.18,
+   "troughLengthM": 280,
+   "role": "small corrie under Vesttind; breaks the north-west flank",
+   "rimM": 760,
+   "rimDistanceM": 300
+  }
+ ],
+ "structure": {
+  "noiseSeed": 7,
+  "flankRibAmplitudeM": 3.5,
+  "flankRibWavelengthM": 280,
+  "crestRoughnessM": 4,
+  "crestRoughnessWavelengthM": 70,
+  "maxGradient": 2.0,
+  "smoothingSigmaCells": 1.2,
+  "flankVariation": 0.35,
+  "flankVariationWavelengthM": 230
+ },
+ "studyArea": {
+  "polygon": [
+   [
+    -1720,
+    2280
+   ],
+   [
+    -1540,
+    1700
+   ],
+   [
+    -1150,
+    1560
+   ],
+   [
+    -560,
+    1820
+   ],
+   [
+    60,
+    1760
+   ],
+   [
+    420,
+    1880
+   ],
+   [
+    600,
+    2160
+   ],
+   [
+    640,
+    2620
+   ],
+   [
+    560,
+    3000
+   ],
+   [
+    300,
+    3420
+   ],
+   [
+    -400,
+    3760
+   ],
+   [
+    -1100,
+    3600
+   ],
+   [
+    -1600,
+    3200
+   ],
+   [
+    -1780,
+    2700
+   ]
+  ],
+  "featherM": 220,
+  "coastFreezeM": 70,
+  "coastFeatherM": 160,
+  "protected": [
+   {
+    "id": "high-tarn",
+    "kind": "lake and shore",
+    "bufferM": 150,
+    "featherM": 120
+   },
+   {
+    "id": "tarn-inlet-w",
+    "kind": "channel corridor (from its source, 620 m)",
+    "bufferM": 40,
+    "featherM": 90
+   },
+   {
+    "id": "windward-gully",
+    "kind": "channel corridor",
+    "bufferM": 40,
+    "featherM": 150
+   },
+   {
+    "id": "water",
+    "kind": "every cell with a water surface keeps R1 height"
+   },
+   {
+    "id": "routes-outside",
+    "kind": "hero, tarn-ascent and other routes keep R1 height along their centrelines (60 m corridor)",
+    "bufferM": 60,
+    "featherM": 60
+   }
+  ]
+ },
+ "drainage": "Recomputed, not preserved. The great north cirque and the north-west corrie drain to the north coast. The Tarn Head Cirque drains east into the existing High Tarn west inlet source, so High Tarn keeps a fed catchment. The hanging south cirque drains south to the central trough approach. Dry closed depressions left by the authoring are removed with a priority flood (epsilon gradient) and reported.",
+ "route": "The R1 peak-ascent is kept unchanged as reference (peak-ascent-r1 in the viewer). The candidate alignment follows R1 to where it enters the edited terrain, then is regenerated on the B1 surface by a grade-constrained search: it climbs the windward Vestfjell plateau, crosses towards the Western Col, and reaches the summit by switchbacks on the south-west shoulder. The target hiking grade is 0.30; a declared summit scramble covers the last 140 m to the top.",
+ "base": {
+  "lowerM": 160,
+  "coreDistanceM": 500,
+  "coastTaperM": [
+   50,
+   400
+  ],
+  "ridgeReachM": 450,
+  "buttressReachM": 300,
+  "blendK": 30,
+  "carveK": 14,
+  "note": "base = R1 (smoothed in the core) - lowerM * core * coastTaper * southTaper * eastTaper; the lowering fades out toward the south and east edges, where the fixed R1 boundary lies downstream, so the lowland drains through it instead of ponding",
+  "baseSmoothCells": 14,
+  "summitKeepM": [
+   45,
+   140
+  ],
+  "farGrad": 0.25,
+  "raiseCapM": [
+   20,
+   140
+  ],
+  "raiseCapDecayM": 150,
+  "lowerTaperSouth": [
+   2000,
+   2350
+  ],
+  "lowerTaperEast": [
+   350,
+   0
+  ]
+ },
+ "summitNote": "S0 knots are authored at 892 m so that the composed, smooth-max-blended summit lands at about 900 m",
+ "revisionNote": "B1.1 = the one corrective iteration after the first Three.js review of B1.0: broader face structure (weaker, longer rib field, more smoothing), flank variation along every ridge, clearer summit hierarchy (Tarntind 768, Vesttind 724, Skar notch 690, Western Col opened), wider windward-gully feather."
+}

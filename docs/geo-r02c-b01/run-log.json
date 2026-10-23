@@ -1,0 +1,32 @@
+{
+ "branch": "feature/geo-r02c-b01-north-massif-rebaseline",
+ "base": "f1d58eb1a9508f5a7c287f06d7617a327cfabf13",
+ "authorization": "B0/B1 experimental candidate: derived North Peak design master, local ridge/saddle/crest changes including lowering, new shoulders, spurs and valley heads, regenerated local drainage, candidate peak-ascent realignment. No change to the A-R1 master, R1 generator or binaries, or earlier branches; no merge or deployment.",
+ "iterations": {
+  "B1.0": {
+   "terrainSha256": "9af6040ddab3602a2a739c9a2005b6898c35670a4d9ddea1135c59478a05cea5",
+   "design": "docs/geo-r02c-b01/iteration/north-massif-b1.0.json",
+   "captures": "docs/geo-r02c-b01/captures/b01-b1.0 (24 frames)"
+  },
+  "B1.1": {
+   "terrainSha256": "86e89c1e955ef44b252111d87cfce1194eae55efac479bb1a3b069966ce7323d",
+   "design": "tools/geo-r02c-b01/design/north-massif-b1.json",
+   "captures": "docs/geo-r02c-b01/captures/b01-b1 (24 frames)",
+   "note": "the one corrective iteration after the first renders"
+  }
+ },
+ "deterministic": true,
+ "determinism": "build.py --repeat 2 gave identical SHA-256 for B1.0 and for B1.1 (asserted by the tool)",
+ "pythonEnvironment": {
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "shapely": "2.2.0"
+ },
+ "generationSeconds": "about 120 s per build (single core), including the route search; validation about 90 s",
+ "runtime": "B1 is a float32 patch of 1.23 MB composed into the canonical grid at load and verified by its SHA-256, plus a 62 kB route file. The terrain mesh, LOD, materials and controller are unchanged, so there is no runtime cost beyond R1 at the same resolution.",
+ "tests": "npm test: 58/58 pass (50 existing, unmodified, + 8 new B01 tests)",
+ "testsPass": true,
+ "build": "npm run build (tsc --noEmit + vite build): pass",
+ "buildPass": true,
+ "captures": "72 real Three.js frames: M0, B1.0 and B1.1 at 12 identical cameras × clay sun A/B; SwiftShader WebGL, 1280 × 800"
+}

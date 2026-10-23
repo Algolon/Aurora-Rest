@@ -1,0 +1,50 @@
+{
+ "schema": "aurora-terrain-variants/1",
+ "family": "b01",
+ "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "variants": {
+  "m0": {
+   "id": "m0",
+   "label": "B01 M0 \u00b7 canonical R1 (empty variant)",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "changedCells": 0,
+   "patch": null
+  },
+  "b1": {
+   "id": "b1",
+   "label": "B1 \u00b7 authored North massif candidate",
+   "design": "tools/geo-r02c-b01/design/north-massif-b1.json",
+   "designSha256": "738cc1c662c7423778d5e02fe6d6c0a3bc4f1a208135ae6ce458fd5c29347057",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "9af6040ddab3602a2a739c9a2005b6898c35670a4d9ddea1135c59478a05cea5",
+   "changedCells": 204192,
+   "patch": {
+    "file": "b1.patch.f32",
+    "rows": [
+     96,
+     609
+    ],
+    "cols": [
+     310,
+     907
+    ],
+    "sha256": "61ace30c8cce5aff3ed0fd4482d4446232b8d46b9b5f9684517ec35cc9dd741a",
+    "bytes": 1229488
+   },
+   "stats": {
+    "maxRaiseM": 155.88,
+    "maxLoweringM": 196.62,
+    "changedHa": 326.71,
+    "changedOver1mHa": 265.83,
+    "summitM": 900.41,
+    "summitXZ": [
+     -520.0,
+     2768.0
+    ]
+   },
+   "routes": "routes.json",
+   "status": "experimental candidate; not art-approved; R1 unchanged"
+  }
+ }
+}
