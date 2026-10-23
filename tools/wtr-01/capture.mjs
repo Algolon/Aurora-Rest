@@ -77,6 +77,14 @@ try{
   console.log('WTR-01 capture PASS:',frames.length,'actual engine frames');
 }catch(e){
   console.error('WTR-01 CAPTURE FAILED',e);
-  await writeFile(folder+'/failure.json',JSON.stringify({base,errors,warnings,message:String(e),stack:e?.stack,completedFrames:frames.map(x=>x.file)},null,2)+'\\n');
+  await writeFile(folder+'/failure.json',JSON.stringify({base,errors,warnings,message:String(e),stack:e?.stack,completedFrames:frames.map(x=>x.file)},null,2)+'\n');
   process.exitCode=1;
-}finally{await browser.close();}
+
+}finally{
+  // Self-contained browsable review gallery distributed inside Actions artifact.
+  const escapeHtml=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  const cells=frames.map(f=>`<figure><a href="${escapeHtml(f.file)}"><img loading="lazy" src="${escapeHtml(f.file)}" alt="${escapeHtml(f.view+' '+f.quality+' '+f.timeSec+'s')}"></a><figcaption>${escapeHtml(f.view)} · ${escapeHtml(f.quality)} · sun ${escapeHtml(f.sun)} · t=${escapeHtml(f.timeSec)}s | ${f.state.calls} draws / ${Math.round(f.state.triangles/1000)}k tris</figcaption></figure>`).join('');
+  const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>WTR-01 genuine WebGL review</title><style>body{background:#102124;color:#e3eeee;font:14px system-ui;margin:2rem}h1{margin-bottom:0}.note{color:#b6c8c5}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:18px}figure{margin:0;border:1px solid #536569;background:#192d31}img{display:block;width:100%}figcaption{padding:12px}</style></head><body><h1>WTR-01 · Actual Three.js/WebGL review</h1><p class="note">Matched viewpoint screenshots from headless Chromium, not generated art. Art approval pending. Hardware performance not validated. Source run: ${escapeHtml(base)}.</p><div class="gallery">${cells}</div></body></html>`;
+  await writeFile(folder+'/index.html',html);
+  await browser.close();
+}
