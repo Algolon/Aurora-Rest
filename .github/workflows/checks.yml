@@ -1,21 +1,35 @@
-name: Source validation (no deployment)
+name: Recovered source validation (no deployment)
 on:
   push:
     branches: ['**']
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Install locked dependencies
         run: npm ci --no-audit --no-fund
-      - name: Test geography and traversal
-        run: npm test
-      - name: Typecheck and build
-        run: npm run build
+      - name: Install Chromium for actual WebGL checks
+        run: npx playwright install --with-deps chromium
+      - name: Verify current source and publish mandatory historical audit status
+        env:
+          RECOVERY_CI_OUTPUT: ${{ runner.temp }}/recovery-ci
+        run: node tools/recovery/current-ci.mjs
+      - name: Publish provenance and validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-provenance-${{ github.sha }}
+          path: ${{ runner.temp }}/recovery-ci/
+          if-no-files-found: error

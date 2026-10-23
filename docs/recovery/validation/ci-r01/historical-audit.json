@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "commit": "4d562187c10e64884e2193a0b09ced6eed3b4b08",
+  "assertion": "tests/env-p01.test.ts (executed verbatim)",
+  "exitCode": 1,
+  "reason": "Original POP Git commit/tree is unavailable; recovered-byte equivalence does not prove historical ancestry."
+}

@@ -1,5 +1,7 @@
 # RECOVERY-R02 validation
 
+> CI-R01 continuation: see [RECOVERY-CI-R01.md](RECOVERY-CI-R01.md) for current development CI, preserved original workflow bytes and the mandatory separate BLOCKED historical audit. Results below describe RECOVERY-R02.
+
 2026-10-23, local macOS ARM64, Node.js 24.16.0 / npm 11.13.0.
 
 | Check | Observed result |

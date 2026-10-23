@@ -1,0 +1,10 @@
+READY 151.0.7922.34 ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)
+VIEW valley-landscape
+VIEW forest-interior
+VIEW valley-landscape
+VIEW forest-interior
+VIEW valley-landscape
+VIEW forest-interior
+VIEW forest-landscape
+VIEW valley-landscape
+RECOVERY WEBGL PASS

@@ -1,5 +1,7 @@
 # RECOVERY-R02 — ENV-P01 durable source recovery
 
+> CI-R01 continuation: see [RECOVERY-CI-R01.md](RECOVERY-CI-R01.md) for current development CI, preserved original workflow bytes and the mandatory separate BLOCKED historical audit. Results below describe RECOVERY-R02.
+
 Date: 2026-10-23. Repository: https://github.com/Algolon/Aurora-Rest.
 
 Recovery branch: https://github.com/Algolon/Aurora-Rest/tree/recovery/env-p01-integrated-source.

@@ -1,0 +1,448 @@
+TAP version 13
+# Subtest: R1 canonical tiles share identical edge vertices and normals, without skirts
+ok 1 - R1 canonical tiles share identical edge vertices and normals, without skirts
+  ---
+  duration_ms: 18.793958
+  type: 'test'
+  ...
+# Subtest: R1 immutable source, generated digest and saddle/flank relationships
+ok 2 - R1 immutable source, generated digest and saddle/flank relationships
+  ---
+  duration_ms: 150.156292
+  type: 'test'
+  ...
+# Subtest: R1 clipped water stays above canonical terrain, exercising shoreline vertices
+ok 3 - R1 clipped water stays above canonical terrain, exercising shoreline vertices
+  ---
+  duration_ms: 133.747166
+  type: 'test'
+  ...
+# Subtest: GEO-R02B sampling matches actual mesh triangles at all LODs and boundaries
+ok 4 - GEO-R02B sampling matches actual mesh triangles at all LODs and boundaries
+  ---
+  duration_ms: 209.819125
+  type: 'test'
+  ...
+# Subtest: GEO-R02B world boundary sampling is finite and north-up grid maps correctly
+ok 5 - GEO-R02B world boundary sampling is finite and north-up grid maps correctly
+  ---
+  duration_ms: 0.218917
+  type: 'test'
+  ...
+# Subtest: protected R1 files and canonical artifacts are byte-identical to the P0 baseline manifest
+ok 6 - protected R1 files and canonical artifacts are byte-identical to the P0 baseline manifest
+  ---
+  duration_ms: 191.523333
+  type: 'test'
+  ...
+# Subtest: no dry closed depressions on the canonical 4 m grid (ocean, wet cells and border drain)
+ok 7 - no dry closed depressions on the canonical 4 m grid (ocean, wet cells and border drain)
+  ---
+  duration_ms: 1484.412291
+  type: 'test'
+  ...
+# Subtest: channel water surfaces descend within the proposed 5 cm tolerance and stay finite along every channel
+ok 8 - channel water surfaces descend within the proposed 5 cm tolerance and stay finite along every channel
+  ---
+  duration_ms: 32.388833
+  type: 'test'
+  ...
+# Subtest: review cameras are on dry ground, consistent and do not replace R1 views
+ok 9 - review cameras are on dry ground, consistent and do not replace R1 views
+  ---
+  duration_ms: 0.638791
+  type: 'test'
+  ...
+# Subtest: review mode is opt-in and the A1 diagnostic window is internally consistent
+ok 10 - review mode is opt-in and the A1 diagnostic window is internally consistent
+  ---
+  duration_ms: 1.009333
+  type: 'test'
+  ...
+# Subtest: MAT-01 changes no protected GEO-R02B, WORLD, water, route or P0 file (P0 git-blob baseline)
+ok 11 - MAT-01 changes no protected GEO-R02B, WORLD, water, route or P0 file (P0 git-blob baseline)
+  ---
+  duration_ms: 55.383583
+  type: 'test'
+  ...
+# Subtest: classification never mutates the canonical heightfield or water surface
+ok 12 - classification never mutates the canonical heightfield or water surface
+  ---
+  duration_ms: 11.806833
+  type: 'test'
+  ...
+# Subtest: classification is deterministic and matches the recorded golden hash
+ok 13 - classification is deterministic and matches the recorded golden hash
+  ---
+  duration_ms: 1876.316417
+  type: 'test'
+  ...
+# Subtest: every lattice node has weights summing to exactly 255 and valid attributes
+ok 14 - every lattice node has weights summing to exactly 255 and valid attributes
+  ---
+  duration_ms: 10.476583
+  type: 'test'
+  ...
+# Subtest: island composition and named places are ecologically plausible
+ok 15 - island composition and named places are ecologically plausible
+  ---
+  duration_ms: 104.593541
+  type: 'test'
+  ...
+# Subtest: CPU query: bilinear lattice sampling, normalised weights, exact at nodes
+ok 16 - CPU query: bilinear lattice sampling, normalised weights, exact at nodes
+  ---
+  duration_ms: 2.85675
+  type: 'test'
+  ...
+# Subtest: material identity is a function of world position only: tiling and LOD cannot change it
+ok 17 - material identity is a function of world position only: tiling and LOD cannot change it
+  ---
+  duration_ms: 13.830708
+  type: 'test'
+  ...
+# Subtest: quantisation preserves exact sums and degenerate inputs
+ok 18 - quantisation preserves exact sums and degenerate inputs
+  ---
+  duration_ms: 0.170667
+  type: 'test'
+  ...
+# Subtest: rules declare provenance for every input and reference existing source data
+ok 19 - rules declare provenance for every input and reference existing source data
+  ---
+  duration_ms: 0.18
+  type: 'test'
+  ...
+# Subtest: material definitions are complete, ordered and palettes are well formed
+ok 20 - material definitions are complete, ordered and palettes are well formed
+  ---
+  duration_ms: 0.362375
+  type: 'test'
+  ...
+# Subtest: detail textures are deterministic, tileable and within expected tone ranges
+ok 21 - detail textures are deterministic, tileable and within expected tone ranges
+  ---
+  duration_ms: 48.578708
+  type: 'test'
+  ...
+# Subtest: GPU resources: shared, reference counted, fully disposed and re-creatable
+ok 22 - GPU resources: shared, reference counted, fully disposed and re-creatable
+  ---
+  duration_ms: 2.90225
+  type: 'test'
+  ...
+# Subtest: actual named geographic anchors are present and dry
+ok 23 - actual named geographic anchors are present and dry
+  ---
+  duration_ms: 1.694
+  type: 'test'
+  ...
+# Subtest: seed and generation order reproduce identical complete descriptors
+ok 24 - seed and generation order reproduce identical complete descriptors
+  ---
+  duration_ms: 350.95925
+  type: 'test'
+  ...
+# Subtest: canonical heights, wet surface and class-specific shoreline/tread/elevation/slope constraints
+ok 25 - canonical heights, wet surface and class-specific shoreline/tread/elevation/slope constraints
+  ---
+  duration_ms: 79.048833
+  type: 'test'
+  ...
+# Subtest: spacing holds across shared chunk borders for trees, rocks and cover
+ok 26 - spacing holds across shared chunk borders for trees, rocks and cover
+  ---
+  duration_ms: 797.685709
+  type: 'test'
+  ...
+# Subtest: world candidate identity and transforms survive different chunk size (ownership only changes)
+ok 27 - world candidate identity and transforms survive different chunk size (ownership only changes)
+  ---
+  duration_ms: 24.3405
+  type: 'test'
+  ...
+# Subtest: future heightfield adapter requeries Y and rejects newly flooded terrain
+ok 28 - future heightfield adapter requeries Y and rejects newly flooded terrain
+  ---
+  duration_ms: 43.477541
+  type: 'test'
+  ...
+# Subtest: load/unload, reversed targets, teleport and cleanup retain bounded resources and reproduce IDs
+ok 29 - load/unload, reversed targets, teleport and cleanup retain bounded resources and reproduce IDs
+  ---
+  duration_ms: 313.480125
+  type: 'test'
+  ...
+# Subtest: pending targets cancel; failed attachment is retryable without retained manager state
+ok 30 - pending targets cancel; failed attachment is retryable without retained manager state
+  ---
+  duration_ms: 67.7685
+  type: 'test'
+  ...
+# Subtest: community definitions use only available families and mark absent plants future
+ok 31 - community definitions use only available families and mark absent plants future
+  ---
+  duration_ms: 0.137208
+  type: 'test'
+  ...
+# Subtest: canonical geography, water, prior viewer and P0 artifacts unchanged
+ok 32 - canonical geography, water, prior viewer and P0 artifacts unchanged
+  ---
+  duration_ms: 46.300291
+  type: 'test'
+  ...
+# Subtest: invalid inputs fail explicitly
+ok 33 - invalid inputs fail explicitly
+  ---
+  duration_ms: 0.275917
+  type: 'test'
+  ...
+# Subtest: canonical clipped water triangles distinguish inland/ocean and prevent wet anchors
+ok 34 - canonical clipped water triangles distinguish inland/ocean and prevent wet anchors
+  ---
+  duration_ms: 15.852
+  type: 'test'
+  ...
+# Subtest: explicit glade and vista controls preserve open space without removing ground cover
+ok 35 - explicit glade and vista controls preserve open space without removing ground cover
+  ---
+  duration_ms: 39.406958
+  type: 'test'
+  ...
+# Subtest: pinned source modules and material/shadow code remain exact except explicit grass compatibility extension
+ok 36 - pinned source modules and material/shadow code remain exact except explicit grass compatibility extension
+  ---
+  duration_ms: 13.205375
+  type: 'test'
+  ...
+# Subtest: original POP-01 placement and canonical geography remain byte-identical
+ok 37 - original POP-01 placement and canonical geography remain byte-identical
+  ---
+  duration_ms: 49.023875
+  type: 'test'
+  ...
+# Subtest: all 26 source geometry configurations retain attribute/index fingerprints and scale
+ok 38 - all 26 source geometry configurations retain attribute/index fingerprints and scale
+  ---
+  duration_ms: 293.809
+  type: 'test'
+  ...
+# Subtest: source grass full orientation composes terrain normal then yaw, without modifying geometry
+ok 39 - source grass full orientation composes terrain normal then yaw, without modifying geometry
+  ---
+  duration_ms: 1.76125
+  type: 'test'
+  ...
+# Subtest: source default orientation remains upright and stable fade key is independent of page registration order
+ok 40 - source default orientation remains upright and stable fade key is independent of page registration order
+  ---
+  duration_ms: 0.248292
+  type: 'test'
+  ...
+# Subtest: production seeds map explicitly; unsupported variants and seeds fail
+ok 41 - production seeds map explicitly; unsupported variants and seeds fail
+  ---
+  duration_ms: 0.488708
+  type: 'test'
+  ...
+# Subtest: upright grass policy rejects steep slopes; normal policy retains them and clips rock footprint
+ok 42 - upright grass policy rejects steep slopes; normal policy retains them and clips rock footprint
+  ---
+  duration_ms: 0.48125
+  type: 'test'
+  ...
+# Subtest: real source batches detach completely and preserve shared geometry/material ownership after partial failure
+ok 43 - real source batches detach completely and preserve shared geometry/material ownership after partial failure
+  ---
+  duration_ms: 5.022084
+  type: 'test'
+  ...
+# Subtest: LOD source thresholds and hysteresis remain unchanged
+ok 44 - LOD source thresholds and hysteresis remain unchanged
+  ---
+  duration_ms: 0.12825
+  type: 'test'
+  ...
+# Subtest: rock exclusion uses supplied neighboring-page footprints, without changing grass descriptors
+ok 45 - rock exclusion uses supplied neighboring-page footprints, without changing grass descriptors
+  ---
+  duration_ms: 0.420167
+  type: 'test'
+  ...
+# Subtest: 6 m cross-page halo conservatively covers maximum current source rock and grass footprint
+ok 46 - 6 m cross-page halo conservatively covers maximum current source rock and grass footprint
+  ---
+  duration_ms: 6.527167
+  type: 'test'
+  ...
+# Subtest: generation chunks aggregate into independent pages, including negative coordinates
+ok 47 - generation chunks aggregate into independent pages, including negative coordinates
+  ---
+  duration_ms: 2.557292
+  type: 'test'
+  ...
+# Subtest: detach removes registrations after coalesced rebuild; empty pages immediately release
+ok 48 - detach removes registrations after coalesced rebuild; empty pages immediately release
+  ---
+  duration_ms: 0.189209
+  type: 'test'
+  ...
+# Subtest: replacement transforms do not create stale registrations and re-entry is bounded
+ok 49 - replacement transforms do not create stale registrations and re-entry is bounded
+  ---
+  duration_ms: 4.774125
+  type: 'test'
+  ...
+# Subtest: failed page construction or update leaves the previous hidden page owned, supports retry
+ok 50 - failed page construction or update leaves the previous hidden page owned, supports retry
+  ---
+  duration_ms: 0.180375
+  type: 'test'
+  ...
+# Subtest: worker sends one near-first job, cancels stale work, and never attaches a former target
+ok 51 - worker sends one near-first job, cancels stale work, and never attaches a former target
+  ---
+  duration_ms: 0.951125
+  type: 'test'
+  ...
+# Subtest: controlled MAT imports retain original file hashes
+ok 52 - controlled MAT imports retain original file hashes
+  ---
+  duration_ms: 6.174458
+  type: 'test'
+  ...
+# Subtest: POP mesh and MAT adapter agree on geographic positions and canonical normals
+ok 53 - POP mesh and MAT adapter agree on geographic positions and canonical normals
+  ---
+  duration_ms: 37.169542
+  type: 'test'
+  ...
+# Subtest: MAT resources support balanced ownership and repeated release/recreate
+ok 54 - MAT resources support balanced ownership and repeated release/recreate
+  ---
+  duration_ms: 36.241292
+  type: 'test'
+  ...
+# Subtest: walking height matches real Three.js terrain triangles, including tile edges and diagonals
+ok 55 - walking height matches real Three.js terrain triangles, including tile edges and diagonals
+  ---
+  duration_ms: 140.392834
+  type: 'test'
+  ...
+# Subtest: all route segments are dry and remain under 36% grade on rendered ground at 1 m samples
+ok 56 - all route segments are dry and remain under 36% grade on rendered ground at 1 m samples
+  ---
+  duration_ms: 438.367
+  type: 'test'
+  ...
+# Subtest: the actual walking collision function traverses every authored route
+ok 57 - the actual walking collision function traverses every authored route
+  ---
+  duration_ms: 894.039792
+  type: 'test'
+  ...
+# Subtest: lake entry, cliff descent and cabin entry are blocked, while the bridge is walkable
+ok 58 - lake entry, cliff descent and cabin entry are blocked, while the bridge is walkable
+  ---
+  duration_ms: 53.790417
+  type: 'test'
+  ...
+# Subtest: reference region relationships and named spawn surfaces remain coherent
+ok 59 - reference region relationships and named spawn surfaces remain coherent
+  ---
+  duration_ms: 0.318459
+  type: 'test'
+  ...
+# Subtest: authored coastline has finite inlets and detached offshore land
+ok 60 - authored coastline has finite inlets and detached offshore land
+  ---
+  duration_ms: 0.232167
+  type: 'test'
+  ...
+# Subtest: all catchments descend, with their channel beds below water at interior controls
+ok 61 - all catchments descend, with their channel beds below water at interior controls
+  ---
+  duration_ms: 0.19025
+  type: 'test'
+  ...
+# Subtest: seeded noise is deterministic
+ok 62 - seeded noise is deterministic
+  ---
+  duration_ms: 1.017542
+  type: 'test'
+  ...
+# Subtest: ocean is below sea level at distant positions
+ok 63 - ocean is below sea level at distant positions
+  ---
+  duration_ms: 0.144417
+  type: 'test'
+  ...
+# Subtest: north mountain is above southern lowlands
+ok 64 - north mountain is above southern lowlands
+  ---
+  duration_ms: 0.134833
+  type: 'test'
+  ...
+# Subtest: macro world contains coast and inland
+ok 65 - macro world contains coast and inland
+  ---
+  duration_ms: 0.065458
+  type: 'test'
+  ...
+# Subtest: river authored levels strictly descend from alpine source to sea
+ok 66 - river authored levels strictly descend from alpine source to sea
+  ---
+  duration_ms: 0.082542
+  type: 'test'
+  ...
+# Subtest: river nearest segment distance zero at interior controls
+ok 67 - river nearest segment distance zero at interior controls
+  ---
+  duration_ms: 0.12575
+  type: 'test'
+  ...
+# Subtest: landmark elevations and classifications are finite
+ok 68 - landmark elevations and classifications are finite
+  ---
+  duration_ms: 1.904375
+  type: 'test'
+  ...
+# Subtest: macro terrain range is finite over a coarse sampling grid
+ok 69 - macro terrain range is finite over a coarse sampling grid
+  ---
+  duration_ms: 8.325041
+  type: 'test'
+  ...
+# Subtest: ocean surrounds all four boundaries of the world mesh
+ok 70 - ocean surrounds all four boundaries of the world mesh
+  ---
+  duration_ms: 2.361
+  type: 'test'
+  ...
+# Subtest: walk trail macro anchors lie on dry land
+ok 71 - walk trail macro anchors lie on dry land
+  ---
+  duration_ms: 4.823083
+  type: 'test'
+  ...
+# Subtest: river bed is below surface water inland
+ok 72 - river bed is below surface water inland
+  ---
+  duration_ms: 0.277792
+  type: 'test'
+  ...
+# Subtest: hiking route segments remain on land at 20 m intervals
+ok 73 - hiking route segments remain on land at 20 m intervals
+  ---
+  duration_ms: 16.303917
+  type: 'test'
+  ...
+1..73
+# tests 73
+# suites 0
+# pass 73
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5398.768708

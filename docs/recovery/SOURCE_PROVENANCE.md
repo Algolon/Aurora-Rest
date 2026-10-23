@@ -1,5 +1,7 @@
 # RECOVERY-R02 source provenance
 
+> CI-R01 continuation: see [RECOVERY-CI-R01.md](RECOVERY-CI-R01.md) for current development CI, preserved original workflow bytes and the mandatory separate BLOCKED historical audit. Results below describe RECOVERY-R02.
+
 This preserves original source bytes, not the unavailable original POP Git history. All 558 files match the source snapshot manifest. Path-based classifications describe their role; they do not establish an unavailable author's commit.
 
 ## Independently retrievable references

@@ -1,0 +1,1 @@
+PASS: 558/558 source files, original archive, nested snapshot, ZIP CRC and safe paths

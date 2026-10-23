@@ -10,7 +10,9 @@ def safe(z):
         p = PurePosixPath(i.filename)
         assert not p.is_absolute() and ".." not in p.parts and not stat.S_ISLNK(i.external_attr >> 16), i.filename
 for f in m["files"]:
-    b = Path(f["path"]).read_bytes()
+    # Original workflow bytes are preserved separately from the active CI configuration.
+    path = "docs/recovery/original/checks.yml" if f["path"] == ".github/workflows/checks.yml" else f["path"]
+    b = Path(path).read_bytes()
     assert len(b) == f["size"] and sha(b) == f["sha256"], f["path"]
 a = Path(m["archive"]["path"]).read_bytes()
 assert len(a) == m["archive"]["size"] and sha(a) == m["archive"]["sha256"]
@@ -25,4 +27,4 @@ with zipfile.ZipFile(io.BytesIO(a)) as z:
         assert set(inner.namelist()) == {"Aurora-Rest/" + f["path"] for f in m["files"]}
         for f in m["files"]:
             assert sha(inner.read("Aurora-Rest/" + f["path"])) == f["sha256"], f["path"]
-print(f"PASS: {len(m['files'])}/{len(m['files'])} source files, original archive, nested snapshot, ZIP CRC and safe paths")
+print(f"PASS: {len(m['files'])}/{len(m['files'])} original file contents (557 original paths + preserved original workflow), original archive, nested snapshot, ZIP CRC and safe paths")

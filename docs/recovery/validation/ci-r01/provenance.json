@@ -1,0 +1,40 @@
+{
+  "checkpoint": "74eeffe7a5c7e010bd6bad23e296064fdeee67fa",
+  "head": "74eeffe7a5c7e010bd6bad23e296064fdeee67fa",
+  "currentSource": "PASS",
+  "checks": [
+    {
+      "name": "source-integrity",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "functional-tests",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "browser",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "historical": {
+    "status": "BLOCKED",
+    "commit": "4d562187c10e64884e2193a0b09ced6eed3b4b08",
+    "assertion": "tests/env-p01.test.ts (executed verbatim)",
+    "exitCode": 1,
+    "reason": "Original POP Git commit/tree is unavailable; recovered-byte equivalence does not prove historical ancestry."
+  },
+  "originalBytes": "558 original files retained; only original CI workflow relocated verbatim to docs/recovery/original/checks.yml"
+}
