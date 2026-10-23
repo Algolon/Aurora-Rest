@@ -1,0 +1,33 @@
+name: ROCK-R01-G02R organic plane refinement / genuine WebGL art review
+on:
+  push:
+    branches: [art/rock-r01-g02r-organic-plane-refinement]
+  workflow_dispatch:
+jobs:
+  authored-panel-study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Protect original G1, G01/G01R/G02, A2, F01 and island/world sources
+        run: |
+          git diff --exit-code 69dfc8fd58be58c588d007d3f962c7df9e20be5a HEAD -- src art rocks/f01 rocks/r01/g02NonConvexCore.ts rocks/r01/g02Geometry.ts rocks/r01/g02-showroom.ts rocks/r01/sculptCore.ts rocks/r01/geometry.ts tests/rock-r01-g02.test.ts tests/rock-r01-g01.test.ts tests/rock-r01-g01r.test.ts ../../src
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.g02r.config.ts
+      - name: Genuine G1/G02/G02R neutral, wireframe, T1 and nature WebGL review
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-g02r.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rock-r01-g02r-genuine-webgl-art-review
+          path: asset-lab/birch/g02r-evidence/
+          if-no-files-found: warn
+# No island integration, original branch writes, art approval, merge or deploy.
