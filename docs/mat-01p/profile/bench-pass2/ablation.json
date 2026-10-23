@@ -1,0 +1,307 @@
+{
+ "tool": "tools/mat-01p/profile.mjs",
+ "url": "http://127.0.0.1:4331/mat-01.html",
+ "browser": "141.0.7390.37",
+ "frames": 5,
+ "sizes": [
+  [
+   400,
+   250
+  ],
+  [
+   1600,
+   1000
+  ]
+ ],
+ "views": [
+  "tr-forest-meadow"
+ ],
+ "geometry": "All variants render the same 16 m LOD mesh (existing MAT-01 LOD path, focus placed off-island) so vertex cost is small and constant; material weights are LOD-invariant (MAT-01 diff ≤ 3/255).",
+ "method": "Synchronous render + 1-px readPixels per frame, median of N after one warm-up. Fragment cost = slope between two resolutions (ns/pixel); fixed cost = intercept (ms). SwiftShader software rasterisation: relative costs only.",
+ "variants": [
+  {
+   "id": "full",
+   "label": "MAT-01 unchanged",
+   "edits": [],
+   "editMatches": {},
+   "profile": "high",
+   "noise": "procedural",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 3126.7999999998137,
+       "samples": [
+        3176.3,
+        3100.7,
+        3104,
+        3207.8,
+        3126.8
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 10070.200000000186,
+       "samples": [
+        10236,
+        10915.8,
+        10017.7,
+        10070.2,
+        9464.3
+       ]
+      }
+     ],
+     "nsPerPixel": 4628.9,
+     "fixedMs": 2663.9,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "no-fbm",
+   "label": "every fBm → constant (upper bound of noise savings)",
+   "edits": [
+    "fbmBody"
+   ],
+   "editMatches": {
+    "fbmBody": 1
+   },
+   "profile": "high",
+   "noise": "procedural",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2670.899999999441,
+       "samples": [
+        2698.4,
+        2670.9,
+        2585.6,
+        2638.6,
+        2680.8
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 8522.100000000559,
+       "samples": [
+        8625.2,
+        8981.5,
+        8522.1,
+        8060.4,
+        7936
+       ]
+      }
+     ],
+     "nsPerPixel": 3900.8,
+     "fixedMs": 2280.8,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "mobile",
+   "label": "Mobile profile (8 m map, 256² textures, no meso/anti-tiling/triplanar)",
+   "edits": [],
+   "editMatches": {},
+   "profile": "mobile",
+   "noise": "procedural",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1382.800000000745,
+       "samples": [
+        1381.3,
+        1382.8,
+        1354.5,
+        1413.9,
+        1416.1
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 4915.4000000003725,
+       "samples": [
+        4915.4,
+        4679.5,
+        4831.8,
+        4998.2,
+        4938.2
+       ]
+      }
+     ],
+     "nsPerPixel": 2355.1,
+     "fixedMs": 1147.3,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "mobile-no-fbm",
+   "label": "Mobile profile + every fBm → constant",
+   "edits": [
+    "fbmBody"
+   ],
+   "editMatches": {
+    "fbmBody": 1
+   },
+   "profile": "mobile",
+   "noise": "procedural",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1112.2000000001863,
+       "samples": [
+        1195.7,
+        1103.8,
+        1172.2,
+        1112.2,
+        1075
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 3904.9000000003725,
+       "samples": [
+        3985.6,
+        3891.4,
+        3871,
+        4116.6,
+        3904.9
+       ]
+      }
+     ],
+     "nsPerPixel": 1861.8,
+     "fixedMs": 926,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "baked",
+   "label": "High + baked noise candidate",
+   "edits": [],
+   "editMatches": {},
+   "profile": "high",
+   "noise": "baked",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2835.9000000003725,
+       "samples": [
+        2942.4,
+        3042.9,
+        2809.1,
+        2835.9,
+        2766.1
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 9415.700000000186,
+       "samples": [
+        9415.7,
+        9548.8,
+        9331.5,
+        9347.2,
+        9776.6
+       ]
+      }
+     ],
+     "nsPerPixel": 4386.5,
+     "fixedMs": 2397.2,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "mobile-baked",
+   "label": "Mobile + baked noise candidate",
+   "edits": [],
+   "editMatches": {},
+   "profile": "mobile",
+   "noise": "baked",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1402.8999999994412,
+       "samples": [
+        1448.1,
+        1402.9,
+        1349.2,
+        1353.1,
+        1467.1
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 4844.399999999441,
+       "samples": [
+        4886.9,
+        4662.3,
+        5114.2,
+        4678.2,
+        4844.4
+       ]
+      }
+     ],
+     "nsPerPixel": 2294.3,
+     "fixedMs": 1173.5,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  }
+ ]
+}

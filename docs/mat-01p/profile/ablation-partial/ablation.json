@@ -1,0 +1,450 @@
+{
+ "tool": "tools/mat-01p/profile.mjs",
+ "url": "http://127.0.0.1:4330/mat-01.html",
+ "browser": "141.0.7390.37",
+ "frames": 3,
+ "sizes": [
+  [
+   400,
+   250
+  ],
+  [
+   1600,
+   1000
+  ]
+ ],
+ "views": [
+  "tr-forest-meadow",
+  "m02-elevated",
+  "valley-walk"
+ ],
+ "geometry": "All variants render the same 16 m LOD mesh (existing MAT-01 LOD path, focus placed off-island) so vertex cost is small and constant; material weights are LOD-invariant (MAT-01 diff ≤ 3/255).",
+ "method": "Synchronous render + 1-px readPixels per frame, median of N after one warm-up. Fragment cost = slope between two resolutions (ns/pixel); fixed cost = intercept (ms). SwiftShader software rasterisation: relative costs only.",
+ "variants": [
+  {
+   "id": "full",
+   "label": "MAT-01 unchanged",
+   "edits": [],
+   "editMatches": {},
+   "profile": "high",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 3100.899999999907,
+       "samples": [
+        3149,
+        3059.3,
+        3100.9
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 10673.599999999627,
+       "samples": [
+        10127.8,
+        11313.1,
+        10673.6
+       ]
+      }
+     ],
+     "nsPerPixel": 5048.5,
+     "fixedMs": 2596.1,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    },
+    "m02-elevated": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1838.8999999999069,
+       "samples": [
+        1932.1,
+        1761.2,
+        1838.9
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 7197.399999999907,
+       "samples": [
+        7234.4,
+        7197.4,
+        7091.9
+       ]
+      }
+     ],
+     "nsPerPixel": 3572.3,
+     "fixedMs": 1481.7,
+     "calls": 87,
+     "triangles": 235107,
+     "shaderErrors": 0
+    },
+    "valley-walk": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2846.8000000002794,
+       "samples": [
+        2846.8,
+        2912.9,
+        2812
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 10853.200000000186,
+       "samples": [
+        10877.5,
+        10796.4,
+        10853.2
+       ]
+      }
+     ],
+     "nsPerPixel": 5337.6,
+     "fixedMs": 2313,
+     "calls": 84,
+     "triangles": 230757,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "no-patch-noise",
+   "label": "patch fBm ×2 → constant",
+   "edits": [
+    "patch"
+   ],
+   "editMatches": {
+    "patch": 1
+   },
+   "profile": "high",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 3063.2000000001863,
+       "samples": [
+        2962.7,
+        3063.2,
+        3079.2
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 9442.5,
+       "samples": [
+        9832.9,
+        9442.5,
+        9149.7
+       ]
+      }
+     ],
+     "nsPerPixel": 4252.9,
+     "fixedMs": 2637.9,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    },
+    "m02-elevated": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1819.7999999998137,
+       "samples": [
+        1887.2,
+        1779.1,
+        1819.8
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 6674.199999999721,
+       "samples": [
+        6728,
+        6674.2,
+        6595.6
+       ]
+      }
+     ],
+     "nsPerPixel": 3236.3,
+     "fixedMs": 1496.2,
+     "calls": 87,
+     "triangles": 235107,
+     "shaderErrors": 0
+    },
+    "valley-walk": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2439.5,
+       "samples": [
+        2439.5,
+        2349.9,
+        2496.1
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 10730.299999999814,
+       "samples": [
+        10320.6,
+        10730.3,
+        10749.9
+       ]
+      }
+     ],
+     "nsPerPixel": 5527.2,
+     "fixedMs": 1886.8,
+     "calls": 84,
+     "triangles": 230757,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "no-ecotone-noise",
+   "label": "ecotone fBm → constant",
+   "edits": [
+    "ecotone"
+   ],
+   "editMatches": {
+    "ecotone": 1
+   },
+   "profile": "high",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2801,
+       "samples": [
+        2833.5,
+        2745.9,
+        2801
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 9603.100000000093,
+       "samples": [
+        9843.1,
+        9484.2,
+        9603.1
+       ]
+      }
+     ],
+     "nsPerPixel": 4534.7,
+     "fixedMs": 2347.5,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    },
+    "m02-elevated": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1721,
+       "samples": [
+        1719.6,
+        1727.7,
+        1721
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 7042.200000000186,
+       "samples": [
+        6611.4,
+        7061,
+        7042.2
+       ]
+      }
+     ],
+     "nsPerPixel": 3547.5,
+     "fixedMs": 1366.3,
+     "calls": 87,
+     "triangles": 235107,
+     "shaderErrors": 0
+    },
+    "valley-walk": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2479.5,
+       "samples": [
+        2479.5,
+        2463.3,
+        2497.3
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 10228,
+       "samples": [
+        10164.4,
+        10229.6,
+        10228
+       ]
+      }
+     ],
+     "nsPerPixel": 5165.7,
+     "fixedMs": 1962.9,
+     "calls": 84,
+     "triangles": 230757,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "no-meso-noise",
+   "label": "meso fBm → constant",
+   "edits": [
+    "meso"
+   ],
+   "editMatches": {
+    "meso": 1
+   },
+   "profile": "high",
+   "views": {
+    "tr-forest-meadow": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2795,
+       "samples": [
+        2829.8,
+        2795,
+        2760.5
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 9471.600000000093,
+       "samples": [
+        9117.4,
+        9471.6,
+        9785.2
+       ]
+      }
+     ],
+     "nsPerPixel": 4451.1,
+     "fixedMs": 2349.9,
+     "calls": 125,
+     "triangles": 290207,
+     "shaderErrors": 0
+    },
+    "m02-elevated": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 1669.3999999999069,
+       "samples": [
+        1719,
+        1651.8,
+        1669.4
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 6486.799999999814,
+       "samples": [
+        6657.2,
+        6486.8,
+        6438.4
+       ]
+      }
+     ],
+     "nsPerPixel": 3211.6,
+     "fixedMs": 1348.2,
+     "calls": 87,
+     "triangles": 235107,
+     "shaderErrors": 0
+    },
+    "valley-walk": {
+     "points": [
+      {
+       "w": 400,
+       "h": 250,
+       "pixels": 100000,
+       "ms": 2507.3000000002794,
+       "samples": [
+        2507.3,
+        2595.6,
+        2442.4
+       ]
+      },
+      {
+       "w": 1600,
+       "h": 1000,
+       "pixels": 1600000,
+       "ms": 9936.69999999972,
+       "samples": [
+        10083.6,
+        9835.4,
+        9936.7
+       ]
+      }
+     ],
+     "nsPerPixel": 4952.9,
+     "fixedMs": 2012,
+     "calls": 84,
+     "triangles": 230757,
+     "shaderErrors": 0
+    }
+   },
+   "errors": []
+  }
+ ],
+ "failure": "page.evaluate: Target page, context or browser has been closed\n    at /home/user/aurora-rest/tools/mat-01p/profile.mjs:75:24"
+}
