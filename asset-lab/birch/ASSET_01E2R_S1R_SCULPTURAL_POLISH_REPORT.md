@@ -156,4 +156,11 @@ The limitation is the chosen authored plane composition and this automation-dire
 
 ## 11. Exact checkpoint and CI
 
-Branch: `art/asset-01e2r-s1r-blender-sculptural-polish`. Pre-edit diagnosis commit: `65400f7697795818809ec9e1b26c2ba0057f496f`. The exact final asset implementation SHA, observed CI result and visual artifact links are recorded in the verification addendum after the authorized push. Final branch-tip SHA is supplied in the handoff. Native Blender/art validation remains distinct from static CI.
+Branch: `art/asset-01e2r-s1r-blender-sculptural-polish`. Pre-edit diagnosis commit: `65400f7697795818809ec9e1b26c2ba0057f496f`. **Exact final asset implementation SHA:** [`a5b849ec2d31f925db8e7c330ae814e30b1d0085`](https://github.com/Algolon/Aurora-Rest/commit/a5b849ec2d31f925db8e7c330ae814e30b1d0085).
+
+**Observed CI:** [Run 39960077898 — SUCCESS](https://github.com/Algolon/Aurora-Rest/actions/runs/39960077898). Both `static-export-and-webgl` and `independent-protected-nature-parity` completed successfully. Read-back logs confirm **50 tests / 50 pass / 0 fail**, protected-file guards, both Vite builds, **S1R REAL GLB WEBGL PASS 37 images**, independent birch/pine/grass/production-rock geometry parity and all four grass material variants at **0 pixel differences**.
+
+- [Actual CI WebGL images and metrics — artifact 12503939739](https://github.com/Algolon/Aurora-Rest/actions/runs/39960077898/artifacts/12503939739).
+- [Independent grass material pixel-parity images/results — artifact 12503633310](https://github.com/Algolon/Aurora-Rest/actions/runs/39960077898/artifacts/12503633310).
+
+The follow-up documentation commit records these observed results only and skips duplicate CI. All model, script, renderer, test and visual-evidence files remain byte-identical to this validated implementation SHA. Final branch-tip SHA is supplied in the handoff. Native Blender editing/render validation and the conditional artistic recommendation remain distinct from static CI. The canonical WORLD checkout and original S1 checkout remain clean and unchanged.
