@@ -25,6 +25,18 @@ app.innerHTML=`<canvas id="world" aria-label="Three.js canonical island water re
 const canvas=document.querySelector<HTMLCanvasElement>('#world')!;
 const error=document.querySelector<HTMLDivElement>('#error')!;
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,logarithmicDepthBuffer:true,powerPreference:'high-performance'});
+const shaderErrors:string[]=[];
+renderer.debug.checkShaderErrors=true;
+renderer.debug.onShaderError=(gl,program,vertexShader,fragmentShader)=>{
+  const details=[
+    'WTR-01 GLSL compilation/link error',
+    gl.getProgramInfoLog(program),
+    'VERTEX: '+gl.getShaderInfoLog(vertexShader),
+    'FRAGMENT: '+gl.getShaderInfoLog(fragmentShader)
+  ].filter(Boolean).join('\\n');
+  shaderErrors.push(details);
+  console.error(details);
+};
 renderer.setPixelRatio(Math.min(1.5,window.devicePixelRatio||1));
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;
@@ -197,10 +209,38 @@ try {
       camera:camera.position.toArray(),canonicalCameraXZ:view.sourceXZ,
       calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
       geometries:renderer.info.memory.geometries,
+      programs:renderer.info.programs?.length??0,
+      shaderErrors:[...shaderErrors],
       renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER),
       canonicalTerrainSha:data.meta.terrainSha256,classified:classified.counts,
       classifiedTriangles:classified.triangles,waterVertexCount:waterPositions.length/3,
       highTarnLevel:data.lakes.find(l=>/high[\s_-]*tarn/i.test(l.id+' '+l.name))?.level};
+  }
+  // Offscreen pixel-difference test: compare matched canonical terrain with
+  // and without water at a fixed viewpoint. No synthetic screenshot accepted.
+  // This is a visibility proof, NOT an aesthetic assessment.
+  function measureWaterPixels(){
+    const width=256,height=144;
+    const target=new THREE.WebGLRenderTarget(width,height,{depthBuffer:true,stencilBuffer:false});
+    const before=new Uint8Array(width*height*4),after=new Uint8Array(width*height*4);
+    const oldOcean=ocean.visible,oldInland=inland.visible;
+    try{
+      ocean.visible=false;inland.visible=false;
+      renderer.setRenderTarget(target);renderer.render(scene,camera);
+      renderer.readRenderTargetPixels(target,0,0,width,height,before);
+      ocean.visible=oldOcean;inland.visible=oldInland;
+      renderer.render(scene,camera);
+      renderer.readRenderTargetPixels(target,0,0,width,height,after);
+      let pixels=0,deltaSum=0;
+      for(let k=0;k<before.length;k+=4){
+        const delta=Math.abs(before[k]-after[k])+Math.abs(before[k+1]-after[k+1])+Math.abs(before[k+2]-after[k+2]);
+        if(delta>24){pixels++;deltaSum+=delta;}
+      }
+      return {pixels,totalPixels:width*height,meanChangedDelta:pixels?deltaSum/pixels:0};
+    }finally{
+      ocean.visible=oldOcean;inland.visible=oldInland;
+      renderer.setRenderTarget(null);target.dispose();
+    }
   }
   setView(new URLSearchParams(location.search).get('view')??'home-shore');
   setMode('medium');
@@ -223,7 +263,7 @@ try {
     ready:true,views:views.map(v=>({id:v.id,label:v.label,xz:v.sourceXZ,level:v.level})),
     setView,setMode,setFocus,setSun,
     setTime(t:number){if(!Number.isFinite(t)||t<0)throw new Error('Invalid fixed time');clockSec=t;running=false;stepControl.value=['0','1.5','3'].includes(String(t))?String(t):'0';pauseButton.textContent='Play';},
-    snapshot
+    snapshot,measureWaterPixels
   }});
   requestAnimationFrame(render);
   window.addEventListener('beforeunload',()=>{
