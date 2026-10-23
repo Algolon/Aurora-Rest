@@ -1,0 +1,16 @@
+{
+ "purpose": "decide whether the committed A1a M0/V1 captures are valid before-images for A1b-alpha on the 16 shared cameras",
+ "checks": [
+  {
+   "variant": "a1a-m0",
+   "mode": "clayB",
+   "view": "a1a-birchwood",
+   "a1aCommittedSha256": "0a342aed06e88d54ad6c431a12981d0d82050293e204002cb9813b93ef88ad1e",
+   "recapturedSha256": "0a342aed06e88d54ad6c431a12981d0d82050293e204002cb9813b93ef88ad1e",
+   "byteIdentical": true,
+   "recaptureBrowser": "141.0.7390.37",
+   "recaptureTool": "tools/geo-r02c-a1b/capture.mjs",
+   "recaptureGitHead": "eb30038fde396f108ea2b6cce7705ec65fad84e8"
+  }
+ ]
+}

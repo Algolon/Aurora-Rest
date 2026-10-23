@@ -1,0 +1,92 @@
+{
+ "variants": {
+  "m0": "fc8fd6da\u2026 (R1)",
+  "a1a-v1": "61b599545d60f9bfdcba7fe88f171be78186e78667fdef55e9612346e45786a3",
+  "a1b-alpha": "5806ac0c24606840565c069ff826286b66298ca1898353a2d4b96196f3ec5b05"
+ },
+ "visibilityOfChanges": {
+  "a1a-v1": {
+   "changedCellsOver1m": 8255,
+   "changedHaOver1m": 13.21,
+   "visiblePct": {
+    "birchwood": 0.0,
+    "valley-shoulder": 0.9,
+    "central-valley": 0.0,
+    "tarn-overlook": 14.0,
+    "high-tarn": 44.4,
+    "tarn-shore": 4.8,
+    "approach-mid": 0.0,
+    "approach-upper": 0.0,
+    "face-from-route": 0.0,
+    "face-from-upper-route": 0.0
+   }
+  },
+  "a1b-alpha": {
+   "changedCellsOver1m": 5243,
+   "changedHaOver1m": 8.39,
+   "visiblePct": {
+    "birchwood": 100.0,
+    "valley-shoulder": 89.1,
+    "central-valley": 0.0,
+    "tarn-overlook": 2.2,
+    "high-tarn": 33.4,
+    "tarn-shore": 0.0,
+    "approach-mid": 14.9,
+    "approach-upper": 76.3,
+    "face-from-route": 85.0,
+    "face-from-upper-route": 86.6
+   }
+  }
+ },
+ "visibilityMaps": {
+  "far": {
+   "alphaChangedVisiblePct": 100.0,
+   "v1ChangedVisiblePct": 1.2
+  },
+  "route": {
+   "alphaChangedVisiblePct": 100.0,
+   "v1ChangedVisiblePct": 0.0
+  },
+  "tarn": {
+   "alphaChangedVisiblePct": 33.1,
+   "v1ChangedVisiblePct": 45.0
+  }
+ },
+ "sections": {
+  "crestParallel90m": {
+   "maxCutM": 21.1,
+   "v1MaxChangeM": 0.0
+  },
+  "crestParallel200m": {
+   "maxCutM": 21.0,
+   "v1MaxChangeM": 0.0
+  },
+  "crestParallel340m": {
+   "maxCutM": 2.9,
+   "v1MaxChangeM": 0.0
+  }
+ },
+ "couloirProfiles": {
+  "major1": {
+   "sFromSummitM": 210,
+   "lengthM": 440,
+   "maxCutOnAxisM": 19.3,
+   "floorAlwaysFalls": true,
+   "gentlestFloorGradient": 0.292
+  },
+  "major2": {
+   "sFromSummitM": 345,
+   "lengthM": 480,
+   "maxCutOnAxisM": 23.6,
+   "floorAlwaysFalls": true,
+   "gentlestFloorGradient": 0.223
+  },
+  "major3": {
+   "sFromSummitM": 515,
+   "lengthM": 420,
+   "maxCutOnAxisM": 16.0,
+   "floorAlwaysFalls": true,
+   "gentlestFloorGradient": 0.211
+  }
+ }
+}

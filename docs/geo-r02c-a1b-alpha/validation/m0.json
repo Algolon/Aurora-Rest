@@ -1,0 +1,96 @@
+{
+ "variant": "m0",
+ "label": "A1b M0 \u00b7 empty overlay (parity with R1)",
+ "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "changedCells": 0,
+ "checks": {
+  "outsideWindowBboxUnchanged": true,
+  "protectedClassChangedCells": {
+   "sea": 0,
+   "lake": 0,
+   "wet": 0,
+   "valley": 0,
+   "crest": 0,
+   "otherEquality": 0,
+   "corridor": 0,
+   "zone": 0,
+   "divide": 0,
+   "waterSurface": 0
+  },
+  "protectedUnchanged": true,
+  "changedOnlyWhereMaskPositive": true,
+  "crestCellsBelowBound": 0,
+  "wetCellsChanged": 0,
+  "landSeaSignChanged": 0,
+  "coastBand0to150Changed": 0,
+  "routeCentrelineMaxChangeM": {
+   "hero": 0.0,
+   "tarn-ascent": 0.0,
+   "peak-ascent": 0.0,
+   "hidden-loop": 0.0,
+   "west-cape-spur": 0.0,
+   "south-shoulder-loop": 0.0
+  },
+  "newDrySinkCells1cm": 0,
+  "maxNewFillDepthM": 0.0,
+  "drainageDestinationChangedCells": 0,
+  "drainageTransitions(1=HighTarn,2=sea,3=other)": {},
+  "drainageChangedHa": 0.0,
+  "deltaStats": {
+   "minM": 0.0,
+   "maxM": 0.0,
+   "changedHa": 0.0,
+   "maxDeltaGradient": 0.0,
+   "cellsDeltaGradientOver1": 0
+  },
+  "slopeStats": {
+   "r1MaxCellSlope": 12.154516458511353,
+   "variantMaxCellSlope": 12.154516458511353,
+   "variantCellEdgesOver45deg": 77099,
+   "r1CellEdgesOver45deg": 77099,
+   "variantCellEdgesOver60deg": 18020
+  },
+  "pass": true,
+  "maskTransition": {
+   "designedCutVolumeM3": -0.0,
+   "appliedCutVolumeM3": -0.0,
+   "attenuatedSharePct": 0.0,
+   "maxAttenuationM": 0.0,
+   "deltaGradientInFade": {
+    "cells": 0,
+    "p99": 0.0,
+    "max": 0.0
+   },
+   "deltaGradientInFreeFace": {
+    "cells": 0,
+    "p99": 0.0,
+    "max": 0.0
+   },
+   "deltaCurvatureInFade": {
+    "cells": 0,
+    "p99": 0.0,
+    "max": 0.0
+   },
+   "deltaCurvatureInFreeFace": {
+    "cells": 0,
+    "p99": 0.0,
+    "max": 0.0
+   },
+   "noMaskShapedEdge": true
+  },
+  "summit": {
+   "heightR1M": 899.953369140625,
+   "heightVariantM": 899.953369140625,
+   "unchanged": true,
+   "windowMaximumAt": [
+    -520.0,
+    2772.0
+   ],
+   "windowMaximumUnchanged": true
+  },
+  "crestCellsChanged": 0,
+  "seamZoneCellsChanged": 0,
+  "changedCellsVisiblePct": {},
+  "passDefinition": "A1a pass AND summit + window maximum unchanged AND crest cells unchanged AND seam zone unchanged AND no drainage-destination change AND no mask-shaped edge"
+ }
+}

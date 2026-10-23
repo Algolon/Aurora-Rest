@@ -1,0 +1,44 @@
+{
+ "verdict": "ART: NOT PASS \u2014 calibration checkpoint, technically clean",
+ "summary": [
+  "A1b-\u03b1 does what A1a-V1 could not: its changes are on terrain players actually see. 100 % of the changed area is in line of sight from Birchwood and 85\u201387 % from the two trail cameras, against 0 % for V1, and every technical gate passes without releasing any protection.",
+  "Artistically it is not yet good enough. From the upper trail the couloirs and ribs read as a believable eroded face. From Birchwood and the Central Valley shoulder they read as a few dark scratches on a still smooth summit dome, and from the south-east oblique as a set of near-parallel grooves. Per the brief, it is preserved as a diagnostic checkpoint and not tuned towards acceptance."
+ ],
+ "questions": [
+  [
+   "1. Visibly meaningful?",
+   "Partly. Clearly visible from the upper peak-ascent trail (1.6 % of frame pixels change under clay sun A, all of it on the face) and from the south-east oblique. From Birchwood (0.16 %) and the Central Valley shoulder (0.04 %) it is visible only as small marks on the dome flank. From the upper approach camera and High Tarn there is no change, because the face is outside the frame or out of sight."
+  ],
+  [
+   "2. Does the mountain feel more naturally sculpted?",
+   "Only at close range. From the trail, the face gains erosion structure. From the far approaches, the summit dome and the smooth, frozen ar\u00eates still dominate, so a sculpted patch on one face reads as surface detail rather than as a different mountain."
+  ],
+  [
+   "3. Do the forms connect to the surrounding massif?",
+   "Downslope, yes: couloirs follow true fall lines and fan out into the face. Upslope, not enough: the crest is frozen and smooth, so couloir heads cannot notch it, and the ribs end against an unbroken ridge line. This is the main disconnection."
+  ],
+  [
+   "4. Convincing under both sun presets?",
+   "Clay sun A (low, WNW) gives strong relief and the best result. Under clay sun B (SE) the face is lit frontally and the relief is soft. Neither makes the far views convincing."
+  ],
+  [
+   "5. Free of gouges, mask edges and repetition?",
+   "No mask edges: the A1a mask trims at most 4 cm, and gradient and curvature in fade zones are no higher than inside the face. No gouges at the crest. Repetition is only partly avoided: in plan and in the oblique, the three major couloirs read as near-parallel, evenly spaced grooves, because the face is a uniform planar slope with parallel fall lines."
+  ]
+ ],
+ "limitations": [
+  "The far silhouette and the summit dome are unchanged by design (crest bands, summit and \u00b175 m corridor frozen), so the experiment cannot change the read of the mountain from Birchwood. That would need R-A or the crest-level decisions R-B/R-C.",
+  "R1 gives this face a uniform planar slope, so fall-line couloirs are near-parallel by construction. Breaking that needs larger-scale massing (buttress volumes, shoulders), which cut-only face relief cannot build.",
+  "Couloir heads stop 18 m below the authored crest line to keep the crest lower bound and its fade untouched, so no couloir reaches the skyline.",
+  "The s = 900 m trail camera sees the face only near its upper edge in perspective, so the s = 2600 m camera is the clear player-height view.",
+  "Pixel-change counts use a coarse threshold (|\u0394| > 12 after a 3 \u00d7 3 median). They show visibility, not quality.",
+  "Captures use SwiftShader software WebGL in clay and standard materials. No vegetation, snow or rock textures; real materials would change contrast.",
+  "Only the evaluation cameras were captured for A1b-\u03b1 (10 views in both clay suns, 7 in standard). The C1, G1 and north-side A1a cameras look at terrain A1b-\u03b1 does not change."
+ ],
+ "recommendation": [
+  "Do not accept A1b-\u03b1 as a landform, and do not continue tuning the same face with deeper or more cuts: the limiting factor is the smooth, frozen crest and dome that frame it, not the depth of the couloirs.",
+  "Recommended next step: a summit-block experiment (A1b-\u03b2), because the decisive flaw is the disconnection between sculpted faces and the smooth dome and crest. It needs the R-A corridor release, which is not approved; if R-A is approved, run \u03b2 with the A1b-\u03b1 face as its lower context.",
+  "If R-A stays closed, the only remaining no-release calibration is a second visible face (A3 south) with fewer, broader buttress-scale forms, to test whether consistency across faces helps. Expected gain is low, because the dome stays as it is.",
+  "Do not start C1-R yet: it is 0 % visible from current player positions and needs a viewpoint decision (R-E) first."
+ ]
+}

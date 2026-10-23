@@ -1,0 +1,161 @@
+{
+ "variant": "alpha",
+ "label": "A1b-\u03b1 \u00b7 A2 south-west face relief",
+ "terrainSha256": "5806ac0c24606840565c069ff826286b66298ca1898353a2d4b96196f3ec5b05",
+ "changedCells": 11498,
+ "checks": {
+  "outsideWindowBboxUnchanged": true,
+  "protectedClassChangedCells": {
+   "sea": 0,
+   "lake": 0,
+   "wet": 0,
+   "valley": 0,
+   "crest": 0,
+   "otherEquality": 0,
+   "corridor": 0,
+   "zone": 0,
+   "divide": 0,
+   "waterSurface": 0
+  },
+  "protectedUnchanged": true,
+  "changedOnlyWhereMaskPositive": true,
+  "crestCellsBelowBound": 0,
+  "wetCellsChanged": 0,
+  "landSeaSignChanged": 0,
+  "coastBand0to150Changed": 0,
+  "routeCentrelineMaxChangeM": {
+   "hero": 0.0,
+   "tarn-ascent": 0.0,
+   "peak-ascent": 0.0,
+   "hidden-loop": 0.0,
+   "west-cape-spur": 0.0,
+   "south-shoulder-loop": 0.0
+  },
+  "sinksBox": {
+   "rows": [
+    260,
+    576
+   ],
+   "cols": [
+    559,
+    821
+   ]
+  },
+  "sinksR1": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "sinksVariant": [
+   {
+    "thresholdM": 0.01,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.1,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 0.5,
+    "count": 0,
+    "components": []
+   },
+   {
+    "thresholdM": 2.0,
+    "count": 0,
+    "components": []
+   }
+  ],
+  "newDrySinkCells1cm": 0,
+  "maxNewFillDepthM": 0.0,
+  "drainageDestinationChangedCells": 0,
+  "drainageTransitions(1=HighTarn,2=sea,3=other)": {},
+  "drainageChangedHa": 0.0,
+  "deltaStats": {
+   "minM": -23.7774658203125,
+   "maxM": 0.0,
+   "changedHa": 18.4,
+   "maxDeltaGradient": 1.390472412109375,
+   "cellsDeltaGradientOver1": 221
+  },
+  "slopeStats": {
+   "r1MaxCellSlope": 12.154516458511353,
+   "variantMaxCellSlope": 12.154516458511353,
+   "variantCellEdgesOver45deg": 77322,
+   "r1CellEdgesOver45deg": 77099,
+   "variantCellEdgesOver60deg": 18020
+  },
+  "pass": true,
+  "maskTransition": {
+   "designedCutVolumeM3": 572322.8037411594,
+   "appliedCutVolumeM3": 572278.9142399223,
+   "attenuatedSharePct": 0.007668661977155988,
+   "maxAttenuationM": 0.046615778780505934,
+   "deltaGradientInFade": {
+    "cells": 1222,
+    "p99": 0.2269595327838469,
+    "max": 0.2684491222681945
+   },
+   "deltaGradientInFreeFace": {
+    "cells": 11840,
+    "p99": 1.0661113199580616,
+    "max": 1.3454994275173777
+   },
+   "deltaCurvatureInFade": {
+    "cells": 1222,
+    "p99": 0.023808250804431736,
+    "max": 0.027451231027953327
+   },
+   "deltaCurvatureInFreeFace": {
+    "cells": 11840,
+    "p99": 0.12380877941846849,
+    "max": 0.17510822415351868
+   },
+   "noMaskShapedEdge": true
+  },
+  "summit": {
+   "heightR1M": 899.953369140625,
+   "heightVariantM": 899.953369140625,
+   "unchanged": true,
+   "windowMaximumAt": [
+    -520.0,
+    2772.0
+   ],
+   "windowMaximumUnchanged": true
+  },
+  "crestCellsChanged": 0,
+  "seamZoneCellsChanged": 0,
+  "changedCellsVisiblePct": {
+   "birchwood": 100.0,
+   "valley-shoulder": 89.1,
+   "central-valley": 0.0,
+   "tarn-overlook": 2.2,
+   "high-tarn": 33.4,
+   "tarn-shore": 0.0,
+   "approach-mid": 14.9,
+   "approach-upper": 76.3,
+   "face-from-route": 85.0,
+   "face-from-upper-route": 86.6
+  },
+  "passDefinition": "A1a pass AND summit + window maximum unchanged AND crest cells unchanged AND seam zone unchanged AND no drainage-destination change AND no mask-shaped edge"
+ }
+}

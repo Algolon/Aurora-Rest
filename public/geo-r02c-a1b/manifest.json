@@ -1,0 +1,50 @@
+{
+ "schema": "aurora-terrain-variants/1",
+ "base": "public/geo-r02b/terrain.f32",
+ "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "note": "Review-only A1b-alpha visible-face variants. Compose by copying each patch block into the canonical R1 grid; never overwrite R1.",
+ "variants": {
+  "m0": {
+   "id": "m0",
+   "label": "A1b M0 \u00b7 empty overlay (parity with R1)",
+   "spec": "tools/geo-r02c-a1b/specs/a1b-m0.json",
+   "specSha256": "fbe0a366dfa1f8c0753796d4d7307ed2eeb8a86c133bab1668e928515d965a2f",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "changedCells": 0,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "patch": null
+  },
+  "alpha": {
+   "id": "alpha",
+   "label": "A1b-\u03b1 \u00b7 A2 south-west face relief",
+   "spec": "tools/geo-r02c-a1b/specs/a1b-alpha.json",
+   "specSha256": "83afcf3b9d340ff662937193c1402ab32497b9521ae02beaf330499e5e0a0152",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "5806ac0c24606840565c069ff826286b66298ca1898353a2d4b96196f3ec5b05",
+   "changedCells": 11498,
+   "grid": {
+    "width": 1501,
+    "height": 2001,
+    "cellM": 4
+   },
+   "patch": {
+    "file": "alpha.patch.f32",
+    "rows": [
+     335,
+     500
+    ],
+    "cols": [
+     634,
+     745
+    ],
+    "sha256": "26389da39fd34b2bc9446d90d6919c289d4ed7975f53bcb1bfd490045fdbc595",
+    "bytes": 74368
+   }
+  }
+ }
+}

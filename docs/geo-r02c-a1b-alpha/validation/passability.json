@@ -1,0 +1,97 @@
+{
+ "method": "window.__auroraR02B.walkRouteForTest(route) for every route, the viewer walking collision on the composed terrain",
+ "variants": {
+  "a1a-m0": {
+   "identity": {
+    "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+    "baselineTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+    "activeTerrain": "a1a-m0"
+   },
+   "routes": {
+    "hero": {
+     "id": "hero",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 5019
+    },
+    "tarn-ascent": {
+     "id": "tarn-ascent",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 1251
+    },
+    "peak-ascent": {
+     "id": "peak-ascent",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 2999
+    },
+    "hidden-loop": {
+     "id": "hidden-loop",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 4019
+    },
+    "west-cape-spur": {
+     "id": "west-cape-spur",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 1754
+    },
+    "south-shoulder-loop": {
+     "id": "south-shoulder-loop",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 3464
+    }
+   }
+  },
+  "a1b-alpha": {
+   "identity": {
+    "terrainSha256": "5806ac0c24606840565c069ff826286b66298ca1898353a2d4b96196f3ec5b05",
+    "baselineTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+    "activeTerrain": "a1b-alpha"
+   },
+   "routes": {
+    "hero": {
+     "id": "hero",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 5019
+    },
+    "tarn-ascent": {
+     "id": "tarn-ascent",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 1251
+    },
+    "peak-ascent": {
+     "id": "peak-ascent",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 2999
+    },
+    "hidden-loop": {
+     "id": "hidden-loop",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 4019
+    },
+    "west-cape-spur": {
+     "id": "west-cape-spur",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 1754
+    },
+    "south-shoulder-loop": {
+     "id": "south-shoulder-loop",
+     "blockedAt": -1,
+     "endDistanceM": 0,
+     "samples": 3464
+    }
+   }
+  }
+ },
+ "identical": true,
+ "allPassable": true
+}

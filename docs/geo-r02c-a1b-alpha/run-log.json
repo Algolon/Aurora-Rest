@@ -1,0 +1,11 @@
+{
+ "branch": "feature/geo-r02c-a1b-alpha-visible-faces",
+ "base": "eb30038fde396f108ea2b6cce7705ec65fad84e8",
+ "deterministic": true,
+ "determinism": "a1b_overlay.py --repeat 2 gave identical SHA-256 for m0 and alpha (asserted by the tool)",
+ "tests": "npm test: 43/43 pass (35 existing, unmodified, + 8 new A1b-\u03b1 tests)",
+ "testsPass": true,
+ "build": "npm run build (tsc --noEmit + vite build): pass",
+ "buildPass": true,
+ "captures": "39 new frames (A1b-\u03b1: 10 views \u00d7 clay A/B + 7 standard; M0 and A1a-V1 for the 2 new cameras \u00d7 3 modes); M0/V1 for the 16 A1a cameras reused from the committed A1a set after a byte-identity check"
+}

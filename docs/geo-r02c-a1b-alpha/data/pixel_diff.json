@@ -1,0 +1,133 @@
+{
+ "method": "pixels with |delta| > 12 of 255 in any channel after a 3 x 3 median (as in the A1b-D dossier)",
+ "views": {
+  "a1a-approach-mid": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1a-approach-upper": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "standard": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1a-birchwood": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.16
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.07
+   },
+   "standard": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1a-oblique-se": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 1.92
+   },
+   "clayB": {
+    "a1a-v1": 0.12,
+    "a1b-alpha": 0.31
+   },
+   "standard": {
+    "a1a-v1": 0.46,
+    "a1b-alpha": 0.39
+   }
+  },
+  "a1a-tarn-overlook": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "clayB": {
+    "a1a-v1": 0.03,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1a-tarn-shore": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "standard": {
+    "a1a-v1": 0.03,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1a-valley-shoulder": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.14
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.04
+   },
+   "standard": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.01
+   }
+  },
+  "a1a-west-arm": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   }
+  },
+  "a1b-face-from-route": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.43
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.18
+   },
+   "standard": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.01
+   }
+  },
+  "a1b-face-from-upper-route": {
+   "clayA": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 1.56
+   },
+   "clayB": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.83
+   },
+   "standard": {
+    "a1a-v1": 0.0,
+    "a1b-alpha": 0.0
+   }
+  }
+ }
+}
