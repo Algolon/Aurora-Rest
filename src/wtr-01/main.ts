@@ -137,9 +137,9 @@ try {
   const canonicalGeo=createCanonicalWaterGeometry(waterPositions,classified.kinds);
   const baselineOcean=new THREE.MeshLambertMaterial({color:0x3c6471,side:THREE.DoubleSide});
   const baselineInland=new THREE.MeshLambertMaterial({color:0x467c8c,side:THREE.DoubleSide});
-  const ocean=new THREE.Mesh(oceanGeo,baselineOcean);
+  const ocean:THREE.Mesh<THREE.BufferGeometry,THREE.Material>=new THREE.Mesh(oceanGeo,baselineOcean);
   ocean.position.y=0;scene.add(ocean);
-  const inland=new THREE.Mesh(canonicalGeo,baselineInland);
+  const inland:THREE.Mesh<THREE.BufferGeometry,THREE.Material>=new THREE.Mesh(canonicalGeo,baselineInland);
   scene.add(inland);
   const views=createCameras(grid,data);
   const viewControl=document.querySelector<HTMLSelectElement>('#view')!;
