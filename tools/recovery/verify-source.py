@@ -17,6 +17,7 @@ assert len(a) == m["archive"]["size"] and sha(a) == m["archive"]["sha256"]
 with zipfile.ZipFile(io.BytesIO(a)) as z:
     safe(z)
     original = json.loads(z.read("SOURCE.json"))
+    assert original["files"] == [{k: f[k] for k in ("path", "size", "sha256")} for f in m["files"]]
     b = z.read("Aurora-Rest-ENV-P01-Source-Snapshot.zip")
     assert sha(b) == m["nestedSnapshotSha256"] == original["sourceSnapshotSha256"]
     with zipfile.ZipFile(io.BytesIO(b)) as inner:
