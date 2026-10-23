@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import * as THREE from 'three';
-import {createWaterShader} from '../src/wtr-01/material.ts';
+import {createWaterShader,WAVE_STUDIES,waveStudyId} from '../src/wtr-01/material.ts';
 import {createHash} from 'node:crypto';
 import {PALETTE,WATER_TYPES,AVAILABLE_FIELDS,PROPOSED_FIELDS,
   pointInRing,classifyCanonicalWaterMesh,renderQualityDetail,type LakeBoundary
@@ -79,5 +79,30 @@ test('WTR-01 custom shader includes all Three.js fog and logarithmic-depth depen
       assert.ok((shader.vertexShader+shader.fragmentShader).includes('#include <'+chunk+'>'),quality+': missing '+chunk);
     }
     shader.dispose();
+  }
+});
+
+test('WTR-01A candidate switch preserves WTR-01R uniforms and all quality levels',()=>{
+  assert.deepEqual(WAVE_STUDIES,['original','A','B','C']);
+  assert.deepEqual(WAVE_STUDIES.map(waveStudyId),[0,1,2,3]);
+  for(const study of WAVE_STUDIES){
+    for(const quality of ['low','medium','high'] as const){
+      const material=createWaterShader(quality,new THREE.Vector3(0.5,1,.2),study);
+      assert.equal(material.uniforms.uStudy.value,waveStudyId(study));
+      for(const k of ['uTime','uSunDirection','fogColor','fogDensity','uBase','uWind','uSurface']){
+        assert.ok(material.uniforms[k],study+'/'+quality+': '+k);
+      }
+      for(const uniform of Object.values(material.uniforms)){
+        const values=Array.isArray(uniform.value)?uniform.value:[uniform.value];
+        for(const v of values){
+          if(typeof v==='number')assert.ok(Number.isFinite(v));
+          if(v?.isVector2)assert.ok(Number.isFinite(v.length())&&v.length()>0);
+          if(v?.isVector4)assert.ok([v.x,v.y,v.z,v.w].every(Number.isFinite));
+        }
+      }
+      assert.ok(material.vertexShader.includes('logdepthbuf_vertex'));
+      assert.ok(material.fragmentShader.includes('logdepthbuf_fragment'));
+      material.dispose();
+    }
   }
 });
