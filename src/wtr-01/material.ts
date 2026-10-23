@@ -11,12 +11,14 @@ attribute float waterKind;
 varying float vWaterKind;
 varying vec3 vWaterWorld;
 #include <fog_pars_vertex>
+#include <logdepthbuf_pars_vertex>
 void main(){
   vec4 worldPosition = modelMatrix * vec4(position,1.0);
   vWaterWorld = worldPosition.xyz;
   vWaterKind = waterKind;
   vec4 mvPosition = viewMatrix * worldPosition;
   gl_Position = projectionMatrix * mvPosition;
+  #include <logdepthbuf_vertex>
   #include <fog_vertex>
 }`;
 const FRAGMENT = `
@@ -33,7 +35,9 @@ uniform vec2 uWind[4];
 varying float vWaterKind;
 varying vec3 vWaterWorld;
 #include <fog_pars_fragment>
+#include <logdepthbuf_pars_fragment>
 void main(){
+  #include <logdepthbuf_fragment>
   if(uShowLakesOnly > 0.5 && (vWaterKind < 0.5 || vWaterKind > 2.5)) discard;
   vec3 base = vWaterKind > 2.5 ? uBase[3] : vWaterKind > 1.5 ? uBase[2] : vWaterKind > 0.5 ? uBase[1] : uBase[0];
   vec3 dark = vWaterKind > 2.5 ? uDark[3] : vWaterKind > 1.5 ? uDark[2] : vWaterKind > 0.5 ? uDark[1] : uDark[0];
