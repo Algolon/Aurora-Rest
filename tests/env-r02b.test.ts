@@ -24,7 +24,7 @@ test('candidate never mutates source placements, IDs, transforms or non-tree fam
  assert.equal(off.chunk,p);assert(on.removed.length>0);assert(on.removed.length<p.instances.length);
  assert.equal(JSON.stringify(p),serialized);
  assert.deepEqual(on.chunk.instances.filter(p=>p.family==='grass'||p.family==='rock'),p.instances.filter(p=>p.family==='grass'||p.family==='rock'));
- assert(on.chunk.instances.every(p=>p===p.instances.find(q=>q.id===p.id)));
+ assert(on.chunk.instances.every(item=>item===p.instances.find(q=>q.id===item.id)));
  assert(on.chunk.instances.some(p=>p.id==='far-tree'));
  assert(on.removed.every(id=>p.instances.some(p=>p.id===id&&p.family==='birch')));
  assert.deepEqual(composeChunk(p,true,0,0).removed,on.removed);
