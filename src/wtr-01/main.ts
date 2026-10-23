@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {HeightGrid,Terrain,waterAt,type Data} from '../geo-r02b/terrain.ts';
 import {sunDirection} from '../geo-r02b/review-options.ts';
 import {classifyCanonicalWaterMesh,type Quality} from './config.ts';
-import {createCanonicalWaterGeometry,createOceanGeometry,createWaterShader} from './material.ts';
+import {createCanonicalWaterGeometry,createOceanGeometry,createWaterShader,waveStudyId,type WaveStudy} from './material.ts';
 import './style.css';
 
 type Mode=Quality|'baseline';
@@ -14,6 +14,7 @@ app.innerHTML=`<canvas id="world" aria-label="Three.js canonical island water re
 <section id="ui"><h1>AURORA REST <span>WTR-01</span></h1><div class="sub">Ocean · lakes · High Tarn | isolated lookdev</div>
 <label>Review viewpoint <select id="view" aria-label="Review viewpoint"></select></label>
 <label>Material <select id="quality"><option value="baseline">GEO-R02B baseline</option><option value="low">WTR-01 Low</option><option value="medium" selected>WTR-01 Medium</option><option value="high">WTR-01 High</option></select></label>
+<label>Wave study <select id="study"><option value="original">WTR-01R original</option><option value="A">A — conservative</option><option value="B">B — multiscale</option><option value="C">C — screen stable</option></select></label>
 <label>Water focus <select id="focus"><option value="all">All water</option><option value="ocean">Ocean only</option><option value="lakes">Lakes/tarns only</option></select></label>
 <label>Daylight <select id="sun"><option value="B">Sun B · south-east</option><option value="A">Sun A · west-north-west</option></select></label>
 <label>Time sequence <select id="time"><option value="live">Live animation</option><option value="0">Fixed 0.00 s</option><option value="1.5">Fixed 1.50 s</option><option value="3">Fixed 3.00 s</option></select></label>
@@ -61,7 +62,7 @@ function setSun(p:Daylight){
   if(currentShader)currentShader.uniforms.uSunDirection.value.copy(sun.position).normalize();
 }
 let currentShader:THREE.ShaderMaterial|null=null;
-let mode:Mode='medium',focus:Focus='all',daylight:Daylight='B',running=true,clockSec=0;
+let mode:Mode='medium',focus:Focus='all',daylight:Daylight='B',running=true,clockSec=0,study:WaveStudy='original';
 setSun('B');
 
 async function getBinary(file:string){
@@ -168,11 +169,17 @@ try {
     if(q==='baseline'){
       ocean.material=baselineOcean;inland.material=baselineInland;
     }else{
-      currentShader=createWaterShader(q,sun.position);
+      currentShader=createWaterShader(q,sun.position,study);
       ocean.material=currentShader;inland.material=currentShader;
     }
     setFocus(focus);
     setWireframe(document.querySelector<HTMLInputElement>('#wire')!.checked);
+  }
+  function setStudy(next:WaveStudy){
+    study=next;
+    if(currentShader)currentShader.uniforms.uStudy.value=waveStudyId(next);
+    const selector=document.querySelector<HTMLSelectElement>('#study')!;
+    selector.value=next;
   }
   function setFocus(next:Focus){
     focus=next;
@@ -187,6 +194,7 @@ try {
     terrain.material.wireframe=enabled;
   }
   viewControl.onchange=()=>setView(viewControl.value);
+  document.querySelector<HTMLSelectElement>('#study')!.onchange=e=>setStudy((e.target as HTMLSelectElement).value as WaveStudy);
   document.querySelector<HTMLSelectElement>('#quality')!.onchange=e=>setMode((e.target as HTMLSelectElement).value as Mode);
   document.querySelector<HTMLSelectElement>('#focus')!.onchange=e=>setFocus((e.target as HTMLSelectElement).value as Focus);
   document.querySelector<HTMLSelectElement>('#sun')!.onchange=e=>{daylight=(e.target as HTMLSelectElement).value as Daylight;setSun(daylight);};
@@ -205,7 +213,7 @@ try {
   // Expose fixed, reproducible viewer state for Playwright capture, not a performance guarantee.
   function snapshot(){
     const gl=renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');
-    return {view:view.id,quality:mode,focus,daylight,timeSec:clockSec,
+    return {view:view.id,quality:mode,study,focus,daylight,timeSec:clockSec,
       camera:camera.position.toArray(),canonicalCameraXZ:view.sourceXZ,
       calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
       geometries:renderer.info.memory.geometries,
@@ -262,7 +270,7 @@ try {
   }
   Object.assign(window,{__auroraWTR01:{
     ready:true,views:views.map(v=>({id:v.id,label:v.label,xz:v.sourceXZ,level:v.level})),
-    setView,setMode,setFocus,setSun,
+    setView,setMode,setFocus,setSun,setStudy,
     setTime(t:number){if(!Number.isFinite(t)||t<0)throw new Error('Invalid fixed time');clockSec=t;running=false;stepControl.value=['0','1.5','3'].includes(String(t))?String(t):'0';pauseButton.textContent='Play';},
     snapshot,measureWaterPixels,
     freezeForCapture(frozen:boolean){reviewFrozen=frozen;if(frozen){if(currentShader)currentShader.uniforms.uTime.value=clockSec;renderer.render(scene,camera);}}
