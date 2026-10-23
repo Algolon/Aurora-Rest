@@ -3,13 +3,13 @@
 // Usage: node tools/mat-01/capture.mjs [--url http://127.0.0.1:4320/mat-01.html] [--out docs/mat-01/evidence] [--groups a,b] [--size 1280x800]
 import {chromium} from 'playwright';
 import {mkdir,writeFile} from 'node:fs/promises';
-import {existsSync} from 'node:fs';
+import {existsSync,readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 
 const arg=(n,f)=>{const i=process.argv.indexOf('--'+n);return i>0?process.argv[i+1]:f;};
 const url=arg('url','http://127.0.0.1:4320/mat-01.html'),out=arg('out','docs/mat-01/evidence'),[width,height]=arg('size','1280x800').split('x').map(Number);
-const groups=arg('groups','all'),files=arg('files','');
+const groups=arg('groups','all'),files=arg('files',''),merge=process.argv.includes('--merge');
 const executablePath=process.env.CHROME||(existsSync('/opt/pw-browsers/chromium')?'/opt/pw-browsers/chromium':undefined);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 let head='unknown';try{head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();}catch{}
@@ -56,6 +56,9 @@ const browser=await chromium.launch({headless:true,executablePath,args:['--use-a
 const manifest={tool:'tools/mat-01/capture.mjs',gitHead:head,url,viewport:{width,height,dpr:1},browser:browser.version(),
  evidence:'Unretouched Chromium WebGL2 screenshots of the MAT-01 Three.js review page on the real GEO-R02B-R1 terrain. Renderer is SwiftShader (software); timings are not GPU performance.',
  shots:[],diffs:[],measurements:{}};
+// --merge: keep an existing manifest and replace only the shots/diffs/measurements re-captured in this run.
+if(merge&&existsSync(`${out}/manifest.json`)){const old=JSON.parse(readFileSync(`${out}/manifest.json`,'utf8'));Object.assign(manifest,{shots:old.shots,diffs:old.diffs,measurements:old.measurements??{}});manifest.mergedRuns=[...(old.mergedRuns??[]),{gitHead:old.gitHead}];}
+const upsert=(list,entry)=>{const i=list.findIndex(e=>e.file===entry.file);if(i>=0)list[i]=entry;else list.push(entry);};
 let failed=false;const want=g=>groups==='all'||groups.split(',').includes(g);
 try{
  const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1}),errors=[];page.setDefaultTimeout(900000);
@@ -68,29 +71,29 @@ try{
  const apply=async(shot)=>page.evaluate(({view,patch,lighting})=>{const q=window.__auroraMAT01;q.set({...patch,lighting:lighting??'nordic'});q.setView(view);},{view:shot.view,patch:shot.patch,lighting:shot.lighting});
  const shoot=async(shot)=>{await apply(shot);await page.evaluate(()=>window.__auroraMAT01.snap('_'));const png=await page.screenshot({path:`${out}/${shot.file}`});return png;};
  for(const shot of SHOTS){if(!want(shot.group)||(files&&!files.split(',').some(f=>shot.file.startsWith(f))))continue;const s=Date.now();const png=await shoot(shot);
-  manifest.shots.push({group:shot.group,file:shot.file,view:shot.view,caption:shot.caption,state:{...shot.patch,lighting:shot.lighting??'nordic'},sha256:sha(png),seconds:(Date.now()-s)/1000});
+  upsert(manifest.shots,{group:shot.group,file:shot.file,view:shot.view,caption:shot.caption,state:{...shot.patch,lighting:shot.lighting??'nordic'},sha256:sha(png),seconds:(Date.now()-s)/1000});
   console.log(shot.group,shot.file,((Date.now()-s)/1000).toFixed(1)+' s');await writeFile(`${out}/manifest.json`,JSON.stringify(manifest,null,1)+'\n');}
  const diffPair=async(name,caption,a,b,setA,setB)=>{
   await page.evaluate(setA);await page.evaluate(n=>window.__auroraMAT01.snap(n),a);
   await page.evaluate(setB);await page.evaluate(n=>window.__auroraMAT01.snap(n),b);
   const d=await page.evaluate(([x,y])=>window.__auroraMAT01.diff(x,y),[a,b]);
-  await writeFile(`${out}/${name}`,Buffer.from(d.image.split(',')[1],'base64'));delete d.image;manifest.diffs.push({file:name,caption,...d});console.log('diff',name,JSON.stringify(d));};
+  await writeFile(`${out}/${name}`,Buffer.from(d.image.split(',')[1],'base64'));delete d.image;upsert(manifest.diffs,{file:name,caption,...d});console.log('diff',name,JSON.stringify(d));};
  if(want('invariance')){
   // Tiling: identical vertices split differently must give identical pixels (no seams).
   await diffPair('diff-tiling-tile-seam.png','Shaded MAT-01 frame, 400 m tiles vs 200 m tiles at the tile-corner view (×8 amplified |Δ|).','t400','t200',
    ()=>{const q=window.__auroraMAT01;q.setLayout('canonical');q.set({debug:'off',force:-1,wireframe:false,water:true,lighting:'nordic'});q.setView('tile-seam');},
    ()=>{const q=window.__auroraMAT01;q.setLayout('tile200');q.setView('tile-seam');});
-  await page.screenshot({path:`${out}/tile-seam-200m.png`});manifest.shots.push({group:'invariance',file:'tile-seam-200m.png',view:'tile-seam',caption:'Tile-corner view rendered with 200 m tiles (compare with tile-seam view at 400 m).'});
+  await page.screenshot({path:`${out}/tile-seam-200m.png`});upsert(manifest.shots,{group:'invariance',file:'tile-seam-200m.png',view:'tile-seam',caption:'Tile-corner view rendered with 200 m tiles (compare with tile-seam view at 400 m).'});
   // LOD: top-down classification must not change when mesh resolution changes.
   await diffPair('diff-lod-weights-ortho.png','Canonical weights, Birchwood orthographic: 4 m mesh vs LOD 4/8/16 m mesh (×8 amplified |Δ|).','lod4','lodmix',
    ()=>{const q=window.__auroraMAT01;q.setLayout('canonical');q.set({debug:'weights',water:false});q.setView('birchwood-ortho');},
    ()=>{const q=window.__auroraMAT01;q.setLayout('lod',{x:150,z:-1150});q.setView('birchwood-ortho');});
-  await page.evaluate(()=>{const q=window.__auroraMAT01;q.set({wireframe:true,debug:'off'});});await page.screenshot({path:`${out}/lod-wireframe-ortho.png`});
-  manifest.shots.push({group:'invariance',file:'lod-wireframe-ortho.png',view:'birchwood-ortho',caption:'LOD layout used for the LOD comparison (wireframe): 4, 8 and 16 m tiles by distance from the valley focus.'});
+  await page.evaluate(()=>{const q=window.__auroraMAT01;q.set({wireframe:true,debug:'off'});q.snap('w');});await page.screenshot({path:`${out}/lod-wireframe-ortho.png`});
+  upsert(manifest.shots,{group:'invariance',file:'lod-wireframe-ortho.png',view:'birchwood-ortho',caption:'LOD layout used for the LOD comparison (wireframe): 4, 8 and 16 m tiles by distance from the valley focus.'});
   await diffPair('diff-lod-shaded-walk.png','Shaded MAT-01, Central Valley overview: 4 m mesh vs LOD mesh. Differences come from geometry (silhouettes, interpolated normals), not material identity.','lodA','lodB',
    ()=>{const q=window.__auroraMAT01;q.setLayout('canonical');q.set({wireframe:false,debug:'off',water:true});q.setView('valley-overview');},
    ()=>{const q=window.__auroraMAT01;q.setLayout('lod',{x:150,z:-1150});q.setView('valley-overview');});
-  await page.screenshot({path:`${out}/lod-shaded-valley.png`});manifest.shots.push({group:'invariance',file:'lod-shaded-valley.png',view:'valley-overview',caption:'Central Valley overview rendered on the LOD mesh (compare with valley-overview.png).'});
+  await page.screenshot({path:`${out}/lod-shaded-valley.png`});upsert(manifest.shots,{group:'invariance',file:'lod-shaded-valley.png',view:'valley-overview',caption:'Central Valley overview rendered on the LOD mesh (compare with valley-overview.png).'});
   await page.evaluate(()=>window.__auroraMAT01.setLayout('canonical'));
  }
  if(want('measure')){
@@ -98,6 +101,10 @@ try{
   const parity=await page.evaluate(p=>window.__auroraMAT01.parity(-850,-200,330,p),pts);
   const err=parity.map(r=>Math.max(...r.gpu.map((g,k)=>Math.abs(g-r.cpu[k]))));
   manifest.measurements.gpuCpuParity={points:parity.length,maxAbsWeightError:+Math.max(...err).toFixed(4),meanAbsWeightError:+(err.reduce((a,b)=>a+b,0)/err.length).toFixed(5),note:'GPU raw weights rendered top-down to RGBA8 vs CPU TerrainMaterialQuery.weightsAt; 1/255 = 0.0039.'};
+  manifest.measurements.lifecycle=await page.evaluate(()=>window.__auroraMAT01.lifecycle());
+  manifest.measurements.runtime=await page.evaluate(()=>window.__auroraMAT01.metrics());
+ }
+ if(want('bench')){
   const bench={};
   for(const [view,profile] of [['valley-walk','high'],['valley-walk','balanced'],['valley-walk','mobile'],['valley-overview','high'],['birchwood-walk','high'],['island-ortho','high']]){
    await page.evaluate(async([v,p])=>{const q=window.__auroraMAT01;await q.setProfile(p);q.set({...{surface:'material',debug:'off',force:-1,wireframe:false,water:true}});q.setView(v);},[view,profile]);
@@ -108,8 +115,7 @@ try{
    bench[`valley-walk/${surface}`]={msPerFrameSoftware:await page.evaluate(()=>window.__auroraMAT01.benchmark(3))};}
   await page.evaluate(()=>window.__auroraMAT01.set({surface:'material'}));
   manifest.measurements.softwareBenchmark={note:'Synchronous render + readPixels on SwiftShader at '+width+'×'+height+'. CPU rasterisation cost; NOT desktop or Android GPU frame time.',results:bench};
-  manifest.measurements.lifecycle=await page.evaluate(()=>window.__auroraMAT01.lifecycle());
-  manifest.measurements.runtime=await page.evaluate(()=>window.__auroraMAT01.metrics());
+  manifest.measurements.runtime??=await page.evaluate(()=>window.__auroraMAT01.metrics());
  }
  manifest.pageErrors=errors;if(errors.length)failed=true;
 }catch(e){failed=true;manifest.failure=String(e?.stack??e);console.error('CAPTURE FAILURE',e);}

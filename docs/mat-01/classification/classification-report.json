@@ -1,0 +1,117 @@
+{
+ "tool": "tools/mat-01/classify-report.ts",
+ "evidenceType": "top-down classification data maps (8 m/pixel), NOT renderer screenshots",
+ "rulesVersion": "mat-01-rules-r5",
+ "sourceId": "geo-r02b-r1",
+ "sourceProvenance": {
+  "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "masterSha256": "62cb154b4ab6473ae7e2507449cea5407774503cdc09fe42f09adbde0a0ec598"
+ },
+ "lattice": {
+  "width": 1501,
+  "height": 2001,
+  "cellM": 4,
+  "west": -3000,
+  "north": 4000
+ },
+ "sha256": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+ "timingsMs": {
+  "slopeCurvature": 205,
+  "distances": 419,
+  "coarseFields": 341,
+  "rules": 3208,
+  "total": 4173
+ },
+ "weightSumViolations": 0,
+ "landNodes": 1575323,
+ "landCoverage": {
+  "forest-floor": 0.2393,
+  "meadow-turf": 0.5721,
+  "coastal-sand": 0.0175,
+  "bedrock": 0.1711
+ },
+ "anchorComposition": {
+  "north-peak": {
+   "forest-floor": 0,
+   "meadow-turf": 0.184,
+   "coastal-sand": 0,
+   "bedrock": 0.816
+  },
+  "cairn": {
+   "forest-floor": 0.271,
+   "meadow-turf": 0.729,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "tarn": {
+   "forest-floor": 0,
+   "meadow-turf": 1,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "forest": {
+   "forest-floor": 1,
+   "meadow-turf": 0,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "fold": {
+   "forest-floor": 1,
+   "meadow-turf": 0,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "valley": {
+   "forest-floor": 0.055,
+   "meadow-turf": 0.945,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "mire": {
+   "forest-floor": 0,
+   "meadow-turf": 1,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "south": {
+   "forest-floor": 0,
+   "meadow-turf": 1,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "dunes": {
+   "forest-floor": 0,
+   "meadow-turf": 1,
+   "coastal-sand": 0,
+   "bedrock": 0
+  },
+  "home": {
+   "forest-floor": 0,
+   "meadow-turf": 1,
+   "coastal-sand": 0,
+   "bedrock": 0
+  }
+ },
+ "legend": {
+  "forest-floor": [
+   46,
+   92,
+   40
+  ],
+  "meadow-turf": [
+   170,
+   196,
+   96
+  ],
+  "coastal-sand": [
+   232,
+   206,
+   140
+  ],
+  "bedrock": [
+   128,
+   128,
+   132
+  ]
+ }
+}

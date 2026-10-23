@@ -93,6 +93,8 @@ const ground=(x:number,z:number)=>nodeHeight(heightSrc,x,z);
 let yaw=0,pitch=0;const eye=new THREE.Vector3();
 function placePerspective(){perspective.position.set(-eye.x,eye.y,eye.z);perspective.up.set(0,1,0);perspective.lookAt(-eye.x-Math.sin(yaw)*Math.cos(pitch)*100,eye.y+Math.sin(pitch)*100,eye.z+Math.cos(yaw)*Math.cos(pitch)*100);}
 function setView(id:string){const c=CAMERAS.find(c=>c.id===id) as Camera|undefined;if(!c)throw new Error('Unknown view '+id);state.view=id;$<HTMLSelectElement>('view').value=id;
+ // Orthographic surveys sit 11 km above the island; distance fog would wash them out, so it applies to perspective views only.
+ scene.fog=('ortho' in c)?null:new THREE.FogExp2(LIGHTING[state.lighting].bg,LIGHTING[state.lighting].fog);
  if('ortho' in c){camera=ortho;const a=innerWidth/innerHeight;Object.assign(ortho,{left:-c.halfHeight*a,right:c.halfHeight*a,top:c.halfHeight,bottom:-c.halfHeight});ortho.updateProjectionMatrix();ortho.position.set(-c.x,11000,c.z);ortho.up.set(0,0,1);ortho.lookAt(-c.x,0,c.z);}
  else{camera=perspective;perspective.fov=c.fov??60;perspective.updateProjectionMatrix();yaw=c.yaw;pitch=c.pitch;eye.set(c.x,ground(c.x,c.z)+c.eye,c.z);placePerspective();}
 }
@@ -144,7 +146,10 @@ const qa={
   const cam=new THREE.OrthographicCamera(-half,half,half,-half,20,24000);cam.position.set(-cx,11000,cz);cam.up.set(0,0,1);cam.lookAt(-cx,0,cz);
   renderer.setRenderTarget(rt);renderer.render(scene,cam);const out=[];
   for(const [x,z] of points){const v=new THREE.Vector3(-x,ground(x,z),z).project(cam),px=Math.floor((v.x*.5+.5)*512),py=Math.floor((v.y*.5+.5)*512),buf=new Uint8Array(4);
-   renderer.readRenderTargetPixels(rt,px,py,1,1,buf);const cpu=query.weightsAt(x,z);out.push({x,z,gpu:[buf[0],buf[1],buf[2]].map(b=>b/255),cpu:[cpu[0],cpu[1],cpu[2]]});}
+   renderer.readRenderTargetPixels(rt,px,py,1,1,buf);
+   // Compare at the exact world position the GPU pixel centre shaded (top-down orthographic, mirrored x).
+   const w=new THREE.Vector3((px+.5)/512*2-1,(py+.5)/512*2-1,0).unproject(cam),gx=-w.x,gz=w.z,cpu=query.weightsAt(gx,gz);
+   out.push({x:gx,z:gz,gpu:[buf[0],buf[1],buf[2]].map(b=>b/255),cpu:[cpu[0],cpu[1],cpu[2]]});}
   renderer.setRenderTarget(null);Object.assign(state,prev);applyState();return out;},
  /** Store the current frame's pixels under a name (after a synchronous render). */
  snap(name:string){renderSync();const gl=renderer.getContext(),w=gl.drawingBufferWidth,h=gl.drawingBufferHeight,px=new Uint8Array(w*h*4);gl.readPixels(0,0,w,h,gl.RGBA,gl.UNSIGNED_BYTE,px);snaps.set(name,{w,h,px});return {w,h};},
@@ -155,7 +160,7 @@ const qa={
    max=Math.max(max,d);sum+=d;if(d>4)over4++;if(d>16)over16++;const v=Math.min(255,d*8);img.data[o]=v;img.data[o+1]=v;img.data[o+2]=v;img.data[o+3]=255;}
   ctx.putImageData(img,0,0);return {pixels:A.w*A.h,maxDelta:max,meanDelta:+(sum/(A.w*A.h)).toFixed(4),over4,over16,image:c.toDataURL('image/png')};},
  /** Dispose every terrain-material GPU resource, verify the texture count drops, recreate, render again. */
- lifecycle(){const before=renderer.info.memory.textures;const p=state.profile;
+ lifecycle(){state.surface='material';applyState();renderSync();const before=renderer.info.memory.textures;const p=state.profile;
   terrainMaterial.dispose();resources.release();const disposed={resourcesDisposed:resources.disposed,owners:resources.ownerCount};
   tiles.setMaterial(plainMaterial);renderSync();const afterDispose=renderer.info.memory.textures;
   resources=new TerrainMaterialResources(classification,textureCache[PROFILES[p].textureSize],p).acquire();terrainMaterial=createTerrainMaterial(resources);applyState();renderSync();

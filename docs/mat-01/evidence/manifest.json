@@ -1,0 +1,1563 @@
+{
+ "tool": "tools/mat-01/capture.mjs",
+ "gitHead": "e89a1bee916c118175fdd537716555dc15107232",
+ "url": "http://127.0.0.1:4320/mat-01.html",
+ "viewport": {
+  "width": 1280,
+  "height": 800,
+  "dpr": 1
+ },
+ "browser": "141.0.7390.37",
+ "evidence": "Unretouched Chromium WebGL2 screenshots of the MAT-01 Three.js review page on the real GEO-R02B-R1 terrain. Renderer is SwiftShader (software); timings are not GPU performance.",
+ "shots": [
+  {
+   "group": "materials",
+   "file": "m01-close.jpg",
+   "view": "m01-close",
+   "caption": "M01 Nordic Forest Floor: close-up, 1.1 m above the surface looking down (Nordic daylight).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 94.553,
+   "originalPngSha256": "dcc5da8bb66ff94c447862c2063495c568668a0ed299e67b565a713b0ee1c33b",
+   "sha256": "c2377472535d250266828502d5cd4889c9fbd96addaed8af4c30c094708f8201",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m01-walk.jpg",
+   "view": "m01-walk",
+   "caption": "M01 Nordic Forest Floor: walking eye height 1.75 m.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 29.763,
+   "originalPngSha256": "d1bc3f24229ae91575cd001e62caea6d7573f56a23288b530595227a07f8e2d1",
+   "sha256": "56146e7ef60b0a9457f9d308d3d9e610ffc10ee9471cfb75c56c10a6d2658ad9",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m01-elevated.jpg",
+   "view": "m01-elevated",
+   "caption": "M01 Nordic Forest Floor: elevated 38 m view of the same location.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 17.663,
+   "originalPngSha256": "2c245750734ff9e5da29160ff410f1eb807ad4d00ee9f4a3beb3a21fb43d04d7",
+   "sha256": "70c4a0bb17ce47831326eee4ee9e47b4eea08b9961cbfed9ca95ac7baa04f8fb",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m02-close.jpg",
+   "view": "m02-close",
+   "caption": "M02 Meadow Turf: close-up, 1.1 m above the surface looking down (Nordic daylight).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 1.371,
+   "originalPngSha256": "a87143fa8c4b7f279d1f6c4b5058bac0f3ea4a06e9dc9dff76f4102276199f95",
+   "sha256": "65468895dde7e39a2a5190661aeed6c18ca0c0d71a3a947473f91c3731d039d5",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m02-walk.jpg",
+   "view": "m02-walk",
+   "caption": "M02 Meadow Turf: walking eye height 1.75 m.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 26.663,
+   "originalPngSha256": "7ca8536258629b18b291080c241394a78a55948ff0e4ed1af8a6dff297e43c32",
+   "sha256": "20bd10db0d7a6c805897b937f50ddbbbc643b7fd870c51261361d609711d4d31",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m02-elevated.jpg",
+   "view": "m02-elevated",
+   "caption": "M02 Meadow Turf: elevated 38 m view of the same location.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 16.046,
+   "originalPngSha256": "703afda9570e87735bb58eae143b29921b9affee8d9a736fd823a6c651d9f5f1",
+   "sha256": "0c82deb2e3798a756c75dd05502809e549a65ca8502a44071543cfa7af327dc6",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m03-close.jpg",
+   "view": "m03-close",
+   "caption": "M03 Coastal Sand: close-up, 1.1 m above the surface looking down (Nordic daylight).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 1.557,
+   "originalPngSha256": "2c9ea087e63bce7d263cb38f026be7163f2405a697badeaad2a180d236248889",
+   "sha256": "3b1bb04344f924c09288a88d105b9f5c11b5a21078a12c08f6e7810e3c3bd037",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m03-walk.jpg",
+   "view": "m03-walk",
+   "caption": "M03 Coastal Sand: walking eye height 1.75 m.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 7.578,
+   "originalPngSha256": "5063ea574de57b40e3d22fdc081a8bf2113cbe1fb90a83616501a212b150ba1c",
+   "sha256": "2866f5008ebe1a1399703b7542095f9f362b3965cca5fd5be8e9ab671c899f6f",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m03-elevated.jpg",
+   "view": "m03-elevated",
+   "caption": "M03 Coastal Sand: elevated 38 m view of the same location.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 7.312,
+   "originalPngSha256": "cbd9d366879c6669e3c4e6e3d43179281850db9aa5f167d48a90da1f34420019",
+   "sha256": "edc9ca1debe332beb6cc122e54b279168f99a4277721d1741192360458539bc0",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m04-close.jpg",
+   "view": "m04-close",
+   "caption": "M04 Nordic Bedrock: close-up, 1.1 m above the surface looking down (Nordic daylight).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 66.399,
+   "originalPngSha256": "ac55b5db1b08212eb328f6e9535d1bb4d88b55e565237a29fdc6f6d6c26301b1",
+   "sha256": "ac9456f7591e911eef13c9093f9e518a8d152b744528be20570791262b01cc72",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m04-walk.jpg",
+   "view": "m04-walk",
+   "caption": "M04 Nordic Bedrock: walking eye height 1.75 m.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 12.559,
+   "originalPngSha256": "87fc732d535054bb008705d416d8ce3b1589b3805939039080f476f6c3faa59d",
+   "sha256": "b8fc15065f7bd650a9c2d7c50a9a3297001f87d9485845b9f7657f51c35ef6cf",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "materials",
+   "file": "m04-elevated.jpg",
+   "view": "m04-elevated",
+   "caption": "M04 Nordic Bedrock: elevated 38 m view of the same location.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 12.274,
+   "originalPngSha256": "fad69cd1888ec2fe59b22270309116193350ba3876b2db585b03454addbff99c",
+   "sha256": "74ec26b4677f4621eb59f075955cfe2ee0373761b26ba78a400f82e6ad19962a",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "birchwood-overview.jpg",
+   "view": "birchwood-overview",
+   "caption": "Scene A \u2014 Birchwood overview: forest floor with glades and meadow margins on rolling terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 35.038,
+   "originalPngSha256": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b",
+   "sha256": "3fd3a6b8d84aa7d85e1a4f1c80b7f75a74cc3217a2cb599367605d8d235d5ddf",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "birchwood-walk.jpg",
+   "view": "birchwood-walk",
+   "caption": "Scene A \u2014 Birchwood at walking height from a forest edge.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 28.439,
+   "originalPngSha256": "b9882727e7b4dcfa7c9f317e6c4ce145488ae6bc82c63a7713452e0751fa127d",
+   "sha256": "ae715e6c0e81ab6edb2311ea1115bdce3dfd13b6d44e6a3c55fb942e43ec37f6",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "valley-overview.jpg",
+   "view": "valley-overview",
+   "caption": "Scene B \u2014 Central Valley overview: open turf, river corridor wetness and large-distance colour continuity.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 32.947,
+   "originalPngSha256": "93a02c4ba9b9fad8a691ad9d5e74e1cb6869d7fe7eefebd5232a7dec83eee8c1",
+   "sha256": "7670ba2274a76f91d6da1a5a69f7c33087010a78ef7ed50f826ac2e2e2007bdf",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "valley-walk.jpg",
+   "view": "valley-walk",
+   "caption": "Scene B \u2014 Central Valley at walking height (GEO-R02B central-valley viewpoint).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 24.747,
+   "originalPngSha256": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c",
+   "sha256": "85b998574de6d79c024e24525f0c33224de3d3433eac2cfeac46fa17d0b3a79f",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "cove-shore.jpg",
+   "view": "cove-shore",
+   "caption": "Scene C \u2014 Home Cove shoreline at walking height (GEO-R02B home-cove viewpoint).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 10.846,
+   "originalPngSha256": "8299454401ba7499de41622f2c27d12544860f2360a35f09f100486c897cbf54",
+   "sha256": "adacebf105c8c3dc0bb30ee48e93a07d0571d1ff0562a8d0cbcacf59717452fe",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "cove-elevated.jpg",
+   "view": "cove-elevated",
+   "caption": "Scene C \u2014 Home Cove from above: sand band, wet margin and grass-backed shore.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 12.178,
+   "originalPngSha256": "98282fb1c508fefbe5f29008e5e98fd452d45f6037872c2dbe62c67e18922256",
+   "sha256": "8efaaef94f032b632336101f453f45b657a85af2f080d5e2bd9bbb7379d1aa84",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "tarn-slope.jpg",
+   "view": "tarn-slope",
+   "caption": "Scene D \u2014 High Tarn rocky slope at walking height (GEO-R02B high-tarn viewpoint).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 26.461,
+   "originalPngSha256": "63df1e5f88749de782d965d3028487a957ffd105d6a0cd599365c41daca54a4d",
+   "sha256": "b378ace42b177ab64d3ef2773ad4d693872f7c8039cf1856352f5d11cc6e1747",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "scenes",
+   "file": "tarn-elevated.jpg",
+   "view": "tarn-elevated",
+   "caption": "Scene D \u2014 High Tarn elevated: bedrock on steep and high ground, sparse turf on benches.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 13.619,
+   "originalPngSha256": "0cc1c8b49b34eabb1060137b2fd8ae42d59e8f128b1a61ad6cf0d121d14b5916",
+   "sha256": "f1440d2c749115968282dbf778f8ef85af36bb371b42a4883480158f053da884",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-forest-meadow.jpg",
+   "view": "tr-forest-meadow",
+   "caption": "Transition forest floor \u2194 meadow (height-blended).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 22.254,
+   "originalPngSha256": "b31e88550440cd4b3f38a160a71f1d663b37d55c9a90b941a00f0ffcdf2406d8",
+   "sha256": "f52506b8d5f00b5e90555f94287d6a99d42c51e6474b6476b3ae3ccf3ade2cad",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-forest-meadow-linear.jpg",
+   "view": "tr-forest-meadow",
+   "caption": "Same view with height blending OFF (linear weight blend) for comparison.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": false,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 23.282,
+   "originalPngSha256": "471414bb19e88f2be5b597ad81b628f4e50dbc818a5b85d0d9e985de2b8f3a5c",
+   "sha256": "78ab497a0fc94e7da5c6cde36d3e55e90838d3cc615a3a0fa0d54c5b37ba554b",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-meadow-rock.jpg",
+   "view": "tr-meadow-rock",
+   "caption": "Transition meadow \u2194 bedrock on the northern massif.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 11.266,
+   "originalPngSha256": "739d01af77ed886947aa01b92240ea34e0519e42a8495f7823716fd8159e322d",
+   "sha256": "4b98c58a0d0ff544d6a4c88a9468e2f85b9f388cea8f470b39408ca92229dacc",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-sand-rock.jpg",
+   "view": "tr-sand-rock",
+   "caption": "Transition sand \u2194 bedrock on the eastern coast.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 7.667,
+   "originalPngSha256": "13518ffb1514afb9bf7b695ab92c47f24ff968e80c2dfe6959c0e0a76789aa82",
+   "sha256": "3687fae23bd7bd702d5ad932ad4a8604078df3bd5c70ad55d6197516f11c53cd",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-wet-shore.jpg",
+   "view": "tr-wet-shore",
+   "caption": "Wet shoreline influence: darker, smoother sand at the waterline (wetness attribute from verified sea mask + height).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 8.389,
+   "originalPngSha256": "fa8c83fec5dc94dad0c81f6f59b1a6070233eab39a8798f2114ffaf740276cc9",
+   "sha256": "209f6920136a3ac1976787e590a1b3fe053d446f870f377dcea60ec28899518b",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "transitions",
+   "file": "tr-wet-meadow.jpg",
+   "view": "tr-wet-meadow",
+   "caption": "River-side wet meadow: wetness from verified freshwater surface + provisional Mirelands intent.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 21.142,
+   "originalPngSha256": "55082e999b9b47296f305a4e1f8bc185a4b58ac6f1e62ee37cbb3e3b674f38fa",
+   "sha256": "67b46f8ebb079e4e9900001e89c649903b37db1d6b0c1c65f497adabf06eadcc",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-weights.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cweights\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "weights",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "a424e37cf71b5dd932ee085194a34f2add5defba96cac4564637ab94a7b448ca",
+   "seconds": 51.789
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-dominant.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cdominant\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "dominant",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "563fe5857172123c3eb5af066f71ce95a512775083c7c83df3a2088257b27711",
+   "seconds": 51.561
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-slope.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cslope\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "slope",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "b4d5957979456f4d2a4b0e5bd6a39c3277720b68fb9637a2f389398c738a0b5b",
+   "seconds": 52.488
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-wetness.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cwetness\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "wetness",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "62b13b01fd863c7aab24b085c43c115c6d9f21461435ed416476a30faa109c98",
+   "seconds": 51.888
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-exposure.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cexposure\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "exposure",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "ac678a2fb9d14ada2553d43af41d9b2ae005875dbe2ead7e51e707b1c2e1095e",
+   "seconds": 52.347
+  },
+  {
+   "group": "diagnostics",
+   "file": "island-macro.png",
+   "view": "island-ortho",
+   "caption": "Island orthographic, debug view \u201cmacro\u201d (exact unlit shader output).",
+   "state": {
+    "surface": "material",
+    "debug": "macro",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "9de5f01be316e519f4fc4f9c9f162e397089a12b94ae86829497ddd2db774a4c",
+   "seconds": 51.636
+  },
+  {
+   "group": "diagnostics",
+   "file": "birchwood-weights.png",
+   "view": "birchwood-ortho",
+   "caption": "Birchwood 1.2 km orthographic: canonical material weights.",
+   "state": {
+    "surface": "material",
+    "debug": "weights",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "bd98df4f89b432fd9cc6263eb7213ae60e71aa3d760788aeb3a1108cec71a5d1",
+   "seconds": 4.582
+  },
+  {
+   "group": "diagnostics",
+   "file": "birchwood-blended.png",
+   "view": "birchwood-ortho",
+   "caption": "Birchwood 1.2 km orthographic: final height-blended weights (shader presentation).",
+   "state": {
+    "surface": "material",
+    "debug": "blended",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": false,
+    "lighting": "nordic"
+   },
+   "sha256": "05b83aceed54e263c2825fe722faf2c073b858b36d5df073a39f0b0cde0888cc",
+   "seconds": 4.359
+  },
+  {
+   "group": "diagnostics",
+   "file": "tile-seam-lattice.png",
+   "view": "tile-seam",
+   "caption": "Tile-boundary view: classification lattice (4 m) drawn on the terrain; the 400 m tile corner is in frame.",
+   "state": {
+    "surface": "material",
+    "debug": "lattice",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "af83b0f51b450dfb5cdd27f28c50a79dc6e69adf732361d5aac8a4db7e49cc8b",
+   "seconds": 4.375
+  },
+  {
+   "group": "diagnostics",
+   "file": "tile-seam-wireframe.png",
+   "view": "tile-seam",
+   "caption": "Same view, wireframe: tile boundaries at x = \u22121000 m and z = \u2212400 m.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": true,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "2f8c3988b2ba1f45d2f603498e44a8b03a33c269ce4b0f163eaa1b7c469c9b8a",
+   "seconds": 10.521
+  },
+  {
+   "group": "lighting",
+   "file": "valley-walk-neutral.jpg",
+   "view": "valley-walk",
+   "caption": "Central Valley, neutral lighting.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "neutral"
+   },
+   "seconds": 24.603,
+   "originalPngSha256": "814c8264c220c24c9850817b23f0a7050fbef41d22a82b7acc0af04ae9c146f6",
+   "sha256": "e13952abec1b0ce4011f31cad19cc6fea83ac9b60b5bba75b6daa8765d6f5322",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "lighting",
+   "file": "valley-walk-grazing.jpg",
+   "view": "valley-walk",
+   "caption": "Central Valley, low grazing sun (8\u00b0) to expose micro-relief.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "grazing"
+   },
+   "seconds": 24.208,
+   "originalPngSha256": "d019a182305c49a983842db34889e9c14538770894c7d113834680f05230f062",
+   "sha256": "203e546754dbb014e23c5cfa931b97475c0461357b22571f0e8df31d09613afc",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "lighting",
+   "file": "m04-walk-grazing.jpg",
+   "view": "m04-walk",
+   "caption": "Bedrock under grazing light.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "grazing"
+   },
+   "seconds": 12.341,
+   "originalPngSha256": "e1af32c719f3b8ef7a078c1824bdd5d96c6de59c82d807a02aefd1e506c5706c",
+   "sha256": "0e5fe1ca2119b29b3683bda41b96a3a30fb3358d7fc48847b7e9917887e9efae",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "lighting",
+   "file": "m01-close-neutral.jpg",
+   "view": "m01-close",
+   "caption": "Forest floor close-up, neutral lighting.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "neutral"
+   },
+   "seconds": 1.457,
+   "originalPngSha256": "f00ae4d1a4e0a40ee3e474bf29429d89f8f58381cb075b8fe9d174a4aed237da",
+   "sha256": "8f8bcbd09c95aa4929a94af09255eee4c6fe71256e6396f16d387fa7e5d97e5f",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "comparison",
+   "file": "compare-valley-m01.jpg",
+   "view": "m02-walk",
+   "caption": "Material comparison on identical terrain/camera: M01 Nordic Forest Floor forced everywhere.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": 0,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 15.718,
+   "originalPngSha256": "bd05351f22208cb4aaf8ff4cd803ea058f9d69ac3f9696b4f16d8abb3ce7814b",
+   "sha256": "e8c1f92ba72f31eaaacd1e0bfd32c59915c65c9b0772d9f9411141d027bee7b2",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "comparison",
+   "file": "compare-valley-m02.jpg",
+   "view": "m02-walk",
+   "caption": "Material comparison on identical terrain/camera: M02 Meadow Turf forced everywhere.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": 1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 16.061,
+   "originalPngSha256": "354a6853edba222bb11ebbb2161ed0e45db8f8d30d33facc7946ad7c8d38e97e",
+   "sha256": "f625c53e81b07793b52f248f60cdb45d9b916ea7622cdc4927727cd3d35b47f4",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "comparison",
+   "file": "compare-valley-m03.jpg",
+   "view": "m02-walk",
+   "caption": "Material comparison on identical terrain/camera: M03 Coastal Sand forced everywhere.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": 2,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 16.67,
+   "originalPngSha256": "1d7999de2361ec3416e6b9d807150de22c635cfceb8f6a90a023518caee69ee4",
+   "sha256": "3bc8164dbb5e99005d70f05d44d46e81cd97e86edaa25a73a1edc30fc774298c",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "comparison",
+   "file": "compare-valley-m04.jpg",
+   "view": "m02-walk",
+   "caption": "Material comparison on identical terrain/camera: M04 Nordic Bedrock forced everywhere.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": 3,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 18.184,
+   "originalPngSha256": "74099f3355de55561f859191e2070fdefc1dc6c2bd09fb1e5fa0247c132d9416",
+   "sha256": "5408ee0343eebf1552d1c56cad80738e2b3f4dff8b31880ddc577c634ee149f2",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "triplanar",
+   "file": "tarn-steep-triplanar.jpg",
+   "view": "tarn-slope",
+   "caption": "Steep bedrock with selective triplanar projection ON.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 25.494,
+   "originalPngSha256": "63df1e5f88749de782d965d3028487a957ffd105d6a0cd599365c41daca54a4d",
+   "sha256": "b378ace42b177ab64d3ef2773ad4d693872f7c8039cf1856352f5d11cc6e1747",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "triplanar",
+   "file": "tarn-steep-planar.jpg",
+   "view": "tarn-slope",
+   "caption": "Same view with triplanar OFF (top-down projection only).",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": false,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 22.026,
+   "originalPngSha256": "83ae27734898c9537e2cff1e740b6f4e582854b28da54adfc79a1547985eb917",
+   "sha256": "0afa74caf9c9db94539dbf5a2b6536bccf41e7d5fdda0d599fbd862e7cb0c37f",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-walk-plain.png",
+   "view": "valley-walk",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "f55ecc1c3cd2dc873b7704019507782bed3d03160645c5c751a439da8906d5e1",
+   "seconds": 1.293
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-walk-vertex.png",
+   "view": "valley-walk",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "60da51f22a1dd231f1443959f4b310b448450f641265bfee457d01e8e13fe5ee",
+   "seconds": 3.493
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-walk-material.jpg",
+   "view": "valley-walk",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 24.661,
+   "originalPngSha256": "0a8d22e48efc7809f8b7affe0a7f4e644cbdc4ea61eaab0924545b35199f614c",
+   "sha256": "85b998574de6d79c024e24525f0c33224de3d3433eac2cfeac46fa17d0b3a79f",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-overview-plain.png",
+   "view": "valley-overview",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "c17cf1d4962d743b05e96aedc01bacffbede52984c59c8338387854508aeba20",
+   "seconds": 2.03
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-overview-vertex.png",
+   "view": "valley-overview",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "e039115f5a421373ec1b211d5e60849c4fd5ef32c9bcb7d5227be9117f01d4c2",
+   "seconds": 2.425
+  },
+  {
+   "group": "before-after",
+   "file": "ba-valley-overview-material.jpg",
+   "view": "valley-overview",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 32.292,
+   "originalPngSha256": "93a02c4ba9b9fad8a691ad9d5e74e1cb6869d7fe7eefebd5232a7dec83eee8c1",
+   "sha256": "7670ba2274a76f91d6da1a5a69f7c33087010a78ef7ed50f826ac2e2e2007bdf",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-overview-plain.png",
+   "view": "birchwood-overview",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "0c8193b09fa19f3cdfec61d113871fc86eaca50d9eb514d5e721550bf104dd31",
+   "seconds": 2.121
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-overview-vertex.png",
+   "view": "birchwood-overview",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "1f700eafc3cc94dc20d01a0fa0d9ea9e58f3ae995c541685f44e5fc9360dd960",
+   "seconds": 2.344
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-overview-material.jpg",
+   "view": "birchwood-overview",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 31.961,
+   "originalPngSha256": "227a6d2cd6b049b1fff586b4ec488ee821a4bb39a5a641ce42e38f4f5328d26b",
+   "sha256": "3fd3a6b8d84aa7d85e1a4f1c80b7f75a74cc3217a2cb599367605d8d235d5ddf",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-walk-plain.png",
+   "view": "birchwood-walk",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "7d7605bd9fac101507ad140cfc04910b531374214178dc12a16e786d4f732f6c",
+   "seconds": 1.748
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-walk-vertex.png",
+   "view": "birchwood-walk",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "3c02db6c905bc9a8590dbde15c6ef3b6af234fa23b3ee177fa707258102176b1",
+   "seconds": 2.006
+  },
+  {
+   "group": "before-after",
+   "file": "ba-birchwood-walk-material.jpg",
+   "view": "birchwood-walk",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 29.454,
+   "originalPngSha256": "b9882727e7b4dcfa7c9f317e6c4ce145488ae6bc82c63a7713452e0751fa127d",
+   "sha256": "ae715e6c0e81ab6edb2311ea1115bdce3dfd13b6d44e6a3c55fb942e43ec37f6",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-cove-shore-plain.png",
+   "view": "cove-shore",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "1517758bf558c154adf0f5fc3d08010b4d4dc767f9f462766121637ff3ddd05c",
+   "seconds": 0.558
+  },
+  {
+   "group": "before-after",
+   "file": "ba-cove-shore-vertex.png",
+   "view": "cove-shore",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "afaf70eb0288545fe9b87308fbfa4f0aabf8d9aef809bddbe3716e7aca7542d8",
+   "seconds": 0.464
+  },
+  {
+   "group": "before-after",
+   "file": "ba-cove-shore-material.jpg",
+   "view": "cove-shore",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 10.83,
+   "originalPngSha256": "8299454401ba7499de41622f2c27d12544860f2360a35f09f100486c897cbf54",
+   "sha256": "adacebf105c8c3dc0bb30ee48e93a07d0571d1ff0562a8d0cbcacf59717452fe",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-tarn-slope-plain.png",
+   "view": "tarn-slope",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "8d1150e88aa76abd4206cce356332d5cf9e6462393fda1aadaf630c80e39b7a4",
+   "seconds": 1.292
+  },
+  {
+   "group": "before-after",
+   "file": "ba-tarn-slope-vertex.png",
+   "view": "tarn-slope",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "6dbd2a67d2ddea4127a6b915be4de1da5c79dfe4c572a0fe77d68b82f1b6d43e",
+   "seconds": 1.305
+  },
+  {
+   "group": "before-after",
+   "file": "ba-tarn-slope-material.jpg",
+   "view": "tarn-slope",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "seconds": 25.012,
+   "originalPngSha256": "63df1e5f88749de782d965d3028487a957ffd105d6a0cd599365c41daca54a4d",
+   "sha256": "b378ace42b177ab64d3ef2773ad4d693872f7c8039cf1856352f5d11cc6e1747",
+   "encoding": "JPEG q85 re-encode of the lossless capture; no other processing"
+  },
+  {
+   "group": "before-after",
+   "file": "ba-island-ortho-plain.png",
+   "view": "island-ortho",
+   "caption": "Before \u2014 existing plain GEO-R02B terrain material (Lambert 0xb4b6b0). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "plain",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "2344c931ec7311511408e3b172282b7179a9985975098f60ef290dd6b675fc9c",
+   "seconds": 93.614
+  },
+  {
+   "group": "before-after",
+   "file": "ba-island-ortho-vertex.png",
+   "view": "island-ortho",
+   "caption": "Option A \u2014 per-vertex colour from the same classification (no detail textures). Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "vertex",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "1a847d28b76d40f39db930104ad952c41b8b062420cac36d4947555b8f286435",
+   "seconds": 6.553
+  },
+  {
+   "group": "before-after",
+   "file": "ba-island-ortho-material.png",
+   "view": "island-ortho",
+   "caption": "After \u2014 MAT-01 hybrid material. Matched camera, lighting and terrain.",
+   "state": {
+    "surface": "material",
+    "debug": "off",
+    "force": -1,
+    "heightBlend": true,
+    "normals": true,
+    "triplanar": true,
+    "wireframe": false,
+    "water": true,
+    "lighting": "nordic"
+   },
+   "sha256": "41bb0515d28870357fbda0796c1aedeeb9bf889c53e1849476b37eff19aaa5b5",
+   "seconds": 53.803
+  },
+  {
+   "group": "invariance",
+   "file": "tile-seam-200m.png",
+   "view": "tile-seam",
+   "caption": "Tile-corner view rendered with 200 m tiles (compare with tile-seam view at 400 m)."
+  },
+  {
+   "group": "invariance",
+   "file": "lod-wireframe-ortho.png",
+   "view": "birchwood-ortho",
+   "caption": "LOD layout used for the LOD comparison (wireframe): 4, 8 and 16 m tiles by distance from the valley focus."
+  },
+  {
+   "group": "invariance",
+   "file": "lod-shaded-valley.png",
+   "view": "valley-overview",
+   "caption": "Central Valley overview rendered on the LOD mesh (compare with valley-overview.png)."
+  }
+ ],
+ "diffs": [
+  {
+   "file": "diff-tiling-tile-seam.png",
+   "caption": "Shaded MAT-01 frame, 400 m tiles vs 200 m tiles at the tile-corner view (\u00d78 amplified |\u0394|).",
+   "pixels": 1024000,
+   "maxDelta": 0,
+   "meanDelta": 0,
+   "over4": 0,
+   "over16": 0
+  },
+  {
+   "file": "diff-lod-weights-ortho.png",
+   "caption": "Canonical weights, Birchwood orthographic: 4 m mesh vs LOD 4/8/16 m mesh (\u00d78 amplified |\u0394|).",
+   "pixels": 1024000,
+   "maxDelta": 2,
+   "meanDelta": 0.0243,
+   "over4": 0,
+   "over16": 0
+  },
+  {
+   "file": "diff-lod-shaded-walk.png",
+   "caption": "Shaded MAT-01, Central Valley overview: 4 m mesh vs LOD mesh. Differences come from geometry (silhouettes, interpolated normals), not material identity.",
+   "pixels": 1024000,
+   "maxDelta": 142,
+   "meanDelta": 0.1666,
+   "over4": 6976,
+   "over16": 1589
+  }
+ ],
+ "measurements": {
+  "pageReadySeconds": 7.286,
+  "gpuCpuParity": {
+   "points": 64,
+   "maxAbsWeightError": 0.0033,
+   "meanAbsWeightError": 0.00033,
+   "note": "GPU raw weights rendered top-down to RGBA8 vs CPU TerrainMaterialQuery.weightsAt; 1/255 = 0.0039."
+  },
+  "softwareBenchmark": {
+   "note": "Synchronous render + readPixels on SwiftShader at 1280\u00d7800. CPU rasterisation cost; NOT desktop or Android GPU frame time.",
+   "results": {
+    "valley-walk/high": {
+     "msPerFrameSoftware": 23561.3,
+     "compileMs": 12.4,
+     "calls": 84,
+     "triangles": 1751857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 32037344,
+      "detail": 11184811,
+      "total": 43222155
+     }
+    },
+    "valley-walk/balanced": {
+     "msPerFrameSoftware": 16084.5,
+     "compileMs": 9.5,
+     "calls": 84,
+     "triangles": 1751857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 32037344,
+      "detail": 11184811,
+      "total": 43222155
+     }
+    },
+    "valley-walk/mobile": {
+     "msPerFrameSoftware": 11470.6,
+     "compileMs": 9.9,
+     "calls": 84,
+     "triangles": 1751857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 8018677,
+      "detail": 2796203,
+      "total": 10814880
+     }
+    },
+    "valley-overview/high": {
+     "msPerFrameSoftware": 33195.6,
+     "compileMs": 9.9,
+     "calls": 149,
+     "triangles": 3051857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 32037344,
+      "detail": 11184811,
+      "total": 43222155
+     }
+    },
+    "birchwood-walk/high": {
+     "msPerFrameSoftware": 28706.6,
+     "compileMs": 9.7,
+     "calls": 126,
+     "triangles": 2591857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 32037344,
+      "detail": 11184811,
+      "total": 43222155
+     }
+    },
+    "island-ortho/high": {
+     "msPerFrameSoftware": 53198.1,
+     "compileMs": 9.2,
+     "calls": 302,
+     "triangles": 6111857,
+     "programs": 3,
+     "textures": 6,
+     "materialMemoryBytes": {
+      "classification": 32037344,
+      "detail": 11184811,
+      "total": 43222155
+     }
+    },
+    "valley-walk/plain": {
+     "msPerFrameSoftware": 1297.3
+    },
+    "valley-walk/vertex": {
+     "msPerFrameSoftware": 1209.6
+    }
+   }
+  },
+  "lifecycle": {
+   "before": 6,
+   "afterDispose": 2,
+   "afterRecreate": 6,
+   "resourcesDisposed": true,
+   "owners": 0,
+   "shaderErrors": []
+  },
+  "runtime": {
+   "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+   "calls": 26,
+   "triangles": 591857,
+   "programs": 2,
+   "geometries": 130,
+   "textures": 6,
+   "medianFrameMs": 1166.5,
+   "terrainTriangles": 6000000,
+   "tiles": 300,
+   "materialMemoryBytes": {
+    "classification": 32037344,
+    "detail": 11184811,
+    "total": 43222155
+   },
+   "profile": "high",
+   "classificationHash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+   "classificationTimingsMs": {
+    "slopeCurvature": 160,
+    "distances": 372,
+    "coarseFields": 227,
+    "rules": 1891,
+    "total": 2650
+   },
+   "synthesisMs": 1737,
+   "workerTotalMs": 4509,
+   "dataLoadMs": 255,
+   "shaderErrors": []
+  }
+ },
+ "mergedRuns": [
+  {
+   "gitHead": "e89a1bee916c118175fdd537716555dc15107232"
+  },
+  {
+   "gitHead": "e89a1bee916c118175fdd537716555dc15107232"
+  }
+ ],
+ "pageErrors": [],
+ "packaging": "Lit screenshots > 300 kB re-encoded as JPEG q85 (tools/mat-01/compress-evidence.py); diagnostics, diffs and small images are the original PNG captures."
+}

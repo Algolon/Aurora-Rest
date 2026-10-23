@@ -1,0 +1,51 @@
+{
+ "tool": "tools/mat-01/texture-sheets.ts",
+ "evidenceType": "synthesised texture data, tiled 2×2; NOT renderer screenshots",
+ "size": 512,
+ "materials": {
+  "forest-floor": {
+   "tileM": 2.2,
+   "texelMm": 4.3,
+   "synthesisMs": 844,
+   "meanLinear": [
+    0.0636,
+    0.0559,
+    0.0282
+   ],
+   "meanHeight": 0.362
+  },
+  "meadow-turf": {
+   "tileM": 2.6,
+   "texelMm": 5.08,
+   "synthesisMs": 625,
+   "meanLinear": [
+    0.0886,
+    0.1006,
+    0.0289
+   ],
+   "meanHeight": 0.398
+  },
+  "coastal-sand": {
+   "tileM": 2,
+   "texelMm": 3.91,
+   "synthesisMs": 653,
+   "meanLinear": [
+    0.3719,
+    0.3244,
+    0.2251
+   ],
+   "meanHeight": 0.456
+  },
+  "bedrock": {
+   "tileM": 3.5,
+   "texelMm": 6.84,
+   "synthesisMs": 722,
+   "meanLinear": [
+    0.0868,
+    0.0998,
+    0.1019
+   ],
+   "meanHeight": 0.492
+  }
+ }
+}

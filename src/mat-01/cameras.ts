@@ -5,8 +5,8 @@ export interface ReviewCamera {id:string;name:string;group:string;x:number;z:num
 export interface OrthoCamera {id:string;name:string;group:string;ortho:true;x:number;z:number;halfHeight:number}
 export type Camera=ReviewCamera|OrthoCamera;
 
-const study=(code:string,label:string,x:number,z:number,yaw:number):ReviewCamera[]=>[
- {id:`${code}-close`,name:`${code} ${label} · close-up`,group:'material-study',x,z,yaw,pitch:-1.05,eye:1.1,fov:50},
+const study=(code:string,label:string,x:number,z:number,yaw:number,closeEye=1.1):ReviewCamera[]=>[
+ {id:`${code}-close`,name:`${code} ${label} · close-up`,group:'material-study',x,z,yaw,pitch:-1.05,eye:closeEye,fov:50},
  {id:`${code}-walk`,name:`${code} ${label} · walking height`,group:'material-study',x,z,yaw,pitch:-.16,eye:1.75},
  {id:`${code}-elevated`,name:`${code} ${label} · elevated`,group:'material-study',x,z,yaw,pitch:-.5,eye:38},
 ];
@@ -15,7 +15,8 @@ export const CAMERAS:Camera[]=[
  ...study('m01','Forest floor',-836,-626,.6),
  ...study('m02','Meadow turf',260,-458,.4),
  ...study('m03','Coastal sand',2078,-2176,2.4),
- ...study('m04','Bedrock',-568,2734,.6),
+ // Bedrock close-up at hiker eye height: the 6.8 mm texel density blurs below ~1.5 m on a 45 % slope.
+ ...study('m04','Bedrock',-568,2734,.6,1.7),
  {id:'birchwood-overview',name:'Birchwood · overview',group:'scene',x:-1150,z:-950,yaw:.35,pitch:-.33,eye:190},
  {id:'birchwood-walk',name:'Birchwood · walking height (forest edge)',group:'scene',x:-1440,z:270,yaw:1.2,pitch:-.07,eye:1.75},
  {id:'valley-overview',name:'Central Valley · overview',group:'scene',x:150,z:-1150,yaw:.1,pitch:-.22,eye:170},
