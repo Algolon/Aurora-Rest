@@ -1,0 +1,72 @@
+{
+  "broad-glacial": {
+    "blender": "5.2.2 LTS",
+    "source": {
+      "vertices": 32,
+      "faces": 52,
+      "components": 1,
+      "signed_volume": 14.134755243846163,
+      "manifold": true
+    },
+    "runtime": {
+      "vertices": 47,
+      "faces": 90,
+      "components": 1,
+      "signed_volume": 14.129557516694426,
+      "manifold": true
+    },
+    "source_vertex_groups": 32,
+    "collections": [
+      "01 EDITABLE \u2022 authored geological cage",
+      "02 EXPORT \u2022 evaluated triangles",
+      "03 STUDIO \u2022 excluded from GLB"
+    ],
+    "source_modifiers": [],
+    "glb_reimport_triangle_positions_match": true,
+    "files": {
+      "aurora-broad-glacial.blend": {
+        "bytes": 101923,
+        "sha256": "94b2cc5b0fd5d8385bafa01a95eee0085094b1a3ee67643c7a932ec56738511c"
+      },
+      "aurora-broad-glacial.glb": {
+        "bytes": 11924,
+        "sha256": "f7e91c940a9c0ea1c8e0a3391d6f9d55f942e9f7d9cc5813dfb68a3b4bb95f3c"
+      }
+    }
+  },
+  "sculptural": {
+    "blender": "5.2.2 LTS",
+    "source": {
+      "vertices": 33,
+      "faces": 55,
+      "components": 1,
+      "signed_volume": 15.378523192130492,
+      "manifold": true
+    },
+    "runtime": {
+      "vertices": 55,
+      "faces": 106,
+      "components": 1,
+      "signed_volume": 15.377914085595267,
+      "manifold": true
+    },
+    "source_vertex_groups": 33,
+    "collections": [
+      "01 EDITABLE \u2022 authored geological cage",
+      "02 EXPORT \u2022 evaluated triangles",
+      "03 STUDIO \u2022 excluded from GLB"
+    ],
+    "source_modifiers": [],
+    "glb_reimport_triangle_positions_match": true,
+    "files": {
+      "aurora-sculptural.blend": {
+        "bytes": 102940,
+        "sha256": "ae1f6d03d9dd6a76ed256562d93eae44042fa235f5dcb5369f9e88d0bc4604d6"
+      },
+      "aurora-sculptural.glb": {
+        "bytes": 14176,
+        "sha256": "6c6f92ed3b22aaad1cf20e0467b866a9adf9c387725a7de60f84c099c4d14134"
+      }
+    }
+  }
+}

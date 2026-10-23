@@ -1,0 +1,9 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "build_hash": "d13f752e3b9c",
+  "actual_s1r_loaded": true,
+  "editable_vertices": 39,
+  "runtime_triangles": 96,
+  "s1r_sha256": "2aca669a6302402fdc3b4346350d6f78100bccb43a1c8e350dc2536b8ecaefd4",
+  "gltf_operator_available": true
+}

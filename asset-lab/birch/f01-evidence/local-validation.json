@@ -1,0 +1,53 @@
+{
+  "milestone": "ASSET-01F01",
+  "new_shapes_art_status": "ART NOT APPROVED",
+  "technical_status": "VALIDATED STAGING INFRASTRUCTURE",
+  "foundation": "cb77977c4b8652045f32657f19b14743ecd2ab6e",
+  "local_environment": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "blender": "5.2.2 LTS / d13f752e3b9c"
+  },
+  "tests": {
+    "passed": 57,
+    "failed": 0
+  },
+  "builds": {
+    "typescript": true,
+    "original_vite": true,
+    "f01_vite": true,
+    "warning": "Existing >500kB bundle warning; no code-splitting work in scope"
+  },
+  "native_saved_projects": "../art/blender/f01-nordic-rocks/saved-project-validation.json",
+  "webgl_errors": [],
+  "captures": 24,
+  "protected_parity": {
+    "birch": "PASS",
+    "scots_pine": "PASS",
+    "grass": "PASS",
+    "production_rocks": "PASS"
+  },
+  "external_reference_pin": "17eafb0902833fb1121c77083f9f862eb4ffcd96",
+  "grass_material_pixel_parity": {
+    "variants": 4,
+    "changed_pixels_RGB12": 0,
+    "max_RGB_difference": 0
+  },
+  "instanced_material_parity": {
+    "method": "Actual ordinary meshes versus instanced GLBs, identical transforms and T1; RGB tolerance 12",
+    "changedPixels": 3,
+    "totalPixels": 1296000,
+    "changedFraction": 2.3148148148148148e-06,
+    "maxDifference": 18
+  },
+  "resource_lifecycle": {
+    "geometries": 3,
+    "materials": 1,
+    "textures": 3,
+    "instances": 1,
+    "remainingChildren": 0,
+    "disposed": true
+  },
+  "physical_android_tested": false,
+  "world_integrated": false
+}

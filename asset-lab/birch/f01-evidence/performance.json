@@ -1,0 +1,103 @@
+{
+  "instanced": {
+    "method": "Headless/browser RAF wall-clock and CPU submission observations; no hardware GPU timer",
+    "samples": 60,
+    "medianRafMs": 237.5,
+    "p95RafMs": 273.5,
+    "medianRenderSubmissionMs": 0.30000001192092896,
+    "state": {
+      "mode": "performance",
+      "view": "elevated",
+      "surface": "T1",
+      "renderMode": "instanced"
+    },
+    "frames": 338,
+    "renderer": {
+      "calls": 43,
+      "triangles": 301764,
+      "geometries": 15,
+      "textures": 12
+    },
+    "pack": {
+      "uniqueGeometryBytes": 34152,
+      "uniqueTriangles": {
+        "compact": 96,
+        "broadGlacial": 90,
+        "sculptural": 106
+      },
+      "materialOwned": true,
+      "managedObjects": 42,
+      "disposed": false
+    },
+    "placedRocks": 34,
+    "counts": {
+      "compact": 24,
+      "broadGlacial": 5,
+      "sculptural": 5
+    },
+    "placedRockTriangles": 3284,
+    "grassClumps": 779,
+    "trees": 16,
+    "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "physicalAndroidVerified": false,
+    "worldIntegrated": false
+  },
+  "ordinaryMeshes": {
+    "method": "Headless/browser RAF wall-clock and CPU submission observations; no hardware GPU timer",
+    "samples": 45,
+    "medianRafMs": 236,
+    "p95RafMs": 275.9000000357628,
+    "medianRenderSubmissionMs": 0.3999999761581421,
+    "state": {
+      "mode": "performance",
+      "view": "elevated",
+      "surface": "T1",
+      "renderMode": "meshes"
+    },
+    "frames": 393,
+    "renderer": {
+      "calls": 105,
+      "triangles": 301764,
+      "geometries": 15,
+      "textures": 12
+    },
+    "pack": {
+      "uniqueGeometryBytes": 34152,
+      "uniqueTriangles": {
+        "compact": 96,
+        "broadGlacial": 90,
+        "sculptural": 106
+      },
+      "materialOwned": true,
+      "managedObjects": 42,
+      "disposed": false
+    },
+    "placedRocks": 34,
+    "counts": {
+      "compact": 24,
+      "broadGlacial": 5,
+      "sculptural": 5
+    },
+    "placedRockTriangles": 3284,
+    "grassClumps": 779,
+    "trees": 16,
+    "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "physicalAndroidVerified": false,
+    "worldIntegrated": false
+  },
+  "materialParity": {
+    "method": "Actual ordinary meshes versus instanced GLBs, identical transforms and T1; RGB tolerance 12",
+    "changedPixels": 3,
+    "totalPixels": 1296000,
+    "changedFraction": 0.0000023148148148148148,
+    "maxDifference": 18
+  },
+  "lifecycle": {
+    "geometries": 3,
+    "materials": 1,
+    "textures": 3,
+    "instances": 1,
+    "remainingChildren": 0,
+    "disposed": true
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "method": "Genuine Chromium Three.js WebGL2 SwiftShader; all rocks loaded from actual Blender GLBs",
+  "errors": [],
+  "captures": {
+    "R2-neutral-initial": {
+      "state": {
+        "mode": "R2",
+        "view": "elevated",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 9,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34032,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-initial": {
+      "state": {
+        "mode": "R3",
+        "view": "elevated",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 24,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34032,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "family-T1-initial": {
+      "state": {
+        "mode": "family",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 36,
+      "renderer": {
+        "calls": 7,
+        "triangles": 586,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34032,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    }
+  }
+}

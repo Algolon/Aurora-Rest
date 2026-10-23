@@ -1,0 +1,923 @@
+{
+  "method": "Genuine Chromium Three.js WebGL2 SwiftShader; all rocks loaded from actual Blender GLBs",
+  "errors": [],
+  "captures": {
+    "R2-neutral-front": {
+      "state": {
+        "mode": "R2",
+        "view": "front",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 9,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-rear": {
+      "state": {
+        "mode": "R2",
+        "view": "rear",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 22,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-left": {
+      "state": {
+        "mode": "R2",
+        "view": "left",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 34,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-right": {
+      "state": {
+        "mode": "R2",
+        "view": "right",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 46,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-top": {
+      "state": {
+        "mode": "R2",
+        "view": "top",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 58,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-human": {
+      "state": {
+        "mode": "R2",
+        "view": "human",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 72,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R2-neutral-elevated": {
+      "state": {
+        "mode": "R2",
+        "view": "elevated",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 83,
+      "renderer": {
+        "calls": 3,
+        "triangles": 182,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-front": {
+      "state": {
+        "mode": "R3",
+        "view": "front",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 94,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-rear": {
+      "state": {
+        "mode": "R3",
+        "view": "rear",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 106,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-left": {
+      "state": {
+        "mode": "R3",
+        "view": "left",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 119,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-right": {
+      "state": {
+        "mode": "R3",
+        "view": "right",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 132,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-top": {
+      "state": {
+        "mode": "R3",
+        "view": "top",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 143,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-human": {
+      "state": {
+        "mode": "R3",
+        "view": "human",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 157,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "R3-neutral-elevated": {
+      "state": {
+        "mode": "R3",
+        "view": "elevated",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 168,
+      "renderer": {
+        "calls": 3,
+        "triangles": 214,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "family-T1": {
+      "state": {
+        "mode": "family",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 179,
+      "renderer": {
+        "calls": 7,
+        "triangles": 586,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "family-neutral": {
+      "state": {
+        "mode": "family",
+        "view": "elevated",
+        "surface": "neutral",
+        "renderMode": "instanced"
+      },
+      "frames": 190,
+      "renderer": {
+        "calls": 7,
+        "triangles": 586,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "woodland-elevated": {
+      "state": {
+        "mode": "woodland",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 201,
+      "renderer": {
+        "calls": 37,
+        "triangles": 289494,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "woodland-human": {
+      "state": {
+        "mode": "woodland",
+        "view": "human",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 212,
+      "renderer": {
+        "calls": 35,
+        "triangles": 286750,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "glacial-elevated": {
+      "state": {
+        "mode": "glacial",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 223,
+      "renderer": {
+        "calls": 39,
+        "triangles": 293942,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "glacial-human": {
+      "state": {
+        "mode": "glacial",
+        "view": "human",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 234,
+      "renderer": {
+        "calls": 28,
+        "triangles": 273586,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "foothill-elevated": {
+      "state": {
+        "mode": "foothill",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 245,
+      "renderer": {
+        "calls": 36,
+        "triangles": 288990,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "foothill-human": {
+      "state": {
+        "mode": "foothill",
+        "view": "human",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 256,
+      "renderer": {
+        "calls": 32,
+        "triangles": 281952,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "overview": {
+      "state": {
+        "mode": "overview",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 267,
+      "renderer": {
+        "calls": 43,
+        "triangles": 301764,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    },
+    "performance": {
+      "method": "Headless/browser RAF wall-clock and CPU submission observations; no hardware GPU timer",
+      "samples": 60,
+      "medianRafMs": 237.5,
+      "p95RafMs": 273.5,
+      "medianRenderSubmissionMs": 0.30000001192092896,
+      "state": {
+        "mode": "performance",
+        "view": "elevated",
+        "surface": "T1",
+        "renderMode": "instanced"
+      },
+      "frames": 338,
+      "renderer": {
+        "calls": 43,
+        "triangles": 301764,
+        "geometries": 15,
+        "textures": 12
+      },
+      "pack": {
+        "uniqueGeometryBytes": 34152,
+        "uniqueTriangles": {
+          "compact": 96,
+          "broadGlacial": 90,
+          "sculptural": 106
+        },
+        "materialOwned": true,
+        "managedObjects": 42,
+        "disposed": false
+      },
+      "placedRocks": 34,
+      "counts": {
+        "compact": 24,
+        "broadGlacial": 5,
+        "sculptural": 5
+      },
+      "placedRockTriangles": 3284,
+      "grassClumps": 779,
+      "trees": 16,
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physicalAndroidVerified": false,
+      "worldIntegrated": false
+    }
+  }
+}
