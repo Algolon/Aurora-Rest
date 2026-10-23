@@ -20,7 +20,7 @@ try{
  await p.goto(url);
  const settle=async()=>{await p.waitForFunction(()=>window.__pop02Failure||window.__pop02?.snapshot().ready);assert.equal(await p.evaluate(()=>window.__pop02Failure),undefined);await p.evaluate(()=>window.__pop02.pause(true));};
  await settle();await p.locator('#ground').selectOption('material');
- for(const id of ['forest-corridor','gateway-approach','gateway-reveal']){
+ for(const id of ['gateway-approach','gateway-trail','gateway-reveal']){
   await p.evaluate(id=>{window.__pop02.setView(id);window.__pop02.pause(false);},id);await settle();
   const groundHash=sha(JSON.stringify(await p.evaluate(()=>window.__pop02.groundArrays())));
   await p.locator('#composition').uncheck();await p.evaluate(()=>window.__pop02.renderOnce());
