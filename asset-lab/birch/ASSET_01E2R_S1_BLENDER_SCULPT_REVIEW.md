@@ -115,6 +115,12 @@ Stop after this rock. The owner should inspect neutral front, rear, side and mat
 
 ## Checkpoint and CI
 
-The exact committed asset checkpoint and actual GitHub Actions result are recorded in the verification addendum below once the authorized push completes. The static CI workflow validates the checked-in GLB, regressions and real Three.js browser capture; it deliberately does not install Blender or claim native project/art validation. Final branch-tip SHA is also supplied in the handoff.
+**Exact final asset / implementation checkpoint:** [`bfb4b8bd5cbbd330c2af8da234b9ac9097530c5e`](https://github.com/Algolon/Aurora-Rest/commit/bfb4b8bd5cbbd330c2af8da234b9ac9097530c5e).
+
+**Actual implementation CI:** [Run 39950655843 — SUCCESS](https://github.com/Algolon/Aurora-Rest/actions/runs/39950655843), job `static-export-and-webgl` SUCCESS. The log confirms **47 tests / 47 pass / 0 fail**, strict TypeScript and both builds, protected source parity, and **S1 real GLB WebGL PASS 29 images**. Independent exported topology numbers agree with the local results above.
+
+**Genuine CI browser artifact:** [Artifact 12499533691 — 29 PNGs and browser metrics](https://github.com/Algolon/Aurora-Rest/actions/runs/39950655843/artifacts/12499533691).
+
+The follow-up documentation commit changes only this report to record the observed checkpoint and CI result; it deliberately skips duplicate CI. All model, renderer, test and evidence files remain byte-identical to the validated asset commit. The final branch-tip SHA is supplied in the handoff. The static CI workflow validates the GLB and Three.js only; native Blender reopening and rendering were verified locally, and artistic approval remains the owner's decision.
 
 **STOP: one S1 study; no family, merge, deploy, release or island integration.**
