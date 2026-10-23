@@ -1,0 +1,34 @@
+name: ENV-R02B isolated woodland composition (no deploy)
+on:
+  push:
+    branches: [art/env-r02b-birchwood-composition]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  woodland:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - run: node --experimental-strip-types --test tests/env-r02b.test.ts
+      - run: npx vite build --config vite.env-r02b.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: WebGL A/B/A with original descriptor and geometry parity
+        env:
+          ENV_R02B_OUTPUT: ${{ runner.temp }}/env-r02b
+        run: node tools/env-r02b/browser.mjs
+      - name: Preserve actual WebGL captures and spatial delta ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-r02b-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/env-r02b/
+          if-no-files-found: warn
