@@ -1,0 +1,52 @@
+{
+  "verifiedSourceCommit": "f93f0dd5e004355b90a96bc1098e0942c0556d99",
+  "remoteCommitConfirmed": "f93f0dd5e004355b90a96bc1098e0942c0556d99",
+  "origin": "https://github.com/Algolon/Aurora-Rest.git",
+  "method": "Independent HTTPS single-branch clone from GitHub, no shared Git alternates or LFS storage; fetched correction from same remote before validation.",
+  "cleanBeforeAndAfterValidation": true,
+  "sourceFilesVerified": 558,
+  "missingFiles": [],
+  "hashMismatches": [],
+  "archiveSize": 228018528,
+  "archiveSha256": "766c125658e27f6e3ecd5d1ecacd627e56a54cd6047d8798a9ec1c61ba89f32f",
+  "archiveRetrieval": "Full archive and media independently downloaded from GitHub LFS into fresh clone; lfs fsck and nested manifest verification pass.",
+  "archiveUrl": "https://media.githubusercontent.com/media/Algolon/Aurora-Rest/f93f0dd5e004355b90a96bc1098e0942c0556d99/recovery-evidence/Aurora-Rest-ENV-P01-Review.zip",
+  "npmCi": "PASS; separate dependency install, unchanged lockfile",
+  "typecheck": "PASS",
+  "productionBuild": "PASS",
+  "tests": {
+    "total": 74,
+    "passed": 73,
+    "blocked": 1,
+    "processExitCode": 1,
+    "blockedGate": "Original POP Git-object byte-parity test unchanged; object unavailable."
+  },
+  "browser": {
+    "passed": true,
+    "errors": [],
+    "version": "151.0.7922.34",
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "checks": [
+      "Three forest/valley re-entry cycles preserve full sorted descriptors, ground classification and GPU resource counters.",
+      "Material toggles preserve full placement descriptors and terrain geometry.",
+      "Six profile recreate operations retain placements, one owner and stable high-profile GPU counters.",
+      "Viewer teardown completes without exception."
+    ],
+    "memoryPerReentry": [
+      {
+        "geometries": 25,
+        "textures": 13
+      },
+      {
+        "geometries": 25,
+        "textures": 13
+      },
+      {
+        "geometries": 25,
+        "textures": 13
+      }
+    ]
+  },
+  "firstCloneFinding": "Four original validation .log files ignored by original *.log rule; corrected by explicit tracked additions in f93f0dd, then all 558 reverified.",
+  "decision": "CONDITIONAL GO for further source development; original ancestry, historical parity, art acceptance and physical Android performance remain unverified."
+}

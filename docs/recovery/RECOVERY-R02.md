@@ -42,3 +42,7 @@ node tools/recovery/browser.mjs
 To recover the exact original review workspace, extract the retained outer ZIP, verify its nested source ZIP hash, then extract the nested ZIP into a separate directory. SOURCE.json in the outer ZIP lists all 558 original paths/hashes. The verification script independently compares each checkout byte and each nested archive byte to that manifest. No Work chat, original temporary directory, dependency symlink or vanished Git common directory is required.
 
 See SOURCE_PROVENANCE.md, SOURCE_MANIFEST.json and VALIDATION.md for limits and evidence. Continued development is conditional on acknowledging missing historical Git ancestry, existing renderer stalls and pending art/device acceptance. These limitations do not imply a source-code regression.
+
+## Verified source checkpoint and handoff decision
+
+Source-complete checkpoint: `f93f0dd5e004355b90a96bc1098e0942c0556d99`. Independent GitHub checkout passes all 558 source/archive hash checks, typecheck, production build and WebGL/lifecycle checks; 73 tests pass and the original historical Git-object parity test remains blocked. See FRESH_CLONE.json. Final audit-only descendants preserve the exact same original snapshot bytes; retrieve final branch HEAD and run the verifier. **CONDITIONAL GO** for further development, with ancestry and prior art/device limitations explicitly retained.
