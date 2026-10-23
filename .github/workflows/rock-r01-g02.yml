@@ -1,0 +1,33 @@
+name: ROCK-R01-G02 hand-authored nonconvex blockout / real WebGL / ART REVIEW
+on:
+  push:
+    branches: [art/rock-r01-g02-nonconvex-blockout]
+  workflow_dispatch:
+jobs:
+  nonconvex-art-study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Verify protected F01, R04/G1, A2, vegetation, G01, G01R and world sources
+        run: |
+          git diff --exit-code b76d7d3698eb46ff68fc756a9735c3390e19ab7b HEAD -- src art rocks/f01 rocks/r01/sculptCore.ts rocks/r01/geometry.ts rocks/r01/showroom.ts tests/rock-r01-g01.test.ts tests/rock-r01-g01r.test.ts ../../src
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.g02.config.ts
+      - name: Actual WebGL2 captures including G1, G01R, T1 and real nature context
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-g02.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rock-r01-g02-genuine-webgl-art-review
+          path: asset-lab/birch/g02-evidence/
+          if-no-files-found: warn
+# G02 is not approved. No merge, no deployment or island integration.
