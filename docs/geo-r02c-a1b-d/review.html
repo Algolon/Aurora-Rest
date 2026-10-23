@@ -1,0 +1,326 @@
+<title>North Peak A1b-D Redesign</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a field-survey dossier. One reading column (~70ch) with full-width figure plates; data in mono; contour-line motif in the header only. */
+:root{
+ --bg:#f2f4f4; --plate:#ffffff; --ink:#1a2226; --muted:#56646b; --line:#d5dcde;
+ --accent:#1d6a86; --accent-soft:#e1eef3;
+ --crest:#b8321f; --corridor:#c25e0c; --free:#0f8577; --other:#6a43c7;
+ --measured-bg:#e6f0ec; --measured-fg:#1f5b4c; --concept-bg:#ece9f6; --concept-fg:#3f2f86; --prop-bg:#f6eedf; --prop-fg:#6b4a10;
+ --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif; --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#0f1517; --plate:#172024; --ink:#e3eaec; --muted:#9aa9af; --line:#2b373c; --accent:#6fb8d6; --accent-soft:#16303a;
+ --crest:#f07a66; --corridor:#f0a35a; --free:#4fd1bd; --other:#b39cf5;
+ --measured-bg:#173129; --measured-fg:#9fe0c9; --concept-bg:#251f40; --concept-fg:#cbbcff; --prop-bg:#33281a; --prop-fg:#f2cf8e; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#0f1517; --plate:#172024; --ink:#e3eaec; --muted:#9aa9af; --line:#2b373c; --accent:#6fb8d6; --accent-soft:#16303a;
+ --crest:#f07a66; --corridor:#f0a35a; --free:#4fd1bd; --other:#b39cf5;
+ --measured-bg:#173129; --measured-fg:#9fe0c9; --concept-bg:#251f40; --concept-fg:#cbbcff; --prop-bg:#33281a; --prop-fg:#f2cf8e; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:3.2rem}
+.col{max-width:70ch}
+header{padding-block:2.6rem 1.4rem;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+header svg.contours{position:absolute;right:-40px;top:-30px;width:520px;max-width:70%;opacity:.5;pointer-events:none}
+.eyebrow{font:600 .8rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(2.4rem,6vw,3.8rem)/1 var(--f-display);letter-spacing:.01em;margin:.5rem 0 .8rem;text-wrap:balance;position:relative}
+h2{font:700 clamp(1.7rem,3.6vw,2.3rem)/1.05 var(--f-display);margin:0 0 .6rem;text-wrap:balance}
+h3{font:600 1.35rem/1.15 var(--f-display);margin:1.6rem 0 .4rem;letter-spacing:.01em}
+p{margin:.55rem 0}
+.lede{font-size:1.18rem;color:var(--ink);max-width:68ch;position:relative}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem;position:relative}
+.chip{font:600 .78rem/1 var(--f-mono);padding:.42rem .6rem;border:1px solid var(--line);border-radius:3px;background:var(--plate);color:var(--muted)}
+.tag{font:600 .68rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:.28rem .45rem;border-radius:3px;vertical-align:.15em;margin-right:.35rem;white-space:nowrap}
+.m{background:var(--measured-bg);color:var(--measured-fg)}.c{background:var(--concept-bg);color:var(--concept-fg)}.pr{background:var(--prop-bg);color:var(--prop-fg)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.fact{background:var(--plate);padding:1rem 1.1rem;min-width:0}
+.fact b{display:block;font:700 2rem/1 var(--f-display);color:var(--accent);margin-bottom:.35rem;font-variant-numeric:tabular-nums}
+.fact span{font-size:.95rem;color:var(--muted)}
+figure{margin:1rem 0;background:var(--plate);border:1px solid var(--line);padding:.6rem}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-size:.9rem;color:var(--muted);padding:.5rem .2rem .1rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:1rem}
+.grid2 figure{margin:0}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--plate);margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .78rem/1.2 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--accent-soft)}
+td.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.rec{border-left:4px solid var(--accent);background:var(--plate);padding:1rem 1.2rem;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 0}
+.tabs button{font:600 .85rem/1 var(--f-mono);padding:.55rem .8rem;border:1px solid var(--line);background:var(--plate);color:var(--ink);border-radius:3px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.key{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.9rem;color:var(--muted);margin:.4rem 0}
+.key i{display:inline-block;width:.9rem;height:.9rem;border-radius:2px;vertical-align:-.12rem;margin-right:.35rem}
+details{background:var(--plate);border:1px solid var(--line);padding:.8rem 1rem}
+summary{cursor:pointer;font-weight:600}
+pre{font:400 .82rem/1.5 var(--f-mono);white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--line);padding:1rem;max-height:34rem;overflow:auto;margin:.8rem 0 0}
+.copy{font:600 .8rem/1 var(--f-mono);padding:.5rem .75rem;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:3px;cursor:pointer;margin-top:.7rem}
+ul.tight{margin:.4rem 0;padding-left:1.2rem}ul.tight li{margin:.25rem 0}
+code{font-family:var(--f-mono);font-size:.88em}
+a{color:var(--accent)}
+.auth{display:grid;grid-template-columns:4.2rem 1fr;gap:.35rem 1rem;margin:.6rem 0}
+.auth dt{font:700 1.05rem/1.4 var(--f-display);color:var(--crest)}
+.auth dd{margin:0;min-width:0}
+@media (prefers-reduced-motion:no-preference){figure img{transition:opacity .2s}}
+</style>
+
+<div class="wrap">
+<header>
+ <svg class="contours" viewBox="0 0 520 300" aria-hidden="true"><g fill="none" stroke="var(--accent)" stroke-width="1">
+  <path d="M40 260 C120 120 260 60 330 70 C410 80 470 160 500 270"/><path d="M80 262 C150 150 260 95 325 102 C395 110 445 180 470 268"/>
+  <path d="M120 264 C180 180 260 130 320 136 C380 142 418 200 440 266"/><path d="M160 266 C205 210 262 168 316 172 C366 176 392 222 410 264"/>
+  <path d="M200 268 C232 236 270 206 312 208 C350 210 368 240 380 262"/><path d="M240 270 C262 252 286 238 310 240 C332 242 344 254 350 262"/></g></svg>
+ <div class="eyebrow">Aurora Rest · GEO-R02C · A1b-D · design only</div>
+ <h1>North Peak A1b‑D Redesign</h1>
+ <p class="lede">Why the A1a forms could not be seen, what the terrain actually allows, and the smallest next experiment. Nothing here is generated terrain: every figure is labelled measured, concept or proposal.</p>
+ <div class="chips"><span class="chip">A1a pushed · 80553e2</span><span class="chip">R1 fc8fd6da… unchanged</span><span class="chip">No terrain generated</span><span class="chip">No design-master edits</span><span class="chip">Dossier on feature/geo-r02c-a1b-d-visibility-design</span></div>
+</header>
+
+<section class="col">
+ <h2>Decisions after review</h2>
+ <div class="tbl"><table>
+  <tr><th>Item</th><th>Decision, 23 Oct 2026</th></tr>
+  <tr><td>A1b-α, visible faces on the A2 south-west face</td><td>approved as one limited experiment</td></tr>
+  <tr><td>A1b-β summit block, R-A corridor narrowing</td><td><b>not approved</b></td></tr>
+  <tr><td>R-B to R-H, including the R-C design-master revision</td><td><b>not approved</b></td></tr>
+  <tr><td>C1-R and G1′</td><td>deferred design alternatives</td></tr>
+ </table></div>
+</section>
+
+<section>
+ <h2>The finding in four numbers</h2>
+ <div class="facts">
+  <div class="fact"><b>0.00 %</b><span>of pixels changed by V1, V2 or V3 in the Birchwood, Central Valley shoulder, west-arm and route captures</span></div>
+  <div class="fact"><b>≤ 0.43 px</b><span>largest North Peak skyline shift V1 produced from any approach</span></div>
+  <div class="fact"><b>62–82 %</b><span>of the far skyline is the R1 crest band, which may only be raised</span></div>
+  <div class="fact"><b>69–75 %</b><span>of the faces seen from the far approaches were editable; V1 touched none of them</span></div>
+ </div>
+ <p class="col"><span class="tag m">measured</span>The A1a overlay did what it was told. It sculpted the north and east faces and C1, which no player position sees. The faces that players do see were either frozen by the trail corridor or rejected by the face gate. The far skyline itself is the authored crest.</p>
+</section>
+
+<section class="col">
+ <h2>A1a is preserved</h2>
+ <div class="tbl"><table>
+  <tr><th>Check</th><th>Result</th></tr>
+  <tr><td>Branch</td><td><code>feature/geo-r02c-a1a-form-study</code> @ <code>80553e2d5af88fa16ea5ef3db6b0adcbd4b529c3</code>, 3 commits on <code>15c0977</code>, clean</td></tr>
+  <tr><td>Protected paths</td><td>R1, P0, A1-D, design master, existing tests: 0 files changed</td></tr>
+  <tr><td>Contents</td><td>3 patches + manifest, 4 validation reports, 160 captures + 8 manifests, review page, README</td></tr>
+  <tr><td>File check</td><td>largest blob 300 KB, 6.5 MB total; no caches, builds, logs or secrets</td></tr>
+  <tr><td>Push</td><td>no force; remote HEAD equals <code>80553e2…</code> exactly. P0, A1-D and R1 branches untouched.</td></tr>
+  <tr><td>Erratum</td><td>The A1a README lists patch sizes of 314 / 314 / 459 KB; the actual sizes are 153,264 / 153,264 / 300,048 bytes. Left unchanged, because A1a is immutable evidence.</td></tr>
+ </table></div>
+</section>
+
+<section>
+ <div class="col"><h2>V1 · Why the ridges were invisible</h2>
+ <p><span class="tag m">measured</span>Terrain-only line of sight from the real viewpoints, classified by the committed A1a mask. Teal is editable, red is crest band, orange is trail corridor and violet is valley, water, divide or zone. The black outline is what V1 and V2 changed.</p></div>
+ <div class="tabs" role="tablist" aria-label="Viewpoint group">
+  <button role="tab" id="tab-far" aria-selected="true" data-img="images/visibility-far.png">Far approaches</button>
+  <button role="tab" id="tab-tarn" aria-selected="false" data-img="images/visibility-tarn.png">High Tarn</button>
+  <button role="tab" id="tab-route" aria-selected="false" data-img="images/visibility-route.png">Alpine route</button>
+ </div>
+ <figure><img id="vismap" src="images/visibility-far.png" alt="Map of the North Peak massif: player-visible terrain coloured by protection class, with skyline points and the outline of V1 changes" width="1200" height="800"><figcaption>Visible terrain versus protected terrain. The V1/V2 outline lies entirely on north and east faces, which none of these groups see.</figcaption></figure>
+ <div class="grid2">
+  <figure><img src="images/skyline-protection-birchwood.jpg" alt="Birchwood capture with the measured skyline coloured by protection" loading="lazy" width="1280" height="872"><figcaption>Birchwood: the skyline is 82 % crest band (red). The dashed concept A2 raise of +18 m moves it by 5 px.</figcaption></figure>
+  <figure><img src="images/skyline-protection-valley-shoulder.jpg" alt="Central Valley shoulder capture with protection-coloured skyline" loading="lazy" width="1280" height="872"><figcaption>Central Valley shoulder: 62 % crest band, 22 % editable on minor shoulders.</figcaption></figure>
+  <figure><img src="images/skyline-protection-approach-upper.jpg" alt="Upper alpine route capture with protection-coloured skyline" loading="lazy" width="1280" height="872"><figcaption>Upper route: 53 % trail corridor and 40 % crest band. The summit brow sits inside the corridor.</figcaption></figure>
+  <figure><img src="images/skyline-protection-tarn-shore.jpg" alt="High Tarn north shore capture with protection-coloured skyline" loading="lazy" width="1280" height="872"><figcaption>High Tarn north shore: 63 % editable, but V1 still moved the skyline by only 0.43 px, because its cuts stay below the crest.</figcaption></figure>
+ </div>
+ <div class="tbl"><table>
+  <tr><th>Viewpoint</th><th>Skyline: crest</th><th>Corridor</th><th>Editable</th><th>Δh for 3 px</th><th>V1 shift</th><th>Corridor ±20 m frees</th></tr>
+  <tr><td>Birchwood</td><td class="n">81 %</td><td class="n">4 %</td><td class="n">10 %</td><td class="n">9.1 m</td><td class="n">0.00 px</td><td class="n">2.5 % sky · 13 % visible</td></tr>
+  <tr><td>Central Valley shoulder</td><td class="n">63 %</td><td class="n">3 %</td><td class="n">23 %</td><td class="n">10.8 m</td><td class="n">0.18 px</td><td class="n">1 % sky · 9 % visible</td></tr>
+  <tr><td>Central Valley floor</td><td class="n">27 %</td><td class="n">0 %</td><td class="n">20 %</td><td class="n">9.5 m</td><td class="n">0.00 px</td><td class="n">0 %</td></tr>
+  <tr><td>High Tarn overlook</td><td class="n">21 %</td><td class="n">5 %</td><td class="n">45 %</td><td class="n">2.3 m</td><td class="n">0.35 px</td><td class="n">4 % sky · 2 % visible</td></tr>
+  <tr><td>High Tarn north shore</td><td class="n">18 %</td><td class="n">2 %</td><td class="n">63 %</td><td class="n">2.6 m</td><td class="n">0.43 px</td><td class="n">2 % sky · 0 % visible</td></tr>
+  <tr><td>Route s 1300–2750 m</td><td class="n">30–68 %</td><td class="n">8–69 %</td><td class="n">0–23 %</td><td class="n">0.1–2.1 m</td><td class="n">0.00 px</td><td class="n">4–18 % sky · 15–32 % visible</td></tr>
+ </table></div>
+ <div class="col">
+  <h3>What this means</h3>
+  <ul class="tight">
+   <li><span class="tag m">measured</span>The far silhouette is the authored crest. A 3 px change needs 9–11 m of crest raise; a strong change of about 15 px needs 50 m or more. The A3 arm carries the trail (17–46 m from its crest), so it cannot be raised without moving the route.</li>
+   <li><span class="tag pr">proposal</span>Correction to my A1a advice: narrowing the corridor frees at most 2.5 % of the far skyline. It is a lever for the ascent itself, not for the view from Birchwood.</li>
+   <li><span class="tag pr">proposal</span>Can protections be narrowed safely? The corridor can, near the summit, with a tread gate (R-A). Crest bands can be raised but never lowered. Water, valley floors, divides and coast should stay as they are; they are not what hides the forms.</li>
+  </ul>
+ </div>
+ <figure><img src="images/failure-v1.jpg" alt="Matched M0 and V1 captures from four viewpoints" loading="lazy" width="1282" height="1796"><figcaption><span class="tag m">measured</span>Matched A1a captures, M0 against V1, same camera and sun. Unretouched.</figcaption></figure>
+</section>
+
+<section>
+ <div class="col"><h2>V2 · C1 as a real cirque <span class="tag pr">deferred</span></h2>
+ <p><span class="tag m">measured</span>The east side has one broad hollow between A1 and A2, opening NE to the coast. It is a true valley only below about 650 m, where it is 45–124 m deep and about 500 m wide. A1a placed the C1 floor at 690–705 m, above the valley head on the planar face, where the hollow is 4–21 m deep. The bowl therefore showed a rim on three sides.</p></div>
+ <figure><img src="images/failure-v2.jpg" alt="Matched M0 and V2 captures of C1" loading="lazy" width="1282" height="932"><figcaption><span class="tag m">measured</span>V2 from the east oblique and from its own floor.</figcaption></figure>
+ <figure><img src="images/geomorph-massif.png" alt="R1 contours, contour curvature and flow lines of the North Peak" loading="lazy" width="1350" height="934"><figcaption><span class="tag m">measured</span>R1 contour curvature at about 120 m scale. Blue is hollow, red is spur. The A1a C1 ellipse sits at the upper edge of the NE hollow.</figcaption></figure>
+ <div class="grid2">
+  <figure><img src="images/csec-c1r-long.svg" alt="C1-R long section" loading="lazy"><figcaption><span class="tag c">concept</span>Long section: a 45° headwall from the frozen crest edge, a floor graded from about 665 m to the natural lip at 645 m, and the R1 ravine untouched below. Max lowering 83 m.</figcaption></figure>
+  <figure><img src="images/csec-c1r-cross.svg" alt="C1-R cross section with a lateral rib" loading="lazy"><figcaption><span class="tag c">concept</span>Across the floor: A1 is the natural rim. On the A2 side a lateral rib is kept at R1 and a couloir is cut beyond it, so no artificial rim appears.</figcaption></figure>
+ </div>
+ <div class="col">
+  <p><span class="tag m">measured</span>The hollow is 0 % visible from the far approaches and the route, and 0.3 % from High Tarn. Only the lower A1 crest at 760–790 m sees 43–51 % of it. The visible alternative, the tarn-side slope (52 % far, 41 % High Tarn), is planar and has no valley head.</p>
+  <p><span class="tag pr">proposal</span>Keep C1 in the NE hollow, rebuilt as <b>C1-R</b>: the cirque sits at the true valley head, A1 forms its north-west wall, a lateral rib bounds it on the A2 side, and it drains through the existing ravine to the NE bay (R-D). It only pays off at player height once a lower-A1-crest overlook or path exists (R-E). Do not invent a valley head on the tarn side.</p>
+ </div>
+</section>
+
+<section>
+ <div class="col"><h2>V3 · A gully the frozen bed allows <span class="tag pr">deferred</span></h2>
+ <p><span class="tag m">measured</span>Every channel in the window has a frozen wet section of ±20 m, with R1's authored bench at about bed + 4 m beyond it. The ground there can be lowered by only 0–3 m before it would stop draining to the channel. With the bed fixed, a gully can only gain depth by raising its walls. V3 raised both banks, so the open bank became a mound. The serrated wall came from a 4 m fade on a rasterised wet edge. The 4 m grid itself is adequate for walls of 10 m or more.</p></div>
+ <figure><img src="images/failure-v3.jpg" alt="Matched M0 and V3 captures of G1 with a detail crop of the serrated wall" loading="lazy" width="1282" height="1218"><figcaption><span class="tag m">measured</span>V3 against M0, with a detail crop of the serrated wall.</figcaption></figure>
+ <figure><img src="images/csec-g1p.svg" alt="Concept asymmetric gully section on tarn-inlet-w" loading="lazy"><figcaption><span class="tag c">concept</span>G1′ asymmetric cut-bank: the bed stays frozen and the south bench stays as it is. On the north side, a 12 m bank strip is followed by a 40° wall, filled only up to the hillside advanced 22 m toward the channel, so the fill follows real ground. Max fill about 16 m.</figcaption></figure>
+ <div class="tbl"><table>
+  <tr><th>Reach</th><th>Hillside relief</th><th>Open bank</th><th>Gradient</th><th>Visible far / High Tarn</th><th>Status</th></tr>
+  <tr><td><b>G1′ tarn-inlet-w s 296–472 m</b></td><td class="n">31–38 m</td><td class="n">4 m</td><td class="n">36 %</td><td class="n">0 % / 100 %</td><td>recommended (R-G)</td></tr>
+  <tr><td>A1a G1 tarn-inlet-w s 208–386 m</td><td class="n">33 m (median)</td><td class="n">4 m</td><td class="n">—</td><td class="n">23 % / 100 %</td><td>rejected</td></tr>
+  <tr><td>G2 tarn-inlet-n s 270–376 m</td><td class="n">≈ 31 m</td><td class="n">4 m</td><td class="n">61 %</td><td class="n">64 % / 100 %</td><td>alternative (R-H, next to D3)</td></tr>
+  <tr><td>windward-gully</td><td class="n">60–93 m</td><td class="n">4 m</td><td class="n">30 %</td><td class="n">0 % / 0 %</td><td>coastal band, unseen</td></tr>
+ </table></div>
+</section>
+
+<section>
+ <div class="col"><h2>Releases and freeze zones</h2>
+ <p><span class="tag c">concept</span> over a <span class="tag m">measured</span> base. Hatching marks every protection that stays. Teal (A1b-α) needs no new release; everything in orange, red or black needs one of the authorizations below.</p></div>
+ <figure><img src="images/proposal-plan.png" alt="Plan of proposed releases and kept freeze zones" loading="lazy" width="1150" height="800"><figcaption>31.4 ha of editable faces are visible from the approaches or the route (A1b-α). The corridor release near the summit covers 2.2 ha (A1b-β).</figcaption></figure>
+ <div class="grid2">
+  <figure><img src="images/csec-a2-face.svg" alt="A2 south-west face couloir rhythm" loading="lazy"><figcaption><span class="tag c">concept</span>A1b-α: couloirs and buttresses on the A2 south-west face, which V1 skipped at a 69 % face gate.</figcaption></figure>
+  <figure><img src="images/csec-summit-block.svg" alt="Summit block section across the trail" loading="lazy"><figcaption><span class="tag c">concept</span>A1b-β: the trail and ±20 m are kept, and the flanks are cut toward 40°. Today the corridor freezes this whole section.</figcaption></figure>
+  <figure><img src="images/csec-a2-crest.svg" alt="A2 crest profile with concept raise" loading="lazy"><figcaption><span class="tag c">concept</span>A2 stepped raise of +18 m: route-safe, but only 4–5 px from the far approaches. Not recommended now.</figcaption></figure>
+ </div>
+</section>
+
+<section>
+ <div class="col"><h2>Options compared</h2><p><span class="tag pr">proposal</span>Ratings are design judgement. The measured basis is in <code>data/decisions.json</code>.</p></div>
+ <div class="tbl"><table>
+  <tr><th>Option</th><th>Visual gain</th><th>Hydrological risk</th><th>Complexity</th><th>Release</th></tr>
+  <tr><td><b>A1b-α</b> visible face relief</td><td>medium; 31 ha of seen faces, skyline unchanged</td><td>low</td><td>low–medium</td><td>none</td></tr>
+  <tr><td><b>A1b-β</b> α + summit block</td><td>high on the ascent, medium far</td><td>low; route risk handled by a gate</td><td>medium</td><td>R-A</td></tr>
+  <tr><td>A2 crest raise +18 m</td><td>low (4–5 px)</td><td>low</td><td>low</td><td>R-B</td></tr>
+  <tr><td>Design-master crest revision</td><td>high; the only route to a new far silhouette</td><td>high (re-solve)</td><td>high</td><td>R-C</td></tr>
+  <tr><td>C1-R valley-head cirque</td><td>high credibility; low from today's viewpoints</td><td>low–medium</td><td>high</td><td>R-D, R-E</td></tr>
+  <tr><td>Tarn-side cirque</td><td>high visibility; decorative risk</td><td>medium–high</td><td>high</td><td>R-F</td></tr>
+  <tr><td>G1′ tarn-inlet-w lower reach</td><td>low–medium, local</td><td>low–medium</td><td>medium</td><td>R-G</td></tr>
+  <tr><td>G2 tarn-inlet-n</td><td>medium</td><td>medium (D3)</td><td>medium</td><td>R-H</td></tr>
+ </table></div>
+ <div class="col">
+  <h3>Changes that need separate authorization</h3>
+  <dl class="auth">
+   <dt>R-A</dt><dd>Peak-ascent corridor near the summit: ±75 m → ±20 m above 780 m, with a passability gate (centreline, grade and ±3 m tread cross-slope unchanged; walk test passes).</dd>
+   <dt>R-B</dt><dd>Any crest raise, such as the A2 step.</dd>
+   <dt>R-C</dt><dd>Design-master crest-profile revision and the R1 re-solve it implies.</dd>
+   <dt>R-D</dt><dd>Replace the A1-D C1 geometry with C1-R.</dd>
+   <dt>R-E</dt><dd>A path or overlook on the lower A1 crest, so C1-R can be seen.</dd>
+   <dt>R-F</dt><dd>A cirque on the tarn side (C2-a, deferred by D2).</dd>
+   <dt>R-G</dt><dd>Move G1 to s 296–472 m and release the R1 valley band there.</dd>
+   <dt>R-H</dt><dd>A gully on tarn-inlet-n (G2).</dd>
+  </dl>
+  <p>Disclosed, not an authorization item: the face gate drops from 0.75 to 0.60 on the targeted faces only.</p>
+ </div>
+</section>
+
+<section class="col">
+ <h2>A1-D assumptions the implementation disproved</h2>
+ <ul class="tight">
+  <li>Per-arm sections and flank asymmetry were expected to make the far silhouette irregular. The far skyline is the crest band, so they cannot.</li>
+  <li>C1 on the uniform east face was expected to read as a cirque. It sat above the valley head and showed an artificial rim.</li>
+  <li>G1 was planned as a symmetric V from the released bench. The frozen bed leaves 0–3 m of cut room and only one bank has relief.</li>
+  <li>Corridor narrowing was expected to reveal the southern silhouette (my A1a option b). It frees at most 2.5 % of the far skyline.</li>
+  <li>Confirmed: from the route, the summit brow hides the summit. Sculpting the summit block near the trail is the strongest lever at player height.</li>
+ </ul>
+</section>
+
+<section>
+ <div class="rec col">
+  <h2>Next: one decisive experiment</h2>
+  <p><span class="tag pr">proposal</span>Prioritise <b>A, player-visible summit and faces</b>. It tests the exact A1a failure, it has the highest impact where players stand, and it reuses the proven overlay, mask and validation. B cannot be judged at player height until a viewpoint exists. C is bed-locked and local.</p>
+  <ul class="tight">
+   <li><b>A1b-α (always):</b> viewshed-targeted, cut-only couloir and buttress relief on the A2 south-west, A3 south and summit south faces, under today's protections.</li>
+   <li><b>A1b-β (only with R-A):</b> α plus the summit block, with a ±20 m tread-gated corridor.</li>
+   <li>If α fails a simple visibility gate (at least 1 % of frame pixels changed in two approach views), stop. If α and β pass review, decide whether the far silhouette still needs R-C.</li>
+  </ul>
+ </div>
+ <details>
+  <summary>Self-contained A1b implementation prompt (not executed)</summary>
+  <button class="copy" id="copy-prompt" type="button">Copy prompt</button>
+  <pre id="prompt"># AURORA REST — GEO-R02C-A1b Player-Visible Summit and Face Study (implementation prompt, NOT executed)
+
+&gt; **Status, 23 Oct 2026:** kept as written for review. A1b-α was later approved as one limited experiment on the A2 south-west face, on its own branch. **B-β and R-A are not approved**, so the B-β section below is void.
+
+Project: Aurora Rest · Repository: `Algolon/Aurora-Rest` · Art direction: *Believable Nature, Sculpted for Wonder.*
+
+## Context you must read first
+
+- A1a overlay platform and its rejected variants: branch `feature/geo-r02c-a1a-form-study` @ `80553e2d5af88fa16ea5ef3db6b0adcbd4b529c3` (`docs/geo-r02c-a1a/README.md`, `review.html`). The variants V1–V3 are immutable evidence; do not modify or delete them.
+- A1b-D redesign dossier: visibility and protection maps, matched failure captures, concept sections, decisions. It is not committed yet; commit it as `docs/geo-r02c-a1b-d/` on the A1b branch as the first commit (scripts read the A1a checkpoint read-only; set `A1A_ROOT` to the repository root).
+- Key measured facts this experiment answers to:
+  - V1–V3 changed **0.00 %** of pixels in the Birchwood, Central Valley shoulder, west-arm and route captures; V1 moved the North Peak skyline by **≤ 0.43 px** from every approach.
+  - Far skylines are **62–82 % R1 crest band** (lower bound, raise-only); route skylines are **30–69 % trail corridor**.
+  - **69–75 %** of the massif cells visible from the far approaches are editable in A1a, and V1 touched **none** of them: the face gate (≥ 75 % free) rejected the A2 south-west (69 %) and A3 south (70 %) faces, and the operator only sculpted north/east faces.
+
+## Git
+
+1. Verify `git remote -v` = `https://github.com/Algolon/Aurora-Rest`, a clean worktree, and that `origin/feature/geo-r02c-a1a-form-study` = `80553e2…`.
+2. Create `feature/geo-r02c-a1b-visible-summit` from `80553e2` in a separate worktree. **This needs a one-time AGENTS.md exception (branch not based on `main`), which must be granted explicitly before you start.**
+3. Do not change the R1, P0, A1-D or A1a branches. Do not modify `docs/geo-r02b/design-master-A-R1-v1.json`, the R1 generator or binaries, or any existing test. Do not merge, deploy or push without further authorization.
+
+## Scope: two variants only (family A, player-visible summit and faces)
+
+Start from M0 (= canonical R1, `fc8fd6da…`), not from V1. Re-prove empty-overlay parity first; if M0 ≠ R1 byte for byte, STOP.
+
+**B-α — visible face relief, current protections (no new release).**
+- Target cells = A1a-editable (M &gt; 0) cells within 700 m of the summit that are visible (terrain-only line of sight, eye 1.75 m) from Birchwood, the Central Valley shoulder, the Central Valley floor or the peak-ascent route points s = 1300–2750 m. Reuse `docs/geo-r02c-a1b-d/scripts/visibility.py` to build this target mask deterministically.
+- Faces: A2 south-west, A3 south (below the corridor), summit south face below the corridor. Face gate 0.75 → 0.60 for these targeted faces only; record the change.
+- Operator: cut-only couloir / buttress rhythm across each face. Couloirs 60–90 m wide, 9–16 m deep, uneven spacing (about 55–80 m), oriented down the fall line and fading out 40 m before the crest band and before the valley floor. Buttresses stay at R1. Walls ≤ 45°. No noise.
+- Expected: skyline unchanged (0 px); in-face relief visible from the approaches.
+
+**B-β — B-α plus the summit block (only if release R-A is granted in writing).**
+- Peak-ascent corridor within 450 m of the summit and above 780 m: ±75 m (+60 m fade) → ±20 m (+20 m smoothstep fade). Everywhere else the corridor is unchanged.
+- Flanks outside ±20 m cut towards 40° (≤ 25 m), crest-band cells never lowered and blended over 20 m, fading out by 190 m from the trail (see `csec-summit-block`).
+- Passability gate (fail = STOP): route centreline Δ = 0 m everywhere; grade unchanged; tread cross-slope within ±3 m unchanged (≤ 0.01 change); `walkRouteForTest(&#x27;peak-ascent&#x27;)` reaches the end with `blockedAt = -1`.
+
+If R-A is not granted, deliver M0 and B-α only.
+
+## Validation per variant (A1a suite, unchanged and not weakened)
+
+Protected classes unchanged (except the R-A corridor change in B-β, reported cell by cell); outside the window byte-identical; crest ≥ bound; wet cells, lakes, beds and water surfaces unchanged; land/sea and coast 0–150 m unchanged; zero new dry sinks; zero D8 drainage-destination changes; route centrelines Δ = 0; determinism (two runs, identical SHA-256); `npm test` and `npm run build` pass; default viewer path pixel-identical (8/8 R1 views).
+
+## Evidence (metrics are supplemental)
+
+- Real Three.js captures, clay sun A/B and standard, for M0 / B-α / B-β: all 16 A1a cameras plus 4 new walk cameras on the peak-ascent route at s = 2300, 2500, 2650 and 2800 m, each looking at the summit block and at the A2 south-west face.
+- For every view: pixel change against M0 (|Δ| &gt; 12 after a 3 × 3 median, as in `pixel_diff.py`). Visibility gate: B-α must change ≥ 1 % of frame pixels in at least two of Birchwood, Central Valley shoulder, approach-upper and the new route cameras; otherwise report &quot;not visible&quot; and STOP before any further tuning.
+- Matched sections: `csec-a2-face`, `csec-summit-block` re-measured on the generated terrain, with the concept targets dashed.
+- Review page comparing M0 / B-α / B-β side by side, with the A1a V1 captures as the &quot;before&quot; reference.
+
+## Stop conditions
+
+Parity fails; frozen terrain changes outside the declared release; a new sink; any bed, lake or water-surface change; a drainage-destination change; the passability gate fails; a design-master edit becomes necessary; only noise or masking would make it acceptable; the visibility gate fails. Preserve a diagnostic checkpoint and report; do not force acceptance.
+
+## Out of scope
+
+C1-R, any cirque, G1′/G2, crest raises, A2 route, Cairn col, coast, vegetation and assets, deployment.
+
+STOP after presenting M0 / B-α / (B-β) for independent artistic and technical review.
+</pre>
+ </details>
+</section>
+
+<footer class="col" style="color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:1rem">
+ Method: terrain-only line of sight on the rendered R1 triangles (eye 1.75 m), A1a mask classes, a 60° vertical field of view at 800 px, and pixel differences on the committed captures (|Δ| &gt; 12 after a 3 × 3 median). The projection was checked by drawing the measured skyline onto the Birchwood capture, where it lands on the rendered skyline. Scripts, data and figures are committed under <code>docs/geo-r02c-a1b-d/</code> on <code>feature/geo-r02c-a1b-d-visibility-design</code>; <code>scripts/reproduce.sh</code> rebuilds everything from a clean checkout.
+</footer>
+</div>
+<script>
+(function(){
+ var tabs=document.querySelectorAll('.tabs button'),img=document.getElementById('vismap');
+ tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(t){t.setAttribute('aria-selected',String(t===b));});img.src=b.dataset.img;});});
+ var btn=document.getElementById('copy-prompt'),pre=document.getElementById('prompt');
+ btn.addEventListener('click',function(){
+  var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy prompt';},1600);};
+  var fallback=function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C';};
+  try{navigator.clipboard.writeText(pre.textContent).then(done,fallback);}catch(e){fallback();}
+ });
+})();
+</script>

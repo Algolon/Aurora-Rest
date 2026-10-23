@@ -1,0 +1,616 @@
+{
+ "method": "For each skyline sample (0.5 deg spacing as stored) and each visible massif cell (8 m): its A1a protection label and its distance to the nearest ascent-route centreline. \"Freed by corridor \u00b1d\" counts samples whose only protection is the corridor and that lie farther than d (+ a d/2 fade) from the centreline. Crest samples can only be raised (R1 lower bound).",
+ "viewpoints": {
+  "birchwood": {
+   "skylineSamples": 80,
+   "now": {
+    "editable": 10.0,
+    "crestRaiseOnly": 81.2,
+    "corridor": 3.8
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 2.5,
+    "editableSkylinePct": 12.5
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 2.5,
+    "editableSkylinePct": 12.5
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 2.5,
+    "editableSkylinePct": 12.5
+   },
+   "visibleCells": {
+    "free": 69.0,
+    "corridor": 24.6,
+    "crest": 6.0,
+    "freedByCorridor\u00b135m": 6.2,
+    "freedByCorridor\u00b120m": 13.1,
+    "freedByCorridor\u00b112m": 17.0
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -1234.4,
+      2646.5
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      -1169.7,
+      2679.3
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      -957.2,
+      2617.8
+     ],
+     "samples": 1
+    },
+    {
+     "xz": [
+      -812.5,
+      2573.2
+     ],
+     "samples": 1
+    }
+   ]
+  },
+  "valley-shoulder": {
+   "skylineSamples": 70,
+   "now": {
+    "editable": 22.9,
+    "crestRaiseOnly": 62.9,
+    "corridor": 2.9
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 1.4,
+    "editableSkylinePct": 24.3
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 1.4,
+    "editableSkylinePct": 24.3
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 1.4,
+    "editableSkylinePct": 24.3
+   },
+   "visibleCells": {
+    "free": 75.1,
+    "corridor": 17.3,
+    "crest": 5.1,
+    "freedByCorridor\u00b135m": 4.4,
+    "freedByCorridor\u00b120m": 9.2,
+    "freedByCorridor\u00b112m": 11.8
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      237.5,
+      2453.7
+     ],
+     "samples": 5
+    },
+    {
+     "xz": [
+      109.3,
+      2349.1
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      340.5,
+      2502.3
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      -272.9,
+      2606.2
+     ],
+     "samples": 2
+    }
+   ]
+  },
+  "central-valley": {
+   "skylineSamples": 15,
+   "now": {
+    "editable": 20.0,
+    "crestRaiseOnly": 26.7,
+    "corridor": 0.0
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 0.0,
+    "editableSkylinePct": 20.0
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 0.0,
+    "editableSkylinePct": 20.0
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 0.0,
+    "editableSkylinePct": 20.0
+   },
+   "visibleCells": {
+    "free": 93.0,
+    "corridor": 0.0,
+    "crest": 3.8,
+    "freedByCorridor\u00b135m": 0.0,
+    "freedByCorridor\u00b120m": 0.0,
+    "freedByCorridor\u00b112m": 0.0
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      356.8,
+      2487.9
+     ],
+     "samples": 3
+    }
+   ]
+  },
+  "tarn-overlook": {
+   "skylineSamples": 163,
+   "now": {
+    "editable": 44.8,
+    "crestRaiseOnly": 20.9,
+    "corridor": 4.9
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 3.7,
+    "editableSkylinePct": 48.5
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 3.7,
+    "editableSkylinePct": 48.5
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 3.7,
+    "editableSkylinePct": 48.5
+   },
+   "visibleCells": {
+    "free": 72.3,
+    "corridor": 3.6,
+    "crest": 2.9,
+    "freedByCorridor\u00b135m": 1.4,
+    "freedByCorridor\u00b120m": 2.2,
+    "freedByCorridor\u00b112m": 2.5
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      324.3,
+      2351.6
+     ],
+     "samples": 20
+    },
+    {
+     "xz": [
+      213.8,
+      2180.0
+     ],
+     "samples": 18
+    },
+    {
+     "xz": [
+      367.0,
+      2437.3
+     ],
+     "samples": 15
+    },
+    {
+     "xz": [
+      642.3,
+      2630.3
+     ],
+     "samples": 7
+    }
+   ]
+  },
+  "high-tarn": {
+   "skylineSamples": 84,
+   "now": {
+    "editable": 50.0,
+    "crestRaiseOnly": 39.3,
+    "corridor": 8.3
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 2.4,
+    "editableSkylinePct": 52.4
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 6.0,
+    "editableSkylinePct": 56.0
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 7.1,
+    "editableSkylinePct": 57.1
+   },
+   "visibleCells": {
+    "free": 75.4,
+    "corridor": 2.6,
+    "crest": 4.1,
+    "freedByCorridor\u00b135m": 1.1,
+    "freedByCorridor\u00b120m": 1.8,
+    "freedByCorridor\u00b112m": 2.1
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      521.8,
+      2650.6
+     ],
+     "samples": 16
+    },
+    {
+     "xz": [
+      632.6,
+      2746.1
+     ],
+     "samples": 10
+    },
+    {
+     "xz": [
+      -398.7,
+      2479.3
+     ],
+     "samples": 5
+    },
+    {
+     "xz": [
+      -57.3,
+      2313.6
+     ],
+     "samples": 2
+    }
+   ]
+  },
+  "tarn-shore": {
+   "skylineSamples": 113,
+   "now": {
+    "editable": 62.8,
+    "crestRaiseOnly": 17.7,
+    "corridor": 1.8
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 0.9,
+    "editableSkylinePct": 63.7
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 1.8,
+    "editableSkylinePct": 64.6
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 1.8,
+    "editableSkylinePct": 64.6
+   },
+   "visibleCells": {
+    "free": 62.1,
+    "corridor": 0.2,
+    "crest": 0.9,
+    "freedByCorridor\u00b135m": 0.2,
+    "freedByCorridor\u00b120m": 0.2,
+    "freedByCorridor\u00b112m": 0.2
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      680.5,
+      2633.4
+     ],
+     "samples": 21
+    },
+    {
+     "xz": [
+      397.4,
+      2342.0
+     ],
+     "samples": 18
+    },
+    {
+     "xz": [
+      814.5,
+      2618.9
+     ],
+     "samples": 14
+    },
+    {
+     "xz": [
+      429.8,
+      2429.6
+     ],
+     "samples": 11
+    }
+   ]
+  },
+  "route-1300": {
+   "skylineSamples": 202,
+   "now": {
+    "editable": 23.3,
+    "crestRaiseOnly": 68.3,
+    "corridor": 8.4
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 3.5,
+    "editableSkylinePct": 26.7
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 4.0,
+    "editableSkylinePct": 27.2
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 5.4,
+    "editableSkylinePct": 28.7
+   },
+   "visibleCells": {
+    "free": 48.8,
+    "corridor": 46.9,
+    "crest": 4.3,
+    "freedByCorridor\u00b135m": 11.2,
+    "freedByCorridor\u00b120m": 24.2,
+    "freedByCorridor\u00b112m": 31.6
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -390.8,
+      2188.7
+     ],
+     "samples": 17
+    },
+    {
+     "xz": [
+      -335.5,
+      2327.6
+     ],
+     "samples": 11
+    },
+    {
+     "xz": [
+      -295.8,
+      2504.2
+     ],
+     "samples": 7
+    },
+    {
+     "xz": [
+      -772.1,
+      2213.8
+     ],
+     "samples": 4
+    }
+   ]
+  },
+  "route-1600": {
+   "skylineSamples": 281,
+   "now": {
+    "editable": 9.6,
+    "crestRaiseOnly": 55.2,
+    "corridor": 35.2
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 3.2,
+    "editableSkylinePct": 12.8
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 18.1,
+    "editableSkylinePct": 27.8
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 24.6,
+    "editableSkylinePct": 34.2
+   },
+   "visibleCells": {
+    "free": 31.1,
+    "corridor": 63.7,
+    "crest": 5.2,
+    "freedByCorridor\u00b135m": 14.6,
+    "freedByCorridor\u00b120m": 32.3,
+    "freedByCorridor\u00b112m": 42.6
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -376.8,
+      2655.4
+     ],
+     "samples": 13
+    },
+    {
+     "xz": [
+      -479.5,
+      2441.8
+     ],
+     "samples": 8
+    },
+    {
+     "xz": [
+      -426.3,
+      2523.0
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      -513.2,
+      2390.5
+     ],
+     "samples": 3
+    }
+   ]
+  },
+  "route-1900": {
+   "skylineSamples": 281,
+   "now": {
+    "editable": 23.1,
+    "crestRaiseOnly": 30.2,
+    "corridor": 46.6
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 13.5,
+    "editableSkylinePct": 36.7
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 15.3,
+    "editableSkylinePct": 38.4
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 21.0,
+    "editableSkylinePct": 44.1
+   },
+   "visibleCells": {
+    "free": 35.3,
+    "corridor": 60.0,
+    "crest": 4.7,
+    "freedByCorridor\u00b135m": 14.5,
+    "freedByCorridor\u00b120m": 31.1,
+    "freedByCorridor\u00b112m": 40.7
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -540.2,
+      2439.4
+     ],
+     "samples": 48
+    },
+    {
+     "xz": [
+      -393.9,
+      2672.1
+     ],
+     "samples": 17
+    }
+   ]
+  },
+  "route-2200": {
+   "skylineSamples": 281,
+   "now": {
+    "editable": 0.0,
+    "crestRaiseOnly": 31.0,
+    "corridor": 69.0
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 0.0,
+    "editableSkylinePct": 0.0
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 8.9,
+    "editableSkylinePct": 8.9
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 37.7,
+    "editableSkylinePct": 37.7
+   },
+   "visibleCells": {
+    "free": 38.3,
+    "corridor": 54.4,
+    "crest": 7.2,
+    "freedByCorridor\u00b135m": 12.9,
+    "freedByCorridor\u00b120m": 28.5,
+    "freedByCorridor\u00b112m": 37.4
+   },
+   "freeSkylineClusters": []
+  },
+  "route-2500": {
+   "skylineSamples": 281,
+   "now": {
+    "editable": 14.9,
+    "crestRaiseOnly": 30.6,
+    "corridor": 54.4
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 5.7,
+    "editableSkylinePct": 20.6
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 12.5,
+    "editableSkylinePct": 27.4
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 26.0,
+    "editableSkylinePct": 40.9
+   },
+   "visibleCells": {
+    "free": 62.5,
+    "corridor": 33.6,
+    "crest": 3.6,
+    "freedByCorridor\u00b135m": 8.3,
+    "freedByCorridor\u00b120m": 17.8,
+    "freedByCorridor\u00b112m": 23.2
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -419.4,
+      2672.1
+     ],
+     "samples": 36
+    },
+    {
+     "xz": [
+      -433.0,
+      2703.4
+     ],
+     "samples": 3
+    },
+    {
+     "xz": [
+      -451.1,
+      2633.6
+     ],
+     "samples": 3
+    }
+   ]
+  },
+  "route-2750": {
+   "skylineSamples": 277,
+   "now": {
+    "editable": 11.6,
+    "crestRaiseOnly": 57.0,
+    "corridor": 31.4
+   },
+   "corridor\u00b135m": {
+    "freedSkylinePct": 1.4,
+    "editableSkylinePct": 13.0
+   },
+   "corridor\u00b120m": {
+    "freedSkylinePct": 4.0,
+    "editableSkylinePct": 15.5
+   },
+   "corridor\u00b112m": {
+    "freedSkylinePct": 6.5,
+    "editableSkylinePct": 18.1
+   },
+   "visibleCells": {
+    "free": 66.3,
+    "corridor": 29.4,
+    "crest": 4.0,
+    "freedByCorridor\u00b135m": 7.1,
+    "freedByCorridor\u00b120m": 15.3,
+    "freedByCorridor\u00b112m": 19.9
+   },
+   "freeSkylineClusters": [
+    {
+     "xz": [
+      -427.3,
+      2677.1
+     ],
+     "samples": 30
+    },
+    {
+     "xz": [
+      -429.8,
+      2703.2
+     ],
+     "samples": 2
+    }
+   ]
+  }
+ }
+}

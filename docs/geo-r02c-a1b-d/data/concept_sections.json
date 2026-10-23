@@ -1,0 +1,67 @@
+{
+ "status": "CONCEPT targets (rule-based) evaluated against MEASURED R1; no terrain generated",
+ "sections": {
+  "C1R-long": {
+   "lipDistanceM": 385.7,
+   "lipHeightM": 645.5,
+   "floorBackM": 665.5,
+   "maxLoweringM": 83.3,
+   "raiseM": 0.0,
+   "headwallDeg": 45.0
+  },
+  "C1R-cross": {
+   "centre": [
+    -172.2,
+    2925.1
+   ],
+   "floorM": 654.8,
+   "maxLoweringM": 45.7,
+   "leftSide": "A2 (north-facing wall, 52\u00b0)"
+  },
+  "G1p-section": {
+   "channel": "tarn-inlet-w",
+   "sM": 400.0,
+   "centre": [
+    767.6,
+    2362.4
+   ],
+   "bedM": 416.2,
+   "maxFillM": 15.5,
+   "maxCutM": 1.6,
+   "kneeM": 32.0,
+   "a1aMaskMeanNorthWall30to90M": 0.42
+  },
+  "A2-face-rhythm": {
+   "offsetFromCrestM": 110,
+   "couloirs": [
+    {
+     "atM": 40,
+     "widthM": 68,
+     "depthM": 14
+    },
+    {
+     "atM": 120,
+     "widthM": 92,
+     "depthM": 9
+    },
+    {
+     "atM": 175,
+     "widthM": 60,
+     "depthM": 16
+    }
+   ],
+   "a1aMaskMean": 0.78
+  },
+  "summit-block": {
+   "routeSM": 2775.4,
+   "centre": [
+    -551.5,
+    2704.2
+   ],
+   "trailM": 864.6,
+   "maxLoweringM": 25.0,
+   "corridorNow": "\u00b175 m + 60 m fade",
+   "corridorProposed": "\u00b120 m + 20 m fade, tread gate"
+  }
+ }
+}

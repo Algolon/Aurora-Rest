@@ -1,0 +1,172 @@
+{
+ "method": "MEASURED: could a player ever see the NE hollow (proposed C1-R site)? Terrain-only visibility of the hollow footprint\n(25 m grid) from points every 60 m along the A1 (n-crown) and A2 (n-main SE arm) crests and from the summit, eye 1.75 m.\nOutput: data/c1_overlook.json",
+ "targets": 386,
+ "upperTargets(>=560m, cirque zone)": 195,
+ "points": [
+  {
+   "arm": "A1",
+   "sFromSummitM": 0,
+   "xz": [
+    -520.0,
+    2770.0
+   ],
+   "heightM": 900.0,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 60,
+   "xz": [
+    -497.1,
+    2825.5
+   ],
+   "heightM": 896.6,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 120,
+   "xz": [
+    -474.5,
+    2881.1
+   ],
+   "heightM": 887.6,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 180,
+   "xz": [
+    -451.3,
+    2936.4
+   ],
+   "heightM": 874.1,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 240,
+   "xz": [
+    -426.7,
+    2991.1
+   ],
+   "heightM": 857.2,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 300,
+   "xz": [
+    -399.8,
+    3044.7
+   ],
+   "heightM": 838.2,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 360,
+   "xz": [
+    -366.1,
+    3094.1
+   ],
+   "heightM": 818.0,
+   "visibleAllPct": 2.6,
+   "visibleCirqueZonePct": 5.1
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 420,
+   "xz": [
+    -318.2,
+    3130.0
+   ],
+   "heightM": 792.3,
+   "visibleAllPct": 25.1,
+   "visibleCirqueZonePct": 42.6
+  },
+  {
+   "arm": "A1",
+   "sFromSummitM": 480,
+   "xz": [
+    -266.1,
+    3159.8
+   ],
+   "heightM": 758.5,
+   "visibleAllPct": 33.4,
+   "visibleCirqueZonePct": 50.8
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 0,
+   "xz": [
+    -520.0,
+    2770.0
+   ],
+   "heightM": 900.0,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 60,
+   "xz": [
+    -466.4,
+    2744.4
+   ],
+   "heightM": 891.3,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 120,
+   "xz": [
+    -418.7,
+    2707.9
+   ],
+   "heightM": 868.5,
+   "visibleAllPct": 2.6,
+   "visibleCirqueZonePct": 5.1
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 180,
+   "xz": [
+    -373.2,
+    2668.9
+   ],
+   "heightM": 836.6,
+   "visibleAllPct": 6.0,
+   "visibleCirqueZonePct": 11.8
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 240,
+   "xz": [
+    -328.7,
+    2628.6
+   ],
+   "heightM": 800.4,
+   "visibleAllPct": 2.6,
+   "visibleCirqueZonePct": 5.1
+  },
+  {
+   "arm": "A2",
+   "sFromSummitM": 300,
+   "xz": [
+    -284.5,
+    2588.1
+   ],
+   "heightM": 765.0,
+   "visibleAllPct": 0.0,
+   "visibleCirqueZonePct": 0.0
+  }
+ ]
+}

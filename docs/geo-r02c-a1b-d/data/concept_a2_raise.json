@@ -1,0 +1,81 @@
+{
+ "status": "CONCEPT (design target, not terrain; requires separate crest-raise authorization)",
+ "ridge": "n-main (A2 arm, summit to the n-east-arc junction)",
+ "profileSFromSummitM_dhM": [
+  [
+   165,
+   0
+  ],
+  [
+   215,
+   18
+  ],
+  [
+   285,
+   18
+  ],
+  [
+   310,
+   7
+  ],
+  [
+   345,
+   7
+  ],
+  [
+   372,
+   0
+  ]
+ ],
+ "crossProfile": "full raise within 20 m of the crest line, smoothstep to 0 at 70 m; raise only, never below R1",
+ "routeClearanceM": ">= 114 m from the peak-ascent centreline for s >= 150 m (measured), i.e. outside corridor + fade",
+ "views": [
+  {
+   "view": "a1a-birchwood",
+   "massifSkylineShareInFramePct": {
+    "corridor": 2.3,
+    "crest": 81.7,
+    "free": 13.0,
+    "valley": 3.0
+   },
+   "concept": {
+    "maxSkylineShiftPx": 5.2,
+    "raisedLengthOnSkylineM": 180.0
+   }
+  },
+  {
+   "view": "a1a-valley-shoulder",
+   "massifSkylineShareInFramePct": {
+    "corridor": 2.3,
+    "crest": 62.4,
+    "divide": 2.7,
+    "free": 21.7,
+    "valley": 11.0
+   },
+   "concept": {
+    "maxSkylineShiftPx": 4.0,
+    "raisedLengthOnSkylineM": 172.0
+   }
+  },
+  {
+   "view": "a1a-approach-upper",
+   "massifSkylineShareInFramePct": {
+    "corridor": 52.9,
+    "crest": 39.6,
+    "free": 7.6
+   },
+   "concept": null
+  },
+  {
+   "view": "a1a-tarn-shore",
+   "massifSkylineShareInFramePct": {
+    "corridor": 0.2,
+    "crest": 19.6,
+    "free": 63.0,
+    "valley": 11.5,
+    "wet": 5.5
+   },
+   "concept": null
+  }
+ ]
+}

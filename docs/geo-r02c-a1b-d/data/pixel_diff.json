@@ -1,0 +1,237 @@
+{
+ "method": "MEASURED on the committed A1a browser captures: share of pixels that changed between M0 and each variant, per view and\nlighting mode (|delta| > 12 of 255 in any channel, after a 3 x 3 median to suppress JPEG ringing). Output: data/pixel_diff.json",
+ "views": {
+  "a1a-approach-mid": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-approach-upper": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-birchwood": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-c1-floor": {
+   "clayB": {
+    "v1": 7.83,
+    "v2": 34.23,
+    "v3": 34.23
+   },
+   "clayA": {
+    "v1": 6.82,
+    "v2": 8.62,
+    "v3": 8.62
+   },
+   "standard": {
+    "v1": 16.62,
+    "v2": 77.65,
+    "v3": 77.65
+   }
+  },
+  "a1a-c1-lip": {
+   "clayB": {
+    "v1": 5.44,
+    "v2": 5.87,
+    "v3": 5.87
+   },
+   "clayA": {
+    "v1": 2.75,
+    "v2": 2.75,
+    "v3": 2.75
+   }
+  },
+  "a1a-g1-downstream": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 9.21
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 8.1
+   }
+  },
+  "a1a-g1-upstream": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.24
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 1.1
+   }
+  },
+  "a1a-ncrown-ridge": {
+   "clayB": {
+    "v1": 0.7,
+    "v2": 0.82,
+    "v3": 0.82
+   },
+   "clayA": {
+    "v1": 0.55,
+    "v2": 0.55,
+    "v3": 0.55
+   }
+  },
+  "a1a-oblique-c1": {
+   "clayB": {
+    "v1": 1.01,
+    "v2": 2.11,
+    "v3": 2.11
+   },
+   "clayA": {
+    "v1": 0.02,
+    "v2": 0.03,
+    "v3": 0.03
+   }
+  },
+  "a1a-oblique-n": {
+   "clayB": {
+    "v1": 0.15,
+    "v2": 0.35,
+    "v3": 0.35
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-oblique-se": {
+   "clayB": {
+    "v1": 0.12,
+    "v2": 0.23,
+    "v3": 0.23
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.46,
+    "v2": 0.76,
+    "v3": 0.76
+   }
+  },
+  "a1a-summit-into-c1": {
+   "clayB": {
+    "v1": 0.15,
+    "v2": 0.15,
+    "v3": 0.15
+   },
+   "clayA": {
+    "v1": 7.06,
+    "v2": 7.06,
+    "v3": 7.06
+   },
+   "standard": {
+    "v1": 1.5,
+    "v2": 1.5,
+    "v3": 1.5
+   }
+  },
+  "a1a-tarn-overlook": {
+   "clayB": {
+    "v1": 0.03,
+    "v2": 0.03,
+    "v3": 0.03
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-tarn-shore": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.05
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.03,
+    "v2": 0.03,
+    "v3": 0.31
+   }
+  },
+  "a1a-valley-shoulder": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "standard": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  },
+  "a1a-west-arm": {
+   "clayB": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   },
+   "clayA": {
+    "v1": 0.0,
+    "v2": 0.0,
+    "v3": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "status": "PROPOSAL (ratings are design judgement; measured basis cites data files)",
+ "options": [
+  {
+   "id": "A1b-alpha",
+   "family": "A",
+   "name": "Player-visible face relief, current protections",
+   "recommended": "first prototype",
+   "measuredBasis": "31.44 ha of A1a-editable faces visible from Birchwood, Central Valley or the route; V1 changed 0 % of those cells",
+   "visualGain": "medium: in-face relief (couloirs, buttresses, shadow lines) on the faces players actually look at; skyline unchanged (0 px)",
+   "hydrologicalRisk": "low: cut-only on open faces, existing divide guard, same A1a validation",
+   "complexity": "low\u2013medium: reuse the A1a face operator, add viewshed targeting and a couloir rhythm, face gate 0.75 \u2192 0.60 on targeted faces",
+   "authorization": "none beyond running A1b"
+  },
+  {
+   "id": "A1b-beta",
+   "family": "A",
+   "name": "A1b-\u03b1 plus summit block with a narrowed trail corridor",
+   "recommended": "second prototype, only if release R-A is granted",
+   "measuredBasis": "corridor \u00b120 m frees 4\u201318 % of the route skyline and 15\u201332 % of route-visible massif cells; release area 2.15 ha above 780 m",
+   "visualGain": "high at player height on the hero ascent; medium from the far approaches",
+   "hydrologicalRisk": "low: cut-only flanks, divide guard; route risk medium, handled by a passability gate",
+   "complexity": "medium: corridor geometry change + tread gate + walk test",
+   "authorization": "R-A corridor release"
+  },
+  {
+   "id": "A2-raise",
+   "family": "A",
+   "name": "A2 stepped crest raise (+18 m)",
+   "recommended": "not now",
+   "measuredBasis": "skyline shift 4\u20135 px from Birchwood / Central Valley; 3 px needs \u2265 9\u201311 m",
+   "visualGain": "low",
+   "hydrologicalRisk": "low",
+   "complexity": "low",
+   "authorization": "R-B crest raise"
+  },
+  {
+   "id": "A-R2",
+   "family": "A",
+   "name": "Far-silhouette identity through a design-master crest revision",
+   "recommended": "strategic decision, outside A1",
+   "measuredBasis": "far skylines are 62\u201382 % R1 crest band; a strong change (\u2265 15 px) needs \u2265 50 m at 2.8 km",
+   "visualGain": "high (the only route to a new far silhouette)",
+   "hydrologicalRisk": "high: requires an R1 re-solve, which P0 measured would move about 22 % of mainland cells",
+   "complexity": "high",
+   "authorization": "R-C design-master revision"
+  },
+  {
+   "id": "C1-R",
+   "family": "B",
+   "name": "C1 rebuilt as a valley-head cirque in the NE hollow",
+   "recommended": "design accepted for later (A1c); needs a viewpoint",
+   "measuredBasis": "hollow is a real valley only below ~650 m (45\u2013124 m deep, ~500 m wide); 0 % visible from far / route, 0.3 % from High Tarn; 43\u201351 % from the lower A1 crest",
+   "visualGain": "high geomorphological credibility; low at current player positions",
+   "hydrologicalRisk": "low\u2013medium: sea catchment, cut-only, floor grades out, ravine untouched",
+   "complexity": "high: headwall, floor, lateral rib, secondary couloir, lip; max lowering 83 m",
+   "authorization": "R-D C1 redesign, R-E overlook path"
+  },
+  {
+   "id": "C1-tarn",
+   "family": "B",
+   "name": "Cirque on the visible tarn side (A1-D C2-a site)",
+   "recommended": "not recommended",
+   "measuredBasis": "planar ESE slope, no valley head (0\u201323 m deep); visible 51.6 % far / 41.2 % High Tarn",
+   "visualGain": "high visibility, but the valley head would have to be invented (decorative risk)",
+   "hydrologicalRisk": "medium\u2013high: High Tarn catchment, saddle fill",
+   "complexity": "high",
+   "authorization": "R-F C2-a (deferred by D2)"
+  },
+  {
+   "id": "G1'",
+   "family": "C",
+   "name": "Asymmetric cut-bank gully, tarn-inlet-w s 296\u2013472 m",
+   "recommended": "design accepted for later; calibration only",
+   "measuredBasis": "hillside (north) relief 31\u201338 m, south bank 4 m, cut room 0\u20131 m, 100 % visible from High Tarn, 0 % far",
+   "visualGain": "low\u2013medium, local",
+   "hydrologicalRisk": "low\u2013medium: bed frozen, fill only on the hillside bank, lateral fall to the channel kept",
+   "complexity": "medium",
+   "authorization": "R-G reach and valley-band release"
+  },
+  {
+   "id": "G2",
+   "family": "C",
+   "name": "Gully on tarn-inlet-n s 270\u2013376 m",
+   "recommended": "alternative only",
+   "measuredBasis": "hillside relief ~31 m, gradient 61 %, visible 64 % far / 100 % High Tarn; next to the D3 frozen head zone",
+   "visualGain": "medium",
+   "hydrologicalRisk": "medium (D3 source conflict nearby)",
+   "complexity": "medium",
+   "authorization": "R-H G2 (deferred)"
+  }
+ ],
+ "authorizations": [
+  {
+   "id": "R-A",
+   "change": "Narrow the peak-ascent corridor near the summit from \u00b175 m (+60 m fade) to \u00b120 m (+20 m fade) above 780 m, with a passability gate (centreline \u0394 = 0, grade and \u00b13 m tread cross-slope unchanged, walk test passes)",
+   "neededFor": "A1b-\u03b2",
+   "why": "the corridor is derived from the design-master route reservation (widthM 150)"
+  },
+  {
+   "id": "R-B",
+   "change": "Crest raises on any ar\u00eate (e.g. A2 step +18 m)",
+   "neededFor": "A2 raise",
+   "why": "not approved in A1-D (D1 left towers/raises as an option)"
+  },
+  {
+   "id": "R-C",
+   "change": "Design-master crest-profile revision (A-R2) and the R1 re-solve it implies",
+   "neededFor": "a new far silhouette",
+   "why": "design-master edits are a stop condition for A1"
+  },
+  {
+   "id": "R-D",
+   "change": "Replace the A1-D C1 geometry with C1-R (floor 655\u2013665 m moved down the hollow, lateral rib, secondary couloir, headwall to the crest band, max lowering \u2248 83 m)",
+   "neededFor": "C1-R",
+   "why": "changes an approved A1-D design element (D2)"
+  },
+  {
+   "id": "R-E",
+   "change": "A path or overlook on the lower A1 crest (\u2248 760\u2013790 m) so C1-R can be seen at player height",
+   "neededFor": "C1-R at player height",
+   "why": "new route / reservation"
+  },
+  {
+   "id": "R-F",
+   "change": "Build a cirque on the tarn side (C2-a)",
+   "neededFor": "C1-tarn",
+   "why": "deferred by D2"
+  },
+  {
+   "id": "R-G",
+   "change": "Move G1 from the middle reach (fraction 0.35\u20130.65) to s 296\u2013472 m (\u2248 0.50\u20130.79) and release the R1 valley band there; hillside-bank fill up to \u2248 16 m",
+   "neededFor": "G1'",
+   "why": "D8 fixed G1 to the middle reach"
+  },
+  {
+   "id": "R-H",
+   "change": "Gully on tarn-inlet-n (G2)",
+   "neededFor": "G2",
+   "why": "deferred (D3 / D8)"
+  }
+ ],
+ "evidence": [
+  "visibility.json",
+  "editability.json",
+  "pixel_diff.json",
+  "hollows.json",
+  "c1_overlook.json",
+  "gully_search.json",
+  "concept_sections.json",
+  "concept_a2_raise.json",
+  "proposal_plan.json"
+ ]
+}
