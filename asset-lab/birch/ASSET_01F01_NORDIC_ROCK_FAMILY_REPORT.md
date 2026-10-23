@@ -12,7 +12,7 @@ R1 is the unchanged S1R compact environment-rock candidate. This milestone makes
 - Original checkout and other worktrees were left alone. Only new F01 files and its CI workflow are added.
 - Native macOS arm64 Blender **5.2.2 LTS**, build `d13f752e3b9c`; actual executable/background/bpy/Cycles/glTF exporter tested. The original S1R project was opened successfully in preflight.
 - Node 24.16.0 locally; CI uses Node 22. TypeScript, Vite and genuine Chromium WebGL2 executed.
-- Final GitHub implementation SHA and observed CI results are recorded in the checkpoint addendum after push; no CI success is inferred from local tests.
+- Validated GitHub implementation: `de934e361cddffc2223106330ad8c4854cec51ce`; observed successful CI is recorded below. The closing commit changes only this report and the checkpoint metadata.
 
 ## Preserved models and construction
 
@@ -94,3 +94,18 @@ No LODs, collision proxies, streaming integration or production population tunin
 [Integration handoff](rocks/f01/INTEGRATION_HANDOFF.md) documents paths, IDs, scale/pivots, ownership, reuse/instancing, conditional biome recommendations, embedding, collision/LOD work and authoritative-world checkpoint requirements. It proposes no automatic integration and selects no outdated world branch. The technical interface can be reused independently of these unapproved shapes.
 
 The next step is owner review of this frozen checkpoint and a separately scoped decision about accepted geometry and controlled integration. This task stops at the preserved three-rock pack, demo and safe handoff. No merge, deployment, release or island edits.
+
+## Verified GitHub checkpoint — completed
+
+Implementation/assets/evidence commit: [`de934e361cddffc2223106330ad8c4854cec51ce`](https://github.com/Algolon/Aurora-Rest/commit/de934e361cddffc2223106330ad8c4854cec51ce), directly descended from the authorized S1R foundation.
+
+[CI run 40005315627](https://github.com/Algolon/Aurora-Rest/actions/runs/40005315627) **completed successfully** on that exact implementation SHA:
+
+- `static-export-and-webgl`: success, 3m47s; protected sources, 57 tests, both builds, actual GLB screenshots, instance material parity and resource cleanup.
+- `independent-protected-nature-parity`: success, 37s; birch/pine/grass/production rock source fidelity and independent grass WebGL material comparison.
+
+Artifacts: [actual GLB WebGL review](https://github.com/Algolon/Aurora-Rest/actions/runs/40005315627/artifacts/12524231964) and [protected grass material parity](https://github.com/Algolon/Aurora-Rest/actions/runs/40005315627/artifacts/12524181096). CI artifacts expire; the local curated/raw review images are also committed as durable evidence. Artifact digests are preserved in `f01-evidence/github-checkpoint.json`.
+
+The final handoff addendum is documentation/metadata only and uses `[skip ci]`; it does not claim a new runtime CI execution. Its exact final commit is provided in the owner's handoff and can be verified with `git rev-parse origin/art/asset-01f01-nordic-rock-family-pilot`. Runtime/model/test/image content remains byte-identical to the CI-validated implementation commit. Final worktree/remote parity is checked after push.
+
+Final art disposition remains **ART NOT APPROVED** for both new shapes. Technical infrastructure is independently validated and preserved. No merge, deployment or island integration occurred.

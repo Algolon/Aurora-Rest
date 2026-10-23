@@ -1,0 +1,34 @@
+{
+  "branch": "art/asset-01f01-nordic-rock-family-pilot",
+  "starting_checkpoint": "cb77977c4b8652045f32657f19b14743ecd2ab6e",
+  "validated_implementation_commit": "de934e361cddffc2223106330ad8c4854cec51ce",
+  "run_id": 40005315627,
+  "url": "https://github.com/Algolon/Aurora-Rest/actions/runs/40005315627",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": {
+    "static-export-and-webgl": "success",
+    "independent-protected-nature-parity": "success"
+  },
+  "artifacts": [
+    {
+      "id": 12524231964,
+      "name": "aurora-f01-actual-glb-webgl-review",
+      "digest": "sha256:9290fb71129da33d7edc7e376df3dabd506374a64f755df8c131b7e3e771827e"
+    },
+    {
+      "id": 12524181096,
+      "name": "aurora-f01-protected-grass-material-parity",
+      "digest": "sha256:7024c083cd2a83935db35eeba3f22cf6f828f4c366aad4e3e9c4ed1d7ba2ff4b"
+    }
+  ],
+  "new_shape_art_status": {
+    "broadGlacial": "ART NOT APPROVED",
+    "sculptural": "ART NOT APPROVED"
+  },
+  "technical_infrastructure": "VALIDATED STAGING INFRASTRUCTURE",
+  "closing_addendum": "Report and checkpoint metadata only; runtime/model/test/image content unchanged from validated implementation",
+  "merged": false,
+  "deployed": false,
+  "island_integrated": false
+}
