@@ -1,32 +1,115 @@
 {
  "branch": "feature/geo-r02c-b01-north-massif-rebaseline",
  "base": "f1d58eb1a9508f5a7c287f06d7617a327cfabf13",
- "authorization": "B0/B1 experimental candidate: derived North Peak design master, local ridge/saddle/crest changes including lowering, new shoulders, spurs and valley heads, regenerated local drainage, candidate peak-ascent realignment. No change to the A-R1 master, R1 generator or binaries, or earlier branches; no merge or deployment.",
+ "previousHead": "41ddafb7f97ad51d0f16662800c9467ef16e838e",
+ "milestone": "GEO-R02C-B1.1 final validation, visual review and checkpoint preservation (no geometry change since 41ddafb)",
  "iterations": {
   "B1.0": {
    "terrainSha256": "9af6040ddab3602a2a739c9a2005b6898c35670a4d9ddea1135c59478a05cea5",
+   "patchSha256": "61ace30c8cce5aff3ed0fd4482d4446232b8d46b9b5f9684517ec35cc9dd741a",
    "design": "docs/geo-r02c-b01/iteration/north-massif-b1.0.json",
-   "captures": "docs/geo-r02c-b01/captures/b01-b1.0 (24 frames)"
+   "captures": "docs/geo-r02c-b01/captures/b01-b1.0 (24 frames)",
+   "reproduced": "regenerated from its preserved design in a clean clone of 41ddafb: identical terrain SHA-256; patch committed in docs/geo-r02c-b01/iteration/b1.0.patch.f32"
   },
   "B1.1": {
    "terrainSha256": "86e89c1e955ef44b252111d87cfce1194eae55efac479bb1a3b069966ce7323d",
+   "patchSha256": "1d866f1ad614a4891b7b3740de33e9d767d7ea3328d1079277b79a4609f3da57",
    "design": "tools/geo-r02c-b01/design/north-massif-b1.json",
-   "captures": "docs/geo-r02c-b01/captures/b01-b1 (24 frames)",
-   "note": "the one corrective iteration after the first renders"
+   "designSha256": "b2a36745c527ff36577bd2fee5946d4490b805b39fcd34f7a46d888271126db4",
+   "captures": "docs/geo-r02c-b01/captures/b01-b1 (26 frames)",
+   "note": "the one corrective iteration; frozen"
   }
  },
  "deterministic": true,
- "determinism": "build.py --repeat 2 gave identical SHA-256 for B1.0 and for B1.1 (asserted by the tool)",
+ "determinism": "B1.1 generated twice in a clean clone of 41ddafb (build.py --repeat 2): identical, and byte-identical to the committed patch, manifest and routes. A third in-memory recomposition (final_checks.py) equals the committed terrain.",
  "pythonEnvironment": {
   "numpy": "2.5.3",
   "scipy": "1.18.1",
   "shapely": "2.2.0"
  },
- "generationSeconds": "about 120 s per build (single core), including the route search; validation about 90 s",
- "runtime": "B1 is a float32 patch of 1.23 MB composed into the canonical grid at load and verified by its SHA-256, plus a 62 kB route file. The terrain mesh, LOD, materials and controller are unchanged, so there is no runtime cost beyond R1 at the same resolution.",
- "tests": "npm test: 58/58 pass (50 existing, unmodified, + 8 new B01 tests)",
+ "generationSeconds": "about 120 s per build including the route search; validation about 90 s; final checks about 110 s",
+ "runtime": "1.23 MB float32 patch + 62 kB route file, composed at load and verified by SHA-256; mesh, materials and controller unchanged",
+ "tests": "npm test: 58/58 pass (50 existing, unmodified, + 8 B01 tests)",
  "testsPass": true,
  "build": "npm run build (tsc --noEmit + vite build): pass",
  "buildPass": true,
- "captures": "72 real Three.js frames: M0, B1.0 and B1.1 at 12 identical cameras × clay sun A/B; SwiftShader WebGL, 1280 × 800"
+ "captures": "76 real Three.js frames: M0, B1.0, B1.1 at 12 cameras × clay A/B, plus the on-route camera b01-route-b11 for M0 and B1.1 × clay A/B; all verified against their manifests (file, checksum, terrain SHA, baseline, size, camera position, yaw, eye height, preset)",
+ "checkMatrix": [
+  [
+   "Two independent deterministic B1.1 generations",
+   "pass"
+  ],
+  [
+   "Canonical R1 terrain preserved (fc8fd6da…)",
+   "pass"
+  ],
+  [
+   "A-R1 design master unchanged (62cb154b…)",
+   "pass"
+  ],
+  [
+   "B1.0 and B1.1 artifact hashes recorded and reproduced",
+   "pass"
+  ],
+  [
+   "Protected files unchanged against f1d58eb (R1, A1a, A1b, A1c, P0, canonical tools, existing tests)",
+   "pass"
+  ],
+  [
+   "No change outside the study area, at the coast band, in water, at High Tarn + 150 m, in protected corridors or on other routes",
+   "pass"
+  ],
+  [
+   "Viewer selects the B1.1 variant and reports the active and baseline hashes",
+   "pass"
+  ],
+  [
+   "Existing tests (unmodified) and candidate tests",
+   "pass"
+  ],
+  [
+   "Production build",
+   "pass"
+  ],
+  [
+   "No new dry closed depressions",
+   "pass"
+  ],
+  [
+   "Lake and river levels unchanged",
+   "pass"
+  ],
+  [
+   "Candidate route continuous in the real browser (walkRouteForTest)",
+   "pass"
+  ],
+  [
+   "Terrain / player collision consistency along the route",
+   "pass"
+  ],
+  [
+   "Boundary seams within the declared 0.25 ha limit",
+   "FAIL (4 clusters, largest 2.08 ha)"
+  ],
+  [
+   "Authored Western Col level (668 m)",
+   "FAIL (695 m real col, 729 m at the authored point)"
+  ],
+  [
+   "Candidate route hiking grade ≤ 0.30 outside the declared scramble",
+   "FAIL (38 m above 0.30, max 0.43)"
+  ],
+  [
+   "Comfortable tread (cross-slope ≤ 0.5)",
+   "FAIL (25.7 % of the new section above 0.5)"
+  ],
+  [
+   "Android or desktop performance on devices",
+   "UNVERIFIED (not measured in this milestone)"
+  ],
+  [
+   "Art approval",
+   "NOT GIVEN: ART CONDITIONAL — GEOGRAPHIC CORRECTION REQUIRED"
+  ]
+ ]
 }

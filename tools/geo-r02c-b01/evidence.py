@@ -29,7 +29,7 @@ def hill(H):
  lev=np.floor(sub/100);e=((lev!=np.roll(lev,1,0))|(lev!=np.roll(lev,1,1)))&(sub>0);rgb[e]*=.62;return Image.fromarray(rgb.clip(0,255).astype(np.uint8))
 
 # ---------- B0 design plan ----------
-def design_plan():
+def design_plan(name='design-plan.png',label='B0 design target'):
  s0=1.6;base=hill(R);im=base.resize((int(base.width*s0),int(base.height*s0)),Image.LANCZOS).convert('RGBA');ov=Image.new('RGBA',im.size,(0,0,0,0));d=ImageDraw.Draw(ov)
  P=lambda x,z:PP(x,z,s0)
  d.polygon([P(*p) for p in design['studyArea']['polygon']],outline=(30,30,30,255));
@@ -46,11 +46,11 @@ def design_plan():
  d.line([P(*p) for p in routes['routes'][0]['points2'][::3]],fill=(255,220,0,255),width=3)
  lk=next(l for l in features['lakes'] if l['id']=='high-tarn');x,y=P(*np.mean(lk['boundary'],axis=0));d.text((x-30,y),'High Tarn (360 m, preserved)',fill=(255,255,255,255),font=F(12,True))
  im=Image.alpha_composite(im,ov).convert('RGB');W=im.width;leg=Image.new('RGB',(W,96),(250,248,243));g=ImageDraw.Draw(leg)
- g.text((10,8),'B0 design target: derived North massif master (authored intent drawn over the R1 hillshade, 100 m contours). Not terrain.',fill=(0,0,0),font=F(14,True))
+ g.text((10,8),f'{label}: derived North massif master (authored intent drawn over the R1 hillshade, 100 m contours). Not terrain.',fill=(0,0,0),font=F(14,True))
  g.text((10,32),'Coloured lines: the three arms, the High Tarn rim and the Vestfjell plateau · brown: buttresses · blue: cirques (rim circle, floor disc, outlet trough)',fill=(60,60,60),font=F(12))
  g.text((10,52),'triangles: summits · circles: saddles · black outline: study area (outside it nothing changes) · white: R1 peak-ascent (reference) · yellow: B1 candidate route',fill=(60,60,60),font=F(12))
  g.text((10,72),'Preserved: High Tarn and 150 m, the coast band, every water cell, the tarn-inlet-w and windward-gully corridors, all other routes.',fill=(60,60,60),font=F(12))
- o=Image.new('RGB',(W,im.height+96),(250,248,243));o.paste(leg,(0,0));o.paste(im,(0,96));o.save(IMG/'design-plan.png')
+ o=Image.new('RGB',(W,im.height+96),(250,248,243));o.paste(leg,(0,0));o.paste(im,(0,96));o.save(IMG/name)
 
 # ---------- skylines: target (design skeleton), M0 and B1 ----------
 CAMS={'birchwood':('Birchwood Forest',(-700.,300.)),'valley-shoulder':('Central Valley shoulder',(-175.97,-155.95))}

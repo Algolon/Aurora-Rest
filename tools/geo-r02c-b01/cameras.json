@@ -3,8 +3,26 @@
  "note": "B01 additions; the A1a, A1b and A1c cameras are reused unchanged, so M0 and B1 are seen from identical places",
  "cameras": [
   {
+   "id": "b01-route-b11",
+   "name": "B1.1 route \u00b7 upper Vestfjell, 356 m below the summit, looking up",
+   "group": "b01-route",
+   "kind": "walk",
+   "xz": [
+    -769.0,
+    2516.0
+   ],
+   "yaw": 0.7755,
+   "pitch": 0.2,
+   "uv": [
+    223.1,
+    148.4
+   ],
+   "source": "point 2124 of the B1.1 peak-ascent candidate (s = 2095 m); captured for M0 and B1.1 only (added after the B1.0 terrain was superseded)",
+   "onRoute": true
+  },
+  {
    "id": "b01-route-fjell",
-   "name": "Vestfjell plateau \u00b7 looking up to North Peak",
+   "name": "Vestfjell plateau \u00b7 OFF-ROUTE viewpoint, 132 m west of the B1.1 route",
    "group": "b01-route",
    "kind": "walk",
    "xz": [
@@ -17,7 +35,8 @@
     210.03,
     139.76
    ],
-   "source": "placed on the B1.0 route alignment (s = 2050 m); the corrected B1.1 route passes 132 m to the east. Fixed viewpoint, identical for M0 and B1."
+   "source": "Placed on the B1.0 route alignment (s = 2050 m). The corrected B1.1 route passes 132 m to the east, so this is not a route view. Fixed viewpoint, identical for M0 and B1.",
+   "onRoute": false
   },
   {
    "id": "b01-route-shoulder",
@@ -34,7 +53,8 @@
     235.96,
     131.91
    ],
-   "source": "peak-ascent-b1 s = 2437 m"
+   "source": "peak-ascent-b1 s = 2437 m (B1.1 route passes 1.9 m away)",
+   "onRoute": true
   },
   {
    "id": "b01-oblique-sw",

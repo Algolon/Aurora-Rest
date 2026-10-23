@@ -1,70 +1,191 @@
 {
- "verdict": "B1.1: SIGNIFICANT ARTISTIC PROGRESS · NOT YET ART-APPROVED",
+ "verdict": "ART CONDITIONAL — GEOGRAPHIC CORRECTION REQUIRED",
  "summary": [
-  "This is the first candidate that reads as a mountain massif rather than a modified smooth hill. The smooth R1 dome is gone. In its place is an asymmetric crown: a dominant horn summit (897 m), a deep notch, a lower Tarntind to the south-east and a Vesttind shoulder to the west. The arms differ, and from the north the lee side is cut by two deep, dark cirque bowls under clean arêtes. Seen in real Three.js renders under both clay presets, the skyline from Birchwood moves up to 34 px, against 4 px for A1c, and changes character, not just height.",
-  "It is not yet art-approved, for three reasons. (1) From the two identity views (Birchwood, Central Valley shoulder) the new crown sits on a long, smooth plinth that is mostly R1 terrain outside the study area. The mountain still reads as a crown on a hill rather than one monumental mass. (2) The ridge flanks come from an analytic flank profile, and in raking light some faces show planar, triangular facets with straight edges (south-west oblique). The surface reads as sculpted clay rather than eroded rock. (3) The authored Western Col (668 m) came out at 729 m, so Vesttind is only a shoulder. Two authored arm ends also meet the frozen coast band 50–66 m too high, which creates short artificial sea-cliff steps (2.1 ha and 1.7 ha).",
-  "Per the brief, one corrective iteration was made after the first renders (B1.0 → B1.1). It removed the crumpled-paper texture and the extruded look of the arms, and gave North Peak clear dominance. No further sculpting was done."
+  "B1.1 is the first North Peak candidate that reads as a mountain massif rather than a modified smooth hill. In the real Three.js renders, under both clay presets, the smooth R1 dome is replaced by an asymmetric crown: a dominant horn summit (897 m), the Skar notch, a lower Tarntind and a Vesttind shoulder. From the north, two dark lee-cirque bowls under clean arêtes read as genuinely glacial, and the south-east and south-west obliques show three different arms meeting at one summit. B1.1 is clearly better than both M0 and B1.0.",
+  "The acceptance is conditional, not production approval. Four geographic acceptance conditions fail and stay failed. (1) Four boundary-seam clusters exceed the declared 0.25 ha limit (largest 2.08 ha), where authored arms meet the frozen coast band 50–66 m too high, or a carved trough meets it up to 190 m too low. (2) The authored Western Col is filled: the real col is 695 m, 100 m west of the authored point, and Vesttind keeps 40 m of prominence instead of 56 m. (3) About a quarter of the new route section crosses side-slopes above 0.5, so the tread is a traverse across steep ground. (4) The last 246 m of path is a declared scramble up to 0.48.",
+  "Artistic reservations remain as well. From the two identity views the crown sits on a long smooth plinth that is outside the study area. Several broad faces are smooth or planar, like clay rather than rock. From player height on the route, the summit reads as a smooth rounded knob with one dark face, not yet as a compelling alpine climb."
  ],
+ "comparison": {
+  "resolvedFromM0": [
+   "single smooth dome replaced by an asymmetric three-top crown with a deep notch",
+   "lee cirques with headwalls and arêtes on the north and east sides",
+   "three different ridge arms instead of uniform straight crests",
+   "the R1 route traversing a featureless slope replaced by a route up a windward plateau and shoulder"
+  ],
+  "resolvedFromB1.0": [
+   "crumpled-paper faceting of the big faces (rib field weaker and longer, more smoothing)",
+   "extruded, constant-section arms, including the straight light band on the south-east oblique (flank width now varies along each ridge)",
+   "Tarntind competing with North Peak from Birchwood (lowered to 775 m; North Peak now clearly dominant)",
+   "Skar notch authored deeper (690 m) but achieved 711.9 m, only 3.9 m below B1.0 (715.8 m): a deviation, not a resolved item"
+  ],
+  "remaining": [
+   "smooth plinth below the crown in the identity views (outside the study area)",
+   "smooth or planar broad faces, with no rock bands, steps or talus",
+   "Western Col filled; Vesttind only 40 m prominent",
+   "coastal seams (artificial sea-cliff steps and a raised trough lip)",
+   "route views at player height still read as smooth clay slopes"
+  ]
+ },
  "questions": [
   [
-   "Does it finally look like a compelling Nordic mountain massif?",
-   "Partly yes. From the north, south-east and south-west obliques, and from the plateau, it reads as one glaciated massif with a horn, arêtes, cirques and buttresses. From the far identity views it reads as a convincing summit crown on a smooth hill. The lower two thirds of that view are outside the study area."
+   "North Peak silhouette from Birchwood and Central Valley",
+   "Clearly improved and recognisable: a toothed crown with a dominant horn and a deep notch replaces the dome. North Peak is the highest and most distinct top in both views. The crown occupies only the upper part of the view, above a smooth plinth."
   ],
   [
-   "Silhouette character",
-   "Much stronger: three unequal tops with a deep notch next to the summit replace a single dome. North Peak dominates after the correction. Tarntind no longer competes from Birchwood."
+   "Main summit versus secondary summits",
+   "Good after the correction: North Peak 897 m, Tarntind 775, Nordhorn 754, Vesttind 736, Austtind 700. Their shapes differ (horn, broad top, gendarme, shoulder). Vesttind is weak because its col is filled."
   ],
   [
-   "Geological coherence",
-   "Good at macro scale: the lee cirques face north and east, a broad windward fjell lies to the south-west, arms radiate from one summit, and drainage follows the new troughs. Weak at the meso scale: there are no rock bands, steps or talus, and the faces are smooth analytic planes."
+   "Structural coherence of the three arms",
+   "Coherent: all arms and buttresses connect to the summit. The west arm is broad and windward, the north arm a narrow lee arête and the south-east arm stepped. Weakest link: the Western Col."
   ],
   [
-   "Asymmetry",
-   "Yes: the west arm is broad and gentle, the north arm a narrow arête and the south-east arm stepped. The windward and lee sides are clearly different from the north and south-west."
+   "Glacial cirques, headwalls and shoulders",
+   "Convincing from the north (two cirque bowls with headwalls). Soft from the south: the hanging south cirque reads as a shallow hollow, and the troughs have no stepped floors or lips."
   ],
   [
-   "Natural ridge connections",
-   "Arms and buttresses connect to the summit and to each other; nothing is a disconnected patch. One weak connection is the Western Col, which is filled."
+   "Transitions to the surrounding landscape",
+   "Mostly smooth, but four seams fail the declared limit, mainly at the coast. Visible as cut ledges or artificial sea cliffs in the elevated obliques."
   ],
   [
-   "Convincing glacial erosion",
-   "Convincing from the north, where two cirque bowls read clearly. From the south the hanging cirque is visible only as a soft hollow, and the troughs have no stepped floors or lips yet."
+   "Smooth or faceted surfaces",
+   "B1.0's crumpled faceting is resolved. Broad faces are now often too smooth, and some flanks show planar triangles in raking light (south-west oblique). There is no meso-scale rock structure yet."
   ],
   [
-   "Procedural repetition",
-   "No repeated cones or parallel scratches. The risk that remains is planar facets from the flank function in raking light."
+   "Both lighting conditions",
+   "Consistent: the massif reads under clay A (low WNW) and clay B (SE). Clay A shows the north cirques and planar facets most strongly."
   ],
   [
-   "Spatial depth from player height",
-   "Better: from the Vestfjell plateau and the route shoulder the summit rises as a horn behind real foreground relief. From Birchwood and the Central Valley the depth is limited by the unchanged plinth."
-  ],
-  [
-   "Hiking appeal",
-   "The candidate route climbs the windward fjell and a south-west shoulder to the summit with views into the lee cirques. It is walkable end to end; the last 140 m are a declared steep summit scramble."
-  ],
-  [
-   "Consistency across directions",
-   "Consistent: the same massif reads from every direction, and each side has its own character."
+   "Hiking experience",
+   "More compelling than R1 on paper: a plateau approach, a shoulder and a summit scramble with views into the lee cirques. At player height the views are smooth slopes, and a quarter of the new section is steep side-slope. Controller traversal works, but it does not prove a comfortable or convincing hike."
   ]
  ],
+ "defects": [
+  {
+   "id": "D1",
+   "severity": "geographic failure",
+   "title": "Coastal boundary seams",
+   "evidence": "validation/b1.1-final.json A_seams: 4 clusters over 0.25 ha (2.08, 1.71, 0.88, 0.79 ha)",
+   "where": [
+    [
+     -1460,
+     2687
+    ],
+    [
+     -997,
+     2953
+    ],
+    [
+     -1117,
+     2093
+    ],
+    [
+     -73,
+     3180
+    ]
+   ],
+   "cause": "Two mechanisms. (1) Too high: the west arm (nw-cape end) and the Vesttind north buttress are still 50-66 m above R1 (locally up to 140 m) where the blend weight falls to 0 at the frozen coast band (coastFreezeM 70 m, coastFeatherM 160 m), so the difference is absorbed in a ~160 m strip and the slope doubles (about 2.5 against R1 1.3-1.6). (2) Too low: at the north-arm headland the carved north cirque and its trough end up to 190 m below R1 just inside the coast feather, so B1 steps up into the frozen R1 cliff. A smaller cluster lies beside the protected windward-gully corridor, where the fjell flank meets the corridor fade.",
+   "b2": "Make the coast an authored boundary condition, not a freeze: give every arm a declared terminal profile that reaches R1 coast heights at the coast band (for example an end-cap level ramp tied to the R1 value at distance 70 m), let cirque troughs exit through authored coastal notches or hang above the R1 cliff with a declared lip, and widen protected-corridor fades to the local relief. Re-run the same seam criterion unchanged."
+  },
+  {
+   "id": "D2",
+   "severity": "design deviation",
+   "title": "Western Col filled, Vesttind prominence 40 m instead of 56 m",
+   "evidence": "validation/b1.1-final.json B_westernCol",
+   "where": [
+    [
+     -873,
+     2673
+    ]
+   ],
+   "cause": "At the authored col point the highest authored part is not the west arm (666 m, as designed) but the south-east arm (726 m): that arm starts at the summit, and its radial end cap behind the summit (end taper 160 m, then a 0.9 fall) still stands 726 m high 250 m west of S0. The smooth-max union keeps it, so the col point is filled to about 729 m. The real low point of the S0-S1 crest moves 100 m west to the arm-west/plateau junction, where the Vestfjell plateau shoulder holds it at 695 m. Vesttind keeps 40 m of prominence instead of the authored 56 m.",
+   "effects": {
+    "summitHierarchy": "Vesttind reads as the end of the west shoulder rather than a third summit",
+    "passReadability": "from Birchwood the col is a shallow dip, not a pass",
+    "silhouette": "the left side of the crown is a gentle ramp, which weakens the asymmetry the design intended",
+    "walking": "the candidate route passes 34 m from the col point; a deeper col would give a natural pass for a west-arm traverse, but would need a regraded route",
+    "drainage": "both sides of the col drain directly to the sea, so lowering the col would not move a watershed outlet"
+   },
+   "b2": "End the south-east arm at the summit (no end cap behind it) or clip its end cap to the summit block, and start the Vestfjell plateau shoulder 150–200 m from the col; check that the col falls to 660–670 m and Vesttind regains about 55 m of prominence."
+  },
+  {
+   "id": "D3",
+   "severity": "walking-quality risk",
+   "title": "Steep side-slopes and summit scramble on the candidate route",
+   "evidence": "validation/b1.1-final.json D_route; validation/traversal.json",
+   "facts": {
+    "newSectionShareCrossSlopeOver0.5": 0.257,
+    "newSectionShareCrossSlopeOver1.0": 0.042,
+    "usableTreadBelow2mShare": 0.249,
+    "over30PctOutsideScrambleM": 38,
+    "scrambleLengthM": 246,
+    "scrambleMaxGrade": 0.475
+   },
+   "b2": "Author a trail bench (a narrow terrace cut and fill) along the traverses, or reroute the upper section along the south-west shoulder crest. Decide explicitly whether the summit scramble is an intended hiking feature."
+  },
+  {
+   "id": "D4",
+   "severity": "representation gap",
+   "title": "Dry tarn-site hollow",
+   "evidence": "validation/b1.1-final.json C_hydrology.dryHollows",
+   "where": [
+    [
+     187,
+     2311
+    ]
+   ],
+   "cause": "a closed hollow between the south-east arm and the High Tarn rim, conditioned by the epsilon flood to an outward-draining floor (drains to the main river system)",
+   "b2": "either author it as a tarn with a water-surface variant, or open its outlet in the design"
+  },
+  {
+   "id": "D5",
+   "severity": "artistic",
+   "title": "Smooth plinth outside the study area in the identity views",
+   "evidence": "captures a1a-birchwood, a1a-valley-shoulder",
+   "b2": "separately authorised extension of the study area south to about z 1300"
+  },
+  {
+   "id": "D6",
+   "severity": "artistic",
+   "title": "Smooth or planar faces, no meso-scale rock structure",
+   "evidence": "captures b01-oblique-sw, a1a-oblique-se, b01-route-b11",
+   "b2": "rock bands and headwall steps, stepped trough floors and lips, talus aprons, driven by slope and the authored structures"
+  },
+  {
+   "id": "D7",
+   "severity": "evidence note",
+   "title": "Vestfjell camera is an off-route viewpoint",
+   "evidence": "tools/geo-r02c-b01/cameras.json b01-route-fjell (132 m from the B1.1 route)",
+   "b2": "an on-route camera, b01-route-b11, was added and captured for M0 and B1.1"
+  }
+ ],
+ "drainageClassification": {
+  "acceptable authored change": "drainage reassignment inside the study area following the new cirques and troughs (the north-coast and central-trough catchments gain, High Tarn loses about 7 ha of its west slope)",
+  "defect": "none found for sinks or unresolved flow; one dry tarn-site hollow is a representation gap (no water-surface variant), not a drainage failure"
+ },
+ "suitableAsB2StartingPoint": "Yes. Protect the summit block, the three-arm layout, the Skar notch, the north and east cirques and the summit hierarchy. B2 should correct the boundary, the col, the route tread and the meso-scale surface, not redesign the massif.",
+ "b2Recommendation": [
+  "GEO-R02C-B2 — Massif Integration & Geographic Refinement, scoped to the defect register only.",
+  "1. Coast as an authored boundary condition (D1): terminal profiles for every arm reaching R1 coast heights, cirque troughs ending in authored coastal notches or hanging lips, wider corridor fades. Same 0.25 ha seam limit.",
+  "2. Western Col and Vesttind (D2): remove the south-east arm's end cap behind the summit and move the plateau shoulder away from the col. Target col 660–670 m and Vesttind prominence of about 55 m.",
+  "3. Drainage (D4): decide tarn or outlet for the one hollow; if tarns are kept, add a water-surface variant and re-validate lake levels.",
+  "4. Route (D3): a trail bench along the steep traverses, or a crest alignment on the south-west shoulder. Make the summit scramble an explicit design decision.",
+  "5. Integration (D5, D6): with separate authorisation, extend the study area over the southern plinth, then add one meso-scale rock layer. Keep the B1.1 summit silhouette locked by a skyline regression test from Birchwood and the Central Valley shoulder."
+ ],
  "authorityChanges": [
-  "New derived design master tools/geo-r02c-b01/design/north-massif-b1.json (revision B1.1; B1.0 kept in docs/geo-r02c-b01/iteration/) supersedes the A-R1 North massif ridges n-main (west of x 260), n-crown, n-west-spur (north of z 1900), n-nw-cape (east of x −1330) and n-east-arc (west of x 430) inside the study area only. The A-R1 master itself is unchanged.",
-  "Summit hierarchy re-authored: North Peak ≈ 900 m kept at its approved position; new Tarntind (768), Vesttind (724), Nordhorn (738) and Austtind (700); saddles N1–N4.",
-  "Crest sections lowered below their R1 levels (Skar notch −98 m, North gap −102 m) and secondary summits raised above R1 (Tarntind +81 m, Vesttind +100 m).",
-  "Four cirques and outlet troughs carved (down to −195 m); the lowland envelope lowered inside the massif core and tapered to zero at the coast, the south and east edges.",
+  "New derived design master tools/geo-r02c-b01/design/north-massif-b1.json (B1.1; B1.0 kept in docs/geo-r02c-b01/iteration/). It supersedes, inside the study area only, the A-R1 ridges n-main (west of x 260), n-crown, n-west-spur (north of z 1900), n-nw-cape (east of x −1330) and n-east-arc (west of x 430). The A-R1 master file is unchanged (62cb154b…).",
+  "Summit hierarchy re-authored: North Peak ≈ 900 m at its approved position; Tarntind, Vesttind, Nordhorn and Austtind; saddles N1–N4.",
+  "Crest sections lowered below R1 (Skar notch −98 m, North gap −102 m); secondary summits raised above R1 (Tarntind +81 m, Vesttind +100 m).",
+  "Four cirques with outlet troughs carved (down to −195 m); the lowland envelope lowered in the massif core, tapering to zero at the coast and at the south and east edges.",
   "Drainage regenerated inside the study area: 17.6 ha change destination; High Tarn catchment 102.3 → 95.3 ha. Lake, level, shore and inlet channels are untouched.",
-  "Peak-ascent realigned (candidate) from where it enters the edited terrain; the R1 alignment is kept as reference. The candidate includes a declared summit scramble above the 0.30 grade target."
+  "Peak-ascent candidate realignment from where the route enters the edited terrain; the R1 alignment is kept as reference (peak-ascent-r1). Includes a declared summit scramble above the 0.30 grade target."
  ],
  "limitations": [
   "Clay renders only; no vegetation, rock material, snow or atmosphere.",
-  "The study area excludes the long southern plinth seen from Birchwood and the Central Valley, so the identity views change only in their upper part.",
-  "Heightfield on a 4 m grid: vertical cliffs and overhangs are not possible, and arêtes are limited to about 8 m width after smoothing.",
-  "Two conditioned cirque/trough hollows (0.4 ha, 6.6 m) are dry tarn sites: the water surface is not regenerated in B1.",
-  "Boundary seam: where the west arm and the Vesttind north buttress meet the 70 m coast freeze, B1 is 50–66 m above R1, so the slope steepens to about 2.5 over 2.1 + 1.7 ha. The fix is to end those arm levels before the coast band.",
-  "The Vestfjell camera was placed on the B1.0 route; the corrected B1.1 route passes 132 m to the east."
- ],
- "recommendation": [
-  "Keep B1.1 as the new baseline direction. The method (an authored design master generating the regional heightfield, with explicit boundary conditions and regenerated drainage) works, and the forms finally read from the player viewpoints. Do not return to corrective overlays on R1.",
-  "Smallest practical route to an art-approved North Peak, in order. (1) Extend the study area south over the plinth below the massif, to about z 1300, so the identity views gain the foreground shoulders and valley head. This needs a separate authorization, because it reaches the Cairn approaches. (2) Add one meso-scale layer: rock bands and steps on the headwalls, stepped trough floors with lips, and talus aprons, driven by slope and the authored structures, not noise. (3) Fix the two coast-band seams and open the Western Col. (4) Regenerate the water surface for two or three cirque tarns. Then repeat one independent art review on the same cameras."
+  "The study area excludes the southern plinth seen from Birchwood and the Central Valley.",
+  "Heightfield on a 4 m grid: no overhangs, and arêtes about 8 m wide after smoothing.",
+  "No water-surface variant: the one tarn-site hollow is rendered dry.",
+  "The route checks are geometric (grade, cross-slope, tread) plus the controller's step rule; they do not establish comfort or the feel of the climb.",
+  "B1.0 frames exist for the 12 original cameras; the on-route camera b01-route-b11 was added afterwards and has M0 and B1.1 frames only."
  ]
 }

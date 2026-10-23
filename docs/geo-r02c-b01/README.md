@@ -10,14 +10,29 @@ Branch `feature/geo-r02c-b01-north-massif-rebaseline`, created from the verified
 | Earlier milestone branches | Untouched |
 | Merge or deployment | None |
 
-**Verdict:**
-- **B1.1 shows significant artistic progress and is the first candidate that reads as a mountain massif.** It is not yet art-approved.
-- **Why it is not approved:**
-  - From the identity views, the new crown sits on the unchanged smooth plinth.
-  - Some faces show planar facets.
-  - The Western Col is filled.
-  - Two arm ends make short artificial sea-cliff steps at the coast band.
-- **Supporting files:** `review.html` (self-contained) and `art-notes.json`.
+## Final status (GEO-R02C-B1.1 validation, geometry frozen)
+
+**Verdict: ART CONDITIONAL — GEOGRAPHIC CORRECTION REQUIRED.** B1.1 is the first candidate that reads as a mountain massif and is the protected artistic starting point for B2. It is not production-approved. No geometry has changed since `41ddafb`; this checkpoint adds only validation, evidence and documentation.
+
+| Check | Result |
+|---|---|
+| Two independent B1.1 generations (clean clone) and an in-memory recomposition | identical to the committed patch, manifest and routes |
+| B1.0 | regenerated from its preserved design to the same terrain SHA (`9af6040d…`); patch preserved in `iteration/b1.0.patch.f32` |
+| R1 terrain, A-R1 master, earlier milestone files, existing tests | unchanged |
+| Outside the study area, coast band, water, High Tarn + 150 m, corridors, other routes | unchanged |
+| Tests / build | 58/58 (50 existing unmodified + 8 new) / pass |
+| Browser traversal (`walkRouteForTest` in the viewer on `?terrain=b01-b1`) | candidate peak-ascent and all other routes walk end to end; the R1 alignment is blocked at point 2000; rendered and canonical surface identical along the route |
+| **Boundary seams ≤ 0.25 ha** | **FAIL**: 4 clusters (2.08, 1.71, 0.88, 0.79 ha) |
+| **Western Col 668 m** | **FAIL**: the real col is 695 m, 100 m west of the authored point, which is 729 m; Vesttind has 40 m prominence instead of 56 m |
+| **Route grade ≤ 0.30 outside the scramble** | **FAIL**: 38 m above, max 0.43; summit scramble 246 m of path, max 0.475 |
+| **Tread** | **FAIL**: 25.7 % of the new section has cross-slope above 0.5 |
+| Device performance | unverified |
+
+All failures are listed in the known-defect register (`art-notes.json` → `defects`, and section 9 of `review.html`), each with a recommended B2 correction. Thresholds were not changed.
+
+Validation files: `validation/b1.json` (first run), `validation/b1.1-final.json` (seams, col, hydrology detail, route geometry) and `validation/traversal.json` (genuine browser traversal). `data/design-changes-b1.0-to-b1.1.json` lists the one correction field by field. `data/checksums.json` holds SHA-256 checksums of all 148 B01 files plus the protected canonical inputs.
+
+**Cameras.** `b01-route-fjell` is labelled as an **off-route viewpoint**, 132 m west of the B1.1 route, because it was placed on the B1.0 alignment. `b01-route-b11` was added on the actual B1.1 route (point 2124) and captured for M0 and B1.1 under both presets.
 
 ## Method
 
@@ -51,7 +66,7 @@ The viewer loads B1 as an opt-in variant, `?terrain=b01-b1` (`&cams=b01` adds th
 | Changed area | 327.2 ha (190.8 ha raised and 84.3 ha lowered by more than 1 m), all inside the study area |
 | Extremes | +155.5 m / −195.3 m |
 | Summit | 897.0 m at (−520, 2772), 2 m from the approved position; island maximum |
-| Hierarchy | Tarntind 774.7, Vesttind 735.8, Nordhorn 754.0, Austtind 700.2; Skar notch 711.9 (R1 809.8), North gap 759.5 (R1 861.2), Tarn col 625.4, Western Col 728.8 (authored 668: filled, known defect) |
+| Hierarchy | Tarntind 774.7, Vesttind 735.8, Nordhorn 754.0, Austtind 700.2; Skar notch 711.9 (R1 809.8), North gap 759.5 (R1 861.2), Tarn col 625.4; Western Col 728.8 at the authored point, real col 695.3 m 100 m further west (authored 668: known defect D2) |
 | Skyline from Birchwood | max shift 33.9 px, 25.1° of width over 3 px (A1c S1: 4.2 px) |
 | Skyline from the Central Valley shoulder | 29.2 px, 20.4° (A1c S1: 2.7 px) |
 
@@ -78,7 +93,7 @@ The viewer loads B1 as an opt-in variant, `?terrain=b01-b1` (`&cams=b01` adds th
 - The candidate shares its first 1,074 points with R1 and is 2,795 m long in total.
 - It passes the walk-test emulation (0.65 m steps, grade ≤ 0.7) end to end.
 - Hiking grade (10 m): p95 0.294, and 1.5 % of the route is above 0.30.
-- A declared summit scramble covers the last 140 m, with a maximum of 0.475.
+- A declared summit scramble lies within 140 m of the summit: 246 m of switchback path, median 0.36, maximum 0.475.
 
 ### Boundary
 
@@ -96,13 +111,13 @@ The largest cluster where B1 adds steepness over R1 in the blend band is 2.1 ha,
 | Path | Contents |
 |---|---|
 | `images/design-plan.png`, `images/target-*.svg` | **B0 design targets**: authored intent, not terrain |
-| `captures/b01-m0`, `captures/b01-b1.0`, `captures/b01-b1` | 72 real Three.js frames: 12 identical cameras × clay sun A/B; manifests carry each frame's terrain SHA |
+| `captures/b01-m0`, `captures/b01-b1.0`, `captures/b01-b1` | 76 real Three.js frames: 12 identical cameras × clay sun A/B for M0, B1.0 and B1.1, plus the on-route camera for M0 and B1.1; manifests carry each frame's terrain SHA |
 | `images/compare-*.jpg` | Matched M0 \| B1.0 \| B1.1 sheets |
 | `images/maps-b1.png`, `images/sections-b1.svg`, `images/skyline-b1-*.svg`, `images/streams-b1.png` | Measured geometry, skylines and streams |
 | `validation/b1.json` | Independent validation |
 | `data/skylines.json` | Measured skyline shifts |
 | `run-log.json` | Iterations, environment, tests and build |
-| `iteration/` | The B1.0 design and manifest |
+| `iteration/` | The B1.0 design, manifest and patch |
 
 ## Reproduce
 
@@ -113,7 +128,9 @@ python3 tools/geo-r02c-b01/evidence.py              # figures and data/skylines.
 npx vite --port 4341 &                              # viewer: /geo-r02b.html?terrain=b01-b1&cams=b01&presets=a1a
 node tools/geo-r02c-b01/capture.mjs --url http://127.0.0.1:4341/geo-r02b.html --out docs/geo-r02c-b01/captures \
   --variants b01-m0,b01-b1 --modes clayA,clayB --views a1a-birchwood,a1a-valley-shoulder,a1a-tarn-overlook,a1c-tarn-east,a1a-approach-mid,a1a-approach-upper,b01-route-fjell,b01-route-shoulder,a1a-oblique-se,a1a-oblique-n,b01-oblique-sw,a1c-west-coast
-python3 tools/geo-r02c-b01/compare.py && python3 tools/geo-r02c-b01/build_review.py
+python3 tools/geo-r02c-b01/final_checks.py         # validation/b1.1-final.json
+node tools/geo-r02c-b01/traverse.mjs --url http://127.0.0.1:4341/geo-r02b.html
+python3 tools/geo-r02c-b01/compare.py && python3 tools/geo-r02c-b01/checksums.py && python3 tools/geo-r02c-b01/build_review.py
 npm test && npm run build
 ```
 
