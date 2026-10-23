@@ -64,9 +64,10 @@ export class WoodlandCompositionSink implements ChunkSink{
   setEnabled(value:boolean){
     if(this.enabled===value)return;this.enabled=value;
     for(const [key,source] of this.originals){
-      this.sink.detach(key);
       const c=composeChunk(source,value,this.forestX,this.forestZ);
-      this.sink.attach(c.chunk);this.rendered.set(key,c.chunk);
+      // Keep unchanged chunks and GPU render pages: the pilot should rebuild only affected locations.
+      if(this.rendered.get(key)===c.chunk)continue;
+      this.sink.detach(key);this.sink.attach(c.chunk);this.rendered.set(key,c.chunk);
     }
   }
   snapshot(){
