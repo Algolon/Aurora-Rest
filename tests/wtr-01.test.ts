@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import * as THREE from 'three';
+import {createWaterShader} from '../src/wtr-01/material.ts';
 import {createHash} from 'node:crypto';
 import {PALETTE,WATER_TYPES,AVAILABLE_FIELDS,PROPOSED_FIELDS,
   pointInRing,classifyCanonicalWaterMesh,renderQualityDetail,type LakeBoundary
@@ -60,4 +62,22 @@ test('canonical R1 High Tarn level and water mesh remain the audited source',()=
   assert.equal(result.triangles,111855);
   assert.ok(result.counts.highTarn>0,'actual R1 High Tarn triangles must appear in the review material');
   assert.equal(result.counts.highTarn+result.counts.lowerLake+result.counts.channel,result.triangles);
+});
+
+test('WTR-01 custom shader includes all Three.js fog and logarithmic-depth dependencies',()=>{
+  for(const quality of ['low','medium','high'] as const){
+    const shader=createWaterShader(quality,new THREE.Vector3(0,1,0));
+    assert.equal(shader.fog,true);
+    for(const uniform of ['fogColor','fogNear','fogFar','fogDensity','uTime','uSunDirection']){
+      assert.ok(shader.uniforms[uniform]&&'value' in shader.uniforms[uniform],quality+': missing '+uniform);
+    }
+    for(const chunk of [
+      'logdepthbuf_pars_vertex','logdepthbuf_vertex',
+      'logdepthbuf_pars_fragment','logdepthbuf_fragment',
+      'fog_pars_vertex','fog_vertex','fog_pars_fragment','fog_fragment'
+    ]){
+      assert.ok((shader.vertexShader+shader.fragmentShader).includes('#include <'+chunk+'>'),quality+': missing '+chunk);
+    }
+    shader.dispose();
+  }
 });
