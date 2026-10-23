@@ -57,7 +57,7 @@ function originalBox():Panel[]{
  ];
 }
 function clip(panel:Panel,plane:Plane):{panel:Panel|null;cut:V3[]}{
- const [nx,ny,nz,d]=plane,out:V3[]=[],cut:V3[],v=panel.vertices;
+ const [nx,ny,nz,d]=plane,out:V3[]=[],cut:V3[]=[],v=panel.vertices;
  for(let i=0;i<v.length;i++){
   const a=v[i],b=v[(i+1)%v.length];
   const da=nx*a[0]+ny*a[1]+nz*a[2]-d,db=nx*b[0]+ny*b[1]+nz*b[2]-d;
