@@ -9,7 +9,7 @@ import {readFileSync} from 'node:fs';
 const base=process.env.WTR_URL??'http://127.0.0.1:4173/wtr-01.html';
 const folder=process.env.WTR_OUTPUT??'docs/wtr-01/captures';
 await mkdir(folder,{recursive:true});
-const browser=await chromium.launch({headless:true});
+const browser=await chromium.launch({headless:true,args:['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const page=await browser.newPage({viewport:{width:1600,height:900},deviceScaleFactor:1});
 const errors=[],warnings=[];
 page.on('pageerror',e=>errors.push('pageerror: '+e.message));
@@ -17,7 +17,7 @@ page.on('console',m=>{if(m.type()==='error')errors.push(m.text());if(m.type()===
 const frames=[];
 try{
   await page.goto(base,{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>window.__auroraWTR01?.ready,{timeout:120000});
+  await page.waitForFunction(()=>window.__auroraWTR01?.ready,null,{timeout:120000});
   const views=await page.evaluate(()=>window.__auroraWTR01.views);
   await page.addStyleTag({content:'#ui,#loading{display:none!important}'});
   async function capture(id,quality,timeSec,sun='B'){
@@ -32,8 +32,16 @@ try{
     const image=await page.screenshot({path:`${folder}/${file}`});
     frames.push({file,view:id,quality,timeSec,sun,sha256:createHash('sha256').update(image).digest('hex'),state});
   }
-  for(const v of views)for(const q of ['baseline','low','medium','high'])await capture(v.id,q,0);
-  for(const v of ['home-shore','wind-shore','tarn-shore'])for(const t of [1.5,3])await capture(v,'high',t);
+  if(process.argv.includes('--smoke')){
+    await capture('home-shore','baseline',0);
+    await capture('home-shore','high',0);
+    await capture('wind-shore','high',0);
+    await capture('tarn-shore','high',0);
+    await capture('tarn-shore','high',1.5);
+  }else{
+    for(const v of views)for(const q of ['baseline','low','medium','high'])await capture(v.id,q,0);
+    for(const v of ['home-shore','wind-shore','tarn-shore'])for(const t of [1.5,3])await capture(v,'high',t);
+  }
   if(process.argv.includes('--two-suns'))for(const v of views)await capture(v.id,'high',0,'A');
   if(errors.length)throw new Error('Browser / shader errors: '+errors.join(' | '));
   await writeFile(folder+'/manifest.json',JSON.stringify({
