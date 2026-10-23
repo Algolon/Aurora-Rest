@@ -1,5 +1,8 @@
 import * as THREE from 'three';
 import {PALETTE,WATER_TYPES,renderQualityDetail,type Quality,type WaterType} from './config.ts';
+export type WaveStudy = 'original'|'A'|'B'|'C';
+export const WAVE_STUDIES:readonly WaveStudy[]=['original','A','B','C'];
+export function waveStudyId(study:WaveStudy):number { const n=WAVE_STUDIES.indexOf(study); if(n<0)throw new Error('Unknown wave study '+study); return n; }
 
 /**
  * WTR-01 reusable opaque stylized-water shader: no refraction buffer, no SSR,
@@ -25,6 +28,7 @@ void main(){
 const FRAGMENT = `
 precision highp float;
 uniform float uTime;
+uniform float uStudy;
 uniform float uShowLakesOnly;
 uniform vec3 uSunDirection;
 uniform vec3 uBase[4];
@@ -58,13 +62,50 @@ void main(){
   vec2 dir=normalize(wind);
   vec2 grad=vec2(0.0);
   #if WATER_DETAIL > 0
-    float p=dot(vWaterWorld.xz,dir)*surface.x+uTime*surface.y;
-    float q=dot(vWaterWorld.xz,vec2(-dir.y,dir.x)*0.88+dir*0.38)*surface.x*1.61-uTime*surface.y*0.73;
-    grad=surface.z*(cos(p)*dir+0.44*cos(q)*(vec2(-dir.y,dir.x)*0.88+dir*0.38));
-    #if WATER_DETAIL > 1
-      float r=dot(vWaterWorld.xz,vec2(dir.y,-dir.x))*surface.x*2.42+uTime*surface.y*1.27;
-      grad += surface.z*0.18*cos(r)*vec2(dir.y,-dir.x);
-    #endif
+    if(uStudy < 0.5){
+      // Protected WTR-01R original formulation, for *matched* visual baselines.
+      float p=dot(vWaterWorld.xz,dir)*surface.x+uTime*surface.y;
+      float q=dot(vWaterWorld.xz,vec2(-dir.y,dir.x)*0.88+dir*0.38)*surface.x*1.61-uTime*surface.y*0.73;
+      grad=surface.z*(cos(p)*dir+0.44*cos(q)*(vec2(-dir.y,dir.x)*0.88+dir*0.38));
+      #if WATER_DETAIL > 1
+        float r=dot(vWaterWorld.xz,vec2(dir.y,-dir.x))*surface.x*2.42+uTime*surface.y*1.27;
+        grad += surface.z*0.18*cos(r)*vec2(dir.y,-dir.x);
+      #endif
+    } else if(uStudy < 1.5){
+      // A: conservative frequency and amplitude rebalancing; no domain warp.
+      vec2 side=vec2(-dir.y,dir.x);
+      float p=dot(vWaterWorld.xz,dir)*surface.x*.73+uTime*surface.y*.83;
+      float q=dot(vWaterWorld.xz,normalize(dir*.78+side*.62))*surface.x*1.12-uTime*surface.y*.64+1.27;
+      grad=surface.z*(.58*cos(p)*dir+.19*cos(q)*normalize(dir*.78+side*.62));
+      #if WATER_DETAIL > 1
+        float r=dot(vWaterWorld.xz,normalize(dir*.48-side*.88))*surface.x*1.83+uTime*surface.y*.58+2.09;
+        grad+=surface.z*.085*cos(r)*normalize(dir*.48-side*.88);
+      #endif
+    } else {
+      // B: gentle, non-stochastic low-frequency directional variation.
+      // C: same waves, with independent screen-space damping per component.
+      vec2 side=vec2(-dir.y,dir.x);
+      float drift=.19*sin(dot(vWaterWorld.xz,vec2(.0026,.0014))+.4)
+                 +.08*sin(dot(vWaterWorld.xz,vec2(-.0018,.0031))-1.3);
+      vec2 primary=normalize(dir+drift*side);
+      vec2 secondary=normalize(dir*.63+side*.78);
+      float p=dot(vWaterWorld.xz,primary)*surface.x*.39+uTime*surface.y*.53;
+      float q=dot(vWaterWorld.xz,secondary)*surface.x*1.13-uTime*surface.y*.81+1.83;
+      float a=1.0, b=1.0, c=1.0;
+      if(uStudy > 2.5){
+        // Phase footprint in screen pixels; suppress subpixel ripple detail.
+        // Derivatives available in WebGL2 and Three.js WebGL1 with derivatives.
+        a=1.0-smoothstep(.90,2.65,fwidth(p));
+        b=1.0-smoothstep(.90,2.65,fwidth(q));
+      }
+      grad=surface.z*(.43*a*cos(p)*primary+.21*b*cos(q)*secondary);
+      #if WATER_DETAIL > 1
+        vec2 tertiary=normalize(dir*.47-side*.88);
+        float r=dot(vWaterWorld.xz,tertiary)*surface.x*2.03+uTime*surface.y*1.01+2.37;
+        if(uStudy>2.5)c=1.0-smoothstep(.90,2.65,fwidth(r));
+        grad+=surface.z*.072*c*cos(r)*tertiary;
+      #endif
+    }
   #endif
   vec3 normal=normalize(vec3(-grad.x,1.0,-grad.y));
   vec3 eye=normalize(cameraPosition-vWaterWorld);
@@ -86,7 +127,7 @@ void main(){
 }`;
 
 function styles<T>(f:(type:WaterType)=>T):T[]{return WATER_TYPES.map(f);}
-export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3):THREE.ShaderMaterial {
+export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3,study:WaveStudy='original'):THREE.ShaderMaterial {
   const material=new THREE.ShaderMaterial({
     name:'Aurora WTR-01 '+quality,
     vertexShader:VERTEX, fragmentShader:FRAGMENT,
@@ -98,6 +139,7 @@ export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3):TH
     uniforms:{
       ...THREE.UniformsUtils.clone(THREE.UniformsLib.fog),
       uTime:{value:0},
+      uStudy:{value:waveStudyId(study)},
       uShowLakesOnly:{value:0},
       uSunDirection:{value:sunDirection.clone().normalize()},
       uBase:{value:styles(k=>new THREE.Color(PALETTE[k].base))},
