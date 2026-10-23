@@ -1,4 +1,4 @@
-name: WTR-01A Wave Calibration Study (no deployment)
+name: WTR-01A Selected Nordic Water Review (no deployment)
 on:
   push:
     branches: [art/wtr-01a-nordic-water-calibration]
@@ -23,16 +23,16 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npx playwright install chromium
-      - name: Real Chromium WebGL wave studies
+      - name: Real Chromium WebGL final-vs-WTR-01R matched review
         shell: bash
         run: |
           npm run preview -- --host 127.0.0.1 --port 4173 --strictPort > /tmp/wtr-01a-preview.log 2>&1 &
           for n in $(seq 1 40); do if curl --fail --silent http://127.0.0.1:4173/wtr-01.html >/dev/null; then break; fi; sleep 1; done
-          WTR_OUTPUT=docs/wtr-01a/study-captures node tools/wtr-01a/capture.mjs
+          WTR_OUTPUT=docs/wtr-01a/study-captures node tools/wtr-01a/capture.mjs --final
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: WTR-01A1-genuine-WebGL-study
+          name: WTR-01A-final-genuine-WebGL-review
           path: docs/wtr-01a/study-captures/
           if-no-files-found: warn
           retention-days: 20
