@@ -22,9 +22,9 @@ try{
  await p.goto(url);
  const settled=async()=>{await p.waitForFunction(()=>window.__pop02Failure||window.__pop02?.snapshot().ready);assert.equal(await p.evaluate(()=>window.__pop02Failure),undefined);await p.evaluate(()=>window.__pop02.pause(true));};
  await settled();await p.locator('#ground').selectOption('material');
- const geom=sha(JSON.stringify(await p.evaluate(()=>window.__pop02.groundArrays())));
  for(const id of ['forest-edge','forest-interior','forest-landscape']){
   await p.evaluate(id=>{window.__pop02.setView(id);window.__pop02.pause(false);},id);await settled();
+  const geom=sha(JSON.stringify(await p.evaluate(()=>window.__pop02.groundArrays())));
   await p.locator('#pilot').uncheck();await p.evaluate(()=>window.__pop02.renderOnce());
   const baseline=await p.evaluate(()=>window.__pop02.capture()),before=await p.evaluate(()=>window.__pop02.snapshot()),ids=await p.evaluate(()=>window.__pop02.ids());
   await writeFile(out+'/'+id+'-a-canonical.png',Buffer.from(baseline.split(',')[1],'base64'));
