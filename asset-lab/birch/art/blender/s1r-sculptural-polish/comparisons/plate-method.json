@@ -1,0 +1,16 @@
+{
+  "method": "Side-by-side composition of unaltered actual Blender PNGs; 1000x820 pixels per panel; no crop, rotation or rescale; labels only added above",
+  "views": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "threequarter-front",
+    "threequarter-rear",
+    "top",
+    "human-height",
+    "front-closeup",
+    "left-closeup",
+    "rear-closeup"
+  ]
+}

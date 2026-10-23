@@ -1,0 +1,28 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "saved_collections": [
+    "01 EDITABLE \u2022 shared geological control cage",
+    "02 EXPORT \u2022 evaluated stone surface",
+    "03 REVIEW \u2022 cameras and studio only",
+    "04 REFERENCES \u2022 pinned unchanged Aurora meshes",
+    "10 S1R EDITABLE \u2022 refined original cage",
+    "11 S1R EXPORT \u2022 triangulated flat stone"
+  ],
+  "source_vertices": 39,
+  "source_polygons": 62,
+  "runtime_triangles": 96,
+  "runtime_material_slots": 1,
+  "modifiers": [],
+  "source_without_generator": true,
+  "protected_original_cage_present": true,
+  "source_max_face_nonplanarity_m": 1.0710209608078003e-07,
+  "runtime_max_face_nonplanarity_m": 1.341104507446289e-07,
+  "hashes": {
+    "aurora-rock-s1r.blend": "2aca669a6302402fdc3b4346350d6f78100bccb43a1c8e350dc2536b8ecaefd4",
+    "aurora-rock-s1r.glb": "7c4096eeeba75460e3af17fc9ccfac70f5c9ac30c17e7670d598e7c58ede7635"
+  },
+  "bytes": {
+    "aurora-rock-s1r.blend": 127537,
+    "aurora-rock-s1r.glb": 12456
+  }
+}

@@ -1,0 +1,2078 @@
+{
+  "method": "Real Chromium / Three.js WebGL2 SwiftShader / actual S1 and S1R Blender GLBs",
+  "errors": [],
+  "captures": {
+    "S1-neutral-front": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 10,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-rear": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 20,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-left": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "left"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 31,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-right": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "right"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 42,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-threequarter-front": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 53,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-threequarter-rear": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 63,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-top": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "top"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 74,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-neutral-human-height": {
+      "state": {
+        "asset": "S1",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "human-height"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 222
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 85,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-front": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 95,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-rear": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 107,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-left": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "left"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 117,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-right": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "right"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 128,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-threequarter-front": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 139,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-threequarter-rear": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 152,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-top": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "top"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 162,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-neutral-human-height": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "human-height"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 174,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-front": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 184,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-rear": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 195,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-left": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "left"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 205,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-threequarter-front": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 215,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-threequarter-rear": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-rear"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 226,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-top": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "top"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 239,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-neutral": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 251,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-T1-neutral": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "T1",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 264,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-nordic": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "nordic",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 276,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-T1-nordic": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "T1",
+        "light": "nordic",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 287,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-neutral-grazing": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "neutral",
+        "light": "grazing",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 299,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1-S1R-T1-grazing": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "S1",
+        "surface": "T1",
+        "light": "grazing",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 414
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 310,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "G1-S1R-neutral": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 498
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 321,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "G1-S1R-grazing": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "neutral",
+        "light": "grazing",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 498
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 333,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "G1-S1R-T1": {
+      "state": {
+        "asset": "S1R",
+        "mode": "compare",
+        "reference": "G1",
+        "surface": "T1",
+        "light": "nordic",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 6,
+        "triangles": 498
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 344,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-shoulder": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "shoulder"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 3,
+        "triangles": 194
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 354,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-ground": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "G1",
+        "surface": "neutral",
+        "light": "neutral",
+        "view": "ground"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 3,
+        "triangles": 194
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 364,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-wireframe": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "G1",
+        "surface": "wireframe",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 34
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 374,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "S1R-silhouette": {
+      "state": {
+        "asset": "S1R",
+        "mode": "single",
+        "reference": "G1",
+        "surface": "silhouette",
+        "light": "neutral",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 4,
+        "triangles": 226
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 384,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "aurora-nature-context": {
+      "state": {
+        "asset": "S1R",
+        "mode": "context",
+        "reference": "G1",
+        "surface": "T1",
+        "light": "nordic",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 20,
+        "triangles": 11758
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 394,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    },
+    "aurora-nature-context-wide": {
+      "state": {
+        "asset": "S1R",
+        "mode": "context-wide",
+        "reference": "G1",
+        "surface": "T1",
+        "light": "nordic",
+        "view": "threequarter-front"
+      },
+      "glb": {
+        "meshes": 1,
+        "dimensions": [
+          2.1570780277252197,
+          1.6572391986846924,
+          1.5657760500907898
+        ],
+        "min": [
+          -1.0970780849456787,
+          0,
+          -0.7799999713897705
+        ],
+        "max": [
+          1.059999942779541,
+          1.6572391986846924,
+          0.7857760787010193
+        ],
+        "vertices": 260,
+        "triangles": 96,
+        "attributes": [
+          "position",
+          "normal",
+          "uv",
+          "color"
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "renderer": {
+        "calls": 20,
+        "triangles": 11758
+      },
+      "backend": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "frames": 405,
+      "glbIdentity": "S1R target (S1 is immutable comparison)",
+      "artApproved": false,
+      "glbBytes": 12456,
+      "resources": {
+        "runtimeMeshes": 1,
+        "materialSlots": 1,
+        "ownsGeometry": true,
+        "sharedT1Factory": true
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source_pin": "17eafb0902833fb1121c77083f9f862eb4ffcd96",
+  "checks": {
+    "birch": true,
+    "scots_pine": true,
+    "grass_geometry": true,
+    "production_rock": true,
+    "grass_material_pixel_parity": true
+  },
+  "grass_material": {
+    "variants": 4,
+    "pixels_per_variant": 576000,
+    "changed_pixels": 0,
+    "max_rgb_difference": 0
+  },
+  "existing_plus_new_unit_tests": 50,
+  "source_preservation_base": "7ed1d43aa5e6577bba5238dfa53be645523c110f"
+}

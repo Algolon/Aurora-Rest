@@ -1,0 +1,67 @@
+name: ASSET-01E2R-S1R sculptural polish verification
+on:
+  push:
+    branches: [art/asset-01e2r-s1r-blender-sculptural-polish]
+  workflow_dispatch:
+jobs:
+  static-export-and-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Guard all protected S1/G1/material/nature/world sources
+        run: git diff --exit-code 7ed1d43aa5e6577bba5238dfa53be645523c110f HEAD -- src ../../src art/blender/s1-geological-sculpt rocks/s1-showroom.ts scripts/capture-rock-s1.mjs tests/rock-s1-glb.test.ts
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run build
+      - run: npx vite build --config vite.s1r.config.ts
+      - name: Actual GLBs, matched neutral/Nordic/grazing, G1 and approved nature
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-rock-s1r.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aurora-s1r-actual-glb-webgl-review
+          path: asset-lab/birch/art/blender/s1r-sculptural-polish/threejs/
+          if-no-files-found: error
+  independent-protected-nature-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - name: Materialize pinned external source as a disposable read-only test reference
+        run: |
+          git init "$RUNNER_TEMP/flw-reference"
+          git -C "$RUNNER_TEMP/flw-reference" remote add origin https://github.com/Algolon/Feh-Lu-We.git
+          git -C "$RUNNER_TEMP/flw-reference" sparse-checkout init --cone
+          git -C "$RUNNER_TEMP/flw-reference" sparse-checkout set src
+          git -C "$RUNNER_TEMP/flw-reference" fetch --depth=1 --filter=blob:none origin 17eafb0902833fb1121c77083f9f862eb4ffcd96
+          git -C "$RUNNER_TEMP/flw-reference" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/flw-reference"
+          npm install --no-audit --no-fund --package-lock=false
+      - name: Original birch, Scots pine, grass and production rock attributes/material conventions
+        run: |
+          FLW_ROOT="$RUNNER_TEMP/flw-reference" npm run test:parity
+          FLW_ROOT="$RUNNER_TEMP/flw-reference" npm run test:pine-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-reference" npm run test:grass-parity
+          FLW_ROOT="$RUNNER_TEMP/flw-reference" npm run test:rock-parity
+      - name: Independent grass material pixel parity in Chromium
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          FLW_ROOT="$RUNNER_TEMP/flw-reference" CHROME_PATH="$CHROME_PATH" npm run capture:grass-source
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aurora-s1r-protected-grass-material-parity
+          path: asset-lab/birch/grass-material-parity/
+          if-no-files-found: warn
+# Native Blender editing/rendering is validated locally; CI never claims art approval.
