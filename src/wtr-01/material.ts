@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import {PALETTE,WATER_TYPES,renderQualityDetail,type Quality,type WaterType} from './config.ts';
-export type WaveStudy = 'original'|'A'|'B'|'C';
-export const WAVE_STUDIES:readonly WaveStudy[]=['original','A','B','C'];
+import {PALETTE,NORDIC_PALETTE,WATER_TYPES,renderQualityDetail,type Quality,type WaterType} from './config.ts';
+export type WaveStudy = 'original'|'A'|'B'|'C'|'final';
+export const WAVE_STUDIES:readonly WaveStudy[]=['original','A','B','C','final'];
 export function waveStudyId(study:WaveStudy):number { const n=WAVE_STUDIES.indexOf(study); if(n<0)throw new Error('Unknown wave study '+study); return n; }
 
 /**
@@ -55,9 +55,9 @@ void main(){
   // mask around the existing R1 review camera, NOT a shore-distance field.
   if(vWaterKind < 0.5) {
     float shelter = 1.0 - smoothstep(450.0,1950.0,distance(vWaterWorld.xz,vec2(-1670.0,-1900.0)));
-    base = mix(base,vec3(0.115,0.270,0.295),shelter*0.23);
-    surface.z *= 1.0 - shelter*0.52;
-    surface.y *= 1.0 - shelter*0.35;
+    base = mix(base,vec3(0.115,0.270,0.295),shelter*(uStudy > 3.5 ? 0.31 : 0.23));
+    surface.z *= 1.0 - shelter*(uStudy > 3.5 ? 0.68 : 0.52);
+    surface.y *= 1.0 - shelter*(uStudy > 3.5 ? 0.44 : 0.35);
   }
   vec2 dir=normalize(wind);
   vec2 grad=vec2(0.0);
@@ -117,7 +117,8 @@ void main(){
   water=mix(water,sky,clamp(fresnel*optical.y,0.0,0.4));
   #if WATER_DETAIL > 0
     vec3 halfway=normalize(eye+normalize(uSunDirection));
-    float shine=pow(max(dot(normal,halfway),0.0),mix(14.0,115.0,1.0-surface.w));
+    float exponent = uStudy > 3.5 ? mix(12.0,78.0,1.0-surface.w) : mix(14.0,115.0,1.0-surface.w);
+    float shine=pow(max(dot(normal,halfway),0.0),exponent);
     water += sky*shine*optical.x;
   #endif
   gl_FragColor=vec4(water,1.0);
@@ -127,6 +128,17 @@ void main(){
 }`;
 
 function styles<T>(f:(type:WaterType)=>T):T[]{return WATER_TYPES.map(f);}
+/** Reconfigure regional palette on an existing shader; no additional GPU program. */
+export function applyWaterStudy(material:THREE.ShaderMaterial,study:WaveStudy):void {
+  const p=study==='final'?NORDIC_PALETTE:PALETTE;
+  material.uniforms.uStudy.value=waveStudyId(study);
+  material.uniforms.uBase.value=styles(k=>new THREE.Color(p[k].base));
+  material.uniforms.uDark.value=styles(k=>new THREE.Color(p[k].dark));
+  material.uniforms.uSky.value=styles(k=>new THREE.Color(p[k].sky));
+  material.uniforms.uSurface.value=styles(k=>new THREE.Vector4(p[k].frequency,p[k].speed,p[k].slope,p[k].roughness));
+  material.uniforms.uOptical.value=styles(k=>new THREE.Vector2(p[k].glint,p[k].fresnel));
+  material.uniforms.uWind.value=styles(k=>new THREE.Vector2(...p[k].wind));
+}
 export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3,study:WaveStudy='original'):THREE.ShaderMaterial {
   const material=new THREE.ShaderMaterial({
     name:'Aurora WTR-01 '+quality,
@@ -150,6 +162,7 @@ export function createWaterShader(quality:Quality,sunDirection:THREE.Vector3,stu
       uWind:{value:styles(k=>new THREE.Vector2(...PALETTE[k].wind))}
     }
   });
+  applyWaterStudy(material,study);
   return material;
 }
 export function createOceanGeometry(size=40000):THREE.PlaneGeometry {
