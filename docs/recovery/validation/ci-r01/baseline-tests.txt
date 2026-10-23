@@ -92,7 +92,7 @@ test at tests/env-p01.test.ts:8:1
 ✖ ENV preserves all POP source, nature assets and canonical geography byte for byte (65.407583ms)
   Error: Command failed: git ls-tree -r --name-only 4d562187c10e64884e2193a0b09ced6eed3b4b08 src/pop-01 src/pop-02a src/nature-library src/geo-r02b public/geo-r02b
   fatal: not a tree object
-  
+
       at genericNodeError (node:internal/errors:985:15)
       at wrappedFn (node:internal/errors:539:14)
       at checkExecSyncError (node:child_process:925:11)

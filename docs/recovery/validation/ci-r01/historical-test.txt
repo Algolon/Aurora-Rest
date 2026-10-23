@@ -10,7 +10,7 @@ not ok 1 - ENV preserves all POP source, nature assets and canonical geography b
   error: |-
     Command failed: git ls-tree -r --name-only 4d562187c10e64884e2193a0b09ced6eed3b4b08 src/pop-01 src/pop-02a src/nature-library src/geo-r02b public/geo-r02b
     fatal: not a tree object
-    
+
   code: 'ERR_TEST_FAILURE'
   stack: |-
     genericNodeError (node:internal/errors:985:15)
