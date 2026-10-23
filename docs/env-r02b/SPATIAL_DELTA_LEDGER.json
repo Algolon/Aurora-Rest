@@ -1,0 +1,110 @@
+{
+  "schema": "env-r02b/spatial-delta-ledger-v1",
+  "sourceCheckpoint": "ea40102184f406b9a7abdf4502b37d8262302b75",
+  "canonicalBaseline": "bced77ca3ca0539f7137cd9f066e6220518cf4a8",
+  "seed": 73129,
+  "source": "workflow run 40028423173 artifact 12534827645 report.json removedIds",
+  "positionDerivation": "POP-01 source generator.ts: x=(i+hash(seed,i,j,1))*7; z=(j+hash(seed,i,j,2))*7; independently recomputed in JS and Python. Coordinates reflect placement descriptor lattice, not manually positioned markers.",
+  "familyTotals": {
+    "birch": 7,
+    "pine": 1
+  },
+  "speciesPerId": "Not persisted in downloaded CI JSON; do not infer it from ID alone",
+  "views": {
+    "forestInterior": 8,
+    "forestEdge": 8,
+    "forestLandscape": 8,
+    "forestCorridor": 0
+  },
+  "originalGeometryAndDescriptors": "unchanged; filtering affects review renderer only",
+  "removed": [
+    {
+      "id": "73129:0:-100:-10",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -696.31851,
+      "zM": -63.85683,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-102:-7",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -709.14018,
+      "zM": -46.863,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-102:-8",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -712.96974,
+      "zM": -50.5816,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-102:-9",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -710.3152,
+      "zM": -58.24608,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-104:-11",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -723.08707,
+      "zM": -71.54441,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-105:-8",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -731.34475,
+      "zM": -55.52756,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-99:-10",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -690.57932,
+      "zM": -66.37744,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    },
+    {
+      "id": "73129:0:-99:-12",
+      "sourceFamily": "tree: birch/pine (species per ID not saved in CI report)",
+      "xM": -687.8622,
+      "zM": -81.0267,
+      "hiddenIn": [
+        "forest-interior",
+        "forest-edge",
+        "forest-landscape"
+      ]
+    }
+  ]
+}
