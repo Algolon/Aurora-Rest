@@ -2,10 +2,10 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-import {r04StudyGeometry} from '../src/rocks/experimental/r04MaterialStudies.ts';
-import {createRockLookdevFactory} from '../src/rocks/experimental/a2/rockTextureLookdev.ts';
-import {createBirchFamily} from '../src/index.ts';
-import {createPineFamily} from '../src/pine/index.ts';
+import {r04StudyGeometry} from '../../src/rocks/experimental/r04MaterialStudies.ts';
+import {createRockLookdevFactory} from '../../src/rocks/experimental/a2/rockTextureLookdev.ts';
+import {createBirchFamily} from '../../src/index.ts';
+import {createPineFamily} from '../../src/pine/index.ts';
 type View='front'|'rear'|'left'|'right'|'frontThreeQuarter'|'rearThreeQuarter'|'top'|'human';
 type Mode='single'|'comparison'|'context';
 type Surface='clay'|'T1';
