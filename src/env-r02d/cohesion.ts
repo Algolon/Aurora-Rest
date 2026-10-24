@@ -36,11 +36,11 @@ export function coverBank(route:readonly Point[],geo:CanonicalEnvironment):Cover
    for(let j=0;j<5;j++){
     const r=hash(i,j,side),noise=hash(i,j,side+6);
     // Alternating bank mass and gaps, no uninterrupted rows.
-    if((edgeDensity<-.22&&j>1)||r<.18)continue;
-    const distance=2.5+j*1.32+.85*(noise-.5),along=(hash(i,j,5)-.5)*3.2;
+    if((edgeDensity<.08&&j>2)||r<.24)continue;
+    const distance=3.2+j*1.8+1.8*(noise-.5),along=(hash(i,j,5)-.5)*5.2;
     const x=b[0]+nx*side*distance+vx/len*along,z=b[1]+nz*side*distance+vz/len*along;
     const s=geo.sample(x,z);if(!s.dry||s.slope>.52||s.waterDistance<3.5)continue;
-    out.push({id:'env-r02d:understory:'+i+':'+side+':'+j,x,z,radius:.65+.45*hash(i,j,8),height:.28+.25*hash(i,j,9),shade:hash(i,j,10)});
+    out.push({id:'env-r02d:understory:'+i+':'+side+':'+j,x,z,radius:.43+.27*hash(i,j,8),height:.16+.18*hash(i,j,9),shade:hash(i,j,10)});
    }
   }
  }
@@ -48,7 +48,7 @@ export function coverBank(route:readonly Point[],geo:CanonicalEnvironment):Cover
 }
 function leafGeometry(){
  const positions:number[]=[],colors:number[]=[],indices:number[]=[];
- const tint=[[.28,.40,.24],[.35,.48,.27],[.44,.53,.31],[.29,.44,.31]];
+ const tint=[[.12,.24,.13],[.18,.29,.16],[.20,.31,.18],[.13,.26,.16]];
  for(let k=0;k<11;k++){
   const angle=k*Math.PI*(3-Math.sqrt(5)),radius=.14+.19*((k%5)/4),w=.14+(k%3)*.037;
   const hx=Math.cos(angle),hz=Math.sin(angle),cx=hx*radius,cz=hz*radius;
@@ -67,17 +67,17 @@ function leafGeometry(){
 function makePath(geo:CanonicalEnvironment,route:readonly Point[]){
  const colors:number[]=[],position:number[]=[],indices:number[]=[];
  // Four-band earth path: two central shoulders plus feathering onto unchanged MAT ground.
- const bands=[-1.18,-.83,.83,1.18],alpha=[0,.81,.81,0];
+ const bands=[-.86,-.57,.57,.86],alpha=[0,.58,.58,0];
  for(let i=0;i<route.length;i++){
   const here=route[i],prev=route[Math.max(0,i-1)],next=route[Math.min(route.length-1,i+1)];
   const dx=next[0]-prev[0],dz=next[1]-prev[1],len=Math.hypot(dx,dz)||1,nx=-dz/len,nz=dx/len;
-  const taper=.94+.07*Math.sin(i*.21)+.05*Math.sin(i*.68);
+  const taper=.90+.09*Math.sin(i*.21)+.07*Math.sin(i*.68);
   for(let j=0;j<bands.length;j++){
    const x=here[0]+nx*bands[j]*taper,z=here[1]+nz*bands[j]*taper;
    const yy=geo.elevation(x,z)+.09;position.push(x,yy,z);
-   const v=.83+.07*Math.sin(i*.18+j*2.5);
+   const v=.79+.13*Math.sin(i*.24+j*2.5);
    // RGB and vertex-alpha; dirt is muted compared with green forest floor.
-   colors.push(.42*v,.39*v,.30*v,alpha[j]);
+   colors.push(.16*v,.15*v,.105*v,alpha[j]);
   }
   if(i)for(let j=0;j<bands.length-1;j++){const a=(i-1)*4+j,b=i*4+j;indices.push(a,b,a+1,a+1,b,b+1);}
  }
