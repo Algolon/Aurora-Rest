@@ -1,0 +1,29 @@
+name: ROCK-R01G Three.js-first genuine-source probe (no deployment)
+on:
+  push:
+    branches: [research/rock-r01g-threejs-natural-geometry-pilot]
+  workflow_dispatch:
+jobs:
+  natural-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Protect G1, R01, F01 and all R01E approved references
+        run: |
+          git diff --name-only 93b1278d369492bb4c25f284a280387264595d09 HEAD > /tmp/changes
+          if grep -vE '^([.]github/workflows/rock-r01g-threejs.yml|asset-lab/birch/rocks/r01g3/|asset-lab/birch/rock-r01g3.html|asset-lab/birch/vite.r01g3.config.ts|asset-lab/birch/scripts/capture-r01g3.mjs)' /tmp/changes; then
+            echo "Protected source modified"; exit 1
+          fi
+      - name: Check public CC0 model delivery formats and source provenance
+        run: python asset-lab/birch/rocks/r01g3/probe_source.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Aurora-ROCK-R01G-ThreeJS-Source-Discovery
+          path: asset-lab/birch/rocks/r01g3/probe/
+          if-no-files-found: warn
+# This is a source discovery test; modeling and deployment prohibited.
