@@ -1,0 +1,39 @@
+name: ROCK-R01G Blender-native manual sculpt starter (ART NOT APPROVED)
+on:
+  push:
+    branches: [art/rock-r01g-manual-blender-studio]
+  workflow_dispatch:
+jobs:
+  blender-studio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: Protect original R01F and older repo sources
+        run: |
+          git diff --name-only fb410ddd66dbce903807f8d10b857ace4c67a661 HEAD | tee /tmp/r01g-changes.txt
+          if grep -vE '^([.]github/workflows/rock-r01g-studio.yml|asset-lab/birch/rocks/r01g/)' /tmp/r01g-changes.txt; then echo "SCOPE FAILED"; exit 1; fi
+      - name: Install actual Blender
+        run: |
+          if command -v blender; then blender --version | head -3
+          else
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender
+          fi
+      - name: Build real native editable .blend sculpt STUDIO (placeholder only)
+        run: |
+          blender --background --python asset-lab/birch/rocks/r01g/build_blender_studio.py -- --out "$PWD/asset-lab/birch/rocks/r01g/output/ROCK-R01G-A-STUDIO-PLACEHOLDER.blend"
+      - name: Validate native .blend and eight multi-view cameras
+        run: |
+          blender --background "$PWD/asset-lab/birch/rocks/r01g/output/ROCK-R01G-A-STUDIO-PLACEHOLDER.blend" --python asset-lab/birch/rocks/r01g/verify_studio.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Aurora-ROCK-R01G-Blender-Sculpt-Studio-PLACEHOLDER-NOT-ART
+          path: |
+            asset-lab/birch/rocks/r01g/output/*.blend
+            asset-lab/birch/rocks/r01g/ROCK_R01G_WORK_ORDER.md
+            asset-lab/birch/rocks/r01g/README.md
+          if-no-files-found: warn
+# No auto-created finished boulder, no texture, no merge, no deployment.
