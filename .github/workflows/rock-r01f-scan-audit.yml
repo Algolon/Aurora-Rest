@@ -1,0 +1,31 @@
+name: ROCK-R01F natural scan feasibility and licensing audit (no deployment)
+on:
+  push:
+    branches: [research/rock-r01f-reference-to-scan-pilot]
+  workflow_dispatch:
+jobs:
+  licensed-natural-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Protect every existing R01E, R01, F01 and Aurora world file
+        run: |
+          git diff --name-only 93b1278d369492bb4c25f284a280387264595d09 HEAD | tee /tmp/rock-r01f-changed.txt
+          if grep -vE '^(\\.github/workflows/rock-r01f-scan-audit.yml|asset-lab/birch/rocks/r01f/)' /tmp/rock-r01f-changed.txt; then
+            echo "ERROR: scope protection failed"; exit 1
+          fi
+      - name: Install source review dependencies
+        run: python -m pip install --quiet "numpy>=1.26,<3" "trimesh>=4.0,<5" "matplotlib>=3.8,<4" "pygltflib>=1.16,<2" "Pillow>=10,<13"
+      - name: Download verifiable public CC0 scanned source and produce original-geometry review images
+        run: python asset-lab/birch/rocks/r01f/audit_public_scan.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Aurora-ROCK-R01F-licensed-real-scan-and-neutral-review
+          path: asset-lab/birch/rocks/r01f/evidence/
+          if-no-files-found: warn
+# Experimental provenance-only sample. No Blender sculpt claim, no world, no merge, no deployment.
