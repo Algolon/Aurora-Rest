@@ -56,17 +56,17 @@ function bilberry(variant:number){
  const r=rand(3401+variant*319),d=new Draft(),stem=palette('#53734b'),dark=palette('#516646');
  const greens=['#547c45','#6b864e','#819958','#497143'].map(palette);
  // 7-10 organic upright branched shoots emerge from a shared rhizome, not a radial paper star.
- const num=8+variant;
+ const num=11+variant;
  for(let k=0;k<num;k++){
   const a=k*2.399963+variant*.44+(r()-.5)*.35;
-  const radius=.016+.04*r(),x=Math.cos(a)*radius,z=Math.sin(a)*radius;
+  const radius=.035+.105*r(),x=Math.cos(a)*radius,z=Math.sin(a)*radius;
   const h=.215+.13*r()+variant*.013,spread=.07+.055*r();
   const tip=v(x+Math.cos(a)*spread,h,z+Math.sin(a)*spread);
   const root=v(x,0,z);
   d.stem(root,v(x+Math.cos(a)*spread*.34,h*.52,z+Math.sin(a)*spread*.34),.0027,dark);
   d.stem(v(x+Math.cos(a)*spread*.34,h*.52,z+Math.sin(a)*spread*.34),tip,.0017,stem);
-  for(let j=1;j<=4;j++){
-   const t=.30+j*.133,side=(j%2===0?1:-1),ang=a+side*(.65+.30*r());
+  for(let j=1;j<=5;j++){
+   const t=.20+j*.132,side=(j%2===0?1:-1),ang=a+side*(.65+.30*r());
    const base=v(root[0]+(tip[0]-root[0])*t,h*t,root[2]+(tip[2]-root[2])*t);
    const branch=v(base[0]+Math.cos(ang)*(.027+.04*r()),base[1]+(.025+.033*r()),base[2]+Math.sin(ang)*(.027+.04*r()));
    d.stem(base,branch,.0014,stem,4);
@@ -83,14 +83,16 @@ function lingonberry(variant:number){
  const r=rand(7011+variant*107),d=new Draft(),wood=palette('#5d6347');
  const leaves=['#25412f','#33523b','#406248','#526c4d'].map(palette);
  // Low trailing runners branching at irregular intervals; leaves waxy, broad and compact.
- for(let k=0;k<15+variant*3;k++){
-  const a=k*2.399963+variant*.21+(r()-.5)*.3,dist=.10+.21*r();
-  const start=v((r()-.5)*.045,0,(r()-.5)*.045);
+ for(let k=0;k<20+variant*3;k++){
+  const cluster=Math.floor(k/4),clusterAngle=cluster*2.399963+variant*.24;
+  const spread=.065+.125*Math.sqrt((cluster+.5)/6),cx=Math.cos(clusterAngle)*spread,cz=Math.sin(clusterAngle)*spread;
+  const a=k*2.399963+variant*.21+(r()-.5)*.3,dist=.065+.145*r();
+  const start=v(cx+(r()-.5)*.045,0,cz+(r()-.5)*.045);
   const end=v(Math.cos(a)*dist,.036+.075*r(),Math.sin(a)*dist);
   const middle=v(end[0]*.56,.026+.022*r(),end[2]*.56);
   d.stem(start,middle,.0024,wood,5);d.stem(middle,end,.0015,wood,5);
-  for(let j=1;j<=5;j++){
-   const t=j/6,side=j%2?1:-1;
+  for(let j=1;j<=7;j++){
+   const t=j/8,side=j%2?1:-1;
    const where=v(start[0]+(end[0]-start[0])*t,start[1]+(end[1]-start[1])*t+.012,start[2]+(end[2]-start[2])*t);
    const na=a+side*(.7+.3*r());
    d.leaf(where,v(Math.cos(na),.30+.12*r(),Math.sin(na)),.018+.01*r(),.0068+.004*r(),leaves[(k+j)%leaves.length],.0019);
@@ -106,12 +108,13 @@ function featherMoss(variant:number){
  for(let k=0;k<170+variant*26;k++){
   const a=r()*2*Math.PI,rr=Math.sqrt(r())*(.33+.06*variant),x=Math.cos(a)*rr,z=Math.sin(a)*rr;
   if((x-.10)**2+(z+.08)**2<.014&&r()>.5)continue; // irregular holes
-  const c=greens[Math.floor(r()*greens.length)],h=.025+.052*r();
-  const y=.005+rr*.013,start=v(x,y,z),tip=v(x+.025*(r()-.5),y+h,z+.025*(r()-.5));
-  d.stem(start,tip,.0007,c,3);
-  const dir=r()*2*Math.PI,fx=Math.cos(dir),fz=Math.sin(dir);
+  const c=greens[Math.floor(r()*greens.length)],h=.006+.014*r();
+  // Pleurocarpous feather moss grows into overlapping low, laterally spreading fronds.
+  const dir=r()*2*Math.PI,fx=Math.cos(dir),fz=Math.sin(dir),reach=.05+.03*r();
+  const y=.005+rr*.004,start=v(x,y,z),tip=v(x+fx*reach,y+h,z+fz*reach);
+  d.stem(start,tip,.00075,c,3);
   for(let j=1;j<=5;j++){
-   const t=j/6,l=(.010+.008*r())*(1-.4*t),p=v(start[0]+(tip[0]-start[0])*t,start[1]+(tip[1]-start[1])*t,start[2]+(tip[2]-start[2])*t);
+   const t=j/6,l=(.012+.015*r())*(1-.38*t),p=v(start[0]+(tip[0]-start[0])*t,start[1]+(tip[1]-start[1])*t,start[2]+(tip[2]-start[2])*t);
    const left=v(p[0]+(-fz)*l,p[1]+.003*r(),p[2]+fx*l);
    const right=v(p[0]+fz*l,p[1]+.003*r(),p[2]-fx*l);
    d.tri(p,left,v(left[0]+fx*.004,left[1]+.006,left[2]+fz*.004),c,.83+.15*r());
