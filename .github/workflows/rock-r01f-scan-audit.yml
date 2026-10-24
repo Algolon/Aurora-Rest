@@ -15,7 +15,7 @@ jobs:
       - name: Protect every existing R01E, R01, F01 and Aurora world file
         run: |
           git diff --name-only 93b1278d369492bb4c25f284a280387264595d09 HEAD | tee /tmp/rock-r01f-changed.txt
-          if grep -vE '^(\\.github/workflows/rock-r01f-scan-audit.yml|asset-lab/birch/rocks/r01f/)' /tmp/rock-r01f-changed.txt; then
+          if grep -vE '^([.]github/workflows/rock-r01f-scan-audit.yml|asset-lab/birch/rocks/r01f/)' /tmp/rock-r01f-changed.txt; then
             echo "ERROR: scope protection failed"; exit 1
           fi
       - name: Install source review dependencies
