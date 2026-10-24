@@ -14,7 +14,9 @@ try{
  page.on('console',e=>{if(e.type()==='error')errors.push('console '+e.text());});
  page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
  await page.goto('http://127.0.0.1:4258/rock-r01g3.html',{waitUntil:'networkidle',timeout:120000});
- await page.waitForFunction(()=>window.__r01g3?.inspect()?.loaded===true,null,{timeout:120000});
+ await page.waitForFunction(()=>{const x=window.__r01g3?.inspect();return !!x&&(x.loaded===true||!!x.errors);},null,{timeout:45000});
+ const diagnostic=await page.evaluate(()=>window.__r01g3?.inspect());
+ if(diagnostic?.errors)throw Error('Source asset loader failed: '+JSON.stringify(diagnostic)+'; recent page errors '+errors.join(' | '));
  const inspect=await page.evaluate(()=>window.__r01g3.inspect());
  if(!inspect.browser.isWebGL2||inspect.candidates.length<2||inspect.errors)throw Error('Bad real GLTF/WebGL init '+JSON.stringify(inspect));
  async function snap(name,config){
