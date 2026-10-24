@@ -1,0 +1,34 @@
+name: ENV-R02D First-Person Woodland Cohesion WebGL (no deploy)
+on:
+  push:
+    branches: [art/env-r02d-first-person-woodland-cohesion]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cohesion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - run: node --experimental-strip-types --test tests/env-r02d.test.ts
+      - run: npx vite build --config vite.env-r02d.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: A2 versus R02D A/B/A software-WebGL actual images
+        env:
+          ENV_R02D_OUTPUT: ${{ runner.temp }}/env-r02d
+        run: node tools/env-r02d/browser.mjs
+      - name: Preserve real rendered comparisons and original source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-r02d-a1-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/env-r02d/
+          if-no-files-found: warn
