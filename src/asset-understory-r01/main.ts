@@ -49,7 +49,7 @@ let current:keyof typeof camViews='overview',disposed=false;
 function setView(id:string){
  if(!(id in camViews))throw Error('Unknown view '+id);current=id as keyof typeof camViews;
  const view=camViews[current];camera.fov=view.fov;camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
- camera.position.set(...view.eye);camera.up.set(0,current==='top'?0:1,current==='top'?-1:0);controls.target.set(...view.target);camera.lookAt(controls.target);controls.update();
+ camera.position.set(view.eye[0],view.eye[1],view.eye[2]);camera.up.set(0,current==='top'?0:1,current==='top'?-1:0);controls.target.set(view.target[0],view.target[1],view.target[2]);camera.lookAt(controls.target);controls.update();
  for(const btn of document.querySelectorAll('button[data-view]'))btn.classList.toggle('active',btn.getAttribute('data-view')===current);
  render();
 }
