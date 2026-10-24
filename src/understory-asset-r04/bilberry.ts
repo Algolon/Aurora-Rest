@@ -4,7 +4,7 @@
  */
 import * as T from 'three';
 import {hash,type OwnedAsset} from './substrate.ts';
-export const BILBERRY=Object.freeze({species:'Vaccinium myrtillus',heightRangeM:[.24,.49],clumps:5,shoots:34,sourcePhotoPixelsUsed:false});
+export const BILBERRY=Object.freeze({species:'Vaccinium myrtillus',heightRangeM:[.24,.49],clumps:5,shoots:46,sourcePhotoPixelsUsed:false});
 type V=[number,number,number];
 const v=(x:number,y:number,z:number):V=>[x,y,z];
 const add=(a:V,b:V):V=>v(a[0]+b[0],a[1]+b[1],a[2]+b[2]);
@@ -56,16 +56,16 @@ export function makeBilberryGeometry(){
   mid[0]+=.018*Math.sin(j*1.3);mid[2]+=.018*Math.cos(j*.93);
   d.tube(root,mid,.0028, j%3?green:brown);d.tube(mid,tip,.0016,green);
   // alternate leaf-bearing branches; edge shoots less dense but canopy remains leafy in volume
-  for(let k=0;k<7;k++){
+  for(let k=0;k<9;k++){
    const t=.26+(k+.5)/10,a2=a+(k%2?.95:-1.0)+(hash(j,k)-.5)*.7;
    const branchRoot=add(root,mul(diff(tip,root),t));
-   const l=.043+.051*hash(j,k,4),end=add(branchRoot,v(Math.cos(a2)*l,.009+.023*hash(j,k,6),Math.sin(a2)*l));
+   const l=.065+.060*hash(j,k,4),end=add(branchRoot,v(Math.cos(a2)*l,.009+.023*hash(j,k,6),Math.sin(a2)*l));
    d.tube(branchRoot,end,.00115,green);
    // true 1-3cm single lamina, not one radial multi-leaf star
-   for(let leaf=0;leaf<3;leaf++){
+   for(let leaf=0;leaf<4;leaf++){
     const theta=a2+(leaf-1)*.72+.3*(hash(j,k,leaf)-.5),p=add(branchRoot,mul(diff(end,branchRoot),.48+.18*leaf));
     const direct=v(Math.cos(theta),.11+.32*hash(j+leaf,k,9),Math.sin(theta));
-    const length=.015+.013*hash(j,k+leaf,12);
+    const length=.020+.015*hash(j,k+leaf,12);
     d.leaf(p,direct,length,leaves[(j+k+leaf)%leaves.length],theta);
    }
   }

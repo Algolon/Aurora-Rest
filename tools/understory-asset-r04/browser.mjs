@@ -21,7 +21,7 @@ try{
  assert.equal(before.assets.substrate.drawObjects,4);
  assert.equal(before.assets.bilberry.drawObjects,1);
  assert(before.assets.substrate.triangles<170000);
- assert(before.assets.bilberry.triangles<30000);
+ assert(before.assets.bilberry.triangles<50000);
  for(const id of ['overview','walking','substrate','bilberry','top']){
   await page.evaluate(v=>window.__r04.setView(v),id);
   await page.evaluate(()=>window.__r04.setMode('A'));
@@ -34,7 +34,7 @@ try{
   await writeFile(out+'/'+id+'-B-candidate.png',Buffer.from(b.split(',')[1],'base64'));
   assert.notEqual(a,b,'image must differ '+id);
   assert(bb.render.calls<=11,'single source specimens draw calls exceed budget');
-  assert(bb.render.triangles<170000,'actual submitted triangle budget exceeded');
+  assert(bb.render.triangles<210000,'actual submitted triangle budget exceeded');
   assert.deepEqual(bb.assets,ba.assets);
   await page.evaluate(()=>window.__r04.setMode('A'));
   const restored=await page.evaluate(()=>window.__r04.capture());

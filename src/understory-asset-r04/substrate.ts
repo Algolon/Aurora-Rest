@@ -4,7 +4,7 @@
  */
 import * as T from 'three';
 
-export const SUBSTRATE=Object.freeze({widthM:2.4,depthM:2.4,frondInstances:1950,mossColonies:19,referenceSpecies:'Pleurozium schreberi / Hylocomium splendens',sourcePhotographyPixelsUsed:false});
+export const SUBSTRATE=Object.freeze({widthM:2.4,depthM:2.4,frondInstances:2060,mossColonies:96,referenceSpecies:'Pleurozium schreberi / Hylocomium splendens',sourcePhotographyPixelsUsed:false});
 export const fract=(x:number)=>x-Math.floor(x);
 export function hash(x:number,z:number,salt=0){return fract(Math.sin(x*127.1+z*311.7+salt*74.7)*43758.5453123);}
 export function smoothNoise(x:number,z:number,salt=0){const i=Math.floor(x),j=Math.floor(z),fx=fract(x),fz=fract(z),u=fx*fx*(3-2*fx),v=fz*fz*(3-2*fz);const a=hash(i,j,salt),b=hash(i+1,j,salt),c=hash(i,j+1,salt),d=hash(i+1,j+1,salt);return T.MathUtils.lerp(T.MathUtils.lerp(a,b,u),T.MathUtils.lerp(c,d,u),v);}
@@ -27,11 +27,11 @@ function tile(){
 function cushions(){
  // Interlocking low 3D moss humps with inhomogeneous boundary and open humus holes.
  const positions:number[]=[],colors:number[]=[],indices:number[]=[];
- const dark=new T.Color('#485c31'),light=new T.Color('#829357');let idx=0;
+ const dark=new T.Color('#40562f'),light=new T.Color('#687c43');let idx=0;
  for(let k=0;k<SUBSTRATE.mossColonies;k++){
   const ang=k*2.39996+hash(k,2)*.37,rr=.16+.91*Math.sqrt((k+.2)/SUBSTRATE.mossColonies),cx=Math.cos(ang)*rr,cz=Math.sin(ang)*rr;
   if(mossCoverage(cx,cz)<.25)continue;
-  const rx=.19+.17*hash(k,13),rz=.18+.14*hash(k,19),height=.024+.026*hash(k,17);
+  const rx=.060+.065*hash(k,13),rz=.055+.065*hash(k,19),height=.006+.010*hash(k,17);
   const rings=4,sectors=20,start=idx;
   for(let j=0;j<=rings;j++)for(let s=0;s<=sectors;s++){
    const t=j/rings,a=s/sectors*2*Math.PI,r=t*(1+.10*Math.sin(3*a+k)+.06*Math.cos(7*a+k*1.9));
@@ -48,14 +48,14 @@ function cushions(){
  return new T.Mesh(g,new T.MeshLambertMaterial({vertexColors:true,side:T.DoubleSide}));
 }
 function frondGeometry(){
- const d:number[]=[],c:number[]=[];const green=new T.Color('#708647'),tips=new T.Color('#a3aa6d');
+ const d:number[]=[],c:number[]=[];const green=new T.Color('#56723d'),tips=new T.Color('#839451');
  // Flat-topped, reclining pinnate shoots. Whorls are slightly concave and staggered, never upright fir silhouettes.
  const tri=(a:number[],b:number[],e:number[],color:T.Color)=>{
   for(const p of [a,b,e]){d.push(...p);c.push(color.r,color.g,color.b);}
  };
  for(let k=0;k<8;k++){
   const t=(k+.55)/8,reach=.075*t,y=.006+.010*Math.sin(Math.PI*t);
-  const width=.010*(.50+.5*Math.sin(Math.PI*t))*(1-.35*t),angle=k*1.25;
+  const width=.008*(.50+.5*Math.sin(Math.PI*t))*(1-.35*t),angle=k*1.25;
   const vein=[reach,y,0],forward=[reach+.008,y+.003,0];
   for(const side of [-1,1]){
    const bend=side*(.013+.009*Math.sin(2.3*k+angle)),mid=[reach+.005,y+.004,bend*.65];
