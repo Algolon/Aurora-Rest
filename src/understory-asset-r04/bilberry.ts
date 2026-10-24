@@ -57,7 +57,7 @@ export function makeBilberryGeometry(){
   d.tube(root,mid,.0028, j%3?green:brown);d.tube(mid,tip,.0016,green);
   // alternate leaf-bearing branches; edge shoots less dense but canopy remains leafy in volume
   for(let k=0;k<9;k++){
-   const t=.26+(k+.5)/10,a2=a+(k%2?.95:-1.0)+(hash(j,k)-.5)*.7;
+   const t=.16+(k+.5)/12,a2=a+(k%2?.95:-1.0)+(hash(j,k)-.5)*.7;
    const branchRoot=add(root,mul(diff(tip,root),t));
    const l=.065+.060*hash(j,k,4),end=add(branchRoot,v(Math.cos(a2)*l,.009+.023*hash(j,k,6),Math.sin(a2)*l));
    d.tube(branchRoot,end,.00115,green);
