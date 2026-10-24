@@ -19,7 +19,7 @@ export const COLONIES=clusters;
 export function hash(i:number,j:number,k=0){let a=(2166136261^Math.imul(i+137,374761393)^Math.imul(j+31,668265263)^Math.imul(k+1,1274126177))>>>0;a=Math.imul(a^(a>>>13),1274126177);return ((a^(a>>>16))>>>0)/4294967296}
 export function treadCenter(z:number){return .08+.13*z+.24*Math.sin(z*1.03-.4)}
 export function treadDistance(x:number,z:number){return Math.abs(x-treadCenter(z));}
-export function groundHeight(x:number,z:number){return .055*Math.sin(x*1.22+z*.67)*Math.cos(z*1.6)+.025*Math.sin(x*3.75-z*2.13);}
+export function groundHeight(x:number,z:number){return .037*Math.sin(x*1.12+z*.53)*Math.cos(z*.92)+.014*Math.sin(x*2.38-z*1.36)+.006*Math.cos(x*4.31+z*2.69);}
 export function colonyField(kind:Kind,x:number,z:number){
  let v=0;
  for(const c of clusters){if(c.kind!==kind)continue;

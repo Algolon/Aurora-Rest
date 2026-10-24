@@ -7,19 +7,19 @@ function clamp(v:number){return Math.max(0,Math.min(1,v))}
 function smooth(a:number,b:number,t:number){const u=clamp((t-a)/(b-a));return u*u*(3-2*u)}
 const soil=new T.Color('#514936'),moss=new T.Color('#536d40'),shrub=new T.Color('#567044'),litter=new T.Color('#777052'),track=new T.Color('#49412f');
 function pick(x:number,z:number,composed:boolean){
- const micro=Math.sin(x*7.7+z*11.1)*Math.cos(x*10.2-z*6.1);
+ const micro=.54*Math.sin(x*1.5+z*.7)*Math.cos(z*1.6-x*.36)+.29*Math.sin(x*3.1-z*2.6)+.13*Math.cos(x*5.2+z*3.9);
  const m=colonyField('feathermoss',x,z),b=colonyField('bilberry',x,z),l=colonyField('lingonberry',x,z);
- const color=soil.clone().lerp(litter,clamp(.19+.14*micro+.13*Math.sin(x*2-z*4)));
+ const color=soil.clone().lerp(litter,clamp(.24+.09*micro+.10*Math.sin(x*1.25-z*1.58)));
  if(composed){
-  const carpet=Math.max(m*.89,Math.min(.72,b*.47+l*.6));
-  color.lerp(moss,clamp(carpet+.14*Math.max(0,micro)));
+  const carpet=Math.max(m*.92,Math.min(.76,b*.54+l*.65));
+  color.lerp(moss,clamp(carpet+.07*Math.max(0,micro)));
   color.lerp(shrub,clamp(Math.max(b*.30,l*.41)));
   // A subtly compressed footfall gap, not a uniform broad pasted road.
   const d=treadDistance(x,z),width=.44+.10*Math.sin(z*3.9)+.08*Math.sin(z*7.1+x*4.3);
   const wear=1-smooth(width,width+.24,d);
   color.lerp(track,wear*.68);
  }
- color.multiplyScalar(1+.095*micro+.035*Math.sin(x*25-z*17));
+ color.multiplyScalar(1+.052*micro+.017*Math.sin(x*7.3-z*4.8));
  return color;
 }
 export function makeStageGround(composed:boolean){
