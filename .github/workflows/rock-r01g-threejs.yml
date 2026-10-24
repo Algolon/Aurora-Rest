@@ -1,4 +1,4 @@
-name: ROCK-R01G Three.js-first genuine-source probe (no deployment)
+name: ROCK-R01G Three.js-first genuine natural GLTF / WebGL review (NO DEPLOY)
 on:
   push:
     branches: [research/rock-r01g-threejs-natural-geometry-pilot]
@@ -6,24 +6,35 @@ on:
 jobs:
   natural-source:
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 22
+    defaults: {run: {working-directory: asset-lab/birch}}
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 0}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - name: Protect G1, R01, F01 and all R01E approved references
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - name: Protect G1/R01/F01/R01E and all Aurora game sources
         run: |
           git diff --name-only 93b1278d369492bb4c25f284a280387264595d09 HEAD > /tmp/changes
-          if grep -vE '^([.]github/workflows/rock-r01g-threejs.yml|asset-lab/birch/rocks/r01g3/|asset-lab/birch/rock-r01g3.html|asset-lab/birch/vite.r01g3.config.ts|asset-lab/birch/scripts/capture-r01g3.mjs)' /tmp/changes; then
-            echo "Protected source modified"; exit 1
-          fi
-      - name: Check public CC0 model delivery formats and source provenance
-        run: python asset-lab/birch/rocks/r01g3/probe_source.py
+          if grep -vE '^([.]github/workflows/rock-r01g-threejs.yml|asset-lab/birch/rocks/r01g3/|asset-lab/birch/rock-r01g3.html|asset-lab/birch/vite.r01g3.config.ts|asset-lab/birch/scripts/capture-r01g3.mjs)' /tmp/changes; then echo "Protected source modified"; exit 1; fi
+      - name: Fetch actual official model files and verify source MD5
+        run: python rocks/r01g3/download_gltf.py
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.r01g3.config.ts
+      - name: Genuine Three.js/WebGL2 / actual individual rock models
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-r01g3.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Aurora-ROCK-R01G-ThreeJS-Source-Discovery
-          path: asset-lab/birch/rocks/r01g3/probe/
+          name: Aurora-ROCK-R01G-Original-Geometry-WebGL-Review
+          path: |
+            asset-lab/birch/r01g3-evidence/
+            asset-lab/birch/public/r01g3/
           if-no-files-found: warn
-# This is a source discovery test; modeling and deployment prohibited.
+# Read-only licensed source evaluation, no merge, asset registration or deployment.
