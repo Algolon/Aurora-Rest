@@ -1,0 +1,35 @@
+name: UNDERSTORY-R02 Authored Forest Floor WebGL (no deployment)
+on:
+  push:
+    branches: [art/understory-r02-authored-forest-floor-patch]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - run: node --experimental-strip-types --test tests/understory-r02.test.ts
+      - run: npx tsc --noEmit
+      - run: npx vite build --config vite.understory-r02.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: Matched genuine WebGL A/B/A five-view review
+        env:
+          UNDERSTORY_R02_OUTPUT: ${{ runner.temp }}/understory-r02
+        run: node tools/understory-r02/browser.mjs
+      - name: Preserve real screenshots and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: understory-r02-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/understory-r02/
+          if-no-files-found: warn
