@@ -64,7 +64,7 @@ function inspect(){
  return {loaded,config,candidates:assets.map((a,i)=>({index:i,name:a.name,triangles:a.originalTriangles,sourceUnitsDimensions:a.dimensions})),selection:a?{name:a.name,triangles:a.originalTriangles,sourceDimensions:a.dimensions}:null,
   renderer:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles},
   browser:{version:String(renderer.getContext().getParameter(renderer.getContext().VERSION)),isWebGL2:renderer.capabilities.isWebGL2},
-  errors:error,artApproved:false,geometryModified:false,originalSource:'https://polyhaven.com/a/rock_moss_set_02'};
+  errors:error,artApproved:false,sourcePositionIndicesUnchanged:true,stagingWhiteVertexColorsAdded:true,originalSource:'https://polyhaven.com/a/rock_moss_set_02'};
 }
 function configure(c:Partial<Config>){config={...config,...c};if(config.index>=assets.length)throw Error('Invalid source index');for(const k of Object.keys(config) as (keyof Config)[]){const el=document.getElementById(k) as HTMLInputElement|HTMLSelectElement;if(!el)continue;if(k==='wireframe')(el as HTMLInputElement).checked=Boolean(config[k]);else el.value=String(config[k]);}show();return inspect();}
 function capture(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/png');}
@@ -75,8 +75,16 @@ async function setup(){
  gltf.scene.traverse(o=>{
   if(!(o as THREE.Mesh).isMesh)return;
   const source=o as THREE.Mesh;
-  const geom=source.geometry as THREE.BufferGeometry;
-  if(!geom.getAttribute('position'))return;
+  const authored=source.geometry as THREE.BufferGeometry;
+  if(!authored.getAttribute('position'))return;
+  // R01G bridge: existing A2 T1 has vertexColors:true; scanned glTF lacks COLOR_0.
+  // Clone for review and add NEUTRAL WHITE color only; never alter source positions.
+  const geom=authored.clone();
+  if(!geom.getAttribute('color')){
+    const white=new Float32Array(geom.getAttribute('position').count*3);
+    white.fill(1);
+    geom.setAttribute('color',new THREE.Float32BufferAttribute(white,3));
+  }
   const triangles=geom.index?geom.index.count/3:geom.getAttribute('position').count/3;
   if(triangles<300)return;
   const g=new THREE.Group();
