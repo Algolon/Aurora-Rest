@@ -29,15 +29,22 @@ try{
  const mobileMetrics=await mobile.evaluate(()=>window.__ENV_FEEL_R01__.snapshot());
  await mobile.screenshot({path:`${out}/mobile-emulation-squall.png`});
  await mobile.close();
- // A/B/A: identical state must restore after a different weather selection.
- await page.evaluate(()=>{window.__ENV_FEEL_R01__.setMode('still');window.__ENV_FEEL_R01__.seek(12);});
- await page.waitForTimeout(350);
+ // TRUE pixel-level A/B/A: hold camera, force same exact clock and weather mode.
+ const set=async(mode,time)=>{await page.evaluate(([m,t])=>{window.__ENV_FEEL_R01__.setMode(m);window.__ENV_FEEL_R01__.seek(t);},[mode,time]);await page.waitForTimeout(350);};
+ await set('still',12);
+ const before=await page.locator('#world').screenshot({path:`${out}/canvas-before.png`});
+ await set('squall',78);
+ const storm=await page.locator('#world').screenshot({path:`${out}/canvas-storm.png`});
+ await set('still',12);
+ const after=await page.locator('#world').screenshot({path:`${out}/canvas-restored.png`});
  const again=await page.evaluate(()=>window.__ENV_FEEL_R01__.snapshot());
  if(again.weather.rain!==samples[0].weather.rain||again.weather.wetness!==samples[0].weather.wetness)throw Error('Weather state failed A/B/A restoration');
+ if(before.equals(storm))throw Error('Weather change did not affect canvas pixels');
+ if(!before.equals(after))throw Error('A/B/A canvas pixel restoration failed');
  const report={url,source:'Actual Chromium SwiftShader WebGL execution',notPhysicalAndroid:true,notProductionBirchwood:true,
   scenarios:samples.map(s=>({mode:s.mode,time:s.time,weather:s.weather,render:s.render,timing:s.timing})),
   mobileEmulation:{render:mobileMetrics.render,timing:mobileMetrics.timing},
-  restored:true,errors};
+  restored:true,pixelRestorationExact:true,errors};
  writeFileSync(`${out}/report.json`,JSON.stringify(report,null,2));
  if(errors.length)throw Error(errors.join('\n'));
  console.log(JSON.stringify(report,null,2));
