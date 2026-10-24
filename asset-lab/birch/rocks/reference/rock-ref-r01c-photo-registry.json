@@ -1,0 +1,98 @@
+{
+  "milestone": "ROCK-REF-R01C",
+  "date": "2026-10-24",
+  "status": "photo_verified_owner_review_pending",
+  "baseline": "688307432ba889342075b95505b7c52364154497",
+  "assetsCreated": false,
+  "photoBytesCommitted": false,
+  "modelingAuthorized": false,
+  "sourceOfTruth": {
+    "lithology": "https://www.sgu.se/om-geologi/sevard-geologi/hunnebo-klovor/",
+    "geologicalPhotoGuide": "https://www.sgu.se/globalassets/om-geologi/sevard-geologi/geologiskt-arv/geologisktarv-2014-webb.pdf",
+    "supplementaryFinnishGeology": "https://saimaageopark.fi/en/kummakivi-erratic-boulder/"
+  },
+  "subjects": [
+    {
+      "id": "M01-M03",
+      "internalLabel": "Myrstigen split granite specimen",
+      "site": "Brastad Myrstigen, Bohuslän",
+      "photoCameraLocation": [
+        58.374121,
+        11.469637
+      ],
+      "photoDate": "2022-07-23",
+      "primary": true,
+      "creator": "W.carter (EXIF: Ann-Sophie Qvarnström)",
+      "license": "CC BY-SA 4.0",
+      "rightsVerifiedFromOriginalFiles": true,
+      "photoAngles": "one oblique overview + two almost identical crack close-ups; incomplete 3D coverage",
+      "verifiedSameScene": true,
+      "photos": [
+        {
+          "id": "M01",
+          "url": "https://commons.wikimedia.org/wiki/File:Large_cracked_granite_rock_next_to_Myrstigen_1.jpg",
+          "timeLocal": "16:27:58",
+          "view": "high oblique whole-rock"
+        },
+        {
+          "id": "M02",
+          "url": "https://commons.wikimedia.org/wiki/File:Large_cracked_granite_rock_next_to_Myrstigen_2.jpg",
+          "timeLocal": "16:28:31",
+          "view": "crack close-up"
+        },
+        {
+          "id": "M03",
+          "url": "https://commons.wikimedia.org/wiki/File:Large_cracked_granite_rock_next_to_Myrstigen_3.jpg",
+          "timeLocal": "16:29:42",
+          "view": "same crack similar close-up"
+        }
+      ]
+    },
+    {
+      "id": "K01-K02",
+      "label": "Kummakivi",
+      "country": "FI",
+      "geologicalType": "mixed granite-cordierite-mica gneiss",
+      "siteCoordinates": [
+        61.493320157,
+        28.430009592
+      ],
+      "primary": false,
+      "license": "CC BY-SA 4.0 each",
+      "use": "mass and silhouette; do not imitate exceptional contact",
+      "photos": [
+        {
+          "id": "K01",
+          "author": "Kotivalo",
+          "url": "https://commons.wikimedia.org/wiki/File:Kummakivi_balancing_rock_in_Ruokolahti,_Finland.jpg"
+        },
+        {
+          "id": "K02",
+          "author": "Petritap (Petri Tapola)",
+          "url": "https://commons.wikimedia.org/wiki/File:Kummakivi_in_Ruokolahti.jpg"
+        }
+      ]
+    },
+    {
+      "id": "H01-H03",
+      "label": "Hunnebo klovor geosite",
+      "country": "SE",
+      "geologicalType": "Bohus granite",
+      "cameraCoverage": "site outcrops, distinct exposures, not same freestanding boulder",
+      "licensing": "photo reuse permission NOT verified",
+      "primary": false,
+      "urls": [
+        "https://www.sgu.se/om-geologi/sevard-geologi/hunnebo-klovor/",
+        "https://www.sgu.se/globalassets/om-geologi/sevard-geologi/geologiskt-arv/geologisktarv-2014-webb.pdf"
+      ]
+    },
+    {
+      "id": "X01",
+      "label": "Holländaröd quarry-remnant block",
+      "url": "https://commons.wikimedia.org/wiki/File:Big_red_granite_block_in_Holl%C3%A4ndar%C3%B6d.jpg",
+      "license": "CC BY-SA 4.0",
+      "status": "NEGATIVE reference - human-quarried shape"
+    }
+  ],
+  "ownerDecision": "pending primary real specimen/photo grammar selection"
+}
