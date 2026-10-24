@@ -1,0 +1,48 @@
+{
+  "milestone": "ROCK-REF-R01E",
+  "date": "2026-10-24",
+  "status": "design_pending_owner_approval",
+  "baseline": "df19f61428165080fec6af34eaf9b3390c063a3b",
+  "branch": "research/rock-ref-r01e-shape-pack",
+  "modelingAuthorized": false,
+  "selectedReferences": [
+    "Myrstigen M01-M03",
+    "Kummakivi K01-K02",
+    "SGU Hunnebo geology"
+  ],
+  "candidates": [
+    {
+      "id": "A",
+      "name": "Nordic Weathered Corestone",
+      "recommended": true,
+      "ownerApproved": false,
+      "intent": "continuous asymmetrical heavy mass, sheltered local joint and right belly"
+    },
+    {
+      "id": "B",
+      "name": "Fractured Shoulder",
+      "recommended": false,
+      "ownerApproved": false,
+      "intent": "more visibly weathered asymmetric local crack"
+    },
+    {
+      "id": "C",
+      "name": "Glacial Whaleback",
+      "recommended": false,
+      "ownerApproved": false,
+      "intent": "longer quiet continuous belly and low joint"
+    }
+  ],
+  "deliverables": [
+    "R01E-01-Natural-Shape-Variants.svg",
+    "R01E-02-Multi-View-Shape-Handoff.svg",
+    "ROCK_REF_R01E_DESIGN_PACK.md",
+    "ROCK_REF_R01E_MODELING_HANDOFF.md"
+  ],
+  "allViewsArtisticNotMeasured": true,
+  "rightRearTopUnknownOnPrimarySpecimen": true,
+  "importedPhotographs": 0,
+  "importedRockMeshes": 0,
+  "merge": false,
+  "deployment": false
+}
