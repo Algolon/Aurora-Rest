@@ -11,6 +11,9 @@ assert base.get("manual_artist_work_required")==True
 assert base.get("ROCK_R01G_STATUS").startswith("PLACEHOLDER")
 assert len(base.data.polygons)>500
 assert any("REFERENCE" in c.name for c in bpy.data.collections)
+boards=[o for o in sc.objects if o.type=="EMPTY" and o.empty_display_type=="IMAGE"]
+assert len(boards)==2, f"2 packed concept sheets expected, got {len(boards)}"
+assert all(o.data.packed_file for o in boards), "reference sheets must be self-contained"
 print("ROCK-R01G VERIFIED NATIVE BLEND SCULPT STUDIO; ART IS NOT COMPLETE")
 print("Cameras:",[c.name for c in cams])
 print("Base mesh vertices:",len(base.data.vertices),"(unsmodified starting ellipsoid)")

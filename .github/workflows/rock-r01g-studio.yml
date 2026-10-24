@@ -19,11 +19,17 @@ jobs:
           if command -v blender; then blender --version | head -3
           else
             sudo apt-get update -qq
-            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender librsvg2-bin
           fi
+      - name: Rasterize the owner-approved R01E 2D boards as PACKED references
+        run: |
+          command -v rsvg-convert || (sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq librsvg2-bin)
+          mkdir -p asset-lab/birch/rocks/r01g/output/refs
+          rsvg-convert asset-lab/birch/rocks/reference/R01E-01-Natural-Shape-Variants.svg -o asset-lab/birch/rocks/r01g/output/refs/R01E-01-Natural-Shape-Variants.png
+          rsvg-convert asset-lab/birch/rocks/reference/R01E-02-Multi-View-Shape-Handoff.svg -o asset-lab/birch/rocks/r01g/output/refs/R01E-02-Multi-View-Shape-Handoff.png
       - name: Build real native editable .blend sculpt STUDIO (placeholder only)
         run: |
-          blender --background --python asset-lab/birch/rocks/r01g/build_blender_studio.py -- --out "$PWD/asset-lab/birch/rocks/r01g/output/ROCK-R01G-A-STUDIO-PLACEHOLDER.blend"
+          blender --background --python asset-lab/birch/rocks/r01g/build_blender_studio.py -- --out "$PWD/asset-lab/birch/rocks/r01g/output/ROCK-R01G-A-STUDIO-PLACEHOLDER.blend" --refs "$PWD/asset-lab/birch/rocks/r01g/output/refs"
       - name: Validate native .blend and eight multi-view cameras
         run: |
           blender --background "$PWD/asset-lab/birch/rocks/r01g/output/ROCK-R01G-A-STUDIO-PLACEHOLDER.blend" --python asset-lab/birch/rocks/r01g/verify_studio.py
@@ -33,6 +39,7 @@ jobs:
           name: Aurora-ROCK-R01G-Blender-Sculpt-Studio-PLACEHOLDER-NOT-ART
           path: |
             asset-lab/birch/rocks/r01g/output/*.blend
+            asset-lab/birch/rocks/r01g/output/refs/*.png
             asset-lab/birch/rocks/r01g/ROCK_R01G_WORK_ORDER.md
             asset-lab/birch/rocks/r01g/README.md
           if-no-files-found: warn

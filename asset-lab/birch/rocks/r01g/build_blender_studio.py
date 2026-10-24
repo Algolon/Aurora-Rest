@@ -120,6 +120,7 @@ if src and src.is_dir():
   path=src/fn
   if not path.is_file():continue
   image=bpy.data.images.load(str(path),check_existing=True)
+  image.pack()  # reference board is contained in the actual native .blend file
   empty=bpy.data.objects.new("REFERENCE 2D / "+fn,None)
   ref_collection.objects.link(empty);empty.empty_display_type="IMAGE"
   empty.data=image;empty.location=loc
