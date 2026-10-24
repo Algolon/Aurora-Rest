@@ -4,7 +4,7 @@ Nothing is modified or generated; these files exist only in CI + review artifact
 """
 import hashlib,json,pathlib,urllib.request,os
 ID="rock_moss_set_02"
-OUT=pathlib.Path("asset-lab/birch/public/r01g3"); OUT.mkdir(parents=True,exist_ok=True)
+OUT=pathlib.Path("public/r01g3"); OUT.mkdir(parents=True,exist_ok=True)
 reqhdr={"User-Agent":"AuroraRest-R01G-GenuineThreeJS/1.0 (+https://github.com/Algolon/Aurora-Rest)"}
 def download(url):
  req=urllib.request.Request(url,headers=reqhdr)
