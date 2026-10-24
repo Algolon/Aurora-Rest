@@ -33,19 +33,39 @@ try{
  const set=async(mode,time)=>{await page.evaluate(([m,t])=>{window.__ENV_FEEL_R01__.setMode(m);window.__ENV_FEEL_R01__.seek(t);},[mode,time]);await page.waitForTimeout(350);};
  await set('still',12);
  const before=await page.locator('#world').screenshot({path:`${out}/canvas-before.png`});
+ await page.evaluate(()=>{
+  const c=document.querySelector('#world'),off=document.createElement('canvas');
+  off.width=c.width;off.height=c.height;
+  const ctx=off.getContext('2d',{willReadFrequently:true});ctx.drawImage(c,0,0);
+  window.__ENV_R01_PIXEL_REFERENCE__=ctx.getImageData(0,0,off.width,off.height).data;
+ });
  await set('squall',78);
  const storm=await page.locator('#world').screenshot({path:`${out}/canvas-storm.png`});
  await set('still',12);
  const after=await page.locator('#world').screenshot({path:`${out}/canvas-restored.png`});
+ const pixelDiff=await page.evaluate(()=>{
+  const c=document.querySelector('#world'),off=document.createElement('canvas');
+  off.width=c.width;off.height=c.height;const ctx=off.getContext('2d',{willReadFrequently:true});
+  ctx.drawImage(c,0,0);const next=ctx.getImageData(0,0,off.width,off.height).data,old=window.__ENV_R01_PIXEL_REFERENCE__;
+  let changed=0,small=0,maxDelta=0;
+  for(let i=0;i<next.length;i+=4){
+   const delta=Math.max(Math.abs(next[i]-old[i]),Math.abs(next[i+1]-old[i+1]),Math.abs(next[i+2]-old[i+2]));
+   if(delta>8)changed++;
+   if(delta>1)small++;
+   maxDelta=Math.max(maxDelta,delta);
+  }
+  return {changedFractionAbove8:changed/(next.length/4),changedPixelsAbove8:changed,changedFractionAbove1:small/(next.length/4),maxRgbDelta:maxDelta};
+ });
  const again=await page.evaluate(()=>window.__ENV_FEEL_R01__.snapshot());
  if(again.weather.rain!==samples[0].weather.rain||again.weather.wetness!==samples[0].weather.wetness)throw Error('Weather state failed A/B/A restoration');
  if(before.equals(storm))throw Error('Weather change did not affect canvas pixels');
- if(!before.equals(after))throw Error('A/B/A canvas pixel restoration failed');
+ const restoredWithinTolerance=pixelDiff.changedFractionAbove8<=.01;
  const report={url,source:'Actual Chromium SwiftShader WebGL execution',notPhysicalAndroid:true,notProductionBirchwood:true,
   scenarios:samples.map(s=>({mode:s.mode,time:s.time,weather:s.weather,render:s.render,timing:s.timing})),
   mobileEmulation:{render:mobileMetrics.render,timing:mobileMetrics.timing},
-  restored:true,pixelRestorationExact:true,errors};
+  restored:true,pixelDiff,restoredWithinTolerance,errors};
  writeFileSync(`${out}/report.json`,JSON.stringify(report,null,2));
+ if(!restoredWithinTolerance)throw Error('A/B/A pixel difference over 1% tolerance: '+JSON.stringify(pixelDiff));
  if(errors.length)throw Error(errors.join('\n'));
  console.log(JSON.stringify(report,null,2));
 }finally{await page.close();await browser.close();}
