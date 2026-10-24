@@ -1,0 +1,35 @@
+name: ASSET-UNDERSTORY-R01 independent botanical showroom
+on:
+  push:
+    branches: [art/asset-understory-r01-reference-showroom]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  specimen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - run: node --experimental-strip-types --test tests/asset-understory-r01.test.ts
+      - run: npx tsc --noEmit
+      - run: npx vite build --config vite.asset-understory-r01.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: Actual WebGL botanical specimen shots and lifecycle review
+        env:
+          UNDERSTORY_OUTPUT: ${{ runner.temp }}/understory-r01
+        run: node tools/asset-understory-r01/browser.mjs
+      - name: Preserve genuine evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: understory-r01-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/understory-r01/
+          if-no-files-found: warn
