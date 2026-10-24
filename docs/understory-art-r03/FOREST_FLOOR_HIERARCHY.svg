@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" role="img" aria-label="Aurora Rest Nordic forest floor cross-section diagram for material and shrub layers">
+  <defs>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#705d41"/><stop offset="1" stop-color="#32271e"/></linearGradient>
+    <linearGradient id="moss" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#849455"/><stop offset="1" stop-color="#435b36"/></linearGradient>
+  </defs>
+  <rect width="1280" height="780" fill="#f1f0e7"/>
+  <rect width="1280" height="113" fill="#24382e"/>
+  <text x="56" y="44" fill="#c8d7c6" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="3">AURORA REST  ·  UNDERSTORY-ART-R03</text>
+  <text x="56" y="88" fill="#fff" font-family="Arial,sans-serif" font-size="37" font-weight="700">FOREST FLOOR  /  VERTICAL MATERIAL HIERARCHY</text>
+  <text x="58" y="164" fill="#31493a" font-family="Arial,sans-serif" font-size="20">Section diagram · intended relationships, not an anatomical reconstruction or a production mesh</text>
+  <path d="M55 547 C177 530 270 571 384 549 S640 524 756 547 S1047 567 1228 530 L1228 669 L55 669 Z" fill="url(#soil)"/>
+  <path d="M55 540 C186 521 286 562 392 542 S639 514 749 540 S1048 553 1228 519" fill="none" stroke="#9a855e" stroke-width="14" stroke-linecap="round"/>
+  <g opacity=".9" fill="none" stroke="#c0a46c" stroke-width="4">
+    <path d="M92 546 l42 10 M162 549 l22 -17 M247 543 l30 7 M453 533 l24 10 M880 546 l30 -8 M1008 539 l37 11 M1180 528 l28 -15"/>
+  </g>
+  <path d="M63 537 Q125 503 167 514 T286 522 Q324 493 364 518 Q417 522 454 530 Q506 494 570 517 T689 524 Q728 521 766 532" fill="none" stroke="#5d783b" stroke-width="27" stroke-linecap="round"/>
+  <path d="M857 540 Q938 505 976 519 T1093 526 Q1155 497 1220 526" fill="none" stroke="#617c40" stroke-width="31" stroke-linecap="round"/>
+  <path d="M822 541 Q905 521 951 529 T1073 532 Q1135 511 1211 530" fill="none" stroke="#879855" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#537442" stroke-width="4" stroke-linecap="round">
+    <path d="M198 505 Q188 420 173 373 M197 471 L139 417 M201 450 L256 393 M197 475 L252 455"/>
+    <path d="M340 502 Q359 402 370 368 M353 442 L305 389 M357 413 L411 382 M343 480 L396 452"/>
+    <path d="M1066 507 Q1068 440 1111 425 M1070 464 L1017 439 M1081 453 L1154 420"/>
+  </g>
+  <g fill="#638449">
+    <ellipse cx="143" cy="415" rx="62" ry="24"/><ellipse cx="187" cy="374" rx="49" ry="23"/><ellipse cx="251" cy="400" rx="60" ry="26"/>
+    <ellipse cx="307" cy="388" rx="46" ry="21"/><ellipse cx="372" cy="366" rx="55" ry="25"/><ellipse cx="415" cy="382" rx="55" ry="22"/>
+    <ellipse cx="1025" cy="437" rx="42" ry="17"/><ellipse cx="1113" cy="424" rx="49" ry="21"/><ellipse cx="1153" cy="421" rx="50" ry="22"/>
+  </g>
+  <g fill="#34533c">
+    <ellipse cx="470" cy="499" rx="60" ry="16"/><ellipse cx="535" cy="495" rx="56" ry="14"/><ellipse cx="601" cy="506" rx="42" ry="13"/>
+    <ellipse cx="898" cy="522" rx="51" ry="17"/><ellipse cx="972" cy="508" rx="56" ry="15"/>
+  </g>
+  <path d="M690 538 Q749 521 818 542" fill="none" stroke="#443528" stroke-width="22" stroke-linecap="round"/>
+  <path d="M690 537 Q749 524 816 540" fill="none" stroke="#9d8262" stroke-width="4" stroke-dasharray="4 11"/>
+  <g font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#28392e">
+    <text x="150" y="292">BILBERRY</text><text x="146" y="319" font-weight="400" font-size="17">leaf-filled, airy shrub bank</text>
+    <text x="479" y="404">LINGONBERRY</text><text x="468" y="429" font-weight="400" font-size="17">low creeping evergreen</text>
+    <text x="911" y="300">MOSS CARPET</text><text x="909" y="327" font-weight="400" font-size="17">interlocking shaded fronds</text>
+    <text x="665" y="685" fill="#8a6b4c" font-size="19">WORN FOOTFALL GAP</text>
+  </g>
+  <g stroke="#8a9786" stroke-width="2" fill="none"><path d="M200 328 L199 356"/><path d="M529 439 L528 473"/><path d="M989 335 L982 485"/><path d="M741 662 L754 560"/></g>
+  <g font-family="Arial,sans-serif" font-size="17" fill="#53665a">
+    <text x="56" y="721">GROUND: humus · pine needles · tiny bark/leaf litter · decaying wood · lichen stone contact</text>
+    <text x="56" y="752">REVIEW-ONLY 2D TARGET  /  NEVER SAMPLE THIS VECTOR PALETTE AS FINAL MATERIAL DATA</text>
+  </g>
+</svg>
