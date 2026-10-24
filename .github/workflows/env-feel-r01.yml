@@ -1,0 +1,31 @@
+name: ENV-FEEL-R01 isolated weather study
+on:
+  push:
+    branches: ['experiment/env-feel-r01-living-weather']
+  workflow_dispatch:
+jobs:
+  weather-source-and-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node --experimental-strip-types --test tests/env-feel-r01.test.ts
+      - run: npx tsc --noEmit
+      - run: npx vite build --config vite.env-feel-r01.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: Capture real WebGL weather cases
+        run: |
+          npx vite --config vite.env-feel-r01.config.ts --host 127.0.0.1 > /tmp/env-feel-r01-vite.log 2>&1 &
+          for i in $(seq 1 45); do if curl -fsS http://127.0.0.1:5173/env-feel-r01.html >/dev/null; then break; fi; sleep 2; done
+          node tools/env-feel-r01/browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: env-feel-r01-webgl-evidence
+          path: docs/env-feel-r01/evidence/
+          retention-days: 30
