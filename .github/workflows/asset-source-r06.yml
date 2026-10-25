@@ -1,4 +1,4 @@
-name: ASSET-SOURCE-R06 First-party moss 3D source audit
+name: ASSET-SOURCE-R06 Verified Moss 3D And PBR WebGL
 on:
   push:
     branches: [art/asset-source-r06-real-moss-volume]
@@ -6,25 +6,42 @@ on:
 permissions:
   contents: read
 jobs:
-  verify-original-model:
+  original-moss-volume:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node tools/asset-source-r06/audit-source.mjs
+      - run: npm ci --no-audit --no-fund
+      - name: Ingest and MD5 verify original supplier R05 forest PBR
+        env:
+          R05_OUTPUT: ${{ runner.temp }}/asset-source-r06
+        run: node tools/asset-source-r05/fetch-source.mjs
+      - name: Preserve genuine Poly Haven moss model source manifest
         env:
           R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
-      - name: Download original glTF and every declared source dependency with MD5
+        run: node tools/asset-source-r06/audit-source.mjs
+      - name: Ingest and MD5 verify real glTF fronds alpha and textures
+        env:
+          R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
         run: node tools/asset-source-r06/fetch-model.mjs
+      - run: node --experimental-strip-types --test tests/asset-source-r06.test.ts
+      - run: npx tsc --noEmit
+      - run: npx vite build --config vite.asset-source-r06.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: Genuine same-surface WebGL A/B/A four views of source moss volume
         env:
           R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
-      - name: Preserve official model manifest for design selection
+        run: node tools/asset-source-r06/browser.mjs
+      - name: Archive original Poly Haven bytes MD5 SHA256 and WebGL evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: asset-source-r06-original-model-audit-${{ github.sha }}
-          path: ${{ runner.temp }}/asset-source-r06
+          name: asset-source-r06-original-moss-and-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/asset-source-r06/
           if-no-files-found: warn

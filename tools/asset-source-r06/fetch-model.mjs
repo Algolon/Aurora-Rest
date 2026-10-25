@@ -18,7 +18,9 @@ if(info.type!==2||!info.authors?.['Rob Tuytel'])throw Error('Original moss model
 const chosen=manifest?.gltf?.['1k']?.gltf;
 if(!chosen?.url||!chosen?.include)throw Error('Original 1k glTF/manifest dependencies unavailable');
 if(!String(chosen.url).endsWith('.gltf'))throw Error('Official 1K source not glTF');
-const deps=[['moss_01_1k.gltf',chosen],...Object.entries(chosen.include)];
+const originalAlpha=manifest?.Alpha?.['1k']?.png;
+if(!originalAlpha?.url||!originalAlpha.md5)throw Error('Original feather-edge alpha mask unavailable');
+const deps=[['moss_01_1k.gltf',chosen],...Object.entries(chosen.include),['textures/moss_01_alpha_1k.png',originalAlpha]];
 const files=[];
 for(const [name,entry] of deps){
  if(name.includes('..')||name.startsWith('/')||!/^([\w-]+\/)?[\w.-]+$/.test(name))throw Error('Path traversal or invalid publisher dependency '+name);
