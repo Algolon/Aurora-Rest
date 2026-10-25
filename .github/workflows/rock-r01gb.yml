@@ -1,0 +1,56 @@
+name: ROCK-R01G-B genuine licensed source selection (no world or deployment)
+on:
+  push:
+    branches: [research/rock-r01gb-targeted-natural-sources]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  single-pass-webgl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    defaults: {run: {working-directory: asset-lab/birch}}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - name: Protect all original rock, environment, and world sources
+        run: |
+          git diff --name-only 6416b8c0de15cdc238f1bf938637ae8dede914c6 HEAD > /tmp/r01gb-changes
+          if grep -vE '^([.]github/workflows/rock-r01gb.yml|asset-lab/birch/rocks/r01gb/|asset-lab/birch/rock-r01gb.html|asset-lab/birch/vite.r01gb.config.ts|asset-lab/birch/scripts/capture-r01gb.mjs)' /tmp/r01gb-changes; then echo "PROTECTED SOURCE CHANGED"; exit 1; fi
+      - name: Verify two official source geometries
+        run: python rocks/r01gb/download_sources.py
+      - run: npm install --no-audit --no-fund --package-lock=false
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx vite build --config vite.r01gb.config.ts
+      - name: Real Chromium + Three.js/WebGL2 multi-view evidence
+        run: |
+          CHROME_PATH="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          CHROME_PATH="$CHROME_PATH" node scripts/capture-r01gb.mjs
+      - name: Make legible GitHub preview from REAL captured PNGs
+        run: |
+          python -m pip install --quiet "Pillow>=10,<13"
+          python rocks/r01gb/make_contact_sheet.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Aurora-ROCK-R01GB-Real-WebGL-Multiview-And-Source
+          path: |
+            asset-lab/birch/r01gb-evidence/
+            asset-lab/birch/public/r01gb/
+            asset-lab/birch/rocks/r01gb/R01GB-GENUINE-WEBGL-CONTACT-SHEET.jpg
+          if-no-files-found: warn
+      - name: Preserve screenshot preview directly in GitHub source branch
+        continue-on-error: true
+        if: success() && github.ref == 'refs/heads/research/rock-r01gb-targeted-natural-sources'
+        run: |
+          git config user.name "aurora-art-review-bot"
+          git config user.email "aurora-art-review-bot@users.noreply.github.com"
+          git add rocks/r01gb/R01GB-GENUINE-WEBGL-CONTACT-SHEET.jpg
+          git commit -m "docs(ROCK-R01G-B): publish genuine WebGL contact sheet for phone review [skip ci]"
+          git push origin HEAD:research/rock-r01gb-targeted-natural-sources
+# No production registration / terrain edits / main merge / deployment.
