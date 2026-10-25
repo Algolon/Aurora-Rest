@@ -1,0 +1,28 @@
+name: ROCK-R01H source provenance and authorized download feasibility
+on:
+  push:
+    branches: [research/rock-r01h-specimen-scan-acquisition]
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  metadata-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Protect original rock game code and all project source
+        run: |
+          git diff --name-only eb80cca2b3a04d77ec37ac93daa98c18ee4906cc HEAD >/tmp/r01h-changes.txt
+          if grep -vE '^([.]github/workflows/rock-r01h-source-probe.yml|asset-lab/birch/rocks/r01h/)' /tmp/r01h-changes.txt; then echo "SCOPE FAILURE"; exit 1; fi
+      - name: Official public Sketchfab specimen records (metadata only)
+        run: python asset-lab/birch/rocks/r01h/probe_named_specimens.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ROCK-R01H-Verified-Named-Specimen-Metadata
+          path: asset-lab/birch/rocks/r01h/evidence/
+          if-no-files-found: warn
+# NO unauthorized model downloads, no geometry modifications, merge or deployment.
