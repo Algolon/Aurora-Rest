@@ -1,0 +1,42 @@
+name: ASSET-SOURCE-R05 Publisher-Verified CC0 Forest Floor WebGL
+on:
+  push:
+    branches: [art/asset-source-r05-polyhaven-floor-pilot]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  supplier-source-material-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - name: Unit source geometry and fail-closed licence gates
+        run: node --experimental-strip-types --test tests/asset-source-r05.test.ts
+      - name: Download publisher 1K CC0 material and verify official MD5s
+        env:
+          R05_OUTPUT: ${{ runner.temp }}/asset-source-r05
+        run: node tools/asset-source-r05/fetch-source.mjs
+      - name: Typecheck isolated source material pilot
+        run: npx tsc --noEmit
+      - name: Isolated Vite build including externally validated original maps
+        run: npx vite build --config vite.asset-source-r05.config.ts
+      - run: npx playwright install --with-deps chromium
+      - name: Real WebGL identical-geometry 4-view A/B/A source vs procedural
+        env:
+          R05_OUTPUT: ${{ runner.temp }}/asset-source-r05
+        run: node tools/asset-source-r05/browser.mjs
+      - name: Preserve original source files SHA256/MD5 proof and genuine WebGL
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: asset-source-r05-publisher-verified-${{ github.sha }}
+          path: ${{ runner.temp }}/asset-source-r05/
+          if-no-files-found: warn
