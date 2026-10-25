@@ -17,6 +17,10 @@ jobs:
       - run: node tools/asset-source-r06/audit-source.mjs
         env:
           R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
+      - name: Download original glTF and every declared source dependency with MD5
+        run: node tools/asset-source-r06/fetch-model.mjs
+        env:
+          R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
       - name: Preserve official model manifest for design selection
         if: always()
         uses: actions/upload-artifact@v4
