@@ -1,0 +1,26 @@
+name: ASSET-SOURCE-R06 First-party moss 3D source audit
+on:
+  push:
+    branches: [art/asset-source-r06-real-moss-volume]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-original-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node tools/asset-source-r06/audit-source.mjs
+        env:
+          R06_OUTPUT: ${{ runner.temp }}/asset-source-r06
+      - name: Preserve official model manifest for design selection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: asset-source-r06-original-model-audit-${{ github.sha }}
+          path: ${{ runner.temp }}/asset-source-r06
+          if-no-files-found: warn
