@@ -1,0 +1,72 @@
+{
+  "milestone": "ROCK-R01H",
+  "status": "SPECIMEN_CONFIRMED_AUTHENTICATED_SOURCE_DOWNLOAD_REQUIRED",
+  "ownerDesign": "R01E A / Myrstigen fracture + Kummakivi continuous bulk",
+  "validatedBy": "Sketchfab official public Data API GitHub CI 40243217496",
+  "candidates": [
+    {
+      "rank": 0,
+      "id": "d8e3b15292df46f096faf488eeeb5ca0",
+      "name": "Kummakivi",
+      "creator": "thesidekick",
+      "url": "https://sketchfab.com/3d-models/kummakivi-d8e3b15292df46f096faf488eeeb5ca0",
+      "publicTriangleCount": 1001255,
+      "licence": "CC BY 4.0",
+      "downloadableFlag": true,
+      "bytesAcquired": false,
+      "modelTypeVerifiedAsScan": false,
+      "geographicMatch": true
+    },
+    {
+      "rank": 1,
+      "id": "9a74494d93024599ae1655d908f34c03",
+      "name": "Cloughmore Stone Rostrevor",
+      "creator": "mcg3d",
+      "url": "https://sketchfab.com/3d-models/glacial-erratic-the-cloughmore-stone-rostrover-9a74494d93024599ae1655d908f34c03",
+      "publicTriangleCount": 170960,
+      "licence": "CC BY 4.0",
+      "downloadableFlag": true,
+      "bytesAcquired": false
+    },
+    {
+      "rank": 2,
+      "id": "07773239237e4edf87dbeeb0ed69b619",
+      "name": "Cumberland Stone",
+      "creator": "hugoandersonwhymark",
+      "url": "https://sketchfab.com/3d-models/the-cumberland-stone-culloden-moor-scotland-07773239237e4edf87dbeeb0ed69b619",
+      "publicTriangleCount": 2000000,
+      "licence": "CC BY 4.0",
+      "downloadableFlag": true,
+      "bytesAcquired": false
+    },
+    {
+      "rank": 3,
+      "id": "31df74c9a9754dc0816dcc618f01659c",
+      "name": "Split Granite Boulder",
+      "creator": "QCAGriffithU",
+      "url": "https://sketchfab.com/3d-models/split-granite-boulder-31df74c9a9754dc0816dcc618f01659c",
+      "publicTriangleCount": 250000,
+      "licence": "CC BY 4.0",
+      "downloadableFlag": true,
+      "bytesAcquired": false
+    },
+    {
+      "rank": 4,
+      "id": "d68f2ebf97484d9990d6d36883f0da1e",
+      "name": "Cannock Chase Boulder",
+      "creator": "chrisbibb",
+      "url": "https://sketchfab.com/3d-models/glacial-boulder-in-cannock-chase-staffordshire-d68f2ebf97484d9990d6d36883f0da1e",
+      "publicTriangleCount": 421383,
+      "licence": "CC BY 4.0",
+      "downloadableFlag": true,
+      "bytesAcquired": false
+    }
+  ],
+  "acquisition": "Official Sketchfab Download API requires authenticated downloader; no user token or file present",
+  "futureModelingAuthorized": false,
+  "sourceGeometryAcquired": false,
+  "sourceModified": false,
+  "worldIntegrated": false,
+  "merge": false,
+  "deploy": false
+}
