@@ -27,7 +27,11 @@ try{
    const evidence=await page.evaluate(()=>({snap:window.__pop02.snapshot(),instances:window.__pop02.placements()}));
    if(evidence.snap.composition!==mode||evidence.snap.ground?.mode!=='material'||!evidence.snap.sourceAssets||evidence.snap.error)throw Error('Wrong scene configuration: '+JSON.stringify(evidence.snap));
    await page.addStyleTag({content:'aside,.badge,.foot,#inspect{display:none!important}'});
-   const img=await page.screenshot({path:out+'/'+mode+'-'+view+'.png',type:'png',timeout:180000,animations:'disabled'});
+   const dataUrl=await page.evaluate(()=>window.__pop02.capture());
+   if(!dataUrl?.startsWith('data:image/png;base64,'))throw Error('WebGL canvas failed PNG readback');
+   const img=Buffer.from(dataUrl.split(',')[1],'base64');
+   if(img.length<2048||img[0]!==137||img[1]!==80||img[2]!==78||img[3]!==71)throw Error('Invalid/empty WebGL PNG');
+   await writeFile(out+'/'+mode+'-'+view+'.png',img);
    rows.push({view,shotSha256:sha(img),camera:evidence.snap.camera,cameraQuaternion:evidence.snap.cameraQuaternion,terrainY:evidence.snap.terrainY,
     terrainSha256:evidence.snap.terrainSha256,materialHash:evidence.snap.ground.hash,render:evidence.snap.renderer,instances:evidence.instances});
    console.log(mode,view,'descriptors',evidence.instances.length,'pngSha',sha(img));
