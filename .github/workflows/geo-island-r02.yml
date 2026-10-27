@@ -1,0 +1,63 @@
+name: GEO-ISLAND-R02 isolated source and WebGL reference checks
+on:
+  push:
+    branches:
+      - feature/geo-island-r02-baseline-reconciliation
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout protected recovery-derived R02 branch
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - name: Retrieve exact B2a historical reference in separate worktree
+        shell: bash
+        run: |
+          git fetch origin 77f352f3bd4ea25a1ed5d6bff95b645a0e1050db --no-tags
+          git worktree add --detach "${RUNNER_TEMP}/b2a-reference" 77f352f3bd4ea25a1ed5d6bff95b645a0e1050db
+      - name: Verify exact shared source and compose B2a in memory
+        run: node tools/geo-island-r02/source-preflight.mjs "${RUNNER_TEMP}/b2a-reference" "${RUNNER_TEMP}/r02-evidence"
+      - name: Prepare browser and dependencies for reference-only capture
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies in separate B2a worktree
+        working-directory: ${{ runner.temp }}/b2a-reference
+        run: npm ci --no-audit --no-fund
+      - name: Install Chromium for genuine WebGL reference images
+        working-directory: ${{ runner.temp }}/b2a-reference
+        run: npx playwright install --with-deps chromium
+      - name: Compile isolated historical B2a viewer
+        working-directory: ${{ runner.temp }}/b2a-reference
+        run: npm run build
+      - name: Start B2a viewer and verify HTTP readiness
+        working-directory: ${{ runner.temp }}/b2a-reference
+        shell: bash
+        run: |
+          nohup npx vite --host 127.0.0.1 --port 4351 > "${RUNNER_TEMP}/r02-evidence/vite.log" 2>&1 &
+          for i in $(seq 1 80); do
+            if curl -fsS http://127.0.0.1:4351/geo-r02b.html >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          exit 1
+      - name: Capture real matched R1-descendant versus B2a geometry
+        working-directory: ${{ runner.temp }}/b2a-reference
+        run: |
+          node tools/geo-r02c-b2a/capture.mjs \
+            --url http://127.0.0.1:4351/geo-r02b.html \
+            --out "${RUNNER_TEMP}/r02-evidence/captures" \
+            --variants b01-b1,b2a-a --modes clayA \
+            --views a1a-birchwood,a1a-valley-shoulder,b2a-route-upper,b2a-route-scramble
+      - name: Preserve checks and renderer evidence regardless of success
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geo-island-r02-source-and-renderer-${{ github.sha }}
+          path: ${{ runner.temp }}/r02-evidence/
+          if-no-files-found: warn
