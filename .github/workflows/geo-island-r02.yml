@@ -23,6 +23,8 @@ jobs:
           git worktree add --detach "${RUNNER_TEMP}/b2a-reference" 77f352f3bd4ea25a1ed5d6bff95b645a0e1050db
       - name: Verify exact shared source and compose B2a in memory
         run: node tools/geo-island-r02/source-preflight.mjs "${RUNNER_TEMP}/b2a-reference" "${RUNNER_TEMP}/r02-evidence"
+      - name: Audit current hero corridor and search bounded lateral alternatives
+        run: node tools/geo-island-r02/corridor-audit.mjs . "${RUNNER_TEMP}/r02-evidence"
       - name: Prepare browser and dependencies for reference-only capture
         uses: actions/setup-node@v4
         with:
