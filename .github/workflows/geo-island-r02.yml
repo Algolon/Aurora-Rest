@@ -61,3 +61,44 @@ jobs:
           name: geo-island-r02-source-and-renderer-${{ github.sha }}
           path: ${{ runner.temp }}/r02-evidence/
           if-no-files-found: warn
+
+  integrated-env:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout isolated R02 opt-in viewer
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Use Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install locked recovery-derived dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Typecheck R02 preview and ensure baseline builds
+        run: npm run build
+      - name: Install Chromium for real ENV/POP/MAT comparison
+        run: npx playwright install --with-deps chromium
+      - name: Start independent opt-in R02 preview server
+        shell: bash
+        run: |
+          mkdir -p "${RUNNER_TEMP}/r02-integrated-evidence"
+          nohup npx vite --host 127.0.0.1 --port 4352 > "${RUNNER_TEMP}/r02-integrated-evidence/vite.log" 2>&1 &
+          for i in $(seq 1 80); do
+            if curl -fsS http://127.0.0.1:4352/geo-island-r02.html >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          exit 1
+      - name: Capture matched R1 vs B2a real nature and terrain
+        run: |
+          node tools/geo-island-r02/capture-env-comparison.mjs \
+            "${RUNNER_TEMP}/r02-integrated-evidence" \
+            http://127.0.0.1:4352/geo-island-r02.html
+      - name: Archive WebGL captures and placement-check evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geo-island-r02-integrated-env-${{ github.sha }}
+          path: ${{ runner.temp }}/r02-integrated-evidence/
+          if-no-files-found: warn
