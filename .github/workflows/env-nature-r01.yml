@@ -1,0 +1,51 @@
+name: ENV-NATURE-R01 | isolated authored woodland evidence
+on:
+  push:
+    branches:
+      - feature/env-nature-r01-authored-birchwood-valley
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Locked dependency installation
+        run: npm ci --no-audit --no-fund
+      - name: Test dry review poses and exact source population subset
+        run: |
+          mkdir -p "${RUNNER_TEMP}/env-nature-r01-evidence"
+          node --experimental-strip-types --test tests/env-nature-r01.test.ts 2>&1 | tee "${RUNNER_TEMP}/env-nature-r01-evidence/source-tests.log"
+      - name: Typecheck and production build
+        run: npm run build
+      - name: Install real Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Start dedicated Three.js preview
+        shell: bash
+        run: |
+          nohup npx vite --host 127.0.0.1 --port 4353 > "${RUNNER_TEMP}/env-nature-r01-evidence/vite.log" 2>&1 &
+          for i in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1:4353/env-nature-r01.html >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          exit 1
+      - name: Genuine matched source versus authored WebGL art evidence
+        run: |
+          node tools/env-nature-r01/capture.mjs \
+            "${RUNNER_TEMP}/env-nature-r01-evidence" \
+            http://127.0.0.1:4353/env-nature-r01.html
+      - name: Preserve tests, review JSON and unretouched WebGL captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-nature-r01-real-webgl-${{ github.sha }}
+          path: ${{ runner.temp }}/env-nature-r01-evidence/
+          if-no-files-found: warn
