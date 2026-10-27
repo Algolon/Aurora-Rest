@@ -11,11 +11,11 @@ await mkdir(out,{recursive:true});
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
 const views=['nature-glade','nature-turn','nature-reveal'];
-const report={milestone:'ENV-NATURE-R01',status:'UNVERIFIED',source:'True WebGL, original R1/MAT/POP source, 1280x800 DPR1',matched:[],original:null,authored:null};
+const report={milestone:'ENV-NATURE-R01',status:'UNVERIFIED',source:'True WebGL, original R1/MAT/POP source, 1100x700 DPR1',matched:[],original:null,authored:null};
 try{
  for(const mode of ['source','authored']){
-  const page=await browser.newPage({viewport:{width:1280,height:800},deviceScaleFactor:1});
-  const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&!m.text().includes('favicon'))errors.push(m.text());});
+  const page=await browser.newPage({viewport:{width:1100,height:700},deviceScaleFactor:1});
+  page.setDefaultTimeout(180000);const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&!m.text().includes('favicon'))errors.push(m.text());});
   await page.goto(url+(mode==='source'?'?composition=source':''),{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__pop02?.snapshot()?.ready===true,{timeout:240000});
   await page.locator('#ground').selectOption('material');
@@ -27,7 +27,7 @@ try{
    const evidence=await page.evaluate(()=>({snap:window.__pop02.snapshot(),instances:window.__pop02.placements()}));
    if(evidence.snap.composition!==mode||evidence.snap.ground?.mode!=='material'||!evidence.snap.sourceAssets||evidence.snap.error)throw Error('Wrong scene configuration: '+JSON.stringify(evidence.snap));
    await page.addStyleTag({content:'aside,.badge,.foot,#inspect{display:none!important}'});
-   const img=await page.screenshot({path:out+'/'+mode+'-'+view+'.png',type:'png'});
+   const img=await page.screenshot({path:out+'/'+mode+'-'+view+'.png',type:'png',timeout:180000,animations:'disabled'});
    rows.push({view,shotSha256:sha(img),camera:evidence.snap.camera,cameraQuaternion:evidence.snap.cameraQuaternion,terrainY:evidence.snap.terrainY,
     terrainSha256:evidence.snap.terrainSha256,materialHash:evidence.snap.ground.hash,render:evidence.snap.renderer,instances:evidence.instances});
    console.log(mode,view,'descriptors',evidence.instances.length,'pngSha',sha(img));
