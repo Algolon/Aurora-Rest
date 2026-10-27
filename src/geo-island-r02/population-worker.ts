@@ -11,7 +11,7 @@ try{
  const [h,w]=await Promise.all([binary('/geo-r02b/terrain.f32'),binary('/geo-r02b/water-mesh.f32')]);
  const variant=await applyR02Preview(h,1501,true);
  if(!variant)throw Error('B2a terrain not enabled in dedicated R02 worker');
- const geo=new CanonicalEnvironment(data,new HeightGrid(h,1501,2001),w);
+ data.meta.terrainSha256=variant.sha256;const geo=new CanonicalEnvironment(data,new HeightGrid(h,1501,2001),w);
  self.onmessage=e=>{const {id,epoch,chunk,config}=e.data;try{
   const p=new PopulationGenerator(geo,config).generate(chunk);
   self.postMessage({kind:'chunk',id,epoch,p});

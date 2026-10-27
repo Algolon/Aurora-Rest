@@ -16,6 +16,8 @@ try{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));page.setDefaultTimeout(180000);
   await page.goto(base+query,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__pop02?.snapshot()?.ready===true,{timeout:180000});
+  await page.locator('#ground').selectOption('material');
+  await page.waitForFunction(()=>window.__pop02?.snapshot()?.ready===true,{timeout:180000});
   const variantOut={variant,views:[]};
   for(const id of views){
    const available=await page.evaluate(id=>window.__pop02.views.some(v=>v.id===id),id);
@@ -25,11 +27,12 @@ try{
    await page.waitForTimeout(300);
    const data=await page.evaluate(()=>({snapshot:window.__pop02.snapshot(),ids:window.__pop02.ids()}));
    if(data.snapshot.r02Variant!==variant)throw Error('Wrong active terrain variant: '+JSON.stringify(data.snapshot.r02Variant));
+   if(data.snapshot.ground?.mode!=='material')throw Error('Faithful MAT ground not active');
    if(!data.snapshot.sourceAssets||data.snapshot.error)throw Error('Source assets not ready or error: '+JSON.stringify(data.snapshot.error));
    await page.addStyleTag({content:'aside,.badge,.foot,#inspect{display:none!important}'});
    const shot=await page.screenshot({path:out+'/'+variant+'-'+id+'.png',type:'png'});
    variantOut.views.push({id,frameSha256:sha(shot),terrainSha256:data.snapshot.r02TerrainSha256,
-    count:data.snapshot.descriptorCount,idsSha256:sha(Buffer.from(JSON.stringify(data.ids))),camera:data.snapshot.camera,
+    count:data.snapshot.descriptorCount,materialHash:data.snapshot.ground.hash,materialMode:data.snapshot.ground.mode,idsSha256:sha(Buffer.from(JSON.stringify(data.ids))),camera:data.snapshot.camera,
     cameraQuaternion:data.snapshot.cameraQuaternion,terrainY:data.snapshot.terrainY,renderer:data.snapshot.renderer});
    console.log(variant,id,data.snapshot.descriptorCount,data.snapshot.r02TerrainSha256);
   }
