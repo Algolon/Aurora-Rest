@@ -1,0 +1,74 @@
+{
+ "schema": "aurora-terrain-variants/1",
+ "family": "b2a",
+ "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+ "variants": {
+  "m0": {
+   "id": "m0",
+   "label": "B2a M0 \u00b7 canonical R1 (empty variant)",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "changedCells": 0,
+   "patch": null
+  },
+  "a": {
+   "id": "a",
+   "label": "B2a \u00b7 North massif geographic integration",
+   "design": "tools/geo-r02c-b2a/design/north-massif-b2a.json",
+   "designSha256": "59379782c9d848d115b1be3bb95e1731360d8815b4edced3f8ffd5fa99657552",
+   "baseTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+   "referenceTerrainSha256": "86e89c1e955ef44b252111d87cfce1194eae55efac479bb1a3b069966ce7323d",
+   "terrainSha256": "a2476daa86a3b4291d20a13b89359446eb19a923d62621102daac147dc2a3332",
+   "changedCells": 203591,
+   "patch": {
+    "file": "a.patch.f32",
+    "rows": [
+     97,
+     609
+    ],
+    "cols": [
+     310,
+     907
+    ],
+    "sha256": "56502a85f399232c3b73ae59a27e9df345a81e0b36831c6d02d85738ee930e11",
+    "bytes": 1227096
+   },
+   "stats": {
+    "maxRaiseM": 105.24,
+    "maxLoweringM": 167.65,
+    "changedHa": 325.75,
+    "summitM": 897.04,
+    "summitXZ": [
+     -520.0,
+     2772.0
+    ]
+   },
+   "stages": {
+    "D1": {
+     "cellsTapered": 91697,
+     "maxHeightChangeVsUntaperedM": 280.5
+    },
+    "D4": [
+     {
+      "status": "outlet carved",
+      "floorM": 518.19,
+      "previousSpillM": 524.76,
+      "previousFillDepthM": 6.57,
+      "basinHa": 0.4,
+      "pathLengthM": 188.2,
+      "bedGrade": 0.0077,
+      "maxCutM": 7.25,
+      "carvedCells": 229,
+      "outletEndXZ": [
+       254,
+       2146
+      ],
+      "id": "O1"
+     }
+    ]
+   },
+   "routes": "routes.json",
+   "status": "experimental B2a candidate; not approved; R1 and B1.1 unchanged"
+  }
+ }
+}
