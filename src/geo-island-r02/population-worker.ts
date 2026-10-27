@@ -1,0 +1,20 @@
+/** GEO-ISLAND-R02 B2a-only population worker. The protected POP-02A worker is unchanged.
+ * Uses the same SHA-verified terrain geometry as the opt-in parent preview.
+ * Not a production renderer or ecological placement acceptance. */
+import {CanonicalEnvironment} from '../pop-01/geography.ts';
+import {HeightGrid} from '../geo-r02b/terrain.ts';
+import {PopulationGenerator} from '../pop-01/generator.ts';
+import {applyR02Preview} from './variant.ts';
+const binary=async(p:string)=>{const r=await fetch(p);if(!r.ok)throw Error('Worker data '+p);return new Float32Array(await r.arrayBuffer());};
+try{
+ const data=await(await fetch('/geo-r02b/features.json')).json();
+ const [h,w]=await Promise.all([binary('/geo-r02b/terrain.f32'),binary('/geo-r02b/water-mesh.f32')]);
+ const variant=await applyR02Preview(h,1501,true);
+ if(!variant)throw Error('B2a terrain not enabled in dedicated R02 worker');
+ const geo=new CanonicalEnvironment(data,new HeightGrid(h,1501,2001),w);
+ self.onmessage=e=>{const {id,epoch,chunk,config}=e.data;try{
+  const p=new PopulationGenerator(geo,config).generate(chunk);
+  self.postMessage({kind:'chunk',id,epoch,p});
+ }catch(error){self.postMessage({kind:'error',id,epoch,message:String(error)});}};
+ self.postMessage({kind:'ready'});
+}catch(e){self.postMessage({kind:'error',message:String(e)});}
