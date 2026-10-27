@@ -1,0 +1,24 @@
+name: ENV-NATURE-R01R artistic review evidence guard
+on:
+  push:
+    branches: [review/env-nature-r01r-visual-acceptance]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  documented-no-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Assert reproducible technical evidence and explicitly record rejected art gate
+        run: |
+          node tools/env-nature-r01/art-audit.mjs docs/env-nature-r01/R01R-evidence.json art-audit.json
+          node --input-type=module -e "import fs from 'node:fs';const o=JSON.parse(fs.readFileSync('art-audit.json'));if(o.technical!=='PASS'||o.artDecision!=='NOT_APPROVED'||o.visualVisibility!=='FAIL_UNCHANGED_REVIEW_CAMERA')process.exit(1);"
+      - name: Preserve machine-readable art gate result
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-nature-r01r-art-decision
+          path: art-audit.json

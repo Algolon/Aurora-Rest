@@ -1,0 +1,57 @@
+{
+  "milestone": "ENV-NATURE-R01R",
+  "decision": "ART_NOT_APPROVED",
+  "reviewRun": "https://github.com/Algolon/Aurora-Rest/actions/runs/40536613933",
+  "artifact": "https://github.com/Algolon/Aurora-Rest/actions/runs/40536613933/artifacts/12749921029",
+  "originalReviewJsonSha256": "64299cfaf94774f0482ab00c37779c1976dac40ffd2eda29b0de28df3d843d16",
+  "sourceTerrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+  "matched": [
+    {
+      "view": "nature-glade",
+      "sourceCount": 4739,
+      "authoredCount": 4722,
+      "removedCount": 17,
+      "removedByFamily": {
+        "birch": 3,
+        "pine": 14
+      },
+      "pixelIdentical": false,
+      "cameraIdentity": true,
+      "terrainAndMaterialIdentity": true,
+      "fullDescriptorIdentityForRetained": true,
+      "strongRgbPixelDeltaOver20Pct": 19.62
+    },
+    {
+      "view": "nature-turn",
+      "sourceCount": 3181,
+      "authoredCount": 3170,
+      "removedCount": 11,
+      "removedByFamily": {
+        "birch": 5,
+        "pine": 6
+      },
+      "pixelIdentical": false,
+      "cameraIdentity": true,
+      "terrainAndMaterialIdentity": true,
+      "fullDescriptorIdentityForRetained": true,
+      "strongRgbPixelDeltaOver20Pct": 43.02
+    },
+    {
+      "view": "nature-reveal",
+      "sourceCount": 4076,
+      "authoredCount": 4065,
+      "removedCount": 11,
+      "removedByFamily": {
+        "birch": 5,
+        "pine": 6
+      },
+      "pixelIdentical": true,
+      "cameraIdentity": true,
+      "terrainAndMaterialIdentity": true,
+      "fullDescriptorIdentityForRetained": true,
+      "strongRgbPixelDeltaOver20Pct": 0
+    }
+  ],
+  "pixelDifferenceMethod": "PIL RGB array; % pixels with max absolute channel difference >20; no screenshot retouching; visual manual review still required",
+  "note": "Counts are per camera-local streaming window, not independent unique removals globally."
+}
