@@ -4,6 +4,9 @@
  * normal/AO/roughness) and the shader that reads it are identical to MAT-01, so only texture content and
  * per-material uniforms differ. Deterministic: fixed seeds, integer hash noise, mulberry32 placement.
  *
+ * R4 (same follow-up): R3's ≈1 m mats repeated visibly on the 2.6 m tile at 10–30 m, so mats shrink to ≈20–40 cm
+ * with a softer base; metre-scale moss carpets are left to the shader's world-space patch layer.
+ *
  * R3 (same follow-up): forest moss only — R2's lit lobe clusters read as clover/lily pads at 2–6 m, so moss becomes
  * irregular low mats of tiny short tufts (the meadow's vocabulary at moss scale) over a soft moss base. Meadow is R2.
  *
@@ -135,9 +138,12 @@ function forestFloor(p:Plane,seed:number){
  for(let i=0,N=Math.round(700*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(5+rng()*7)*px,1.5*px,rng()<.7?.37+rng()*.05:.21+rng()*.03,.38,.03);}
  // Moss mats: irregular low carpets gathered by a broad field, built from many tiny short tufts in random
  // directions (the meadow's tuft vocabulary at moss scale) over a soft darker moss base — no lit lobes.
- const mossBase=p.noise(9,seed+15,3);
- for(let k=0;k<S*S;k++){const m=smoothstep(.12,.38,moss[k]+.12*mossBase[k]);if(m>0)p.paint(k,.5+.04*mossBase[k],m*.85);}
- for(let i=0,N=Math.round(9000*area);i<N;i++){const x=rng()*S,y=rng()*S,k=p.idx(x,y),m=smoothstep(.14,.42,moss[k]+.12*mossBase[k]);if(rng()>m)continue;
+ // Mats stay ≈20–40 cm inside the 2.6 m tile so no large recognisable shape repeats; metre-scale moss carpets come
+ // from the shader's world-space patch layer, which never tiles.
+ const mossBase=p.noise(9,seed+15,3),mossFine=p.noise(8,seed+16,3),mat=new Float32Array(S*S);
+ for(let k=0;k<S*S;k++)mat[k]=.75*mossFine[k]+.35*moss[k]+.1*mossBase[k];
+ for(let k=0;k<S*S;k++){const m=smoothstep(.05,.27,mat[k]);if(m>0)p.paint(k,.5+.04*mossBase[k],m*.65);}
+ for(let i=0,N=Math.round(7000*area);i<N;i++){const x=rng()*S,y=rng()*S,k=p.idx(x,y),m=smoothstep(.07,.31,mat[k]);if(rng()>m)continue;
   p.tuft(x,y,rng()*Math.PI*2,(2.2+rng()*2.2)*px,.53+.05*mossBase[k]+.04*(rng()-.5),rng);}
  // Twigs: few, thicker, only slightly darker than humus.
  for(let i=0,N=Math.round(14*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(26+rng()*30)*px,2.5*px,.23+rng()*.03,.55,.18,(rng()-.5)*.7);}
