@@ -1,0 +1,125 @@
+{
+  "milestone": "MAT-ART-R01 Phase A",
+  "note": "Luminance in CIE L* including the shader near-field cavity-AO factor; 512 px textures; variance share per world wavelength band.",
+  "footprints": [
+    {
+      "distanceM": 1,
+      "acrossMm": 3.1267491402806047,
+      "alongMm": 3.6012367833161614
+    },
+    {
+      "distanceM": 2,
+      "acrossMm": 4.122641612151386,
+      "alongMm": 6.260611638688099
+    },
+    {
+      "distanceM": 3,
+      "acrossMm": 5.387844032842511,
+      "alongMm": 10.692903064307991
+    },
+    {
+      "distanceM": 5,
+      "acrossMm": 8.21787500478189,
+      "alongMm": 24.876235626291646
+    },
+    {
+      "distanceM": 8,
+      "acrossMm": 12.703875289933215,
+      "alongMm": 59.44810874612679
+    },
+    {
+      "distanceM": 12,
+      "acrossMm": 18.812535149258515,
+      "alongMm": 130.36477155604507
+    },
+    {
+      "distanceM": 20,
+      "acrossMm": 31.14458506857659,
+      "alongMm": 357.29809254778354
+    },
+    {
+      "distanceM": 35,
+      "acrossMm": 54.36339706082477,
+      "alongMm": 1088.6261777750658
+    }
+  ],
+  "original": [
+    {
+      "id": "forest-floor",
+      "tileM": 2.2,
+      "normalStrength": 0.9,
+      "texelMm": 4.296875,
+      "rmsLstar": 5.435075245422328,
+      "bands": {
+        "grain <2.5 cm": {
+          "rmsLstar": 2.509132428228184,
+          "varianceShare": 0.21312580887953178
+        },
+        "blade 2.5–6 cm": {
+          "rmsLstar": 2.243915395651606,
+          "varianceShare": 0.17045189527647195
+        },
+        "tuft 6–15 cm": {
+          "rmsLstar": 2.796357608931246,
+          "varianceShare": 0.2647124074025201
+        },
+        "clump 15–40 cm": {
+          "rmsLstar": 2.412491072416351,
+          "varianceShare": 0.1970245334301025
+        },
+        "patch ≥40 cm": {
+          "rmsLstar": 2.1376183070552486,
+          "varianceShare": 0.15468535501137373
+        }
+      },
+      "normalSlopeRms": 0.1752986073160669,
+      "normalSlopeMean": 0.10277139836463611,
+      "aoMean": 0.9569863712089471,
+      "aoStd": 0.05290325387136467,
+      "meanLinear": [
+        0.06357560554932479,
+        0.05594970484072451,
+        0.02819726648691424
+      ]
+    },
+    {
+      "id": "meadow-turf",
+      "tileM": 2.6,
+      "normalStrength": 0.75,
+      "texelMm": 5.078125,
+      "rmsLstar": 14.171613947086692,
+      "bands": {
+        "grain <2.5 cm": {
+          "rmsLstar": 11.256148272637516,
+          "varianceShare": 0.6308716103898194
+        },
+        "blade 2.5–6 cm": {
+          "rmsLstar": 6.83946952475135,
+          "varianceShare": 0.23291969425964656
+        },
+        "tuft 6–15 cm": {
+          "rmsLstar": 4.53555338550798,
+          "varianceShare": 0.10242876588289954
+        },
+        "clump 15–40 cm": {
+          "rmsLstar": 2.257043664311873,
+          "varianceShare": 0.025365375491485403
+        },
+        "patch ≥40 cm": {
+          "rmsLstar": 1.299974589852423,
+          "varianceShare": 0.008414553976179743
+        }
+      },
+      "normalSlopeRms": 0.6635621864357827,
+      "normalSlopeMean": 0.5697211408278974,
+      "aoMean": 0.7311493368710107,
+      "aoStd": 0.24460708031161868,
+      "meanLinear": [
+        0.08860228213613534,
+        0.10057103098039148,
+        0.028904510315707132
+      ]
+    }
+  ],
+  "matArtR01": []
+}
