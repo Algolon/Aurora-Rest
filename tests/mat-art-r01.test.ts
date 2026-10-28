@@ -90,7 +90,7 @@ test('diagnostic ablations change only the documented channel of in-scope materi
  for(const v of ['diag-normal-off','diag-meso-off','diag-scale-2x'] as const){const defs=diagnosticDefinitions(MATERIALS,v);assert.equal(defs[2],MATERIALS[2]);assert.equal(defs[3],MATERIALS[3]);assert.notDeepEqual(defs[0],MATERIALS[0]);}
 });
 
-test('stylized frequency budget: fine contrast far below MAT-01 meadow, shape-scale contrast retained',()=>{
+test('stylized frequency budget: fine contrast far below MAT-01 meadow, shape-and-larger contrast retained',()=>{
  // Absolute L* budgets (not variance shares): R2 tufts have crisp tapered edges by design, which shifts some share into
  // the blade band while the absolute fine contrast stays a fraction of MAT-01's photographic blade field.
  const band=(s:ReturnType<typeof spectrum>,a:string,b:string)=>Math.hypot(s.bands[a].rmsLstar,s.bands[b].rmsLstar);
@@ -98,10 +98,11 @@ test('stylized frequency budget: fine contrast far below MAT-01 meadow, shape-sc
  const originalFine=band(original,'grain <2.5 cm','blade 2.5–6 cm');
  for(const id of ['forest-floor','meadow-turf']){
   const v=MAT_ART_R01_DEFINITIONS.find(m=>m.id===id)!,sv=spectrum(synthesizeMatArtR01(v,512),v.tileM);
-  const fine=band(sv,'grain <2.5 cm','blade 2.5–6 cm'),shape=band(sv,'tuft 6–15 cm','clump 15–40 cm');
+  // Shape = everything at or above tuft scale: R3 forest moss carries its structure in ≈1 m mats against humus.
+  const fine=band(sv,'grain <2.5 cm','blade 2.5–6 cm'),shape=Math.hypot(band(sv,'tuft 6–15 cm','clump 15–40 cm'),sv.bands['patch ≥40 cm'].rmsLstar);
   assert.ok(fine<.35*originalFine,`${id} sub-6 cm L* ${fine} vs MAT-01 meadow ${originalFine}`);
   assert.ok(shape>3,`${id} shape-scale L* ${shape} (not flat)`);
-  assert.ok(fine/shape<1.2,`${id} fine/shape ${fine/shape}; MAT-01 meadow is ${(originalFine/band(original,'tuft 6–15 cm','clump 15–40 cm')).toFixed(2)}`);
+  assert.ok(fine/shape<1.2,`${id} fine/shape ${fine/shape}; MAT-01 meadow is ${(originalFine/Math.hypot(band(original,'tuft 6–15 cm','clump 15–40 cm'),original.bands['patch ≥40 cm'].rmsLstar)).toFixed(2)}`);
  }
  assert.equal(sha(readFileSync('src/terrain-material/textures.ts')),sha(execFileSync('git',['show',FOUNDATION+':src/terrain-material/textures.ts'])));
 });

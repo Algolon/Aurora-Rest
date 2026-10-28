@@ -4,9 +4,12 @@
  * normal/AO/roughness) and the shader that reads it are identical to MAT-01, so only texture content and
  * per-material uniforms differ. Deterministic: fixed seeds, integer hash noise, mulberry32 placement.
  *
+ * R3 (same follow-up): forest moss only — R2's lit lobe clusters read as clover/lily pads at 2–6 m, so moss becomes
+ * irregular low mats of tiny short tufts (the meadow's vocabulary at moss scale) over a soft moss base. Meadow is R2.
+ *
  * R2 (owner-authorised follow-up resolving the R1 ART CONDITIONAL item): close-range shape vocabulary only — meadow
- * clumps become fans of tapered, pointed blades (`tuft`/`blade`) instead of soft ellipses, forest moss cushions become
- * lobed mound clusters with a faint stipple, and meadow accents move toward the tuft tone. Palette, tints, synthesis
+ * clumps become fans of tapered, pointed blades (`tuft`/`blade`) instead of soft ellipses (forest moss was tried as
+ * lobed mound clusters, superseded by R3), and meadow accents move toward the tuft tone. Palette, tints, synthesis
  * and shader inputs are unchanged from R1.
  *
  * R1 (single refinement after the first A/B comparison): colour hierarchy only — meadow palette desaturated ≈20% and
@@ -130,17 +133,12 @@ function forestFloor(p:Plane,seed:number){
   p.blob(x,y,r,r*(.6+rng()*.3),rng()*Math.PI,dark?.2+rng()*.03:.34+rng()*.04,{dome:dark?0:.12,lit:.06,opacity:.55,rough:.93,ragged:.25,seed:seed+10,soft:.7});}
  // Needles/crumbs: few, soft, near-base tone (close-range richness without speckle).
  for(let i=0,N=Math.round(700*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(5+rng()*7)*px,1.5*px,rng()<.7?.37+rng()*.05:.21+rng()*.03,.38,.03);}
- // Moss cushions: soft domed masses gathered by a broad field; muted, not lime.
- const cushions:{x:number;y:number;r:number;t:number}[]=[];
- for(let i=0,N=Math.round(1400*area);i<N&&cushions.length<170*area;i++){const x=rng()*S,y=rng()*S,m=moss[p.idx(x,y)];
-  if(rng()>smoothstep(0,.45,m))continue;const sz=rng();cushions.push({x,y,r:(8+sz*sz*18)*px,t:.52+.06*(rng()-.5)+.04*m});}
- cushions.sort((a,b)=>b.r-a.r);
- // Each cushion is a cluster of small domed lobes with a faint low-contrast stipple: moss, not a clover leaf.
- for(const c of cushions){const n=3+Math.floor(rng()*3);
-  for(let l=0;l<n;l++){const a=rng()*Math.PI*2,d=l?c.r*(.35+rng()*.25):0,r=c.r*(l?.5+rng()*.2:.62);
-   p.blob(c.x+Math.cos(a)*d,c.y+Math.sin(a)*d,r,r*(.8+rng()*.2),rng()*Math.PI,c.t+(rng()-.5)*.05,{dome:.36,lit:.12,opacity:.92,rough:.97,ragged:.18,seed:seed+12,soft:.35});}
-  for(let d=0,N=Math.round(c.r*c.r/(14*px*px));d<N;d++){const a=rng()*Math.PI*2,q=Math.sqrt(rng())*c.r*.8,r=(1.4+rng()*1.1)*px;
-   p.blob(c.x+Math.cos(a)*q,c.y+Math.sin(a)*q,r,r,0,c.t+(rng()<.5?-.05:.04),{dome:.05,lit:0,opacity:.3,rough:.97,ragged:0,seed:seed+14,soft:.6});}}
+ // Moss mats: irregular low carpets gathered by a broad field, built from many tiny short tufts in random
+ // directions (the meadow's tuft vocabulary at moss scale) over a soft darker moss base — no lit lobes.
+ const mossBase=p.noise(9,seed+15,3);
+ for(let k=0;k<S*S;k++){const m=smoothstep(.12,.38,moss[k]+.12*mossBase[k]);if(m>0)p.paint(k,.5+.04*mossBase[k],m*.85);}
+ for(let i=0,N=Math.round(9000*area);i<N;i++){const x=rng()*S,y=rng()*S,k=p.idx(x,y),m=smoothstep(.14,.42,moss[k]+.12*mossBase[k]);if(rng()>m)continue;
+  p.tuft(x,y,rng()*Math.PI*2,(2.2+rng()*2.2)*px,.53+.05*mossBase[k]+.04*(rng()-.5),rng);}
  // Twigs: few, thicker, only slightly darker than humus.
  for(let i=0,N=Math.round(14*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(26+rng()*30)*px,2.5*px,.23+rng()*.03,.55,.18,(rng()-.5)*.7);}
  // Birch leaves as simplified ovals in drifts: larger, fewer, muted gold.
