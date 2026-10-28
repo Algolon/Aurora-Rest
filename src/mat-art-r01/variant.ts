@@ -4,6 +4,11 @@
  * normal/AO/roughness) and the shader that reads it are identical to MAT-01, so only texture content and
  * per-material uniforms differ. Deterministic: fixed seeds, integer hash noise, mulberry32 placement.
  *
+ * R2 (owner-authorised follow-up resolving the R1 ART CONDITIONAL item): close-range shape vocabulary only — meadow
+ * clumps become fans of tapered, pointed blades (`tuft`/`blade`) instead of soft ellipses, forest moss cushions become
+ * lobed mound clusters with a faint stipple, and meadow accents move toward the tuft tone. Palette, tints, synthesis
+ * and shader inputs are unchanged from R1.
+ *
  * R1 (single refinement after the first A/B comparison): colour hierarchy only — meadow palette desaturated ≈20% and
  * warmed ≈7° toward olive moss, macro/exposure hue swing and meso amount restored, forest moss slightly muted and its
  * patch tint greener to narrow the family hue gap. Shapes and synthesis are unchanged from the first comparison.
@@ -64,6 +69,22 @@ class Plane {
    this.h[k]=Math.max(this.h[k],lerp(this.h[k],this.h[k]*.5+.35+o.dome*Math.sqrt(Math.max(0,1-qq*qq)),f));
    this.r[k]=lerp(this.r[k],o.rough,f);}
  }
+ /** Tapered, pointed blade with a 1 px anti-aliased edge: root darker, tip lighter, one side catching the light. */
+ blade(x0:number,y0:number,angle:number,len:number,width:number,t:number,o:{opacity:number;axis:number;side:number;lift:number;curve:number}){
+  const steps=Math.max(3,Math.ceil(len*1.5));let x=x0,y=y0,a=angle;
+  for(let s=0;s<=steps;s++){const along=s/steps,half=Math.max(.7,width/2*Math.pow(1-along,.8)),nx=-Math.sin(a),ny=Math.cos(a);
+   for(let w=-half-1;w<=half+1;w+=.5){const cov=clamp(half+.5-Math.abs(w));if(cov<=0)continue;const k=this.idx(x+nx*w,y+ny*w),side=w/half;
+    this.paint(k,t+o.axis*(along-.35)+o.side*side,cov*o.opacity);
+    this.h[k]=Math.max(this.h[k],lerp(this.h[k],.36+o.lift*(1-.4*along)*(1-.5*side*side),cov));this.r[k]=lerp(this.r[k],.9,cov);}
+   x+=Math.cos(a)*len/steps;y+=Math.sin(a)*len/steps;a+=o.curve/steps;}
+ }
+ /** Grass tuft: 3–5 blades fanned around the sward lean from one root. */
+ tuft(cx:number,cy:number,lean:number,size:number,t:number,rng:()=>number){
+  const n=3+Math.floor(rng()*3);
+  for(let b=0;b<n;b++){const f=n>1?b/(n-1)-.5:0;
+   this.blade(cx+(rng()-.5)*size*.5,cy+(rng()-.5)*size*.3,lean+f*.95+(rng()-.5)*.25,size*(1.6+rng()*.9),size*(.42+rng()*.16),t+(rng()-.5)*.07,
+    {opacity:.93,axis:.17,side:.045,lift:.3,curve:(rng()-.5)*.6+f*.25});}
+ }
  /** Wide, soft stroke (≥ 2 px) with partial opacity; `t` is a palette offset applied to the existing colour region. */
  stroke(x0:number,y0:number,angle:number,len:number,width:number,t:number,opacity:number,lift:number,curve=0){
   const steps=Math.max(2,Math.ceil(len*1.5));let x=x0,y=y0,a=angle;
@@ -87,13 +108,13 @@ function meadowTurf(p:Plane,seed:number){
  for(let i=0,N=Math.round(3000*area);i<N&&clumps.length<1500*area;i++){const x=rng()*S,y=rng()*S,c=cover[p.idx(x,y)];
   if(rng()>.3+.7*smoothstep(-.6,.3,c))continue;const sz=rng();
   clumps.push({x,y,r:(7+sz*sz*12)*px,t:.5+.1*tone[p.idx(x,y)]+.12*(rng()-.5)+.05*c});}
- // Painted back-to-front (top of tile first) so tufts overlap like scales; each leans with the sward, darker at
- // its root and lighter toward its tip.
+ // Tapered grass tufts painted back-to-front (top of tile first): each fans around the sward lean from one root,
+ // darker at the root and lighter toward pointed tips.
  clumps.sort((a,b)=>a.y-b.y);
- for(const c of clumps)p.blob(c.x,c.y,c.r*1.5,c.r*(.5+rng()*.18),lean+(rng()-.5)*.5,c.t,{dome:.3,lit:.09,axis:.13,opacity:.9,rough:.9,ragged:.22,seed:seed+11,soft:.5});
+ for(const c of clumps)p.tuft(c.x,c.y,lean,c.r*.85,c.t,rng);
  // Restrained blade accents: few, fanned and curved, on clump crowns, close to clump tone.
- for(let i=0,N=Math.round(2600*area);i<N;i++){const x=rng()*S,y=rng()*S,k=p.idx(x,y);if(p.h[k]<.55||rng()>.6)continue;
-  const lighter=rng()<.65;p.stroke(x,y,lean+(rng()-.5)*1.6,(6+rng()*7)*px,1.5*px,lighter?.64+rng()*.07:.45+rng()*.05,lighter?.34:.28,.05,(rng()-.5)*1.1);}
+ for(let i=0,N=Math.round(1500*area);i<N;i++){const x=rng()*S,y=rng()*S,k=p.idx(x,y);if(p.h[k]<.55||rng()>.6)continue;
+  const lighter=rng()<.6;p.stroke(x,y,lean+(rng()-.5)*1.6,(6+rng()*7)*px,1.5*px,lighter?.59+rng()*.05:.45+rng()*.05,lighter?.28:.26,.05,(rng()-.5)*1.1);}
  // Sparse dry-straw notes in loose groups.
  const dryField=p.noise(3,seed+5,2);
  for(let i=0,N=Math.round(380*area);i<N;i++){const x=rng()*S,y=rng()*S;if(rng()>smoothstep(.15,.5,dryField[p.idx(x,y)]))continue;
@@ -111,10 +132,15 @@ function forestFloor(p:Plane,seed:number){
  for(let i=0,N=Math.round(700*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(5+rng()*7)*px,1.5*px,rng()<.7?.37+rng()*.05:.21+rng()*.03,.38,.03);}
  // Moss cushions: soft domed masses gathered by a broad field; muted, not lime.
  const cushions:{x:number;y:number;r:number;t:number}[]=[];
- for(let i=0,N=Math.round(1400*area);i<N&&cushions.length<210*area;i++){const x=rng()*S,y=rng()*S,m=moss[p.idx(x,y)];
+ for(let i=0,N=Math.round(1400*area);i<N&&cushions.length<170*area;i++){const x=rng()*S,y=rng()*S,m=moss[p.idx(x,y)];
   if(rng()>smoothstep(0,.45,m))continue;const sz=rng();cushions.push({x,y,r:(8+sz*sz*18)*px,t:.52+.06*(rng()-.5)+.04*m});}
  cushions.sort((a,b)=>b.r-a.r);
- for(const c of cushions)p.blob(c.x,c.y,c.r,c.r*(.7+rng()*.25),rng()*Math.PI,c.t,{dome:.38,lit:.1,opacity:.9,rough:.97,ragged:.3,seed:seed+12,soft:.55});
+ // Each cushion is a cluster of small domed lobes with a faint low-contrast stipple: moss, not a clover leaf.
+ for(const c of cushions){const n=3+Math.floor(rng()*3);
+  for(let l=0;l<n;l++){const a=rng()*Math.PI*2,d=l?c.r*(.35+rng()*.25):0,r=c.r*(l?.5+rng()*.2:.62);
+   p.blob(c.x+Math.cos(a)*d,c.y+Math.sin(a)*d,r,r*(.8+rng()*.2),rng()*Math.PI,c.t+(rng()-.5)*.05,{dome:.36,lit:.12,opacity:.92,rough:.97,ragged:.18,seed:seed+12,soft:.35});}
+  for(let d=0,N=Math.round(c.r*c.r/(14*px*px));d<N;d++){const a=rng()*Math.PI*2,q=Math.sqrt(rng())*c.r*.8,r=(1.4+rng()*1.1)*px;
+   p.blob(c.x+Math.cos(a)*q,c.y+Math.sin(a)*q,r,r,0,c.t+(rng()<.5?-.05:.04),{dome:.05,lit:0,opacity:.3,rough:.97,ragged:0,seed:seed+14,soft:.6});}}
  // Twigs: few, thicker, only slightly darker than humus.
  for(let i=0,N=Math.round(14*area);i<N;i++){const x=rng()*S,y=rng()*S;p.stroke(x,y,rng()*Math.PI*2,(26+rng()*30)*px,2.5*px,.23+rng()*.03,.55,.18,(rng()-.5)*.7);}
  // Birch leaves as simplified ovals in drifts: larger, fewer, muted gold.
