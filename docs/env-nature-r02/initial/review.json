@@ -1,0 +1,1976 @@
+{
+  "milestone": "ENV-NATURE-R02",
+  "evidence": "Unretouched Three.js WebGL canvas PNG readback",
+  "viewport": {
+    "width": 1100,
+    "height": 700,
+    "dpr": 1
+  },
+  "fov": 57,
+  "eyeHeight": 1.75,
+  "seed": 73129,
+  "records": [
+    {
+      "mode": "source",
+      "view": "shelter",
+      "file": "source-shelter.png",
+      "sha256": "e76a26a59b7587792b66d665a9f0904fa81394d7e9fc8d70115bb4fe8c0f41e8",
+      "readbackMs": 2539,
+      "sourceHash": "3016405d1c3c7fd9bec14b39997df2a3508f1787ad335aba201fc572643bcc0e",
+      "groundHash": "769d7d8f7aa055a693366171fdaa3d49a6cdb07711043278e43688b79d38b129",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "source",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 0,
+        "overlayCounts": {},
+        "sourceIdentity": 4545,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "shelter",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4545,
+        "counts": {
+          "birch": 389,
+          "pine": 250,
+          "grass": 3831,
+          "rock": 75
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 25,
+          "discarded": 0,
+          "generationMs": 147.50000005960464
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4461,
+          "byFamily": {
+            "birch": 389,
+            "pine": 250,
+            "grass": 3747,
+            "rock": 75
+          },
+          "lodCounts": {
+            "near": 10,
+            "mid": 5,
+            "far": 16,
+            "xfar": 136
+          },
+          "visible": 188,
+          "geometryTriangles": 112706,
+          "pageBuildMs": 1380.0999999642372,
+          "cameraUpdateMs": 0.40000003576278687,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 84
+          }
+        },
+        "renderer": {
+          "calls": 66,
+          "triangles": 466253,
+          "memory": {
+            "geometries": 27,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.40000003576278687,
+          "lastRenderSubmissionMs": 0.3999999761581421,
+          "pageBuildMs": 1380.0999999642372,
+          "pageTimes": [
+            3639.5,
+            1796.9000000357628,
+            1217.7000000476837,
+            1629.800000011921,
+            1373.699999988079,
+            1375.199999988079,
+            1378.199999988079,
+            1397,
+            1382.699999988079,
+            2338.699999988079,
+            1171.6000000238419,
+            1190.7000000476837,
+            1300.5,
+            1378.5,
+            1402.800000011921,
+            1352.800000011921,
+            1364.6000000238419,
+            1328.300000011921,
+            2715.399999976158,
+            1199.5,
+            1191.800000011921,
+            1455.5999999642372,
+            2050.300000011921,
+            1556.1000000238419,
+            1415,
+            1384.8999999761581,
+            1380.0999999642372
+          ],
+          "frameIntervals": [
+            150.0999999999999,
+            15.700000000000273,
+            17.59999999999991,
+            2316.7000000000003,
+            3850.1000000000004,
+            1816.699999999999,
+            1233.3999999999996,
+            1650.1000000000004,
+            1366.7000000000007,
+            1383.300000000001,
+            1383.3999999999978,
+            1400,
+            1383.2000000000007,
+            16.799999999999272,
+            4116.4000000000015,
+            17.099999999998545,
+            16.5,
+            1250.2000000000007,
+            2350,
+            1166.4000000000015,
+            1200.2999999999993,
+            1299.7999999999993,
+            1383.5999999999985,
+            1400,
+            1366.7000000000044,
+            1366.5999999999985,
+            1333.4000000000015,
+            33.299999999995634,
+            2716.7000000000044,
+            1200.0999999999985,
+            1183.2999999999956,
+            1465.7000000000044,
+            2050,
+            1566.5999999999985,
+            1417.5999999999985,
+            1383.300000000003,
+            1383.4000000000015,
+            16.39999999999418
+          ],
+          "renderSubmissionTimes": [
+            54,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.5,
+            207.60000002384186,
+            0.40000003576278687,
+            27.30000001192093,
+            1.800000011920929,
+            0.5999999642372131,
+            0.699999988079071,
+            0.5999999642372131,
+            0.6000000238418579,
+            0.5,
+            0.699999988079071,
+            0.6000000238418579,
+            0.20000004768371582,
+            0.30000001192092896,
+            0.19999998807907104,
+            1.199999988079071,
+            0.19999998807907104,
+            0.699999988079071,
+            0.5,
+            0.40000003576278687,
+            0.5999999642372131,
+            0.5,
+            0.5,
+            0.3999999761581421,
+            0.3999999761581421,
+            1.600000023841858,
+            0.19999998807907104,
+            0.699999988079071,
+            2.199999988079071,
+            1,
+            0.30000001192092896,
+            0.6000000238418579,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.3999999761581421,
+            0.3999999761581421
+          ]
+        },
+        "camera": [
+          -772,
+          109.39912414550781,
+          -84
+        ],
+        "terrainY": 107.64912414550781,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          0.030414541442905632,
+          -0.5842959150641036,
+          0.021921373422166168,
+          0.8106742210626324
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        2.099999964237213,
+        1.100000023841858,
+        1,
+        4.300000011920929,
+        1.199999988079071,
+        2.699999988079071,
+        2,
+        1
+      ]
+    },
+    {
+      "mode": "source",
+      "view": "discovery",
+      "file": "source-discovery.png",
+      "sha256": "a90966cdcfac21ea4213206de592c27fc84889b8c66e4d41388d6c09ba6e2a65",
+      "readbackMs": 1695,
+      "sourceHash": "e6215f113f544f2cef1d2cdd51994755407f22f44434e9215e79b97a5e6b1a31",
+      "groundHash": "d4549985fd60726a03a329ff9f2fae496d7eb2b5b97020b48057f4209e157364",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "source",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 0,
+        "overlayCounts": {},
+        "sourceIdentity": 4739,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "discovery",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4739,
+        "counts": {
+          "birch": 428,
+          "pine": 335,
+          "grass": 3897,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 30,
+          "discarded": 0,
+          "generationMs": 193.5
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4657,
+          "byFamily": {
+            "birch": 428,
+            "pine": 335,
+            "grass": 3815,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 11,
+            "mid": 6,
+            "far": 21,
+            "xfar": 185
+          },
+          "visible": 244,
+          "geometryTriangles": 148972,
+          "pageBuildMs": 1627.1000000238419,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 82
+          }
+        },
+        "renderer": {
+          "calls": 90,
+          "triangles": 540609,
+          "memory": {
+            "geometries": 28,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.5,
+          "pageBuildMs": 1627.1000000238419,
+          "pageTimes": [
+            4163.800000011921,
+            1354.300000011921,
+            1304.800000011921,
+            1459.2000000476837,
+            1514.5,
+            1511.6000000238419,
+            1507.3999999761581,
+            1650.5999999642372,
+            1627.1000000238419
+          ],
+          "frameIntervals": [
+            6650.200000000004,
+            16.19999999999709,
+            17.099999999998545,
+            4166.699999999997,
+            1365.6000000000058,
+            1300.8999999999942,
+            1466.699999999997,
+            1516.7000000000116,
+            1516.5,
+            1500,
+            1666.3999999999942,
+            1633.5
+          ],
+          "renderSubmissionTimes": [
+            1.2000000476837158,
+            0.20000004768371582,
+            0.20000004768371582,
+            0.3999999761581421,
+            0.09999996423721313,
+            0.7999999523162842,
+            0.5999999642372131,
+            0.40000003576278687,
+            0.5,
+            0.5999999642372131,
+            0.7999999523162842,
+            0.699999988079071,
+            0.5
+          ]
+        },
+        "camera": [
+          -723.0769,
+          118.86590851898194,
+          -100.3077
+        ],
+        "terrainY": 117.11590851898194,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          0.014196055193468981,
+          -0.584617458016873,
+          0.010231850037979181,
+          0.8111203418997912
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.5,
+        1.4000000357627869,
+        1,
+        1.199999988079071,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mode": "source",
+      "view": "breathing",
+      "file": "source-breathing.png",
+      "sha256": "99361a5a3941a9a1f6c193b19532a57f05d0859ee672f27363c92a843f69379b",
+      "readbackMs": 1876,
+      "sourceHash": "39830cdd6643115c02fa105ce7072efdcaa8760d006015adaaa9c9b15d058d2b",
+      "groundHash": "5a5b5dd52880f7f2ba7afed50df4d42f5078705db5c217b2a109361412a28687",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "source",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 0,
+        "overlayCounts": {},
+        "sourceIdentity": 4505,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "breathing",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4505,
+        "counts": {
+          "birch": 418,
+          "pine": 375,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 35,
+          "discarded": 0,
+          "generationMs": 238.5999999642372
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4435,
+          "byFamily": {
+            "birch": 418,
+            "pine": 375,
+            "grass": 3563,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 15,
+            "mid": 12,
+            "far": 27,
+            "xfar": 159
+          },
+          "visible": 245,
+          "geometryTriangles": 158532,
+          "pageBuildMs": 2162.2000000476837,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 70
+          }
+        },
+        "renderer": {
+          "calls": 88,
+          "triangles": 556897,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.699999988079071,
+          "pageBuildMs": 2162.2000000476837,
+          "pageTimes": [
+            3131.199999988079,
+            1548.800000011921,
+            1565,
+            1575.800000011921,
+            1603.3999999761581,
+            1568.5,
+            3319,
+            2394.5,
+            2162.2000000476837
+          ],
+          "frameIntervals": [
+            6066.5,
+            15.69999999999709,
+            3133.4000000000087,
+            1549.8999999999942,
+            1566.699999999997,
+            1583.199999999997,
+            1616.6000000000058,
+            1566.6000000000058,
+            3316.5999999999913,
+            2399.9000000000087,
+            2182.699999999997
+          ],
+          "renderSubmissionTimes": [
+            3.199999988079071,
+            0.30000001192092896,
+            0.699999988079071,
+            0.19999998807907104,
+            0.699999988079071,
+            1.100000023841858,
+            0.6000000238418579,
+            0.3999999761581421,
+            1.5,
+            0.699999988079071,
+            0.6000000238418579,
+            0.699999988079071
+          ]
+        },
+        "camera": [
+          -673.7778,
+          128.7708974197388,
+          -123.1111
+        ],
+        "terrainY": 127.0208974197388,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.014885655206099033,
+          -0.5256482195089088,
+          -0.009199783005095769,
+          0.8505220341583506
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.899999976158142,
+        1,
+        1,
+        1,
+        0.800000011920929,
+        0.800000011920929,
+        0.8999999761581421,
+        0.9000000357627869
+      ]
+    },
+    {
+      "mode": "source",
+      "view": "reveal",
+      "file": "source-reveal.png",
+      "sha256": "0124af0ddfb605ffdf1d942a8a8a6a8963fab55d3ca2ebf3baf72589244cc101",
+      "readbackMs": 1356,
+      "sourceHash": "666b1210de2cbd5615d5792e6469f72a7f5871c1ba247174a5d06598298109c2",
+      "groundHash": "c32dfea1cf4ec43525502f42c777789d9c172370b82a86aaeb36fab45846ce72",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "source",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 0,
+        "overlayCounts": {},
+        "sourceIdentity": 3322,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "reveal",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 3322,
+        "counts": {
+          "pine": 415,
+          "birch": 265,
+          "grass": 2558,
+          "rock": 84
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 44,
+          "discarded": 0,
+          "generationMs": 319.5
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3268,
+          "byFamily": {
+            "birch": 265,
+            "pine": 415,
+            "grass": 2504,
+            "rock": 84
+          },
+          "lodCounts": {
+            "near": 17,
+            "mid": 13,
+            "far": 23,
+            "xfar": 144
+          },
+          "visible": 228,
+          "geometryTriangles": 139454,
+          "pageBuildMs": 1256.800000011921,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 54
+          }
+        },
+        "renderer": {
+          "calls": 113,
+          "triangles": 520133,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.6000000238418579,
+          "pageBuildMs": 1256.800000011921,
+          "pageTimes": [
+            2079.5,
+            1016.7000000476837,
+            1027.3999999761581,
+            1126.5,
+            1219.699999988079,
+            1204.800000011921,
+            1247.8999999761581,
+            1240.300000011921,
+            1256.800000011921
+          ],
+          "frameIntervals": [
+            6650.300000000003,
+            16.79999999998836,
+            2083.2000000000116,
+            1016.5999999999767,
+            1033.3000000000175,
+            1133.2999999999884,
+            1216.7000000000116,
+            1215.6999999999825,
+            1250.8000000000175,
+            1232.2999999999884,
+            1267.6000000000058
+          ],
+          "renderSubmissionTimes": [
+            1.300000011920929,
+            0.19999998807907104,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.5,
+            0.5999999642372131,
+            0.5,
+            0.5999999642372131,
+            0.6000000238418579,
+            0.800000011920929,
+            0.5999999642372131,
+            0.6000000238418579
+          ]
+        },
+        "camera": [
+          -632.6154,
+          130.77057697410575,
+          -146.4615
+        ],
+        "terrainY": 129.02057697410575,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.0279822436228184,
+          -0.7821947684349962,
+          -0.03522254300637749,
+          0.6214078457333153
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        2,
+        1.300000011920929,
+        1.199999988079071,
+        1.100000023841858,
+        1.0999999642372131,
+        0.9000000357627869,
+        0.800000011920929,
+        0.7999999523162842
+      ]
+    },
+    {
+      "mode": "source",
+      "view": "overview",
+      "file": "source-overview.png",
+      "sha256": "9e000d8188c7fbc18f4b217055099f5e7dbb3bbf31aa481a541e168416a400e1",
+      "readbackMs": 801,
+      "sourceHash": "0dcdc471ff4be0a9891b3ce49b93717812503d04a245f0a226660a500ac9d706",
+      "groundHash": "a414eb4f07522f91d492860bded4947407eae205e67e653099d67b5d7e10cedf",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "source",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 0,
+        "overlayCounts": {},
+        "sourceIdentity": 4505,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "overview",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02 elevated composition review",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 53,
+          "discarded": 0,
+          "generationMs": 404.59999990463257
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4435,
+          "byFamily": {
+            "birch": 418,
+            "pine": 375,
+            "grass": 3563,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 398
+          },
+          "visible": 430,
+          "geometryTriangles": 220878,
+          "pageBuildMs": 774,
+          "cameraUpdateMs": 1,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 70
+          }
+        },
+        "renderer": {
+          "calls": 111,
+          "triangles": 684685,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 1,
+          "lastRenderSubmissionMs": 0.699999988079071,
+          "pageBuildMs": 774,
+          "pageTimes": [
+            897.4000000357628,
+            521,
+            600.6999999880791,
+            633.0999999642372,
+            671.5,
+            737.0999999642372,
+            715.6000000238419,
+            746.5999999642372,
+            774
+          ],
+          "frameIntervals": [
+            5333.100000000006,
+            16.699999999982538,
+            916.6999999999825,
+            515.6000000000058,
+            601,
+            633.2999999999884,
+            682.4000000000233,
+            734.0999999999767,
+            716.7000000000116,
+            749.7000000000116,
+            783.5999999999767,
+            16.70000000001164
+          ],
+          "renderSubmissionTimes": [
+            1.300000011920929,
+            0.19999998807907104,
+            2.300000011920929,
+            0.5,
+            0.5,
+            0.6000000238418579,
+            0.800000011920929,
+            0.3999999761581421,
+            0.6000000238418579,
+            0.7000000476837158,
+            0.5999999642372131,
+            0.699999988079071,
+            0.699999988079071
+          ]
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "terrainY": 121.3616139793402,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.5999999642372131,
+        1,
+        0.9000000357627869,
+        1,
+        0.800000011920929,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.9000000357627869
+      ]
+    },
+    {
+      "mode": "authored",
+      "view": "shelter",
+      "file": "authored-shelter.png",
+      "sha256": "36882d772299aff4cbeaa8606ef241222d672f99d4d40d39bf066b5887d87c7c",
+      "readbackMs": 2724,
+      "sourceHash": "0e19dfb0a99f1d242b1aa70dc4c30d74761b97eaeadaf9e0cc7cc1484469fe41",
+      "groundHash": "769d7d8f7aa055a693366171fdaa3d49a6cdb07711043278e43688b79d38b129",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "authored",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 381,
+        "overlayCounts": {
+          "pine": 2,
+          "grass": 377,
+          "birch": 1,
+          "rock": 1
+        },
+        "sourceIdentity": 4545,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "shelter",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4545,
+        "counts": {
+          "pine": 250,
+          "birch": 389,
+          "grass": 3831,
+          "rock": 75
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 35,
+          "discarded": 0,
+          "generationMs": 271.40000009536743
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4835,
+          "byFamily": {
+            "birch": 390,
+            "pine": 252,
+            "grass": 4117,
+            "rock": 76
+          },
+          "lodCounts": {
+            "near": 12,
+            "mid": 5,
+            "far": 16,
+            "xfar": 137
+          },
+          "visible": 257,
+          "geometryTriangles": 130898,
+          "pageBuildMs": 1564.5,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 91
+          }
+        },
+        "renderer": {
+          "calls": 69,
+          "triangles": 488885,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.5,
+          "pageBuildMs": 1564.5,
+          "pageTimes": [
+            904.6000000238419,
+            530.1999999880791,
+            605.6000000238419,
+            655,
+            689.5,
+            784.0999999642372,
+            760.6999999880791,
+            744.8999999761581,
+            742.1000000238419,
+            3470,
+            1503.699999988079,
+            1582.800000011921,
+            1580.5999999642372,
+            1587.7999999523163,
+            1573.5,
+            1820.800000011921,
+            1593.5,
+            1564.5
+          ],
+          "frameIntervals": [
+            4549.799999999988,
+            16.60000000000582,
+            6133.200000000012,
+            899.7999999999884,
+            533.3000000000175,
+            616.6999999999825,
+            650,
+            700,
+            783.3000000000175,
+            765.6999999999825,
+            750.5,
+            750.3000000000175,
+            16.79999999998836,
+            16.60000000000582,
+            733.2999999999884,
+            3466.600000000006,
+            1516.5,
+            1583.2999999999884,
+            1583.3000000000175,
+            1583.1999999999825,
+            1583.2000000000116,
+            1833.2999999999884,
+            1583.3000000000175,
+            1566.6000000000058,
+            16.599999999976717
+          ],
+          "renderSubmissionTimes": [
+            0.19999998807907104,
+            0.19999998807907104,
+            1,
+            0.5,
+            0.5,
+            0.5,
+            0.800000011920929,
+            0.5,
+            0.699999988079071,
+            0.5999999642372131,
+            0.6000000238418579,
+            0.699999988079071,
+            1.199999988079071,
+            0.09999996423721313,
+            0.6000000238418579,
+            0.5,
+            0.699999988079071,
+            0.3999999761581421,
+            0.6000000238418579,
+            0.3999999761581421,
+            0.5,
+            0.5,
+            0.3999999761581421,
+            0.5,
+            0.5
+          ]
+        },
+        "camera": [
+          -772,
+          109.39912414550781,
+          -84
+        ],
+        "terrainY": 107.64912414550781,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          0.030414541442905632,
+          -0.5842959150641036,
+          0.021921373422166168,
+          0.8106742210626324
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.699999988079071,
+        0.8999999761581421,
+        1,
+        1,
+        1.199999988079071,
+        1,
+        1.2000000476837158,
+        2.5
+      ]
+    },
+    {
+      "mode": "authored",
+      "view": "discovery",
+      "file": "authored-discovery.png",
+      "sha256": "685f94fc456b35488fa9f4be773d68880d60b861edf89593f7dc1b8f8206c3b0",
+      "readbackMs": 1873,
+      "sourceHash": "0eeed4e40dbf69e3ad28969d65c90e84b2d1f7276d90d03a49a30b86031ed261",
+      "groundHash": "d4549985fd60726a03a329ff9f2fae496d7eb2b5b97020b48057f4209e157364",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "authored",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 445,
+        "overlayCounts": {
+          "pine": 2,
+          "grass": 440,
+          "birch": 1,
+          "rock": 2
+        },
+        "sourceIdentity": 4739,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "discovery",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4739,
+        "counts": {
+          "pine": 335,
+          "birch": 428,
+          "grass": 3897,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 40,
+          "discarded": 0,
+          "generationMs": 314.9000001549721
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 5088,
+          "byFamily": {
+            "birch": 429,
+            "pine": 337,
+            "grass": 4241,
+            "rock": 81
+          },
+          "lodCounts": {
+            "near": 11,
+            "mid": 6,
+            "far": 22,
+            "xfar": 185
+          },
+          "visible": 315,
+          "geometryTriangles": 164194,
+          "pageBuildMs": 1777.1000000238419,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 96
+          }
+        },
+        "renderer": {
+          "calls": 92,
+          "triangles": 556533,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.6000000238418579,
+          "pageBuildMs": 1777.1000000238419,
+          "pageTimes": [
+            2893.100000023842,
+            1654.800000011921,
+            1722,
+            1654.7000000476837,
+            1684.5,
+            1659.800000011921,
+            1664.2000000476837,
+            1707.0999999642372,
+            1777.1000000238419
+          ],
+          "frameIntervals": [
+            7399.8000000000175,
+            16.699999999982538,
+            2949.899999999994,
+            1666.4000000000233,
+            1715.8999999999942,
+            1666.6999999999825,
+            1684,
+            1666.6000000000058,
+            1666.6000000000058,
+            1716.6000000000058,
+            1783.2999999999884
+          ],
+          "renderSubmissionTimes": [
+            3.5,
+            0.6000000238418579,
+            10.099999964237213,
+            1,
+            0.3999999761581421,
+            0.40000003576278687,
+            0.5999999642372131,
+            0.40000003576278687,
+            0.5999999642372131,
+            0.800000011920929,
+            0.6000000238418579,
+            0.6000000238418579
+          ]
+        },
+        "camera": [
+          -723.0769,
+          118.86590851898194,
+          -100.3077
+        ],
+        "terrainY": 117.11590851898194,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          0.014196055193468981,
+          -0.584617458016873,
+          0.010231850037979181,
+          0.8111203418997912
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        2.600000023841858,
+        1.699999988079071,
+        1.5999999642372131,
+        1,
+        1.300000011920929,
+        0.9000000357627869,
+        1,
+        1
+      ]
+    },
+    {
+      "mode": "authored",
+      "view": "breathing",
+      "file": "authored-breathing.png",
+      "sha256": "1438d69a6f87a5e6c6a2501b34f6b61c6dfc4b4cf4f29ac29144652cbe77e4d0",
+      "readbackMs": 4420,
+      "sourceHash": "2e0541ac930d892619bc00d22e5c04ee4d9eabeb47397c5b0005f2242d00d1b6",
+      "groundHash": "5a5b5dd52880f7f2ba7afed50df4d42f5078705db5c217b2a109361412a28687",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "authored",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 445,
+        "overlayCounts": {
+          "pine": 2,
+          "grass": 440,
+          "birch": 1,
+          "rock": 2
+        },
+        "sourceIdentity": 4505,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "breathing",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 45,
+          "discarded": 0,
+          "generationMs": 369.9000001549721
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4866,
+          "byFamily": {
+            "birch": 419,
+            "pine": 377,
+            "grass": 3989,
+            "rock": 81
+          },
+          "lodCounts": {
+            "near": 16,
+            "mid": 12,
+            "far": 27,
+            "xfar": 159
+          },
+          "visible": 306,
+          "geometryTriangles": 173452,
+          "pageBuildMs": 1985.1000000238419,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 84
+          }
+        },
+        "renderer": {
+          "calls": 91,
+          "triangles": 574185,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.5,
+          "pageBuildMs": 1985.1000000238419,
+          "pageTimes": [
+            4942.5,
+            1647.4000000357628,
+            1679.4000000357628,
+            1766.199999988079,
+            2061.399999976158,
+            1873.8999999761581,
+            1685.5999999642372,
+            1758.1000000238419,
+            1985.1000000238419
+          ],
+          "frameIntervals": [
+            6765.399999999994,
+            17.5,
+            16.70000000001164,
+            4949.900000000023,
+            1649.899999999965,
+            1683.2000000000116,
+            1766.600000000035,
+            2066.5999999999767,
+            1883.2000000000116,
+            1683.2999999999884,
+            1766.5999999999767,
+            1999.9000000000233,
+            16.599999999976717
+          ],
+          "renderSubmissionTimes": [
+            1.199999988079071,
+            0.19999998807907104,
+            0.19999998807907104,
+            1.199999988079071,
+            0.800000011920929,
+            0.5,
+            0.40000003576278687,
+            0.699999988079071,
+            0.5,
+            0.7000000476837158,
+            1,
+            0.800000011920929,
+            0.6000000238418579,
+            0.5
+          ]
+        },
+        "camera": [
+          -673.7778,
+          128.7708974197388,
+          -123.1111
+        ],
+        "terrainY": 127.0208974197388,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.014885655206099033,
+          -0.5256482195089088,
+          -0.009199783005095769,
+          0.8505220341583506
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        3.199999988079071,
+        1,
+        0.9000000357627869,
+        2.199999988079071,
+        1.699999988079071,
+        0.8999999761581421,
+        1,
+        2.5
+      ]
+    },
+    {
+      "mode": "authored",
+      "view": "reveal",
+      "file": "authored-reveal.png",
+      "sha256": "4b9d94a483c576cf392183349532771e6f55b918915f316a6326ee72846f1682",
+      "readbackMs": 1408,
+      "sourceHash": "b80b233bd1d337cb67592b15fc51765bed0dcb62a2727166241b5db8d09e07dc",
+      "groundHash": "c32dfea1cf4ec43525502f42c777789d9c172370b82a86aaeb36fab45846ce72",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "authored",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 445,
+        "overlayCounts": {
+          "pine": 2,
+          "grass": 440,
+          "birch": 1,
+          "rock": 2
+        },
+        "sourceIdentity": 3322,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "reveal",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02: exact canonical west-cape spur station",
+        "descriptorCount": 3322,
+        "counts": {
+          "pine": 415,
+          "birch": 265,
+          "grass": 2558,
+          "rock": 84
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 54,
+          "discarded": 0,
+          "generationMs": 459.1000002026558
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3699,
+          "byFamily": {
+            "birch": 266,
+            "pine": 417,
+            "grass": 2930,
+            "rock": 86
+          },
+          "lodCounts": {
+            "near": 17,
+            "mid": 13,
+            "far": 23,
+            "xfar": 144
+          },
+          "visible": 238,
+          "geometryTriangles": 141614,
+          "pageBuildMs": 1342.800000011921,
+          "cameraUpdateMs": 0.09999996423721313,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 68
+          }
+        },
+        "renderer": {
+          "calls": 115,
+          "triangles": 522293,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.09999996423721313,
+          "lastRenderSubmissionMs": 0.699999988079071,
+          "pageBuildMs": 1342.800000011921,
+          "pageTimes": [
+            3256.099999964237,
+            1071,
+            1127.8999999761581,
+            1277.8999999761581,
+            1385.199999988079,
+            1316.5999999642372,
+            1413.699999988079,
+            1422.4000000357628,
+            1342.800000011921
+          ],
+          "frameIntervals": [
+            9450.600000000035,
+            16.70000000001164,
+            16.599999999976717,
+            3266.5,
+            1066.7000000000116,
+            1133.2000000000116,
+            1283,
+            1383.5,
+            1316.5999999999767,
+            1433.3000000000466,
+            1415.7999999999884,
+            1350.7000000000116
+          ],
+          "renderSubmissionTimes": [
+            1.699999988079071,
+            0.19999998807907104,
+            0.19999998807907104,
+            0.800000011920929,
+            0.30000001192092896,
+            0.5999999642372131,
+            0.699999988079071,
+            0.5,
+            0.9000000357627869,
+            0.6000000238418579,
+            0.800000011920929,
+            0.6000000238418579,
+            0.699999988079071
+          ]
+        },
+        "camera": [
+          -632.6154,
+          130.77057697410575,
+          -146.4615
+        ],
+        "terrainY": 129.02057697410575,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.0279822436228184,
+          -0.7821947684349962,
+          -0.03522254300637749,
+          0.6214078457333153
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.899999976158142,
+        1.100000023841858,
+        0.8999999761581421,
+        1,
+        1.100000023841858,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mode": "authored",
+      "view": "overview",
+      "file": "authored-overview.png",
+      "sha256": "7613e3c4abaaeb59771102c6955fb221b9e39465e367cb6148928d1c1e03d965",
+      "readbackMs": 869,
+      "sourceHash": "da558cce7ac1689d4e7de0aa9c987561624f4e622e4cfd548a268b04b16fc7d8",
+      "groundHash": "a414eb4f07522f91d492860bded4947407eae205e67e653099d67b5d7e10cedf",
+      "snapshot": {
+        "milestone": "ENV-NATURE-R02",
+        "composition": "authored",
+        "terrainSha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+        "overlayCount": 445,
+        "overlayCounts": {
+          "pine": 2,
+          "grass": 440,
+          "birch": 1,
+          "rock": 2
+        },
+        "sourceIdentity": 4505,
+        "materialCount": 7,
+        "ready": true,
+        "error": null,
+        "view": "overview",
+        "region": "forest",
+        "viewSource": "ENV-NATURE-R02 elevated composition review",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "worker": {
+          "queued": 0,
+          "completed": 63,
+          "discarded": 0,
+          "generationMs": 533.3000000715256
+        },
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4866,
+          "byFamily": {
+            "birch": 419,
+            "pine": 377,
+            "grass": 3989,
+            "rock": 81
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 401
+          },
+          "visible": 435,
+          "geometryTriangles": 222676,
+          "pageBuildMs": 817.3999999761581,
+          "cameraUpdateMs": 0.19999998807907104,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 84
+          }
+        },
+        "renderer": {
+          "calls": 111,
+          "triangles": 688281,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          }
+        },
+        "timing": {
+          "lastCameraUpdateMs": 0.19999998807907104,
+          "lastRenderSubmissionMs": 0.6000000238418579,
+          "pageBuildMs": 817.3999999761581,
+          "pageTimes": [
+            948.7999999523163,
+            562.8999999761581,
+            665,
+            684.5,
+            736.7000000476837,
+            802.6999999880791,
+            829.3000000119209,
+            866.5999999642372,
+            817.3999999761581
+          ],
+          "frameIntervals": [
+            5448.199999999953,
+            17.300000000046566,
+            950,
+            566,
+            666.0999999999767,
+            701,
+            733.1000000000349,
+            800.0999999999767,
+            833.2999999999884,
+            866.6000000000349,
+            833.5
+          ],
+          "renderSubmissionTimes": [
+            1.199999988079071,
+            0.2999999523162842,
+            1,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.5,
+            0.7999999523162842,
+            0.5,
+            0.800000011920929,
+            0.5999999642372131,
+            0.7000000476837158,
+            0.6000000238418579
+          ]
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "terrainY": 121.3616139793402,
+        "sourceAssets": true,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 2664.699999988079,
+          "classificationMs": {
+            "slopeCurvature": 82,
+            "distances": 177,
+            "coarseFields": 142,
+            "rules": 970,
+            "total": 1371
+          },
+          "synthesisMs": 1176,
+          "workerTotalMs": 2584,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "programs": 7,
+        "visibleTerrainSurfaces": 1,
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "mirrored": false
+        }
+      },
+      "synchronousRenderMs": [
+        1.399999976158142,
+        0.800000011920929,
+        1.0999999642372131,
+        0.800000011920929,
+        0.9000000357627869,
+        1,
+        0.7999999523162842,
+        1
+      ]
+    }
+  ],
+  "matched": [],
+  "errors": [],
+  "limits": "Software WebGL. Timing is diagnostic, not a hardware desktop or Android pass. GPU VRAM unavailable; renderer geometry/texture counts are recorded.",
+  "gl": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)"
+  },
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: shelter sourceHash\n+ actual - expected\n\n+ '3016405d1c3c7fd9bec14b39997df2a3508f1787ad335aba201fc572643bcc0e'\n- '0e19dfb0a99f1d242b1aa70dc4c30d74761b97eaeadaf9e0cc7cc1484469fe41'\n"
+}
