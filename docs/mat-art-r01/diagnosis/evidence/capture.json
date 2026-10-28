@@ -3540,6 +3540,181 @@
           ]
         }
       }
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "2aa7a860373c653aeb1c328b28387c1b900ba120614061c9d3c62f8183e5b894",
+        "ground": {
+          "positions": "0052849b4d0edd5fbcf3d1d6e80995e1f19f2e98c463935d5b1020dd282abd8d",
+          "normals": "1396bad66e1af45ec0acab8a749c0c5958a0cc8fd12781da33865fed2124f586",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.6999999999825377,
+        0.5,
+        0.6000000000058208,
+        2.5
+      ],
+      "file": "close-forest-floor--env--mat-01.png",
+      "sha256": "4697f4f88721792b264a05a1842c19eb55fb2865777d5eed01dabb7cc53d99f4",
+      "readbackMs": 74176,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "close-forest-floor",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"shelter\" station, pitch −0.65",
+        "set": "ground-close",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "off",
+        "descriptorCount": 4545,
+        "counts": {
+          "birch": 389,
+          "pine": 250,
+          "grass": 3831,
+          "rock": 75
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4461,
+          "byFamily": {
+            "birch": 389,
+            "pine": 250,
+            "grass": 3747,
+            "rock": 75
+          },
+          "lodCounts": {
+            "near": 12,
+            "mid": 6,
+            "far": 11,
+            "xfar": 4
+          },
+          "visible": 37,
+          "geometryTriangles": 35178,
+          "pageBuildMs": 3423.399999999994,
+          "cameraUpdateMs": 0.39999999999417923,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 84
+          }
+        },
+        "renderer": {
+          "calls": 49,
+          "triangles": 311677,
+          "memory": {
+            "geometries": 28,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 0.5,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -772,
+          109.39912414550781,
+          -84
+        ],
+        "cameraQuaternion": [
+          -0.25903751566324673,
+          -0.5540980028558368,
+          -0.18670207873637965,
+          0.7687764971080354
+        ],
+        "fov": 57,
+        "terrainY": 107.64912414550781,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -912,
+            337.6491241455078,
+            26
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
     }
   ],
   "matched": [
@@ -3588,11 +3763,19 @@
   ],
   "errors": [],
   "limits": "Software WebGL (SwiftShader). Timings are diagnostic only; no hardware desktop or Android claim.",
+  "resumed": {
+    "from": "FAIL",
+    "keptGroups": [
+      "close-forest-floor|false",
+      "close-meadow|false",
+      "close-transition|false"
+    ],
+    "note": "Earlier groups were captured by an interrupted session (browser killed by container memory pressure); their matched-condition assertions had passed."
+  },
+  "stylizedSynthesisMs": 3739,
   "gl": {
     "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
   },
-  "browser": "153.0.8010.12",
-  "status": "FAIL",
-  "failure": "page.evaluate: Target page, context or browser has been closed\n    at shoot (/home/user/Aurora-Rest/tools/mat-art-r01/capture.mjs:37:73)\n    at /home/user/Aurora-Rest/tools/mat-art-r01/capture.mjs:46:20"
+  "browser": "153.0.8010.12"
 }
