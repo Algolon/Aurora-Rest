@@ -30,24 +30,26 @@ sward that implies grass, and the 3D tufts carry the blade silhouettes.
 
 ## Palette hierarchy
 
-- **Meadow turf:** cool moss-olive core (`#4d5f37` → `#74874d`), restrained dry-straw accents (`#9b9e63`, `#b2a874`) in
+- **Meadow turf:** olive-moss core (`#505b3b` → `#778153`), restrained dry-straw accents (`#989569`, `#ac9e7a`) in
   loose groups. Shifted from MAT-01's yellow-olive and dark-brown soil toward the grass assets' base greens
   (`#2e4e36`, `#46663c`, `#9fac68`) so tuft bases grow out of the ground instead of sitting on it.
-- **Forest floor:** warm humus browns (`#4a4231`–`#5a4c39`) with soft clump-scale clods; muted moss (`#5b6a40`–`#6a7a48`, never lime);
+- **Forest floor:** warm humus browns (`#4a4231`–`#5a4c39`) with soft clump-scale clods; muted moss (`#5c6743`–`#6b764c`, never lime);
   birch leaves as fewer, larger, muted-gold ovals in drifts.
 - The families stay distinct in hue (brown humus versus green sward) but share value range, shape scale and lighting cue.
 
-## Parameter changes (B vs A)
+## Parameter changes (final B = R1, vs A)
+
+Values are the final variant after the single R1 colour refinement; the first-comparison values are shown in brackets where R1 changed them.
 
 | Parameter | forest-floor A → B | meadow-turf A → B | Why |
 | --- | --- | --- | --- |
 | `tileM` | 2.2 → 2.6 m | 2.6 → 3.0 m | Larger sculpted shapes at the same texel budget; anti-tiling unchanged |
-| `palette` | 10 stops, moss less saturated | 8 → 10 stops, cooler and narrower value | Value/hue cohesion with assets |
+| `palette` | 10 stops; moss stops muted (R1: −15% sat., −3° hue) | 8 → 10 stops, narrower value; R1: −20% saturation, −7° hue toward olive moss | Value/hue cohesion with assets |
 | `normalStrength` | 0.9 → 0.6 | 0.75 → 0.5 | Normals were a minor contributor (D1); kept as soft relief |
-| `macroTint` | `[1.14,1,.84]/[.8,1.04,.84]` → `[1.08,1,.88]/[.86,1.03,.9]` | `[1.24,1.08,.72]/[.8,1,.86]` → `[1.12,1.05,.84]/[.86,1,.92]` | MAT-01 meadow warm pole was a strong yellow cast (D3a) |
-| `exposureTint` | `[1.08,1.02,.9]` → `[1.05,1.02,.93]` | `[1.18,1,.74]` → `[1.1,1.02,.86]` | Same yellow-cast reduction on exposed ground |
-| `patch` | tint `[.8,1.18,.74]`, 9 m, 50% → `[.86,1.1,.8]`, 11 m, 45% | `[.95,.76,.6]`, 6 m, 22% → `[1.08,1.02,.82]`, 8 m, 30% | Broad, readable massing; meadow patches become sunlit sward rather than brown holes |
-| `mesoAmount` | 0.4 → 0.3 | 0.45 → 0.35 | Calmer meso tone under stronger in-texture shape |
+| `macroTint` | `[1.14,1,.84]/[.8,1.04,.84]` → `[1.1,1,.86]/[.84,1.04,.88]` (first B `[1.08,1,.88]/[.86,1.03,.9]`) | `[1.24,1.08,.72]/[.8,1,.86]` → `[1.2,1.07,.78]/[.84,1,.9]` (first B `[1.12,1.05,.84]/[.86,1,.92]`) | Keep ≈80% of the landscape hue swing on a desaturated base; the first B lost the massing |
+| `exposureTint` | `[1.08,1.02,.9]` → `[1.06,1.02,.92]` | `[1.18,1,.74]` → `[1.14,1.02,.8]` | Softer exposure cast |
+| `patch` | tint `[.8,1.18,.74]`, 9 m, 50% → `[.84,1.12,.82]`, 11 m, 50% | `[.95,.76,.6]`, 6 m, 22% → `[1.12,1.03,.78]`, 8 m, 34% | Broad massing; meadow patches become sunlit sward rather than brown holes; greener forest patches narrow the family hue gap |
+| `mesoAmount` | 0.4 → 0.36 (first B 0.3) | 0.45 → 0.45 (first B 0.35) | First B's reduction removed too much landscape-scale variation |
 | relief (synthesis) | 0.025 → 0.022 m | 0.03 → 0.02 m | Soft relief |
 | equalise (synthesis) | 0.9 @ 1/8 → 0.65 @ 1/4 | same | Keep clump rhythm inside the tile |
 | cavity AO gain/floor | 2.6/0.35 → 1.6/0.55 | same | Shade clump feet, not blade gaps |
