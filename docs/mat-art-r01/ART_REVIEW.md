@@ -1,6 +1,77 @@
 # MAT-ART-R01 — Stylized Nordic Ground Calibration: art review
 
-**Decision: ART CONDITIONAL.** The *Soft Sculpted Nordic Ground* direction measurably and visibly resolves the
+## Follow-up R2–R4 (owner-authorised): **ART GO** for owner acceptance review
+
+After the R1 decision below, the owner's follow-up ("Get back into it!") authorised work on the one bounded
+CONDITIONAL item: at 1–3 m the soft rounded clump primitive read as leaf or clover cover. This goes beyond the
+original one-refinement limit, so it is recorded separately. Palette, tints, synthesis parameters, shader,
+classification and assets are all unchanged from R1; only the close-range shape vocabulary changed.
+
+| Step | Change | WebGL result | Kept? |
+| --- | --- | --- | --- |
+| R2 `e8fa2e4` | Meadow clumps become fans of 3–5 tapered, pointed blades (`Plane.tuft`/`blade`); forest moss becomes lit lobe clusters | Meadow reads as painted grass and rhymes with the 3D tufts. The moss lobes read **more** clover-like at 2–6 m (birch edge) | Meadow yes, moss no |
+| R3 `407579c` | Moss becomes irregular low mats of tiny tufts (the meadow vocabulary at moss scale) | No clover read, but the ≈1 m mats **repeat visibly** on the 2.6 m tile at 10–30 m (birch interior, transition). Stopped after 7 matched groups | No |
+| **R4** `689eeda` | Mats shrink to ≈20–40 cm with a softer base; metre-scale moss massing is left to the shader's world-space patch layer, which never tiles | No clover, no visible repetition; meadow and forest floor share one vocabulary | **Final** |
+
+**Final evidence (R4):** [evidence/r4](evidence/r4), with 39 matched WebGL frames in 13 groups, zero console errors
+and the same matched-condition assertions as before; [movement-r4](evidence/movement-r4) holds the shimmer probe.
+R2 is preserved in [evidence/r2](evidence/r2) and the stopped R3 run in [evidence/r3-partial](evidence/r3-partial).
+
+| Final pair (A · R4) | Full environment | Ground only |
+| --- | --- | --- |
+| 1 Birchwood interior | [A](evidence/r4/birch-interior--env--mat-01.png) · [R4](evidence/r4/birch-interior--env--mat-art-r01.png) | [A](evidence/r4/birch-interior--ground--mat-01.png) · [R4](evidence/r4/birch-interior--ground--mat-art-r01.png) |
+| 2 Birchwood edge | [A](evidence/r4/birch-edge--env--mat-01.png) · [R4](evidence/r4/birch-edge--env--mat-art-r01.png) | [A](evidence/r4/birch-edge--ground--mat-01.png) · [R4](evidence/r4/birch-edge--ground--mat-art-r01.png) |
+| 3 Forest → meadow transition | [A](evidence/r4/meadow-transition--env--mat-01.png) · [R4](evidence/r4/meadow-transition--env--mat-art-r01.png) | [A](evidence/r4/meadow-transition--ground--mat-01.png) · [R4](evidence/r4/meadow-transition--ground--mat-art-r01.png) |
+| 4 Open grassland | [A](evidence/r4/open-grassland--env--mat-01.png) · [R4](evidence/r4/open-grassland--env--mat-art-r01.png) | [A](evidence/r4/open-grassland--ground--mat-01.png) · [R4](evidence/r4/open-grassland--ground--mat-art-r01.png) |
+| 5 Elevated overview | [A](evidence/r4/overview--env--mat-01.png) · [R4](evidence/r4/overview--env--mat-art-r01.png) | [A](evidence/r4/overview--ground--mat-01.png) · [R4](evidence/r4/overview--ground--mat-art-r01.png) |
+| G1–G3 close-ups | — | [G1 A](evidence/r4/close-forest-floor--ground--mat-01.png) · [R4](evidence/r4/close-forest-floor--ground--mat-art-r01.png) · [G2 A](evidence/r4/close-meadow--ground--mat-01.png) · [R4](evidence/r4/close-meadow--ground--mat-art-r01.png) · [G3 A](evidence/r4/close-transition--ground--mat-01.png) · [R4](evidence/r4/close-transition--ground--mat-art-r01.png) |
+
+**Measured (A → R1 → R4):**
+- *On-screen fine band, walking views with vegetation:* 4.97 → 2.21 → 2.37 (birch interior), 5.15 → 1.99 → 2.18
+  (birch edge) and 5.14 → 2.45 → 2.53 (grassland), so R4 is 52–56% below A.
+- *Fine/broad ratio:* R4 is 0.76–1.28, against the vegetation's 0.9–1.18 (A: 1.9–2.8).
+- *Shimmer, mean/p95 per 2 cm step:* birch edge 6.18/22.7 → 2.76/9.5, grassland 4.84/18.8 → 2.08/8.3, birch
+  interior 6.42/24.9 → 2.65/10.2. That is 55–59% less flicker; R1 reached 59–64%, and the crisper blades cost a
+  few points.
+- *Meadow hue/saturation:* about 65–68°/0.38–0.40 (A 59°/0.49). The forest/meadow hue gap on the overview is
+  16° (A 9°, R1 13°).
+- *Texture budget:* sub-6 cm L* RMS is ≤ 0.35 × MAT-01 meadow's and the shape-scale contrast is kept (unit test).
+- *Cost:* GPU-neutral (identical draw calls, triangles, materials, programs and texture allocation); the lifecycle
+  check across 3 cycles × 3 profiles × A/B stays at 13 textures and 7 programs. Synthesis is about +0.16 s in
+  total at 512², cheaper than R1.
+
+**Judgment (R4):** cohesion with stylized vegetation **7.5** (meadow tufts rhyme with the 3D grass; moss and sward
+share one vocabulary), abstraction and hierarchy **7**, naturalness and colour **6.5** (forest floor somewhat bare
+and reddish), walking readability **7**, performance **8.5**. Weighted ≈ **7.2** (R1 6.35, MAT-01 3.8).
+
+1. *Clearly less photographic:* yes.
+2. *Grass tufts connected:* yes; they now share the blade language.
+3. *One language for both families:* yes.
+4. *Colour masses:* yes.
+5. *Close-range detail:* yes, reading as grass and moss.
+6. *Transitions:* natural, with a value step remaining.
+7. *Repetition and shimmer:* controlled; R3's repetition was caught and fixed.
+8. *Stylized Nordic, not flat cartoon:* yes.
+9. *Assets integrated:* yes, with the rocks still bright as an asset issue.
+10. *Better than MAT-01 from the same views:* yes, at every distance.
+
+**Remaining defects (not blocking owner review):**
+- Gold birch-leaf ovals read as confetti at 3–10 m.
+- The forest floor is somewhat bare brown between moss patches. The shader's forest patch tint could carry more
+  green, and this is also an understory/composition matter.
+- The forest/meadow value step and a 16° hue gap remain at the boundary.
+- The 3D grass tufts are cooler teal (asset colour).
+- Software-WebGL evidence only; no hardware desktop or Android check.
+
+**Decision: ART GO**, meaning the material direction is suitable for owner acceptance review. This is a single
+reviewer's judgment on 1100×700 software-rendered frames. No merge or deployment. The original MAT-01 material is
+untouched and remains the default.
+
+---
+
+## Review at R1 (superseded by the follow-up above)
+
+**Decision at R1: ART CONDITIONAL.** The *Soft Sculpted Nordic Ground* direction measurably and visibly resolves the
 owner's main complaint: the ground no longer reads as photographic, fine-grained detail competing with the
 stylized assets. One bounded issue remains before owner acceptance. At 1–3 m the soft rounded clump primitive reads as **leaf/clover
 ground cover** rather than grass and moss (meadow tufts and forest moss cushions). It has a single cause in

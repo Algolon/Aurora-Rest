@@ -20,9 +20,9 @@ sward that implies grass, and the 3D tufts carry the blade silhouettes.
 
 | Element | Treatment |
 | --- | --- |
-| Primary shape | Soft sculpted masses: meadow tufts 6–20 cm, lean-aligned and overlapping like scales; forest moss cushions 8–30 cm, rounded |
-| Shading cue | Each mass is painted with a fixed-side light shoulder and shaded foot (hand-painted dome gradient), not per-pixel noise |
-| Microdetail | Restrained and wide: ≥ 1.5 px strokes at 28–40% opacity, near the host tone; 1,097 meadow strokes in total, about 5% of MAT-01's 20,400 soil and blade strokes |
+| Primary shape | **R4:** meadow tufts are fans of 3–5 tapered, pointed blades from one root (≈6–24 cm long, 1.5–5.5 cm wide at the root), lean-aligned and overlapping; forest moss forms irregular ≈20–40 cm mats of tiny tufts in random directions, the same vocabulary at moss scale. (R1 used soft rounded ellipses and cushions, which read as leaves or clover at 1–3 m.) |
+| Shading cue | Blades run dark at the root and light at the tip, with one side catching the light; soil clods and leaves keep the fixed-side dome gradient. No per-pixel noise |
+| Microdetail | Crisp but wide: blades ≥ 1.4 px at the tip with a 1 px anti-aliased edge; accents at 26–28% opacity near the tuft tone. Per 512² tile the meadow has 5,940 blades in 1,500 tufts plus 522 strokes, about 32% of MAT-01's 20,400 marks, each mark much wider and lower in contrast |
 | Value structure | Narrow: under-layers are mid-dark olive or warm humus, never near-black soil between blades |
 | Within-tile structure | Luminance equalisation weakened (0.9 at 1/8 tile → 0.65 at 1/4 tile) so clump rhythm survives; tile-scale blotches are still removed |
 | Cavity AO | Softer (gain 2.6 → 1.6, floor 0.35 → 0.55): it shades clump feet, not every blade gap |
@@ -37,7 +37,9 @@ sward that implies grass, and the 3D tufts carry the blade silhouettes.
   birch leaves as fewer, larger, muted-gold ovals in drifts.
 - The families stay distinct in hue (brown humus versus green sward) but share value range, shape scale and lighting cue.
 
-## Parameter changes (final B = R1, vs A)
+## Parameter changes (final B, vs A)
+
+Numeric parameters are R1's and were unchanged by R2–R4, which changed only the shape vocabulary (rows marked R4).
 
 Values are the final variant after the single R1 colour refinement; the first-comparison values are shown in brackets where R1 changed them.
 
@@ -53,7 +55,7 @@ Values are the final variant after the single R1 colour refinement; the first-co
 | relief (synthesis) | 0.025 → 0.022 m | 0.03 → 0.02 m | Soft relief |
 | equalise (synthesis) | 0.9 @ 1/8 → 0.65 @ 1/4 | same | Keep clump rhythm inside the tile |
 | cavity AO gain/floor | 2.6/0.35 → 1.6/0.55 | same | Shade clump feet, not blade gaps |
-| Generator strokes | 1,700 crumbs + 22 twigs + ≤110 leaves → 700 soft needles + 220 clods + 210 cushions + 14 twigs + 70 leaves (counted) | 3,400 soil + 17,000 blades + 300 clover → 90 soil mottles + 1,500 tufts + 1,097 accent and dry-straw strokes (counted) | Shape before stroke |
+| Generator marks (R4, counted) | 1,700 crumbs + 22 twigs + ≤110 leaves → 700 soft needles + 220 clods + 14 twigs + 70 leaves + 1,309 moss tufts (5,255 blades) in mats | 3,400 soil + 17,000 blades + 300 clover → 90 soil mottles + 1,500 tufts (5,940 blades) + 522 accent and dry-straw strokes | Shape before stroke; one vocabulary for both families |
 
 Per 512² reference tile. Unchanged: material ids and order, seeds, `mesoScale`, `heightBlend`, roughness, wet tint,
 triplanar/streak flags, classification, blending logic, shader, texture format, coastal sand and bedrock.
