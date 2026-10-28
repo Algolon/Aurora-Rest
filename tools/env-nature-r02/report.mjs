@@ -46,7 +46,7 @@ ${sourceLinks}
 | --- | ---: | ---: | ---: | ---: | ---: |
 ${table}
 
-Material count remains **7**, texture count **13**; loaded geometry counts span **27–29** as the original families become resident. MAT estimated texture allocation remains **43,222,155 bytes**, including mip levels. Actual driver/GPU VRAM is unavailable; instance-buffer growth is not represented by those texture figures. Full synchronous render samples and CPU submission timings are retained in review.json. These software-renderer figures are diagnostic and do not establish physical-device performance. A changed pixel is not evidence of improved art.
+Material count remains **7**, texture count **13**; loaded geometry counts span **27–29** as the original families become resident. MAT estimated texture allocation remains **43,222,155 bytes**, including mip levels. Cleanup records zero geometries, zero pages/chunks and zero MAT owners; the Three.js texture counter retains one entry after renderer disposal and the context-loss call. It did not grow across the three cycles. This is recorded rather than treated as proof of zero VRAM use. Actual driver/GPU VRAM is unavailable; instance-buffer growth is not represented by those texture figures. Full synchronous render samples and CPU submission timings are retained in review.json. These software-renderer figures are diagnostic and do not establish physical-device performance. A changed pixel is not evidence of improved art.
 
 ## Art-direction observations
 
