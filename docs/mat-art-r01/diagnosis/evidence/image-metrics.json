@@ -1,0 +1,3777 @@
+{
+  "note": "L* band RMS on unretouched captures; ground pixels from the dominant-material debug capture. Measurements support, but do not replace, visual judgment.",
+  "rows": [
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "close-forest-floor--ground--mat-01.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          87,
+          86,
+          30
+        ],
+        "meanLstar": 35.289208312665174,
+        "stdLstar": 12.919189033941256,
+        "bandRmsLstar": {
+          "1–3 px": 6.844223893139566,
+          "3–7 px": 5.621669522180639,
+          "7–19 px": 4.618380833808697,
+          "19–55 px": 2.738961339405226
+        },
+        "fineToBroad": 2.4988391747894516
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            77,
+            77,
+            29
+          ],
+          "meanLstar": 31.561606802894623,
+          "stdLstar": 11.009777020003712,
+          "bandRmsLstar": {
+            "1–3 px": 6.921295724139008,
+            "3–7 px": 4.211727965095281,
+            "7–19 px": 3.224672527939515,
+            "19–55 px": 1.895560907871554
+          },
+          "fineToBroad": 3.6513180322496948
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            88,
+            88,
+            30
+          ],
+          "meanLstar": 35.81754607517449,
+          "stdLstar": 13.08287114552261,
+          "bandRmsLstar": {
+            "1–3 px": 6.840908973702476,
+            "3–7 px": 5.800117704468805,
+            "7–19 px": 4.785948555252102,
+            "19–55 px": 2.8458410370379617
+          },
+          "fineToBroad": 2.4038268071440503
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "close-forest-floor--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          90,
+          89,
+          31
+        ],
+        "meanLstar": 36.30367051073038,
+        "stdLstar": 13.074584434936252,
+        "bandRmsLstar": {
+          "1–3 px": 6.8138561378211895,
+          "3–7 px": 5.63550881878648,
+          "7–19 px": 4.719507841338564,
+          "19–55 px": 2.814866524786353
+        },
+        "fineToBroad": 2.4206675797312833
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            78,
+            78,
+            29
+          ],
+          "meanLstar": 32.0105354836126,
+          "stdLstar": 11.226909419426535,
+          "bandRmsLstar": {
+            "1–3 px": 6.942359934767138,
+            "3–7 px": 4.2759450318098375,
+            "7–19 px": 3.3079259951755353,
+            "19–55 px": 1.9481067856806402
+          },
+          "fineToBroad": 3.5636444499840794
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            91,
+            90,
+            32
+          ],
+          "meanLstar": 36.91229219680994,
+          "stdLstar": 13.204255623258701,
+          "bandRmsLstar": {
+            "1–3 px": 6.803541583477976,
+            "3–7 px": 5.8088162441379625,
+            "7–19 px": 4.889111104149394,
+            "19–55 px": 2.9244846391409824
+          },
+          "fineToBroad": 2.3264070162722414
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "close-forest-floor--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          81,
+          79,
+          27
+        ],
+        "meanLstar": 32.64412300488213,
+        "stdLstar": 5.138698732104096,
+        "bandRmsLstar": {
+          "1–3 px": 2.3087783370356116,
+          "3–7 px": 1.8317783026376813,
+          "7–19 px": 1.6557018079153727,
+          "19–55 px": 1.6176466508380363
+        },
+        "fineToBroad": 1.4272451501318464
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            72,
+            71,
+            26
+          ],
+          "meanLstar": 29.103802030049717,
+          "stdLstar": 5.869603336087605,
+          "bandRmsLstar": {
+            "1–3 px": 2.6724883665021406,
+            "3–7 px": 1.6449312868599397,
+            "7–19 px": 1.7186720459477223,
+            "19–55 px": 1.5877785675154306
+          },
+          "fineToBroad": 1.6831618848993994
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            83,
+            80,
+            27
+          ],
+          "meanLstar": 33.14274221574022,
+          "stdLstar": 4.822106547311439,
+          "bandRmsLstar": {
+            "1–3 px": 2.2561470834732638,
+            "3–7 px": 1.8600268671047921,
+            "7–19 px": 1.649147424527973,
+            "19–55 px": 1.6303292278367962
+          },
+          "fineToBroad": 1.3838598026404976
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "close-forest-floor--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          94,
+          92,
+          33
+        ],
+        "meanLstar": 37.90327460158519,
+        "stdLstar": 11.617316115315042,
+        "bandRmsLstar": {
+          "1–3 px": 6.044727766733497,
+          "3–7 px": 4.981584406406965,
+          "7–19 px": 4.110265137245397,
+          "19–55 px": 2.491270625519924
+        },
+        "fineToBroad": 2.4263633604526498
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            81,
+            81,
+            30
+          ],
+          "meanLstar": 33.227697868983476,
+          "stdLstar": 10.876121850546069,
+          "bandRmsLstar": {
+            "1–3 px": 6.512716753438666,
+            "3–7 px": 3.985030059637815,
+            "7–19 px": 3.069803726662482,
+            "19–55 px": 1.9123889207820866
+          },
+          "fineToBroad": 3.4055398892267372
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            95,
+            94,
+            33
+          ],
+          "meanLstar": 38.56412107245299,
+          "stdLstar": 11.568307854366102,
+          "bandRmsLstar": {
+            "1–3 px": 5.982900107759676,
+            "3–7 px": 5.112915499816325,
+            "7–19 px": 4.239891623393299,
+            "19–55 px": 2.5714319901169604
+          },
+          "fineToBroad": 2.326680281941871
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "close-forest-floor--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          79,
+          81,
+          34
+        ],
+        "meanLstar": 32.834069855724195,
+        "stdLstar": 12.27549933439389,
+        "bandRmsLstar": {
+          "1–3 px": 6.5412449371277175,
+          "3–7 px": 5.378298724851936,
+          "7–19 px": 4.4204598306145,
+          "19–55 px": 2.6222247061289816
+        },
+        "fineToBroad": 2.494540197809412
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            76,
+            74,
+            35
+          ],
+          "meanLstar": 30.37400522757753,
+          "stdLstar": 10.043744714390053,
+          "bandRmsLstar": {
+            "1–3 px": 6.421685893038451,
+            "3–7 px": 3.9333490086144014,
+            "7–19 px": 3.065579619255861,
+            "19–55 px": 1.8093691055444718
+          },
+          "fineToBroad": 3.5491298449610977
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            79,
+            82,
+            34
+          ],
+          "meanLstar": 33.18412449115331,
+          "stdLstar": 12.521669401901132,
+          "bandRmsLstar": {
+            "1–3 px": 6.564894095306983,
+            "3–7 px": 5.558654999740608,
+            "7–19 px": 4.58294672958357,
+            "19–55 px": 2.724679340426067
+          },
+          "fineToBroad": 2.4094189719515433
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "close-forest-floor--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          84,
+          83,
+          29
+        ],
+        "meanLstar": 34.009451807158094,
+        "stdLstar": 12.955064379547395,
+        "bandRmsLstar": {
+          "1–3 px": 4.326776338038708,
+          "3–7 px": 5.070431980546044,
+          "7–19 px": 5.778054160050241,
+          "19–55 px": 4.059272038046777
+        },
+        "fineToBroad": 1.0658995744765722
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 93240,
+          "pixelShare": 0.1210909090909091,
+          "meanSrgb": [
+            79,
+            80,
+            29
+          ],
+          "meanLstar": 32.60567298874085,
+          "stdLstar": 10.991299633004548,
+          "bandRmsLstar": {
+            "1–3 px": 5.329909683989374,
+            "3–7 px": 4.563391324709484,
+            "7–19 px": 4.001349704914184,
+            "19–55 px": 2.7582824834896185
+          },
+          "fineToBroad": 1.9323291634895505
+        },
+        "meadow-turf": {
+          "pixels": 671852,
+          "pixelShare": 0.8725350649350649,
+          "meanSrgb": [
+            85,
+            84,
+            29
+          ],
+          "meanLstar": 34.211947036734585,
+          "stdLstar": 13.195259392272229,
+          "bandRmsLstar": {
+            "1–3 px": 4.167052786378676,
+            "3–7 px": 5.145468907023902,
+            "7–19 px": 6.001653095373413,
+            "19–55 px": 4.216153579148005
+          },
+          "fineToBroad": 0.9883541261371102
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "close-meadow--ground--mat-01.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          70,
+          78,
+          32
+        ],
+        "meanLstar": 31.271374746991683,
+        "stdLstar": 10.17586335533629,
+        "bandRmsLstar": {
+          "1–3 px": 6.1972635463802295,
+          "3–7 px": 4.297370139045594,
+          "7–19 px": 3.2120605615446194,
+          "19–55 px": 1.8215617399216086
+        },
+        "fineToBroad": 3.402170462060172
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            58,
+            61,
+            31
+          ],
+          "meanLstar": 24.87603517255749,
+          "stdLstar": 1.0632976336897557,
+          "bandRmsLstar": {
+            "1–3 px": 0.4374523514277545,
+            "3–7 px": 0.385219323272257,
+            "7–19 px": 0.3105833997709005,
+            "19–55 px": 0.17567271730064293
+          },
+          "fineToBroad": 2.490155319218447
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            70,
+            78,
+            32
+          ],
+          "meanLstar": 31.30513294430022,
+          "stdLstar": 10.186510518852307,
+          "bandRmsLstar": {
+            "1–3 px": 6.230927523622679,
+            "3–7 px": 4.316993952508712,
+            "7–19 px": 3.2168078344468807,
+            "19–55 px": 1.776585734548573
+          },
+          "fineToBroad": 3.507248427392076
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "close-meadow--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          71,
+          80,
+          33
+        ],
+        "meanLstar": 31.919292169912836,
+        "stdLstar": 10.180686079914144,
+        "bandRmsLstar": {
+          "1–3 px": 6.071447076743922,
+          "3–7 px": 4.30136271432931,
+          "7–19 px": 3.272034580828372,
+          "19–55 px": 1.8719538758656333
+        },
+        "fineToBroad": 3.2433742919741277
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            58,
+            61,
+            31
+          ],
+          "meanLstar": 24.86999395411131,
+          "stdLstar": 1.0624076258675819,
+          "bandRmsLstar": {
+            "1–3 px": 0.4371656902396526,
+            "3–7 px": 0.38478693984160667,
+            "7–19 px": 0.31002691492006595,
+            "19–55 px": 0.1757289646567331
+          },
+          "fineToBroad": 2.487727001030291
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            71,
+            80,
+            33
+          ],
+          "meanLstar": 31.959267947174837,
+          "stdLstar": 10.188750343625728,
+          "bandRmsLstar": {
+            "1–3 px": 6.104357691665403,
+            "3–7 px": 4.3205679561226855,
+            "7–19 px": 3.2778283003172204,
+            "19–55 px": 1.8288468877862296
+          },
+          "fineToBroad": 3.337817797888245
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "close-meadow--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          67,
+          75,
+          30
+        ],
+        "meanLstar": 30.07530908232675,
+        "stdLstar": 4.448935890033838,
+        "bandRmsLstar": {
+          "1–3 px": 2.2013298520593576,
+          "3–7 px": 1.5281982694775003,
+          "7–19 px": 1.4010845562853798,
+          "19–55 px": 1.257691461359289
+        },
+        "fineToBroad": 1.7502940265494067
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            58,
+            62,
+            32
+          ],
+          "meanLstar": 24.954544209194996,
+          "stdLstar": 1.0639909867329056,
+          "bandRmsLstar": {
+            "1–3 px": 0.4391170122612342,
+            "3–7 px": 0.38437180548170274,
+            "7–19 px": 0.3089277557356229,
+            "19–55 px": 0.17607928615524712
+          },
+          "fineToBroad": 2.493859566616312
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            67,
+            75,
+            30
+          ],
+          "meanLstar": 30.096609454720756,
+          "stdLstar": 4.394394846586288,
+          "bandRmsLstar": {
+            "1–3 px": 2.2077184225042688,
+            "3–7 px": 1.5256646110801284,
+            "7–19 px": 1.3812614534082117,
+            "19–55 px": 1.2019886537404674
+          },
+          "fineToBroad": 1.836721516159135
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "close-meadow--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          76,
+          85,
+          35
+        ],
+        "meanLstar": 34.12513953454227,
+        "stdLstar": 9.210306592431849,
+        "bandRmsLstar": {
+          "1–3 px": 5.516619487883027,
+          "3–7 px": 3.842983873392375,
+          "7–19 px": 2.900222631819166,
+          "19–55 px": 1.7413533992264016
+        },
+        "fineToBroad": 3.1680068447529326
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            58,
+            62,
+            32
+          ],
+          "meanLstar": 25.29362919037496,
+          "stdLstar": 1.1114223725196648,
+          "bandRmsLstar": {
+            "1–3 px": 0.4714960605780667,
+            "3–7 px": 0.39356918454640133,
+            "7–19 px": 0.32282193418277083,
+            "19–55 px": 0.1802097887982873
+          },
+          "fineToBroad": 2.6163731932776546
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            76,
+            85,
+            35
+          ],
+          "meanLstar": 34.178987213659745,
+          "stdLstar": 9.201756111966716,
+          "bandRmsLstar": {
+            "1–3 px": 5.54610950818411,
+            "3–7 px": 3.8594945439400488,
+            "7–19 px": 2.9000986145400622,
+            "19–55 px": 1.6752050067099962
+          },
+          "fineToBroad": 3.3107049501221
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "close-meadow--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          78,
+          79,
+          35
+        ],
+        "meanLstar": 32.35473482951923,
+        "stdLstar": 10.262968979693452,
+        "bandRmsLstar": {
+          "1–3 px": 6.302991943652746,
+          "3–7 px": 4.3749453499638715,
+          "7–19 px": 3.2700822116550787,
+          "19–55 px": 1.8535646887043777
+        },
+        "fineToBroad": 3.40047044598075
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            67,
+            58,
+            36
+          ],
+          "meanLstar": 24.862660250137495,
+          "stdLstar": 0.5899425489998377,
+          "bandRmsLstar": {
+            "1–3 px": 0.26335714622002754,
+            "3–7 px": 0.13202772786820313,
+            "7–19 px": 0.08170004195478367,
+            "19–55 px": 0.025784972485858454
+          },
+          "fineToBroad": 10.213590352460663
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            78,
+            79,
+            35
+          ],
+          "meanLstar": 32.39783424486999,
+          "stdLstar": 10.270013284072316,
+          "bandRmsLstar": {
+            "1–3 px": 6.33715650807976,
+            "3–7 px": 4.394775086949945,
+            "7–19 px": 3.274710051421242,
+            "19–55 px": 1.8042903984941487
+          },
+          "fineToBroad": 3.5122708148138
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "close-meadow--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 767034,
+        "pixelShare": 0.9961480519480519,
+        "meanSrgb": [
+          71,
+          79,
+          32
+        ],
+        "meanLstar": 31.666014582233156,
+        "stdLstar": 11.106186051435097,
+        "bandRmsLstar": {
+          "1–3 px": 5.1656668505782735,
+          "3–7 px": 4.634166397715774,
+          "7–19 px": 4.360712759946217,
+          "19–55 px": 2.833001115070951
+        },
+        "fineToBroad": 1.823390334404758
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 5221,
+          "pixelShare": 0.006780519480519481,
+          "meanSrgb": [
+            57,
+            61,
+            31
+          ],
+          "meanLstar": 24.677482772510807,
+          "stdLstar": 1.559223341375433,
+          "bandRmsLstar": {
+            "1–3 px": 0.5842927732135319,
+            "3–7 px": 0.3949991585807466,
+            "7–19 px": 0.3623878840148848,
+            "19–55 px": 0.11773353829445864
+          },
+          "fineToBroad": 4.9628405098314525
+        },
+        "meadow-turf": {
+          "pixels": 756635,
+          "pixelShare": 0.9826428571428572,
+          "meanSrgb": [
+            71,
+            79,
+            32
+          ],
+          "meanLstar": 31.7062976635645,
+          "stdLstar": 11.124724458776862,
+          "bandRmsLstar": {
+            "1–3 px": 5.193442965128163,
+            "3–7 px": 4.657849994842909,
+            "7–19 px": 4.377926302266103,
+            "19–55 px": 2.811542280533081
+          },
+          "fineToBroad": 1.8471865072373954
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "close-transition--ground--mat-01.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          63,
+          61,
+          27
+        ],
+        "meanLstar": 25.110678771073946,
+        "stdLstar": 6.631474537962131,
+        "bandRmsLstar": {
+          "1–3 px": 2.2494287394903947,
+          "3–7 px": 2.007275909931076,
+          "7–19 px": 2.211113579281319,
+          "19–55 px": 2.0349622365838633
+        },
+        "fineToBroad": 1.1053909006520735
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            60,
+            59,
+            26
+          ],
+          "meanLstar": 24.103532813905918,
+          "stdLstar": 6.148574690025902,
+          "bandRmsLstar": {
+            "1–3 px": 2.3595938363975795,
+            "3–7 px": 2.0988698405778603,
+            "7–19 px": 2.2549184803554554,
+            "19–55 px": 1.8704231889357708
+          },
+          "fineToBroad": 1.2615293963181327
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            84,
+            80,
+            31
+          ],
+          "meanLstar": 33.366752359161985,
+          "stdLstar": 2.263538008248141,
+          "bandRmsLstar": {
+            "1–3 px": 0.7772999190987585,
+            "3–7 px": 0.4958502530274465,
+            "7–19 px": 0.6127923879067642,
+            "19–55 px": 0.6888328699585582
+          },
+          "fineToBroad": 1.1284303537163125
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "close-transition--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          63,
+          61,
+          27
+        ],
+        "meanLstar": 25.163387639503405,
+        "stdLstar": 6.6473266343436475,
+        "bandRmsLstar": {
+          "1–3 px": 2.2512826547894367,
+          "3–7 px": 2.026115422736523,
+          "7–19 px": 2.237625998578507,
+          "19–55 px": 2.0488193539974326
+        },
+        "fineToBroad": 1.0988194983598627
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            61,
+            59,
+            26
+          ],
+          "meanLstar": 24.166514532505545,
+          "stdLstar": 6.183551777380556,
+          "bandRmsLstar": {
+            "1–3 px": 2.3616914939914673,
+            "3–7 px": 2.1192246583942023,
+            "7–19 px": 2.2842337885394364,
+            "19–55 px": 1.8871940317263871
+          },
+          "fineToBroad": 1.2514301414100035
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            84,
+            80,
+            31
+          ],
+          "meanLstar": 33.33068719944005,
+          "stdLstar": 2.2582493211879906,
+          "bandRmsLstar": {
+            "1–3 px": 0.776449416578644,
+            "3–7 px": 0.4962623750425364,
+            "7–19 px": 0.6112920987756765,
+            "19–55 px": 0.6838712018405704
+          },
+          "fineToBroad": 1.1353737582294863
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "close-transition--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          63,
+          61,
+          27
+        ],
+        "meanLstar": 25.239051964889835,
+        "stdLstar": 5.541311610219619,
+        "bandRmsLstar": {
+          "1–3 px": 1.0651602283096908,
+          "3–7 px": 1.1532744642860897,
+          "7–19 px": 1.69288861397293,
+          "19–55 px": 1.9421271550552512
+        },
+        "fineToBroad": 0.5484503038522152
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            61,
+            59,
+            26
+          ],
+          "meanLstar": 24.22634217324071,
+          "stdLstar": 4.782619302373936,
+          "bandRmsLstar": {
+            "1–3 px": 1.0845666113452763,
+            "3–7 px": 1.1717322229969969,
+            "7–19 px": 1.6746638406613017,
+            "19–55 px": 1.7605004147475962
+          },
+          "fineToBroad": 0.6160558681270013
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            85,
+            80,
+            32
+          ],
+          "meanLstar": 33.54760195425281,
+          "stdLstar": 2.240530010825569,
+          "bandRmsLstar": {
+            "1–3 px": 0.6939881406807739,
+            "3–7 px": 0.4756216871318806,
+            "7–19 px": 0.6134957087303218,
+            "19–55 px": 0.7031394625440974
+          },
+          "fineToBroad": 0.9869850543870596
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "close-transition--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          65,
+          63,
+          28
+        ],
+        "meanLstar": 25.883101026701688,
+        "stdLstar": 7.059079154927863,
+        "bandRmsLstar": {
+          "1–3 px": 2.1892112904061394,
+          "3–7 px": 1.954175022192309,
+          "7–19 px": 2.1932555946432903,
+          "19–55 px": 2.092749882430063
+        },
+        "fineToBroad": 1.04609313744845
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            61,
+            60,
+            27
+          ],
+          "meanLstar": 24.537629976729512,
+          "stdLstar": 6.0846059650132185,
+          "bandRmsLstar": {
+            "1–3 px": 2.288364295455029,
+            "3–7 px": 2.0364205015606776,
+            "7–19 px": 2.224053987675205,
+            "19–55 px": 1.9033443645774666
+          },
+          "fineToBroad": 1.2022860066959218
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            94,
+            89,
+            35
+          ],
+          "meanLstar": 37.093952902582664,
+          "stdLstar": 2.3859946141528834,
+          "bandRmsLstar": {
+            "1–3 px": 0.8615702413934199,
+            "3–7 px": 0.5753948484862436,
+            "7–19 px": 0.7008491189562552,
+            "19–55 px": 0.7673075226487329
+          },
+          "fineToBroad": 1.1228486831711144
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "close-transition--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          65,
+          58,
+          33
+        ],
+        "meanLstar": 24.225242840458886,
+        "stdLstar": 6.439900413078849,
+        "bandRmsLstar": {
+          "1–3 px": 2.1795956507720713,
+          "3–7 px": 1.9399966328131204,
+          "7–19 px": 2.1270547387269163,
+          "19–55 px": 1.9507202272376984
+        },
+        "fineToBroad": 1.11732867703867
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            63,
+            55,
+            33
+          ],
+          "meanLstar": 23.276777095570637,
+          "stdLstar": 6.015978132153507,
+          "bandRmsLstar": {
+            "1–3 px": 2.2889062658113906,
+            "3–7 px": 2.028905173394065,
+            "7–19 px": 2.168920620355541,
+            "19–55 px": 1.7820200628760177
+          },
+          "fineToBroad": 1.2844447228710236
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            78,
+            77,
+            36
+          ],
+          "meanLstar": 31.932769866165057,
+          "stdLstar": 1.7375548915524621,
+          "bandRmsLstar": {
+            "1–3 px": 0.6924800342311667,
+            "3–7 px": 0.3896245159174147,
+            "7–19 px": 0.2949341515859539,
+            "19–55 px": 0.19800562912014494
+          },
+          "fineToBroad": 3.497274483095563
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-transition",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "close-transition--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 462888,
+        "pixelShare": 0.6011532467532468,
+        "meanSrgb": [
+          67,
+          65,
+          28
+        ],
+        "meanLstar": 26.807460920821004,
+        "stdLstar": 7.03793835642709,
+        "bandRmsLstar": {
+          "1–3 px": 2.1401907510574665,
+          "3–7 px": 2.049268140195392,
+          "7–19 px": 2.5774371152560516,
+          "19–55 px": 2.509492309818154
+        },
+        "fineToBroad": 0.8528381388873639
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 411273,
+          "pixelShare": 0.5341207792207793,
+          "meanSrgb": [
+            65,
+            63,
+            28
+          ],
+          "meanLstar": 25.983441391267142,
+          "stdLstar": 6.861236693595694,
+          "bandRmsLstar": {
+            "1–3 px": 2.2181217669649684,
+            "3–7 px": 2.1358574372959227,
+            "7–19 px": 2.6501838280383154,
+            "19–55 px": 2.4721678193688246
+          },
+          "fineToBroad": 0.8972375376730221
+        },
+        "meadow-turf": {
+          "pixels": 44776,
+          "pixelShare": 0.05815064935064935,
+          "meanSrgb": [
+            85,
+            80,
+            31
+          ],
+          "meanLstar": 33.497990751458346,
+          "stdLstar": 2.298353838059614,
+          "bandRmsLstar": {
+            "1–3 px": 1.2240108168567485,
+            "3–7 px": 0.6941069419656292,
+            "7–19 px": 0.6216707400922779,
+            "19–55 px": 0.5823075320529859
+          },
+          "fineToBroad": 2.1020006602720227
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "close-forest-floor",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "close-forest-floor--env--mat-01.png",
+      "ground": {
+        "pixels": 765836,
+        "pixelShare": 0.9945922077922078,
+        "meanSrgb": [
+          74,
+          75,
+          25
+        ],
+        "meanLstar": 30.058992481863395,
+        "stdLstar": 15.431797896091044,
+        "bandRmsLstar": {
+          "1–3 px": 6.2302161636998195,
+          "3–7 px": 5.3255057898336835,
+          "7–19 px": 4.4376478450363015,
+          "19–55 px": 2.8326467105301405
+        },
+        "fineToBroad": 2.199432827447024
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 92892,
+          "pixelShare": 0.12063896103896105,
+          "meanSrgb": [
+            30,
+            36,
+            9
+          ],
+          "meanLstar": 12.793006756788168,
+          "stdLstar": 8.000002800953053,
+          "bandRmsLstar": {
+            "1–3 px": 4.787708207386006,
+            "3–7 px": 2.9057519356353385,
+            "7–19 px": 2.302656781296336,
+            "19–55 px": 2.169891946887086
+          },
+          "fineToBroad": 2.206427013222674
+        },
+        "meadow-turf": {
+          "pixels": 666319,
+          "pixelShare": 0.8653493506493507,
+          "meanSrgb": [
+            80,
+            80,
+            27
+          ],
+          "meanLstar": 32.498706146784244,
+          "stdLstar": 14.660015941440005,
+          "bandRmsLstar": {
+            "1–3 px": 6.4130936664104885,
+            "3–7 px": 5.590677466130346,
+            "7–19 px": 4.67039318026153,
+            "19–55 px": 2.9441698579528293
+          },
+          "fineToBroad": 2.178234944253423
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 4164,
+        "pixelShare": 0.005407792207792208,
+        "meanSrgb": [
+          100,
+          101,
+          54
+        ],
+        "meanLstar": 41.352595410579035,
+        "stdLstar": 10.734946758813736,
+        "bandRmsLstar": {
+          "1–3 px": 4.715067945167652,
+          "3–7 px": 2.6780819194354253,
+          "7–19 px": 2.5659305686649465,
+          "19–55 px": 2.964576182275933
+        },
+        "fineToBroad": 1.590469482065342
+      }
+    },
+    {
+      "view": "close-meadow",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "close-meadow--env--mat-01.png",
+      "ground": {
+        "pixels": 763946,
+        "pixelShare": 0.9921376623376623,
+        "meanSrgb": [
+          69,
+          78,
+          32
+        ],
+        "meanLstar": 31.203439734162565,
+        "stdLstar": 10.262527194767324,
+        "bandRmsLstar": {
+          "1–3 px": 6.231201677494295,
+          "3–7 px": 4.324761757526845,
+          "7–19 px": 3.2506174721708074,
+          "19–55 px": 1.8740076129328784
+        },
+        "fineToBroad": 3.3250674300849163
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 4333,
+          "pixelShare": 0.005627272727272727,
+          "meanSrgb": [
+            51,
+            55,
+            28
+          ],
+          "meanLstar": 22.08079129368483,
+          "stdLstar": 6.559242465120009,
+          "bandRmsLstar": {
+            "1–3 px": 4.599382836616491,
+            "3–7 px": 3.1917307860481894,
+            "7–19 px": 1.8953937950946012,
+            "19–55 px": 0.8066284729352873
+          },
+          "fineToBroad": 5.701984235542206
+        },
+        "meadow-turf": {
+          "pixels": 753387,
+          "pixelShare": 0.9784246753246754,
+          "meanSrgb": [
+            69,
+            78,
+            32
+          ],
+          "meanLstar": 31.25547296775147,
+          "stdLstar": 10.253046986004,
+          "bandRmsLstar": {
+            "1–3 px": 6.252373963732405,
+            "3–7 px": 4.337773104791704,
+            "7–19 px": 3.254752108365788,
+            "19–55 px": 1.8178069111415938
+          },
+          "fineToBroad": 3.43951490414671
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 6054,
+        "pixelShare": 0.007862337662337663,
+        "meanSrgb": [
+          68,
+          90,
+          78
+        ],
+        "meanLstar": 35.507306551975354,
+        "stdLstar": 17.33750422161254,
+        "bandRmsLstar": {
+          "1–3 px": 4.595254318635557,
+          "3–7 px": 3.8889664539610935,
+          "7–19 px": 6.022532699343867,
+          "19–55 px": 8.044258535738754
+        },
+        "fineToBroad": 0.5712464732728219
+      }
+    },
+    {
+      "view": "close-transition",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "close-transition--env--mat-01.png",
+      "ground": {
+        "pixels": 436820,
+        "pixelShare": 0.5672987012987013,
+        "meanSrgb": [
+          42,
+          42,
+          17
+        ],
+        "meanLstar": 16.381279423802887,
+        "stdLstar": 10.479809990280268,
+        "bandRmsLstar": {
+          "1–3 px": 2.3602336183731474,
+          "3–7 px": 1.9937922143712075,
+          "7–19 px": 2.3776510772712562,
+          "19–55 px": 2.7651206456455237
+        },
+        "fineToBroad": 0.853573467794258
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 394373,
+          "pixelShare": 0.5121727272727272,
+          "meanSrgb": [
+            39,
+            39,
+            16
+          ],
+          "meanLstar": 15.149501025558015,
+          "stdLstar": 9.7504359710762,
+          "bandRmsLstar": {
+            "1–3 px": 2.066023688775962,
+            "3–7 px": 1.8209352182991443,
+            "7–19 px": 2.209041471272638,
+            "19–55 px": 2.487004965908638
+          },
+          "fineToBroad": 0.8307276089499609
+        },
+        "meadow-turf": {
+          "pixels": 33321,
+          "pixelShare": 0.04327402597402597,
+          "meanSrgb": [
+            72,
+            69,
+            25
+          ],
+          "meanLstar": 28.42816462912244,
+          "stdLstar": 9.343015073875517,
+          "bandRmsLstar": {
+            "1–3 px": 4.4305236077546875,
+            "3–7 px": 3.306468839745768,
+            "7–19 px": 3.5699881267300184,
+            "19–55 px": 3.6474144637497514
+          },
+          "fineToBroad": 1.214702538411238
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 242605,
+        "pixelShare": 0.31507142857142856,
+        "meanSrgb": [
+          26,
+          33,
+          17
+        ],
+        "meanLstar": 11.668531444362673,
+        "stdLstar": 11.581822766397245,
+        "bandRmsLstar": {
+          "1–3 px": 5.2331301714184235,
+          "3–7 px": 3.2564276143818085,
+          "7–19 px": 3.7706068834713955,
+          "19–55 px": 4.429629059178144
+        },
+        "fineToBroad": 1.1813924149191304
+      }
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "birch-interior--ground--mat-01.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          74,
+          71,
+          28
+        ],
+        "meanLstar": 29.386206382374272,
+        "stdLstar": 9.608087481777227,
+        "bandRmsLstar": {
+          "1–3 px": 5.738162292441904,
+          "3–7 px": 3.489863277394781,
+          "7–19 px": 2.5052034381697013,
+          "19–55 px": 1.4263113831552512
+        },
+        "fineToBroad": 4.023078242387775
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            67,
+            64,
+            27
+          ],
+          "meanLstar": 26.262918055424063,
+          "stdLstar": 8.06686393383245,
+          "bandRmsLstar": {
+            "1–3 px": 4.382237565419344,
+            "3–7 px": 2.8397410174213458,
+            "7–19 px": 2.195651906841056,
+            "19–55 px": 1.360722705754735
+          },
+          "fineToBroad": 3.2205221143779643
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            83,
+            81,
+            28
+          ],
+          "meanLstar": 33.40386783792652,
+          "stdLstar": 9.961017029715956,
+          "bandRmsLstar": {
+            "1–3 px": 7.147679861021592,
+            "3–7 px": 4.201487746788625,
+            "7–19 px": 2.8340013701718285,
+            "19–55 px": 1.427381149793397
+          },
+          "fineToBroad": 5.0075481675347655
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "birch-interior--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          75,
+          72,
+          28
+        ],
+        "meanLstar": 29.6958063611353,
+        "stdLstar": 9.81343390265234,
+        "bandRmsLstar": {
+          "1–3 px": 5.719330131932263,
+          "3–7 px": 3.5369421381043025,
+          "7–19 px": 2.562975934050609,
+          "19–55 px": 1.458879463576467
+        },
+        "fineToBroad": 3.9203582439300577
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            67,
+            64,
+            27
+          ],
+          "meanLstar": 26.409314379295967,
+          "stdLstar": 8.24094225662785,
+          "bandRmsLstar": {
+            "1–3 px": 4.3970575576237705,
+            "3–7 px": 2.87387835097745,
+            "7–19 px": 2.234049028813619,
+            "19–55 px": 1.3823743060697702
+          },
+          "fineToBroad": 3.180800987342603
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            85,
+            82,
+            29
+          ],
+          "meanLstar": 33.925534828528534,
+          "stdLstar": 10.079517164828427,
+          "bandRmsLstar": {
+            "1–3 px": 7.101034312414797,
+            "3–7 px": 4.263215386608379,
+            "7–19 px": 2.910033718684758,
+            "19–55 px": 1.47985036705062
+          },
+          "fineToBroad": 4.798481299543374
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "birch-interior--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          72,
+          69,
+          27
+        ],
+        "meanLstar": 28.597048891072227,
+        "stdLstar": 5.809603533213567,
+        "bandRmsLstar": {
+          "1–3 px": 2.1134191652310235,
+          "3–7 px": 1.4723822154456525,
+          "7–19 px": 1.506315999392853,
+          "19–55 px": 1.2034581885225835
+        },
+        "fineToBroad": 1.756121804136417
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            65,
+            62,
+            26
+          ],
+          "meanLstar": 25.523193904221465,
+          "stdLstar": 5.118306299419545,
+          "bandRmsLstar": {
+            "1–3 px": 1.9323645954786046,
+            "3–7 px": 1.4764171403693347,
+            "7–19 px": 1.5123250841139333,
+            "19–55 px": 1.2078983207394562
+          },
+          "fineToBroad": 1.5997742213066755
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            81,
+            78,
+            27
+          ],
+          "meanLstar": 32.54677159120818,
+          "stdLstar": 3.981298989882587,
+          "bandRmsLstar": {
+            "1–3 px": 2.3321104141142186,
+            "3–7 px": 1.466179897068568,
+            "7–19 px": 1.4681129955179073,
+            "19–55 px": 1.1237773873762251
+          },
+          "fineToBroad": 2.0752423391960106
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "birch-interior--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          79,
+          76,
+          30
+        ],
+        "meanLstar": 31.388291258400322,
+        "stdLstar": 9.79992056943903,
+        "bandRmsLstar": {
+          "1–3 px": 5.200611976863101,
+          "3–7 px": 3.2027552393135337,
+          "7–19 px": 2.3638730760949755,
+          "19–55 px": 1.490590623640272
+        },
+        "fineToBroad": 3.4889606135870728
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            69,
+            66,
+            28
+          ],
+          "meanLstar": 27.220444399029798,
+          "stdLstar": 8.342593953511646,
+          "bandRmsLstar": {
+            "1–3 px": 4.168256988889727,
+            "3–7 px": 2.727973174821396,
+            "7–19 px": 2.1417466176358992,
+            "19–55 px": 1.413704440100292
+          },
+          "fineToBroad": 2.948464240937108
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            92,
+            89,
+            32
+          ],
+          "meanLstar": 36.75305920023598,
+          "stdLstar": 8.915938665234712,
+          "bandRmsLstar": {
+            "1–3 px": 6.314345799966877,
+            "3–7 px": 3.740266784895095,
+            "7–19 px": 2.5805029207511807,
+            "19–55 px": 1.4225448991899396
+          },
+          "fineToBroad": 4.438767313117882
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "birch-interior--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          71,
+          68,
+          32
+        ],
+        "meanLstar": 28.144245549229,
+        "stdLstar": 8.868513438550066,
+        "bandRmsLstar": {
+          "1–3 px": 5.4666012770221295,
+          "3–7 px": 3.3275055326291096,
+          "7–19 px": 2.400040541054503,
+          "19–55 px": 1.3766852319174374
+        },
+        "fineToBroad": 3.9708432619766585
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            67,
+            61,
+            32
+          ],
+          "meanLstar": 25.5786566249392,
+          "stdLstar": 7.412204049612404,
+          "bandRmsLstar": {
+            "1–3 px": 4.108646348030555,
+            "3–7 px": 2.6834181742944376,
+            "7–19 px": 2.1005259804060494,
+            "19–55 px": 1.2938043350588324
+          },
+          "fineToBroad": 3.1756319226150413
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            76,
+            77,
+            33
+          ],
+          "meanLstar": 31.4440562070303,
+          "stdLstar": 9.49948944068931,
+          "bandRmsLstar": {
+            "1–3 px": 6.861922427243097,
+            "3–7 px": 4.02779450373627,
+            "7–19 px": 2.7154255466249526,
+            "19–55 px": 1.3577555493367712
+          },
+          "fineToBroad": 5.053871759607221
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "birch-interior--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 451949,
+        "pixelShare": 0.5869467532467533,
+        "meanSrgb": [
+          74,
+          72,
+          28
+        ],
+        "meanLstar": 29.707599793399716,
+        "stdLstar": 10.270426099179831,
+        "bandRmsLstar": {
+          "1–3 px": 5.003226442196973,
+          "3–7 px": 4.035051431837596,
+          "7–19 px": 3.3738096500043326,
+          "19–55 px": 2.2345432870397004
+        },
+        "fineToBroad": 2.2390376016502214
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 252508,
+          "pixelShare": 0.3279324675324675,
+          "meanSrgb": [
+            68,
+            66,
+            28
+          ],
+          "meanLstar": 27.02250600208512,
+          "stdLstar": 8.660064363489937,
+          "bandRmsLstar": {
+            "1–3 px": 3.8407331180096147,
+            "3–7 px": 3.118562766920334,
+            "7–19 px": 2.7414699723633293,
+            "19–55 px": 2.0006206630550682
+          },
+          "fineToBroad": 1.9197707936019135
+        },
+        "meadow-turf": {
+          "pixels": 193603,
+          "pixelShare": 0.2514324675324675,
+          "meanSrgb": [
+            83,
+            81,
+            29
+          ],
+          "meanLstar": 33.15065434093879,
+          "stdLstar": 11.155809375432645,
+          "bandRmsLstar": {
+            "1–3 px": 6.218622220067024,
+            "3–7 px": 5.0012085394171475,
+            "7–19 px": 4.052704590801053,
+            "19–55 px": 2.403591944249037
+          },
+          "fineToBroad": 2.5872204451949643
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-interior",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "birch-interior--env--mat-01.png",
+      "ground": {
+        "pixels": 442301,
+        "pixelShare": 0.5744168831168831,
+        "meanSrgb": [
+          55,
+          55,
+          20
+        ],
+        "meanLstar": 21.896242188038602,
+        "stdLstar": 11.34049171383822,
+        "bandRmsLstar": {
+          "1–3 px": 4.966426431128845,
+          "3–7 px": 3.02218714241977,
+          "7–19 px": 2.359818831611965,
+          "19–55 px": 2.1319527405331242
+        },
+        "fineToBroad": 2.3295199451217297
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 246513,
+          "pixelShare": 0.32014675324675324,
+          "meanSrgb": [
+            46,
+            46,
+            18
+          ],
+          "meanLstar": 18.132887561553286,
+          "stdLstar": 8.681901777403546,
+          "bandRmsLstar": {
+            "1–3 px": 3.4610661859613323,
+            "3–7 px": 2.3494389421092934,
+            "7–19 px": 2.162308386864206,
+            "19–55 px": 2.3170453683266454
+          },
+          "fineToBroad": 1.4937412246100692
+        },
+        "meadow-turf": {
+          "pixels": 187810,
+          "pixelShare": 0.2439090909090909,
+          "meanSrgb": [
+            66,
+            66,
+            22
+          ],
+          "meanLstar": 26.736181322167077,
+          "stdLstar": 12.508511750284853,
+          "bandRmsLstar": {
+            "1–3 px": 6.431698686492386,
+            "3–7 px": 3.728089634009642,
+            "7–19 px": 2.576422466835469,
+            "19–55 px": 1.8171284295993801
+          },
+          "fineToBroad": 3.5394849267260513
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 177496,
+        "pixelShare": 0.23051428571428573,
+        "meanSrgb": [
+          50,
+          60,
+          30
+        ],
+        "meanLstar": 23.095601769073586,
+        "stdLstar": 17.651155713336866,
+        "bandRmsLstar": {
+          "1–3 px": 5.671295978220068,
+          "3–7 px": 3.967918199269134,
+          "7–19 px": 4.900997549692619,
+          "19–55 px": 6.279697128809148
+        },
+        "fineToBroad": 0.9031161633898013
+      }
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "birch-edge--ground--mat-01.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          74,
+          72,
+          29
+        ],
+        "meanLstar": 29.575373928452514,
+        "stdLstar": 9.799124758162776,
+        "bandRmsLstar": {
+          "1–3 px": 5.16303685195657,
+          "3–7 px": 3.3038682480544455,
+          "7–19 px": 2.5909440042721363,
+          "19–55 px": 1.5899542238546347
+        },
+        "fineToBroad": 3.2472864781222865
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            69,
+            66,
+            28
+          ],
+          "meanLstar": 27.11080523135663,
+          "stdLstar": 8.59066845958568,
+          "bandRmsLstar": {
+            "1–3 px": 4.380264163852959,
+            "3–7 px": 2.965681641942659,
+            "7–19 px": 2.4776146911617367,
+            "19–55 px": 1.6289622188818549
+          },
+          "fineToBroad": 2.6889906426802463
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            88,
+            87,
+            31
+          ],
+          "meanLstar": 35.63662001184731,
+          "stdLstar": 9.957777932455057,
+          "bandRmsLstar": {
+            "1–3 px": 6.733504441730287,
+            "3–7 px": 4.033369685211352,
+            "7–19 px": 2.8665023206756315,
+            "19–55 px": 1.4622849982173687
+          },
+          "fineToBroad": 4.604782549187687
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "birch-edge--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          75,
+          72,
+          29
+        ],
+        "meanLstar": 29.76978310381907,
+        "stdLstar": 9.983846752815703,
+        "bandRmsLstar": {
+          "1–3 px": 5.206284280213562,
+          "3–7 px": 3.3501029763044468,
+          "7–19 px": 2.63192686121784,
+          "19–55 px": 1.607005411622163
+        },
+        "fineToBroad": 3.2397428425322916
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            69,
+            66,
+            28
+          ],
+          "meanLstar": 27.24189181862669,
+          "stdLstar": 8.730394385669054,
+          "bandRmsLstar": {
+            "1–3 px": 4.417660505633337,
+            "3–7 px": 3.0010630793596933,
+            "7–19 px": 2.5126606001532483,
+            "19–55 px": 1.6455349032261222
+          },
+          "fineToBroad": 2.6846349457385417
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            89,
+            88,
+            31
+          ],
+          "meanLstar": 35.98684704469399,
+          "stdLstar": 10.15554426395264,
+          "bandRmsLstar": {
+            "1–3 px": 6.78806814802955,
+            "3–7 px": 4.100889477430166,
+            "7–19 px": 2.921256412330608,
+            "19–55 px": 1.4896624022151195
+          },
+          "fineToBroad": 4.556782891167645
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "birch-edge--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          71,
+          67,
+          27
+        ],
+        "meanLstar": 27.757246965170463,
+        "stdLstar": 6.133939020018122,
+        "bandRmsLstar": {
+          "1–3 px": 2.290938186870891,
+          "3–7 px": 1.634810498242064,
+          "7–19 px": 1.6371865949535007,
+          "19–55 px": 1.365518930227434
+        },
+        "fineToBroad": 1.6777051831052416
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            66,
+            62,
+            26
+          ],
+          "meanLstar": 25.60837839293718,
+          "stdLstar": 5.258372069672066,
+          "bandRmsLstar": {
+            "1–3 px": 2.085546285348604,
+            "3–7 px": 1.5688966834771665,
+            "7–19 px": 1.6363865981685048,
+            "19–55 px": 1.442913883497399
+          },
+          "fineToBroad": 1.4453712790492834
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            83,
+            80,
+            28
+          ],
+          "meanLstar": 33.04787193009613,
+          "stdLstar": 4.7922878223844005,
+          "bandRmsLstar": {
+            "1–3 px": 2.7419597894848318,
+            "3–7 px": 1.7958041786640084,
+            "7–19 px": 1.6536195059423224,
+            "19–55 px": 1.1642565781197947
+          },
+          "fineToBroad": 2.355116424519528
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "birch-edge--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          78,
+          75,
+          30
+        ],
+        "meanLstar": 30.800349963874936,
+        "stdLstar": 10.022279726643308,
+        "bandRmsLstar": {
+          "1–3 px": 4.911098922846981,
+          "3–7 px": 3.182230652075577,
+          "7–19 px": 2.520196236294257,
+          "19–55 px": 1.5948066611425578
+        },
+        "fineToBroad": 3.079432160967118
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            71,
+            67,
+            28
+          ],
+          "meanLstar": 27.81340199371296,
+          "stdLstar": 8.6711357134602,
+          "bandRmsLstar": {
+            "1–3 px": 4.260157860874679,
+            "3–7 px": 2.906408402534665,
+            "7–19 px": 2.43971939543797,
+            "19–55 px": 1.638109814447171
+          },
+          "fineToBroad": 2.60065462235961
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            94,
+            93,
+            33
+          ],
+          "meanLstar": 38.14908678531125,
+          "stdLstar": 9.31889727374383,
+          "bandRmsLstar": {
+            "1–3 px": 6.252041784038185,
+            "3–7 px": 3.7927749291590995,
+            "7–19 px": 2.724445392867644,
+            "19–55 px": 1.4609570704786097
+          },
+          "fineToBroad": 4.279415124764765
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "birch-edge--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          71,
+          67,
+          33
+        ],
+        "meanLstar": 27.914996751265388,
+        "stdLstar": 8.480492594315796,
+        "bandRmsLstar": {
+          "1–3 px": 4.682097806522302,
+          "3–7 px": 3.0230895408282192,
+          "7–19 px": 2.4280900088290682,
+          "19–55 px": 1.5098395928692712
+        },
+        "fineToBroad": 3.1010564490659105
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            68,
+            62,
+            33
+          ],
+          "meanLstar": 26.068854412485475,
+          "stdLstar": 7.5557603036595244,
+          "bandRmsLstar": {
+            "1–3 px": 3.950610375673999,
+            "3–7 px": 2.7272765790563906,
+            "7–19 px": 2.3509168723844858,
+            "19–55 px": 1.5618222979850382
+          },
+          "fineToBroad": 2.5294877533576132
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            79,
+            79,
+            35
+          ],
+          "meanLstar": 32.45197485877392,
+          "stdLstar": 8.917649891560878,
+          "bandRmsLstar": {
+            "1–3 px": 6.1408615769900665,
+            "3–7 px": 3.666276990231672,
+            "7–19 px": 2.622772632092156,
+            "19–55 px": 1.347349724509986
+          },
+          "fineToBroad": 4.5577339463393
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "birch-edge--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 490836,
+        "pixelShare": 0.6374493506493506,
+        "meanSrgb": [
+          75,
+          72,
+          29
+        ],
+        "meanLstar": 29.76441282615275,
+        "stdLstar": 9.414513134781915,
+        "bandRmsLstar": {
+          "1–3 px": 4.10550500175651,
+          "3–7 px": 3.4218114664098587,
+          "7–19 px": 3.080480412231428,
+          "19–55 px": 2.176993581323777
+        },
+        "fineToBroad": 1.8858599478552671
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 346926,
+          "pixelShare": 0.45055324675324676,
+          "meanSrgb": [
+            70,
+            67,
+            28
+          ],
+          "meanLstar": 27.696511792968227,
+          "stdLstar": 8.236246896133908,
+          "bandRmsLstar": {
+            "1–3 px": 3.2917907771591723,
+            "3–7 px": 2.9736679088627156,
+            "7–19 px": 2.848047205407418,
+            "19–55 px": 2.1388567259444384
+          },
+          "fineToBroad": 1.5390422075633148
+        },
+        "meadow-turf": {
+          "pixels": 139786,
+          "pixelShare": 0.18154025974025975,
+          "meanSrgb": [
+            85,
+            85,
+            30
+          ],
+          "meanLstar": 34.85985012768831,
+          "stdLstar": 10.193741344160696,
+          "bandRmsLstar": {
+            "1–3 px": 5.654182119142102,
+            "3–7 px": 4.353985623177204,
+            "7–19 px": 3.598643283308016,
+            "19–55 px": 2.306375512415403
+          },
+          "fineToBroad": 2.451544463902426
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "birch-edge--env--mat-01.png",
+      "ground": {
+        "pixels": 482470,
+        "pixelShare": 0.6265844155844156,
+        "meanSrgb": [
+          66,
+          65,
+          25
+        ],
+        "meanLstar": 26.37484142521644,
+        "stdLstar": 12.65326982109214,
+        "bandRmsLstar": {
+          "1–3 px": 5.147073530790506,
+          "3–7 px": 3.3513845527572883,
+          "7–19 px": 2.903144769921075,
+          "19–55 px": 2.721596273461683
+        },
+        "fineToBroad": 1.8911965676098543
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 340256,
+          "pixelShare": 0.4418909090909091,
+          "meanSrgb": [
+            62,
+            59,
+            24
+          ],
+          "meanLstar": 24.139310563839764,
+          "stdLstar": 11.590722333414456,
+          "bandRmsLstar": {
+            "1–3 px": 4.383062376681178,
+            "3–7 px": 3.0043010648427075,
+            "7–19 px": 2.7494818508696626,
+            "19–55 px": 2.5449517742087058
+          },
+          "fineToBroad": 1.7222575378835971
+        },
+        "meadow-turf": {
+          "pixels": 136586,
+          "pixelShare": 0.1773844155844156,
+          "meanSrgb": [
+            79,
+            79,
+            27
+          ],
+          "meanLstar": 32.01278174400892,
+          "stdLstar": 13.378333112520043,
+          "bandRmsLstar": {
+            "1–3 px": 6.701858316493691,
+            "3–7 px": 4.096953016134549,
+            "7–19 px": 3.2520562831313473,
+            "19–55 px": 3.087111945517006
+          },
+          "fineToBroad": 2.1709152226325616
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 179314,
+        "pixelShare": 0.23287532467532468,
+        "meanSrgb": [
+          37,
+          41,
+          20
+        ],
+        "meanLstar": 15.596479725541421,
+        "stdLstar": 14.466909663614945,
+        "bandRmsLstar": {
+          "1–3 px": 5.419271112047466,
+          "3–7 px": 3.4388009837685316,
+          "7–19 px": 3.826352156518942,
+          "19–55 px": 5.454480270490784
+        },
+        "fineToBroad": 0.9935449104777585
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "meadow-transition--ground--mat-01.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          67,
+          64,
+          29
+        ],
+        "meanLstar": 26.34435683328659,
+        "stdLstar": 6.659911900751468,
+        "bandRmsLstar": {
+          "1–3 px": 2.3583308102860085,
+          "3–7 px": 1.9383428723105298,
+          "7–19 px": 1.9811515076591262,
+          "19–55 px": 1.9351264486949478
+        },
+        "fineToBroad": 1.2186959730081053
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            63,
+            60,
+            28
+          ],
+          "meanLstar": 24.831270760241395,
+          "stdLstar": 6.094301370898103,
+          "bandRmsLstar": {
+            "1–3 px": 2.559859547895148,
+            "3–7 px": 2.0832742826972828,
+            "7–19 px": 2.0106617850812167,
+            "19–55 px": 1.610789360992765
+          },
+          "fineToBroad": 1.5891957135335497
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            84,
+            80,
+            31
+          ],
+          "meanLstar": 33.37161258841032,
+          "stdLstar": 2.2638143825815056,
+          "bandRmsLstar": {
+            "1–3 px": 0.8017149470509942,
+            "3–7 px": 0.5024325180169006,
+            "7–19 px": 0.6149501191052446,
+            "19–55 px": 0.6935887451115355
+          },
+          "fineToBroad": 1.1558938242604717
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "meadow-transition--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          67,
+          64,
+          29
+        ],
+        "meanLstar": 26.363863913326508,
+        "stdLstar": 6.658138970122893,
+        "bandRmsLstar": {
+          "1–3 px": 2.363352572132271,
+          "3–7 px": 1.9493552116787953,
+          "7–19 px": 1.9903781568979717,
+          "19–55 px": 1.937834490999117
+        },
+        "fineToBroad": 1.219584326272242
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            63,
+            60,
+            28
+          ],
+          "meanLstar": 24.861897236029552,
+          "stdLstar": 6.107939447322959,
+          "bandRmsLstar": {
+            "1–3 px": 2.565471165165225,
+            "3–7 px": 2.095647856653943,
+            "7–19 px": 2.021882391212018,
+            "19–55 px": 1.6154802967878403
+          },
+          "fineToBroad": 1.5880547539120784
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            84,
+            80,
+            31
+          ],
+          "meanLstar": 33.33517008425502,
+          "stdLstar": 2.258127013761619,
+          "bandRmsLstar": {
+            "1–3 px": 0.8019715929527585,
+            "3–7 px": 0.5022787310668736,
+            "7–19 px": 0.6129080444580618,
+            "19–55 px": 0.6885941674922791
+          },
+          "fineToBroad": 1.164650574769428
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "meadow-transition--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          67,
+          64,
+          29
+        ],
+        "meanLstar": 26.392016085777954,
+        "stdLstar": 5.984096284579769,
+        "bandRmsLstar": {
+          "1–3 px": 1.2711040670406875,
+          "3–7 px": 1.3551188109937853,
+          "7–19 px": 1.772869238464798,
+          "19–55 px": 1.8992165268238896
+        },
+        "fineToBroad": 0.669278120260668
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            63,
+            60,
+            28
+          ],
+          "meanLstar": 24.853200548469186,
+          "stdLstar": 5.139358150241641,
+          "bandRmsLstar": {
+            "1–3 px": 1.3386687776933586,
+            "3–7 px": 1.415615608043308,
+            "7–19 px": 1.7581981740539847,
+            "19–55 px": 1.5660141107092977
+          },
+          "fineToBroad": 0.8548254888246395
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            85,
+            80,
+            32
+          ],
+          "meanLstar": 33.55186942137396,
+          "stdLstar": 2.237564676365057,
+          "bandRmsLstar": {
+            "1–3 px": 0.7115582490906334,
+            "3–7 px": 0.48003861131281145,
+            "7–19 px": 0.616744668307884,
+            "19–55 px": 0.7075683307722624
+          },
+          "fineToBroad": 1.0056389159108015
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "meadow-transition--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          69,
+          66,
+          30
+        ],
+        "meanLstar": 27.3401436222345,
+        "stdLstar": 7.303786238260006,
+        "bandRmsLstar": {
+          "1–3 px": 2.3101637016355925,
+          "3–7 px": 1.9225886539098362,
+          "7–19 px": 2.01448139734608,
+          "19–55 px": 2.0057780477732825
+        },
+        "fineToBroad": 1.151754404830696
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            64,
+            61,
+            29
+          ],
+          "meanLstar": 25.27770625233346,
+          "stdLstar": 6.0758425538997995,
+          "bandRmsLstar": {
+            "1–3 px": 2.4955455999619507,
+            "3–7 px": 2.057469402254395,
+            "7–19 px": 2.0322668638461714,
+            "19–55 px": 1.6437404316615334
+          },
+          "fineToBroad": 1.5182114839381249
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            94,
+            89,
+            35
+          ],
+          "meanLstar": 37.09770973902234,
+          "stdLstar": 2.3892671623605186,
+          "bandRmsLstar": {
+            "1–3 px": 0.8841521039793535,
+            "3–7 px": 0.5806655111968112,
+            "7–19 px": 0.7066155943378093,
+            "19–55 px": 0.7748076479806424
+          },
+          "fineToBroad": 1.1411246472381786
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "meadow-transition--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          67,
+          61,
+          35
+        ],
+        "meanLstar": 25.508324538349196,
+        "stdLstar": 6.446824329963087,
+        "bandRmsLstar": {
+          "1–3 px": 2.276060148906587,
+          "3–7 px": 1.867447974013931,
+          "7–19 px": 1.9045443329327856,
+          "19–55 px": 1.871405648958759
+        },
+        "fineToBroad": 1.216230243920112
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            65,
+            57,
+            34
+          ],
+          "meanLstar": 24.110223070234156,
+          "stdLstar": 5.991902315842419,
+          "bandRmsLstar": {
+            "1–3 px": 2.4743512875955807,
+            "3–7 px": 2.006426442070531,
+            "7–19 px": 1.9321749293931023,
+            "19–55 px": 1.5417577541766927
+          },
+          "fineToBroad": 1.6048897960087758
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            78,
+            77,
+            36
+          ],
+          "meanLstar": 31.93194547592988,
+          "stdLstar": 1.7387746464547607,
+          "bandRmsLstar": {
+            "1–3 px": 0.7191583379902481,
+            "3–7 px": 0.3973550963526643,
+            "7–19 px": 0.3030773145258571,
+            "19–55 px": 0.20195899162387562
+          },
+          "fineToBroad": 3.5609126991958555
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "meadow-transition--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 291895,
+        "pixelShare": 0.3790844155844156,
+        "meanSrgb": [
+          71,
+          67,
+          30
+        ],
+        "meanLstar": 27.967313977662435,
+        "stdLstar": 6.956208829704976,
+        "bandRmsLstar": {
+          "1–3 px": 2.4250256152956906,
+          "3–7 px": 2.1517717873509037,
+          "7–19 px": 2.4476952131261105,
+          "19–55 px": 2.3772695822000975
+        },
+        "fineToBroad": 1.0200886064639738
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 239264,
+          "pixelShare": 0.3107324675324675,
+          "meanSrgb": [
+            67,
+            65,
+            30
+          ],
+          "meanLstar": 26.767534723119915,
+          "stdLstar": 6.844879836326805,
+          "bandRmsLstar": {
+            "1–3 px": 2.597074102991959,
+            "3–7 px": 2.3108698654264885,
+            "7–19 px": 2.5586304978843786,
+            "19–55 px": 2.2415639309314064
+          },
+          "fineToBroad": 1.1585991669275444
+        },
+        "meadow-turf": {
+          "pixels": 46153,
+          "pixelShare": 0.05993896103896104,
+          "meanSrgb": [
+            85,
+            80,
+            31
+          ],
+          "meanLstar": 33.504309009668425,
+          "stdLstar": 2.3205479001510265,
+          "bandRmsLstar": {
+            "1–3 px": 1.2579591071380432,
+            "3–7 px": 0.7171679894386762,
+            "7–19 px": 0.6266137643535522,
+            "19–55 px": 0.5836080701657205
+          },
+          "fineToBroad": 2.1554861412057496
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "meadow-transition--env--mat-01.png",
+      "ground": {
+        "pixels": 264147,
+        "pixelShare": 0.34304805194805194,
+        "meanSrgb": [
+          46,
+          45,
+          18
+        ],
+        "meanLstar": 17.76361324717379,
+        "stdLstar": 10.851423367130936,
+        "bandRmsLstar": {
+          "1–3 px": 2.704112979102115,
+          "3–7 px": 2.150712698798961,
+          "7–19 px": 2.5021815704318344,
+          "19–55 px": 3.051641580051766
+        },
+        "fineToBroad": 0.8861174905921436
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 220986,
+          "pixelShare": 0.2869948051948052,
+          "meanSrgb": [
+            41,
+            41,
+            17
+          ],
+          "meanLstar": 15.851080475760131,
+          "stdLstar": 9.860158209716998,
+          "bandRmsLstar": {
+            "1–3 px": 2.3047409959166494,
+            "3–7 px": 1.8782783171535895,
+            "7–19 px": 2.2024484194619025,
+            "19–55 px": 2.720167450150225
+          },
+          "fineToBroad": 0.8472790878331283
+        },
+        "meadow-turf": {
+          "pixels": 34215,
+          "pixelShare": 0.04443506493506494,
+          "meanSrgb": [
+            72,
+            69,
+            25
+          ],
+          "meanLstar": 28.323778516780493,
+          "stdLstar": 9.389218935206346,
+          "bandRmsLstar": {
+            "1–3 px": 4.4061827487997025,
+            "3–7 px": 3.2999602187446957,
+            "7–19 px": 3.585790190080793,
+            "19–55 px": 3.7555852568125223
+          },
+          "fineToBroad": 1.173234648529684
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 282569,
+        "pixelShare": 0.3669727272727273,
+        "meanSrgb": [
+          25,
+          32,
+          16
+        ],
+        "meanLstar": 11.506582725639596,
+        "stdLstar": 11.396884281937053,
+        "bandRmsLstar": {
+          "1–3 px": 4.970610488752677,
+          "3–7 px": 3.1153306587136758,
+          "7–19 px": 3.5683746196183717,
+          "19–55 px": 4.2131328402010855
+        },
+        "fineToBroad": 1.1797896428339152
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "open-grassland--ground--mat-01.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          73,
+          80,
+          37
+        ],
+        "meanLstar": 32.19553952476946,
+        "stdLstar": 7.743716225856399,
+        "bandRmsLstar": {
+          "1–3 px": 4.934317909236023,
+          "3–7 px": 2.677887619904219,
+          "7–19 px": 2.033210873331625,
+          "19–55 px": 2.043833052347669
+        },
+        "fineToBroad": 2.4142470460433008
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            72,
+            75,
+            47
+          ],
+          "meanLstar": 30.71162944203921,
+          "stdLstar": 7.94889656935505,
+          "bandRmsLstar": {
+            "1–3 px": 0.5836079469406636,
+            "3–7 px": 0.9610876060554472,
+            "7–19 px": 2.497565983836685,
+            "19–55 px": 3.5033079991065983
+          },
+          "fineToBroad": 0.16658767858535228
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            72,
+            79,
+            35
+          ],
+          "meanLstar": 32.09501165483024,
+          "stdLstar": 7.2590695130498855,
+          "bandRmsLstar": {
+            "1–3 px": 5.172996408927255,
+            "3–7 px": 2.7692517072288694,
+            "7–19 px": 1.7400589600702168,
+            "19–55 px": 0.9773546905432154
+          },
+          "fineToBroad": 5.292854742480537
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.415236832640524,
+          "stdLstar": 6.742510635148569,
+          "bandRmsLstar": {
+            "1–3 px": 1.1014321599602164,
+            "3–7 px": 1.1004447140264189,
+            "7–19 px": 2.9640797206640257,
+            "19–55 px": 4.000178882497291
+          },
+          "fineToBroad": 0.2753457263572668
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "open-grassland--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          74,
+          80,
+          37
+        ],
+        "meanLstar": 32.419411272693026,
+        "stdLstar": 7.712257794976429,
+        "bandRmsLstar": {
+          "1–3 px": 4.845615167380152,
+          "3–7 px": 2.6898113870314546,
+          "7–19 px": 2.055619652105987,
+          "19–55 px": 2.0487605021181796
+        },
+        "fineToBroad": 2.3651447606347107
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            72,
+            75,
+            47
+          ],
+          "meanLstar": 30.70750021730144,
+          "stdLstar": 7.950619554286738,
+          "bandRmsLstar": {
+            "1–3 px": 0.5836453649908425,
+            "3–7 px": 0.9611639747607819,
+            "7–19 px": 2.497521580305475,
+            "19–55 px": 3.503941278524415
+          },
+          "fineToBroad": 0.16656824946467944
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            73,
+            80,
+            35
+          ],
+          "meanLstar": 32.342236910794206,
+          "stdLstar": 7.224454384260099,
+          "bandRmsLstar": {
+            "1–3 px": 5.079748085056819,
+            "3–7 px": 2.782090867967016,
+            "7–19 px": 1.769512746793162,
+            "19–55 px": 0.9933180102356451
+          },
+          "fineToBroad": 5.1139192410814625
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.415236832640524,
+          "stdLstar": 6.742510635148569,
+          "bandRmsLstar": {
+            "1–3 px": 1.1014321599602164,
+            "3–7 px": 1.1004447140264189,
+            "7–19 px": 2.9640797206640257,
+            "19–55 px": 4.000178882497291
+          },
+          "fineToBroad": 0.2753457263572668
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "open-grassland--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          72,
+          79,
+          36
+        ],
+        "meanLstar": 31.91651286696292,
+        "stdLstar": 5.235011291432939,
+        "bandRmsLstar": {
+          "1–3 px": 1.8747004578442237,
+          "3–7 px": 1.2652886438093787,
+          "7–19 px": 1.5793840306447644,
+          "19–55 px": 1.9970396529501921
+        },
+        "fineToBroad": 0.9387397266122188
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            72,
+            75,
+            47
+          ],
+          "meanLstar": 30.754466333872596,
+          "stdLstar": 7.92974230555946,
+          "bandRmsLstar": {
+            "1–3 px": 0.5840847295158471,
+            "3–7 px": 0.9612177936515048,
+            "7–19 px": 2.4975957555872714,
+            "19–55 px": 3.4945318434046846
+          },
+          "fineToBroad": 0.16714248308201984
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            72,
+            78,
+            35
+          ],
+          "meanLstar": 31.782774633088856,
+          "stdLstar": 4.096378689188263,
+          "bandRmsLstar": {
+            "1–3 px": 1.923490209816971,
+            "3–7 px": 1.2295671965972013,
+            "7–19 px": 1.1227727991539906,
+            "19–55 px": 0.8749216680844766
+          },
+          "fineToBroad": 2.198471337472067
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.41544811397612,
+          "stdLstar": 6.742397003907481,
+          "bandRmsLstar": {
+            "1–3 px": 1.1006463345082897,
+            "3–7 px": 1.10039623378912,
+            "7–19 px": 2.9641056032040627,
+            "19–55 px": 4.000167819093369
+          },
+          "fineToBroad": 0.2751500397695188
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "open-grassland--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          79,
+          87,
+          40
+        ],
+        "meanLstar": 35.13565553349143,
+        "stdLstar": 7.276772791519621,
+        "bandRmsLstar": {
+          "1–3 px": 4.448906613216931,
+          "3–7 px": 2.450157021666608,
+          "7–19 px": 1.9925365168917246,
+          "19–55 px": 2.1326706672933957
+        },
+        "fineToBroad": 2.086072960746023
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            72,
+            76,
+            47
+          ],
+          "meanLstar": 31.074775674348814,
+          "stdLstar": 7.8903728923178384,
+          "bandRmsLstar": {
+            "1–3 px": 0.5947715479612705,
+            "3–7 px": 0.9606268888137304,
+            "7–19 px": 2.478748113056997,
+            "19–55 px": 3.4767975528308037
+          },
+          "fineToBroad": 0.1710687892877192
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            80,
+            87,
+            38
+          ],
+          "meanLstar": 35.29868781163209,
+          "stdLstar": 6.701554731932112,
+          "bandRmsLstar": {
+            "1–3 px": 4.6599151426515855,
+            "3–7 px": 2.52338078037509,
+            "7–19 px": 1.6634339086130048,
+            "19–55 px": 1.008257931228566
+          },
+          "fineToBroad": 4.6217490567849655
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.428634450501086,
+          "stdLstar": 6.728587151033034,
+          "bandRmsLstar": {
+            "1–3 px": 1.061728038991146,
+            "3–7 px": 1.0953951374738222,
+            "7–19 px": 2.960352134942005,
+            "19–55 px": 3.994041228687308
+          },
+          "fineToBroad": 0.26582801183053795
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "open-grassland--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          80,
+          79,
+          40
+        ],
+        "meanLstar": 32.86494364766113,
+        "stdLstar": 7.669090271044658,
+        "bandRmsLstar": {
+          "1–3 px": 4.968675381096192,
+          "3–7 px": 2.6954379379234674,
+          "7–19 px": 2.0421726643297236,
+          "19–55 px": 2.064537946049623
+        },
+        "fineToBroad": 2.4066767048789157
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            79,
+            72,
+            51
+          ],
+          "meanLstar": 30.578062377154428,
+          "stdLstar": 7.888188877046429,
+          "bandRmsLstar": {
+            "1–3 px": 0.3646786524745199,
+            "3–7 px": 0.8820493148408863,
+            "7–19 px": 2.496977753974476,
+            "19–55 px": 3.4834938662094936
+          },
+          "fineToBroad": 0.10468761148454066
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            80,
+            80,
+            38
+          ],
+          "meanLstar": 32.847424834618344,
+          "stdLstar": 7.180852598098337,
+          "bandRmsLstar": {
+            "1–3 px": 5.209842236753519,
+            "3–7 px": 2.7864320869521713,
+            "7–19 px": 1.7423232600240817,
+            "19–55 px": 0.9570320909207065
+          },
+          "fineToBroad": 5.443748737559494
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.41249203736905,
+          "stdLstar": 6.746493412259363,
+          "bandRmsLstar": {
+            "1–3 px": 1.1129108091056448,
+            "3–7 px": 1.1015377996941527,
+            "7–19 px": 2.9651418826744274,
+            "19–55 px": 4.00141216005028
+          },
+          "fineToBroad": 0.2781295114301998
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "open-grassland--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 375595,
+        "pixelShare": 0.48778571428571427,
+        "meanSrgb": [
+          74,
+          81,
+          37
+        ],
+        "meanLstar": 32.56470051195616,
+        "stdLstar": 9.031916152546886,
+        "bandRmsLstar": {
+          "1–3 px": 5.471027785849073,
+          "3–7 px": 3.521721185408916,
+          "7–19 px": 2.7582210305171597,
+          "19–55 px": 2.3470093997137083
+        },
+        "fineToBroad": 2.331063431836463
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 29903,
+          "pixelShare": 0.03883506493506494,
+          "meanSrgb": [
+            72,
+            75,
+            47
+          ],
+          "meanLstar": 30.69737220090762,
+          "stdLstar": 7.965420205314073,
+          "bandRmsLstar": {
+            "1–3 px": 0.5547654897551293,
+            "3–7 px": 0.9458456444233954,
+            "7–19 px": 2.4949731253265917,
+            "19–55 px": 3.54937422957744
+          },
+          "fineToBroad": 0.15629952038649225
+        },
+        "meadow-turf": {
+          "pixels": 337267,
+          "pixelShare": 0.4380090909090909,
+          "meanSrgb": [
+            73,
+            81,
+            36
+          ],
+          "meanLstar": 32.49874306627268,
+          "stdLstar": 8.75883302423445,
+          "bandRmsLstar": {
+            "1–3 px": 5.745604367926488,
+            "3–7 px": 3.6731269121747516,
+            "7–19 px": 2.6287727335869824,
+            "19–55 px": 1.467556245722613
+          },
+          "fineToBroad": 3.9150829037543278
+        },
+        "coastal-sand": {
+          "pixels": 863,
+          "pixelShare": 0.0011207792207792208,
+          "meanSrgb": [
+            150,
+            140,
+            114
+          ],
+          "meanLstar": 58.408220661658284,
+          "stdLstar": 6.75121747774814,
+          "bandRmsLstar": {
+            "1–3 px": 1.117589454551208,
+            "3–7 px": 1.1042181906338078,
+            "7–19 px": 2.96759334360465,
+            "19–55 px": 4.004385142231344
+          },
+          "fineToBroad": 0.27909139976692127
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "open-grassland--env--mat-01.png",
+      "ground": {
+        "pixels": 358377,
+        "pixelShare": 0.46542467532467535,
+        "meanSrgb": [
+          72,
+          79,
+          35
+        ],
+        "meanLstar": 31.73628626552791,
+        "stdLstar": 7.639541497808904,
+        "bandRmsLstar": {
+          "1–3 px": 5.138428782094358,
+          "3–7 px": 2.81662137412941,
+          "7–19 px": 2.1043489155716864,
+          "19–55 px": 1.850876072413185
+        },
+        "fineToBroad": 2.776214387706055
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 20769,
+          "pixelShare": 0.026972727272727273,
+          "meanSrgb": [
+            67,
+            70,
+            42
+          ],
+          "meanLstar": 28.545637876251384,
+          "stdLstar": 7.464320169304193,
+          "bandRmsLstar": {
+            "1–3 px": 2.561941877241836,
+            "3–7 px": 1.8054570959559288,
+            "7–19 px": 2.494502776585187,
+            "19–55 px": 2.764743938357444
+          },
+          "fineToBroad": 0.9266470726992192
+        },
+        "meadow-turf": {
+          "pixels": 328079,
+          "pixelShare": 0.4260766233766234,
+          "meanSrgb": [
+            72,
+            79,
+            35
+          ],
+          "meanLstar": 31.843286956704723,
+          "stdLstar": 7.343769663799816,
+          "bandRmsLstar": {
+            "1–3 px": 5.288860837820012,
+            "3–7 px": 2.868602351534594,
+            "7–19 px": 1.8967405730826776,
+            "19–55 px": 1.0378488980112974
+          },
+          "fineToBroad": 5.095983478861333
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 74673,
+        "pixelShare": 0.09697792207792208,
+        "meanSrgb": [
+          44,
+          56,
+          32
+        ],
+        "meanLstar": 21.496929669335515,
+        "stdLstar": 17.420835979731173,
+        "bandRmsLstar": {
+          "1–3 px": 6.303118488725893,
+          "3–7 px": 4.037580767622936,
+          "7–19 px": 5.796819019683102,
+          "19–55 px": 6.526412213417107
+        },
+        "fineToBroad": 0.9657861444558831
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "mat-01",
+      "file": "overview--ground--mat-01.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          67,
+          63,
+          25
+        ],
+        "meanLstar": 26.129077348159704,
+        "stdLstar": 4.668501350720694,
+        "bandRmsLstar": {
+          "1–3 px": 1.073537525107217,
+          "3–7 px": 0.6036278925979602,
+          "7–19 px": 0.299302965022142,
+          "19–55 px": 0.6144474847235497
+        },
+        "fineToBroad": 1.7471591174145984
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            60,
+            54,
+            24
+          ],
+          "meanLstar": 22.59920868053479,
+          "stdLstar": 2.592995509218941,
+          "bandRmsLstar": {
+            "1–3 px": 1.286174452085539,
+            "3–7 px": 0.7095970413663696,
+            "7–19 px": 0.29555505839453106,
+            "19–55 px": 0.4478910710073605
+          },
+          "fineToBroad": 2.8716233373279336
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            75,
+            74,
+            25
+          ],
+          "meanLstar": 30.473445078652606,
+          "stdLstar": 2.4985332212086275,
+          "bandRmsLstar": {
+            "1–3 px": 0.7366550776096324,
+            "3–7 px": 0.4464887342927496,
+            "7–19 px": 0.24595308134896982,
+            "19–55 px": 0.47764022467723866
+          },
+          "fineToBroad": 1.5422802342650703
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "file": "overview--ground--diag-normal-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          67,
+          63,
+          25
+        ],
+        "meanLstar": 26.128627732337435,
+        "stdLstar": 4.6680464355845315,
+        "bandRmsLstar": {
+          "1–3 px": 1.0735303494318853,
+          "3–7 px": 0.6036039265554723,
+          "7–19 px": 0.2992893788610254,
+          "19–55 px": 0.6143942159536344
+        },
+        "fineToBroad": 1.7472989190915493
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            60,
+            54,
+            24
+          ],
+          "meanLstar": 22.59915203811206,
+          "stdLstar": 2.59294045809897,
+          "bandRmsLstar": {
+            "1–3 px": 1.286170024003854,
+            "3–7 px": 0.7095603822914128,
+            "7–19 px": 0.29552658249606056,
+            "19–55 px": 0.44787012326138426
+          },
+          "fineToBroad": 2.8717477616903335
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            75,
+            74,
+            25
+          ],
+          "meanLstar": 30.472508617302946,
+          "stdLstar": 2.4982243525388648,
+          "bandRmsLstar": {
+            "1–3 px": 0.73664064671966,
+            "3–7 px": 0.446484532771255,
+            "7–19 px": 0.24595214190095202,
+            "19–55 px": 0.4776068059457313
+          },
+          "fineToBroad": 1.5423579344959373
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "file": "overview--ground--diag-albedo-lowpass.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          67,
+          63,
+          25
+        ],
+        "meanLstar": 26.28236074754754,
+        "stdLstar": 4.719901420001059,
+        "bandRmsLstar": {
+          "1–3 px": 1.0149261013756599,
+          "3–7 px": 0.6033391429402079,
+          "7–19 px": 0.3021541556732828,
+          "19–55 px": 0.6209433345339924
+        },
+        "fineToBroad": 1.634490693321227
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            60,
+            54,
+            25
+          ],
+          "meanLstar": 22.688224533166682,
+          "stdLstar": 2.5701941113241764,
+          "bandRmsLstar": {
+            "1–3 px": 1.2247856474473007,
+            "3–7 px": 0.7084967220215025,
+            "7–19 px": 0.29938581892245636,
+            "19–55 px": 0.45011014227227447
+          },
+          "fineToBroad": 2.7210798700608265
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            75,
+            74,
+            25
+          ],
+          "meanLstar": 30.70571444943255,
+          "stdLstar": 2.4922695750180397,
+          "bandRmsLstar": {
+            "1–3 px": 0.6773253298742253,
+            "3–7 px": 0.4479435643953682,
+            "7–19 px": 0.24622644072737027,
+            "19–55 px": 0.48037343720275366
+          },
+          "fineToBroad": 1.409997467425209
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "file": "overview--ground--diag-cavity-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          72,
+          68,
+          27
+        ],
+        "meanLstar": 28.164146935092862,
+        "stdLstar": 6.2364877307024535,
+        "bandRmsLstar": {
+          "1–3 px": 1.133742377332801,
+          "3–7 px": 0.6735599521964352,
+          "7–19 px": 0.388271818403819,
+          "19–55 px": 0.7680430418772372
+        },
+        "fineToBroad": 1.476144324622391
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            61,
+            55,
+            25
+          ],
+          "meanLstar": 23.09029981344943,
+          "stdLstar": 2.699446554007496,
+          "bandRmsLstar": {
+            "1–3 px": 1.3412153099789814,
+            "3–7 px": 0.7523985723175839,
+            "7–19 px": 0.3678311266174669,
+            "19–55 px": 0.49691145045191343
+          },
+          "fineToBroad": 2.699103248192853
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            84,
+            83,
+            29
+          ],
+          "meanLstar": 34.40365248228651,
+          "stdLstar": 2.7185252195536784,
+          "bandRmsLstar": {
+            "1–3 px": 0.813828927318735,
+            "3–7 px": 0.5707744814128766,
+            "7–19 px": 0.32824730863144397,
+            "19–55 px": 0.5299415914848252
+          },
+          "fineToBroad": 1.5356955188938757
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "file": "overview--ground--diag-meso-off.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          65,
+          61,
+          29
+        ],
+        "meanLstar": 25.358496125079252,
+        "stdLstar": 4.453149436754851,
+        "bandRmsLstar": {
+          "1–3 px": 1.0356630802418465,
+          "3–7 px": 0.5780309079022145,
+          "7–19 px": 0.24484571059435703,
+          "19–55 px": 0.41604294786150875
+        },
+        "fineToBroad": 2.4893177148302374
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            60,
+            52,
+            29
+          ],
+          "meanLstar": 21.845734318766716,
+          "stdLstar": 2.23361520214576,
+          "bandRmsLstar": {
+            "1–3 px": 1.233762450715002,
+            "3–7 px": 0.6738992403004136,
+            "7–19 px": 0.24005461545265813,
+            "19–55 px": 0.19927502052414964
+          },
+          "fineToBroad": 6.191254917299007
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            72,
+            72,
+            30
+          ],
+          "meanLstar": 29.679134672614143,
+          "stdLstar": 2.084227878344276,
+          "bandRmsLstar": {
+            "1–3 px": 0.7252533403321468,
+            "3–7 px": 0.4373297560892351,
+            "7–19 px": 0.18847004402855033,
+            "19–55 px": 0.14488318518590335
+          },
+          "fineToBroad": 5.00577992816458
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "file": "overview--ground--diag-scale-2x.png",
+      "ground": {
+        "pixels": 770000,
+        "pixelShare": 1,
+        "meanSrgb": [
+          67,
+          64,
+          25
+        ],
+        "meanLstar": 26.42837504992341,
+        "stdLstar": 5.397636594000798,
+        "bandRmsLstar": {
+          "1–3 px": 1.4895837295833783,
+          "3–7 px": 1.109108709303944,
+          "7–19 px": 0.5895260566895424,
+          "19–55 px": 0.5286956789691124
+        },
+        "fineToBroad": 2.817469082569149
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 421386,
+          "pixelShare": 0.5472545454545454,
+          "meanSrgb": [
+            60,
+            54,
+            24
+          ],
+          "meanLstar": 22.558250232835096,
+          "stdLstar": 3.4550395859264076,
+          "bandRmsLstar": {
+            "1–3 px": 1.6726844983345932,
+            "3–7 px": 1.3569208370654922,
+            "7–19 px": 0.67013484650298,
+            "19–55 px": 0.3788410385853574
+          },
+          "fineToBroad": 4.415267428736387
+        },
+        "meadow-turf": {
+          "pixels": 342482,
+          "pixelShare": 0.44478181818181817,
+          "meanSrgb": [
+            77,
+            76,
+            26
+          ],
+          "meanLstar": 31.18958276023585,
+          "stdLstar": 3.059502407856249,
+          "bandRmsLstar": {
+            "1–3 px": 1.230902507475895,
+            "3–7 px": 0.7027713192374586,
+            "7–19 px": 0.44236472528112075,
+            "19–55 px": 0.28406453647137386
+          },
+          "fineToBroad": 4.333179082352426
+        }
+      },
+      "vegetationPixels": null
+    },
+    {
+      "view": "overview",
+      "vegetation": true,
+      "variant": "mat-01",
+      "file": "overview--env--mat-01.png",
+      "ground": {
+        "pixels": 628710,
+        "pixelShare": 0.8165064935064935,
+        "meanSrgb": [
+          61,
+          58,
+          22
+        ],
+        "meanLstar": 23.665113193701124,
+        "stdLstar": 7.47873909850442,
+        "bandRmsLstar": {
+          "1–3 px": 1.7830091279045097,
+          "3–7 px": 1.4592937586965335,
+          "7–19 px": 2.1942426634388346,
+          "19–55 px": 2.9695266043216004
+        },
+        "fineToBroad": 0.6004354786078251
+      },
+      "materials": {
+        "forest-floor": {
+          "pixels": 328047,
+          "pixelShare": 0.42603506493506493,
+          "meanSrgb": [
+            55,
+            50,
+            22
+          ],
+          "meanLstar": 20.576486064635272,
+          "stdLstar": 6.007132872265787,
+          "bandRmsLstar": {
+            "1–3 px": 1.747658597531841,
+            "3–7 px": 1.3200460787798136,
+            "7–19 px": 1.9288086289636404,
+            "19–55 px": 2.6657949115024
+          },
+          "fineToBroad": 0.6555862905998602
+        },
+        "meadow-turf": {
+          "pixels": 253741,
+          "pixelShare": 0.32953376623376623,
+          "meanSrgb": [
+            68,
+            68,
+            23
+          ],
+          "meanLstar": 27.89225512150353,
+          "stdLstar": 6.972049039985613,
+          "bandRmsLstar": {
+            "1–3 px": 1.7884662979635235,
+            "3–7 px": 1.5462589296168903,
+            "7–19 px": 2.43468520779691,
+            "19–55 px": 3.2855027017735794
+          },
+          "fineToBroad": 0.5443508833512978
+        }
+      },
+      "vegetationPixels": {
+        "pixels": 141290,
+        "pixelShare": 0.1834935064935065,
+        "meanSrgb": [
+          36,
+          47,
+          21
+        ],
+        "meanLstar": 17.603296400691626,
+        "stdLstar": 14.218286688281633,
+        "bandRmsLstar": {
+          "1–3 px": 5.375515397761147,
+          "3–7 px": 3.1555417076173162,
+          "7–19 px": 3.97007982747082,
+          "19–55 px": 6.233731821558622
+        },
+        "fineToBroad": 0.8623270220208327
+      }
+    }
+  ]
+}

@@ -7459,6 +7459,4759 @@
           ]
         }
       }
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "325c138d893be108cd17807b6e603ba993cc575f763d52e698ccf89c0eb09c82",
+          "normals": "96ae40987d18f95fe37f94b6db9b46ccd40604c83465475234f0917d5b96cbd0",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "birch-edge--env--mask.png",
+      "sha256": "ad9523673cf1198936f698be8023ffd69116110a52eb3767e095b9305cbdd723",
+      "readbackMs": 10153,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "birch-edge",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"breathing\"",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "dominant",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4435,
+          "byFamily": {
+            "birch": 418,
+            "pine": 375,
+            "grass": 3563,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 15,
+            "mid": 12,
+            "far": 27,
+            "xfar": 159
+          },
+          "visible": 245,
+          "geometryTriangles": 158532,
+          "pageBuildMs": 3.099999999976717,
+          "cameraUpdateMs": 0.4000000001396984,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 70
+          }
+        },
+        "renderer": {
+          "calls": 88,
+          "triangles": 556897,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 1.1999999999534339,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -673.7778,
+          128.7708974197388,
+          -123.1111
+        ],
+        "cameraQuaternion": [
+          -0.014885655206099033,
+          -0.5256482195089088,
+          -0.009199783005095769,
+          0.8505220341583506
+        ],
+        "fov": 57,
+        "terrainY": 127.0208974197388,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -813.7778,
+            357.0208974197388,
+            -13.111099999999993
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.6999999999534339,
+        3.7000000001862645,
+        0.19999999995343387,
+        0
+      ],
+      "file": "meadow-transition--ground--mat-01.png",
+      "sha256": "414072da90e863c533e042a95d75e97ff88b7a01962d69c4649072f900fe1dee",
+      "readbackMs": 54994,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.39999999990686774,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.30000000004656613,
+        0.10000000009313226,
+        0,
+        0.09999999986030161
+      ],
+      "file": "meadow-transition--ground--diag-normal-off.png",
+      "sha256": "da6d48180ffcf5df5ed12fe85d010cddab65fd7bcbbfb8ee8a737bd6cc794c2b",
+      "readbackMs": 21590,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "diag-normal-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0.09999999986030161,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.20000000018626451,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-normal-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.2999999998137355,
+        0.10000000009313226,
+        0.10000000009313226,
+        0.09999999986030161
+      ],
+      "file": "meadow-transition--ground--diag-albedo-lowpass.png",
+      "sha256": "10631a4edef9df583e9057e96edcfc504d239991f40df959c7a93ba8dda59210",
+      "readbackMs": 18461,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "diag-albedo-lowpass",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.30000000004656613,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-albedo-lowpass",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.19999999995343387,
+        0.10000000009313226,
+        0.09999999986030161,
+        0.10000000009313226
+      ],
+      "file": "meadow-transition--ground--diag-cavity-off.png",
+      "sha256": "e2e49b525abeb2b38984e4170cd3fd83ba3bcb13e5ff193ada3778819ff270d3",
+      "readbackMs": 18668,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "diag-cavity-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.7000000001862645,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-cavity-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.39999999990686774,
+        0.10000000009313226,
+        0.19999999995343387,
+        0.10000000009313226
+      ],
+      "file": "meadow-transition--ground--diag-meso-off.png",
+      "sha256": "d315ab547cb1342db903993a98038c76e7bc0a76a59f96ac878f7a3c6400cd8e",
+      "readbackMs": 18733,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "diag-meso-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0.10000000009313226,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.2999999998137355,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-meso-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.4000000001396984,
+        0.19999999995343387,
+        0.10000000009313226,
+        0.09999999986030161
+      ],
+      "file": "meadow-transition--ground--diag-scale-2x.png",
+      "sha256": "a0bce8465f3e0884d0c17a9a8fcfa74141813f02aaa91886d70d719f67864749",
+      "readbackMs": 18144,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "diag-scale-2x",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0.09999999986030161,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.4000000001396984,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-scale-2x",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "meadow-transition--ground--mask.png",
+      "sha256": "94de022cb61e11ea00a421a1b71a9c29e67c169ada9961bc7680734b9f5eb156",
+      "readbackMs": 5324,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "dominant",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.20000000018626451,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.5,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        4.800000000046566,
+        0.6999999999534339,
+        0.39999999990686774,
+        0.5
+      ],
+      "file": "meadow-transition--env--mat-01.png",
+      "sha256": "8cff9e25f49d662134a382c884d71c58e220bd42c7d96b1f4d956e07bce722d7",
+      "readbackMs": 50389,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "off",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3744,
+          "byFamily": {
+            "birch": 341,
+            "pine": 399,
+            "grass": 2931,
+            "rock": 73
+          },
+          "lodCounts": {
+            "near": 13,
+            "mid": 8,
+            "far": 21,
+            "xfar": 194
+          },
+          "visible": 261,
+          "geometryTriangles": 157806,
+          "pageBuildMs": 1.6000000000931323,
+          "cameraUpdateMs": 0.30000000004656613,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 47
+          }
+        },
+        "renderer": {
+          "calls": 115,
+          "triangles": 556501,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 2.699999999953434,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+        "ground": {
+          "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+          "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "meadow-transition--env--mask.png",
+      "sha256": "f5822992f233eb583d004e048c0a81528971e68d66681669f87de8478854e715",
+      "readbackMs": 7036,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "meadow-transition",
+        "viewSource": "MAT-ART-R01 classification survey: forest-floor station, view cone 37% forest floor / 60% meadow",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "dominant",
+        "descriptorCount": 3791,
+        "counts": {
+          "pine": 399,
+          "birch": 341,
+          "grass": 2978,
+          "rock": 73
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3744,
+          "byFamily": {
+            "birch": 341,
+            "pine": 399,
+            "grass": 2931,
+            "rock": 73
+          },
+          "lodCounts": {
+            "near": 13,
+            "mid": 8,
+            "far": 21,
+            "xfar": 194
+          },
+          "visible": 261,
+          "geometryTriangles": 157806,
+          "pageBuildMs": 1.6000000000931323,
+          "cameraUpdateMs": 0.6000000000931323,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 47
+          }
+        },
+        "renderer": {
+          "calls": 115,
+          "triangles": 556501,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 3.0999999998603016,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -646,
+          134.33634185791016,
+          -130
+        ],
+        "cameraQuaternion": [
+          -0.024940346924189984,
+          0.5553202451646763,
+          0.01666460703704004,
+          0.8310954790382666
+        ],
+        "fov": 57,
+        "terrainY": 132.58634185791016,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -786,
+            362.58634185791016,
+            -20
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.5,
+        0.30000000004656613,
+        0.19999999995343387,
+        0.10000000009313226
+      ],
+      "file": "open-grassland--ground--mat-01.png",
+      "sha256": "f638439bcd2fe8866eda9a03b6f3eacfae6a8afadc29b8798931c1d248c6d8b4",
+      "readbackMs": 75316,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.8000000000465661,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        1.1999999999534339,
+        0.19999999995343387,
+        0,
+        0
+      ],
+      "file": "open-grassland--ground--diag-normal-off.png",
+      "sha256": "6e18f7f1077cbe16333837bcb834e0ca91a73ecffd965b22393391839bb2d0b2",
+      "readbackMs": 18542,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "diag-normal-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.30000000004656613,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-normal-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.30000000004656613,
+        0.10000000009313226,
+        0,
+        0.09999999986030161
+      ],
+      "file": "open-grassland--ground--diag-albedo-lowpass.png",
+      "sha256": "9d440a542a8c38dc20d1a07df62fb9822c8f1da5695b1bf4c196dcc4783d2388",
+      "readbackMs": 16241,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "diag-albedo-lowpass",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.4000000001396984,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-albedo-lowpass",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.30000000004656613,
+        0.10000000009313226,
+        0.09999999986030161,
+        0.10000000009313226
+      ],
+      "file": "open-grassland--ground--diag-cavity-off.png",
+      "sha256": "c5c5f6c20118e99c609a4ad970de3428e1725e2e4302cee7f194ce16e442738f",
+      "readbackMs": 16183,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "diag-cavity-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0.09999999986030161,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.30000000004656613,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-cavity-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.39999999990686774,
+        0.10000000009313226,
+        0.09999999986030161,
+        0
+      ],
+      "file": "open-grassland--ground--diag-meso-off.png",
+      "sha256": "c3d3be8fb7cccb7359eae4c147bb065ffad0ffe506bac783c00d030bc8cd3e64",
+      "readbackMs": 16224,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "diag-meso-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0.09999999986030161,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.4000000001396984,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-meso-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        1.1000000000931323,
+        0.19999999995343387,
+        0.10000000009313226,
+        0.09999999986030161
+      ],
+      "file": "open-grassland--ground--diag-scale-2x.png",
+      "sha256": "7dddfd3795dc507aeb404ac16039a777988a368763b12f0814ef5041f33b41a3",
+      "readbackMs": 18754,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "diag-scale-2x",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.5,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-scale-2x",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "open-grassland--ground--mask.png",
+      "sha256": "3b6099f8a094ff72001ac6d45ec5d464004a04011e446060a7289ab7f24f5808",
+      "readbackMs": 4650,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "dominant",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.19999999995343387,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.39999999990686774,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.8999999999068677,
+        0.30000000004656613,
+        0.6000000000931323,
+        0.6999999999534339
+      ],
+      "file": "open-grassland--env--mat-01.png",
+      "sha256": "4001d4236a6fad2629b530873b6c3280b1cb269fe28701bfb5b8153fbafa3ad1",
+      "readbackMs": 36284,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "off",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3381,
+          "byFamily": {
+            "birch": 336,
+            "pine": 82,
+            "grass": 2894,
+            "rock": 69
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 1,
+            "far": 8,
+            "xfar": 56
+          },
+          "visible": 80,
+          "geometryTriangles": 33448,
+          "pageBuildMs": 1.3000000000465661,
+          "cameraUpdateMs": 0.30000000004656613,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 57
+          }
+        },
+        "renderer": {
+          "calls": 64,
+          "triangles": 308625,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 1.1000000000931323,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+        "ground": {
+          "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+          "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "open-grassland--env--mask.png",
+      "sha256": "d8006437feae22b85767f6554d3d01044e6d894df56f94eb0792e2844cb37820",
+      "readbackMs": 5059,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "open-grassland",
+        "viewSource": "MAT-ART-R01 classification survey: 100% meadow view cone, 52 POP grass / 2 trees within 30 m",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "dominant",
+        "descriptorCount": 3438,
+        "counts": {
+          "birch": 336,
+          "grass": 2951,
+          "rock": 69,
+          "pine": 82
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 3381,
+          "byFamily": {
+            "birch": 336,
+            "pine": 82,
+            "grass": 2894,
+            "rock": 69
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 1,
+            "far": 8,
+            "xfar": 56
+          },
+          "visible": 80,
+          "geometryTriangles": 33448,
+          "pageBuildMs": 1.3000000000465661,
+          "cameraUpdateMs": 0.4000000001396984,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 57
+          }
+        },
+        "renderer": {
+          "calls": 64,
+          "triangles": 308625,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 0.8000000000465661,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -1198,
+          35.43387222290039,
+          -82
+        ],
+        "cameraQuaternion": [
+          -0.016664607037040043,
+          0.8310954790382666,
+          0.024940346924189984,
+          0.5553202451646764
+        ],
+        "fov": 57,
+        "terrainY": 33.68387222290039,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 190
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -1338,
+            263.6838722229004,
+            28
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.39999999990686774,
+        0.10000000009313226,
+        0.10000000009313226,
+        0.09999999986030161
+      ],
+      "file": "overview--ground--mat-01.png",
+      "sha256": "76c9e7245437a72660bdd9dca82fc77b82d20790bda821f7ed41158e4498cf84",
+      "readbackMs": 36558,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.8000000000465661,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-normal-off",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.30000000004656613,
+        0.10000000009313226,
+        0.09999999986030161,
+        0
+      ],
+      "file": "overview--ground--diag-normal-off.png",
+      "sha256": "e11270dc7f00e427aac303f639814cddc3e0b1a29ad7f51ca53ff1f152c3dc6f",
+      "readbackMs": 7754,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "diag-normal-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.7000000001862645,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-normal-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-albedo-lowpass",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.19999999995343387,
+        0.10000000009313226,
+        0,
+        0.09999999986030161
+      ],
+      "file": "overview--ground--diag-albedo-lowpass.png",
+      "sha256": "c9e8fc836906c63aedba8bd8d984f242a3e1bb62b9bff382e6fd539aaba425f3",
+      "readbackMs": 7756,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "diag-albedo-lowpass",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0.09999999986030161,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.19999999995343387,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-albedo-lowpass",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-cavity-off",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.19999999995343387,
+        0.10000000009313226,
+        0.10000000009313226,
+        0.09999999986030161
+      ],
+      "file": "overview--ground--diag-cavity-off.png",
+      "sha256": "736fdd3e9fb6d7c5694737ea427f0958163212f10047d020e9c4acb349e224de",
+      "readbackMs": 9177,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "diag-cavity-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.4000000001396984,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-cavity-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-meso-off",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.30000000004656613,
+        0.19999999995343387,
+        0.19999999995343387,
+        0.19999999995343387
+      ],
+      "file": "overview--ground--diag-meso-off.png",
+      "sha256": "2cbba33fa37669e8406c388d874bea3fac934449cfab5d497ac5407a02ee689d",
+      "readbackMs": 7920,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "diag-meso-off",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.5,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-meso-off",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "diag-scale-2x",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.4000000001396984,
+        0.09999999986030161,
+        0,
+        0.10000000009313226
+      ],
+      "file": "overview--ground--diag-scale-2x.png",
+      "sha256": "dde8875a967546da1aae04b83d2e733d886f91f84ca512fadc34705038b92ba4",
+      "readbackMs": 8815,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "diag-scale-2x",
+        "vegetation": false,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0.10000000009313226,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 17
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.39999999990686774,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "diag-scale-2x",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 1,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "overview--ground--mask.png",
+      "sha256": "d54f1a07c634fd15511dc19c74984d1352db74a84cbf8b152f70048a1897921e",
+      "readbackMs": 2171,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": false,
+        "debug": "dominant",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 0,
+          "byFamily": {
+            "birch": 0,
+            "pine": 0,
+            "grass": 0,
+            "rock": 0
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 0
+          },
+          "visible": 0,
+          "geometryTriangles": 0,
+          "pageBuildMs": 0.39999999990686774,
+          "cameraUpdateMs": 0.20000000018626451,
+          "backends": [
+            ""
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 0
+          }
+        },
+        "renderer": {
+          "calls": 3,
+          "triangles": 242929,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 3,
+        "timing": {
+          "lastRenderSubmissionMs": 0.2999999998137355,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "off",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "synchronousRenderMs": [
+        0.8000000000465661,
+        0.4000000001396984,
+        0.5,
+        0.39999999990686774
+      ],
+      "file": "overview--env--mat-01.png",
+      "sha256": "649ad6f1fc20046a35337278e64e54a47795fd060f1b65ce5131d1afcc0b7642",
+      "readbackMs": 28959,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "off",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4435,
+          "byFamily": {
+            "birch": 418,
+            "pine": 375,
+            "grass": 3563,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 398
+          },
+          "visible": 430,
+          "geometryTriangles": 220878,
+          "pageBuildMs": 3.800000000046566,
+          "cameraUpdateMs": 0.39999999990686774,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 70
+          }
+        },
+        "renderer": {
+          "calls": 111,
+          "triangles": 684685,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 1.1000000000931323,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
+    },
+    {
+      "view": "overview",
+      "vegetation": true,
+      "variant": "mat-01",
+      "debug": "dominant",
+      "identity": {
+        "placements": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+        "ground": {
+          "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+          "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+          "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+        }
+      },
+      "file": "overview--env--mask.png",
+      "sha256": "f2c7156f17adc37e7f1917c00fc974bf7f2437a4de20511aa1f9ae60fcc89625",
+      "readbackMs": 3987,
+      "snapshot": {
+        "milestone": "MAT-ART-R01",
+        "ready": true,
+        "stylizedReady": true,
+        "error": null,
+        "view": "overview",
+        "viewSource": "ENV-NATURE-R02 validated pose (195ada5) \"overview\"",
+        "set": "environment",
+        "variant": "mat-01",
+        "vegetation": true,
+        "debug": "dominant",
+        "descriptorCount": 4505,
+        "counts": {
+          "pine": 375,
+          "birch": 418,
+          "grass": 3633,
+          "rock": 79
+        },
+        "activeChunks": 25,
+        "render": {
+          "representation": "assets",
+          "pageSize": 128,
+          "pages": 9,
+          "pending": 0,
+          "registered": 4435,
+          "byFamily": {
+            "birch": 418,
+            "pine": 375,
+            "grass": 3563,
+            "rock": 79
+          },
+          "lodCounts": {
+            "near": 0,
+            "mid": 0,
+            "far": 0,
+            "xfar": 398
+          },
+          "visible": 430,
+          "geometryTriangles": 220878,
+          "pageBuildMs": 3.800000000046566,
+          "cameraUpdateMs": 0.2999999998137355,
+          "backends": [
+            "instanced"
+          ],
+          "rejected": {
+            "grassSlope": 0,
+            "grassRockOverlap": 70
+          }
+        },
+        "renderer": {
+          "calls": 111,
+          "triangles": 684685,
+          "memory": {
+            "geometries": 29,
+            "textures": 13
+          },
+          "programs": 7
+        },
+        "sceneMaterials": 7,
+        "timing": {
+          "lastRenderSubmissionMs": 1.2000000001862645,
+          "stylizedSynthesisMs": 3739
+        },
+        "camera": [
+          -701.9999999999998,
+          266.36175537109375,
+          -113.99000000004251
+        ],
+        "cameraQuaternion": [
+          -0.7070823977738435,
+          0,
+          0,
+          0.7071311637584586
+        ],
+        "fov": 57,
+        "terrainY": 121.3616139793402,
+        "ground": {
+          "mode": "material",
+          "profile": "high",
+          "hash": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1",
+          "loadMs": 6344.600000000006,
+          "classificationMs": {
+            "slopeCurvature": 459,
+            "distances": 804,
+            "coarseFields": 279,
+            "rules": 1989,
+            "total": 3531
+          },
+          "synthesisMs": 1851,
+          "workerTotalMs": 5739,
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "materialSlots": [
+            "forest-floor",
+            "meadow-turf",
+            "coastal-sand",
+            "bedrock"
+          ]
+        },
+        "groundVariant": {
+          "variant": "mat-01",
+          "profile": "high",
+          "gpuBytes": {
+            "classification": 32037344,
+            "detail": 11184811,
+            "total": 43222155
+          },
+          "owners": 1,
+          "disposed": false,
+          "variantOwners": 0,
+          "textureLayers": 4,
+          "textureSize": 512
+        },
+        "settings": {
+          "mode": "instanced",
+          "shadows": true,
+          "forcedLod": null,
+          "enabled": [
+            "birch",
+            "pine",
+            "grass",
+            "rock"
+          ],
+          "grassAlignment": "normal",
+          "grassFade": "refined",
+          "treeDistance": 1000
+        },
+        "scene": {
+          "exposure": 1.05,
+          "sun": 2.1,
+          "hemisphere": 1.15,
+          "fog": [
+            230,
+            650
+          ],
+          "sunPosition": [
+            -842,
+            351.36175537109375,
+            -4
+          ],
+          "pixelRatio": 1,
+          "size": [
+            1100,
+            700
+          ]
+        }
+      }
     }
   ],
   "matched": [
@@ -7587,6 +12340,104 @@
         "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
       },
       "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "birch-edge",
+      "vegetation": true,
+      "captures": 2,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+      "groundMesh": {
+        "positions": "325c138d893be108cd17807b6e603ba993cc575f763d52e698ccf89c0eb09c82",
+        "normals": "96ae40987d18f95fe37f94b6db9b46ccd40604c83465475234f0917d5b96cbd0",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": false,
+      "captures": 7,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+      "groundMesh": {
+        "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+        "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "meadow-transition",
+      "vegetation": true,
+      "captures": 2,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "44c50dadc9dfa83bba0875dc25d68782a6ba037988f3cf3116ba4ffb3971ca60",
+      "groundMesh": {
+        "positions": "368153152f2f99e907cdbf45d323fe4500af05c91ea39d72faaa4d0778c8ede7",
+        "normals": "f9a4f9a8a909e25c20e93deb4e055f877a6d1703d0ea32dc63cdcb41fcbbd628",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": false,
+      "captures": 7,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+      "groundMesh": {
+        "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+        "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "open-grassland",
+      "vegetation": true,
+      "captures": 2,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "59a84107eab04fd4758e7149948af5f4bedb13ce99b1158a44ef921d53a6bd0d",
+      "groundMesh": {
+        "positions": "bf031a48eb0ff76a14dc4cb120c09fc03f279083b840b113a6a7813c89733463",
+        "normals": "fb50b86ee3ef8be4f3c9484a7898bad7b3e7ab102caa0b2cc98b93346bc9fb21",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "overview",
+      "vegetation": false,
+      "captures": 7,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+      "groundMesh": {
+        "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+        "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
+    },
+    {
+      "view": "overview",
+      "vegetation": true,
+      "captures": 2,
+      "cameraIdentity": true,
+      "sceneIdentity": true,
+      "placementSha256": "777cfae0ac872e15b74feee98de543080ca34cfb097d26566ef46ff1d20d374d",
+      "groundMesh": {
+        "positions": "3d708fd14489b7ceb788324dcf98a8f8868695b47f810b3c903a3583ccb9a7b2",
+        "normals": "44cce8485a09322bf4f856039c79346adc5d559d21fc28c32a3395448b323f8a",
+        "index": "81bbca1d4021fcc97ec38fbf2f0664fb892943ba10df7fb8900355964d82dfa9"
+      },
+      "classification": "bc2ce096df2672080f08ec6c92ed8f288e5d079a91db9855470ca1d56cee63a1"
     }
   ],
   "errors": [],
@@ -7605,5 +12456,6 @@
     "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
   },
-  "browser": "153.0.8010.12"
+  "browser": "153.0.8010.12",
+  "status": "CAPTURED: art review required"
 }

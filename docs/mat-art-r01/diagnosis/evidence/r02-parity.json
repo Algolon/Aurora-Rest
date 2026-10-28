@@ -1,0 +1,69 @@
+{
+  "interpretation": "R02 rendered on SwiftShader LLVM 10, this run on SwiftShader Subzero: residual is ±1 LSB rounding plus sparse vegetation-edge pixels; ground pixels are effectively unchanged.",
+  "source": "origin/art/env-nature-r02-woodland-composition 195ada5 docs/env-nature-r02/evidence/source-*.png",
+  "rows": [
+    {
+      "view": "birch-interior",
+      "r02View": "shelter",
+      "size": [
+        1100,
+        700
+      ],
+      "identicalPixelPercent": 91.43064935064935,
+      "maxChannelDifference": 209,
+      "meanAbsoluteDifference": 0.0993991341991342,
+      "differencePercentByLevel": {
+        "1": 7.821558441558442,
+        "2-4": 0.43415584415584413,
+        "5-20": 0.2681818181818182,
+        ">20": 0.045454545454545456
+      },
+      "strongDifferencePixels": {
+        "ground": 3,
+        "other": 347
+      }
+    },
+    {
+      "view": "birch-edge",
+      "r02View": "breathing",
+      "size": [
+        1100,
+        700
+      ],
+      "identicalPixelPercent": 91.94337662337662,
+      "maxChannelDifference": 209,
+      "meanAbsoluteDifference": 0.10123030303030303,
+      "differencePercentByLevel": {
+        "1": 7.327012987012988,
+        "2-4": 0.41233766233766234,
+        "5-20": 0.27662337662337666,
+        ">20": 0.04064935064935065
+      },
+      "strongDifferencePixels": {
+        "ground": 4,
+        "other": 309
+      }
+    },
+    {
+      "view": "overview",
+      "r02View": "overview",
+      "size": [
+        1100,
+        700
+      ],
+      "identicalPixelPercent": 93.58597402597402,
+      "maxChannelDifference": 92,
+      "meanAbsoluteDifference": 0.05138961038961039,
+      "differencePercentByLevel": {
+        "1": 5.849350649350649,
+        "2-4": 0.3235064935064935,
+        "5-20": 0.21454545454545454,
+        ">20": 0.026623376623376622
+      },
+      "strongDifferencePixels": {
+        "ground": 45,
+        "other": 160
+      }
+    }
+  ]
+}
