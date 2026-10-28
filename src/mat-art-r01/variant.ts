@@ -4,6 +4,10 @@
  * normal/AO/roughness) and the shader that reads it are identical to MAT-01, so only texture content and
  * per-material uniforms differ. Deterministic: fixed seeds, integer hash noise, mulberry32 placement.
  *
+ * R1 (single refinement after the first A/B comparison): colour hierarchy only — meadow palette desaturated ≈20% and
+ * warmed ≈7° toward olive moss, macro/exposure hue swing and meso amount restored, forest moss slightly muted and its
+ * patch tint greener to narrow the family hue gap. Shapes and synthesis are unchanged from the first comparison.
+ *
  * Design (docs/mat-art-r01/MATERIAL_SPEC.md): shapes are sculpted clumps and cushions 6–30 cm across with a soft
  * dome light gradient, carrying only a restrained number of wide, low-contrast strokes. Value contrast lives at
  * clump scale and above, not at blade/grain scale, so the 3D grass and trees carry silhouette detail. */
@@ -29,13 +33,13 @@ const base=(id:string)=>{const d=MATERIALS.find(m=>m.id===id);if(!d)throw Error(
 /** MAT-ART-R01 definitions. Only forest-floor and meadow-turf differ from MAT-01; changed fields are listed in the spec. */
 export const MAT_ART_R01_DEFINITIONS:readonly MaterialDefinition[]=MATERIALS.map(d=>{
  if(d.id==='forest-floor')return {...d,name:'Nordic Forest Floor · MAT-ART-R01',tileM:2.6,
-  palette:[[0,'#2c2a20'],[.16,'#3b3728'],[.26,'#4a4231'],[.36,'#5a4c39'],[.46,'#4f5a39'],[.56,'#5b6a40'],[.66,'#6a7a48'],[.76,'#7c8a53'],[.84,'#857452'],[.92,'#9c8656'],[1,'#b09a66']],
-  normalStrength:.6,macroTint:[[1.08,1.0,.88],[.86,1.03,.9]],exposureTint:[1.05,1.02,.93],
-  patch:{tint:[.86,1.1,.8],scaleM:11,coverage:.45},mesoAmount:.3};
+  palette:[[0,'#2c2a20'],[.16,'#3b3728'],[.26,'#4a4231'],[.36,'#5a4c39'],[.46,'#50583b'],[.56,'#5c6743'],[.66,'#6b764c'],[.76,'#7c8657'],[.84,'#857452'],[.92,'#9c8656'],[1,'#b09a66']],
+  normalStrength:.6,macroTint:[[1.1,1.0,.86],[.84,1.04,.88]],exposureTint:[1.06,1.02,.92],
+  patch:{tint:[.84,1.12,.82],scaleM:11,coverage:.5},mesoAmount:.36};
  if(d.id==='meadow-turf')return {...d,name:'Meadow Turf · MAT-ART-R01',tileM:3.0,
-  palette:[[0,'#2c3522'],[.14,'#36422a'],[.28,'#425132'],[.4,'#4d5f37'],[.52,'#596c3e'],[.64,'#667a45'],[.74,'#74874d'],[.84,'#869657'],[.92,'#9b9e63'],[1,'#b2a874']],
-  normalStrength:.5,macroTint:[[1.12,1.05,.84],[.86,1.0,.92]],exposureTint:[1.1,1.02,.86],
-  patch:{tint:[1.08,1.02,.82],scaleM:8,coverage:.3},mesoAmount:.35};
+  palette:[[0,'#2e3324'],[.14,'#38402c'],[.28,'#454e35'],[.4,'#505b3b'],[.52,'#5c6743'],[.64,'#6a754a'],[.74,'#778153'],[.84,'#89905d'],[.92,'#989569'],[1,'#ac9e7a']],
+  normalStrength:.5,macroTint:[[1.2,1.07,.78],[.84,1.0,.9]],exposureTint:[1.14,1.02,.8],
+  patch:{tint:[1.12,1.03,.78],scaleM:8,coverage:.34},mesoAmount:.45};
  return d;
 });
 
