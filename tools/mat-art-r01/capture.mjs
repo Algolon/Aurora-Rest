@@ -4,17 +4,18 @@
  *   node tools/mat-art-r01/capture.mjs <plan: diagnosis|ab|refined> <out-dir> [base-url]
  * CHROME may select a compatible local Chromium/headless shell. */
 import {chromium} from 'playwright';
-import {writeFile,mkdir} from 'node:fs/promises';
+import {writeFile,mkdir,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 
-const [plan='diagnosis',out='docs/mat-art-r01/evidence',base='http://127.0.0.1:4371/mat-art-r01.html']=process.argv.slice(2);
+const [plan='diagnosis',out='docs/mat-art-r01/evidence',base='http://127.0.0.1:4372/mat-art-r01.html']=process.argv.slice(2);
 const ENV=['birch-interior','birch-edge','meadow-transition','open-grassland','overview'],CLOSE=['close-forest-floor','close-meadow','close-transition'];
 const DIAG=['mat-01','diag-normal-off','diag-albedo-lowpass','diag-cavity-off','diag-meso-off','diag-scale-2x'];
-/** [view, vegetation, variants[]]; a 'mask' capture (dominant-material debug) is added per view+vegetation. */
+/** One visit per view: [view, [[vegetation, variants[]], …]]. A 'mask' capture (dominant-material debug) is added per
+ * view+vegetation. Ground-only first, then vegetation on, so streaming settles once per view. */
 const PLANS={
- diagnosis:[...[...CLOSE,...ENV].map(v=>[v,false,DIAG]),...[...CLOSE,...ENV].map(v=>[v,true,['mat-01']])],
- ab:[...CLOSE.map(v=>[v,false,['mat-01','mat-art-r01']]),...ENV.map(v=>[v,true,['mat-01','mat-art-r01']]),...ENV.map(v=>[v,false,['mat-01','mat-art-r01']])],
+ diagnosis:[...CLOSE,...ENV].map(v=>[v,[[false,DIAG],[true,['mat-01']]]]),
+ ab:[...CLOSE.map(v=>[v,[[false,['mat-01','mat-art-r01']]]]),...ENV.map(v=>[v,[[false,['mat-01','mat-art-r01']],[true,['mat-01','mat-art-r01']]]])],
 };
 PLANS.refined=PLANS.ab;
 const steps=PLANS[plan];if(!steps)throw Error('Unknown plan '+plan);
@@ -23,6 +24,10 @@ const sha=x=>createHash('sha256').update(x).digest('hex');
 const report={milestone:'MAT-ART-R01',plan,evidence:'Unretouched Three.js WebGL canvas PNG readback (toDataURL after gl.finish)',viewport:{width:1100,height:700,dpr:1},seed:73129,density:1,
  records:[],matched:[],errors:[],limits:'Software WebGL (SwiftShader). Timings are diagnostic only; no hardware desktop or Android claim.'};
 const save=()=>writeFile(out+'/capture.json',JSON.stringify(report,null,2)+'\n');
+/** Resume: keep fully matched groups from an interrupted run of the same plan (their PNGs are already on disk). */
+try{const prior=JSON.parse(await readFile(out+'/capture.json','utf8'));if(prior.plan===plan){
+ const done=new Set(prior.matched.map(m=>m.view+'|'+m.vegetation));report.records=prior.records.filter(r=>done.has(r.view+'|'+r.vegetation));report.matched=prior.matched;
+ report.resumed={from:prior.status,keptGroups:[...done],note:'Earlier groups were captured by an interrupted session (browser killed by container memory pressure); their matched-condition assertions had passed.'};}}catch{}
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
 try{
  const page=await browser.newPage({viewport:{width:1100,height:700},deviceScaleFactor:1});page.setDefaultTimeout(300000);
@@ -36,8 +41,9 @@ try{
  report.browser=browser.version();console.log('READY',report.browser,report.gl.renderer);
  const shoot=async(file,meta)=>{const started=Date.now(),url=await page.evaluate(()=>window.__matArt.capture()),png=Buffer.from(url.split(',')[1],'base64');await writeFile(`${out}/${file}`,png);
   const snap=await page.evaluate(()=>window.__matArt.snapshot());const rec={...meta,file,sha256:sha(png),readbackMs:Date.now()-started,snapshot:snap};report.records.push(rec);return rec;};
- for(const [view,vegetation,list] of steps){
-  await page.evaluate(([v,veg])=>{window.__matArt.setDebug('off');window.__matArt.setVariant('mat-01');window.__matArt.setVegetation(veg);window.__matArt.setView(v);},[view,vegetation]);await settle();
+ for(const [view,groups] of steps)for(const [vegetation,list] of groups){
+  if(report.matched.some(m=>m.view===view&&m.vegetation===vegetation))continue;
+  await page.evaluate(([v,veg])=>{const api=window.__matArt;api.setDebug('off');api.setVariant('mat-01');api.setVegetation(veg);if(api.snapshot().view!==v)api.setView(v);},[view,vegetation]);await settle();
   const identity={placements:sha(JSON.stringify(await page.evaluate(()=>window.__matArt.placements()))),ground:await page.evaluate(()=>window.__matArt.groundHash())};
   const tag=vegetation?'env':'ground';
   for(const variant of list){
