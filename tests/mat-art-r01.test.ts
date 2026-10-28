@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {existsSync,readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {MATERIALS} from '../src/terrain-material/materials.ts';
@@ -23,8 +23,19 @@ const tiny=()=>({schema:'aurora-rest-terrain-material/1' as const,lattice:{width
 
 test('MAT-ART-R01 modifies no file of the foundation tree (new files only)',()=>{
  // Working tree vs the foundation commit: any modified, deleted or type-changed tracked path fails.
- const changed=execFileSync('git',['diff','--name-only','--diff-filter=MDT',FOUNDATION]).toString().trim().split('\n').filter(Boolean);
- assert.ok(execFileSync('git',['ls-tree','-r','--name-only',FOUNDATION]).toString().split('\n').length>500);
+ // Content comparison (follows symlinks), so it holds in a plain checkout and inside the recovery CI fixture, whose
+ // tests/ and .github/ are reconstructions verified by that harness itself (tools/recovery/test-partition.mjs).
+ const fixture=existsSync('tests/recovery-env.ts'),changed:string[]=[];
+ const rows=execFileSync('git',['ls-tree','-r',FOUNDATION],{maxBuffer:64e6}).toString().trim().split('\n');
+ assert.ok(rows.length>500);
+ for(const row of rows){const [meta,path]=row.split('\t'),blob=meta.split(' ')[2];
+  if(fixture&&(path.startsWith('tests/')||path.startsWith('.github/')))continue;
+  if(!existsSync(path)){changed.push(path);continue;}
+  const bytes=readFileSync(path),gitBlob=createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
+  if(gitBlob===blob)continue;
+  // Git LFS: the committed blob is a pointer; the checked-out bytes must match its oid and size.
+  const pointer=execFileSync('git',['cat-file','-p',blob]).toString();
+  if(!pointer.includes(`oid sha256:${sha(bytes)}`)||!pointer.includes(`size ${bytes.length}`))changed.push(path);}
  assert.deepEqual(changed,[]);
 });
 
