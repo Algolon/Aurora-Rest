@@ -1,0 +1,42 @@
+name: ENV-NATURE-R02 isolated WebGL art evidence
+on:
+  push:
+    branches: [art/env-nature-r02-woodland-composition]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  art-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - run: node --experimental-strip-types tools/env-nature-r02/audit.mjs
+      - run: node --experimental-strip-types --test tests/env-nature-r02.test.ts
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Start isolated production viewer
+        run: |
+          npm run preview -- --port 4362 --strictPort > /tmp/env-r02-vite.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4362/env-nature-r02.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - run: node tools/env-nature-r02/capture.mjs /tmp/env-r02-evidence
+      - run: node tools/env-nature-r02/walk.mjs /tmp/env-r02-walk
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: env-nature-r02-real-webgl-${{ github.sha }}
+          path: |
+            /tmp/env-r02-evidence
+            /tmp/env-r02-walk
+            /tmp/env-r02-vite.log

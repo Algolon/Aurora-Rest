@@ -1,0 +1,320 @@
+{
+  "base": "2ffcf1d1794528d2166846ca7cca874c11f33029",
+  "files": [
+    {
+      "path": "src/pop-01/composition.ts",
+      "sha256": "3924fd46882cb627dd241d2444a56a293ebe7d86ef11e2093b4275ed4fc3247b",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/contracts.ts",
+      "sha256": "87a9a88c6adb2cdb068a3691c56a9cf7cae42889f419434e50d0cb6b6ddc8fbb",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/ecology.ts",
+      "sha256": "0903acb730315eb5eebc105efde873c3e54cea18b5fc7c6f617561ecd08da845",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/generator.ts",
+      "sha256": "f5d042674202720f613e5865c36160ed9e8dd70966586b3abfd7107137425908",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/geography.ts",
+      "sha256": "f48e795289c6f54fb3810bfdb7fa1da762f4dd707de3dabe60b3a1265a94db2b",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/main.ts",
+      "sha256": "0833f5a7c92c1832e9e988899f76e974370b3c6862fd509e1e67bc9a9720d698",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/proxy-renderer.ts",
+      "sha256": "c208dcc41c092a2b01994b4b21fd8dd441fcceda619cbadac535d17faa289a88",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/spatial.ts",
+      "sha256": "6ff9ece0a2fa5b9486fd25178120b4b1cdb2c435e9e4e9f3781421cb37ecd43a",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/streaming.ts",
+      "sha256": "c31d652b5567baa002c8dab9db9989b49d7d383945b0cd52cf193b4c60c3a89d",
+      "identical": true
+    },
+    {
+      "path": "src/pop-01/style.css",
+      "sha256": "1535bfee6aba39563dcdb1cc61076e24dc5e70123dae100664c59b1c4dd76bc2",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/cameras.ts",
+      "sha256": "35105d50469628a4a72167623448082957146d242f1f3890bdd290cdf6e0ba77",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/fidelity.ts",
+      "sha256": "5d8d9f77c8923c228dd2049abf74b4ca938b1a892fdf63d232c932befc117585",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/main.ts",
+      "sha256": "6a73826fe425bdb173b04cc9109287b2b09332a3a3a670b9733f00bd534ed626",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/page-store.ts",
+      "sha256": "82cbf7e771d82ff9eba1dc83e10d3e31f135df71c5211fbea7896cbf4feb9cc4",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/population-worker.ts",
+      "sha256": "ef797276b266306472f89ef182c6bfe5e641d88d2da96370d35245671e3e2012",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/renderer.ts",
+      "sha256": "c0d50f30ad8d071a5b67550d4d3cf63390ce1a46d3c1d8652a20f4c2e6bf98fb",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/source-page.ts",
+      "sha256": "c134b51341d5ff3b364e4d0cecf1182f2eeb1210d75879ed7fbc8c0f3a3e6766",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/style.css",
+      "sha256": "0007c053a964485c4e90b4b63569ccad3709201029b8ed59ae79d82468832fd1",
+      "identical": true
+    },
+    {
+      "path": "src/pop-02a/worker-stream.ts",
+      "sha256": "3ab3b1d27249f94ecdb5e4d96f7c46d851b54294be6ae238207cbf4a5716a02b",
+      "identical": true
+    },
+    {
+      "path": "src/env-p01/ground.ts",
+      "sha256": "718cedd6e6f2eab6263e624b96477fe1bb7c25ceec94d0f738ef9be71b9766e4",
+      "identical": true
+    },
+    {
+      "path": "src/env-p01/main.ts",
+      "sha256": "e75e7ee27759fc8b367ebc4058d4acaca91c7a01397d75de42437b0db1df92e1",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/foliage.ts",
+      "sha256": "8340b43e6bd5a82ee9642dec7e1afade0999b671c5c4b88567855663794c3e8a",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/geometry.ts",
+      "sha256": "466ccfd096c10d82a2e5c676fd01c2d0ee1fcf589258ef4f44c2454c6ec7d059",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/grass/geometry.ts",
+      "sha256": "632ad6970f83fee8f63328099dd3b9c3e1fe5e47b8c328c7c7d074d5238d39f8",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/grass/index.ts",
+      "sha256": "73bad47a9665f851059512a02da89d89126a08b0b6d8b8274f877186719e1f7d",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/grass/materials.ts",
+      "sha256": "74e31dfc088ccaded4689c85b5aa44573ed3dbf2bc3c31ab7e301f08c56dc7b2",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassBatch.ts",
+      "sha256": "42a4499b6dcc7ba57c51c6132407fd1374ec5ea694759df4f8941368b83117aa",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/grass/rendering/grassFade.ts",
+      "sha256": "243668dc62d433a62a129ca9dc255dcd22fe7bc2732ea57b0879bb99140eec40",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/index.ts",
+      "sha256": "1667815c32def800baef7f8c369cefd87e14f6fb9469ee52e8af417225fa6e26",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/lod.ts",
+      "sha256": "4a5145c2e4e6d4531b255ae4927f88ac8d91d0ef0cff494f9013a922379165b5",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/materials.ts",
+      "sha256": "c16abbf2193a245f9c949f0cdbf01097ee8e2225561532054595518326c41331",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/pine/geometry.ts",
+      "sha256": "6528bea5b6e6d6a1d9bb3b18c30534e2639fdb4c4029f2ac68f25267ad1d39a3",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/pine/index.ts",
+      "sha256": "b342b424ba106aabb5555f4b5660d2fa20d58af26e41484d8d27a79516e12a5b",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/pine/materials.ts",
+      "sha256": "98aaa813224bfdf5ab9e943f822fed5d9d4fe689fe3710bbe3eeaa4e7b86feb2",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/batchedRenderer.ts",
+      "sha256": "8399f342de75eb5abb6c88efc2006eba71f16acac60320492399165348536f54",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/capabilities.ts",
+      "sha256": "aa377af62cc76909ba1cbd735d2c4a89938cdfc07f924581f35f180ef400d4dd",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/instancedRenderer.ts",
+      "sha256": "462b0abdb10b0db62757297bc64e42b77155deebd7b7d9852fce9f64b19b647e",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/mixedForest.ts",
+      "sha256": "84ea3480d24636033a4b36f308ef3b99dd2d26a2d830a30d71a6b136cab75f98",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/natureBatch.ts",
+      "sha256": "ea9b1dcb606006ac413fa18883094c8d84c2d42e69de339dd372a6664365ea05",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rendering/visibility.ts",
+      "sha256": "a224dd1b25dd468eef11dc09ef75efce20fdfafb0747d00ccc409a3d59f8fcd2",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rng.ts",
+      "sha256": "f4f5c875d8a1c1f4462637f4eb5c5a74206b09c637949e3e4d527ae63cbbb405",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rocks/index.ts",
+      "sha256": "a9412c04ab1584b9d82594425b38bb42c1d7dfc2006087207117ab63dfcc0ee0",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rocks/productionRock.ts",
+      "sha256": "62f4960b8011027a022f8e408801cb7d4e00c4b4c660fe7b18e0f1da2097ee8f",
+      "identical": true
+    },
+    {
+      "path": "src/nature-library/rocks/rockMaterials.ts",
+      "sha256": "64ae6af30cba26923aa9388798405b6281a5952dffd29c231d109f8c991ec5cc",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/classify.ts",
+      "sha256": "2d638adaac71f6583939cf7f485505451a0e5044adb8e0b9e6baef80cc71a502",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/fields.ts",
+      "sha256": "331e90a7e6ea52ab797613ac704f6a650a16437aa2581664c60dd67ff126c0ac",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/materials.ts",
+      "sha256": "41ba8468c976945356cc0b7e1f6fb7144f817151fdb77d95b7ac38f23f7b68e3",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/noise.ts",
+      "sha256": "66bc3421d0e7dcaf3962451ff6fb42dddcd5bd01951e19f570f77573a25c0a78",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/query.ts",
+      "sha256": "cb32349c7bc3977291a98c72d78c5d4fc5ee301ac4e69477e5427415477694ba",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/render/shader.ts",
+      "sha256": "fca05f77f2d597937affb51689257fa28dd426b774fa97c6c8c981608213268b",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/render/terrain-material.ts",
+      "sha256": "3ba042ff9447cc2f5b77e9777dd53d79436cac3dbbf0d704e3757e5c0a62c383",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/render/terrain-tiles.ts",
+      "sha256": "77ec0390d250d9e66df6fc7d464df189b4c9014817815946bbb12871842eb9db",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/rules.ts",
+      "sha256": "449b7e0b0933523af4b7348db1c3c54129837c8f2dffa2952485fd9018c21f7f",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/sources/geo-r02b.ts",
+      "sha256": "c4be8e07954f11ebfd55f13a8f6d4df68319c4c2e072573ffd378f884875b3cc",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/textures.ts",
+      "sha256": "998cb2be98aad7abec7f01bad27b246310af414bde6b24fabdc5a457415ef466",
+      "identical": true
+    },
+    {
+      "path": "src/terrain-material/types.ts",
+      "sha256": "627b9599d535a886a44b272ac1f5acafb6755aa77b69a28a71821a4f273dc9c9",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02b/diagnostics.json",
+      "sha256": "05dbe21ff988056897145594b82f2e75cbdc6555c04854222120c50fd06805f3",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02b/features.json",
+      "sha256": "8f538cef4ce368c958abb0d5097895b4bd230ff2d5f97fd0f32ed8b37ed0166e",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02b/terrain.f32",
+      "sha256": "fc8fd6da0472bc3eda7dd9d1f2f8f9bfd15b2bb55998db1333cbd6256b1f946a",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02b/water-mesh.f32",
+      "sha256": "d216a9be42934440e3b236139f5b8f91a58c358938492f865c6eef174672294d",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02b/water-surface.f32",
+      "sha256": "e233e4f8cc2d7f425576c70f112819d49198a6090f15054e9e78523954e5bc55",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02c-b2a/a.patch.f32",
+      "sha256": "56502a85f399232c3b73ae59a27e9df345a81e0b36831c6d02d85738ee930e11",
+      "identical": true
+    },
+    {
+      "path": "public/geo-r02c-b2a/manifest.json",
+      "sha256": "38de2d969266a074fe378244597d3bbedc7af89b1e73c8baeb85761389692e36",
+      "identical": true
+    }
+  ]
+}

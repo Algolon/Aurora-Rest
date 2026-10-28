@@ -1,0 +1,40 @@
+import {readFileSync,writeFileSync,mkdirSync,readdirSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {HeightGrid} from '../../src/geo-r02b/terrain.ts';
+import {CanonicalEnvironment} from '../../src/pop-01/geography.ts';
+import {buildComposition,sourcePilot,PILOT} from '../../src/env-nature-r02/composition.ts';
+import {selectedPath,pilotCameras} from '../../src/env-nature-r02/segment.ts';
+const out=process.argv[2]??'docs/env-nature-r02';mkdirSync(out,{recursive:true});
+const sha=x=>createHash('sha256').update(x).digest('hex');
+const data=JSON.parse(readFileSync('public/geo-r02b/features.json'));
+const floats=n=>{const b=readFileSync('public/geo-r02b/'+n);return new Float32Array(b.buffer,b.byteOffset,b.byteLength/4)};
+const geo=new CanonicalEnvironment(data,new HeightGrid(floats('terrain.f32'),1501,2001),floats('water-mesh.f32'));
+const source=sourcePilot(geo),authored=buildComposition(geo,source),path=selectedPath(geo),cameras=pilotCameras(geo);
+assert.deepEqual(authored,buildComposition(geo,source));
+const protectedDirs=['src/pop-01','src/pop-02a','src/env-p01','src/nature-library','src/terrain-material','public/geo-r02b','public/geo-r02c-b2a'];
+const files=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(d+'/'+e.name):[d+'/'+e.name]);
+const preservation=protectedDirs.flatMap(files).map(path=>{const current=sha(readFileSync(path)),base=sha(execFileSync('git',['show','2ffcf1d1794528d2166846ca7cca874c11f33029:'+path],{maxBuffer:40e6}));assert.equal(current,base,path);return{path,sha256:current,identical:true}});
+const samples=[];let length=0;
+for(let i=0;i<path.length;i++){
+ const [x,z]=path[i],prev=path[Math.max(0,i-1)],next=path[Math.min(path.length-1,i+1)],len=Math.hypot(next[0]-prev[0],next[1]-prev[1]),tx=(next[0]-prev[0])/len,tz=(next[1]-prev[1])/len,nx=-tz,nz=tx;
+ if(i)length+=Math.hypot(x-prev[0],z-prev[1]);
+ const width=[-1.7,-.85,0,.85,1.7].map(offset=>{const px=x+nx*offset,pz=z+nz*offset,s=geo.sample(px,pz);return {offset,x:px,z:pz,y:s.elevation,dry:s.dry,clearance:s.elevation-s.waterLevel,waterDistance:s.waterDistance,along:Math.abs(geo.elevation(px+tx,pz+tz)-geo.elevation(px-tx,pz-tz))/2}});
+ const cross=Math.max(...width.slice(1).map((v,j)=>Math.abs(v.y-width[j].y)/.85));
+ const solids=[...source,...authored.placements].filter(p=>p.family!=='grass').map(p=>({id:p.id,family:p.family,distance:Math.hypot(p.x-x,p.z-z),radius:p.family==='rock'?1.65*p.scale:.4*p.scale}));
+ const nearest=solids.sort((a,b)=>(a.distance-a.radius)-(b.distance-b.radius))[0];
+ samples.push({distanceM:length,x,z,elevation:geo.elevation(x,z),width,crossGrade:cross,maxAlongGrade:Math.max(...width.map(w=>w.along)),routeDistance:geo.sample(x,z).trailDistance,nearestSolid:nearest,clearPlayer:nearest.distance-nearest.radius>.45});
+}
+const reveal=cameras.find(c=>c.id==='reveal'),target=[-260,-60],eye=geo.elevation(reveal.x,reveal.z)+1.75,ty=geo.elevation(...target)+2,dist=Math.hypot(target[0]-reveal.x,target[1]-reveal.z),los=[];
+for(let d=4;d<dist;d+=4){const t=d/dist,x=reveal.x+(target[0]-reveal.x)*t,z=reveal.z+(target[1]-reveal.z)*t;los.push({distance:d,clearance:eye+(ty-eye)*t-geo.elevation(x,z)});}
+const report={milestone:'ENV-NATURE-R02',base:'2ffcf1d1794528d2166846ca7cca874c11f33029',lengthM:length,start:path[0],end:path.at(-1),sampleCount:samples.length,maxIntervalM:Math.max(...path.slice(1).map((p,i)=>Math.hypot(p[0]-path[i][0],p[1]-path[i][1]))),widthM:3.4,maxAlongGrade:Math.max(...samples.map(s=>s.maxAlongGrade)),maxCrossGrade:Math.max(...samples.map(s=>s.crossGrade)),minDryClearance:Math.min(...samples.flatMap(s=>s.width.map(w=>w.clearance))),allDry:samples.every(s=>s.width.every(w=>w.dry)),clearPlayer:samples.every(s=>s.clearPlayer),maxRouteDistance:Math.max(...samples.map(s=>s.routeDistance)),sightline:{from:[reveal.x,eye,reveal.z],target:[target[0],ty,target[1]],distance:dist,terrainClear:los.every(s=>s.clearance>0),minClearance:Math.min(...los.map(s=>s.clearance)),samples:los},samples};
+report.walkability=report.maxAlongGrade<=.25&&report.maxCrossGrade<=.35&&report.allDry&&report.clearPlayer?'SURVEY PASS: provisional 3.4 m corridor; in-engine traversal still required':'VISUAL COMPOSITION STUDY ONLY';
+writeFileSync(out+'/survey.json',JSON.stringify(report,null,2)+'\n');
+writeFileSync(out+'/manifest.json',JSON.stringify({bounds:PILOT,sourceSha256:sha(JSON.stringify(source)),sourceCount:source.length,authoredCounts:authored.placements.reduce((o,p)=>(o[p.family]=(o[p.family]??0)+1,o),{}),...authored},null,2)+'\n');
+writeFileSync(out+'/protected-files.json',JSON.stringify({base:report.base,files:preservation},null,2)+'\n');
+const box={x:-805,z:-45,w:220,h:145},scale=4,xy=(x,z)=>[(x-box.x)*scale,(box.z-z)*scale],circle=(p,r,fill,opacity=1)=>{const[x,y]=xy(p.x,p.z);return `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" opacity="${opacity}"/>`};
+const points=path.map(([x,z])=>xy(x,z).join(',')).join(' ');
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800"><rect width="1100" height="800" fill="#f4f0e5"/><g transform="translate(70,90)"><rect width="880" height="580" fill="#dde3c7"/>${source.filter(p=>p.x>box.x&&p.x<box.x+box.w&&p.z<box.z&&p.z>box.z-box.h).map(p=>circle(p,p.family==='grass'?1.5:p.family==='rock'?3:8,p.family==='grass'?'#90a375':p.family==='rock'?'#929684':'#506e52',.6)).join('')}<polyline points="${points}" fill="none" stroke="#fdf9e8" stroke-width="14"/><polyline points="${points}" fill="none" stroke="#987248" stroke-width="2"/>${authored.placements.map(p=>circle(p,p.family==='grass'?2:p.family==='rock'?5:10,p.family==='grass'?'#93a82e':p.family==='rock'?'#77633e':'#173c39')).join('')}${cameras.filter(c=>c.kind==='walk').map((c,i)=>{const[x,y]=xy(c.x,c.z);return `<path d="M${x},${y} l${-Math.sin(c.heading)*50},${Math.cos(c.heading)*50}" stroke="#b74c31" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="#b74c31"/><text x="${x-10}" y="${y+25}" font-size="16">${i+1} ${c.id}</text>`}).join('')}<text x="0" y="-14" font-size="16">North ↑ · world X east → · coordinates in metres · actual canonical route and instances</text><text x="0" y="610" font-size="15">Muted: original trees/rocks/grass. Dark/ochre/lime: authored overlay. Arrows: fixed cameras.</text><text x="0" y="635" font-size="15">Start (-772,-84) → end (-632.6154,-146.4615). Width 3.4 m. One selected corridor.</text></g><text x="70" y="42" font-family="sans-serif" font-size="24">Aurora Rest — ENV-NATURE-R02 composition plan</text><text x="70" y="770" font-family="sans-serif" font-size="14">Survey diagram only; genuine Three.js evidence is supplied separately.</text></svg>`;
+writeFileSync(out+'/composition-plan.svg',svg);
+console.log(JSON.stringify({...report,samples:undefined,sightline:{...report.sightline,samples:undefined},authored:authored.placements.length,rejected:authored.rejected},null,2));
