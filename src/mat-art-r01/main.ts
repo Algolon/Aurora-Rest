@@ -14,6 +14,7 @@ import type {QualityProfile} from '../terrain-material/render/terrain-material.t
 import type {DebugView} from '../terrain-material/render/shader.ts';
 import {matArtCameras,type MatArtCamera} from './cameras.ts';
 import {GROUND_VARIANTS,GroundVariants,VARIANT_LABELS,type GroundVariant,type VariantSource} from './ground-variant.ts';
+import {loadStylized as loadStylizedTextures} from './load-stylized.ts';
 import '../pop-02a/style.css';
 
 const FAMILIES:Family[]=['birch','pine','grass','rock'];
@@ -31,7 +32,7 @@ const sea=new T.Mesh(new T.PlaneGeometry(20000,20000),new T.MeshLambertMaterial(
 el<HTMLSelectElement>('camera').innerHTML=cameras.map(c=>`<option value="${c.id}">${c.label}</option>`).join('');
 const groundIntegration=await GroundIntegration.load(heights,data);groundIntegration.setMode('material');
 const variants=new GroundVariants(groundIntegration,MATERIALS);
-let view:MatArtCamera=cameras[0],stream:WorkerPopulationStream,ground:T.Mesh|undefined,lastTarget='',yaw=0,pitch=0,walking=false,last=performance.now(),ready=false,lastRenderMs=0,dead=false,debug:DebugView='off',stylizedMs=0;
+let view:MatArtCamera=cameras[0],stream:WorkerPopulationStream,ground:T.Mesh|undefined,lastTarget='',yaw=0,pitch=0,walking=false,last=performance.now(),ready=false,lastRenderMs=0,dead=false,debug:DebugView='off',stylizedMs=0,stylizedReady=false;
 const SEED=73129,DENSITY=1;
 function startStream(){ready=false;stream?.dispose();stream=new WorkerPopulationStream(new Worker(new URL('../pop-02a/population-worker.ts',import.meta.url),{type:'module'}) as unknown as WorkerPort,{attach:p=>living.attach(p),detach:key=>living.detach(key)},{chunkSize:64,seed:SEED,density:DENSITY},2);lastTarget='';}
 function buildGround(x:number,z:number){if(ground){ground.removeFromParent();ground.geometry.dispose();}ground=new T.Mesh(terrainGeometry(geo.height,Math.floor((x-512)/4)*4,Math.ceil((z+512)/4)*4,1024,4),variants.active);ground.receiveShadow=true;scene.add(ground);}
@@ -47,7 +48,7 @@ function setVariant(v:GroundVariant){variants.set(v);el<HTMLSelectElement>('vari
 function setProfile(p:QualityProfile){variants.setProfile(p);el<HTMLSelectElement>('profile').value=p;variants.setDebug(debug);applyMaterial();}
 function snapshot(){const all=[...stream.active.values()],counts:Record<string,number>={};for(const p of all)for(const i of p.instances)counts[i.family]=(counts[i.family]??0)+1;
  const materials=new Set<T.Material>();scene.traverse(o=>{const m=(o as T.Mesh).material;if(m)(Array.isArray(m)?m:[m]).forEach(x=>materials.add(x));});
- return {milestone:'MAT-ART-R01',ready:ready&&stream.settled&&!living.pending,error:stream.error,view:view.id,viewSource:view.source,set:view.set,variant:variants.variant,vegetation:living.settings.enabled.size>0,debug,
+ return {milestone:'MAT-ART-R01',ready:ready&&stream.settled&&!living.pending&&stylizedReady,stylizedReady,error:stream.error,view:view.id,viewSource:view.source,set:view.set,variant:variants.variant,vegetation:living.settings.enabled.size>0,debug,
   descriptorCount:all.reduce((n,p)=>n+p.instances.length,0),counts,activeChunks:stream.active.size,render:living.stats(),
   renderer:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,memory:{...renderer.info.memory},programs:renderer.info.programs?.length},
   sceneMaterials:materials.size,timing:{lastRenderSubmissionMs:lastRenderMs,stylizedSynthesisMs:stylizedMs},
@@ -72,12 +73,12 @@ function frame(now:number){if(dead)return;animationFrame=requestAnimationFrame(f
  catch(e){el('metrics').textContent='RENDER FAILURE '+String(e);Object.assign(window,{__matArtFailure:String(e)});return;}
  if(now-lastMetrics>250){lastMetrics=now;const s=snapshot();el('metrics').textContent=`${VARIANT_LABELS[s.variant]}\nGENERATED ${s.descriptorCount} · ${s.activeChunks} chunks\n${Object.entries(s.counts).map(([k,v])=>k+' '+v).join(' · ')}\nCALLS ${s.renderer.calls} · TRI ${s.renderer.triangles}\nGround textures ${(s.groundVariant.gpuBytes.detail/1048576).toFixed(1)} MiB · ${s.groundVariant.textureSize}²×${s.groundVariant.textureLayers}\nRender submission ${lastRenderMs.toFixed(1)} ms`;el('location').textContent=`${view.label} · x ${camera.position.x.toFixed(1)} / z ${camera.position.z.toFixed(1)}`;}
 }
-/** Optional stylized source; the worker is added with the variant itself. */
-async function loadStylized(load:()=>Promise<VariantSource&{synthesisMs:number}>){const s=await load();stylizedMs=s.synthesisMs;variants.setStylized(s);}
+async function loadStylized(load:()=>Promise<VariantSource&{synthesisMs:number}>=loadStylizedTextures){const s=await load();stylizedMs=s.synthesisMs;variants.setStylized(s);stylizedReady=true;}
 startStream();setView(cameras[0].id);
+const stylizedLoad=loadStylized().catch(e=>{Object.assign(window,{__matArtFailure:'Stylized synthesis failed: '+String(e)});});
 Object.assign(window,{__matArt:{
  capture:()=>{renderer.render(scene,camera);renderer.getContext().finish();return canvas.toDataURL('image/png');},
- snapshot,setView,setVariant,setVegetation,setDebug,setProfile,pause:(v:boolean)=>{paused=v;},views:cameras,variants:GROUND_VARIANTS,loadStylized,
+ stylizedLoad,snapshot,setView,setVariant,setVegetation,setDebug,setProfile,pause:(v:boolean)=>{paused=v;},views:cameras,variants:GROUND_VARIANTS,loadStylized,
  renderOnce:()=>{renderer.render(scene,camera);return snapshot();},
  timeRender:(n:number)=>{const g=renderer.getContext(),t:number[]=[];for(let i=0;i<n;i++){const s=performance.now();renderer.render(scene,camera);g.finish();t.push(performance.now()-s);}return t;},
  setPose:(heading:number,angle:number)=>{yaw=heading;pitch=angle;camera.rotation.set(pitch,yaw,0);},

@@ -31,7 +31,7 @@ try{
  const settle=async()=>{await page.evaluate(()=>window.__matArt?.pause(false));await page.waitForFunction(()=>window.__matArtFailure||window.__matArt?.snapshot().ready,null,{timeout:300000});
   assert.equal(await page.evaluate(()=>window.__matArtFailure),undefined);await page.evaluate(()=>window.__matArt.pause(true));};
  await page.waitForFunction(()=>window.__matArt,null,{timeout:300000});await settle();
- if(plan!=='diagnosis'){const t=Date.now();await page.evaluate(async()=>{const m=await import('/src/mat-art-r01/load-stylized.ts');await window.__matArt.loadStylized(m.loadStylized);});report.stylizedLoadMs=Date.now()-t;}
+ report.stylizedSynthesisMs=(await page.evaluate(()=>window.__matArt.snapshot())).timing.stylizedSynthesisMs;
  report.gl=await page.evaluate(()=>{const g=document.querySelector('canvas').getContext('webgl2'),e=g.getExtension('WEBGL_debug_renderer_info');return {version:g.getParameter(g.VERSION),renderer:e?g.getParameter(e.UNMASKED_RENDERER_WEBGL):'unknown'};});
  report.browser=browser.version();console.log('READY',report.browser,report.gl.renderer);
  const shoot=async(file,meta)=>{const started=Date.now(),url=await page.evaluate(()=>window.__matArt.capture()),png=Buffer.from(url.split(',')[1],'base64');await writeFile(`${out}/${file}`,png);

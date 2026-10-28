@@ -55,8 +55,9 @@ export interface VariantSource {definitions:readonly MaterialDefinition[];textur
 /** Owns at most one non-original resources/material pair at a time; A always comes from GroundIntegration. */
 export class GroundVariants {
  variant:GroundVariant='mat-01';
+ readonly ground:GroundIntegration;readonly baseDefinitions:readonly MaterialDefinition[];private stylized:VariantSource|null;
  private resources:TerrainMaterialResources|null=null;private material:T.MeshStandardMaterial|null=null;private dead=false;
- constructor(readonly ground:GroundIntegration,readonly baseDefinitions:readonly MaterialDefinition[],private stylized:VariantSource|null=null){}
+ constructor(ground:GroundIntegration,baseDefinitions:readonly MaterialDefinition[],stylized:VariantSource|null=null){this.ground=ground;this.baseDefinitions=baseDefinitions;this.stylized=stylized;}
  setStylized(source:VariantSource){this.stylized=source;if(this.variant==='mat-art-r01')this.rebuild();}
  get active():T.Material{if(this.dead)throw Error('Ground variants disposed');return this.variant==='mat-01'||this.ground.mode!=='material'?this.ground.material:this.material!;}
  get activeResources():TerrainMaterialResources{return this.variant==='mat-01'?this.ground.resources:this.resources!;}
