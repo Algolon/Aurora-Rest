@@ -1,0 +1,40 @@
+{
+  "milestone": "MAT-ART-R01 camera survey",
+  "method": "Canonical MAT classification + POP-01 generator, 8 m grid within 520 m of the R02 corridor centre; dry, slope ≤ 0.18, ≥ 25 m from water; forward cone 5–45 m ±25° fully dry.",
+  "counts": {
+    "grassland": 234,
+    "transition": 964
+  },
+  "grassland": {
+    "kind": "grassland",
+    "x": -1198,
+    "z": -82,
+    "heading": 1.9634954084936207,
+    "score": 0.986,
+    "detail": {
+      "view": {
+        "forestFloor": 0,
+        "meadow": 1,
+        "wet": 0
+      },
+      "grass30m": 52,
+      "trees30m": 2
+    }
+  },
+  "transition": {
+    "kind": "transition",
+    "x": -646,
+    "z": -130,
+    "heading": 1.1780972450961724,
+    "score": 1.1449898360862283,
+    "detail": {
+      "view": {
+        "forestFloor": 0.3735015801964888,
+        "meadow": 0.6000101639137717,
+        "wet": 0
+      },
+      "grass30m": 84,
+      "trees30m": 29
+    }
+  }
+}
