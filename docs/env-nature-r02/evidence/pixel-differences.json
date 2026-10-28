@@ -1,0 +1,57 @@
+[
+  {
+    "view": "shelter",
+    "resolution": [
+      1100,
+      700
+    ],
+    "changedPixelPercent": 7.899740259740259,
+    "channelDifferenceAbove20Percent": 6.3653246753246755,
+    "meanAbsoluteRgbDifference": 3.5633839826839826,
+    "note": "Difference is evidence of visible intervention, not artistic quality."
+  },
+  {
+    "view": "discovery",
+    "resolution": [
+      1100,
+      700
+    ],
+    "changedPixelPercent": 4.2457142857142856,
+    "channelDifferenceAbove20Percent": 3.428571428571429,
+    "meanAbsoluteRgbDifference": 1.7756662337662337,
+    "note": "Difference is evidence of visible intervention, not artistic quality."
+  },
+  {
+    "view": "breathing",
+    "resolution": [
+      1100,
+      700
+    ],
+    "changedPixelPercent": 3.19038961038961,
+    "channelDifferenceAbove20Percent": 2.2315584415584415,
+    "meanAbsoluteRgbDifference": 0.8429415584415585,
+    "note": "Difference is evidence of visible intervention, not artistic quality."
+  },
+  {
+    "view": "reveal",
+    "resolution": [
+      1100,
+      700
+    ],
+    "changedPixelPercent": 1.8549350649350649,
+    "channelDifferenceAbove20Percent": 1.4448051948051948,
+    "meanAbsoluteRgbDifference": 0.4878593073593074,
+    "note": "Difference is evidence of visible intervention, not artistic quality."
+  },
+  {
+    "view": "overview",
+    "resolution": [
+      1100,
+      700
+    ],
+    "changedPixelPercent": 0.4605194805194805,
+    "channelDifferenceAbove20Percent": 0.3909090909090909,
+    "meanAbsoluteRgbDifference": 0.13285324675324675,
+    "note": "Difference is evidence of visible intervention, not artistic quality."
+  }
+]

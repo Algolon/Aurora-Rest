@@ -18,6 +18,12 @@ Shelter: connected offset birch/pine groups, with close grass pockets creating a
 
 Authored anchors and fixed hand-authored tuft offsets form a separate ledger with stable IDs, existing source scales/tints, terrain normals and per-family exclusions. Reuse the original worker and LivingRenderer through a sink adapter; source chunks remain observable independently. Source/authored toggle rebuilds the reversible layer. Same MAT, lighting, seed, FOV and transforms in every matched capture. One optional refinement after first actual visual review; no speculative redesign loop.
 
+## Single refinement and owner art feedback
+
+Initial WebGL observations: the small verge groups improve near-field depth, but the stone pause is not legible. Conservative solid exclusion rejected two planned stones beside existing source trunks. **One refinement only:** relocate the three existing pause-stone anchors into an adjacent valid gap (roughly 12 m forward), preserving IDs, variants, scales, rotations, materials and the rest of the design. The final ledger contains 1 birch, 2 pines, 4 rocks and 440 grass instances; 12 other proposed anchors remain rejected rather than displacing originals.
+
+Owner feedback on 2026-10-28: the grass/ground texture is too realistic for the intended stylized art direction. This is an explicit art-acceptance concern. The fine MAT texture and isolated tuft shapes are evaluated as a cohesion failure; source shader and classification remain protected. No extra art iteration or material overhaul is inferred from that feedback.
+
 ## Execution gates
 
 Diagnosis → surveyed segment and top-down plan → fixed manifest and renderer adapter → source/build/lifecycle tests → actual matched WebGL and continuous traversal → at most one recorded targeted correction → one final art decision. Technical pass does not establish art acceptance.

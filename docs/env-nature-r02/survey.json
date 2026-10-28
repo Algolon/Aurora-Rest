@@ -4014,10 +4014,10 @@
       "maxAlongGrade": 0.18598080347954493,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "env-r02:pause-stone-small",
-        "family": "rock",
-        "distance": 7.458816998842503,
-        "radius": 1.0725
+        "id": "73129:0:-105:-16",
+        "family": "birch",
+        "distance": 7.516636492381142,
+        "radius": 0.43766462924890226
       },
       "clearPlayer": true
     },
@@ -4082,10 +4082,10 @@
       "maxAlongGrade": 0.1858426658765211,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "env-r02:pause-stone-small",
-        "family": "rock",
-        "distance": 7.114490249635851,
-        "radius": 1.0725
+        "id": "73129:0:-103:-14",
+        "family": "pine",
+        "distance": 7.283934056815217,
+        "radius": 0.4840779250767082
       },
       "clearPlayer": true
     },
@@ -4150,10 +4150,10 @@
       "maxAlongGrade": 0.1859114857547013,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "env-r02:pause-stone-small",
-        "family": "rock",
-        "distance": 6.891413338503591,
-        "radius": 1.0725
+        "id": "73129:0:-103:-14",
+        "family": "pine",
+        "distance": 6.548586960754871,
+        "radius": 0.4840779250767082
       },
       "clearPlayer": true
     },
@@ -4694,10 +4694,10 @@
       "maxAlongGrade": 0.18665800153443968,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-103:-14",
-        "family": "pine",
-        "distance": 5.447734700122526,
-        "radius": 0.4840779250767082
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 7.0954358555715595,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -4762,10 +4762,10 @@
       "maxAlongGrade": 0.18678474988448812,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-103:-14",
-        "family": "pine",
-        "distance": 6.04545070698629,
-        "radius": 0.4840779250767082
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 6.384722016512212,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -4830,10 +4830,10 @@
       "maxAlongGrade": 0.18690774974835023,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-103:-14",
-        "family": "pine",
-        "distance": 6.731345533334093,
-        "radius": 0.4840779250767082
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 5.751209387318063,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -4898,10 +4898,10 @@
       "maxAlongGrade": 0.18317499257409509,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-102:-14",
-        "family": "pine",
-        "distance": 6.766520989121967,
-        "radius": 0.35959130800329153
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 5.223191496146295,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -4966,10 +4966,10 @@
       "maxAlongGrade": 0.17832917221260658,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-102:-14",
-        "family": "pine",
-        "distance": 7.076240330085822,
-        "radius": 0.35959130800329153
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 4.965660529699966,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -5034,10 +5034,10 @@
       "maxAlongGrade": 0.17841612186956723,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-102:-14",
-        "family": "pine",
-        "distance": 7.505818874010603,
-        "radius": 0.35959130800329153
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 4.900000000000025,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -5102,10 +5102,10 @@
       "maxAlongGrade": 0.178679099377149,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.953020687362444,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-main",
+        "family": "rock",
+        "distance": 5.033555627069731,
+        "radius": 2.8049999999999997
       },
       "clearPlayer": true
     },
@@ -5170,10 +5170,10 @@
       "maxAlongGrade": 0.17882047897335696,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.548607702776424,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 3.6000000000000014,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5238,10 +5238,10 @@
       "maxAlongGrade": 0.17885344244174206,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.258627955659126,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 3.7346240178700336,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5306,10 +5306,10 @@
       "maxAlongGrade": 0.17891409873926278,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.097129501106547,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 4.112250235340549,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5374,10 +5374,10 @@
       "maxAlongGrade": 0.17918316636938414,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.072833134177844,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 4.67421904765906,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5442,10 +5442,10 @@
       "maxAlongGrade": 0.17918555816237358,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.187304142773238,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 5.363050819142521,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5510,10 +5510,10 @@
       "maxAlongGrade": 0.17942398705391582,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.4339551645925805,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 6.136013604625222,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5578,10 +5578,10 @@
       "maxAlongGrade": 0.17936920935687084,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 7.80034018986481,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 6.965219376558537,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },
@@ -5646,10 +5646,10 @@
       "maxAlongGrade": 0.17947127327039425,
       "routeDistance": 0,
       "nearestSolid": {
-        "id": "73129:0:-101:-15",
-        "family": "birch",
-        "distance": 8.270661541522609,
-        "radius": 0.48642624894157055
+        "id": "env-r02:pause-stone-small",
+        "family": "rock",
+        "distance": 7.832907142740335,
+        "radius": 1.0725
       },
       "clearPlayer": true
     },

@@ -1,5 +1,5 @@
 import {chromium} from 'playwright';
-import {writeFile,mkdir} from 'node:fs/promises';
+import {writeFile,mkdir,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 const out=process.argv[2]??'docs/env-nature-r02/evidence/walking';
@@ -7,6 +7,7 @@ const base=process.argv[3]??'http://127.0.0.1:4362/env-nature-r02.html';
 await mkdir(out,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
 const report={evidence:'Continuous canonical path traversal through original in-engine stepWalk, no teleports between stations',eyeHeight:1.75,steps:[],frames:[],reentry:[],errors:[],limitations:'Deterministic approximately 1 m engine steps, not real-time player/input or physical-device performance validation.'};
+const sorted=rows=>rows.slice().sort((a,b)=>a.id.localeCompare(b.id));
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const save=()=>writeFile(out+'/walk.json',JSON.stringify(report,null,2)+'\n');
 try{
@@ -14,6 +15,7 @@ try{
  page.on('pageerror',e=>report.errors.push(e.message));
  const settle=async()=>{await page.waitForFunction(()=>window.__pop02Failure||window.__pop02?.snapshot().ready,null,{timeout:180000});assert.equal(await page.evaluate(()=>window.__pop02Failure),undefined);await page.evaluate(()=>window.__pop02.pause(true));};
  await page.goto(base);await settle();
+ assert.deepEqual(await page.evaluate(()=>window.__pop02.authored().placements),JSON.parse(await readFile('docs/env-nature-r02/manifest.json','utf8')).placements);
  const path=await page.evaluate(()=>window.__pop02.path());
  await page.evaluate(()=>{window.__pop02.setView('shelter');window.__pop02.pause(false)});await settle();
  let walked=0,index=0;
@@ -35,9 +37,9 @@ try{
  for(let i=0;i<3;i++){
   await page.evaluate(()=>{window.__pop02.regenerate();window.__pop02.pause(false)});await settle();
   const after=await page.evaluate(()=>({source:window.__pop02.placements(),combined:window.__pop02.combined(),snapshot:window.__pop02.snapshot()}));
-  assert.equal(hash(before.source),hash(after.source));assert.equal(hash(before.combined),hash(after.combined));
+  assert.equal(hash(sorted(before.source)),hash(sorted(after.source)));assert.equal(hash(sorted(before.combined)),hash(sorted(after.combined)));
   assert.deepEqual(before.snapshot.renderer.memory,after.snapshot.renderer.memory);assert.equal(before.snapshot.materialCount,after.snapshot.materialCount);
-  report.reentry.push({cycle:i+1,sourceHash:hash(after.source),combinedHash:hash(after.combined),memory:after.snapshot.renderer.memory,materials:after.snapshot.materialCount});
+  report.reentry.push({cycle:i+1,sourceHash:hash(sorted(after.source)),combinedHash:hash(sorted(after.combined)),memory:after.snapshot.renderer.memory,materials:after.snapshot.materialCount});
  }
  report.disposal=await page.evaluate(()=>{const api=window.__pop02;api.dispose();api.dispose();return api.cleanupSnapshot()});
  assert.equal(report.disposal.chunks,0);assert.equal(report.disposal.pages,0);assert.equal(report.disposal.pending,0);assert.equal(report.disposal.dead,true);assert.equal(report.disposal.listenersAborted,true);assert.equal(report.disposal.animationCancelled,true);

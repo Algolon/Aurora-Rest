@@ -10,7 +10,7 @@
   "authoredCounts": {
     "birch": 1,
     "pine": 2,
-    "rock": 2,
+    "rock": 4,
     "grass": 440
   },
   "placements": [
@@ -69,18 +69,18 @@
       }
     },
     {
-      "id": "env-r02:pause-stone-small",
+      "id": "env-r02:pause-stone-main",
       "family": "rock",
-      "variant": 0,
-      "x": -718.9419096474696,
-      "y": 117.8371046293669,
-      "z": -94.51824179593252,
-      "rotation": 4.1,
-      "scale": 0.65,
+      "variant": 1,
+      "x": -708.1849551710154,
+      "y": 119.97670122434742,
+      "z": -100.43248512851692,
+      "rotation": 1.3,
+      "scale": 1.7,
       "normal": [
-        -0.1878096820687309,
-        0.9821291574999106,
-        0.01224096849754007
+        -0.18867244979664713,
+        0.9819472020696945,
+        0.013505518695333682
       ],
       "alignment": "terrain",
       "burial": 0.22,
@@ -91,7 +91,61 @@
         "community": "birch-woodland",
         "patch": 1,
         "region": "forest",
-        "slope": 0.19163281715585476,
+        "slope": 0.1926327674581522,
+        "source": "ENV-NATURE-R02 explicit overlay; source geometry/MAT unchanged"
+      }
+    },
+    {
+      "id": "env-r02:pause-stone-companion",
+      "family": "rock",
+      "variant": 3,
+      "x": -707.3118502443078,
+      "y": 120.11783426618823,
+      "z": -98.52259304073846,
+      "rotation": 2.4,
+      "scale": 0.82,
+      "normal": [
+        -0.18844999886521285,
+        0.9819881667542144,
+        0.013632251552779263
+      ],
+      "alignment": "terrain",
+      "burial": 0.22,
+      "tint": 1,
+      "renderClass": "rock-lod",
+      "chunk": "-12,-2",
+      "metadata": {
+        "community": "birch-woodland",
+        "patch": 1,
+        "region": "forest",
+        "slope": 0.19240804770192874,
+        "source": "ENV-NATURE-R02 explicit overlay; source geometry/MAT unchanged"
+      }
+    },
+    {
+      "id": "env-r02:pause-stone-small",
+      "family": "rock",
+      "variant": 0,
+      "x": -706.8344129440976,
+      "y": 120.26554982061846,
+      "z": -102.55787116851523,
+      "rotation": 4.1,
+      "scale": 0.65,
+      "normal": [
+        -0.188957897602603,
+        0.9818902393069777,
+        0.013655434350106759
+      ],
+      "alignment": "terrain",
+      "burial": 0.22,
+      "tint": 1,
+      "renderClass": "rock-lod",
+      "chunk": "-12,-2",
+      "metadata": {
+        "community": "birch-woodland",
+        "patch": 1,
+        "region": "forest",
+        "slope": 0.19294485942816123,
         "source": "ENV-NATURE-R02 explicit overlay; source geometry/MAT unchanged"
       }
     },
@@ -12066,18 +12120,6 @@
       "reason": "existing solid retained",
       "x": -726.3205731231628,
       "z": -107.13217834036034
-    },
-    {
-      "id": "env-r02:pause-stone-main",
-      "reason": "existing solid retained",
-      "x": -715.9890028313221,
-      "z": -97.50524554466024
-    },
-    {
-      "id": "env-r02:pause-stone-companion",
-      "reason": "existing solid retained",
-      "x": -710.854039460429,
-      "z": -96.79247556673144
     },
     {
       "id": "env-r02:transition-left",

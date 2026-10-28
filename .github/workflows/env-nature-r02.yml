@@ -21,6 +21,7 @@ jobs:
       - run: node --experimental-strip-types tools/env-nature-r02/audit.mjs
       - run: node --experimental-strip-types --test tests/env-nature-r02.test.ts
       - run: npm run build
+      - run: npx vite build --config vite.env-nature-r02.config.ts
       - run: npx playwright install --with-deps chromium
       - name: Start isolated production viewer
         run: |
